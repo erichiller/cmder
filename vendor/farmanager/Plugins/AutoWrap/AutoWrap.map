@@ -1,0 +1,127 @@
+ AutoWrap
+
+ Timestamp is 56107bb6 (Sun Oct 04 04:07:02 2015)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000018H .idata$5                CODE
+ 0001:00000018 00000194H .rdata                  CODE
+ 0001:000001b0 00001bd5H .text                   CODE
+ 0001:00001d88 00000014H .idata$2                CODE
+ 0001:00001d9c 00000014H .idata$3                CODE
+ 0001:00001db0 00000018H .idata$4                CODE
+ 0001:00001dc8 00000050H .idata$6                CODE
+ 0001:00001e20 000000afH .edata                  CODE
+ 0002:00000000 00000000H .data                   DATA
+ 0002:00000000 00000958H .bss                    DATA
+ 0003:00000000 00000058H .rsrc$01                DATA
+ 0003:00000060 00000370H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0001:00000000       __imp__lstrlenW@4          10001000     kernel32:KERNEL32.dll
+ 0001:00000004       __imp__HeapFree@12         10001004     kernel32:KERNEL32.dll
+ 0001:00000008       __imp__GetProcessHeap@0    10001008     kernel32:KERNEL32.dll
+ 0001:0000000c       __imp__HeapAlloc@12        1000100c     kernel32:KERNEL32.dll
+ 0001:00000010       __imp__lstrcpynW@12        10001010     kernel32:KERNEL32.dll
+ 0001:00000014       \177KERNEL32_NULL_THUNK_DATA 10001014     kernel32:KERNEL32.dll
+ 0001:00000018       _MainGuid                  10001018     AutoWrap.obj
+ 0001:00000028       _MenuGuid                  10001028     AutoWrap.obj
+ 0001:00000038       _DialogGuid                10001038     AutoWrap.obj
+ 0001:00000048       ??_C@_1DE@BGKMIKPD@?$AAE?$AAu?$AAg?$AAe?$AAn?$AAe?$AA?5?$AAR?$AAo?$AAs?$AAh?$AAa?$AAl?$AA?5?$AA?$CG?$AA?5?$AAF?$AAa?$AAr?$AA?5?$AAG?$AAr?$AAo?$AAu?$AAp?$AA?$AA@ 10001048     AutoWrap.obj
+ 0001:0000007c       ??_C@_1DE@LDAHMEKD@?$AAA?$AAu?$AAt?$AAo?$AA?5?$AAw?$AAr?$AAa?$AAp?$AA?5?$AAf?$AAo?$AAr?$AA?5?$AAF?$AAa?$AAr?$AA?5?$AAM?$AAa?$AAn?$AAa?$AAg?$AAe?$AAr?$AA?$AA@ 1000107c     AutoWrap.obj
+ 0001:000000b0       ??_C@_1BC@NMCLCAKE@?$AAA?$AAu?$AAt?$AAo?$AAW?$AAr?$AAa?$AAp?$AA?$AA@ 100010b0     AutoWrap.obj
+ 0001:000000c4       ??_C@_11LOCGONAA@?$AA?$AA@ 100010c4     AutoWrap.obj
+ 0001:000000c8       ??_C@_1CC@MHEGACBP@?$AAE?$AAx?$AAc?$AAl?$AAu?$AAd?$AAe?$AAF?$AAi?$AAl?$AAe?$AAM?$AAa?$AAs?$AAk?$AAs?$AA?$AA@ 100010c8     AutoWrap.obj
+ 0001:000000ec       ??_C@_17ECHFBE@?$AA?$CK?$AA?4?$AA?$CK?$AA?$AA@ 100010ec     AutoWrap.obj
+ 0001:000000f4       ??_C@_1BE@GBKLIJMP@?$AAF?$AAi?$AAl?$AAe?$AAM?$AAa?$AAs?$AAk?$AAs?$AA?$AA@ 100010f4     AutoWrap.obj
+ 0001:00000108       ??_C@_1BI@JMKBMFLI@?$AAR?$AAi?$AAg?$AAh?$AAt?$AAM?$AAa?$AAr?$AAg?$AAi?$AAn?$AA?$AA@ 10001108     AutoWrap.obj
+ 0001:00000120       ??_C@_19BFPOADG@?$AAW?$AAr?$AAa?$AAp?$AA?$AA@ 10001120     AutoWrap.obj
+ 0001:0000012c       ??_7?$DialogItemBinding@UFarDialogItem@@@@6B@ 1000112c     AutoWrap.obj
+ 0001:00000134       ??_7?$DialogBuilderBase@UFarDialogItem@@@@6B@ 10001134     AutoWrap.obj
+ 0001:00000158       ??_7PluginEditFieldBinding@@6B@ 10001158     AutoWrap.obj
+ 0001:00000160       ??_C@_15EFLNJKHH@?$AA?$CF?$AAu?$AA?$AA@ 10001160     AutoWrap.obj
+ 0001:00000168       ??_7PluginIntEditFieldBinding@@6B@ 10001168     AutoWrap.obj
+ 0001:00000170       ??_7PluginDialogBuilder@@6B@ 10001170     AutoWrap.obj
+ 0001:00000194       ??_7PluginCheckBoxBinding@@6B@ 10001194     AutoWrap.obj
+ 0001:0000019c       ??_7PluginRadioButtonBinding@@6B@ 1000119c     AutoWrap.obj
+ 0001:000001a4       ??_7PluginUIntEditFieldBinding@@6B@ 100011a4     AutoWrap.obj
+ 0001:000001b0       __alloca_probe             100011b0     chkstk.obj
+ 0001:000001b0       __chkstk                   100011b0 f   chkstk.obj
+ 0001:000001e0       ?GetLangString@PluginDialogBuilder@@MAEPB_WH@Z 100011e0 f i AutoWrap.obj
+ 0001:00000200       _GetGlobalInfoW@4          10001200 f   AutoWrap.obj
+ 0001:00000280       _SetStartupInfoW@4         10001280 f   AutoWrap.obj
+ 0001:00000450       _GetPluginInfoW@4          10001450 f   AutoWrap.obj
+ 0001:000004a0       ?GetCommaWord@@YAPB_WPB_WPA_W@Z 100014a0 f   AutoWrap.obj
+ 0001:00000530       ?SaveValue@?$DialogItemBinding@UFarDialogItem@@@@UAEXPAUFarDialogItem@@H@Z 10001530 f i AutoWrap.obj
+ 0001:00000530       ?InitDialogItem@?$DialogBuilderBase@UFarDialogItem@@@@MAEXPAUFarDialogItem@@PB_W@Z 10001530 f i AutoWrap.obj
+ 0001:00000540       ?TextWidth@?$DialogBuilderBase@UFarDialogItem@@@@MAEHABUFarDialogItem@@@Z 10001540 f i AutoWrap.obj
+ 0001:00000550       ?DoShowDialog@?$DialogBuilderBase@UFarDialogItem@@@@MAEHXZ 10001550 f i AutoWrap.obj
+ 0001:00000560       ?AddIntEditField@?$DialogBuilderBase@UFarDialogItem@@@@UAEPAUFarDialogItem@@PAHH@Z 10001560 f i AutoWrap.obj
+ 0001:00000560       ?CreateCheckBoxBinding@?$DialogBuilderBase@UFarDialogItem@@@@MAEPAU?$DialogItemBinding@UFarDialogItem@@@@PAHH@Z 10001560 f i AutoWrap.obj
+ 0001:00000560       ?AddUIntEditField@?$DialogBuilderBase@UFarDialogItem@@@@UAEPAUFarDialogItem@@PAIH@Z 10001560 f i AutoWrap.obj
+ 0001:00000570       ?CreateRadioButtonBinding@?$DialogBuilderBase@UFarDialogItem@@@@MAEPAU?$DialogItemBinding@UFarDialogItem@@@@PAH@Z 10001570 f i AutoWrap.obj
+ 0001:00000570       ?GetLangString@?$DialogBuilderBase@UFarDialogItem@@@@MAEPB_WH@Z 10001570 f i AutoWrap.obj
+ 0001:00000580       ??1?$DialogBuilderBase@UFarDialogItem@@@@MAE@XZ 10001580 f i AutoWrap.obj
+ 0001:000005d0       ??_G?$DialogBuilderBase@UFarDialogItem@@@@MAEPAXI@Z 100015d0 f i AutoWrap.obj
+ 0001:000005d0       ??_E?$DialogBuilderBase@UFarDialogItem@@@@MAEPAXI@Z 100015d0 f i AutoWrap.obj
+ 0001:000005f0       ?ReallocDialogItems@?$DialogBuilderBase@UFarDialogItem@@@@IAEXXZ 100015f0 f i AutoWrap.obj
+ 0001:000006c0       ?UpdateSecondColumnPosition@?$DialogBuilderBase@UFarDialogItem@@@@IAEXXZ 100016c0 f i AutoWrap.obj
+ 0001:00000720       ?SaveValues@?$DialogBuilderBase@UFarDialogItem@@@@IAEXXZ 10001720 f i AutoWrap.obj
+ 0001:00000770       ?MaxTextWidth@?$DialogBuilderBase@UFarDialogItem@@@@IAEHXZ 10001770 f i AutoWrap.obj
+ 0001:00000830       ?SaveValue@PluginEditFieldBinding@@UAEXPAUFarDialogItem@@H@Z 10001830 f i AutoWrap.obj
+ 0001:00000860       ??0PluginIntEditFieldBinding@@QAE@ABUPluginStartupInfo@@PAPAXHPAHH@Z 10001860 f i AutoWrap.obj
+ 0001:00000900       ?SaveValue@PluginIntEditFieldBinding@@UAEXPAUFarDialogItem@@H@Z 10001900 f i AutoWrap.obj
+ 0001:00000930       ?InitDialogItem@PluginDialogBuilder@@MAEXPAUFarDialogItem@@PB_W@Z 10001930 f i AutoWrap.obj
+ 0001:00000950       ?TextWidth@PluginDialogBuilder@@MAEHABUFarDialogItem@@@Z 10001950 f i AutoWrap.obj
+ 0001:00000970       ?DoShowDialog@PluginDialogBuilder@@MAEHXZ 10001970 f i AutoWrap.obj
+ 0001:000009d0       ?SaveValue@PluginCheckBoxBinding@@UAEXPAUFarDialogItem@@H@Z 100019d0 f i AutoWrap.obj
+ 0001:00000a10       ?SaveValue@PluginRadioButtonBinding@@UAEXPAUFarDialogItem@@H@Z 10001a10 f i AutoWrap.obj
+ 0001:00000a40       ??0PluginUIntEditFieldBinding@@QAE@ABUPluginStartupInfo@@PAPAXHPAIH@Z 10001a40 f i AutoWrap.obj
+ 0001:00000ae0       ?SaveValue@PluginUIntEditFieldBinding@@UAEXPAUFarDialogItem@@H@Z 10001ae0 f i AutoWrap.obj
+ 0001:00000b10       ?CreateCheckBoxBinding@PluginDialogBuilder@@MAEPAU?$DialogItemBinding@UFarDialogItem@@@@PAHH@Z 10001b10 f i AutoWrap.obj
+ 0001:00000b60       ?CreateRadioButtonBinding@PluginDialogBuilder@@MAEPAU?$DialogItemBinding@UFarDialogItem@@@@PAH@Z 10001b60 f i AutoWrap.obj
+ 0001:00000bb0       ??_GPluginDialogBuilder@@UAEPAXI@Z 10001bb0 f i AutoWrap.obj
+ 0001:00000bb0       ??_EPluginDialogBuilder@@UAEPAXI@Z 10001bb0 f i AutoWrap.obj
+ 0001:00000bf0       _ProcessEditorInputW@4     10001bf0 f   AutoWrap.obj
+ 0001:000010b0       ?AddCheckbox@?$DialogBuilderBase@UFarDialogItem@@@@QAEPAUFarDialogItem@@HPAHH_N@Z 100020b0 f i AutoWrap.obj
+ 0001:000011e0       ?AddTextAfter@?$DialogBuilderBase@UFarDialogItem@@@@QAEPAUFarDialogItem@@PAU2@PB_WH@Z 100021e0 f i AutoWrap.obj
+ 0001:000012e0       ?AddSeparator@?$DialogBuilderBase@UFarDialogItem@@@@QAEXPB_W@Z 100022e0 f i AutoWrap.obj
+ 0001:00001350       ?AddButtons@?$DialogBuilderBase@UFarDialogItem@@@@QAEXHPBHHH@Z 10002350 f i AutoWrap.obj
+ 0001:000014b0       ?UpdateBorderSize@?$DialogBuilderBase@UFarDialogItem@@@@IAEXXZ 100024b0 f i AutoWrap.obj
+ 0001:00001560       ??_GPluginEditFieldBinding@@UAEPAXI@Z 10002560 f i AutoWrap.obj
+ 0001:00001560       ??_GPluginCheckBoxBinding@@UAEPAXI@Z 10002560 f i AutoWrap.obj
+ 0001:00001560       ??_EPluginIntEditFieldBinding@@UAEPAXI@Z 10002560 f i AutoWrap.obj
+ 0001:00001560       ??_GPluginUIntEditFieldBinding@@UAEPAXI@Z 10002560 f i AutoWrap.obj
+ 0001:00001560       ??_EPluginEditFieldBinding@@UAEPAXI@Z 10002560 f i AutoWrap.obj
+ 0001:00001560       ??_GPluginIntEditFieldBinding@@UAEPAXI@Z 10002560 f i AutoWrap.obj
+ 0001:00001560       ??_GPluginRadioButtonBinding@@UAEPAXI@Z 10002560 f i AutoWrap.obj
+ 0001:00001560       ??_EPluginCheckBoxBinding@@UAEPAXI@Z 10002560 f i AutoWrap.obj
+ 0001:00001560       ??_E?$DialogItemBinding@UFarDialogItem@@@@UAEPAXI@Z 10002560 f i AutoWrap.obj
+ 0001:00001560       ??_G?$DialogItemBinding@UFarDialogItem@@@@UAEPAXI@Z 10002560 f i AutoWrap.obj
+ 0001:00001560       ??_EPluginRadioButtonBinding@@UAEPAXI@Z 10002560 f i AutoWrap.obj
+ 0001:00001560       ??_EPluginUIntEditFieldBinding@@UAEPAXI@Z 10002560 f i AutoWrap.obj
+ 0001:00001580       ??0PluginDialogBuilder@@QAE@ABUPluginStartupInfo@@ABU_GUID@@1HPB_WP6GHPAXHH3@Z3_K@Z 10002580 f i AutoWrap.obj
+ 0001:00001690       ?AddIntEditField@PluginDialogBuilder@@UAEPAUFarDialogItem@@PAHH@Z 10002690 f i AutoWrap.obj
+ 0001:00001750       ?AddUIntEditField@PluginDialogBuilder@@UAEPAUFarDialogItem@@PAIH@Z 10002750 f i AutoWrap.obj
+ 0001:00001810       ?AddEditField@PluginDialogBuilder@@QAEPAUFarDialogItem@@PA_WHHPB_W_N@Z 10002810 f i AutoWrap.obj
+ 0001:00001910       _OpenW@4                   10002910 f   AutoWrap.obj
+ 0001:00001ca0       _wcschr                    10002ca0 f   libCRT:strchr.obj
+ 0001:00001cd0       ??_V@YAXPAX@Z              10002cd0 f   libCRT:delete_array.obj
+ 0001:00001ce0       ??3@YAXPAX@Z               10002ce0 f   libCRT:delete.obj
+ 0001:00001cf0       ??_U@YAPAXI@Z              10002cf0 f   libCRT:new_array.obj
+ 0001:00001d00       _memset                    10002d00 f   libCRT:memset.obj
+ 0001:00001d40       ??2@YAPAXI@Z               10002d40 f   libCRT:new.obj
+ 0001:00001d50       _free                      10002d50 f   libCRT:free.obj
+ 0001:00001d70       _malloc                    10002d70 f   libCRT:malloc.obj
+ 0001:00001d88       __IMPORT_DESCRIPTOR_KERNEL32 10002d88     kernel32:KERNEL32.dll
+ 0001:00001d9c       __NULL_IMPORT_DESCRIPTOR   10002d9c     kernel32:KERNEL32.dll
+ 0002:00000148       ?Opt@@3UOptions@@A         10003148     AutoWrap.obj
+
+ entry point at        0000:00000000
+
+ Static symbols
+

@@ -1,0 +1,3135 @@
+﻿.Language=Polish,Polish (Polski)
+
+//Version: 3.0 build 4430
+
+"Tak"
+"Nie"
+"OK"
+
+"&Tak"
+"&Nie"
+"&OK"
+
+"Anuluj"
+// need translation:
+"&Reset"
+"Ponów"
+"Omiń"
+"Zaniechaj"
+"Zignoruj"
+"Usuń"
+"Podziel"
+
+"&Anuluj"
+"&Ponów"
+"&Omiń"
+"Omiń &wszystkie"
+"&Zaniechaj"
+"Z&ignoruj"
+"&Usuń"
+"U&suń"
+"Po&dziel"
+
+"Ostrzeżenie"
+"Błąd"
+
+"Zakończ"
+"Czy chcesz zakończyć pracę z FARem?"
+
+//functional keys - 6 characters max
+"Pomoc"
+"Menu"
+"Zobacz"
+"Edytuj"
+"Kopiuj"
+"ZmNazw"
+"UtwKat"
+"Usuń"
+"Konfig"
+"Koniec"
+"Plugin"
+"Ekran"
+
+"Dodaj"
+"Rozpak"
+"Polec"
+"Edytuj"
+"Kopiuj"
+"ZmNazw"
+""
+"Usuń"
+"Zapisz"
+"Ostatn"
+"Grupa"
+"SelUp"
+
+"Lewy"
+"Prawy"
+"Zobacz"
+"Edytuj"
+"Drukuj"
+"Dowiąż"
+"Znajdź"
+"Histor"
+"Tryb"
+"Drzewo"
+"HsPodg"
+"HsKat"
+
+"Lewy"
+"Prawy"
+"Nazwa"
+"Rozsz"
+// need translation:
+"Write"
+"Rozm"
+"BezSor"
+"Utworz"
+"Użycie"
+"Opis"
+"Właśc"
+"Sortuj"
+
+// Main AltShift
+""
+""
+""
+""
+""
+""
+""
+""
+"KonfPl"
+""
+""
+""
+
+//Main CtrlShift
+""
+""
+"Podgląd"
+"Edycja"
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Main CtrlAlt
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Main CtrlAltShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+//End of functional keys
+
+"Historia"
+"Historia katalogów"
+// need translation:
+"Historia podglądu plików"
+"Utworzyć plik?"
+"Zobacz"
+"Edytuj"
+"Ext."
+
+"Wszystkie wpisy historii będą usunięte. Kontynuować?"
+"&Czyść historię"
+
+"Ustawienia systemowe"
+"&Usuwaj do Kosza"
+"Używaj &systemowej procedury kopiowania"
+"Kopiuj pliki otwarte do zap&isu"
+"Skanuj linki s&ymboliczne"
+// need translation:
+"Update panels only when Far is active"
+"Zapisz historię &poleceń"
+"Zapisz historię &katalogów"
+"Zapisz historię podglądu i &edycji"
+"Użyj zare&jestrowanych typów Windows"
+"&Montuj CD automatycznie"
+// need translation:
+"Automatic update of environment variables"
+// need translation:
+"request administrator rights:"
+// need translation:
+"for modification"
+// need translation:
+"for read"
+// need translation:
+"use additional privileges"
+"Automatycznie &zapisuj ustawienia"
+
+// need translation:
+"Tree settings"
+"&Automatycznie zmieniaj katalog"
+// need translation:
+"&Minimum number of folders:"
+// need translation:
+"Хранить файл структуры папок для:"
+// need translation:
+"локальных дисков"
+// need translation:
+"сетевых дисков"
+// need translation:
+"сетевых путей"
+// need translation:
+"сменных дисков"
+// need translation:
+"CD-дисков"
+// need translation:
+"Не создавать файл для следующих дисков и путей:"
+// need translation:
+"Путь для локальных, сменных и CDROM дисков:"
+// need translation:
+"Путь для сетевых дисков и путей:"
+
+"Ustawienia panelu"
+"Pokazuj pliki &ukryte i systemowe"
+"W&yróżniaj pliki"
+"Zaznaczaj katalo&gi"
+// need translation:
+"Right click selects files"
+"Sortuj nazwy katalogów wg r&ozszerzeń"
+"Włącz &możliwość odwrotnego sortowania"
+"&Wyłącz automatyczną aktualizację paneli"
+"jeśli zawierają więcej obiektów niż"
+"Auto&odświeżanie dysków sieciowych"
+"Wyświetl tytuły &kolumn"
+"Wyświetl &linię statusu"
+// need translation:
+"Determine Volume Mount point"
+"Wyświetl &całkowitą informację o plikach"
+"Wyświetl ilość &wolnego miejsca"
+"Wyświetl &suwak"
+"Wyświetl ilość &ekranów w tle"
+"Wyświetl l&iterę trybu sortowania"
+"Show \"..\" in root folders"
+// need translation:
+"Highlight column separators"
+// need translation:
+"Double global column separators"
+
+"Ustawienia interfejsu"
+"&Zegar"
+"Zegar w &podglądzie i edytorze"
+"M&ysz"
+"Wyświetl pasek &klawiszy"
+"Zawsze pokazuj pasek &menu"
+"&Wygaszacz ekranu"
+"m&inut"
+"Pokaż &całkowity postęp kopiowania"
+"Pokaż informację o c&zasie kopiowania"
+// need translation:
+"Show total delete progress indicator"
+"Użyj Ctrl+Pg&Up do zmiany napędu"
+// need translation:
+"ClearType friendly redraw (can be slow)"
+// need translation:
+"Set console icon"
+// need translation:
+"Alternate for Administrator"
+// need translation:
+"Far window title addons:"
+
+"Ustawienia okien dialogowych"
+"&Historia w polach edycyjnych"
+"&Trwałe bloki podczas edycji"
+"&Del usuwa blok podczas edycji"
+"&Autouzupełnianie podczas edycji"
+"&Backspace usuwa nie zmieniony tekst"
+"&Kliknięcie myszy poza oknem zamyka je"
+
+// need translation:
+"Menu settings"
+// need translation:
+"Left mouse click outside a menu"
+// need translation:
+"Right mouse click outside a menu"
+// need translation:
+"Middle mouse click outside a menu"
+// need translation:
+"Cancel menu"
+// need translation:
+"Execute selected item"
+// need translation:
+"Do nothing"
+
+// need translation:
+"Command line settings"
+// need translation:
+"Persistent blocks"
+// need translation:
+"Del removes blocks"
+// need translation:
+"AutoComplete"
+"Wy&gląd znaku zachęty linii poleceń"
+// need translation:
+"Use &home dir"
+// need translation:
+"Administrator"
+
+// need translation:
+"AutoComplete settings"
+
+// need translation:
+"&Show list"
+
+// need translation:
+"&Modal mode"
+
+// need translation:
+"&Append first matched item"
+
+// need translation:
+"InfoPanel settings"
+// need translation:
+"Computer &name format"
+// need translation:
+"Physical NetBIOS"
+// need translation:
+"Physical DNS hostname"
+// need translation:
+"Physical DNS domain"
+// need translation:
+"Physical DNS fully-qualified"
+// need translation:
+"NetBIOS"
+// need translation:
+"DNS hostname"
+// need translation:
+"DNS domain"
+// need translation:
+"DNS fully-qualified"
+// need translation:
+"&User name format"
+// need translation:
+"Default"
+// need translation:
+"Fully Qualified Domain Name"
+// need translation:
+"Sam Compatible"
+// need translation:
+"Display Name"
+// need translation:
+"Unique Id"
+// need translation:
+"Canonical Name"
+// need translation:
+"User Principial Name"
+// need translation:
+"Service Principal"
+// need translation:
+"Dns Domain"
+// need translation:
+"Show &power status"
+// need translation:
+"Show &CD drive parameters"
+
+// need translation:
+"Show Info"
+// need translation:
+"&Disk"
+// need translation:
+"&Memory"
+// need translation:
+"&Description"
+// need translation:
+"Plu&gin panel"
+// need translation:
+"&Power status"
+
+"Podgląd"
+// need translation:
+"Use external viewer for F3 instead of Alt+F3"
+"&Polecenie:"
+" Podgląd wbudowany "
+"&Zapamiętaj pozycję w pliku"
+"Zapisz z&akładki"
+// need translation:
+"Save file &codepage"
+// need translation:
+"Save w&rap mode"
+"Rozpozn&aj tablicę znaków"
+"Rozmiar &tabulatora"
+"Pokaż &pasek przewijania"
+"Pokaż strzał&ki przewijania"
+"T&rwałe zaznaczenie"
+// need translation:
+"Default code page:"
+// need translation:
+"Maximum line width"
+// need translation:
+"Visible '\\0'"
+// need translation:
+"Search dialog auto-focus"
+
+"Edytor"
+// need translation:
+"Use external editor for F4 instead of Alt+F4"
+"&Polecenie:"
+" Edytor wbudowany "
+"Zamiana znaków &tabulacji:"
+
+"Nie zamieniaj znaków tabulacji"
+"Zamień nowo dodane znaki tabulacji na spacje"
+"Zastąp wszystkie tabulatory spacjami"
+"T&rwałe bloki"
+
+"&Del usuwa bloki"
+"Automatyczne &wcięcia"
+"&Zapamiętaj pozycję kursora w pliku"
+"Zapisz &zakładki"
+"&Kursor za końcem linii"
+"Rozpozn&aj tablicę znaków"
+// need translation:
+"Allow editing files opened for &writing"
+"Nie edytuj plików tylko do odczytu"
+"&Ostrzeż przed otwieraniem plików tylko do odczytu"
+"Rozmiar ta&bulatora"
+"Pokaż &pasek przewijania"
+// need translation:
+"Show white space"
+// need translation:
+"Pick &up the word"
+"W&ybierz znalezione"
+// need translation:
+"Cursor at end"
+// need translation:
+"Default code page:"
+
+"Zapisz ustawienia"
+"Czy chcesz zapisać"
+"bieżące ustawienia?"
+"Zapisz"
+
+"Kopiuj"
+"Zmień nazwę/przenieś"
+"Dowiąż"
+"&Prawa dostępu:"
+"Kopiu&j"
+"&Dziedzicz"
+"Do&myślne"
+"Dla już &istniejących:"
+"&Zapytaj"
+"&Pytaj także o pliki tylko do odczytu"
+"Tylko &nowsze pliki"
+"&Typ linku:"
+"directory &junction"
+"link &trwały"
+"link symboliczny"
+"link symboliczny (do &pliku)"
+"link symboliczny (do &folderu)"
+"&Kopiuj zawartość linków symbolicznych"
+"Przetwarzaj &wszystkie cele"
+"&Kopiuj"
+"F10-&Drzewo"
+"&Anuluj"
+"&Zmień nazwę"
+// need translation:
+"Create &link"
+"Razem"
+"Przeszukuję katalogi..."
+"Ustawianie praw dostępu..."
+"&Użyj filtra"
+"Filt&r"
+
+"Skopiuj"
+"Zmień nazwę lub przenieś"
+// need translation:
+"Create link to"
+"Skopiuj %1 plików%2"
+"Zmień nazwę lub przenieś %1 plików%2"
+// need translation:
+"Create links to %1 item%2"
+" d&o:"
+// need translation:
+" &in:"
+""
+"s"
+"s"
+
+"Błędna lista wynikowa"
+
+"Kopiowanie"
+"Przenoszenie"
+
+"Nie mogę odnaleźć pliku"
+
+"Nie można skopiować katalogu"
+"do niego samego"
+
+"Nie udało się utworzyć katalogu"
+"Nie udało się ustawić atrybutów folderu"
+"Nie udało się zmienić nazwy katalogu"
+"&Ignoruj"
+"Ignoruj &wszystko"
+"&Ponów"
+"&Omiń"
+"Omiń w&szystkie"
+"&Anuluj"
+"&Deszyfruj"
+"Deszyfruj ws&zystkie"
+
+"Nie udało się utworzyć linku"
+"Folder wynikowy musi być pusty"
+"Nie można utworzyć połączenia - plik już istnieje:"
+
+"Błąd montowania napędu"
+"Nie udało się zamontować woluminu '%1'"
+"w '%1' nie udało się"
+"Disk_"
+
+"Nie można skopiować pliku"
+"do niego samego"
+
+"Plik źródłowy zawiera więcej niż jeden strumień danych."
+"ale ze względu na rezygnację z systemowej procedury kopiowania."
+"ale napęd docelowy nie obsługuje tej funkcji."
+"Nie wszystkie dane zostaną zachowane."
+
+// need translation:
+"Does it specify a folder name or file name?"
+// need translation:
+"Folder"
+// need translation:
+"File"
+
+"Plik już istnieje"
+"&Nowy"
+"&Istniejący"
+"N&adpisz"
+"&Omiń"
+"&Dołącz"
+"Ponó&w"
+// need translation:
+"R&ename"
+"&Anuluj"
+"&Zapamiętaj ustawienia"
+// need translation:
+"Rename"
+// need translation:
+"&New name:"
+
+"Ten plik jest tylko-do-odczytu"
+"Czy chcesz go usunąć?"
+"&Usuń"
+"&Wszystkie"
+"&Omiń"
+"O&miń wszystkie"
+"&Anuluj"
+
+"Nie mogę skopiować"
+"Nie mogę przenieść"
+"Nie mogę dowiązać"
+"do"
+"Plik"
+"nie może zostać skopiowany/przeniesiony bez utraty szyfrowania"
+"Możesz zignorować błąd i kontynuować lub anulować operację."
+
+"Nie mogę odczytać danych z"
+"Nie mogę zapisać danych do"
+
+"Przetworzonych plików: %1"
+// need translation:
+"Files: %1 / %2"
+// need translation:
+"Bytes processed: %1"
+// need translation:
+"Bytes: %1 / %2"
+"Przenoszę plik"
+"Kopiuję plik"
+"do"
+
+"Dysk pełny. Włóż następny"
+
+"Usuń"
+"Czy chcesz wymazać katalog"
+"Czy chcesz usunąć plik"
+"Czy chcesz usunąć"
+"Czy chcesz przenieść katalog do Kosza"
+"Czy chcesz przenieść plik do Kosza"
+"Czy chcesz przenieść do Kosza"
+"Wymaż"
+"Czy chcesz wymazać katalog"
+"Czy chcesz wymazać plik"
+"Czy chcesz wymazać"
+"Usuń link"
+"jest linkiem do"
+"folder"
+"plik"
+"%1 plik%2"
+""
+"i"
+"ów"
+
+"Usuń folder"
+"Wymaż folder"
+"Usuń pliki"
+"Wymaż pliki"
+"Następujący folder zostanie usunięty:"
+"Następujący folder zostanie wymazany:"
+// need translation:
+"The following folder will be moved to the Recycle Bin:"
+// need translation:
+"Folder contains symbolic links."
+// need translation:
+"To prevent the loss of their content when clearing Recyle Bin"
+// need translation:
+"those links will be broken now."
+// need translation:
+"It would be impossible to restore them later."
+"Wymaż"
+// need translation:
+"Move"
+"&Usuń"
+"&Wymaż"
+"&wszystkie"
+"&Omiń"
+"O&miń wszystkie"
+"&Anuluj"
+
+"Usuń link"
+
+"Usuwam"
+
+"Usuwam plik/katalog"
+"Wymazuję plik/katalog"
+
+"Ten plik jest tylko do odczytu"
+"Czy chcesz go usunąć?"
+"Czy chcesz go wymazać?"
+
+"Do tego pliku prowadzi wiele linków trwałych."
+"Wymazanie tego pliku wymaże wszystkie pliki dolinkowane."
+"Czy wymazać plik?"
+
+"Nie mogę usunąć pliku"
+"Nie mogę usunąć katalogu"
+"&Ponów"
+"Po&miń"
+"Pomiń &wszystkie"
+"&Anuluj"
+// need translation:
+"Cannot move file to the Recycle Bin"
+// need translation:
+"Cannot move folder to the Recycle Bin"
+
+"Nie mogę pobrać praw dostępu dla"
+"Nie mogę ustawić praw dostępu dla"
+
+"Edytor"
+"został już załadowany. Załadować ponownie?"
+"&Bieżący"
+"&Załaduj"
+"&Nowa instancja"
+"Nie mogę otworzyć pliku"
+"Czytam plik"
+// need translation:
+"Plik został zmodyfikowany. Save?"
+// need translation:
+"Plik został zmieniony przez inny program. Save?"
+"Zapisz &jako..."
+
+"jest plikiem tylko do odczytu"
+"już istnieje"
+"Czy chcesz go nadpisać?"
+"Zapisuję plik"
+// need translation:
+"linia"
+// need translation:
+"kolumna"
+// need translation:
+"Ch"
+
+"jest plikiem tylko do odczytu"
+// need translation:
+"File size could not be determined."
+"ma wielkość %1,"
+"przekraczającą ustalone maksimum %1."
+"Czy chcesz go edytować?"
+
+"Nie można edytować folderu"
+
+"Szukaj"
+"&Znajdź"
+"&Uwzględnij wielkość liter"
+"Tylko całe słowa"
+"Szukaj w &odwrotnym kierunku"
+// need translation:
+"Re&gular expressions"
+// need translation:
+"&Zachowaj styl"
+"&Szukaj"
+// need translation:
+"&All"
+"&Anuluj"
+
+"Zamień"
+"Zamień &na"
+"Za&mień"
+
+"Szukam"
+// need translation:
+"Occurrences: %1, lines: %2"
+"F1, F5, Ctrl+Enter, Ctrl+Up/Down, Add"
+"Nie mogę odnaleźć ciągu"
+
+"Zamienić"
+"na"
+"&Zamień"
+"&Wszystkie"
+"&Omiń"
+"&Anuluj"
+"&Otwórz/utwórz plik:"
+"Wykryj automatycznie"
+// need translation:
+"Default"
+
+"Idź do linii"
+
+"Skróty katalogów"
+"Edycja: Del,Ins,Shift+Ins,F4"
+"Edycja: Del,Ins,F4"
+"<brak>"
+"<plugin>"
+// need translation:
+"Title:"
+// need translation:
+"Path:"
+"Plik:"
+// need translation:
+"Data:"
+"Przejść do najbliższego istniejącego folderu?"
+"Zapisać skróty?"
+
+//functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
+"Pomoc"
+"Zapisz"
+""
+"Koniec"
+""
+"Zobacz"
+"Szukaj"
+"Latin 2"
+""
+"Koniec"
+"Plugin"
+"Ekran"
+
+//Editor: Shift
+""
+"Zapisz"
+""
+"Edytuj"
+""
+""
+"Następ"
+"Tabela"
+""
+"ZapKon"
+""
+""
+
+//Editor: Alt
+""
+""
+""
+""
+""
+""
+"Poprz"
+"IdźDo"
+"Video"
+""
+"Historia"
+""
+
+//Editor: Ctrl
+""
+""
+""
+""
+""
+""
+"Zamień"
+""
+""
+"GoFile"
+""
+""
+
+//Editor: AltShift
+""
+""
+""
+""
+""
+""
+""
+""
+"Konfig"
+""
+""
+""
+
+//Editor: CtrlShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Editor: CtrlAlt
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Editor: CtrlAltShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"CP-1250"
+// End of functional keys (Editor)
+// it's a F8 another text
+
+//Single Editor: functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
+"Pomoc"
+"Zapisz"
+""
+"Koniec"
+""
+"Zobacz"
+"Szukaj"
+"Latin 2"
+""
+"Koniec"
+"Plugin"
+"Ekran"
+
+//Single Editor: Shift
+""
+"Zapisz"
+""
+""
+""
+""
+"Następ"
+"Tabela"
+""
+"ZapKon"
+""
+""
+
+//Single Editor: Alt
+""
+""
+""
+""
+""
+""
+""
+"IdźDo"
+"Ekran"
+""
+"ZobHs"
+""
+
+//Single Editor: Ctrl
+""
+""
+""
+""
+""
+""
+"Zastąp"
+""
+""
+""
+""
+""
+
+//Single Editor: AltShift
+""
+""
+""
+""
+""
+""
+""
+""
+"Konfig"
+""
+""
+""
+
+//Single Editor: CtrlShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+//Single Editor: CtrlAlt
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+//Single Editor: CtrlAltShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"CP 1250"
+// End of functional keys (Single Editor)
+// it's a F8 another text
+
+"Zapisz plik &jako"
+"&Strona kodowa:"
+"Dodaj &znacznik BOM"
+"Zamień znaki końca linii na:"
+"&Nie zmieniaj"
+"Format &Dos/Windows (CR LF)"
+"Format &Unix (LF)"
+"Format &Mac (CR)"
+"Nie mogę zapisać pliku"
+"Plik został zmieniony, ale plik lub folder zawierający"
+"Plik lub folder zawierający"
+// need translation:
+"ten plik został przeniesiony lub usunięty. Save?"
+"Ścieżka do edytowanego pliku nie istnieje,"
+"ale zostanie utworzona po zapisaniu pliku."
+"Kontynuować?"
+"Nazwa pliku do edycji nie może być pusta"
+// need translation:
+"File contains characters, which cannot be"
+// need translation:
+"correctly read using selected codepage."
+// need translation:
+"File has to be reloaded to change codepage."
+// need translation:
+"All unsaved changes will be lost."
+// need translation:
+"Editor contains characters, which cannot be"
+// need translation:
+"correctly saved using selected codepage."
+// need translation:
+"Editor contains characters, which cannot be"
+// need translation:
+"correctly translated using selected codepage [%1]"
+// need translation:
+"Continue?"
+// need translation:
+"During file editing some data were lost."
+"Odradzamy zapis pliku."
+"Zapisz"
+// need translation:
+"Show"
+// need translation:
+"Unicode codepage switch is not supported"
+// need translation:
+"You can reload file using custom codepage (ShiftF4)"
+// need translation:
+"Switch to unicode codepage %1 is not supported"
+// need translation:
+"Codepage %1 is not supported in your system"
+// need translation:
+"Cannot determine the codepage"
+
+"Nazwa"
+// need translation:
+"Extension"
+"Rozmiar"
+// need translation:
+"Allocated"
+"Data"
+"Czas"
+// need translation:
+"Write"
+"Utworzenie"
+"Użycie"
+// need translation:
+"Change"
+"Atrybuty"
+"Opis"
+"Właściciel"
+"NmL"
+// need translation:
+"NmS"
+// need translation:
+"StrmSz"
+"???"
+
+"W górę"
+"Folder"
+"LinkSym"
+"Dowiązania"
+// need translation:
+"Volume"
+// need translation:
+"DFS"
+// need translation:
+"DFSR"
+// need translation:
+"HSM"
+// need translation:
+"HSM2"
+// need translation:
+"SIS"
+// need translation:
+"WIM"
+// need translation:
+"CSV"
+// need translation:
+"DEDUP"
+// need translation:
+"NFS"
+// need translation:
+"Placeholder"
+"?LinkSym?"
+"<>"
+"B"
+"K"
+"M"
+"G"
+"T"
+"P"
+"E"
+" %1 bajtów w 1 pliku "
+" %1 bajtów w %2 plikach "
+" %1 bajtów w %2 plikach "
+" %1 wolnych bajtów "
+
+"Podgląd"
+"Plik do edycji:"
+
+"Odznacz"
+"Zaznacz"
+"&Filtruj"
+
+"Porównaj"
+"Aby porównać katalogi konieczne są"
+"dwa zwykłe panele plików"
+"Zawartość katalogów"
+"wydaje się być identyczna"
+
+"Wybierz przypisanie"
+
+"Przypisania plików"
+"Edycja: Del,Ins,F4"
+"Czy chcesz usunąć przypisanie dla"
+
+"Edytuj przypisania pliku"
+"&Maska pliku lub kilka masek oddzielonych przecinkami:"
+"&Opis przypisania:"
+"Polecenie (po naciśnięciu &Enter):"
+"Polecenie (po naciśnięciu &Ctrl+PgDn):"
+"&Podgląd (po naciśnięciu F3):"
+"Podg&ląd (po naciśnięciu Alt+F3):"
+"&Edycja  (po naciśnięciu F4):"
+"E&dycja  (po naciśnięciu Alt+F4):"
+
+//Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
+"Pomoc"
+"Zawiń"
+// this is another text for F2
+"Koniec"
+"Hex"
+""
+"Edytuj"
+"Szukaj"
+"Latin 2"
+""
+"Koniec"
+"Pluginy"
+"Ekran"
+
+//Viewer: Shift
+""
+"ZawińS"
+""
+// need translation:
+"Mode"
+""
+""
+"Następ"
+"Tabela"
+""
+""
+""
+""
+
+//Viewer: Alt
+""
+""
+""
+""
+""
+""
+"Poprz"
+"IdźDo"
+"Video"
+""
+"Historia"
+""
+
+//Viewer: Ctrl
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"DoPlik"
+""
+""
+
+//Viewer: AltShift
+""
+""
+""
+""
+""
+""
+""
+""
+"Konfig"
+""
+""
+""
+
+//Viewer: CtrlShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+//Viewer: CtrlAlt
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+//Viewer: CtrlAltShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"Unwrap"
+// this is another text for F4
+"Tekst"
+// this is another text for F4
+// need translation:
+"Dump"
+// this is another text for F8
+"CP 1250"
+// end of functional keys (Viewer)
+
+//Single Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
+"Pomoc"
+"Zawiń"
+"Koniec"
+"Hex"
+""
+"Edytuj"
+"Szukaj"
+"Latin 2"
+""
+"Koniec"
+"Pluginy"
+"Ekran"
+
+//Single Viewer: Shift
+""
+"ZawińS"
+""
+""
+""
+""
+"Nast."
+"Tabela"
+""
+""
+""
+""
+
+//Single Viewer: Alt
+""
+""
+""
+""
+""
+""
+"Poprz"
+"IdźDo"
+"Video"
+""
+"Historia"
+""
+
+//Single Viewer: Ctrl
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+//Single Viewer: AltShift
+""
+""
+""
+""
+""
+""
+""
+""
+"Konfig"
+""
+""
+""
+
+//Single Viewer: CtrlShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+//Single Viewer: CtrlAlt
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+//Single Viewer: CtrlAltShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+// this is another text for F2
+"Rozwij"
+// this is another text for F4
+"Tekst"
+// this is another text for F4
+"CP 1250"
+// end of functional keys (Single Viewer)
+// need translation:
+"View mode"
+"podgląd"
+"edycja"
+
+"Filtry"
+"+,-,Spacja,I,X,BS,Shift+BS,Ins,Del,F4,F5,Ctrl+Up,Ctrl+Dn"
+"Typ plików w panelu"
+"Foldery"
+"Tylko filtr użytkownika może być edytowany"
+"Czy chcesz usunąć filtr"
+"Tylko filtr użytkownika może być usunięty"
+
+"Znajdź plik"
+"&Maska pliku lub kilka masek oddzielonych przecinkami:"
+"Zawierający &tekst:"
+"Zawierający wartość &szesnastkową:"
+"Użyj tablicy znaków:"
+"Space, Ins"
+"&Uwzględnij wielkość liter"
+"Tylko &całe słowa"
+// need translation:
+"Wszystkie zainstalowane"
+// need translation:
+"Selected code pages"
+"Szukaj w arc&hiwach"
+"Szukaj &folderów"
+"Szukaj w &linkach"
+// need translation:
+"Search in alternate streams"
+"Szukaj wartości &szesnastkowej"
+// need translation:
+"Not containing"
+"Obszar wyszukiwania:"
+"Na dyskach &stałych"
+"Na dyskach &lokalnych"
+"W folderach zmiennej &PATH"
+"Od &korzenia"
+"Od katalogu &głównego"
+"Od &bieżącego katalogu"
+"&Tylko w bieżącym katalogu"
+"W &zaznaczonych katalogach"
+"&Filtruj"
+"używając filtra"
+"Szuka&j"
+"&Dysk"
+"&Filtr"
+"&Zaawansowane"
+"Szukam%1 w"
+"&Od nowa..."
+"&Idź do"
+"&Podgląd"
+"&Do panelu"
+"&Stop"
+
+"Wyszukiwanie zakończone (znalazłem %1 plików i %2 folderów)"
+"&Anuluj"
+
+" Plików: %1, folderów: %2 "
+
+"Katalog"
+"LinkSym"
+"Dowiązania"
+
+"Zaawansowane opcje wyszukiwania"
+"Szukaj wyłącznie w &pierwszych:"
+// need translation:
+"&Output format:"
+"&Typy kolumn"
+"&Szerokości kolumn"
+
+"Wyszukiwanie:"
+
+"Strony kodowe"
+// need translation:
+"System"
+// need translation:
+"Unicode"
+// need translation:
+"Favorites"
+// need translation:
+"Other"
+"Ctrl+H, Del, Ins, F4"
+"Ctrl+H, Del, F4"
+// need translation:
+"Edit code page name"
+// need translation:
+"&Reset"
+
+"Wyróżnianie plików"
+"Ins,Del,F4,F5,Ctrl+Up,Ctrl+Down"
+"Górna grupa sortowania"
+"Dolna grupa sortowania"
+"Grupa wyróżniania o najniższym priorytecie"
+"Czy chcesz usunąć wyróżnianie dla"
+"Wszystkie zmiany zostaną utracone"
+"Czy przywrócić wyróżnianie domyślne?"
+
+"Edytuj wyróżnianie plików"
+"Opcjonalny znak &wyróżniający zaznaczone pliki,"
+"prze&zroczyste"
+" Kolory nazw plików (domyślny - \"czarny na czarnym\") "
+"&1. Nazwa pliku bez zaznaczenia    "
+"&3. Zaznaczenie                    "
+"&5. Nazwa pliku pod kursorem       "
+"&7. Zaznaczony plik pod kursorem   "
+"&2. Zaznaczenie"
+"&4. Zaznaczenie"
+"&6. Zaznaczenie"
+"&8. Zaznaczenie"
+"║nazwa.roz    │"
+"║ nazwa.roz   │"
+"K&ontynuuj przetwarzanie"
+
+"Informacja"
+"Nazwa komputera"
+// need translation:
+"Computer description"
+"Nazwa użytkownika"
+// need translation:
+"User description"
+// need translation:
+"Access level"
+// need translation:
+"Guest"
+// need translation:
+"User"
+// need translation:
+"Administrator"
+// need translation:
+"Unknown"
+" Dysk "
+"Wyjmowalny"
+"Stały"
+"Sieciowy"
+"CD-ROM"
+"CD-RW"
+"CD-RW/DVD"
+"DVD-ROM"
+"DVD-RW"
+"DVD-RAM"
+"RAM"
+"Subst"
+// need translation:
+"Virtual"
+// need translation:
+"Unknown"
+"dysk"
+"Razem bajtów"
+"Wolnych bajtów"
+"Etykieta woluminu"
+"Numer seryjny"
+" Pamięć "
+"Użycie pamięci"
+// need translation:
+"Installed memory"
+"Całkowita pamięć"
+"Wolna pamięć"
+"Całkowita wirtualna"
+"Wolna wirtualna"
+// need translation:
+"Total paging file"
+// need translation:
+"Free paging file"
+" Opis "
+"Plik opisu katalogu nie istnieje"
+" Plugin "
+// need translation:
+" Power Status"
+// need translation:
+"AC power status"
+// need translation:
+"Offline"
+// need translation:
+"Online"
+// need translation:
+"Backup power"
+// need translation:
+"Unknown"
+// need translation:
+"Battery life percent"
+// need translation:
+"Unknown"
+// need translation:
+"Battery charge status"
+// need translation:
+"High"
+// need translation:
+"Low"
+// need translation:
+"Critical"
+// need translation:
+"Charging"
+// need translation:
+"No system battery"
+// need translation:
+"Unknown"
+// need translation:
+"Battery life time"
+// need translation:
+"Unknown"
+// need translation:
+"Battery full time"
+// need translation:
+"Unknown"
+"Dostęp zabroniony"
+
+"Nie mogę wykonać"
+// need translation:
+"Cannot invoke command interpreter"
+// need translation:
+"Check COMSPEC environment variable"
+"Przeszukuję katalog"
+
+"Utwórz katalog"
+"Nazwa katalogu:"
+"Typ linku:"
+// need translation:
+"None"
+"directory junction"
+"link symboliczny"
+// need translation:
+"Target:"
+"Przetwarzaj &wiele nazw"
+"Błędna lista folderów"
+"Nie mogę utworzyć katalogu"
+
+"&Skrótowy"
+"Ś&redni"
+"&Pełny"
+"S&zeroki"
+"Ze sz&czegółami"
+"&Opisy"
+"&Długie opisy"
+"&Właściciele"
+"Dowiąza&nia"
+"&Alternatywny"
+
+"Panel informacy&jny"
+"Drz&ewo"
+"Sz&ybki podgląd"
+"Try&by sortowania"
+"Po&każ długie nazwy"
+"Włącz/Wyłącz pane&l"
+"Odśw&ież"
+"Z&mień napęd"
+
+"&Podgląd"
+"&Edytuj"
+"&Kopiuj"
+"&Zmień nazwę lub przenieś"
+// need translation:
+"Link"
+"U&twórz katalog"
+"&Usuń"
+"&Wymaż"
+"&Dodaj do archiwum"
+"&Rozpakuj archiwum"
+"Po&lecenie archiwizera"
+"&Atrybuty pliku"
+"Zastosuj pole&cenie"
+"&Opisz pliki"
+"Zaznacz &grupę"
+"Odz&nacz grupę"
+"Od&wróć zaznaczenie"
+"Odtwórz zaznaczen&ie"
+
+"&Znajdź plik"
+"&Historia"
+"&Tryb wyświetlania"
+"Znajdź kata&log"
+"Historia &podglądu plików"
+"Historia &katalogów"
+"Z&amień panele"
+"&Włącz/Wyłącz panele"
+"Porówna&j katalogi"
+"Edytuj &menu użytkownika"
+"Prz&ypisania plików"
+"&Skróty katalogów"
+"&Filtr panelu plików"
+"Pl&uginy"
+"L&ista ekranów"
+"Lista za&dań"
+"Lista urządzeń Ho&tplug"
+
+"Ustawienia &systemowe"
+"Ustawienia &panelu"
+// need translation:
+"Tree settings"
+"Ustawienia &interfejsu"
+"&Język"
+"Konfiguracja p&luginów"
+// need translation:
+"Plugins manager settings"
+"Ustawienia okna &dialogowego"
+// need translation:
+"Menu settings"
+// need translation:
+"Command line settings"
+// need translation:
+"AutoComplete settings"
+// need translation:
+"Inf&oPanel settings"
+// need translation:
+"Groups of file masks"
+"P&otwierdzenia"
+"&Tryby wyświetlania panelu plików"
+"Opis&y plików"
+"Pliki opisu &katalogu"
+"Ustawienia pod&glądu"
+"Ustawienia &edytora"
+// need translation:
+"Strony kodowe"
+"Kolo&ry"
+"&Wyróżnianie plików"
+"&Zapisz ustawienia"
+"Włącz/wyłącz pane&l"
+"Z&mień napęd"
+
+"&Lewy"
+"Pl&iki"
+"Pol&ecenia"
+"&Opcje"
+"&Prawy"
+
+"Sortuj według..."
+"&nazwy"
+"ro&zszerzenia"
+// need translation:
+"&Write time"
+"&rozmiaru"
+"&bez sortowania"
+"czasu u&tworzenia"
+"czasu &użycia"
+// need translation:
+"Change time"
+"&opisu"
+"&właściciela"
+// need translation:
+"Allocated size"
+"&liczby dowiązań"
+// need translation:
+"Number of st&reams"
+// need translation:
+"Si&ze of streams"
+// need translation:
+"&Full name"
+// need translation:
+"Cus&tom data"
+"użyj &grup sortowania"
+"zazna&czone najpierw"
+// need translation:
+"Sho&w directories first"
+"Sortuj num&erycznie"
+// need translation:
+"Sortuj uwzględniając wielkość liter"
+"Edycja: Ins, Del, F4, F7, Ctrl+R"
+"&Nazwa:"
+"&Maska pliku lub kilka masek oddzielonych przecinkami:"
+"Czy chcesz usunąć"
+// need translation:
+"Do you wish to restore default mask sets?"
+"&Maska:"
+"Razem: %1"
+
+"Napęd"
+"wyjmowalny"
+"stały"
+"sieciowy"
+// need translation:
+"disconnected"
+"CD-ROM"
+"CD-RW"
+"CD-RW/DVD"
+"DVD-ROM"
+"DVD-RW"
+"DVD-RAM"
+"BD-ROM"
+"BD-RW"
+"HDDVD-ROM"
+"HDDVD-RW"
+"RAM-dysk"
+"subst"
+// need translation:
+"virtual"
+"niedostępny"
+"Nie mogę odczytać dysku w napędzie"
+"Nie mogę odłączyć się od %1"
+"Nie można usunąć dysku SUBST %1"
+// need translation:
+"Cannot detach virtual disk %1"
+"Jeśli nie zamkniesz otwartych plików, możesz utracić dane"
+
+// need translation:
+"Odłączanie napędu wirtualnego"
+// need translation:
+"Odłączyć dysk SUBST %1?"
+// need translation:
+"Virtual disk detaching"
+// need translation:
+"Detach virtual disk %1?"
+
+"Odłączanie urządzenia"
+"Czy odłączyć urządzenie"
+"(dysk(i): %1)"
+"Nie udało się odłączyć dysku %1:"
+"Nie udało się odłączyć urządzenia:"
+"Urządzenie"
+"można teraz bezpiecznie odłączyć"
+"Lista urządzeń Hotplug"
+"Edycja: Del,Ctrl+R"
+
+"Odłączanie dysku sieciowego"
+"Czy odłączyć dysk %1:?"
+"Dysk %1: jest skojarzony z:"
+"&Podłącz ponownie przy logowaniu"
+
+"Czy chcesz mimo to odłączyć urządzenie?"
+"Trwa montowanie dysku..."
+"Nie można wysunąć dysku z napędu %1:"
+// need translation:
+"Change Drive Menu Options"
+// need translation:
+"Show disk type"
+// need translation:
+"Show &network name/SUBST path/VHD name"
+// need translation:
+"Show disk &label"
+// need translation:
+"Show &file system type"
+// need translation:
+"Show &size"
+// need translation:
+"Show size in &Windows Explorer style"
+// need translation:
+"Show &removable drive parameters"
+// need translation:
+"Show &plugins"
+// need translation:
+"Sort plugins by hotkey"
+// need translation:
+"Show &CD drive parameters"
+// need translation:
+"Show ne&twork drive parameters"
+"Del,Shift+Del,F3,F4,F9"
+
+" Szukaj "
+"Nie mogę utworzyć listy plików"
+"(nie można utworzyć pliku tymczasowego dla listy)"
+"(nie można zapisać danych do pliku)"
+
+"%1 plików"
+"Przenieś %1"
+"Kopiuj %1"
+
+"Lista zadań"
+"Edycja: Del,Ctrl+R,F2"
+"Zakończ zadanie"
+"Czy chcesz zakończyć wybrane zadanie?"
+"Utracisz wszystkie niezapisane dane w tym programie"
+"Zakończ"
+"Nie mogę zakończyć wybranego zadania"
+"Nie masz wystarczających uprawnień do zakończenia procesu."
+
+"Szybki podgląd"
+"Folder"
+"Powiązanie"
+"Link"
+"Napęd"
+// need translation:
+"DFS"
+// need translation:
+"DFSR"
+// need translation:
+"HSM"
+// need translation:
+"HSM2"
+// need translation:
+"SIS"
+// need translation:
+"WIM"
+// need translation:
+"CSV"
+// need translation:
+"DEDUP"
+// need translation:
+"NFS"
+// need translation:
+"Placeholder"
+// need translation:
+"Unknown reparse point"
+"(dane niedostępne)"
+"Zawiera:"
+"Katalogi            "
+"Pliki               "
+"Rozmiar plików      "
+// need translation:
+"Allocated size   "
+"Rozmiar klastra     "
+"Przestrzeń stracona "
+// need translation:
+"MFT overhead        "
+
+"Atrybuty"
+"Zmień atrybuty dla"
+"wybranych obiektów"
+"linków trwałych"
+"Powiązanie:"
+"Link:"
+"Punkt zamontowania:"
+// need translation:
+"DFS Targets"
+"(dane niedostępne)"
+"&Tylko do odczytu"
+"&Archiwalny"
+"&Ukryty"
+"&Systemowy"
+"S&kompresowany"
+"Zaszy&frowany"
+"Nie z&indeksowany"
+// need translation:
+"Sparse"
+"&Tymczasowy"
+"Offline"
+// need translation:
+"Reparse point"
+"Wirtualny"
+// need translation:
+"Integrity stream"
+// need translation:
+"No scrub data"
+"Przetwarzaj &podkatalogi"
+"Właściciel:"
+// need translation:
+"(multiple values)"
+// need translation:
+"Last &write time:"
+"Czas u&tworzenia:"
+"Czas ostatniego &dostępu:"
+// need translation:
+"Change time:"
+"Wstaw &oryginalny"
+"Wstaw &bieżący"
+"&Wyczyść"
+"Usta&w"
+
+// need translation:
+"MM%1DD%2RRRRR gg%3mm%4ss%5ms"
+// need translation:
+"DD%1MM%2RRRRR gg%3mm%4ss%5ms"
+// need translation:
+"RRRRR%1MM%2DD gg%3mm%4ss%5ms"
+// need translation:
+"System properties"
+
+"Ustawiam atrybuty"
+"Nie mogę ustawić atrybutów dla"
+"Nie mogę ustawić atrybutu SKOMPRESOWANY dla"
+"Nie mogę ustawić atrybutu ZASZYFROWANY dla"
+// need translation:
+"Cannot set attribute SPARSE for"
+"Nie mogę ustawić czasu pliku dla"
+// need translation:
+"Cannot set owner for"
+
+"&Panel"
+"Okno &dialogowe"
+"&Ostrzeżenie"
+"&Menu"
+"Pa&sek menu"
+"Pasek &klawiszy"
+"&Linia poleceń"
+"&Zegar"
+"Pod&gląd"
+"&Edytor"
+"P&omoc"
+"&Ustaw kolory domyślne"
+"&Tryb czarno-biały"
+
+"Normalny tekst"
+"Wybrany tekst"
+"Tekst podświetlony"
+"Podświetlone info"
+"Przeciągany tekst"
+"Ramka"
+"Normalny kursor"
+"Wybrany kursor"
+"Normalny tytuł"
+"Wybrany tytuł"
+"Tytuł kolumny"
+"Całkowite info"
+"Wybrane info"
+"Suwak"
+"Ilość ekranów w tle "
+
+"Tekst zwykły"
+"Tekst podświetlony"
+"Tekst nieaktywny"
+"Ramka"
+"Tytuł"
+"Podświetlony tytuł"
+"Wpisywany tekst"
+"Niezmieniony wpisywany tekst "
+"Zaznaczony wpisywany tekst"
+"Nieaktywna linia wprowadzania danych"
+"Przyciski"
+"Wybrane przyciski"
+"Podświetlone przyciski"
+"Wybrane podświetlone przyciski "
+// need translation:
+"Default button"
+// need translation:
+"Selected default button"
+// need translation:
+"Highlighted default button"
+// need translation:
+"Selected highlighted default button"
+"Lista"
+"Pole combo"
+
+"Tekst zwykły"
+"Tekst wybrany"
+"Tekst podświetlony"
+"Tekst wybrany i podświetlony"
+"Pole nieaktywne"
+"Ramka"
+"Tytuł"
+// need translation:
+"Grayed list text"
+// need translation:
+"Selected grayed list text"
+"Suwak"
+"Znacznik długiego napisu"
+"Zaznaczone znacznik długiego napisu"
+"Nieaktywny znacznik długiego napisu"
+
+"Normalny tekst"
+"Wybrany tekst"
+"Podświetlony tekst"
+"Wybrany podświetlony tekst "
+"Tekst nieaktywny"
+// need translation:
+"Grayed text"
+// need translation:
+"Selected grayed text"
+"Ramka"
+"Tytuł"
+"Suwak"
+"Znacznik długiego napisu"
+"Zaznaczone znacznik długiego napisu"
+"Nieaktywny znacznik długiego napisu"
+
+"Normalny tekst"
+"Wybrany tekst"
+"Podświetlony tekst"
+"Wybrany podświetlony tekst "
+
+"Numery klawiszy"
+"Nazwy klawiszy"
+"Tło"
+
+"Normalny tekst"
+"Zaznaczony wpisany tekst"
+"Tekst prefiksu"
+"Ekran użytkownika"
+
+"Normalny tekst (Panel)"
+"Normalny tekst (Edytor)"
+"Normalny tekst (Podgląd)"
+
+"Normalny tekst"
+"Zaznaczony tekst"
+"Linia statusu"
+"Strzałki przesuwające ekran"
+"Suwak"
+
+"Normalny tekst"
+"Zaznaczony tekst"
+"Linia statusu"
+"Suwak"
+
+"Normalny tekst"
+"Podświetlony tekst"
+"Odniesienie"
+"Wybrane odniesienie "
+"Ramka"
+"Tytuł"
+"Suwak"
+
+"Grupy kolorów"
+"Elementy grupy"
+
+"Kolor"
+"&Pierwszy plan"
+"&Tło"
+"P&rzezroczyste"
+"Pr&zezroczyste"
+"Tekst Tekst Tekst Tekst Tekst Tekst"
+"Ustaw"
+"Anuluj"
+
+"Potwierdzenia"
+"&Kopiowanie"
+"&Przenoszenie"
+// need translation:
+"&Overwrite and delete R/O files"
+"P&rzeciąganie i upuszczanie"
+"&Usuwanie"
+"Usuwanie &niepustych katalogów"
+"&Przerwanie operacji"
+"Odłączenie dysku &sieciowego"
+// need translation:
+"Odłączenie dysku &SUBST"
+// need translation:
+"Detach virtual disk"
+"Odłączanie urządzenia HotPlug"
+"&Załaduj edytowany plik"
+"Czyszczenie &historii"
+"&Wyjście"
+
+// need translation:
+"Plugins manager settings"
+// need translation:
+"OEM plugins support"
+"Skanuj linki s&ymboliczne"
+// need translation:
+"&File processing"
+// need translation:
+"Show standard &association item"
+// need translation:
+"Even if only &one plugin found"
+// need translation:
+"Search &results (SetFindList)"
+// need translation:
+"&Prefix processing"
+// need translation:
+"Plugin selection"
+// need translation:
+"Standard association"
+
+"Znajdź folder"
+
+// Find folder Tree KeyBar
+"Pomoc"
+"Czytaj ponownie"
+""
+""
+"Powiększ"
+""
+""
+""
+""
+"Koniec"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"Video"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"Drzewo"
+"Nie mogę zapisać drzewa katalogów do pliku"
+"Odczytuję drzewo katalogów"
+
+"Menu użytkownika"
+"Wybierz typ menu do edycji"
+"Główne"
+"Lokalne"
+"Menu główne"
+
+// <...menu (User)>
+// need translation:
+"User"
+// need translation:
+"Global"
+"Menu lokalne"
+"Edycja: Del,Ins,F4,Alt+F4"
+"Czy usunąć pozycję menu"
+"Czy usunąć podmenu"
+"Błędny format etykiety menu użytkownika"
+"Błędny format klawisza skrótu"
+
+"Edytuj menu użytkownika"
+"&Klawisz skrótu:"
+"&Etykieta:"
+"&Polecenia:"
+
+"Czy chcesz wstawić nowe polecenie lub nowe menu?"
+"Wstaw polecenie"
+"Wstaw menu"
+
+"Edytuj etykietę podmenu"
+"&Klawisz skrótu:"
+"&Etykieta:"
+// need translation:
+"Save changes?"
+
+"Podgląd"
+"Nie mogę otworzyć pliku"
+"Kolumna"
+
+"Szukaj"
+"&Znajdź"
+"Szukaj &tekstu"
+"Szukaj &wartości szesnastkowych"
+"&Uwzględnij wielkość liter"
+"Tylko całe słowa"
+"Szukaj w &odwrotnym kierunku"
+// need translation:
+"Re&gular expressions"
+"&Szukaj"
+"&Anuluj"
+
+"Szukam"
+"Szukam bajtów"
+"Nie mogę odnaleźć ciągu znaków"
+"Nie mogę odnaleźć bajtów"
+// need translation:
+"End of the document reached"
+"Kontynuować wyszukiwanie od początku dokumentu?"
+// need translation:
+"Begin of the document reached"
+"Kontynuować wyszukiwanie od końca dokumentu?"
+// need translation:
+"Whole document scanned"
+// need translation:
+"Repeat the search in the document?"
+
+"Drukuj"
+"Drukuj %1 do"
+"Drukuj %1 pliki(ów) do"
+"Przygotowuję plik(i) do drukowania"
+// need translation:
+"Cannot enumerate available printers list"
+"Nie mogę połączyć się z drukarką"
+"Nie mogę drukować"
+
+"Opisz plik"
+"Wprowadź opis"
+
+"Odczytuję opisy plików"
+"Nie moge aktualizować opisów plików"
+"Opis jest plikiem tylko do odczytu"
+
+"Opisy plików"
+"Nazwy &plików z opisami oddzielone przecinkami:"
+"Ustaw atrybut ""&Ukryty"" dla nowych plików z opisami"
+"Aktualizuj plik opisu tylko do odczytu"
+"Pozy&cja nowych opisów w linii"
+"&Nie aktualizuj opisów"
+"Aktualizuj jeśli &widoczne"
+"&Zawsze aktualizuj"
+"&Otwieraj pliki w kodowaniu Windows"
+// need translation:
+"Save in UTF8"
+
+"Aktualizacja panelu"
+"Czytam: %1 plików"
+"Operacja nie doprowadzona do końca"
+
+"Edytuj tryby wyświetlania paneli"
+
+"Nazwa"
+"&Typy kolumn"
+"&Szerokości kolumn"
+"Typy kolumn &linii statusu"
+"Szerokości kolumn l&inii statusu"
+"Widok &pełnoekranowy"
+"W&yrównaj rozszerzenia plików"
+"Wyrównaj rozszerzenia &folderów"
+"Nazwy katalogów &WIELKIMI LITERAMI"
+"&Nazwy plików małymi literami"
+"Wyświetl NAZWY_PLIKÓW &jako nazwy_plików"
+" Instrukcje zawarte są w pomocy podręcznej "
+
+"Pliki opisu katalogu"
+"Nazwy plików oddzielone przecinkami (znaki ? i * dopuszczalne)"
+
+"Ekrany"
+"Panele"
+"Podgląd"
+"Edycja"
+
+"Zastosuj polecenie"
+"Wprowadź polecenie do przetworzenia wybranych plików"
+
+"Konfiguracja pluginów"
+"Dostępne pluginy"
+
+"Przygotowuję listę plików"
+
+"Język programu"
+"Język pomocy"
+
+"Zdefiniuj makro"
+"Naciśnij żądany klawisz"
+"Skrót '%1' jest już zdefiniowany."
+"Skrót '%1' zostanie usunięty."
+"Skrót '%1' jest już zdefiniowany."
+"Skrót '%1' zostanie usunięty."
+"Sekwencja:"
+"Opis:"
+"Zdefiniować powtórnie?"
+"Usunąć?"
+// need translation:
+"Change"
+
+"Ustawienia makra dla '%1'"
+"&Wyłącz zapis na ekran podczas wykonywania makra"
+"Wykonaj po &starcie FAR-a"
+"Panel &aktywny"
+"Panel &pasywny"
+"Panel p&luginów"
+"Wykonaj dla &folderów"
+"Zaznaczenie &obecne"
+"Pusta &linia poleceń"
+"Obecny &blok zaznaczenia"
+// need translation:
+"Plugin LuaMacro is not loaded"
+// need translation:
+"Macro recording is disabled"
+
+"Nie mogę zapisać pliku"
+"Edytowany tekst został zachowany w"
+
+"Sty"
+"Lut"
+"Mar"
+"Kwi"
+"Maj"
+"Cze"
+"Lip"
+"Sie"
+"Wrz"
+"Paź"
+"Lis"
+"Gru"
+
+"Przypisz klawisz skrótu do pluginu"
+"Podaj klawisz skrótu (litera lub cyfra)"
+// need translation:
+"Plugin information"
+// need translation:
+"&Title:"
+// need translation:
+"&Description:"
+// need translation:
+"&Author:"
+// need translation:
+"&Version:"
+// need translation:
+"&Module path:"
+// need translation:
+"Plugin &GUID:"
+// need translation:
+"Plugin &item GUID:"
+// need translation:
+"Plugin &prefix:"
+// need translation:
+"F4 - ustaw klawisz skrótu, F3 - information"
+
+"PrawyCtrl"
+
+"Idź do"
+"&Procent"
+"Pozycja (&szesnastkowo)"
+"Pozycja (&dziesiętnie)"
+"Wystąpił wyjątek"
+"Błąd dostępu (odczyt z %1)"
+"Błąd dostępu (zapis do %1)"
+"Błąd dostępu (wykonanie w %1)"
+"Przekroczenie granic tabeli"
+"Dzielenie przez zero"
+"Przepełnienie stosu"
+"Wyjątek punktu przerwania"
+"Błąd zmiennoprzecinkowego dzielenia przez zero"
+"Przepełnienie przy operacji zmiennnoprzecinkowej"
+"Stos operacji zmiennoprzecinkowych pusty lub pełny"
+"Błąd niedomiaru przy operacji zmiennoprzecinkowej"
+"Błędna instrukcja"
+"Błąd ustawienia"
+"Nieznany wyjątek"
+// need translation:
+"Exception:"
+// need translation:
+"Address:"
+// need translation:
+"Function:"
+// need translation:
+"Module:"
+// need translation:
+"Terminate Far"
+// need translation:
+"Unload plugin"
+// need translation:
+"Debug"
+
+"Nazwa użytkownika"
+"Hasło użytkownika"
+
+"Nie udało się odczytać zawartości folderu"
+
+"Do uruchomienia pluginu wymagana jest wyższa wersja FAR-a"
+"Wymagana wersja Far-a to %1,"
+"bieżąca wersja Far-a: %1."
+// need translation:
+"Błąd ładowania modułu plugina"
+
+"?"
+
+"Pomoc"
+"To wywołanie uruchomi aplikację zewnętrzną:"
+"z parametrem:"
+"Czy chcesz ją uruchomić?"
+"Nie można otworzyć pliku"
+"Nie znaleziono tematu pomocy:"
+
+"Pomoc dla pluginów"
+"Pomoc dla dokumentów"
+
+"Szukaj"
+"&Znajdź"
+"Nie mogę odnaleźć ciągu znaków"
+
+// Help KeyBar F1-12
+"Pomoc"
+""
+""
+""
+"Powiększ"
+""
+"Szukaj"
+""
+""
+"Koniec"
+""
+""
+
+// Help KeyBar Shift+F1-12
+"Indeks"
+"Plugin"
+"Dokumenty"
+""
+""
+""
+"Nast."
+""
+""
+""
+""
+""
+
+// Help KeyBar Alt+F1-12
+"Poprz."
+""
+""
+""
+""
+""
+""
+""
+"Video"
+""
+""
+""
+
+// Help KeyBar Ctrl+F1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Help KeyBar AltShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Help KeyBar CtrlShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Help KeyBar CtrlAltF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Help KeyBar CtrlAltShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// InfoPanel KeyBar F1-F12
+"Pomoc"
+"Zawiń"
+"VieDiz"
+"EdtDiz"
+""
+""
+"Search"
+"ANSI"
+"ConfMn"
+"Koniec"
+"Plugin"
+"Ekran"
+
+// InfoPanel KeyBar Shift+F1-F12
+""
+"ZawijS"
+""
+""
+""
+""
+"Nast."
+"StrKod"
+"Zapisz"
+"Ostat."
+""
+""
+
+// InfoPanel KeyBar Alt+F1-F12
+"Lewy"
+"Prawy"
+""
+""
+""
+""
+"Znajdź"
+"IdźDo"
+"Video"
+"Drzewo"
+"Historia"
+"FoldHs"
+
+// InfoPanel KeyBar Ctrl+F1-F12
+"Lewy"
+"Prawy"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// InfoPanel KeyBar AltShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// InfoPanel KeyBar CtrlShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// InfoPanel KeyBar CtrlAltF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// InfoPanel KeyBar CtrlAltShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// QView KeyBar F1-F12
+"Pomoc"
+"Zawiń"
+"Zobacz"
+"Hex"
+""
+""
+"Szukaj"
+"ANSI"
+"ConfMn"
+"Koniec"
+"Plugin"
+"Ekran"
+
+// QView KeyBar Shift+F1-F12
+""
+"WWrap"
+""
+""
+""
+""
+"Nast."
+"StrKod"
+"Zapisz"
+"Ostat."
+""
+""
+
+// QView KeyBar Alt+F1-F12
+"Lewy"
+"Prawy"
+""
+""
+""
+""
+"Znajdź"
+"IdźDo"
+"Video"
+"Drzewo"
+"Historia"
+"FoldHs"
+
+// QView KeyBar Ctrl+F1-F12
+"Lewy"
+"Prawy"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// QView KeyBar AltShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// QView KeyBar CtrlShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// QView KeyBar CtrlAltF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// QView KeyBar CtrlAltShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Tree KeyBar F1-F12
+"Pomoc"
+"UserMn"
+""
+"Atryb."
+"Kopiuj"
+"Zamień"
+"NowyFldr"
+"Usuń"
+"KonfMenu"
+"Koniec"
+"Plugin"
+"Ekran"
+
+// Tree KeyBar Shift+F1-F12
+""
+""
+""
+""
+"Kopiuj"
+"Zamień"
+""
+""
+"Zapisz"
+"Ostat."
+"Grupa"
+"SelUp"
+
+// Tree KeyBar Alt+F1-F12
+"Lewy"
+"Prawy"
+""
+""
+""
+""
+"Znajdź"
+"Historia"
+"Video"
+"Drzewo"
+"Historia"
+"FoldHs"
+
+// Tree KeyBar Ctrl+F1-F12
+"Lewy"
+"Prawy"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Tree KeyBar AltShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Tree KeyBar CtrlShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Tree KeyBar CtrlAltF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Tree KeyBar CtrlAltShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+"Czas: %1    Pozostało: %2    %3B/s"
+
+"Operacja została przerwana"
+"Czy naprawdę chcesz ją anulować?"
+"Kontynuować? "
+
+"Plugin sprawdza plik"
+
+"Dialog"
+"Pomoc"
+"Drzewo folderów"
+"Menu"
+
+"Maska pliku zawiera błędy"
+
+"{}"
+
+"Nie zdefiniowano zmiennej środowiskowej %COMSPEC%"
+
+"Nie można otworzyć pliku"
+
+"Filtr wyszukiwania"
+"Zaznaczanie plików"
+"Nazwa &filtra:"
+"&Maska:"
+"Ro&zmiar:"
+">="
+"<="
+// need translation:
+"Has more than one hardlink"
+"Da&ta/Czas:"
+// need translation:
+"&write"
+"&utworzenia"
+"&dostępu"
+// need translation:
+"c&hange"
+"Relat&ive"
+">="
+"<="
+"&Bieżący"
+"&Wyczyść"
+"&Atrybuty"
+"&Do odczytu"
+"&Archiwalny"
+"&Ukryty"
+"&Systemowy"
+"S&kompresowany"
+"&Zaszyfrowany"
+"&Katalog"
+"Nie z&indeksowany"
+"S&parse"
+"&Tymczasowy"
+// need translation:
+"Reparse point"
+"O&ffline"
+"&Wirtualny"
+// need translation:
+"Integrity stream"
+// need translation:
+"No scrub data"
+"Wy&czyść"
+"&Anuluj"
+"Ustaw jako przezroczysty"
+"Rozmiar pliku jest niepoprawny"
+
+// need translation:
+"Administrator"
+// need translation:
+"You need to provide administrator permission"
+// need translation:
+"Additional privileges required"
+// need translation:
+"to process this object:"
+// need translation:
+"to open this object:"
+// need translation:
+"to delete this object:"
+// need translation:
+"to copy this object:"
+// need translation:
+"to move this object:"
+// need translation:
+"to get attributes of this object:"
+// need translation:
+"to set attributes of this object:"
+// need translation:
+"to create this hard link:"
+// need translation:
+"to create this symbolic link:"
+// need translation:
+"to move this object to recycle bin:"
+// need translation:
+"to list this object:"
+// need translation:
+"to set owner of this object:"
+// need translation:
+"to open this object:"
+// need translation:
+"to encrypt this object:"
+// need translation:
+"to decrypt this object:"
+// need translation:
+"Do this for &all current objects"
+// need translation:
+"Do not ask again in the current session"
+// need translation:
+"History"
+// need translation:
+"Environment"
+// need translation:
+"Files"
+// need translation:
+"Object is being %1 in:"
+// need translation:
+"played"
+// need translation:
+"edited"
+// need translation:
+"opened"
+// need translation:
+"Switch to"
+// need translation:
+"Close file"
+// need translation:
+"Problem configuration DB"
+// need translation:
+"Show configuration folders"
+// keys
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"Gray -"
+""
+"Gray *"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"Gray +"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+// keys end
+
+"?Nowy plik?"

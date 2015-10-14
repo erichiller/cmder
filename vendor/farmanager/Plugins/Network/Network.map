@@ -1,0 +1,333 @@
+ Network
+
+ Timestamp is 56107bea (Sun Oct 04 04:07:54 2015)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 000000a0H .idata$5                CODE
+ 0001:000000a0 000005aaH .rdata                  CODE
+ 0001:00000650 00006a6eH .text                   CODE
+ 0001:000070c0 00000064H .idata$2                CODE
+ 0001:00007124 00000014H .idata$3                CODE
+ 0001:00007138 000000a0H .idata$4                CODE
+ 0001:000071d8 000002a2H .idata$6                CODE
+ 0001:00007480 00000182H .edata                  CODE
+ 0002:00000000 0000016cH .data                   DATA
+ 0002:00000170 00000d7cH .bss                    DATA
+ 0003:00000000 00000058H .rsrc$01                DATA
+ 0003:00000060 00000370H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0001:00000000       __imp__RegCloseKey@4       10001000     advapi32:ADVAPI32.dll
+ 0001:00000004       __imp__RegOpenKeyExW@20    10001004     advapi32:ADVAPI32.dll
+ 0001:00000008       \177ADVAPI32_NULL_THUNK_DATA 10001008     advapi32:ADVAPI32.dll
+ 0001:0000000c       __imp__ExpandEnvironmentStringsW@12 1000100c     kernel32:KERNEL32.dll
+ 0001:00000010       __imp__lstrcpyW@8          10001010     kernel32:KERNEL32.dll
+ 0001:00000014       __imp__lstrlenW@4          10001014     kernel32:KERNEL32.dll
+ 0001:00000018       __imp__lstrcmpiW@8         10001018     kernel32:KERNEL32.dll
+ 0001:0000001c       __imp__lstrcpynW@12        1000101c     kernel32:KERNEL32.dll
+ 0001:00000020       __imp__lstrcatW@8          10001020     kernel32:KERNEL32.dll
+ 0001:00000024       __imp__GetModuleFileNameW@12 10001024     kernel32:KERNEL32.dll
+ 0001:00000028       __imp__LocalFree@4         10001028     kernel32:KERNEL32.dll
+ 0001:0000002c       __imp__LocalAlloc@8        1000102c     kernel32:KERNEL32.dll
+ 0001:00000030       __imp__GetLogicalDrives@0  10001030     kernel32:KERNEL32.dll
+ 0001:00000034       __imp__GetCurrentDirectoryW@8 10001034     kernel32:KERNEL32.dll
+ 0001:00000038       __imp__lstrcmpW@8          10001038     kernel32:KERNEL32.dll
+ 0001:0000003c       __imp__SetLastError@4      1000103c     kernel32:KERNEL32.dll
+ 0001:00000040       __imp__FindClose@4         10001040     kernel32:KERNEL32.dll
+ 0001:00000044       __imp__FindFirstFileW@8    10001044     kernel32:KERNEL32.dll
+ 0001:00000048       __imp__GetComputerNameW@8  10001048     kernel32:KERNEL32.dll
+ 0001:0000004c       __imp__HeapAlloc@12        1000104c     kernel32:KERNEL32.dll
+ 0001:00000050       __imp__HeapReAlloc@16      10001050     kernel32:KERNEL32.dll
+ 0001:00000054       __imp__HeapFree@12         10001054     kernel32:KERNEL32.dll
+ 0001:00000058       __imp__GetProcessHeap@0    10001058     kernel32:KERNEL32.dll
+ 0001:0000005c       __imp__GetSystemDirectoryW@8 1000105c     kernel32:KERNEL32.dll
+ 0001:00000060       __imp__GetLastError@0      10001060     kernel32:KERNEL32.dll
+ 0001:00000064       __imp__SetCurrentDirectoryW@4 10001064     kernel32:KERNEL32.dll
+ 0001:00000068       \177KERNEL32_NULL_THUNK_DATA 10001068     kernel32:KERNEL32.dll
+ 0001:0000006c       __imp__WNetCloseEnum@4     1000106c     mpr:MPR.dll
+ 0001:00000070       __imp__WNetOpenEnumW@20    10001070     mpr:MPR.dll
+ 0001:00000074       __imp__WNetGetResourceInformationW@16 10001074     mpr:MPR.dll
+ 0001:00000078       __imp__WNetGetResourceParentW@12 10001078     mpr:MPR.dll
+ 0001:0000007c       __imp__WNetAddConnection2W@16 1000107c     mpr:MPR.dll
+ 0001:00000080       __imp__WNetCancelConnection2W@12 10001080     mpr:MPR.dll
+ 0001:00000084       __imp__WNetEnumResourceW@16 10001084     mpr:MPR.dll
+ 0001:00000088       \177MPR_NULL_THUNK_DATA    10001088     mpr:MPR.dll
+ 0001:0000008c       __imp__NetShareEnum@28     1000108c     Netapi32:NETAPI32.dll
+ 0001:00000090       __imp__NetApiBufferFree@4  10001090     Netapi32:NETAPI32.dll
+ 0001:00000094       \177NETAPI32_NULL_THUNK_DATA 10001094     Netapi32:NETAPI32.dll
+ 0001:00000098       __imp__CharUpperW@4        10001098     user32:USER32.dll
+ 0001:0000009c       \177USER32_NULL_THUNK_DATA 1000109c     user32:USER32.dll
+ 0001:000000a0       _MainGuid                  100010a0     Network.obj
+ 0001:000000b0       _MenuGuid                  100010b0     Network.obj
+ 0001:000000c0       _ConfigDialogGuid          100010c0     Network.obj
+ 0001:000000d0       _DisconnectDialogGuid      100010d0     Network.obj
+ 0001:000000e0       _UserPassDialogGuid        100010e0     Network.obj
+ 0001:000000f0       ??_C@_1DE@BGKMIKPD@?$AAE?$AAu?$AAg?$AAe?$AAn?$AAe?$AA?5?$AAR?$AAo?$AAs?$AAh?$AAa?$AAl?$AA?5?$AA?$CG?$AA?5?$AAF?$AAa?$AAr?$AA?5?$AAG?$AAr?$AAo?$AAu?$AAp?$AA?$AA@ 100010f0     Network.obj
+ 0001:00000124       ??_C@_1DO@KECGBOGC@?$AAN?$AAe?$AAt?$AAw?$AAo?$AAr?$AAk?$AA?5?$AAP?$AAl?$AAu?$AAg?$AAi?$AAn?$AA?5?$AAf?$AAo?$AAr?$AA?5?$AAF?$AAa?$AAr?$AA?5?$AAM?$AAa?$AAn?$AAa?$AAg?$AAe?$AAr?$AA?$AA@ 10001124     Network.obj
+ 0001:00000164       ??_C@_1BA@IFBJBPAK@?$AAN?$AAe?$AAt?$AAw?$AAo?$AAr?$AAk?$AA?$AA@ 10001164     Network.obj
+ 0001:00000174       ??_C@_17ODNIDLDN@?$AAn?$AAe?$AAt?$AA?$AA@ 10001174     Network.obj
+ 0001:0000017c       ??_C@_19HNBCINPI@?$AAn?$AAe?$AAt?$AAg?$AA?$AA@ 1000117c     Network.obj
+ 0001:00000188       ??_C@_15LEKKCGMK@?$AA?2?$AA?2?$AA?$AA@ 10001188     Network.obj
+ 0001:00000190       ??_C@_1BE@OMHKNOGL@?$AAP?$AAa?$AAn?$AAe?$AAl?$AAM?$AAo?$AAd?$AAe?$AA?$AA@ 10001190     NetCfg.obj
+ 0001:000001a4       ??_C@_1CE@JCLLPGFN@?$AAN?$AAa?$AAv?$AAi?$AAg?$AAa?$AAt?$AAe?$AAT?$AAo?$AAD?$AAo?$AAm?$AAa?$AAi?$AAn?$AAs?$AA?$AA@ 100011a4     NetCfg.obj
+ 0001:000001c8       ??_C@_1CE@DLMGFKCB@?$AAN?$AAo?$AAR?$AAo?$AAo?$AAt?$AAD?$AAo?$AAu?$AAb?$AAl?$AAe?$AAP?$AAo?$AAi?$AAn?$AAt?$AA?$AA@ 100011c8     NetCfg.obj
+ 0001:000001ec       ??_C@_1BO@LADGPGKF@?$AAF?$AAa?$AAv?$AAo?$AAr?$AAi?$AAt?$AAe?$AAs?$AAF?$AAl?$AAa?$AAg?$AAs?$AA?$AA@ 100011ec     NetCfg.obj
+ 0001:0000020c       ??_C@_1BO@FLKJOEGH@?$AAF?$AAu?$AAl?$AAl?$AAP?$AAa?$AAt?$AAh?$AAS?$AAh?$AAa?$AAr?$AAe?$AAs?$AA?$AA@ 1000120c     NetCfg.obj
+ 0001:0000022c       ??_C@_1CK@LKLAIIEF@?$AAH?$AAi?$AAd?$AAd?$AAe?$AAn?$AAS?$AAh?$AAa?$AAr?$AAe?$AAs?$AAA?$AAs?$AAH?$AAi?$AAd?$AAd?$AAe?$AAn?$AA?$AA@ 1000122c     NetCfg.obj
+ 0001:00000258       ??_C@_1CC@DJEEMKIM@?$AAR?$AAe?$AAm?$AAo?$AAv?$AAe?$AAC?$AAo?$AAn?$AAn?$AAe?$AAc?$AAt?$AAi?$AAo?$AAn?$AA?$AA@ 10001258     NetCfg.obj
+ 0001:0000027c       ??_C@_1BO@ONNGHKLG@?$AAD?$AAi?$AAs?$AAc?$AAo?$AAn?$AAn?$AAe?$AAc?$AAt?$AAM?$AAo?$AAd?$AAe?$AA?$AA@ 1000127c     NetCfg.obj
+ 0001:0000029c       ??_C@_1BK@IMMOFPGP@?$AAL?$AAo?$AAc?$AAa?$AAl?$AAN?$AAe?$AAt?$AAw?$AAo?$AAr?$AAk?$AA?$AA@ 1000129c     NetCfg.obj
+ 0001:000002b8       ??_C@_1BK@BMPKBAI@?$AAS?$AAh?$AAo?$AAw?$AAP?$AAr?$AAi?$AAn?$AAt?$AAe?$AAr?$AAs?$AA?$AA@ 100012b8     NetCfg.obj
+ 0001:000002d4       ??_C@_1BK@KLHOCBFH@?$AAH?$AAi?$AAd?$AAd?$AAe?$AAn?$AAS?$AAh?$AAa?$AAr?$AAe?$AAs?$AA?$AA@ 100012d4     NetCfg.obj
+ 0001:000002f0       ??_C@_1BC@ENICKDH@?$AAC?$AAo?$AAn?$AAt?$AAe?$AAn?$AAt?$AAs?$AA?$AA@ 100012f0     NetCfg.obj
+ 0001:00000304       ??_C@_1CC@PNNAOHJC@?$AAA?$AAd?$AAd?$AAT?$AAo?$AAP?$AAl?$AAu?$AAg?$AAi?$AAn?$AAs?$AAM?$AAe?$AAn?$AAu?$AA?$AA@ 10001304     NetCfg.obj
+ 0001:00000328       ??_C@_1BO@NGDOFANC@?$AAA?$AAd?$AAd?$AAT?$AAo?$AAD?$AAi?$AAs?$AAk?$AAs?$AAM?$AAe?$AAn?$AAu?$AA?$AA@ 10001328     NetCfg.obj
+ 0001:00000348       ??_C@_1BC@EJKAECLA@?$AAn?$AAe?$AAt?$AA?3?$AAn?$AAe?$AAt?$AAg?$AA?$AA@ 10001348     NetCfg.obj
+ 0001:0000035c       ??_7?$DialogBuilderBase@UFarDialogItem@@@@6B@ 1000135c     NetCfg.obj
+ 0001:00000380       ??_7PluginDialogBuilder@@6B@ 10001380     NetCfg.obj
+ 0001:000003a4       ??_7?$DialogItemBinding@UFarDialogItem@@@@6B@ 100013a4     NetCfg.obj
+ 0001:000003ac       ??_7PluginCheckBoxBinding@@6B@ 100013ac     NetCfg.obj
+ 0001:000003b4       ??_7PluginRadioButtonBinding@@6B@ 100013b4     NetCfg.obj
+ 0001:000003bc       ??_C@_15EFLNJKHH@?$AA?$CF?$AAu?$AA?$AA@ 100013bc     NetCfg.obj
+ 0001:000003c4       ??_7PluginIntEditFieldBinding@@6B@ 100013c4     NetCfg.obj
+ 0001:000003cc       ??_7PluginUIntEditFieldBinding@@6B@ 100013cc     NetCfg.obj
+ 0001:000003d4       ??_C@_11LOCGONAA@?$AA?$AA@ 100013d4     NetCfg.obj
+ 0001:000003d8       ??_C@_1O@BJPKKLLM@?$AAC?$AAo?$AAn?$AAf?$AAi?$AAg?$AA?$AA@ 100013d8     NetCfg.obj
+ 0001:000003f8       ??_C@_13LBAGMAIH@?$AA?6?$AA?$AA@ 100013f8     NetClass.obj
+ 0001:000003fc       ??_C@_1M@ICMPIFCG@?$AA0?$AA?0?$AA2?$AA?0?$AA0?$AA?$AA@ 100013fc     NetClass.obj
+ 0001:00000408       ??_C@_1BA@LKKFCKCJ@?$AAN?$AA?0?$AAC?$AA0?$AA?0?$AAC?$AA1?$AA?$AA@ 10001408     NetClass.obj
+ 0001:00000418       ??_C@_17DFFMIGIM@?$AA0?$AA?0?$AA2?$AA?$AA@ 10001418     NetClass.obj
+ 0001:00000420       ??_C@_19ELDIFHOA@?$AAN?$AA?0?$AAC?$AA0?$AA?$AA@ 10001420     NetClass.obj
+ 0001:0000042c       ??_C@_1BC@BDJLNJKB@?$AA?5?$AA?$CF?$AAs?$AA?3?$AA?5?$AA?$CF?$AAs?$AA?5?$AA?$AA@ 1000142c     NetClass.obj
+ 0001:00000440       ??_C@_1BE@DEAPIJA@?$AAM?$AAi?$AAc?$AAr?$AAo?$AAs?$AAo?$AAf?$AAt?$AA?$AA@ 10001440     NetClass.obj
+ 0001:00000454       ??_C@_19POFGONBN@?$AA?$CG?$AA?$CF?$AAc?$AA?3?$AA?$AA@ 10001454     NetClass.obj
+ 0001:00000460       ??_C@_1M@JNLNDDIN@?$AA?$CF?$AAT?$AAM?$AAP?$AA?$CF?$AA?$AA@ 10001460     NetClass.obj
+ 0001:0000046c       ??_C@_15JNBOKNOG@?$AA?$AN?$AA?6?$AA?$AA@ 1000146c     NetClass.obj
+ 0001:00000474       ??_C@_13HOIJIPNN@?$AA?5?$AA?$AA@ 10001474     NetClass.obj
+ 0001:00000478       ??_C@_15PCEAIKAA@?$AA?4?$AA?2?$AA?$AA@ 10001478     NetClass.obj
+ 0001:00000480       ??_C@_15DDHGOCBH@?$AA?4?$AA?4?$AA?$AA@ 10001480     NetClass.obj
+ 0001:00000488       ??_C@_19CDBNEOLI@?$AA?$CF?$AAs?$AA?2?$AA?$CK?$AA?$AA@ 10001488     NetClass.obj
+ 0001:00000494       ??_C@_1BI@HGBMBLHP@?$AA?2?$AA?2?$AA?$DP?$AA?2?$AAU?$AAN?$AAC?$AA?$CF?$AAs?$AA?2?$AA?$CK?$AA?$AA@ 10001494     NetClass.obj
+ 0001:000004ac       ??_C@_1BM@EONNLOAH@?$AAR?$AAe?$AAm?$AAo?$AAv?$AAe?$AAI?$AAt?$AAe?$AAm?$AAF?$AAa?$AAv?$AA?$AA@ 100014ac     NetClass.obj
+ 0001:000004c8       ??_C@_1DA@CMNOOJGO@?$AAF?$AAa?$AAi?$AAl?$AAe?$AAd?$AA?5?$AAt?$AAo?$AA?5?$AAc?$AAr?$AAe?$AAa?$AAt?$AAe?$AA?5?$AAf?$AAo?$AAl?$AAd?$AAe?$AAr?$AA?$AA@ 100014c8     NetClass.obj
+ 0001:000004f8       ??_C@_19INGAAIIO@?$AAI?$AAP?$AAC?$AA$?$AA?$AA@ 100014f8     NetClass.obj
+ 0001:00000504       ??_C@_13FPGAJAPJ@?$AA?2?$AA?$AA@ 10001504     NetClass.obj
+ 0001:00000508       ??_7PluginEditFieldBinding@@6B@ 10001508     NetClass.obj
+ 0001:00000510       ??_C@_19IEEMEPMH@?$AAD?$AAa?$AAt?$AAa?$AA?$AA@ 10001510     NetClass.obj
+ 0001:0000051c       ??_C@_1CC@FMHKFHHK@?$AAT?$AAh?$AAi?$AAs?$AA?5?$AAi?$AAs?$AA?5?$AAa?$AA?5?$AAd?$AAo?$AAm?$AAa?$AAi?$AAn?$AA?$AA@ 1000151c     NetClass.obj
+ 0001:00000540       ??_C@_1CC@LMAEILBC@?$AAT?$AAh?$AAi?$AAs?$AA?5?$AAi?$AAs?$AA?5?$AAa?$AA?5?$AAS?$AAE?$AAR?$AAV?$AAE?$AAR?$AA?$AA@ 10001540     NetClass.obj
+ 0001:00000564       ??_C@_1M@DFKENGJN@?$AA?$CF?$AAs?$AA?2?$AA?$CF?$AAs?$AA?$AA@ 10001564     NetClass.obj
+ 0001:00000570       ??_C@_13EFKPHINO@?$AA?$EA?$AA?$AA@ 10001570     NetClass.obj
+ 0001:00000574       ??_C@_13DMCFHHKM@?$AA3?$AA?$AA@ 10001574     NetClass.obj
+ 0001:00000578       ??_C@_1CA@FPAJCONG@?$AAD?$AAi?$AAs?$AAc?$AAo?$AAn?$AAn?$AAe?$AAc?$AAt?$AAD?$AAr?$AAi?$AAv?$AAe?$AA?$AA@ 10001578     NetClass.obj
+ 0001:00000598       ??_C@_1BG@PFLPMIKK@?$AAN?$AAe?$AAt?$AAw?$AAo?$AAr?$AAk?$AA?2?$AA?$CF?$AAc?$AA?$AA@ 10001598     NetClass.obj
+ 0001:000005b0       ??_C@_1BI@LJGELBNP@?$AAN?$AAe?$AAt?$AAw?$AAo?$AAr?$AAk?$AAU?$AAs?$AAe?$AAr?$AA?$AA@ 100015b0     NetClass.obj
+ 0001:000005c8       ??_C@_13GGAHEHIG@?$AA?$AB?$AA?$AA@ 100015c8     NetClass.obj
+ 0001:000005cc       ??_C@_1BI@PJIFJHLI@?$AAM?$AAa?$AAk?$AAe?$AA?5?$AAF?$AAo?$AAl?$AAd?$AAe?$AAr?$AA?$AA@ 100015cc     NetCommon.obj
+ 0001:000005e4       ??_C@_1BK@LDEGEPBC@?$AAF?$AAo?$AAl?$AAd?$AAe?$AAr?$AA?5?$AAn?$AAa?$AAm?$AAe?$AA?3?$AA?$AA@ 100015e4     NetCommon.obj
+ 0001:00000600       ??_C@_1BE@BIEMJOKH@?$AAN?$AAe?$AAw?$AAF?$AAo?$AAl?$AAd?$AAe?$AAr?$AA?$AA@ 10001600     NetCommon.obj
+ 0001:00000614       ??_C@_15MNCACJLI@?$AA?2?$AA?1?$AA?$AA@ 10001614     NetFavorites.obj
+ 0001:0000061c       ??_C@_1BE@PDPMPIAC@?$AAF?$AAa?$AAv?$AAo?$AAr?$AAi?$AAt?$AAe?$AAs?$AA?$AA@ 1000161c     NetFavorites.obj
+ 0001:00000630       ??_C@_1BK@GCNMKDHP@?$AAF?$AAa?$AAv?$AAo?$AAr?$AAi?$AAt?$AAe?$AAs?$AA?2?$AA?$CF?$AAs?$AA?$AA@ 10001630     NetFavorites.obj
+ 0001:00000650       __chkstk                   10001650 f   chkstk.obj
+ 0001:00000650       __alloca_probe             10001650     chkstk.obj
+ 0001:00000680       _GetGlobalInfoW@4          10001680 f   Network.obj
+ 0001:00000700       _ClosePanelW@4             10001700 f   Network.obj
+ 0001:00000720       _GetFindDataW@4            10001720 f   Network.obj
+ 0001:00000740       _FreeFindDataW@4           10001740 f   Network.obj
+ 0001:00000760       _GetOpenPanelInfoW@4       10001760 f   Network.obj
+ 0001:00000770       _SetDirectoryW@4           10001770 f   Network.obj
+ 0001:00000790       _DeleteFilesW@4            10001790 f   Network.obj
+ 0001:000007b0       _ProcessPanelInputW@4      100017b0 f   Network.obj
+ 0001:000007d0       _ProcessPanelEventW@4      100017d0 f   Network.obj
+ 0001:000007f0       _OpenW@4                   100017f0 f   Network.obj
+ 0001:00000a60       ?GetLangString@PluginDialogBuilder@@MAEPB_WH@Z 10001a60 f i NetCfg.obj
+ 0001:00000a80       ??0PluginSettings@@QAE@ABU_GUID@@P6GHPAXW4FAR_SETTINGS_CONTROL_COMMANDS@@H1@Z@Z 10001a80 f i NetCfg.obj
+ 0001:00000af0       _GetPluginInfoW@4          10001af0 f   NetCfg.obj
+ 0001:00000b80       ?SaveValue@?$DialogItemBinding@UFarDialogItem@@@@UAEXPAUFarDialogItem@@H@Z 10001b80 f i NetCfg.obj
+ 0001:00000b80       ?InitDialogItem@?$DialogBuilderBase@UFarDialogItem@@@@MAEXPAUFarDialogItem@@PB_W@Z 10001b80 f i NetCfg.obj
+ 0001:00000b90       ?TextWidth@?$DialogBuilderBase@UFarDialogItem@@@@MAEHABUFarDialogItem@@@Z 10001b90 f i NetCfg.obj
+ 0001:00000ba0       ?CreateRadioButtonBinding@?$DialogBuilderBase@UFarDialogItem@@@@MAEPAU?$DialogItemBinding@UFarDialogItem@@@@PAH@Z 10001ba0 f i NetCfg.obj
+ 0001:00000ba0       ?GetLangString@?$DialogBuilderBase@UFarDialogItem@@@@MAEPB_WH@Z 10001ba0 f i NetCfg.obj
+ 0001:00000bb0       ?DoShowDialog@?$DialogBuilderBase@UFarDialogItem@@@@MAEHXZ 10001bb0 f i NetCfg.obj
+ 0001:00000bc0       ?CreateCheckBoxBinding@?$DialogBuilderBase@UFarDialogItem@@@@MAEPAU?$DialogItemBinding@UFarDialogItem@@@@PAHH@Z 10001bc0 f i NetCfg.obj
+ 0001:00000bc0       ?AddUIntEditField@?$DialogBuilderBase@UFarDialogItem@@@@UAEPAUFarDialogItem@@PAIH@Z 10001bc0 f i NetCfg.obj
+ 0001:00000bc0       ?AddIntEditField@?$DialogBuilderBase@UFarDialogItem@@@@UAEPAUFarDialogItem@@PAHH@Z 10001bc0 f i NetCfg.obj
+ 0001:00000bd0       ??1?$DialogBuilderBase@UFarDialogItem@@@@MAE@XZ 10001bd0 f i NetCfg.obj
+ 0001:00000c20       ??_E?$DialogBuilderBase@UFarDialogItem@@@@MAEPAXI@Z 10001c20 f i NetCfg.obj
+ 0001:00000c20       ??_G?$DialogBuilderBase@UFarDialogItem@@@@MAEPAXI@Z 10001c20 f i NetCfg.obj
+ 0001:00000c40       ?ReallocDialogItems@?$DialogBuilderBase@UFarDialogItem@@@@IAEXXZ 10001c40 f i NetCfg.obj
+ 0001:00000d10       ?UpdateSecondColumnPosition@?$DialogBuilderBase@UFarDialogItem@@@@IAEXXZ 10001d10 f i NetCfg.obj
+ 0001:00000d70       ?SaveValues@?$DialogBuilderBase@UFarDialogItem@@@@IAEXXZ 10001d70 f i NetCfg.obj
+ 0001:00000dc0       ?MaxTextWidth@?$DialogBuilderBase@UFarDialogItem@@@@IAEHXZ 10001dc0 f i NetCfg.obj
+ 0001:00000e80       ?InitDialogItem@PluginDialogBuilder@@MAEXPAUFarDialogItem@@PB_W@Z 10001e80 f i NetCfg.obj
+ 0001:00000ea0       ?TextWidth@PluginDialogBuilder@@MAEHABUFarDialogItem@@@Z 10001ea0 f i NetCfg.obj
+ 0001:00000ec0       ?DoShowDialog@PluginDialogBuilder@@MAEHXZ 10001ec0 f i NetCfg.obj
+ 0001:00000f20       ?SaveValue@PluginCheckBoxBinding@@UAEXPAUFarDialogItem@@H@Z 10001f20 f i NetCfg.obj
+ 0001:00000f60       ?SaveValue@PluginRadioButtonBinding@@UAEXPAUFarDialogItem@@H@Z 10001f60 f i NetCfg.obj
+ 0001:00000f90       ??0PluginIntEditFieldBinding@@QAE@ABUPluginStartupInfo@@PAPAXHPAHH@Z 10001f90 f i NetCfg.obj
+ 0001:00001030       ?SaveValue@PluginIntEditFieldBinding@@UAEXPAUFarDialogItem@@H@Z 10002030 f i NetCfg.obj
+ 0001:00001060       ??0PluginUIntEditFieldBinding@@QAE@ABUPluginStartupInfo@@PAPAXHPAIH@Z 10002060 f i NetCfg.obj
+ 0001:00001100       ?SaveValue@PluginUIntEditFieldBinding@@UAEXPAUFarDialogItem@@H@Z 10002100 f i NetCfg.obj
+ 0001:00001130       ?CreateCheckBoxBinding@PluginDialogBuilder@@MAEPAU?$DialogItemBinding@UFarDialogItem@@@@PAHH@Z 10002130 f i NetCfg.obj
+ 0001:00001180       ?CreateRadioButtonBinding@PluginDialogBuilder@@MAEPAU?$DialogItemBinding@UFarDialogItem@@@@PAH@Z 10002180 f i NetCfg.obj
+ 0001:000011d0       ??_EPluginDialogBuilder@@UAEPAXI@Z 100021d0 f i NetCfg.obj
+ 0001:000011d0       ??_GPluginDialogBuilder@@UAEPAXI@Z 100021d0 f i NetCfg.obj
+ 0001:00001210       ?AddCheckbox@?$DialogBuilderBase@UFarDialogItem@@@@QAEPAUFarDialogItem@@HPAHH_N@Z 10002210 f i NetCfg.obj
+ 0001:00001340       ?AddRadioButtons@?$DialogBuilderBase@UFarDialogItem@@@@QAEXPAHHQBH_N@Z 10002340 f i NetCfg.obj
+ 0001:000014a0       ?AddSeparator@?$DialogBuilderBase@UFarDialogItem@@@@QAEXPB_W@Z 100024a0 f i NetCfg.obj
+ 0001:00001510       ?AddButtons@?$DialogBuilderBase@UFarDialogItem@@@@QAEXHPBHHH@Z 10002510 f i NetCfg.obj
+ 0001:00001670       ?UpdateBorderSize@?$DialogBuilderBase@UFarDialogItem@@@@IAEXXZ 10002670 f i NetCfg.obj
+ 0001:00001720       ??_E?$DialogItemBinding@UFarDialogItem@@@@UAEPAXI@Z 10002720 f i NetCfg.obj
+ 0001:00001720       ??_EPluginCheckBoxBinding@@UAEPAXI@Z 10002720 f i NetCfg.obj
+ 0001:00001720       ??_G?$DialogItemBinding@UFarDialogItem@@@@UAEPAXI@Z 10002720 f i NetCfg.obj
+ 0001:00001720       ??_GPluginEditFieldBinding@@UAEPAXI@Z 10002720 f i NetClass.obj
+ 0001:00001720       ??_GPluginUIntEditFieldBinding@@UAEPAXI@Z 10002720 f i NetCfg.obj
+ 0001:00001720       ??_EPluginEditFieldBinding@@UAEPAXI@Z 10002720 f i NetClass.obj
+ 0001:00001720       ??_EPluginRadioButtonBinding@@UAEPAXI@Z 10002720 f i NetCfg.obj
+ 0001:00001720       ??_EPluginUIntEditFieldBinding@@UAEPAXI@Z 10002720 f i NetCfg.obj
+ 0001:00001720       ??_GPluginCheckBoxBinding@@UAEPAXI@Z 10002720 f i NetCfg.obj
+ 0001:00001720       ??_EPluginIntEditFieldBinding@@UAEPAXI@Z 10002720 f i NetCfg.obj
+ 0001:00001720       ??_GPluginIntEditFieldBinding@@UAEPAXI@Z 10002720 f i NetCfg.obj
+ 0001:00001720       ??_GPluginRadioButtonBinding@@UAEPAXI@Z 10002720 f i NetCfg.obj
+ 0001:00001740       ??0PluginDialogBuilder@@QAE@ABUPluginStartupInfo@@ABU_GUID@@1HPB_WP6GHPAXHH3@Z3_K@Z 10002740 f i NetCfg.obj
+ 0001:00001850       ?AddIntEditField@PluginDialogBuilder@@UAEPAUFarDialogItem@@PAHH@Z 10002850 f i NetCfg.obj
+ 0001:00001910       ?AddUIntEditField@PluginDialogBuilder@@UAEPAUFarDialogItem@@PAIH@Z 10002910 f i NetCfg.obj
+ 0001:000019d0       ?ShowDialog@?$DialogBuilderBase@UFarDialogItem@@@@QAE_NXZ 100029d0 f i NetCfg.obj
+ 0001:00001a30       ?Config@@YAHXZ             10002a30 f   NetCfg.obj
+ 0001:00001fa0       ??0SimpleString@@QAE@PB_WI@Z 10002fa0 f i NetClass.obj
+ 0001:00002020       ?Inflate@SimpleString@@QAEXI@Z 10003020 f i NetClass.obj
+ 0001:00002150       ??0NetResourceList@@QAE@XZ 10003150 f   NetClass.obj
+ 0001:00002160       ?InitNetResource@NetResourceList@@SAXAAU_NETRESOURCEW@@@Z 10003160 f   NetClass.obj
+ 0001:00002180       ?CopyNetResource@NetResourceList@@SAXAAU_NETRESOURCEW@@ABU2@@Z 10003180 f   NetClass.obj
+ 0001:00002230       ?Push@NetResourceList@@QAEXAAU_NETRESOURCEW@@@Z 10003230 f   NetClass.obj
+ 0001:00002290       ?Top@NetResourceList@@QAEPAU_NETRESOURCEW@@XZ 10003290 f   NetClass.obj
+ 0001:000022b0       ?Pop@NetResourceList@@QAEXXZ 100032b0 f   NetClass.obj
+ 0001:00002310       ?GotoFavorite@NetBrowser@@QAEHPA_W@Z 10003310 f   NetClass.obj
+ 0001:000023d0       ?FreeFindData@NetBrowser@@QAEXPAUPluginPanelItem@@H@Z 100033d0 f   NetClass.obj
+ 0001:00002430       ?GetDriveToDisconnect@NetBrowser@@AAEHPB_WPA_W@Z 10003430 f   NetClass.obj
+ 0001:000025a0       ?HandsOffDisconnectDrive@NetBrowser@@AAEHPB_W@Z 100035a0 f   NetClass.obj
+ 0001:00002620       ?GetOpenPanelInfo@NetBrowser@@QAEXPAUOpenPanelInfo@@@Z 10003620 f   NetClass.obj
+ 0001:000028b0       ?IsMSNetResource@NetBrowser@@SAHABU_NETRESOURCEW@@@Z 100038b0 f   NetClass.obj
+ 0001:000028f0       ?GetResourceInfo@NetBrowser@@SAHPA_WPAU_NETRESOURCEW@@@Z 100038f0 f   NetClass.obj
+ 0001:000029d0       ?GetResourceParent@NetBrowser@@SAHAAU_NETRESOURCEW@@PAU2@@Z 100039d0 f   NetClass.obj
+ 0001:00002b00       ?AskMapDrive@NetBrowser@@AAEHPA_WAAH@Z 10003b00 f   NetClass.obj
+ 0001:00002c90       ?GetFreeLetter@NetBrowser@@AAEXAAKPA_W@Z 10003c90 f   NetClass.obj
+ 0001:00002cf0       ?DisconnectFromServer@NetBrowser@@CAXPAU_NETRESOURCEW@@@Z 10003cf0 f   NetClass.obj
+ 0001:00002eb0       ?GetLocalName@NetBrowser@@AAEXPA_W0@Z 10003eb0 f   NetClass.obj
+ 0001:00002f50       ?FileNames2Clipboard@NetBrowser@@AAEXH@Z 10003f50 f   NetClass.obj
+ 0001:000031e0       ?GetRemoteName@NetBrowser@@AAEXPAU_NETRESOURCEW@@PA_W@Z 100041e0 f   NetClass.obj
+ 0001:000032b0       ?IsReadable@NetBrowser@@AAEHPB_W@Z 100042b0 f   NetClass.obj
+ 0001:00003350       ?SetOpenFromCommandLine@NetBrowser@@QAEXPA_W@Z 10004350 f   NetClass.obj
+ 0001:00003370       ?SetOpenFromFilePanel@NetBrowser@@QAEHPA_W@Z 10004370 f   NetClass.obj
+ 0001:000033f0       ?GotoLocalNetwork@NetBrowser@@QAEXXZ 100043f0 f   NetClass.obj
+ 0001:00003520       ?SetCursorToShare@NetBrowser@@AAEXPA_W@Z 10004520 f   NetClass.obj
+ 0001:00003650       ?RemoveItems@NetBrowser@@AAEXXZ 10004650 f   NetClass.obj
+ 0001:00003890       ?CreateFavSubFolder@NetBrowser@@QAEXXZ 10004890 f   NetClass.obj
+ 0001:00003930       ?GetHiddenShares@NetBrowser@@AAEXXZ 10004930 f   NetClass.obj
+ 0001:00003b70       ?SaveValue@PluginEditFieldBinding@@UAEXPAUFarDialogItem@@H@Z 10004b70 f i NetClass.obj
+ 0001:00003ba0       ?Replace@SimpleString@@QAEAAV1@IIPB_WI@Z 10004ba0 f i NetClass.obj
+ 0001:00003cb0       ?Clear@NetResourceList@@QAEXXZ 10004cb0 f   NetClass.obj
+ 0001:00003d20       ?Enumerate@NetResourceList@@QAEHKKKPAU_NETRESOURCEW@@@Z 10004d20 f   NetClass.obj
+ 0001:00003ea0       ?EnumerateNetList@NetBrowser@@AAEHXZ 10004ea0 f   NetClass.obj
+ 0001:00004010       ?IsResourceReadable@NetBrowser@@SAHAAU_NETRESOURCEW@@@Z 10005010 f   NetClass.obj
+ 0001:000040b0       ?EditFavorites@NetBrowser@@QAEHXZ 100050b0 f   NetClass.obj
+ 0001:00004310       ?AddConnectionWithLogon@NetBrowser@@SAHPAU_NETRESOURCEW@@PA_W1H@Z 10005310 f   NetClass.obj
+ 0001:00004480       ?AddConnectionFromFavorites@NetBrowser@@SAHPAU_NETRESOURCEW@@H@Z 10005480 f   NetClass.obj
+ 0001:00004520       ??0PluginDialogBuilder@@QAE@ABUPluginStartupInfo@@ABU_GUID@@1PB_W2P6GHPAXHH3@Z3_K@Z 10005520 f i NetClass.obj
+ 0001:00004610       ?AddEditField@PluginDialogBuilder@@QAEPAUFarDialogItem@@PA_WHHPB_W_N@Z 10005610 f i NetClass.obj
+ 0001:00004710       ?AddPasswordField@PluginDialogBuilder@@QAEPAUFarDialogItem@@PA_WHH@Z 10005710 f i NetClass.obj
+ 0001:000047e0       ??4NetResourceList@@QAEAAV0@AAV0@@Z 100057e0 f   NetClass.obj
+ 0001:00004870       ??0NetBrowser@@QAE@XZ      10005870 f   NetClass.obj
+ 0001:000049e0       ??1NetBrowser@@QAE@XZ      100059e0 f   NetClass.obj
+ 0001:00004a10       ?ProcessEvent@NetBrowser@@QAEHHPAX@Z 10005a10 f   NetClass.obj
+ 0001:00004ba0       _ExitFARW@4                10005ba0 f   NetClass.obj
+ 0001:00004bf0       ?ConfirmCancelConnection@NetBrowser@@AAEHPA_W0AAH@Z 10005bf0 f   NetClass.obj
+ 0001:00004ef0       ?GetNameAndPassword@NetBrowser@@CAHPAU__NameAndPassInfo@@@Z 10005ef0 f   NetClass.obj
+ 0001:000051a0       ?CancelConnection@NetBrowser@@AAEHPB_W@Z 100061a0 f   NetClass.obj
+ 0001:000053b0       ?AddConnectionExplicit@NetBrowser@@SAHPAU_NETRESOURCEW@@H@Z 100063b0 f   NetClass.obj
+ 0001:00005490       ?GotoComputer@NetBrowser@@AAEHPB_W@Z 10006490 f   NetClass.obj
+ 0001:00005670       ?GetFindData@NetBrowser@@QAEHPAPAUPluginPanelItem@@PAI_K@Z 10006670 f   NetClass.obj
+ 0001:00005960       ?DeleteFiles@NetBrowser@@QAEHPAUPluginPanelItem@@H_K@Z 10006960 f   NetClass.obj
+ 0001:000059f0       ?ChangeToDirectory@NetBrowser@@AAEHPB_WHH@Z 100069f0 f   NetClass.obj
+ 0001:00005e00       ?MapNetworkDrive@NetBrowser@@AAEHPB_WHH@Z 10006e00 f   NetClass.obj
+ 0001:000060d0       ?SetDirectory@NetBrowser@@QAEHPB_W_K@Z 100070d0 f   NetClass.obj
+ 0001:00006350       ?ProcessKey@NetBrowser@@QAEHPBU_INPUT_RECORD@@@Z 10007350 f   NetClass.obj
+ 0001:00006710       _SetStartupInfoW@4         10007710 f   NetCommon.obj
+ 0001:00006b30       _ConfigureW@4              10007b30 f   NetCommon.obj
+ 0001:00006b40       ?DlgCreateFolder@@YAHPA_WH@Z 10007b40 f   NetCommon.obj
+ 0001:00006b70       ?GetFavorites@@YAHPAU_NETRESOURCEW@@PAVNetResourceList@@@Z 10007b70 f   NetFavorites.obj
+ 0001:00006c50       ?CheckFavoriteItem@@YAHQAU_NETRESOURCEW@@@Z 10007c50 f   NetFavorites.obj
+ 0001:00006c80       ?WriteFavoriteItem@@YAXPAU_FAVORITEITEM@@PA_W@Z 10007c80 f   NetFavorites.obj
+ 0001:00006c90       ?GetFavoritesParent@@YAHAAU_NETRESOURCEW@@PAU1@@Z 10007c90 f   NetFavorites.obj
+ 0001:00006d50       ?GetFavoriteResource@@YAHPB_WPAU_NETRESOURCEW@@@Z 10007d50 f   NetFavorites.obj
+ 0001:00006d50       ?ReadFavoriteItem@@YAHPAU_FAVORITEITEM@@@Z 10007d50 f   NetFavorites.obj
+ 0001:00006d50       ?RemoveFromFavorites@@YAHPA_WP6GK0PAX@Z1@Z 10007d50 f   NetFavorites.obj
+ 0001:00006d50       ?CreateSubFolder@@YAHPA_W0@Z 10007d50 f   NetFavorites.obj
+ 0001:00006d60       ?GetMsg@@YAPB_WH@Z         10007d60 f   NetMix.obj
+ 0001:00006d80       ??0TSaveScreen@@QAE@XZ     10007d80 f   NetMix.obj
+ 0001:00006de0       ??1TSaveScreen@@QAE@XZ     10007de0 f   NetMix.obj
+ 0001:00006e00       _wcschr                    10007e00 f   libCRT:strchr.obj
+ 0001:00006e30       ??3@YAXPAX@Z               10007e30 f   libCRT:delete.obj
+ 0001:00006e40       ??2@YAPAXI@Z               10007e40 f   libCRT:new.obj
+ 0001:00006e50       _memset                    10007e50 f   libCRT:memset.obj
+ 0001:00006e90       ??_V@YAXPAX@Z              10007e90 f   libCRT:delete_array.obj
+ 0001:00006ea0       ??_U@YAPAXI@Z              10007ea0 f   libCRT:new_array.obj
+ 0001:00006eb0       _wcsstr                    10007eb0 f   libCRT:strstr.obj
+ 0001:00006f10       _memcpy                    10007f10 f   libCRT:memcpy.obj
+ 0001:00006f40       _memmove                   10007f40 f   libCRT:memmove.obj
+ 0001:00006f90       _realloc                   10007f90 f   libCRT:realloc.obj
+ 0001:00006fe0       _free                      10007fe0 f   libCRT:free.obj
+ 0001:00007000       _wcsdup                    10008000 f   libCRT:strdup.obj
+ 0001:00007030       _malloc                    10008030 f   libCRT:malloc.obj
+ 0001:00007050       _wcsncmp                   10008050 f   libCRT:strncmp.obj
+ 0001:00007088       _WNetGetResourceInformationW@16 10008088 f   mpr:MPR.dll
+ 0001:0000708e       _WNetGetResourceParentW@12 1000808e f   mpr:MPR.dll
+ 0001:00007094       _WNetAddConnection2W@16    10008094 f   mpr:MPR.dll
+ 0001:0000709a       _WNetCancelConnection2W@12 1000809a f   mpr:MPR.dll
+ 0001:000070a0       _WNetCloseEnum@4           100080a0 f   mpr:MPR.dll
+ 0001:000070a6       _WNetEnumResourceW@16      100080a6 f   mpr:MPR.dll
+ 0001:000070ac       _WNetOpenEnumW@20          100080ac f   mpr:MPR.dll
+ 0001:000070b2       _NetApiBufferFree@4        100080b2 f   Netapi32:NETAPI32.dll
+ 0001:000070b8       _NetShareEnum@28           100080b8 f   Netapi32:NETAPI32.dll
+ 0001:000070c0       __IMPORT_DESCRIPTOR_KERNEL32 100080c0     kernel32:KERNEL32.dll
+ 0001:000070d4       __IMPORT_DESCRIPTOR_USER32 100080d4     user32:USER32.dll
+ 0001:000070e8       __IMPORT_DESCRIPTOR_ADVAPI32 100080e8     advapi32:ADVAPI32.dll
+ 0001:000070fc       __IMPORT_DESCRIPTOR_MPR    100080fc     mpr:MPR.dll
+ 0001:00007110       __IMPORT_DESCRIPTOR_NETAPI32 10008110     Netapi32:NETAPI32.dll
+ 0001:00007124       __NULL_IMPORT_DESCRIPTOR   10008124     kernel32:KERNEL32.dll
+ 0002:00000000       ?StrAddToDisksMenu@@3PB_WB 10009000     NetCfg.obj
+ 0002:00000004       ?StrAddToPluginsMenu@@3PB_WB 10009004     NetCfg.obj
+ 0002:00000008       ?StrHelpNetBrowse@@3PB_WB  10009008     NetCfg.obj
+ 0002:0000000c       ?StrHiddenShares@@3PB_WB   1000900c     NetCfg.obj
+ 0002:00000010       ?StrShowPrinters@@3PB_WB   10009010     NetCfg.obj
+ 0002:00000014       ?StrLocalNetwork@@3PB_WB   10009014     NetCfg.obj
+ 0002:00000018       ?StrDisconnectMode@@3PB_WB 10009018     NetCfg.obj
+ 0002:0000001c       ?StrRemoveConnection@@3PB_WB 1000901c     NetCfg.obj
+ 0002:00000020       ?StrHiddenSharesAsHidden@@3PB_WB 10009020     NetCfg.obj
+ 0002:00000024       ?StrFullPathShares@@3PB_WB 10009024     NetCfg.obj
+ 0002:00000028       ?StrFavoritesFlags@@3PB_WB 10009028     NetCfg.obj
+ 0002:0000002c       ?StrNoRootDoublePoint@@3PB_WB 1000902c     NetCfg.obj
+ 0002:00000030       ?StrNavigateToDomains@@3PB_WB 10009030     NetCfg.obj
+ 0002:00000034       ?StrPanelMode@@3PB_WB      10009034     NetCfg.obj
+ 0002:00000134       ?IsFirstRun@@3HA           10009134     NetCommon.obj
+ 0002:00000138       ?szFavProv@@3PA_WA         10009138     NetFavorites.obj
+ 0002:00000168       ?g_szInvalidChars@@3PB_WB  10009168     NetFavorites.obj
+ 0002:00000178       ?CommonRootResources@@3PAVNetResourceList@@A 10009178     NetClass.obj
+ 0002:0000017c       ?SavedCommonRootResources@@3HA 1000917c     NetClass.obj
+ 0002:00000d50       ?CommonCurResource@@3U_NETRESOURCEW@@A 10009d50     NetCommon.obj
+ 0002:00000d70       ?Info@@3UPluginStartupInfo@@A 10009d70     NetCommon.obj
+ 0002:00000df8       ?FSF@@3UFarStandardFunctions@@A 10009df8     NetCommon.obj
+ 0002:00000eb8       ?Opt@@3UOptions@@A         10009eb8     NetCommon.obj
+ 0002:00000ee8       ?PCommonCurResource@@3PAU_NETRESOURCEW@@A 10009ee8     NetCommon.obj
+
+ entry point at        0000:00000000
+
+ Static symbols
+
+ 0001:00002090       ?GetSetting@@YA_JW4FARSETTINGS_SUBFOLDERS@@PB_W@Z 10003090 f   NetClass.obj

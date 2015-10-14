@@ -1,0 +1,69 @@
+*********************************************************
+*********************************************************
+****************	ConEmu Help	*****************
+*********************************************************
+****************	Eric KeyMap	*****************
+*********************************************************
+*********************************************************
+===============================================================================
+Key-1	Key-2	Key-3	Function
+===============================================================================
+Ctrl	?		This file
+
+Ctrl	Tab		Switch Between Verticaly Split Tabs (Top <-> Bottom)
+Ctrl	S		Split Tab into two separate consoles
+Ctrl	G		Groups Keyboard input
+				-All consoles in tab receive same key input
+Ctrl	T		Rename Tab
+
+Ctrl	Delete		Clear Console
+Ctrl	H		Toggle ROW highlighting under cursor
+Ctrl	Shift	X	Toggle ROW & COLUMN highlighting under cursor
+
+Ctrl	Backspace	Delete entire word left
+Ctrl	F		Find text in active console
+
+Shift			to start left click copy
+Ctrl	C		Copy selection as plain text
+Ctrl	Shift	C	Copy selection as HTML text
+Ctrl	Shift	A	Copy all active console output from entire buffer
+Ctrl	V		Paste
+
+Shift	Up		Make Window FullScreen
+Shift	Down		Make Window FullScreen
+Shift	Left		Move Window to the left side of screen
+Shift	Right		Move Window to the right side of screen
+
+Ctrl	[0-9]		Jump to Console#
+Ctrl	F1		New {PowerShell}
+Ctrl	F2		New {cmd}
+Ctrl	F3		New {Git Bash}
+Ctrl	F4		New {Far}
+Ctrl	F5		New {PowerShell as Admin}
+
+Ctrl	Left		Switch to left tab
+Ctrl	Right		Switch to right tab
+Ctrl	Down		Closes Console
+Ctrl	Up		Duplicate active tab type
+
+Windows	Delete		Closes All Consoles but the active one
+Windows	F4		Closes all tabs
+Windows	S		Take a Screenshot of the current window
+
+Ctrl	HOME		Scroll to top of buffer
+Ctrl	End		Scroll to bottom of buffer
+Ctrl	PgUp		Scroll up one page
+Ctrl	PgDown		Scroll down one page
+Ctrl	+		Scroll buffer up one line
+Ctrl	-		Scroll buffer down one line
+
+=== KEY ===
+Apps=Windows Key
+
+### FAR HELP ###
+Shift	F4		In FarNet this will create a new Host Config for SCP / SFTP
+
+===========
+This file is located @ %CMDER_ROOT%\scripts\helpfile.txt
+
+~el fin

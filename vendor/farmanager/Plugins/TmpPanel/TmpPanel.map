@@ -1,0 +1,282 @@
+ TmpPanel
+
+ Timestamp is 56107bf9 (Sun Oct 04 04:08:09 2015)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000094H .idata$5                CODE
+ 0001:00000098 0000065aH .rdata                  CODE
+ 0001:00000700 00005adfH .text                   CODE
+ 0001:000061e0 0000003cH .idata$2                CODE
+ 0001:0000621c 00000014H .idata$3                CODE
+ 0001:00006230 00000094H .idata$4                CODE
+ 0001:000062c4 0000024cH .idata$6                CODE
+ 0001:00006510 00000192H .edata                  CODE
+ 0002:00000000 00000030H .data                   DATA
+ 0002:00000030 00000a88H .bss                    DATA
+ 0003:00000000 00000058H .rsrc$01                DATA
+ 0003:00000060 00000378H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0001:00000000       __imp__IsTextUnicode@12    10001000     advapi32:ADVAPI32.dll
+ 0001:00000004       \177ADVAPI32_NULL_THUNK_DATA 10001004     advapi32:ADVAPI32.dll
+ 0001:00000008       __imp__lstrcpyW@8          10001008     kernel32:KERNEL32.dll
+ 0001:0000000c       __imp__MultiByteToWideChar@24 1000100c     kernel32:KERNEL32.dll
+ 0001:00000010       __imp__MapViewOfFile@20    10001010     kernel32:KERNEL32.dll
+ 0001:00000014       __imp__CloseHandle@4       10001014     kernel32:KERNEL32.dll
+ 0001:00000018       __imp__CreateFileMappingW@24 10001018     kernel32:KERNEL32.dll
+ 0001:0000001c       __imp__GetFileSize@8       1000101c     kernel32:KERNEL32.dll
+ 0001:00000020       __imp__CreateFileW@28      10001020     kernel32:KERNEL32.dll
+ 0001:00000024       __imp__lstrcmpW@8          10001024     kernel32:KERNEL32.dll
+ 0001:00000028       __imp__DeleteFileW@4       10001028     kernel32:KERNEL32.dll
+ 0001:0000002c       __imp__WaitForSingleObject@8 1000102c     kernel32:KERNEL32.dll
+ 0001:00000030       __imp__CreateProcessW@40   10001030     kernel32:KERNEL32.dll
+ 0001:00000034       __imp__SetConsoleTitleW@4  10001034     kernel32:KERNEL32.dll
+ 0001:00000038       __imp__GetConsoleTitleW@8  10001038     kernel32:KERNEL32.dll
+ 0001:0000003c       __imp__GetStdHandle@4      1000103c     kernel32:KERNEL32.dll
+ 0001:00000040       __imp__lstrcatW@8          10001040     kernel32:KERNEL32.dll
+ 0001:00000044       __imp__UnmapViewOfFile@4   10001044     kernel32:KERNEL32.dll
+ 0001:00000048       __imp__lstrcpynW@12        10001048     kernel32:KERNEL32.dll
+ 0001:0000004c       __imp__GetFileTime@16      1000104c     kernel32:KERNEL32.dll
+ 0001:00000050       __imp__FindClose@4         10001050     kernel32:KERNEL32.dll
+ 0001:00000054       __imp__FindFirstFileW@8    10001054     kernel32:KERNEL32.dll
+ 0001:00000058       __imp__GetFileAttributesW@4 10001058     kernel32:KERNEL32.dll
+ 0001:0000005c       __imp__FindNextFileW@8     1000105c     kernel32:KERNEL32.dll
+ 0001:00000060       __imp__WideCharToMultiByte@32 10001060     kernel32:KERNEL32.dll
+ 0001:00000064       __imp__WriteFile@20        10001064     kernel32:KERNEL32.dll
+ 0001:00000068       __imp__ExpandEnvironmentStringsW@12 10001068     kernel32:KERNEL32.dll
+ 0001:0000006c       __imp__SearchPathW@24      1000106c     kernel32:KERNEL32.dll
+ 0001:00000070       __imp__HeapFree@12         10001070     kernel32:KERNEL32.dll
+ 0001:00000074       __imp__GetProcessHeap@0    10001074     kernel32:KERNEL32.dll
+ 0001:00000078       __imp__HeapAlloc@12        10001078     kernel32:KERNEL32.dll
+ 0001:0000007c       __imp__HeapReAlloc@16      1000107c     kernel32:KERNEL32.dll
+ 0001:00000080       __imp__lstrcmpiW@8         10001080     kernel32:KERNEL32.dll
+ 0001:00000084       __imp__lstrlenW@4          10001084     kernel32:KERNEL32.dll
+ 0001:00000088       \177KERNEL32_NULL_THUNK_DATA 10001088     kernel32:KERNEL32.dll
+ 0001:0000008c       __imp__ShellExecuteW@24    1000108c     shell32:SHELL32.dll
+ 0001:00000090       \177SHELL32_NULL_THUNK_DATA 10001090     shell32:SHELL32.dll
+ 0001:00000098       _MainGuid                  10001098     TmpPanel.obj
+ 0001:000000a8       _MenuGuid                  100010a8     TmpPanel.obj
+ 0001:000000b8       _ConfigDialogGuid          100010b8     TmpPanel.obj
+ 0001:000000c8       ??_C@_1DE@BGKMIKPD@?$AAE?$AAu?$AAg?$AAe?$AAn?$AAe?$AA?5?$AAR?$AAo?$AAs?$AAh?$AAa?$AAl?$AA?5?$AA?$CG?$AA?5?$AAF?$AAa?$AAr?$AA?5?$AAG?$AAr?$AAo?$AAu?$AAp?$AA?$AA@ 100010c8     TmpPanel.obj
+ 0001:00000100       ??_C@_1EA@PHBPOOLI@?$AAT?$AAe?$AAm?$AAp?$AAo?$AAr?$AAa?$AAr?$AAy?$AA?5?$AAP?$AAa?$AAn?$AAe?$AAl?$AA?5?$AAf?$AAo?$AAr?$AA?5?$AAF?$AAa?$AAr?$AA?5?$AAM?$AAa?$AAn?$AAa?$AAg?$AAe?$AAr?$AA?$AA@ 10001100     TmpPanel.obj
+ 0001:00000140       ??_C@_1BC@DDPAOGMO@?$AAT?$AAm?$AAp?$AAP?$AAa?$AAn?$AAe?$AAl?$AA?$AA@ 10001140     TmpPanel.obj
+ 0001:00000154       ??_C@_19BDAJEHDN@?$AAo?$AAp?$AAe?$AAn?$AA?$AA@ 10001154     TmpPanel.obj
+ 0001:00000160       ??_C@_1BC@ENICKDH@?$AAC?$AAo?$AAn?$AAt?$AAe?$AAn?$AAt?$AAs?$AA?$AA@ 10001160     TmpPanel.obj
+ 0001:00000174       ??_C@_15KIOHKAAB@?$AA?$CK?$AA?4?$AA?$AA@ 10001174     TmpPanel.obj
+ 0001:0000017c       ??_C@_11LOCGONAA@?$AA?$AA@ 1000117c     TmpPanel.obj
+ 0001:00000180       ??_C@_13IMODFHAA@?$AA?9?$AA?$AA@ 10001180     TmpPanel.obj
+ 0001:00000184       ??_C@_1BM@MDBPDFDA@?$AA?$CF?$AAC?$AAO?$AAM?$AAS?$AAP?$AAE?$AAC?$AA?$CF?$AA?5?$AA?1?$AAc?$AA?5?$AA?$AA@ 10001184     TmpPanel.obj
+ 0001:000001a0       ??_C@_1O@CILPHMLJ@?$AAF?$AAA?$AAR?$AAT?$AAM?$AAP?$AA?$AA@ 100011a0     TmpPanel.obj
+ 0001:00000200       ??_C@_17GNJCADOE@?$AAt?$AAm?$AAp?$AA?$AA@ 10001200     TmpCfg.obj
+ 0001:00000208       ??_C@_1O@GBAEOCCH@?$AAP?$AAr?$AAe?$AAf?$AAi?$AAx?$AA?$AA@ 10001208     TmpCfg.obj
+ 0001:00000218       ??_C@_1O@HIOLBLLI@?$AA?$CK?$AA?4?$AAt?$AAe?$AAm?$AAp?$AA?$AA@ 10001218     TmpCfg.obj
+ 0001:00000228       ??_C@_19KOBLENB@?$AAM?$AAa?$AAs?$AAk?$AA?$AA@ 10001228     TmpCfg.obj
+ 0001:00000234       ??_C@_1BA@HANPCFLL@?$AA0?$AA?0?$AA8?$AA?0?$AA0?$AA?0?$AA5?$AA?$AA@ 10001234     TmpCfg.obj
+ 0001:00000244       ??_C@_1CG@NCCICMEA@?$AAS?$AAt?$AAa?$AAt?$AAu?$AAs?$AAC?$AAo?$AAl?$AAu?$AAm?$AAn?$AAW?$AAi?$AAd?$AAt?$AAh?$AAs?$AA?$AA@ 10001244     TmpCfg.obj
+ 0001:0000026c       ??_C@_1BE@CNONJJPK@?$AAN?$AAR?$AA?0?$AAS?$AAC?$AA?0?$AAD?$AA?0?$AAT?$AA?$AA@ 1000126c     TmpCfg.obj
+ 0001:00000280       ??_C@_1CE@CFCOMBOO@?$AAS?$AAt?$AAa?$AAt?$AAu?$AAs?$AAC?$AAo?$AAl?$AAu?$AAm?$AAn?$AAT?$AAy?$AAp?$AAe?$AAs?$AA?$AA@ 10001280     TmpCfg.obj
+ 0001:000002a4       ??_C@_17FKOBGGOI@?$AA0?$AA?0?$AA8?$AA?$AA@ 100012a4     TmpCfg.obj
+ 0001:000002ac       ??_C@_1BK@IJFPLJEF@?$AAC?$AAo?$AAl?$AAu?$AAm?$AAn?$AAW?$AAi?$AAd?$AAt?$AAh?$AAs?$AA?$AA@ 100012ac     TmpCfg.obj
+ 0001:000002c8       ??_C@_17PBMJFEI@?$AAN?$AA?0?$AAS?$AA?$AA@ 100012c8     TmpCfg.obj
+ 0001:000002d0       ??_C@_1BI@KCJICNAC@?$AAC?$AAo?$AAl?$AAu?$AAm?$AAn?$AAT?$AAy?$AAp?$AAe?$AAs?$AA?$AA@ 100012d0     TmpCfg.obj
+ 0001:000002e8       ??_C@_1BC@JCHBPJL@?$AAL?$AAi?$AAs?$AAt?$AAU?$AAT?$AAF?$AA8?$AA?$AA@ 100012e8     TmpCfg.obj
+ 0001:000002fc       ??_C@_1CA@GMFGCAGE@?$AAF?$AAu?$AAl?$AAl?$AAS?$AAc?$AAr?$AAe?$AAe?$AAn?$AAP?$AAa?$AAn?$AAe?$AAl?$AA?$AA@ 100012fc     TmpCfg.obj
+ 0001:0000031c       ??_C@_1DC@BNKDLIA@?$AAN?$AAe?$AAw?$AAP?$AAa?$AAn?$AAe?$AAl?$AAF?$AAo?$AAr?$AAS?$AAe?$AAa?$AAr?$AAc?$AAh?$AAR?$AAe?$AAs?$AAu?$AAl?$AAt?$AAs?$AA?$AA@ 1000131c     TmpCfg.obj
+ 0001:00000350       ??_C@_1CA@JNAJBENN@?$AAM?$AAe?$AAn?$AAu?$AAF?$AAo?$AAr?$AAF?$AAi?$AAl?$AAe?$AAl?$AAi?$AAs?$AAt?$AA?$AA@ 10001350     TmpCfg.obj
+ 0001:00000370       ??_C@_19OBGHODPD@?$AAM?$AAo?$AAd?$AAe?$AA?$AA@ 10001370     TmpCfg.obj
+ 0001:0000037c       ??_C@_1BK@BNOFJDBM@?$AAC?$AAo?$AAp?$AAy?$AAC?$AAo?$AAn?$AAt?$AAe?$AAn?$AAt?$AAs?$AA?$AA@ 1000137c     TmpCfg.obj
+ 0001:00000398       ??_C@_1BG@NHJCENND@?$AAA?$AAn?$AAy?$AAI?$AAn?$AAP?$AAa?$AAn?$AAe?$AAl?$AA?$AA@ 10001398     TmpCfg.obj
+ 0001:000003b0       ??_C@_1BM@FPOJMDKB@?$AAS?$AAa?$AAf?$AAe?$AAM?$AAo?$AAd?$AAe?$AAP?$AAa?$AAn?$AAe?$AAl?$AA?$AA@ 100013b0     TmpCfg.obj
+ 0001:000003cc       ??_C@_1BI@CPJJFPIA@?$AAC?$AAo?$AAm?$AAm?$AAo?$AAn?$AAP?$AAa?$AAn?$AAe?$AAl?$AA?$AA@ 100013cc     TmpCfg.obj
+ 0001:000003e4       ??_C@_1CC@PNNAOHJC@?$AAA?$AAd?$AAd?$AAT?$AAo?$AAP?$AAl?$AAu?$AAg?$AAi?$AAn?$AAs?$AAM?$AAe?$AAn?$AAu?$AA?$AA@ 100013e4     TmpCfg.obj
+ 0001:00000408       ??_C@_1BO@NGDOFANC@?$AAA?$AAd?$AAd?$AAT?$AAo?$AAD?$AAi?$AAs?$AAk?$AAs?$AAM?$AAe?$AAn?$AAu?$AA?$AA@ 10001408     TmpCfg.obj
+ 0001:00000428       ??_7?$DialogItemBinding@UFarDialogItem@@@@6B@ 10001428     TmpCfg.obj
+ 0001:00000430       ??_7?$DialogBuilderBase@UFarDialogItem@@@@6B@ 10001430     TmpCfg.obj
+ 0001:00000454       ??_7PluginEditFieldBinding@@6B@ 10001454     TmpCfg.obj
+ 0001:0000045c       ??_7PluginDialogBuilder@@6B@ 1000145c     TmpCfg.obj
+ 0001:00000480       ??_7PluginCheckBoxBinding@@6B@ 10001480     TmpCfg.obj
+ 0001:00000488       ??_7PluginRadioButtonBinding@@6B@ 10001488     TmpCfg.obj
+ 0001:00000490       ??_C@_15EFLNJKHH@?$AA?$CF?$AAu?$AA?$AA@ 10001490     TmpCfg.obj
+ 0001:00000498       ??_7PluginIntEditFieldBinding@@6B@ 10001498     TmpCfg.obj
+ 0001:000004a0       ??_7PluginUIntEditFieldBinding@@6B@ 100014a0     TmpCfg.obj
+ 0001:000004a8       ??_C@_1CC@CFPIPDCG@?$AAT?$AAe?$AAm?$AAp?$AAP?$AAa?$AAn?$AAe?$AAl?$AA?4?$AAP?$AAr?$AAe?$AAf?$AAi?$AAx?$AA?$AA@ 100014a8     TmpCfg.obj
+ 0001:000004cc       ??_C@_1BO@JLKBMGBC@?$AAT?$AAe?$AAm?$AAp?$AAP?$AAa?$AAn?$AAe?$AAl?$AA?4?$AAM?$AAa?$AAs?$AAk?$AA?$AA@ 100014cc     TmpCfg.obj
+ 0001:000004ec       ??_C@_1DK@GODNGDDP@?$AAT?$AAe?$AAm?$AAp?$AAP?$AAa?$AAn?$AAe?$AAl?$AA?4?$AAS?$AAt?$AAa?$AAt?$AAu?$AAs?$AAC?$AAo?$AAl?$AAu?$AAm?$AAn?$AAW?$AAi?$AAd?$AAt?$AAh?$AAs?$AA?$AA@ 100014ec     TmpCfg.obj
+ 0001:00000528       ??_C@_1DI@DFFNPDGJ@?$AAT?$AAe?$AAm?$AAp?$AAP?$AAa?$AAn?$AAe?$AAl?$AA?4?$AAS?$AAt?$AAa?$AAt?$AAu?$AAs?$AAC?$AAo?$AAl?$AAu?$AAm?$AAn?$AAT?$AAy?$AAp?$AAe?$AAs?$AA?$AA@ 10001528     TmpCfg.obj
+ 0001:00000560       ??_C@_1CO@PEIMNADN@?$AAT?$AAe?$AAm?$AAp?$AAP?$AAa?$AAn?$AAe?$AAl?$AA?4?$AAC?$AAo?$AAl?$AAu?$AAm?$AAn?$AAW?$AAi?$AAd?$AAt?$AAh?$AAs?$AA?$AA@ 10001560     TmpCfg.obj
+ 0001:00000590       ??_C@_1CM@OOGBEAGB@?$AAT?$AAe?$AAm?$AAp?$AAP?$AAa?$AAn?$AAe?$AAl?$AA?4?$AAC?$AAo?$AAl?$AAu?$AAm?$AAn?$AAT?$AAy?$AAp?$AAe?$AAs?$AA?$AA@ 10001590     TmpCfg.obj
+ 0001:000005bc       ??_C@_1O@BJPKKLLM@?$AAC?$AAo?$AAn?$AAf?$AAi?$AAg?$AA?$AA@ 100015bc     TmpCfg.obj
+ 0001:000005cc       ??_C@_1O@OCNONAPA@?$AA?5?$AA?$CF?$AAs?$AA?$CF?$AAs?$AA?5?$AA?$AA@ 100015cc     TmpClass.obj
+ 0001:000005dc       ??_C@_19NHGNNLNG@?$AA?$CI?$AAR?$AA?$CJ?$AA?5?$AA?$AA@ 100015dc     TmpClass.obj
+ 0001:000005e8       ??_C@_13FPGAJAPJ@?$AA?2?$AA?$AA@ 100015e8     TmpClass.obj
+ 0001:000005ec       ??_C@_1BC@JIEGIPND@?$AA?5?$AA?5?$AA?5?$AA?$CF?$AAs?$AA?5?$AA?$CF?$AAd?$AA?$AA@ 100015ec     TmpClass.obj
+ 0001:00000618       ??_C@_1BE@BNONMOPA@?$AA?2?$AA?2?$AA?4?$AA?2?$AAc?$AAd?$AAr?$AAo?$AAm?$AA?$AA@ 10001618     TmpClass.obj
+ 0001:0000062c       ??_C@_1CE@JKDBMIKG@?$AA?2?$AA?2?$AA?4?$AA?2?$AAP?$AAh?$AAy?$AAs?$AAi?$AAc?$AAa?$AAl?$AAD?$AAr?$AAi?$AAv?$AAe?$AA?$AA@ 1000162c     TmpClass.obj
+ 0001:00000650       ??_C@_19BKJMDJK@?$AA?2?$AA?2?$AA?4?$AA?2?$AA?$AA@ 10001650     TmpClass.obj
+ 0001:0000065c       ??_C@_13BBDEGPLJ@?$AA?$CK?$AA?$AA@ 1000165c     TmpClass.obj
+ 0001:00000660       ??_C@_15DDHGOCBH@?$AA?4?$AA?4?$AA?$AA@ 10001660     TmpClass.obj
+ 0001:00000670       ??_C@_15JNBOKNOG@?$AA?$AN?$AA?6?$AA?$AA@ 10001670     TmpClass.obj
+ 0001:00000678       ??_C@_02PCIJFNDE@?$AN?6?$AA@ 10001678     TmpClass.obj
+ 0001:0000067c       ??_C@_1CE@FHMHDLFC@?$AAT?$AAm?$AAp?$AAP?$AAa?$AAn?$AAe?$AAl?$AA?4?$AAS?$AAa?$AAv?$AAe?$AAL?$AAi?$AAs?$AAt?$AA?$AA@ 1000167c     TmpClass.obj
+ 0001:000006a0       ??_C@_1M@HCONLDPB@?$AAp?$AAa?$AAn?$AAe?$AAl?$AA?$AA@ 100016a0     TmpClass.obj
+ 0001:000006ac       ??_C@_13JOFGPIOO@?$AA?4?$AA?$AA@ 100016ac     TmpClass.obj
+ 0001:000006b0       ??_C@_19MJCDBCKE@?$AA?2?$AA?2?$AA?$DP?$AA?2?$AA?$AA@ 100016b0     TmpMix.obj
+ 0001:000006bc       ??_C@_1BC@NAEGMMKI@?$AA?2?$AA?2?$AA?$DP?$AA?2?$AAU?$AAN?$AAC?$AA?2?$AA?$AA@ 100016bc     TmpMix.obj
+ 0001:000006d0       ??_C@_1CC@OPFFOEHP@?$AA?$CF?$AAF?$AAA?$AAR?$AAH?$AAO?$AAM?$AAE?$AA?$CF?$AA?$DL?$AA?$CF?$AAP?$AAA?$AAT?$AAH?$AA?$CF?$AA?$AA@ 100016d0     TmpMix.obj
+ 0001:00000700       __alloca_probe             10001700     chkstk.obj
+ 0001:00000700       __chkstk                   10001700 f   chkstk.obj
+ 0001:00000730       _GetGlobalInfoW@4          10001730 f   TmpPanel.obj
+ 0001:000007b0       _SetStartupInfoW@4         100017b0 f   TmpPanel.obj
+ 0001:00000830       _AnalyseW@4                10001830 f   TmpPanel.obj
+ 0001:00000870       _ExitFARW@4                10001870 f   TmpPanel.obj
+ 0001:000008a0       _GetFindDataW@4            100018a0 f   TmpPanel.obj
+ 0001:000008c0       _GetPluginInfoW@4          100018c0 f   TmpPanel.obj
+ 0001:00000960       _GetOpenPanelInfoW@4       10001960 f   TmpPanel.obj
+ 0001:00000970       _SetDirectoryW@4           10001970 f   TmpPanel.obj
+ 0001:00000990       _PutFilesW@4               10001990 f   TmpPanel.obj
+ 0001:000009c0       _SetFindListW@4            100019c0 f   TmpPanel.obj
+ 0001:000009e0       _ProcessPanelEventW@4      100019e0 f   TmpPanel.obj
+ 0001:00000a00       _ProcessPanelInputW@4      10001a00 f   TmpPanel.obj
+ 0001:00000a20       _ConfigureW@4              10001a20 f   TmpPanel.obj
+ 0001:00000a30       ?ReadFileLines@@YAXPAXKPAPA_WPA_WPAI3@Z 10001a30 f   TmpPanel.obj
+ 0001:00001100       _ClosePanelW@4             10002100 f   TmpPanel.obj
+ 0001:00001410       _OpenW@4                   10002410 f   TmpPanel.obj
+ 0001:00001760       ?GetLangString@PluginDialogBuilder@@MAEPB_WH@Z 10002760 f i TmpCfg.obj
+ 0001:00001780       ?GetOptions@@YAXXZ         10002780 f   TmpCfg.obj
+ 0001:00001cd0       ?InitDialogItem@?$DialogBuilderBase@UFarDialogItem@@@@MAEXPAUFarDialogItem@@PB_W@Z 10002cd0 f i TmpCfg.obj
+ 0001:00001cd0       ?SaveValue@?$DialogItemBinding@UFarDialogItem@@@@UAEXPAUFarDialogItem@@H@Z 10002cd0 f i TmpCfg.obj
+ 0001:00001ce0       ?TextWidth@?$DialogBuilderBase@UFarDialogItem@@@@MAEHABUFarDialogItem@@@Z 10002ce0 f i TmpCfg.obj
+ 0001:00001cf0       ?DoShowDialog@?$DialogBuilderBase@UFarDialogItem@@@@MAEHXZ 10002cf0 f i TmpCfg.obj
+ 0001:00001d00       ?GetLangString@?$DialogBuilderBase@UFarDialogItem@@@@MAEPB_WH@Z 10002d00 f i TmpCfg.obj
+ 0001:00001d00       ?CreateRadioButtonBinding@?$DialogBuilderBase@UFarDialogItem@@@@MAEPAU?$DialogItemBinding@UFarDialogItem@@@@PAH@Z 10002d00 f i TmpCfg.obj
+ 0001:00001d10       ??1?$DialogBuilderBase@UFarDialogItem@@@@MAE@XZ 10002d10 f i TmpCfg.obj
+ 0001:00001d60       ?CreateCheckBoxBinding@?$DialogBuilderBase@UFarDialogItem@@@@MAEPAU?$DialogItemBinding@UFarDialogItem@@@@PAHH@Z 10002d60 f i TmpCfg.obj
+ 0001:00001d60       ?AddUIntEditField@?$DialogBuilderBase@UFarDialogItem@@@@UAEPAUFarDialogItem@@PAIH@Z 10002d60 f i TmpCfg.obj
+ 0001:00001d60       ?AddIntEditField@?$DialogBuilderBase@UFarDialogItem@@@@UAEPAUFarDialogItem@@PAHH@Z 10002d60 f i TmpCfg.obj
+ 0001:00001d70       ??_G?$DialogBuilderBase@UFarDialogItem@@@@MAEPAXI@Z 10002d70 f i TmpCfg.obj
+ 0001:00001d70       ??_E?$DialogBuilderBase@UFarDialogItem@@@@MAEPAXI@Z 10002d70 f i TmpCfg.obj
+ 0001:00001d90       ?ReallocDialogItems@?$DialogBuilderBase@UFarDialogItem@@@@IAEXXZ 10002d90 f i TmpCfg.obj
+ 0001:00001e60       ?UpdateSecondColumnPosition@?$DialogBuilderBase@UFarDialogItem@@@@IAEXXZ 10002e60 f i TmpCfg.obj
+ 0001:00001ec0       ?SaveValues@?$DialogBuilderBase@UFarDialogItem@@@@IAEXXZ 10002ec0 f i TmpCfg.obj
+ 0001:00001f10       ?MaxTextWidth@?$DialogBuilderBase@UFarDialogItem@@@@IAEHXZ 10002f10 f i TmpCfg.obj
+ 0001:00001fd0       ?SaveValue@PluginEditFieldBinding@@UAEXPAUFarDialogItem@@H@Z 10002fd0 f i TmpCfg.obj
+ 0001:00002000       ?InitDialogItem@PluginDialogBuilder@@MAEXPAUFarDialogItem@@PB_W@Z 10003000 f i TmpCfg.obj
+ 0001:00002020       ?TextWidth@PluginDialogBuilder@@MAEHABUFarDialogItem@@@Z 10003020 f i TmpCfg.obj
+ 0001:00002040       ?DoShowDialog@PluginDialogBuilder@@MAEHXZ 10003040 f i TmpCfg.obj
+ 0001:000020a0       ?SaveValue@PluginCheckBoxBinding@@UAEXPAUFarDialogItem@@H@Z 100030a0 f i TmpCfg.obj
+ 0001:000020e0       ?SaveValue@PluginRadioButtonBinding@@UAEXPAUFarDialogItem@@H@Z 100030e0 f i TmpCfg.obj
+ 0001:00002110       ??0PluginIntEditFieldBinding@@QAE@ABUPluginStartupInfo@@PAPAXHPAHH@Z 10003110 f i TmpCfg.obj
+ 0001:000021b0       ?SaveValue@PluginIntEditFieldBinding@@UAEXPAUFarDialogItem@@H@Z 100031b0 f i TmpCfg.obj
+ 0001:000021e0       ??0PluginUIntEditFieldBinding@@QAE@ABUPluginStartupInfo@@PAPAXHPAIH@Z 100031e0 f i TmpCfg.obj
+ 0001:00002280       ?SaveValue@PluginUIntEditFieldBinding@@UAEXPAUFarDialogItem@@H@Z 10003280 f i TmpCfg.obj
+ 0001:000022b0       ?CreateCheckBoxBinding@PluginDialogBuilder@@MAEPAU?$DialogItemBinding@UFarDialogItem@@@@PAHH@Z 100032b0 f i TmpCfg.obj
+ 0001:00002300       ?CreateRadioButtonBinding@PluginDialogBuilder@@MAEPAU?$DialogItemBinding@UFarDialogItem@@@@PAH@Z 10003300 f i TmpCfg.obj
+ 0001:00002350       ??_GPluginDialogBuilder@@UAEPAXI@Z 10003350 f i TmpCfg.obj
+ 0001:00002350       ??_EPluginDialogBuilder@@UAEPAXI@Z 10003350 f i TmpCfg.obj
+ 0001:00002390       ?AddCheckbox@?$DialogBuilderBase@UFarDialogItem@@@@QAEPAUFarDialogItem@@HPAHH_N@Z 10003390 f i TmpCfg.obj
+ 0001:000024c0       ?EndColumns@?$DialogBuilderBase@UFarDialogItem@@@@QAEXXZ 100034c0 f i TmpCfg.obj
+ 0001:00002580       ?AddSeparator@?$DialogBuilderBase@UFarDialogItem@@@@QAEXPB_W@Z 10003580 f i TmpCfg.obj
+ 0001:000025f0       ?AddButtons@?$DialogBuilderBase@UFarDialogItem@@@@QAEXHPBHHH@Z 100035f0 f i TmpCfg.obj
+ 0001:00002750       ?UpdateBorderSize@?$DialogBuilderBase@UFarDialogItem@@@@IAEXXZ 10003750 f i TmpCfg.obj
+ 0001:00002800       ??_GPluginRadioButtonBinding@@UAEPAXI@Z 10003800 f i TmpCfg.obj
+ 0001:00002800       ??_EPluginRadioButtonBinding@@UAEPAXI@Z 10003800 f i TmpCfg.obj
+ 0001:00002800       ??_EPluginCheckBoxBinding@@UAEPAXI@Z 10003800 f i TmpCfg.obj
+ 0001:00002800       ??_GPluginIntEditFieldBinding@@UAEPAXI@Z 10003800 f i TmpCfg.obj
+ 0001:00002800       ??_EPluginEditFieldBinding@@UAEPAXI@Z 10003800 f i TmpCfg.obj
+ 0001:00002800       ??_G?$DialogItemBinding@UFarDialogItem@@@@UAEPAXI@Z 10003800 f i TmpCfg.obj
+ 0001:00002800       ??_EPluginIntEditFieldBinding@@UAEPAXI@Z 10003800 f i TmpCfg.obj
+ 0001:00002800       ??_E?$DialogItemBinding@UFarDialogItem@@@@UAEPAXI@Z 10003800 f i TmpCfg.obj
+ 0001:00002800       ??_EPluginUIntEditFieldBinding@@UAEPAXI@Z 10003800 f i TmpCfg.obj
+ 0001:00002800       ??_GPluginCheckBoxBinding@@UAEPAXI@Z 10003800 f i TmpCfg.obj
+ 0001:00002800       ??_GPluginUIntEditFieldBinding@@UAEPAXI@Z 10003800 f i TmpCfg.obj
+ 0001:00002800       ??_GPluginEditFieldBinding@@UAEPAXI@Z 10003800 f i TmpCfg.obj
+ 0001:00002820       ??0PluginDialogBuilder@@QAE@ABUPluginStartupInfo@@ABU_GUID@@1HPB_WP6GHPAXHH3@Z3_K@Z 10003820 f i TmpCfg.obj
+ 0001:00002930       ?AddIntEditField@PluginDialogBuilder@@UAEPAUFarDialogItem@@PAHH@Z 10003930 f i TmpCfg.obj
+ 0001:000029f0       ?AddUIntEditField@PluginDialogBuilder@@UAEPAUFarDialogItem@@PAIH@Z 100039f0 f i TmpCfg.obj
+ 0001:00002ab0       ?AddEditField@PluginDialogBuilder@@QAEPAUFarDialogItem@@PA_WHHPB_W_N@Z 10003ab0 f i TmpCfg.obj
+ 0001:00002bc0       ?Config@@YAHXZ             10003bc0 f   TmpCfg.obj
+ 0001:00003620       ??0SimpleString@@QAE@PB_WI@Z 10004620 f i TmpClass.obj
+ 0001:000036a0       ?Inflate@SimpleString@@QAEXI@Z 100046a0 f i TmpClass.obj
+ 0001:00003710       ??1TmpPanel@@QAE@XZ        10004710 f   TmpClass.obj
+ 0001:00003730       ?GetOpenPanelInfo@TmpPanel@@QAEXPAUOpenPanelInfo@@@Z 10004730 f   TmpClass.obj
+ 0001:000038d0       ?SetDirectory@TmpPanel@@QAEHPB_W_K@Z 100048d0 f   TmpClass.obj
+ 0001:00003920       ?PutDirectoryContents@TmpPanel@@QAEHPB_W@Z 10004920 f   TmpClass.obj
+ 0001:00003ad0       ?PutOneFile@TmpPanel@@QAEHPB_WAAUPluginPanelItem@@@Z 10004ad0 f   TmpClass.obj
+ 0001:00003bf0       ?SortListCmp@@YGHPBX0PAX@Z 10004bf0 f   TmpClass.obj
+ 0001:00003c40       ?RemoveEmptyItems@TmpPanel@@AAEXXZ 10004c40 f   TmpClass.obj
+ 0001:00003d30       ?SwitchToPanel@TmpPanel@@AAEXH@Z 10004d30 f   TmpClass.obj
+ 0001:00003dc0       ?ProcessPanelSwitchMenu@TmpPanel@@AAEXXZ 10004dc0 f   TmpClass.obj
+ 0001:00003ee0       ?IsOwnersDisplayed@TmpPanel@@AAEHPB_W@Z 10004ee0 f   TmpClass.obj
+ 0001:00003f30       ?IsLinksDisplayed@TmpPanel@@AAEHPB_W@Z 10004f30 f   TmpClass.obj
+ 0001:00003f90       ?isDevice@@YA_NPB_W0@Z     10004f90 f i TmpClass.obj
+ 0001:00003ff0       ?GetFileInfoAndValidate@TmpPanel@@SA_NPB_WPAUPluginPanelItem@@H@Z 10004ff0 f   TmpClass.obj
+ 0001:00004240       ?Replace@SimpleString@@QAEAAV1@IIPB_WI@Z 10005240 f i TmpClass.obj
+ 0001:00004350       ??YSimpleString@@QAEABV0@PB_W@Z 10005350 f i TmpClass.obj
+ 0001:00004380       ??0TmpPanel@@QAE@XZ        10005380 f   TmpClass.obj
+ 0001:000043c0       ?BeginPutFiles@TmpPanel@@QAEPAXXZ 100053c0 f   TmpClass.obj
+ 0001:00004450       ?PutOneFile@TmpPanel@@QAEHPB_W@Z 10005450 f   TmpClass.obj
+ 0001:000044d0       ?FindSearchResultsPanel@TmpPanel@@AAEXXZ 100054d0 f   TmpClass.obj
+ 0001:000045a0       ?RemoveDups@TmpPanel@@AAEXXZ 100055a0 f   TmpClass.obj
+ 0001:00004650       ?UpdateItems@TmpPanel@@AAEXHH@Z 10005650 f   TmpClass.obj
+ 0001:00004a20       ?ProcessEvent@TmpPanel@@QAEHHPAX@Z 10005a20 f   TmpClass.obj
+ 0001:00004b10       ?IsCurrentFileCorrect@TmpPanel@@AAE_NPAPA_W@Z 10005b10 f   TmpClass.obj
+ 0001:00004c20       ?ProcessRemoveKey@TmpPanel@@AAEXXZ 10005c20 f   TmpClass.obj
+ 0001:00004d40       ?SaveListFile@TmpPanel@@AAEXPB_W@Z 10005d40 f   TmpClass.obj
+ 0001:00004f50       ?GetFindData@TmpPanel@@QAEHPAPAUPluginPanelItem@@PAI_K@Z 10005f50 f   TmpClass.obj
+ 0001:00004ff0       ?CommitPutFiles@TmpPanel@@QAEXPAXH@Z 10005ff0 f   TmpClass.obj
+ 0001:00005010       ?SetFindList@TmpPanel@@QAEHPBUPluginPanelItem@@I@Z 10006010 f   TmpClass.obj
+ 0001:00005140       ?ProcessSaveListKey@TmpPanel@@AAEXXZ 10006140 f   TmpClass.obj
+ 0001:00005390       ?PutFiles@TmpPanel@@QAEHPAUPluginPanelItem@@IHPB_W_K@Z 10006390 f   TmpClass.obj
+ 0001:00005400       ?ProcessKey@TmpPanel@@QAEHPBU_INPUT_RECORD@@@Z 10006400 f   TmpClass.obj
+ 0001:00005750       ?Grow@StrBuf@@QAEXI@Z      10006750 f i TmpMix.obj
+ 0001:00005790       ?GetMsg@@YAPB_WH@Z         10006790 f   TmpMix.obj
+ 0001:000057b0       ?FreePanelItems@@YAXPAUPluginPanelItem@@I@Z 100067b0 f   TmpMix.obj
+ 0001:00005800       ?ParseParam@@YAPA_WAAPA_W@Z 10006800 f   TmpMix.obj
+ 0001:00005840       ?WFD2FFD@@YAXAAU_WIN32_FIND_DATAW@@AAUPluginPanelItem@@@Z 10006840 f   TmpMix.obj
+ 0001:000058b0       ?FormNtPath@@YAPA_WPB_WAAVStrBuf@@@Z 100068b0 f   TmpMix.obj
+ 0001:000059a0       ?ExpandEnvStrs@@YAPA_WPB_WAAVStrBuf@@@Z 100069a0 f   TmpMix.obj
+ 0001:00005a70       ?GetFullPath@@YAPA_WPB_WAAVStrBuf@@@Z 10006a70 f   TmpMix.obj
+ 0001:00005b00       ?IsTextUTF8@@YA_NPBDI@Z    10006b00 f   TmpMix.obj
+ 0001:00005b70       ?GoToFile@@YAXPB_WH@Z      10006b70 f   TmpMix.obj
+ 0001:00005d60       ?FindListFile@@YA_NPB_WAAVStrBuf@@@Z 10006d60 f   TmpMix.obj
+ 0001:00005f80       _free                      10006f80 f   libCRT:free.obj
+ 0001:00005fa0       _malloc                    10006fa0 f   libCRT:malloc.obj
+ 0001:00005fc0       _calloc                    10006fc0 f   libCRT:calloc.obj
+ 0001:00005fe0       _memset                    10006fe0 f   libCRT:memset.obj
+ 0001:00006020       ??3@YAXPAX@Z               10007020 f   libCRT:delete.obj
+ 0001:00006030       _memcpy                    10007030 f   libCRT:memcpy.obj
+ 0001:00006060       _wcsdup                    10007060 f   libCRT:strdup.obj
+ 0001:00006090       ??2@YAPAXI@Z               10007090 f   libCRT:new.obj
+ 0001:000060a0       ??_V@YAXPAX@Z              100070a0 f   libCRT:delete_array.obj
+ 0001:000060b0       ??_U@YAPAXI@Z              100070b0 f   libCRT:new_array.obj
+ 0001:000060c0       _wcschr                    100070c0 f   libCRT:strchr.obj
+ 0001:000060f0       _memmove                   100070f0 f   libCRT:memmove.obj
+ 0001:00006140       _realloc                   10007140 f   libCRT:realloc.obj
+ 0001:00006190       _wcsrchr                   10007190 f   libCRT:strrchr.obj
+ 0001:000061c0       __allshl                   100071c0 f   libCRT:vc_llshl.obj
+ 0001:000061e0       __IMPORT_DESCRIPTOR_KERNEL32 100071e0     kernel32:KERNEL32.dll
+ 0001:000061f4       __IMPORT_DESCRIPTOR_ADVAPI32 100071f4     advapi32:ADVAPI32.dll
+ 0001:00006208       __IMPORT_DESCRIPTOR_SHELL32 10007208     shell32:SHELL32.dll
+ 0001:0000621c       __NULL_IMPORT_DESCRIPTOR   1000721c     kernel32:KERNEL32.dll
+ 0002:00000030       ?CommonPanels@@3PAU_PluginPanels@@A 10008030     TmpPanel.obj
+ 0002:000000a8       ?Info@@3UPluginStartupInfo@@A 100080a8     TmpPanel.obj
+ 0002:00000130       ?CurrentCommonPanel@@3IA   10008130     TmpPanel.obj
+ 0002:00000138       ?FSF@@3UFarStandardFunctions@@A 10008138     TmpPanel.obj
+ 0002:00000208       ?StartupOptCommonPanel@@3HA 10008208     TmpCfg.obj
+ 0002:0000020c       ?StartupOpenFrom@@3HA      1000820c     TmpCfg.obj
+ 0002:00000210       ?StartupOptFullScreenPanel@@3HA 10008210     TmpCfg.obj
+ 0002:00000218       ?Opt@@3Uoptions_s@@A       10008218     TmpCfg.obj
+
+ entry point at        0000:00000000
+
+ Static symbols
+
+ 0001:00000c90       ?ReadFileList@@YAXPA_WPAHPAPAPA_W@Z 10001c90 f   TmpPanel.obj
+ 0001:00000d80       ?ProcessList@@YAXPAXPA_WH@Z 10001d80 f   TmpPanel.obj
+ 0001:00000e40       ?ShowMenuFromList@@YAXPA_W@Z 10001e40 f   TmpPanel.obj
+ 0001:00001120       ?OpenPanelFromOutput@@YAPAXPA_W@Z 10002120 f   TmpPanel.obj

@@ -1,0 +1,54 @@
+ DrawLine
+
+ Timestamp is 56107bc3 (Sun Oct 04 04:07:15 2015)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000010H .idata$5                CODE
+ 0001:00000010 000000a2H .rdata                  CODE
+ 0001:000000c0 00000eb5H .text                   CODE
+ 0001:00000f78 00000014H .idata$2                CODE
+ 0001:00000f8c 00000014H .idata$3                CODE
+ 0001:00000fa0 00000010H .idata$4                CODE
+ 0001:00000fb0 00000038H .idata$6                CODE
+ 0001:00000ff0 00000091H .edata                  CODE
+ 0002:00000000 00000190H .data                   DATA
+ 0002:00000190 00000091H .bss                    DATA
+ 0003:00000000 00000058H .rsrc$01                DATA
+ 0003:00000060 00000370H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0001:00000000       __imp__GetProcessHeap@0    10001000     kernel32:KERNEL32.dll
+ 0001:00000004       __imp__HeapAlloc@12        10001004     kernel32:KERNEL32.dll
+ 0001:00000008       __imp__HeapFree@12         10001008     kernel32:KERNEL32.dll
+ 0001:0000000c       \177KERNEL32_NULL_THUNK_DATA 1000100c     kernel32:KERNEL32.dll
+ 0001:00000010       _MainGuid                  10001010     DrawLine.obj
+ 0001:00000020       _MenuGuid                  10001020     DrawLine.obj
+ 0001:00000030       ??_C@_1DE@BGKMIKPD@?$AAE?$AAu?$AAg?$AAe?$AAn?$AAe?$AA?5?$AAR?$AAo?$AAs?$AAh?$AAa?$AAl?$AA?5?$AA?$CG?$AA?5?$AAF?$AAa?$AAr?$AA?5?$AAG?$AAr?$AAo?$AAu?$AAp?$AA?$AA@ 10001030     DrawLine.obj
+ 0001:00000064       ??_C@_1DG@JDOJGKBC@?$AAD?$AAr?$AAa?$AAw?$AA?5?$AAl?$AAi?$AAn?$AAe?$AAs?$AA?5?$AAf?$AAo?$AAr?$AA?5?$AAF?$AAa?$AAr?$AA?5?$AAM?$AAa?$AAn?$AAa?$AAg?$AAe?$AAr?$AA?$AA@ 10001064     DrawLine.obj
+ 0001:0000009c       ??_C@_1BC@EFCDDCCP@?$AAD?$AAr?$AAa?$AAw?$AAL?$AAi?$AAn?$AAe?$AA?$AA@ 1000109c     DrawLine.obj
+ 0001:000000b0       ??_C@_11LOCGONAA@?$AA?$AA@ 100010b0     DrawLine.obj
+ 0001:000000c0       __chkstk                   100010c0 f   chkstk.obj
+ 0001:000000c0       __alloca_probe             100010c0     chkstk.obj
+ 0001:000000f0       _GetGlobalInfoW@4          100010f0 f   DrawLine.obj
+ 0001:00000170       _SetStartupInfoW@4         10001170 f   DrawLine.obj
+ 0001:00000190       ?GetEnvType@@YAXPA_WHPAUEditorInfo@@AAH222@Z 10001190 f   DrawLine.obj
+ 0001:00000480       ?SetTitle@@YA_NHH@Z        10001480 f   DrawLine.obj
+ 0001:000005c0       ?ProcessShiftKey@@YAXHH@Z  100015c0 f   DrawLine.obj
+ 0001:00000b60       _GetPluginInfoW@4          10001b60 f   DrawLine.obj
+ 0001:00000bb0       _OpenW@4                   10001bb0 f   DrawLine.obj
+ 0001:00000ed0       _memcpy                    10001ed0 f   libCRT:memcpy.obj
+ 0001:00000f00       _free                      10001f00 f   libCRT:free.obj
+ 0001:00000f20       _malloc                    10001f20 f   libCRT:malloc.obj
+ 0001:00000f40       _memset                    10001f40 f   libCRT:memset.obj
+ 0001:00000f78       __IMPORT_DESCRIPTOR_KERNEL32 10001f78     kernel32:KERNEL32.dll
+ 0001:00000f8c       __NULL_IMPORT_DESCRIPTOR   10001f8c     kernel32:KERNEL32.dll
+
+ entry point at        0000:00000000
+
+ Static symbols
+

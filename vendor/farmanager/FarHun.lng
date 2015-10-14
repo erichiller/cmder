@@ -1,0 +1,3107 @@
+﻿.Language=Hungarian,Hungarian (Magyar)
+
+//Version: 3.0 build 4430
+
+"Igen"
+"Nem"
+"OK"
+
+"I&gen"
+"Ne&m"
+"&OK"
+
+"Mégsem"
+// need translation:
+"&Reset"
+"Újra"
+"Kihagy"
+"Megszakít"
+"Mégis"
+"Töröl"
+"Feloszt"
+
+"Még&sem"
+"Ú&jra"
+"Ki&hagy"
+"Kihagy &mind"
+"Megsza&kít"
+"Mé&gis"
+"&Töröl"
+"Eltá&volít"
+"Fel&oszt"
+
+"Figyelem"
+"Hiba"
+
+"Kilépés"
+"Biztosan kilép a FAR-ból?"
+
+//functional keys - 6 characters max
+"Súgó"
+"FhMenü"
+"Megnéz"
+"Szerk."
+"Másol"
+"AtnMoz"
+"ÚjMapp"
+"Töröl"
+"KonfMn"
+"Kilép"
+"Plugin"
+"Képrny"
+
+"Tömört"
+"Kibont"
+"TömPar"
+"ÚjFájl"
+"Másol"
+"ÁtnMoz"
+""
+"Töröl"
+"Mentés"
+"UtsMnü"
+"Csoprt"
+"KijFel"
+
+"Bal"
+"Jobb"
+"Néző.."
+"Szrk.."
+"Nyomt"
+"ÚjLink"
+"Keres"
+"ParElő"
+"Video"
+"MapKer"
+"NézElő"
+"MapElő"
+
+"Bal"
+"Jobb"
+"Név"
+"Kiterj"
+// need translation:
+"Write"
+"Méret"
+"NincsR"
+"Keletk"
+"Hozzáf"
+"Megjgy"
+"Tulajd"
+"RendMd"
+
+// Main AltShift
+""
+""
+""
+""
+""
+""
+""
+""
+"PluKnf"
+""
+""
+""
+
+//Main CtrlShift
+""
+""
+"Megnéz"
+"Szerk."
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Main CtrlAlt
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Main CtrlAltShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+//End of functional keys
+
+"Parancs előzmények"
+"Mappa előzmények"
+// need translation:
+"Fájl előzmények"
+"Fájl létrehozása?"
+"Nézett"
+"Szerk."
+"Kit."
+
+"Az előzmények minden eleme törlődik. Folytatja?"
+"Elő&zmények törlése"
+
+"Rendszer beállítások"
+"&Törlés a Lomtárba"
+"&Másoláshoz a rendszerrutin használata"
+"Írásra megnyitott &fájlok másolhatók"
+"Szimbolikus linkek &vizsgálata"
+// need translation:
+"Update panels only when Far is active"
+"Parancs elő&zmények mentése"
+"M&appa előzmények mentése"
+"Nézőke és &szerkesztő előzmények mentése"
+"&Windows reg. fájltípusok használata"
+"CD tálca a&utomatikus behúzása"
+// need translation:
+"Automatic update of environment variables"
+// need translation:
+"request administrator rights:"
+// need translation:
+"for modification"
+// need translation:
+"for read"
+// need translation:
+"use additional privileges"
+"B&eállítások automatikus mentése"
+
+// need translation:
+"Tree settings"
+"&Automatikus mappaváltás"
+// need translation:
+"&Minimum number of folders:"
+// need translation:
+"Хранить файл структуры папок для:"
+// need translation:
+"локальных дисков"
+// need translation:
+"сетевых дисков"
+// need translation:
+"сетевых путей"
+// need translation:
+"сменных дисков"
+// need translation:
+"CD-дисков"
+// need translation:
+"Не создавать файл для следующих дисков и путей:"
+// need translation:
+"Путь для локальных, сменных и CDROM дисков:"
+// need translation:
+"Путь для сетевых дисков и путей:"
+
+"Panel beállítások"
+"&Rejtett és rendszerfájlok mutatva"
+"Fá&jlok kiemelése"
+"A ma&ppák is kijelölhetők"
+// need translation:
+"Right click selects files"
+"Mappák is rendezhetők &kiterjesztés szerint"
+"Fordí&tott rendezés engedélyezése"
+"Pan&el automatikus frissítése kikapcsolva,"
+"ha több elem van, mint:"
+"Hálózati meghajtók autom. &frissítése"
+"Oszlop&nevek mutatva"
+"Á&llapotsor mutatva"
+// need translation:
+"Determine Volume Mount point"
+"Fájl össze&s információja mutatva"
+"Sza&bad lemezterület mutatva"
+"Gördítősá&v mutatva"
+"&Háttérképernyők száma mutatva"
+"Rendezési mó&d betűjele mutatva"
+"Show \"..\" in root folders"
+// need translation:
+"Highlight column separators"
+// need translation:
+"Double global column separators"
+
+"Kezelőfelület beállítások"
+"Ór&a a paneleken"
+"Ó&ra a nézőkében és szerkesztőben"
+"&Egér kezelése"
+"&Funkcióbillentyűk sora mutatva"
+"A &menüsor mindig látszik"
+"&Képernyőpihentető"
+"perc tétlenség után"
+"Másolás összesen folyamat&jelző"
+"Má&solási idő mutatva"
+// need translation:
+"Show total delete progress indicator"
+"A Ctrl+Pg&Up meghajtót vált"
+// need translation:
+"ClearType friendly redraw (can be slow)"
+// need translation:
+"Set console icon"
+// need translation:
+"Alternate for Administrator"
+// need translation:
+"Far window title addons:"
+
+"Párbeszédablak beállítások"
+"&Beviteli sor előzmények mentése"
+"Maradó b&lokkok a beviteli sorokban"
+"A &Del törli a beviteli sorok blokkjait"
+"Beviteli sor a&utomatikus kiegészítése"
+"A Ba&ckspace törli a változatlan szöveget"
+"&Egérkattintás a párb.ablakon kívül: bezárja"
+
+// need translation:
+"Menu settings"
+// need translation:
+"Left mouse click outside a menu"
+// need translation:
+"Right mouse click outside a menu"
+// need translation:
+"Middle mouse click outside a menu"
+// need translation:
+"Cancel menu"
+// need translation:
+"Execute selected item"
+// need translation:
+"Do nothing"
+
+// need translation:
+"Command line settings"
+// need translation:
+"Persistent blocks"
+// need translation:
+"Del removes blocks"
+// need translation:
+"AutoComplete"
+"Parancssori &prompt formátuma"
+// need translation:
+"Use &home dir"
+// need translation:
+"Administrator"
+
+// need translation:
+"AutoComplete settings"
+
+// need translation:
+"&Show list"
+
+// need translation:
+"&Modal mode"
+
+// need translation:
+"&Append first matched item"
+
+// need translation:
+"InfoPanel settings"
+// need translation:
+"Computer &name format"
+// need translation:
+"Physical NetBIOS"
+// need translation:
+"Physical DNS hostname"
+// need translation:
+"Physical DNS domain"
+// need translation:
+"Physical DNS fully-qualified"
+// need translation:
+"NetBIOS"
+// need translation:
+"DNS hostname"
+// need translation:
+"DNS domain"
+// need translation:
+"DNS fully-qualified"
+// need translation:
+"&User name format"
+// need translation:
+"Default"
+// need translation:
+"Fully Qualified Domain Name"
+// need translation:
+"Sam Compatible"
+// need translation:
+"Display Name"
+// need translation:
+"Unique Id"
+// need translation:
+"Canonical Name"
+// need translation:
+"User Principial Name"
+// need translation:
+"Service Principal"
+// need translation:
+"Dns Domain"
+// need translation:
+"Show &power status"
+// need translation:
+"Show &CD drive parameters"
+
+// need translation:
+"Show Info"
+// need translation:
+"&Disk"
+// need translation:
+"&Memory"
+// need translation:
+"&Description"
+// need translation:
+"Plu&gin panel"
+// need translation:
+"&Power status"
+
+"Nézőke"
+"Alt+F3 helyett F3 indítja a külső nézőkét"
+"Nézőke &parancs:"
+" Belső nézőke "
+"&Fájlpozíció mentése"
+"Könyv&jelzők mentése"
+// need translation:
+"Save file &codepage"
+// need translation:
+"Save w&rap mode"
+"&Kódlap automatikus felismerése"
+"Ta&bulátor mérete"
+"Gör&dítősáv mutatva"
+"Gördítőn&yilak mutatva"
+"&Maradó blokkok"
+// need translation:
+"Default code page:"
+// need translation:
+"Maximum line width"
+// need translation:
+"Visible '\\0'"
+// need translation:
+"Search dialog auto-focus"
+
+"Szerkesztő"
+"Alt+F4 helyett F4 indítja a külső szerkesztőt"
+"&Szerkesztő parancs:"
+" Belső szerkesztő "
+"&Tabulátorból szóközök:"
+
+"Ne helyettesítse a tabulátorokat"
+"Újonnan beírt tabulátorból szóközök"
+"Minden tabulátorból szóközök"
+"&Maradó blokkok"
+
+"A &Del törli a blokkokat"
+"Automatikus &behúzás"
+"Fájl&pozíció mentése"
+"Könyv&jelzők mentése"
+"Kurzor a sor&végjel után is"
+"&Kódlap automatikus felismerése"
+"Írásra m&egnyitott fájlok szerkeszthetők"
+"Csak olvasható fájlok s&zerkesztése tiltva"
+"Figyelmeztet &csak olvasható fájl megnyitásakor"
+"Tab&ulátor mérete"
+"&Gördítősáv mutatva"
+// need translation:
+"Show white space"
+// need translation:
+"Pick &up the word"
+"&Találat kijelölése"
+// need translation:
+"Cursor at end"
+// need translation:
+"Default code page:"
+
+"Beállítások mentése"
+"Elmenti a jelenlegi"
+"beállításokat?"
+"Mentés"
+
+"Másolás"
+"Átnevezés-Mozgatás"
+"Link létrehozása"
+"Hozzáférési &jogok:"
+"Más&ol"
+"Ö&rököl"
+"Ala&pért."
+"Már &létező fájloknál:"
+"Kér&dez"
+"&Csak olvasható fájloknál is kérdez"
+"Cs&ak az újabb fájlokat"
+"Link &típusa:"
+"Mappa &csomópont"
+"&Hardlink"
+"Szimbolikus link"
+"Szimbolikus link (&fájl)"
+"Szimbolikus link (&mappa)"
+"Sz&imbolikus linkek másolása"
+"Tö&bbszörös cél létrehozása"
+"&Másolás"
+"F10-&Fa"
+"Még&sem"
+"Át&nevez-Mozgat"
+// need translation:
+"Create &link"
+"Összesen"
+"Mappák olvasása..."
+"Hozzáférési jogok alkalmazása..."
+"Szűrő&vel"
+"S&zűrő"
+
+// need translation:
+"másolása"
+// need translation:
+"átnevezése-mozgatása"
+// need translation:
+"Create link to"
+" %1 elem másolása%2"
+" %1 elem átnevezése-mozgatása%2"
+// need translation:
+"Create links to %1 item%2"
+" ide:"
+// need translation:
+" &in:"
+""
+""
+""
+
+"Érvénytelen céllista"
+
+"Másolás"
+"Mozgatás"
+
+"A fájl nem található:"
+
+"A mappa:"
+"nem másolható önmagába/önmagára"
+
+"A mappa nem hozható létre:"
+"A mappa attribútumok beállítása sikertelen"
+"A mappa nem nevezhető át:"
+"Mé&gis"
+"Min&d"
+"Ú&jra"
+"&Kihagy"
+"Mi&nd"
+"Még&sem"
+"&Titk. felold"
+"&Mind"
+
+"A link nem hozható létre:"
+"A célmappának üresnek kell lennie"
+"A csomópont nem hozható létre. A fájl már létezik:"
+
+"Kötet mountpont hiba"
+""%1" kötet mountolása"
+"nem sikerült: "%1""
+"Disk_"
+
+"A fájl"
+"nem másolható önmagára"
+
+"A forrásfájl több stream-et tartalmaz,"
+"de nem a rendszer másolórutinját használja."
+"de a célkötet nem támogatja ezt a lehetőséget."
+"Az adatok egy része el fog veszni."
+
+// need translation:
+"Does it specify a folder name or file name?"
+// need translation:
+"Folder"
+// need translation:
+"File"
+
+"A fájl már létezik:"
+"Ú&j verzió:"
+"Létező &verzió:"
+"&Felülír"
+"&Kihagy"
+"Hoz&záfűz"
+"Fol&ytat"
+"Á&tnevez"
+"&Mégsem"
+"Mind&ent a kiválasztott módon"
+"Átnevezés"
+"Ú&j név:"
+
+"A fájl csak olvasható:"
+"Biztosan törölni akarja?"
+"&Törli"
+"Min&det"
+"&Kihagyja"
+"Mind&et"
+"&Mégsem"
+
+"Nem másolható"
+"Nem mozgatható"
+"Nem linkelhető"
+"ide:"
+"A fájl"
+"csak titkosítása elvesztésével másolható vagy mozgatható."
+"Ennek ellenére folytathatja vagy felfüggesztheti."
+
+"Nem olvasható adat innen:"
+"Nem írható adat ide:"
+
+" %1 fájl kész"
+// need translation:
+"Files: %1 / %2"
+// need translation:
+"Bytes processed: %1"
+// need translation:
+"Bytes: %1 / %2"
+"Fájl mozgatása"
+"Fájl másolása"
+"ide:"
+
+"A lemez megtelt, kérem a következőt"
+
+"Törlés"
+"Törölni akarja a mappát?"
+"Törölni akarja a fájlt?"
+"Törölni akar"
+"A Lomtárba akarja dobni a mappát?"
+"A Lomtárba akarja dobni a fájlt?"
+"A Lomtárba akar dobni"
+"Kisöprés"
+"Ki akarja söpörni a mappát?"
+"Ki akarja söpörni a fájlt?"
+"Ki akar söpörni"
+"Link törlése"
+"linkelve ide:"
+"mappa"
+"fájl"
+"%1 elemet%2"
+""
+""
+""
+
+"Mappa törlése"
+"Mappa kisöprése"
+"Fájlok törlése"
+"Fájlok kisöprése"
+"A mappa törlődik:"
+"A mappa kisöprődik:"
+// need translation:
+"The following folder will be moved to the Recycle Bin:"
+// need translation:
+"Folder contains symbolic links."
+// need translation:
+"To prevent the loss of their content when clearing Recyle Bin"
+// need translation:
+"those links will be broken now."
+// need translation:
+"It would be impossible to restore them later."
+"Kisöpör"
+// need translation:
+"Move"
+"&Töröl"
+"Kisö&pör"
+"Min&det"
+"&Kihagy"
+"Mind&et"
+"&Mégsem"
+
+"Link törlése"
+
+"Törlés"
+
+"Fájl vagy mappa törlése"
+"Fájl vagy mappa kisöprése"
+
+"A fájl csak olvasható:"
+"Mégis törölni akarja?"
+"Mégis ki akarja söpörni?"
+
+"Több hardlink kapcsolódik a fájlhoz, a fájl"
+"kisöprése a linkelt fájlokat is megsemmisíti."
+"Biztosan kisöpri a fájlt?"
+
+"A fájl nem törölhető"
+"A mappa nem törölhető"
+"Ú&jra"
+"&Kihagy"
+"Min&d"
+"&Mégsem"
+// need translation:
+"Cannot move file to the Recycle Bin"
+// need translation:
+"Cannot move folder to the Recycle Bin"
+
+"A fájlhoz nincs hozzáférési joga:"
+"A fájl hozzáférési jogát nem állíthatja:"
+
+"Szerkesztő"
+"fájl már be van töltve. Hogyan szerkeszti?"
+"A mostanit &folytatja"
+"Újra&tölti"
+"Ú&j példányban"
+"A fájl nem nyitható meg"
+"Fájl olvasása"
+// need translation:
+"A fájl megváltozott. Save?"
+// need translation:
+"A fájlt egy külső program megváltoztatta. Save?"
+"Mentés más&ként..."
+
+"csak olvasható fájl"
+"már létezik"
+"Felül akarja írni?"
+"Fájl mentése"
+// need translation:
+"Sor"
+// need translation:
+"Oszlop"
+// need translation:
+"Ch"
+
+"csak olvasható fájl"
+"A fájlméret megállapíthatatlan."
+"mérete %1,"
+"meghaladja %1 beállított maximumát."
+"Mégis szerkeszti?"
+
+"A mappa nem szerkeszthető"
+
+"Keresés"
+"&Keresés:"
+"&Nagy/kisbetű érz."
+"Csak e&gész szavak"
+"&Visszafelé keres"
+// need translation:
+"Re&gular expressions"
+// need translation:
+"&Megőrzése stílus"
+"Kere&sés"
+// need translation:
+"&All"
+"&Mégsem"
+
+"Keresés és csere"
+"&Erre cseréli:"
+"&Csere"
+
+"Keresett szöveg:"
+// need translation:
+"Occurrences: %1, lines: %2"
+"F1, F5, Ctrl+Enter, Ctrl+Up/Down, Add"
+"A szöveg nem található:"
+
+"Ezt cseréli:"
+"erre a szövegre:"
+"&Csere"
+"&Mindet"
+"&Kihagy"
+"Mé&gsem"
+"Fájl megnyitása/&létrehozása:"
+"Automatikus felismerés"
+// need translation:
+"Default"
+
+"Sorra ugrás"
+
+"Mappa gyorsbillentyűk"
+"Szerk.: Del,Ins,Shift+Ins,F4"
+"Szerk.: Del,Ins,F4"
+"<nincs>"
+"<plugin>"
+// need translation:
+"Title:"
+// need translation:
+"Path:"
+"Fájl:"
+// need translation:
+"Data:"
+"Ugrás a legközelebbi létező mappára?"
+"Mentsem a gyorsbillentyűket?"
+
+//functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
+"Súgó"
+"Mentés"
+""
+"Kilép"
+""
+"Megnéz"
+"Keres"
+"ANSI"
+""
+"Kilép"
+"Plugin"
+"Képrny"
+
+//Editor: Shift
+""
+"Ment.."
+""
+"Szrk.."
+""
+""
+"TovKer"
+"Kódlap"
+""
+"MentKi"
+""
+""
+
+//Editor: Alt
+""
+""
+""
+""
+""
+""
+"VisKer"
+"Ugrás"
+"Video"
+""
+"NézElő"
+""
+
+//Editor: Ctrl
+""
+""
+""
+""
+""
+""
+"Csere"
+""
+""
+"FájlPz"
+""
+""
+
+//Editor: AltShift
+""
+""
+""
+""
+""
+""
+""
+""
+"Beáll."
+""
+""
+""
+
+//Editor: CtrlShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Editor: CtrlAlt
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Editor: CtrlAltShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"OEM"
+// End of functional keys (Editor)
+// it's a F8 another text
+
+//Single Editor: functional keys - 6 characters max, 12 keys, "OEM" is F8 dupe!
+"Súgó"
+"Mentés"
+""
+"Kilép"
+""
+"Megnéz"
+"Keres"
+"ANSI"
+""
+"Kilép"
+"Plugin"
+"Képrny"
+
+//Single Editor: Shift
+""
+"Ment.."
+""
+""
+""
+""
+"TovKer"
+"Kódlap"
+""
+"MentKi"
+""
+""
+
+//Single Editor: Alt
+""
+""
+""
+""
+""
+""
+""
+"Ugrás"
+"Video"
+""
+"NézElő"
+""
+
+//Single Editor: Ctrl
+""
+""
+""
+""
+""
+""
+"Csere"
+""
+""
+""
+""
+""
+
+//Single Editor: AltShift
+""
+""
+""
+""
+""
+""
+""
+""
+"Beáll."
+""
+""
+""
+
+//Single Editor: CtrlShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+//Single Editor: CtrlAlt
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+//Single Editor: CtrlAltShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"OEM"
+// End of functional keys (Single Editor)
+// it's a F8 another text
+
+"Fá&jl mentése, mint:"
+"Kódlap:"
+"Uni&code bájtsorrend jelzővel (BOM)"
+"Sortörés konverzió:"
+"Nincs &konverzió"
+"&DOS/Windows formátum (CR LF)"
+"&UNIX formátum (LF)"
+"&Mac formátum (CR)"
+"A fájl nem menthető"
+"A fájl megváltozott, de a fájlt vagy a mappáját"
+"A fájlt vagy a mappáját"
+// need translation:
+"időközben áthelyezte/átnevezte vagy törölte. Save?"
+"A szerkesztendő fájl célmappája még"
+"nem létezik, de mentéskor létrejön."
+"Folytatja?"
+"A szerkesztendő fájlnak nevet kell adni"
+// need translation:
+"File contains characters, which cannot be"
+// need translation:
+"correctly read using selected codepage."
+// need translation:
+"File has to be reloaded to change codepage."
+// need translation:
+"All unsaved changes will be lost."
+// need translation:
+"Editor contains characters, which cannot be"
+// need translation:
+"correctly saved using selected codepage."
+// need translation:
+"Editor contains characters, which cannot be"
+// need translation:
+"correctly translated using selected codepage [%1]"
+// need translation:
+"Continue?"
+// need translation:
+"During file editing some data were lost."
+"A fájl mentése nem ajánlott."
+"Mentés"
+// need translation:
+"Show"
+// need translation:
+"Unicode codepage switch is not supported"
+// need translation:
+"You can reload file using custom codepage (ShiftF4)"
+// need translation:
+"Switch to unicode codepage %1 is not supported"
+// need translation:
+"Codepage %1 is not supported in your system"
+// need translation:
+"Cannot determine the codepage"
+
+"Név"
+// need translation:
+"Extension"
+"Méret"
+// need translation:
+"Allocated"
+"Dátum"
+"Idő"
+// need translation:
+"Write"
+"Létrejött"
+"Hozzáférés"
+// need translation:
+"Change"
+"Attrib"
+"Megjegyzés"
+"Tulajdonos"
+"Lnk"
+"Stm"
+"StmMér"
+"???"
+
+"  Fel  "
+" Mappa "
+"SzimLnk"
+"Csomópt"
+// need translation:
+"Volume"
+// need translation:
+"DFS"
+// need translation:
+"DFSR"
+// need translation:
+"HSM"
+// need translation:
+"HSM2"
+// need translation:
+"SIS"
+// need translation:
+"WIM"
+// need translation:
+"CSV"
+// need translation:
+"DEDUP"
+// need translation:
+"NFS"
+// need translation:
+"Placeholder"
+"?SzimLnk?"
+"<>"
+"B"
+"k"
+"M"
+"G"
+"T"
+"P"
+"E"
+" %1 bájt 1 fájlban "
+" %1 bájt %2 fájlban "
+" %1 bájt %2 fájlban "
+" %1 szabad bájt "
+
+"Vizsgálat"
+"Szerkesztendő fájl:"
+
+"Kijelölést levesz"
+"Kijelölés"
+"&Szűrő"
+
+"Összehasonlítás"
+"Mappák összehasonlításához"
+"két fájlpanel szükséges"
+"A mappák tartalma"
+"azonosnak tűnik"
+
+"Válasszon társítást"
+
+"Fájltársítások"
+"Szerk.: Del,Ins,F4"
+"Törölni szeretné a társítást?"
+
+"Fájltársítások szerkesztése"
+"F&ájlmaszk(ok, vesszővel elválasztva):"
+"A &társítás leírása:"
+"&Végrehajtandó parancs (Enterre):"
+"Vé&grehajtandó parancs (Ctrl+PgDown-ra):"
+"&Nézőke parancs (F3-ra):"
+"N&ézőke parancs (Alt+F3-ra):"
+"S&zerkesztés parancs (F4-re):"
+"Sze&rkesztés parancs (Alt+F4-re):"
+
+//Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
+"Súgó"
+"SorTör"
+// this is another text for F2
+"Kilép"
+"Hexa"
+""
+"Szerk."
+"Keres"
+"ANSI"
+""
+"Kilép"
+"Plugin"
+"Képrny"
+
+//Viewer: Shift
+""
+"SzóTör"
+""
+// need translation:
+"Mode"
+""
+""
+"TovKer"
+"Kódlap"
+""
+""
+""
+""
+
+//Viewer: Alt
+""
+""
+""
+""
+""
+""
+"VisKer"
+"Ugrás"
+"Video"
+""
+"NézElő"
+""
+
+//Viewer: Ctrl
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"FájlPz"
+""
+""
+
+//Viewer: AltShift
+""
+""
+""
+""
+""
+""
+""
+""
+"Beáll."
+""
+""
+""
+
+//Viewer: CtrlShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+//Viewer: CtrlAlt
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+//Viewer: CtrlAltShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"NemTör"
+// this is another text for F4
+"Szöveg"
+// this is another text for F4
+// need translation:
+"Dump"
+// this is another text for F8
+"OEM"
+// end of functional keys (Viewer)
+
+//Single Viewer: functional keys, 12 keys, except F2 - 2 keys, and F8 - 2 keys
+"Súgó"
+"SorTör"
+"Kilép"
+"Hexa"
+""
+"Szerk."
+"Keres"
+"ANSI"
+""
+"Kilép"
+"Plugin"
+"Képrny"
+
+//Single Viewer: Shift
+""
+"SzóTör"
+""
+""
+""
+""
+"TovKer"
+"Kódlap"
+""
+""
+""
+""
+
+//Single Viewer: Alt
+""
+""
+""
+""
+""
+""
+"VisKer"
+"Ugrás"
+"Video"
+""
+"NézElő"
+""
+
+//Single Viewer: Ctrl
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+//Single Viewer: AltShift
+""
+""
+""
+""
+""
+""
+""
+""
+"Beáll."
+""
+""
+""
+
+//Single Viewer: CtrlShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+//Single Viewer: CtrlAlt
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+//Single Viewer: CtrlAltShift
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+// this is another text for F2
+"NemTör"
+// this is another text for F4
+"Szöveg"
+// this is another text for F4
+"OEM"
+// end of functional keys (Single Viewer)
+// need translation:
+"View mode"
+"megnézése"
+"szerkesztése"
+
+"Szűrők menü"
+"+,-,Szóköz,I,X,BS,Shift+BS,Ins,Del,F4,F5,Ctrl+Fel,Ctrl+Le"
+"A panel fájltípusa"
+"Mappák"
+"Csak saját szűrő szerkeszthető"
+"Törölni szeretné a szűrőt?"
+"Csak saját szűrő törölhető"
+
+"Fájlkeresés"
+"Fájlm&aszk(ok, vesszővel elválasztva):"
+"&Tartalmazza a szöveget:"
+"Tartalmazza a he&xát:"
+"Kó&dlap:"
+"Space, Ins"
+"&Nagy/kisbetű érzékeny"
+"Csak egés&z szavak"
+// need translation:
+"Minden kódlappal"
+// need translation:
+"Selected code pages"
+"Keresés t&ömörítettekben"
+"Keresés mapp&ákra"
+"Keresés sz&imbolikus linkekben"
+// need translation:
+"Search in alternate streams"
+"Keresés &hexákra"
+// need translation:
+"Not containing"
+"Keresés hatós&ugara:"
+"Minden &fix meghajtón"
+"Minden hel&yi meghajtón"
+"A &PATH mappáiban"
+"Meghajtó &gyökerétől:"
+"A &gyökérmappától"
+"Az akt&uális mappától"
+"&Csak az aktuális mappában"
+"A ki&jelölt mappákban"
+"Sz&űrővel"
+"szűrővel"
+"K&eres"
+"Meghajt&ó"
+"Szű&rő"
+"Ha&ladó"
+"%1 keresése"
+"&Új keresés"
+"U&grás"
+"Meg&néz"
+"&Panel"
+"&Állj"
+
+"A keresés kész. %1 fájlt és %2 mappát találtam."
+"&Mégsem"
+
+" Fájlt: %1, mappát: %2 "
+
+"Mappa"
+"SzimLnk"
+"Csomópt"
+
+"Fájlkeresés haladó beállításai"
+"Keresés csak az első &x bájtban:"
+// need translation:
+"&Output format:"
+"Oszlop&típusok"
+"Oszlop&szélességek"
+
+"Keresés:"
+
+"Kódlapok"
+"Rendszer"
+"Unicode"
+"Kedvencek"
+"Egyéb"
+"Ctrl+H, Del, Ins, F4"
+"Ctrl+H, Del, F4"
+// need translation:
+"Edit code page name"
+// need translation:
+"&Reset"
+
+"Fájlkiemelések, rendezési csoportok"
+"Ins,Del,F4,F5,Ctrl+Fel,Ctrl+Le"
+"Felsőbbrendű csoport"
+"Alsóbbrendű csoport"
+"Legalacsonyabb rendű csoport"
+"Biztosan törli a kiemelést?"
+"Minden változtatás elvész"
+"Visszaállítja az alapértelmezett kiemeléseket?"
+
+"Fájlkiemelés szerkesztése"
+"Megadható &jelölő karakter"
+"át&látszó"
+" Fájlnév színek (feketén fekete = alapértelmezett szín) "
+"&1. Normál fájlnév                  "
+"&3. Kijelölt fájlnév                "
+"&5. Kurzor alatti fájlnév           "
+"&7. Kurzor alatti kijelölt fájlnév  "
+"&2. Jelölő kar.:"
+"&4. Jelölő kar.:"
+"&6. Jelölő kar.:"
+"&8. Jelölő kar.:"
+"║fájlneve.kit │"
+"║ fájlneve.kit│"
+"Folyamatos f&eldolgozás"
+
+"Információk"
+"Számítógép neve"
+// need translation:
+"Computer description"
+"Felhasználói név"
+// need translation:
+"User description"
+// need translation:
+"Access level"
+// need translation:
+"Guest"
+// need translation:
+"User"
+// need translation:
+"Administrator"
+// need translation:
+"Unknown"
+" Lemez "
+"Kivehető"
+"Fix"
+"Hálózati"
+"CD-ROM"
+"CD-RW"
+"CD-RW/DVD"
+"DVD-ROM"
+"DVD-RW"
+"DVD-RAM"
+"RAM"
+"Subst"
+// need translation:
+"Virtual"
+// need translation:
+"Unknown"
+"lemez"
+"Összes bájt"
+"Szabad bájt"
+"Kötet címke"
+"Sorozatszám"
+" Memória "
+"Használt memória"
+// need translation:
+"Installed memory"
+"Összes memória"
+"Szabad memória"
+"Összes virtuális"
+"Szabad virtuális"
+// need translation:
+"Total paging file"
+// need translation:
+"Free paging file"
+" Megjegyzés "
+"Mappa megjegyzésfájl nincs"
+" Plugin "
+// need translation:
+" Power Status"
+// need translation:
+"AC power status"
+// need translation:
+"Offline"
+// need translation:
+"Online"
+// need translation:
+"Backup power"
+// need translation:
+"Unknown"
+// need translation:
+"Battery life percent"
+// need translation:
+"Unknown"
+// need translation:
+"Battery charge status"
+// need translation:
+"High"
+// need translation:
+"Low"
+// need translation:
+"Critical"
+// need translation:
+"Charging"
+// need translation:
+"No system battery"
+// need translation:
+"Unknown"
+// need translation:
+"Battery life time"
+// need translation:
+"Unknown"
+// need translation:
+"Battery full time"
+// need translation:
+"Unknown"
+"Hozzáférés megtagadva"
+
+"Nem végrehajtható:"
+// need translation:
+"Cannot invoke command interpreter"
+// need translation:
+"Check COMSPEC environment variable"
+"Mappák olvasása..."
+
+"Új mappa létrehozása"
+"Mappa &neve:"
+"Link típusa:"
+// need translation:
+"None"
+"Mappa csomópont"
+"Szimbolikus link"
+// need translation:
+"Target:"
+"Töb&b név feldolgozása"
+"Hibás mappalista"
+"A mappa nem hozható létre"
+
+"&Rövid"
+"&Közepes"
+"&Teljes"
+"&Széles"
+"Rész&letes"
+"Fájl&megjegyzések"
+"&Hosszú megjegyzés"
+"Fájl tula&jdonos"
+"Fájl li&nkek"
+"&Alternatív teljes"
+
+"&Info panel"
+"&Fastruktúra"
+"&Gyorsnézet"
+"R&endezési elv"
+"H&osszú fájlnevek"
+"&Panel be/ki"
+"Friss&ítés"
+"Meghajtó&váltás"
+
+"&Megnéz"
+"&Szerkeszt"
+"Más&ol"
+"Át&nevez-Mozgat"
+// need translation:
+"Link"
+"Ú&j mappa"
+"&Töröl"
+"&Kisöpör"
+"Tömörhöz ho&zzáad"
+"Tömörből ki&bont"
+"Tömörítő &parancsok"
+"Fájl &attribútumok"
+"Parancs &végrehajtása"
+"Fájlmegje&gyzés"
+"Csoport k&ijelölése"
+"Jelölést l&evesz"
+"Jelölést meg&fordít"
+"Jel&ölést visszatesz"
+
+"Fájl&keresés"
+"Parancs &előzmények"
+"&Video mód"
+"&Mappakeresés"
+"Fáj&l előzmények"
+"Ma&ppa előzmények"
+"Panel&csere"
+"Panelek &be/ki"
+"Mappák össze&hasonlítása"
+"Felhasználói m&enü szerk."
+"Fájl&társítások"
+"Mappa gyorsbillent&yűk"
+"Fájlpanel &szűrők"
+"Pl&ugin parancsok"
+"Képer&nyők"
+"Futó p&rogramok"
+"H&otplug eszközök"
+
+"&Rendszer beállítások"
+"&Panel beállítások"
+// need translation:
+"Tree settings"
+"Kezelő&felület beállítások"
+"N&yelvek (Languages)"
+"Pl&ugin beállítások"
+// need translation:
+"Plugins manager settings"
+"Pár&beszédablak beállítások"
+// need translation:
+"Menu settings"
+// need translation:
+"Command line settings"
+// need translation:
+"AutoComplete settings"
+// need translation:
+"Inf&oPanel settings"
+// need translation:
+"Groups of file masks"
+"Meg&erősítések"
+"Fájlpanel mód&ok"
+"Fájl &megjegyzésfájlok"
+"M&appa megjegyzésfájlok"
+"&Nézőke beállítások"
+"&Szerkesztő beállítások"
+// need translation:
+"Kódlapok"
+"S&zínek"
+"Fájlkiemelések, rendezési &csoportok"
+"Beállítások men&tése"
+"Panel be/&ki"
+"Meghajtó&váltás"
+
+"&Bal"
+"&Fájlok"
+"&Parancsok"
+"B&eállítások"
+"&Jobb"
+
+"Rendezési elv"
+"&Név"
+"Ki&terjesztés"
+// need translation:
+"&Write time"
+"&Méret"
+"&Rendezetlen"
+"Ke&letkezés ideje"
+"&Hozzáférés ideje"
+// need translation:
+"Change time"
+"Megjegyzé&sek"
+"Tula&jdonos"
+// need translation:
+"Allocated size"
+"Hardlinkek s&záma"
+"Stream-e&k száma"
+"Stream-ek m&érete"
+// need translation:
+"&Full name"
+// need translation:
+"Cus&tom data"
+"Rend. cs&oport haszn."
+"Kijel&ölteket előre"
+// need translation:
+"Sho&w directories first"
+"N&umerikus rendezés"
+// need translation:
+"Nagy/kisbetű érzékeny rendezés"
+"Szerk.: Ins, Del, F4, F7, Ctrl+R"
+"&Neve:"
+"F&ájlmaszk(ok, vesszővel elválasztva):"
+"Törölni akar"
+// need translation:
+"Do you wish to restore default mask sets?"
+"&Maszk:"
+"Összesen: %1"
+
+"Meghajtók"
+"kivehető"
+"fix"
+"hálózati"
+"leválasztva"
+"CD-ROM"
+"CD-RW"
+"CD-RW/DVD"
+"DVD-ROM"
+"DVD-RW"
+"DVD-RAM"
+"BD-ROM"
+"BD-RW"
+"HDDVD-ROM"
+"HDDVD-RW"
+"RAM lemez"
+"virtuális"
+// need translation:
+"virtual"
+"nem elérhető"
+"Meghajtó lemeze nem olvasható"
+"Nem lehet leválni innen: %1"
+"%1 virtuális meghajtó nem törölhető"
+// need translation:
+"Cannot detach virtual disk %1"
+"Ha a nyitott fájlokat nem zárja be, az adatok elveszhetnek"
+
+// need translation:
+"Virtuális meghajtó törlése"
+// need translation:
+"Törli %1 virtuális meghajtót?"
+// need translation:
+"Virtual disk detaching"
+// need translation:
+"Detach virtual disk %1?"
+
+"Eszköz biztonságos eltávolítása"
+"Eltávolítja az eszközt?"
+"(%1 meghajtó)"
+"%1: eszköz nem távolítható el"
+"Az eszköz nem távolítható el:"
+"Az eszköz:"
+"már biztonságosan eltávolítható"
+"Hotplug eszközök"
+"Szerkesztés: Del,Ctrl+R"
+
+"Hálózati meghajtó leválasztása"
+"Le akar válni %1: meghajtóról?"
+"%1: meghajtó hozzárendelve:"
+"&Bejelentkezésnél újracsatlakoztat"
+
+"Mindenképpen leválasztja az eszközt?"
+"Lemez betöltése..."
+"%1: meghajtó lemeze nem oldható ki"
+// need translation:
+"Change Drive Menu Options"
+// need translation:
+"Show disk type"
+// need translation:
+"Show &network name/SUBST path/VHD name"
+// need translation:
+"Show disk &label"
+// need translation:
+"Show &file system type"
+// need translation:
+"Show &size"
+// need translation:
+"Show size in &Windows Explorer style"
+// need translation:
+"Show &removable drive parameters"
+// need translation:
+"Show &plugins"
+// need translation:
+"Sort plugins by hotkey"
+// need translation:
+"Show &CD drive parameters"
+// need translation:
+"Show ne&twork drive parameters"
+"Del,Shift+Del,F3,F4,F9"
+
+" Keresés "
+"A listafájl nem hozható létre"
+"(a lista átmeneti fájl nem hozható létre)"
+"(a fájlba nem írható adat)"
+
+"%1 fájl"
+"%1 mozgatása"
+"%1 másolása"
+
+"Futó programok"
+"Szerk.: Del,Ctrl+R,F2"
+"Programkilövés"
+"Ki akarja lőni a kijelölt programot?"
+"A program minden mentetlen adata elvész"
+"Kilő"
+"A programot nem lehet kilőni"
+"Nincs joga a program kilövésére"
+
+"Gyorsnézet"
+"Mappa"
+"Csomópont"
+"Szimlink"
+"Kötet"
+// need translation:
+"DFS"
+// need translation:
+"DFSR"
+// need translation:
+"HSM"
+// need translation:
+"HSM2"
+// need translation:
+"SIS"
+// need translation:
+"WIM"
+// need translation:
+"CSV"
+// need translation:
+"DEDUP"
+// need translation:
+"NFS"
+// need translation:
+"Placeholder"
+// need translation:
+"Unknown reparse point"
+"(adat nem elérhető)"
+"Tartalma:"
+"Mappák száma     "
+"Fájlok száma     "
+"Fájlok mérete    "
+// need translation:
+"Allocated size   "
+"Klaszterméret    "
+"Meddő terület    "
+// need translation:
+"MFT overhead        "
+
+"Attribútumok"
+"Attribútumok megváltoztatása"
+"a kijelölt objektumokon"
+"hardlink"
+"Сsomópont:"
+"Szimlink:"
+"Kötet:"
+// need translation:
+"DFS Targets"
+"(adat nem elérhető)"
+"&Csak olvasható"
+"&Archív"
+"&Rejtett"
+"Ren&dszer"
+"&Tömörített"
+"Tit&kosított"
+"Nem inde&xelt"
+"Ritk&ított"
+"&Átmeneti"
+"O&ffline"
+// need translation:
+"Reparse point"
+"&Virtuális"
+// need translation:
+"Integrity stream"
+// need translation:
+"No scrub data"
+"Az almappákon is"
+"Tulajdonos:"
+// need translation:
+"(multiple values)"
+// need translation:
+"Last &write time:"
+"&Létrehozás dátuma/ideje:"
+"&Utolsó hozzáférés dátuma/ideje:"
+// need translation:
+"Change time:"
+"&Eredeti"
+"Aktuál&is"
+"&Üres"
+"Alkalmaz"
+
+// need translation:
+"HH%1NN%2ÉÉÉÉÉ óó%3pp%4mm%5ms"
+// need translation:
+"NN%1HH%2ÉÉÉÉÉ óó%3pp%4mm%5ms"
+// need translation:
+"ÉÉÉÉÉ%1HH%2NN óó%3pp%4mm%5ms"
+// need translation:
+"System properties"
+
+"Attribútumok beállítása"
+"Az attribútumok nem állíthatók be:"
+"A TÖMÖRÍTETT attribútum nem állítható be:"
+"A TITKOSÍTOTT attribútum nem állítható be:"
+"A RITKÍTOTT attribútum nem állítható be:"
+"A dátum nem állítható be:"
+// need translation:
+"Cannot set owner for"
+
+"&Panel"
+"Pár&beszédablak"
+"&Figyelmeztetés"
+"&Menü"
+"&Vízszintes menü"
+"F&unkcióbill.sor"
+"P&arancssor"
+"Ó&ra"
+"&Nézőke"
+"&Szerkesztő"
+"Sú&gó"
+"Alapért. s&zínek"
+"Fekete-fe&hér mód"
+
+"Normál szöveg"
+"Kijelölt szöveg"
+"Kiemelt szöveg"
+"Kiemelt info"
+"Vonszolt szöveg"
+"Keret"
+"Normál kurzor"
+"Kijelölt kurzor"
+"Normál név"
+"Kijelölt név"
+"Oszlopnév"
+"Összes info"
+"Kijelölt info"
+"Gördítősáv"
+"Háttérképernyők száma"
+
+"Normál szöveg"
+"Kiemelt szöveg"
+"Inaktív szöveg"
+"Keret"
+"Keret neve"
+"Kiemelt keretnév"
+"Beírt szöveg"
+"Változatlan beírt szöveg"
+"Beírt szöveg kijelölve"
+"Inaktív beviteli sor"
+"Gombok"
+"Kijelölt gombok"
+"Kiemelt gombok"
+"Kijelölt kiemelt gombok"
+// need translation:
+"Default button"
+// need translation:
+"Selected default button"
+// need translation:
+"Highlighted default button"
+// need translation:
+"Selected highlighted default button"
+"Listaablak"
+"Lenyíló szövegablak"
+
+"Normál szöveg"
+"Kijelölt szöveg"
+"Kiemelt szöveg"
+"Kijelölt kiemelt szöveg"
+"Inaktív elem"
+"Keret"
+"Keret neve"
+"Szürke listaszöveg"
+"Kijelölt szürke listaszöveg"
+"Gördítősáv"
+"Hosszú sztring jelzők"
+"Kijelölt hosszú sztring jelzők"
+"Inaktív hosszú sztring jelzők"
+
+"Normál szöveg"
+"Kijelölt szöveg"
+"Kiemelt szöveg"
+"Kijelölt kiemelt szöveg"
+"Inaktív szöveg"
+"Szürke szöveg"
+"Kijelölt szürke szöveg"
+"Keret"
+"Keret neve"
+"Gördítősáv"
+"Hosszú sztring jelzők"
+"Kijelölt hosszú sztring jelzők"
+"Inaktív hosszú sztring jelzők"
+
+"Normál szöveg"
+"Kijelölt szöveg"
+"Kiemelt szöveg"
+"Kijelölt kiemelt szöveg"
+
+"Funkció száma"
+"Funkció neve"
+"Háttere"
+
+"Normál szöveg"
+"Beírt szöveg kijelölve"
+"Előtag szövege"
+"Konzol háttere"
+
+"Normál szöveg (panelek)"
+"Normál szöveg (szerkesztő)"
+"Normál szöveg (nézőke)"
+
+"Normál szöveg"
+"Kijelölt szöveg"
+"Állapotsor"
+"Képernyőgördítő nyilak"
+"Gördítősáv"
+
+"Normál szöveg"
+"Kijelölt szöveg"
+"Állapotsor"
+"Gördítősáv"
+
+"Normál szöveg"
+"Kiemelt szöveg"
+"Hivatkozás"
+"Kijelölt hivatkozás"
+"Keret"
+"Keret neve"
+"Gördítősáv"
+
+"Színcsoportok"
+"A színcsoport elemei"
+
+"Színek"
+"&Előtér"
+"&Háttér"
+"Átlá&tszó"
+"Átlát&szó"
+"Text Text Text Text Text Text Text"
+"A&lkalmaz"
+"&Mégsem"
+
+"Megerősítések"
+"&Másolás"
+"Moz&gatás"
+"&Csak olv. fájlok felülírása/törlése"
+"&Húzd és ejtsd"
+"&Törlés"
+"Nem &üres mappák törlése"
+"Mű&velet megszakítása"
+"Háló&zati meghajtó leválasztása"
+// need translation:
+"Virt&uális meghajtó törlése"
+// need translation:
+"Detach virtual disk"
+"H&otPlug eszköz eltávolítása"
+"&Szerkesztett fájl újratöltése"
+"&Előzménylista törlése"
+"K&ilépés a FAR-ból"
+
+// need translation:
+"Plugins manager settings"
+// need translation:
+"OEM plugins support"
+"Szimbolikus linkek &vizsgálata"
+"&Fájl feldolgozása"
+"Szabvány társítás megjelenítése"
+"Akkor is, ha csak egy plugin van"
+"Keresés eredménye (SetFindList)"
+"Előtag feldolgozása"
+"Plugin választás"
+"Szabvány társítás"
+
+"Mappakeresés"
+
+// Find folder Tree KeyBar
+"Súgó"
+"FaFris"
+""
+""
+"Nagyít"
+""
+""
+""
+""
+"Kilép"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"Video"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"Fa"
+"A mappák fastruktúrája nem menthető fájlba"
+"Mappaszerkezet újraolvasása..."
+
+"Felhasználói menü szerkesztése"
+"Felhasználói menü típusa:"
+"&Főmenü"
+"&Helyi menü"
+"Főmenü"
+
+// <...menu (User)>
+// need translation:
+"User"
+// need translation:
+"Global"
+"Helyi menü"
+"Szerk.: Del,Ins,F4,Alt+F4"
+"Biztosan törli a menüelemet?"
+"Biztosan törli az almenüt?"
+"A felhasználói menü névformátuma érvénytelen"
+"A gyorsbillentyű formátuma érvénytelen"
+
+"Parancs szerkesztése"
+"&Gyorsbillentyű:"
+"&Név:"
+"&Parancsok:"
+
+"Új parancs vagy új menü?"
+"Parancs"
+"Menü"
+
+"Almenü szerkesztése"
+"&Gyorsbillentyű:"
+"&Név:"
+// need translation:
+"Save changes?"
+
+"Nézőke"
+"A fájl nem nyitható meg"
+"Oszlop"
+
+"Keresés"
+"&Keresés:"
+"&Szöveg keresése"
+"&Hexa keresése"
+"&Nagy/kisbetű érzékeny"
+"Csak e&gész szavak"
+"&Visszafelé keres"
+// need translation:
+"Re&gular expressions"
+"Keres"
+"Mégsem"
+
+"Keresés:"
+"Bájtok keresése:"
+"Nem találtam a szöveget:"
+"Nem találtam a bájtokat:"
+// need translation:
+"End of the document reached"
+"Folytassam a keresést a dokumentum elejétől?"
+// need translation:
+"Begin of the document reached"
+"Folytassam a keresést a dokumentum végétől?"
+// need translation:
+"Whole document scanned"
+// need translation:
+"Repeat the search in the document?"
+
+"Nyomtatás"
+"%1 nyomtatása:"
+"%1 fájl nyomtatása:"
+"Fájlok előkészítése nyomtatáshoz"
+"Az elérhető nyomtatók listája nem állítható össze"
+"Nyomtató nem elérhető"
+"Nem nyomtatható"
+
+"Fájlmegjegyzés"
+// need translation:
+"Írja be megjegyzését:"
+
+"Fájlmegjegyzések olvasása"
+"A fájlmegjegyzések nem frissíthetők"
+"A megjegyzésfájl csak olvasható"
+
+"Fájl megjegyzésfájlok"
+"Megjegyzés&fájlok nevei, vesszővel elválasztva:"
+"Az új megjegyzésfájl ""&rejtett"" attribútumú legyen"
+"&Csak olvasható megjegyzésfájlok frissítése"
+"Új megjegyzéseknél a szöveg &kezdete"
+"N&e frissítse a megjegyzéseket"
+"Frissítsen, ha meg&jelenik"
+"&Mindig frissítsen"
+"Fájlok eredeti megnyitása ANS&I kódlappal"
+// need translation:
+"Save in UTF8"
+
+"Panelek frissítése"
+" %1 fájl olvasása"
+"A művelet félbeszakadt"
+
+"Panel módok szerkesztése"
+
+"Neve"
+"Oszlop&típusok"
+"Oszlop&szélességek"
+"Állapotsor oszloptíp&usok"
+"Állapotsor &oszlopszélességek"
+"Tel&jes képernyős nézet"
+"Fájlkiterjesztések &igazítása"
+"Mappakiterjesztések i&gazítása"
+"Mappák NAG&YBETŰVEL mutatva"
+"Fájlok kis&betűvel mutatva"
+"NAGYBETŰS fájl&nevek kisbetűvel"
+" Tanácsokat a súgóban talál (F1) "
+
+"Mappa megjegyzésfájlok"
+"Fájlnevek, vesszővel elválasztva (joker is használható)"
+
+"Képernyők"
+"Panelek"
+"Nézőke"
+"Szerkesztő"
+
+"Parancs végrehajtása"
+"Írja be a kijelölt fájlok parancsát:"
+
+"Plugin beállítások"
+"Plugin parancsok"
+
+"Fájllista elkészítése"
+
+"A program nyelve"
+"A súgó nyelve"
+
+"Makró gyorsbillentyű"
+"Nyomja le a billentyűt"
+""%1" makróbillentyű foglalt"
+""%1" makróbillentyű törlődik"
+""%1" közös makróbill. foglalt"
+""%1" közös makróbill. törlődik"
+"Szekvencia:"
+"Megjegyzés:"
+"Újradefiniálja?"
+"Törli?"
+// need translation:
+"Change"
+
+""%1" makró beállításai"
+"Képernyő&kimenet a makró futása közben"
+"Végrehajtás a FAR &indítása után"
+"&Aktív panel"
+"Passzí&v panel"
+"Ha &plugin panel"
+"Ha &mappa"
+"Ha van ki&jelölés"
+"Ha &üres a parancssor"
+"Ha van kijelölt &blokk"
+// need translation:
+"Plugin LuaMacro is not loaded"
+// need translation:
+"Macro recording is disabled"
+
+"A fájl nem menthető"
+"A szerkesztett szöveg elmentve:"
+
+"Jan"
+"Feb"
+"Már"
+"Ápr"
+"Máj"
+"Jún"
+"Júl"
+"Aug"
+"Sze"
+"Okt"
+"Nov"
+"Dec"
+
+"Plugin gyorsbillentyű hozzárendelés"
+"Nyomja le a billentyűt (betű vagy szám)"
+// need translation:
+"Plugin information"
+// need translation:
+"&Title:"
+// need translation:
+"&Description:"
+// need translation:
+"&Author:"
+// need translation:
+"&Version:"
+// need translation:
+"&Module path:"
+// need translation:
+"Plugin &GUID:"
+// need translation:
+"Plugin &item GUID:"
+// need translation:
+"Plugin &prefix:"
+// need translation:
+"F4 - gyorsbillentyű hozzárendelés, F3 - information"
+
+"JobbCtrl"
+
+"Ugrás"
+"&Százalékban"
+"&Hexában"
+"&Decimálisan"
+"Kivétel történt"
+"Hozzáférési jogsértés (olvasás %1 címről)"
+"Hozzáférési jogsértés (írás %1 címre)"
+"Hozzáférési jogsértés (végrehajtás %1 címen)"
+"A tömb határait meghaladta"
+"Nullával osztás"
+"Verem túlcsordulás"
+"Törésponti kivétel"
+"Lebegőpontos szám osztása nullával"
+"Lebegőpontos művelet túlcsordulás"
+"Lebegőpont verem üres vagy megtelt"
+"Lebegőpontos művelet alulcsordulás"
+"Érvénytelen utasítás"
+"Adattípus illesztési hiba"
+"Ismeretlen kivétel"
+// need translation:
+"Exception:"
+// need translation:
+"Address:"
+// need translation:
+"Function:"
+// need translation:
+"Module:"
+// need translation:
+"Terminate Far"
+// need translation:
+"Unload plugin "
+// need translation:
+"Debug"
+
+"Felhasználói név"
+"Felhasználói jelszó"
+
+"A mappa tartalma nem olvasható"
+
+"A pluginhez újabb FAR verzió kell"
+"A szükséges Far verzió: %1,"
+"a jelenlegi Far verzió: %1."
+// need translation:
+"Plugin betöltési hiba"
+
+"?"
+
+"Súgó"
+"A hivatkozás által indított program:"
+"Paraméterei:"
+"El akarja indítani?"
+"A fájl nem nyitható meg"
+"A kívánt súgó témakör nem található:"
+
+"Pluginek súgói"
+"Dokumentumok súgói"
+
+"Keresés"
+"&Keresés:"
+"A szöveg nem található:"
+
+// Help KeyBar F1-12
+"Súgó"
+""
+""
+""
+"Nagyít"
+""
+"Keres"
+""
+""
+"Kilép"
+""
+""
+
+// Help KeyBar Shift+F1-12
+"Tartlm"
+"PlgSúg"
+"DokSúg"
+""
+""
+""
+"Tovább"
+""
+""
+""
+""
+""
+
+// Help KeyBar Alt+F1-12
+"Vissza"
+""
+""
+""
+""
+""
+""
+""
+"Video"
+""
+""
+""
+
+// Help KeyBar Ctrl+F1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Help KeyBar AltShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Help KeyBar CtrlShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Help KeyBar CtrlAltF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Help KeyBar CtrlAltShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// InfoPanel KeyBar F1-F12
+"Súgó"
+"SorTör"
+"MjMnéz"
+"MjSzrk"
+""
+""
+"Keres"
+"ANSI"
+"KonfMn"
+"Kilép"
+"Plugin"
+"Képrny"
+
+// InfoPanel KeyBar Shift+F1-F12
+""
+"SzóTör"
+""
+""
+""
+""
+"TovKer"
+"Kódlap"
+"Mentés"
+"UtsMnü"
+""
+""
+
+// InfoPanel KeyBar Alt+F1-F12
+"Bal"
+"Jobb"
+""
+""
+""
+""
+"Keres"
+"Ugrás"
+"Video"
+"MapKer"
+"NézElő"
+"MapElő"
+
+// InfoPanel KeyBar Ctrl+F1-F12
+"Bal"
+"Jobb"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// InfoPanel KeyBar AltShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// InfoPanel KeyBar CtrlShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// InfoPanel KeyBar CtrlAltF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// InfoPanel KeyBar CtrlAltShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// QView KeyBar F1-F12
+"Súgó"
+"SorTör"
+"Megnéz"
+"Hexa"
+""
+""
+"Keres"
+"ANSI"
+"KonfMn"
+"Kilép"
+"Plugin"
+"Képrny"
+
+// QView KeyBar Shift+F1-F12
+""
+"SzóTör"
+""
+""
+""
+""
+"TovKer"
+"Kódlap"
+"Mentés"
+"UtsMnü"
+""
+""
+
+// QView KeyBar Alt+F1-F12
+"Bal"
+"Jobb"
+""
+""
+""
+""
+"Keres"
+"Ugrás"
+"Video"
+"MapKer"
+"NézElő"
+"MapElő"
+
+// QView KeyBar Ctrl+F1-F12
+"Bal"
+"Jobb"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// QView KeyBar AltShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// QView KeyBar CtrlShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// QView KeyBar CtrlAltF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// QView KeyBar CtrlAltShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Tree KeyBar F1-F12
+"Súgó"
+"FelhMn"
+""
+"Attrib"
+"Másol"
+"ÁtnMoz"
+"ÚjMapp"
+"Törlés"
+"KonfMn"
+"Kilép"
+"Plugin"
+"Képrny"
+
+// Tree KeyBar Shift+F1-F12
+""
+""
+""
+""
+"Másol"
+"ÁtnMoz"
+""
+""
+"Mentés"
+"UtsMnü"
+"Csoprt"
+"KijFel"
+
+// Tree KeyBar Alt+F1-F12
+"Bal"
+"Jobb"
+""
+""
+""
+""
+"Keres"
+"ParElő"
+"Video"
+"MapKer"
+"NézElő"
+"MapElő"
+
+// Tree KeyBar Ctrl+F1-F12
+"Bal"
+"Jobb"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Tree KeyBar AltShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Tree KeyBar CtrlShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Tree KeyBar CtrlAltF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+// Tree KeyBar CtrlAltShiftF1-12
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+
+"Eltelt: %1    Maradt: %2    %3B/s"
+
+"A műveletet megszakította"
+"Valóban le akarja állítani?"
+"Folytatja?"
+
+"A fájlt ez a plugin használja:"
+
+"Párbeszéd"
+"Súgó"
+"MappaFa"
+"Menü"
+
+"A fájlmaszk hibás"
+
+"{}"
+
+"A %COMSPEC% környezeti változó nincs definiálva"
+
+"A fájl nem nyitható meg"
+
+"Felhasználói szűrő"
+"Fájlkiemelés"
+"Szűrő &neve:"
+"&Maszk:"
+"M&éret:"
+">="
+"<="
+// need translation:
+"Has more than one hardlink"
+"&Dátum/Idő:"
+// need translation:
+"&write"
+"&Létrehozás"
+"&Hozzáférés"
+// need translation:
+"c&hange"
+"Relat&ív"
+">="
+"<="
+"&Jelenlegi"
+"&Üres"
+"Attri&bútumok"
+"&Csak olvasható"
+"&Archív"
+"&Rejtett"
+"Re&ndszer"
+"&Tömörített"
+"T&itkosított"
+"Map&pa"
+"Nem inde&xelt"
+"Ritk&ított"
+"Átm&eneti"
+// need translation:
+"Reparse point"
+"O&ffline"
+"&Virtuális"
+// need translation:
+"Integrity stream"
+// need translation:
+"No scrub data"
+"Reset"
+"Mégsem"
+"Legyen átlátszó"
+"A fájlméret mező rosszul van kitöltve"
+
+// need translation:
+"Administrator"
+// need translation:
+"You need to provide administrator permission"
+// need translation:
+"Additional privileges required"
+// need translation:
+"to process this object:"
+// need translation:
+"to open this object:"
+// need translation:
+"to delete this object:"
+// need translation:
+"to copy this object:"
+// need translation:
+"to move this object:"
+// need translation:
+"to get attributes of this object:"
+// need translation:
+"to set attributes of this object:"
+// need translation:
+"to create this hard link:"
+// need translation:
+"to create this symbolic link:"
+// need translation:
+"to move this object to recycle bin:"
+// need translation:
+"to list this object:"
+// need translation:
+"to set owner of this object:"
+// need translation:
+"to open this object:"
+// need translation:
+"to encrypt this object:"
+// need translation:
+"to decrypt this object:"
+// need translation:
+"Do this for &all current objects"
+// need translation:
+"Do not ask again in the current session"
+// need translation:
+"History"
+// need translation:
+"Environment"
+// need translation:
+"Files"
+// need translation:
+"Object is being %1 in:"
+// need translation:
+"played"
+// need translation:
+"edited"
+// need translation:
+"opened"
+// need translation:
+"Switch to"
+// need translation:
+"Close file"
+// need translation:
+"Problem configuration DB"
+// need translation:
+"Show configuration folders"
+// keys
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"Gray -"
+""
+"Gray *"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"Gray +"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+// keys end
+
+"?Új fájl?"

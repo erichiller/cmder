@@ -1,0 +1,123 @@
+ SameFolder
+
+ Timestamp is 56107bdb (Sun Oct 04 04:07:39 2015)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000018H .idata$5                CODE
+ 0001:00000018 0000018aH .rdata                  CODE
+ 0001:000001b0 000015d5H .text                   CODE
+ 0001:00001788 00000014H .idata$2                CODE
+ 0001:0000179c 00000014H .idata$3                CODE
+ 0001:000017b0 00000018H .idata$4                CODE
+ 0001:000017c8 00000050H .idata$6                CODE
+ 0001:00001820 000000a8H .edata                  CODE
+ 0002:00000000 0000000cH .data                   DATA
+ 0002:00000010 00000160H .bss                    DATA
+ 0003:00000000 00000058H .rsrc$01                DATA
+ 0003:00000060 00000388H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0001:00000000       __imp__lstrlenW@4          10001000     kernel32:KERNEL32.dll
+ 0001:00000004       __imp__HeapFree@12         10001004     kernel32:KERNEL32.dll
+ 0001:00000008       __imp__GetProcessHeap@0    10001008     kernel32:KERNEL32.dll
+ 0001:0000000c       __imp__HeapAlloc@12        1000100c     kernel32:KERNEL32.dll
+ 0001:00000010       __imp__lstrcmpW@8          10001010     kernel32:KERNEL32.dll
+ 0001:00000014       \177KERNEL32_NULL_THUNK_DATA 10001014     kernel32:KERNEL32.dll
+ 0001:00000018       ??_C@_1BA@CAPFOHIJ@?$AAS?$AAe?$AAt?$AAM?$AAo?$AAd?$AAe?$AA?$AA@ 10001018     SameFolder.obj
+ 0001:00000028       ??_C@_1BM@FDPIJPAH@?$AAA?$AAd?$AAd?$AA2?$AAD?$AAi?$AAs?$AAk?$AAs?$AAM?$AAe?$AAn?$AAu?$AA?$AA@ 10001028     SameFolder.obj
+ 0001:00000044       ??_C@_1BK@EJEHIDJM@?$AAA?$AAd?$AAd?$AA2?$AAP?$AAl?$AAu?$AAg?$AAM?$AAe?$AAn?$AAu?$AA?$AA@ 10001044     SameFolder.obj
+ 0001:00000060       _MainGuid                  10001060     SameFolder.obj
+ 0001:00000070       _MenuGuid                  10001070     SameFolder.obj
+ 0001:00000080       _ConfigMenuGuid            10001080     SameFolder.obj
+ 0001:00000090       _DialogGuid                10001090     SameFolder.obj
+ 0001:000000a0       ??_C@_1BE@FDJGEMIB@?$AAF?$AAa?$AAr?$AA?5?$AAG?$AAr?$AAo?$AAu?$AAp?$AA?$AA@ 100010a0     SameFolder.obj
+ 0001:000000b8       ??_C@_1EG@GJIDGPOM@?$AAS?$AAa?$AAm?$AAe?$AA?5?$AAF?$AAo?$AAl?$AAd?$AAe?$AAr?$AA?5?$AAP?$AAl?$AAu?$AAg?$AAi?$AAn?$AA?5?$AAf?$AAo?$AAr?$AA?5?$AAF?$AAa?$AAr?$AA?5?$AAM?$AAa?$AAn?$AAa?$AAg@ 100010b8     SameFolder.obj
+ 0001:00000100       ??_C@_1BG@PFMEOFNH@?$AAS?$AAa?$AAm?$AAe?$AAF?$AAo?$AAl?$AAd?$AAe?$AAr?$AA?$AA@ 10001100     SameFolder.obj
+ 0001:00000118       ??_7?$DialogBuilderBase@UFarDialogItem@@@@6B@ 10001118     SameFolder.obj
+ 0001:0000013c       ??_7PluginDialogBuilder@@6B@ 1000113c     SameFolder.obj
+ 0001:00000160       ??_7?$DialogItemBinding@UFarDialogItem@@@@6B@ 10001160     SameFolder.obj
+ 0001:00000168       ??_7PluginCheckBoxBinding@@6B@ 10001168     SameFolder.obj
+ 0001:00000170       ??_7PluginRadioButtonBinding@@6B@ 10001170     SameFolder.obj
+ 0001:00000178       ??_C@_15EFLNJKHH@?$AA?$CF?$AAu?$AA?$AA@ 10001178     SameFolder.obj
+ 0001:00000180       ??_7PluginIntEditFieldBinding@@6B@ 10001180     SameFolder.obj
+ 0001:00000188       ??_7PluginUIntEditFieldBinding@@6B@ 10001188     SameFolder.obj
+ 0001:00000190       ??_C@_11LOCGONAA@?$AA?$AA@ 10001190     SameFolder.obj
+ 0001:00000194       ??_C@_1O@BJPKKLLM@?$AAC?$AAo?$AAn?$AAf?$AAi?$AAg?$AA?$AA@ 10001194     SameFolder.obj
+ 0001:000001b0       __chkstk                   100011b0 f   chkstk.obj
+ 0001:000001b0       __alloca_probe             100011b0     chkstk.obj
+ 0001:000001e0       ?GetLangString@PluginDialogBuilder@@MAEPB_WH@Z 100011e0 f i SameFolder.obj
+ 0001:00000200       _GetGlobalInfoW@4          10001200 f   SameFolder.obj
+ 0001:00000280       _SetStartupInfoW@4         10001280 f   SameFolder.obj
+ 0001:00000400       ?ComparePPI@@YA_NPBUPluginPanelItem@@0@Z 10001400 f   SameFolder.obj
+ 0001:000004d0       ?InitDialogItem@?$DialogBuilderBase@UFarDialogItem@@@@MAEXPAUFarDialogItem@@PB_W@Z 100014d0 f i SameFolder.obj
+ 0001:000004d0       ?SaveValue@?$DialogItemBinding@UFarDialogItem@@@@UAEXPAUFarDialogItem@@H@Z 100014d0 f i SameFolder.obj
+ 0001:000004e0       ?TextWidth@?$DialogBuilderBase@UFarDialogItem@@@@MAEHABUFarDialogItem@@@Z 100014e0 f i SameFolder.obj
+ 0001:000004f0       ?DoShowDialog@?$DialogBuilderBase@UFarDialogItem@@@@MAEHXZ 100014f0 f i SameFolder.obj
+ 0001:00000500       ?CreateCheckBoxBinding@?$DialogBuilderBase@UFarDialogItem@@@@MAEPAU?$DialogItemBinding@UFarDialogItem@@@@PAHH@Z 10001500 f i SameFolder.obj
+ 0001:00000500       ?AddUIntEditField@?$DialogBuilderBase@UFarDialogItem@@@@UAEPAUFarDialogItem@@PAIH@Z 10001500 f i SameFolder.obj
+ 0001:00000500       ?AddIntEditField@?$DialogBuilderBase@UFarDialogItem@@@@UAEPAUFarDialogItem@@PAHH@Z 10001500 f i SameFolder.obj
+ 0001:00000510       ?GetLangString@?$DialogBuilderBase@UFarDialogItem@@@@MAEPB_WH@Z 10001510 f i SameFolder.obj
+ 0001:00000510       ?CreateRadioButtonBinding@?$DialogBuilderBase@UFarDialogItem@@@@MAEPAU?$DialogItemBinding@UFarDialogItem@@@@PAH@Z 10001510 f i SameFolder.obj
+ 0001:00000520       ??1?$DialogBuilderBase@UFarDialogItem@@@@MAE@XZ 10001520 f i SameFolder.obj
+ 0001:00000570       ??_G?$DialogBuilderBase@UFarDialogItem@@@@MAEPAXI@Z 10001570 f i SameFolder.obj
+ 0001:00000570       ??_E?$DialogBuilderBase@UFarDialogItem@@@@MAEPAXI@Z 10001570 f i SameFolder.obj
+ 0001:00000590       ?ReallocDialogItems@?$DialogBuilderBase@UFarDialogItem@@@@IAEXXZ 10001590 f i SameFolder.obj
+ 0001:00000660       ?UpdateSecondColumnPosition@?$DialogBuilderBase@UFarDialogItem@@@@IAEXXZ 10001660 f i SameFolder.obj
+ 0001:000006c0       ?SaveValues@?$DialogBuilderBase@UFarDialogItem@@@@IAEXXZ 100016c0 f i SameFolder.obj
+ 0001:00000710       ?MaxTextWidth@?$DialogBuilderBase@UFarDialogItem@@@@IAEHXZ 10001710 f i SameFolder.obj
+ 0001:000007d0       ?InitDialogItem@PluginDialogBuilder@@MAEXPAUFarDialogItem@@PB_W@Z 100017d0 f i SameFolder.obj
+ 0001:000007f0       ?TextWidth@PluginDialogBuilder@@MAEHABUFarDialogItem@@@Z 100017f0 f i SameFolder.obj
+ 0001:00000810       ?DoShowDialog@PluginDialogBuilder@@MAEHXZ 10001810 f i SameFolder.obj
+ 0001:00000870       ??_EPluginCheckBoxBinding@@UAEPAXI@Z 10001870 f i SameFolder.obj
+ 0001:00000870       ??_EPluginUIntEditFieldBinding@@UAEPAXI@Z 10001870 f i SameFolder.obj
+ 0001:00000870       ??_GPluginRadioButtonBinding@@UAEPAXI@Z 10001870 f i SameFolder.obj
+ 0001:00000870       ??_EPluginIntEditFieldBinding@@UAEPAXI@Z 10001870 f i SameFolder.obj
+ 0001:00000870       ??_GPluginCheckBoxBinding@@UAEPAXI@Z 10001870 f i SameFolder.obj
+ 0001:00000870       ??_G?$DialogItemBinding@UFarDialogItem@@@@UAEPAXI@Z 10001870 f i SameFolder.obj
+ 0001:00000870       ??_GPluginIntEditFieldBinding@@UAEPAXI@Z 10001870 f i SameFolder.obj
+ 0001:00000870       ??_E?$DialogItemBinding@UFarDialogItem@@@@UAEPAXI@Z 10001870 f i SameFolder.obj
+ 0001:00000870       ??_EPluginRadioButtonBinding@@UAEPAXI@Z 10001870 f i SameFolder.obj
+ 0001:00000870       ??_GPluginUIntEditFieldBinding@@UAEPAXI@Z 10001870 f i SameFolder.obj
+ 0001:00000890       ?SaveValue@PluginCheckBoxBinding@@UAEXPAUFarDialogItem@@H@Z 10001890 f i SameFolder.obj
+ 0001:000008d0       ?SaveValue@PluginRadioButtonBinding@@UAEXPAUFarDialogItem@@H@Z 100018d0 f i SameFolder.obj
+ 0001:00000900       ??0PluginIntEditFieldBinding@@QAE@ABUPluginStartupInfo@@PAPAXHPAHH@Z 10001900 f i SameFolder.obj
+ 0001:000009a0       ?SaveValue@PluginIntEditFieldBinding@@UAEXPAUFarDialogItem@@H@Z 100019a0 f i SameFolder.obj
+ 0001:000009d0       ??0PluginUIntEditFieldBinding@@QAE@ABUPluginStartupInfo@@PAPAXHPAIH@Z 100019d0 f i SameFolder.obj
+ 0001:00000a70       ?SaveValue@PluginUIntEditFieldBinding@@UAEXPAUFarDialogItem@@H@Z 10001a70 f i SameFolder.obj
+ 0001:00000aa0       ?CreateCheckBoxBinding@PluginDialogBuilder@@MAEPAU?$DialogItemBinding@UFarDialogItem@@@@PAHH@Z 10001aa0 f i SameFolder.obj
+ 0001:00000af0       ?CreateRadioButtonBinding@PluginDialogBuilder@@MAEPAU?$DialogItemBinding@UFarDialogItem@@@@PAH@Z 10001af0 f i SameFolder.obj
+ 0001:00000b40       ??_EPluginDialogBuilder@@UAEPAXI@Z 10001b40 f i SameFolder.obj
+ 0001:00000b40       ??_GPluginDialogBuilder@@UAEPAXI@Z 10001b40 f i SameFolder.obj
+ 0001:00000b80       _OpenW@4                   10001b80 f   SameFolder.obj
+ 0001:00000d70       _GetPluginInfoW@4          10001d70 f   SameFolder.obj
+ 0001:00000e20       ?AddCheckbox@?$DialogBuilderBase@UFarDialogItem@@@@QAEPAUFarDialogItem@@HPAHH_N@Z 10001e20 f i SameFolder.obj
+ 0001:00000f50       ?AddButtons@?$DialogBuilderBase@UFarDialogItem@@@@QAEXHPBHHH@Z 10001f50 f i SameFolder.obj
+ 0001:000010b0       ?UpdateBorderSize@?$DialogBuilderBase@UFarDialogItem@@@@IAEXXZ 100020b0 f i SameFolder.obj
+ 0001:00001160       ?AddSeparator@?$DialogBuilderBase@UFarDialogItem@@@@QAEXPB_W@Z 10002160 f i SameFolder.obj
+ 0001:000011d0       ??0PluginDialogBuilder@@QAE@ABUPluginStartupInfo@@ABU_GUID@@1HPB_WP6GHPAXHH3@Z3_K@Z 100021d0 f i SameFolder.obj
+ 0001:000012e0       ?AddIntEditField@PluginDialogBuilder@@UAEPAUFarDialogItem@@PAHH@Z 100022e0 f i SameFolder.obj
+ 0001:000013a0       ?AddUIntEditField@PluginDialogBuilder@@UAEPAUFarDialogItem@@PAIH@Z 100023a0 f i SameFolder.obj
+ 0001:00001460       _ConfigureW@4              10002460 f   SameFolder.obj
+ 0001:000016d0       ??_V@YAXPAX@Z              100026d0 f   libCRT:delete_array.obj
+ 0001:000016e0       ??3@YAXPAX@Z               100026e0 f   libCRT:delete.obj
+ 0001:000016f0       ??_U@YAPAXI@Z              100026f0 f   libCRT:new_array.obj
+ 0001:00001700       _memset                    10002700 f   libCRT:memset.obj
+ 0001:00001740       ??2@YAPAXI@Z               10002740 f   libCRT:new.obj
+ 0001:00001750       _free                      10002750 f   libCRT:free.obj
+ 0001:00001770       _malloc                    10002770 f   libCRT:malloc.obj
+ 0001:00001788       __IMPORT_DESCRIPTOR_KERNEL32 10002788     kernel32:KERNEL32.dll
+ 0001:0000179c       __NULL_IMPORT_DESCRIPTOR   1000279c     kernel32:KERNEL32.dll
+ 0002:00000000       ?OptName@@3UOptionsName@@A 10003000     SameFolder.obj
+ 0002:00000010       ?Info@@3UPluginStartupInfo@@A 10003010     SameFolder.obj
+ 0002:00000098       ?FSF@@3UFarStandardFunctions@@A 10003098     SameFolder.obj
+ 0002:00000158       ?Opt@@3UOptions@@A         10003158     SameFolder.obj
+
+ entry point at        0000:00000000
+
+ Static symbols
+
