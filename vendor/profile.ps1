@@ -25,7 +25,11 @@ try {
 	# and setup aliases
 	#set-alias vim bashcall
 	set-alias vi bashcall
+	set-alias gunzip bashcall
 }
+# set alias (for no arguments ) // functions (for arguments)
+Remove-Item alias:wget
+function wget { wget.exe --no-check-certificate $args }
 
 # set-alias -passthru vim bashcall # debug
 function bashcall {

@@ -6,3 +6,4 @@ clear=cls
 history=cat %CMDER_ROOT%\config\.history
 unalias=alias /d $1
 vi=vim $*
+wget=wget --no-check-certificate $*
