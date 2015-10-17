@@ -1,0 +1,9 @@
+/usr/bin/prove
+/usr/lib/perl5/5.8/Test/Harness.pm
+/usr/lib/perl5/5.8/Test/Harness/Assert.pm
+/usr/lib/perl5/5.8/Test/Harness/Iterator.pm
+/usr/lib/perl5/5.8/Test/Harness/Point.pm
+/usr/lib/perl5/5.8/Test/Harness/Results.pm
+/usr/lib/perl5/5.8/Test/Harness/Straps.pm
+/usr/lib/perl5/5.8/Test/Harness/TAP.pod
+/usr/lib/perl5/5.8/Test/Harness/Util.pm

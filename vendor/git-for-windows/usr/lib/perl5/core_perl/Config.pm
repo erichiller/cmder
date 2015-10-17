@@ -85,7 +85,7 @@ sub AUTOLOAD {
 # tie returns the object, so the value returned to require will be true.
 tie %Config, 'Config', {
     archlibexp => '/usr/lib/perl5/core_perl',
-    archname => 'i686-msys-thread-multi-64int',
+    archname => 'x86_64-msys-thread-multi',
     cc => 'gcc',
     d_readlink => undef,
     d_symlink => 'define',
@@ -96,7 +96,7 @@ tie %Config, 'Config', {
     inc_version_list => ' ',
     intsize => '4',
     ldlibpthname => 'PATH',
-    libpth => '/usr/lib/gcc/i686-pc-msys/4.9.2/include-fixed /usr/lib /usr/lib/gcc/i686-pc-msys/4.9.2/../../../../include/w32api',
+    libpth => '/usr/lib/gcc/x86_64-pc-msys/4.9.2/include-fixed /usr/lib /usr/lib/gcc/x86_64-pc-msys/4.9.2/../../../../lib/../include/w32api',
     osname => 'msys',
     osvers => '2.1.4(0.28753)',
     path_sep => ':',

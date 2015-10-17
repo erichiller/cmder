@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd "C:/Program Files/cmder/vendor/irssi/"
+exec "C:\Program Files\cmder\vendor\irssi\irssi.bat" "$@"

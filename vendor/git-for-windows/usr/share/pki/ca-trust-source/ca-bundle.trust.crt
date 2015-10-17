@@ -95,8 +95,7 @@ LTAz
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            5e:c3:b7:a6:43:7f:a4:e0
+        Serial Number: 6828503384748696800 (0x5ec3b7a6437fa4e0)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: CN=ACCVRAIZ1, OU=PKIACCV, O=ACCV, C=ES
         Validity
@@ -252,8 +251,7 @@ BQUHAwMGCCsGAQUFBwMEBggrBgEFBQcDAQwJQUNDVlJBSVox
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            61:8d:c7:86:3b:01:82:05
+        Serial Number: 7029493972724711941 (0x618dc7863b018205)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: CN=ACEDICOM Root, OU=PKI, O=EDICOM, C=ES
         Validity
@@ -521,8 +519,7 @@ RHogQ2VydGljXHhDM1x4QTFtYXJhIFMuQS4=
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            57:0a:11:97:42:c4:e3:cc
+        Serial Number: 6271844772424770508 (0x570a119742c4e3cc)
     Signature Algorithm: sha256WithRSAEncryption
         Issuer: C=IT, L=Milan, O=Actalis S.p.A./03358520967, CN=Actalis Authentication Root CA
         Validity
@@ -1014,8 +1011,7 @@ dWFsaWZpZWQgQ2VydGlmaWNhdGVzIFJvb3Q=
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            77:77:06:27:26:a9:b1:7c
+        Serial Number: 8608355977964138876 (0x7777062726a9b17c)
     Signature Algorithm: sha256WithRSAEncryption
         Issuer: C=US, O=AffirmTrust, CN=AffirmTrust Commercial
         Validity
@@ -1096,8 +1092,7 @@ QWZmaXJtVHJ1c3QgQ29tbWVyY2lhbA==
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            7c:4f:04:39:1c:d4:99:2d
+        Serial Number: 8957382827206547757 (0x7c4f04391cd4992d)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: C=US, O=AffirmTrust, CN=AffirmTrust Networking
         Validity
@@ -1178,8 +1173,7 @@ QWZmaXJtVHJ1c3QgTmV0d29ya2luZw==
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            6d:8c:14:46:b1:a6:0a:ee
+        Serial Number: 7893706540734352110 (0x6d8c1446b1a60aee)
     Signature Algorithm: sha384WithRSAEncryption
         Issuer: C=US, O=AffirmTrust, CN=AffirmTrust Premium
         Validity
@@ -1301,8 +1295,7 @@ KeC2uAloGRwYQzAhMAoGCCsGAQUFBwMBDBNBZmZpcm1UcnVzdCBQcmVtaXVt
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            74:97:25:8a:c7:3f:7a:54
+        Serial Number: 8401224907861490260 (0x7497258ac73f7a54)
     Signature Algorithm: ecdsa-with-SHA384
         Issuer: C=US, O=AffirmTrust, CN=AffirmTrust Premium ECC
         Validity
@@ -1442,8 +1435,7 @@ cGxpY2F0aW9uQ0EgLSBKYXBhbmVzZSBHb3Zlcm5tZW50
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            5c:33:cb:62:2c:5f:b3:32
+        Serial Number: 6643877497813316402 (0x5c33cb622c5fb332)
     Signature Algorithm: sha256WithRSAEncryption
         Issuer: CN=Atos TrustedRoot 2011, O=Atos, C=DE
         Validity
@@ -1531,8 +1523,7 @@ BwMEBggrBgEFBQcDAQwVQXRvcyBUcnVzdGVkUm9vdCAyMDEx
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            53:ec:3b:ee:fb:b2:48:5f
+        Serial Number: 6047274297262753887 (0x53ec3beefbb2485f)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: C=ES, CN=Autoridad de Certificacion Firmaprofesional CIF A62634068
         Validity
@@ -3348,8 +3339,7 @@ AwYIKwYBBQUHAwQGCCsGAQUFBwMBDAhDQSBEaXNpZw==
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            c3:03:9a:ee:50:90:6e:28
+        Serial Number: 14052245610670616104 (0xc3039aee50906e28)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: C=SK, L=Bratislava, O=Disig a.s., CN=CA Disig Root R1
         Validity
@@ -3473,8 +3463,7 @@ MQ==
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            92:b8:88:db:b0:8a:c1:63
+        Serial Number: 10572350602393338211 (0x92b888dbb08ac163)
     Signature Algorithm: sha256WithRSAEncryption
         Issuer: C=SK, L=Bratislava, O=Disig a.s., CN=CA Disig Root R2
         Validity
@@ -4298,8 +4287,7 @@ BAYIKwYBBQUHAwEMIkNhbWVyZmlybWEgR2xvYmFsIENoYW1iZXJzaWduIFJvb3Q=
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            fe:dc:e3:01:0f:c9:48:ff
+        Serial Number: 18364802974209362175 (0xfedce3010fc948ff)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: C=FR, O=Dhimyotis, CN=Certigna
         Validity
@@ -4767,8 +4755,7 @@ ZCBOZXR3b3JrIENB
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            a3:da:42:7e:a4:b1:ae:da
+        Serial Number: 11806822484801597146 (0xa3da427ea4b1aeda)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: C=EU, L=Madrid (see current address at www.camerfirma.com/address)/serialNumber=A82743287, O=AC Camerfirma S.A., CN=Chambers of Commerce Root - 2008
         Validity
@@ -6835,8 +6822,7 @@ Q0EgMw==
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            6a:68:3e:9c:51:9b:cb:53
+        Serial Number: 7667447206703254355 (0x6a683e9c519bcb53)
     Signature Algorithm: sha256WithRSAEncryption
         Issuer: C=TR, L=Ankara, O=E-Tu\xC4\x9Fra EBG Bili\xC5\x9Fim Teknolojileri ve Hizmetleri A.\xC5\x9E., OU=E-Tugra Sertifikasyon Merkezi, CN=E-Tugra Certification Authority
         Validity
@@ -6967,8 +6953,7 @@ BgEFBQcDAQwfRS1UdWdyYSBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eQ==
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            4c:af:73:42:1c:8e:74:02
+        Serial Number: 5525761995591021570 (0x4caf73421c8e7402)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: CN=EBG Elektronik Sertifika Hizmet Sa\xC4\x9Flay\xC4\xB1c\xC4\xB1s\xC4\xB1, O=EBG Bili\xC5\x9Fim Teknolojileri ve Hizmetleri A.\xC5\x9E., C=TR
         Validity
@@ -8413,8 +8398,7 @@ KwYBBQUHAwEMI0V4cGxpY2l0bHkgRGlzdHJ1c3RlZCBNQ1NIT0xESU5HIENB
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            07:ff:ff:ff:ff:ff
+        Serial Number: 8796093022207 (0x7ffffffffff)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: C=US, O=GTE Corporation, OU=GTE CyberTrust Solutions, Inc., CN=GTE CyberTrust Global Root
         Validity
@@ -8497,8 +8481,7 @@ bi4gQmhkLiAoY3liKQ==
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            07:ff:ff:ff:ff:ff
+        Serial Number: 8796093022207 (0x7ffffffffff)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: O=Entrust.net, OU=www.entrust.net/CPS_2048 incorp. by ref. (limits liab.), OU=(c) 1999 Entrust.net Limited, CN=Entrust.net Certification Authority (2048)
         Validity
@@ -9625,8 +9608,7 @@ BAYIKwYBBQUHAwEMEkdsb2JhbFNpZ24gUm9vdCBDQQ==
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            c9:cd:d3:e9:d5:7d:23:ce
+        Serial Number: 14541511773111788494 (0xc9cdd3e9d57d23ce)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: C=EU, L=Madrid (see current address at www.camerfirma.com/address)/serialNumber=A82743287, O=AC Camerfirma S.A., CN=Global Chambersign Root - 2008
         Validity
@@ -10117,8 +10099,7 @@ AmvZWjAlMAoGCCsGAQUFBwMBDBdIb25na29uZyBQb3N0IFJvb3QgQ0EgMQ==
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            39:11:45:10:94
+        Serial Number: 245102874772 (0x3911451094)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: C=FR, ST=France, L=Paris, O=PM/SGDN, OU=DCSSI, CN=IGC/A/emailAddress=igca@sgdn.pm.gouv.fr
         Validity
@@ -10894,8 +10875,7 @@ byBSb290IENB
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            c2:7e:43:04:4e:47:3f:19
+        Serial Number: 14014712776195784473 (0xc27e43044e473f19)
     Signature Algorithm: sha256WithRSAEncryption
         Issuer: C=HU, L=Budapest, O=Microsec Ltd., CN=Microsec e-Szigno Root CA 2009/emailAddress=info@e-szigno.hu
         Validity
@@ -10985,8 +10965,7 @@ AQUFBwMEBggrBgEFBQcDAQweTWljcm9zZWMgZS1Temlnbm8gUm9vdCBDQSAyMDA5
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            49:41:2c:e4:00:10
+        Serial Number: 80544274841616 (0x49412ce40010)
     Signature Algorithm: sha256WithRSAEncryption
         Issuer: C=HU, L=Budapest, O=NetLock Kft., OU=Tan\xC3\xBAs\xC3\xADtv\xC3\xA1nykiad\xC3\xB3k (Certification Services), CN=NetLock Arany (Class Gold) F\xC5\x91tan\xC3\xBAs\xC3\xADtv\xC3\xA1ny
         Validity
@@ -12751,8 +12730,7 @@ VVNUIFVuaXZlcnNhbCBSb290IENB
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            3e:d5:51:19:e6:4d:ce:7e
+        Serial Number: 4527614172070792830 (0x3ed55119e64dce7e)
     Signature Algorithm: sha256WithRSAEncryption
         Issuer: CN=SG TRUST SERVICES RACINE, OU=0002 43525289500022, O=SG TRUST SERVICES, C=FR
         Validity
@@ -14722,8 +14700,7 @@ biBBdXRob3JpdHkgRzI=
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            17:15:3d:9e:ab:3f:bf
+        Serial Number: 6497278863556543 (0x17153d9eab3fbf)
     Signature Algorithm: sha256WithRSAEncryption
         Issuer: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom Certification Authority
         Validity
@@ -14848,8 +14825,7 @@ L1N0YXJ0Q29tIENsYXNzIDEgUHJpbWFyeSBJbnRlcm1lZGlhdGUgU2VydmVyIENB
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            bb:40:1c:43:f5:5e:4f:b0
+        Serial Number: 13492815561806991280 (0xbb401c43f55e4fb0)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: C=CH, O=SwissSign AG, CN=SwissSign Gold CA - G2
         Validity
@@ -14981,8 +14957,7 @@ AQUFBwMEBggrBgEFBQcDAQwWU3dpc3NTaWduIEdvbGQgQ0EgLSBHMg==
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            4e:b2:00:67:0c:03:5d:4f
+        Serial Number: 5670595323396054351 (0x4eb200670c035d4f)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: C=CH, O=SwissSign AG, CN=SwissSign Platinum CA - G2
         Validity
@@ -15114,8 +15089,7 @@ BwMDBggrBgEFBQcDBAwaU3dpc3NTaWduIFBsYXRpbnVtIENBIC0gRzI=
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            4f:1b:d4:2f:54:bb:2f:4b
+        Serial Number: 5700383053117599563 (0x4f1bd42f54bb2f4b)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: C=CH, O=SwissSign AG, CN=SwissSign Silver CA - G2
         Validity
@@ -18756,8 +18730,7 @@ AQUFBwMBDBRYUmFtcCBHbG9iYWwgQ0EgUm9vdA==
 Certificate:
     Data:
         Version: 3 (0x2)
-        Serial Number:
-            20:06:05:16:70:02
+        Serial Number: 35210227249154 (0x200605167002)
     Signature Algorithm: sha1WithRSAEncryption
         Issuer: C=RO, O=certSIGN, OU=certSIGN ROOT CA
         Validity

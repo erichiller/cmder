@@ -54,6 +54,22 @@
 :: Enhance Path
 @set PATH=%CMDER_ROOT%\bin;%PATH%;%CMDER_ROOT%
 
+:: golang setup
+@if exist "C:\Go" (
+	set "GOROOT=C:\Go"
+)
+@if exist "%USERPROFILE%\dev\lib\go" (
+	set "GOROOT=%USERPROFILE%\dev\lib\go"
+	
+)
+:: add GOROOT to PATH ; GOROOT can only be added to PATH if checked if defined
+@if defined GIT_INSTALL_ROOT (
+	set "PATH=%USERPROFILE%;%GOROOT%\bin;%PATH%"
+	set "GOPATH=%USERPROFILE%\dev"
+)
+
+
+
 :: Add aliases
 @doskey /macrofile="%CMDER_ROOT%\config\aliases"
 

@@ -11,6 +11,18 @@ if(!$PSScriptRoot) {
 # Add Cmder modules directory to the autoload path.
 $CmderModulePath = Join-path $PSScriptRoot "psmodules/"
 
+# Add GOPATH
+if (Test-Path -Path "C:\Go" ) {
+	$env:GOROOT = "C:\Go"
+	$env:Path += ";$env:GOROOT\bin\"
+	$env:GOPATH = (Join-Path $env:USERPROFILE "\dev")
+}
+if (Test-Path -Path "~\dev\lib\go" ) {
+	$env:GOROOT = (Join-Path $env:USERPROFILE "\dev\lib\go")
+	$env:Path += ";$env:GOROOT\bin\"
+	$env:GOPATH = (Join-Path $env:USERPROFILE "\dev")
+}
+
 if( -not $env:PSModulePath.Contains($CmderModulePath) ){
     $env:PSModulePath = $env:PSModulePath.Insert(0, "$CmderModulePath;")
 }
@@ -26,6 +38,7 @@ try {
 	#set-alias vim bashcall
 	set-alias vi bashcall
 	set-alias gunzip bashcall
+	set-alias irssi bashcall
 }
 # set alias (for no arguments ) // functions (for arguments)
 Remove-Item alias:wget

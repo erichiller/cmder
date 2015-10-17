@@ -63,6 +63,10 @@ Apps=Windows Key
 ### FAR HELP ###
 Shift	F4		In FarNet this will create a new Host Config for SCP / SFTP
 
+### Update Git - Commit Changes to Remote and Upload ###
+1. `git add .`
+2. `git commit -m "Notate changes here"`
+3. `git push origin master` (master can be a different branch)
 ===========
 This file is located @ %CMDER_ROOT%\scripts\helpfile.txt
 
