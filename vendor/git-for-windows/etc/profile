@@ -5,22 +5,6 @@
 # with this software. 
 # If not, see <http://creativecommons.org/publicdomain/zero/1.0/>. 
 
-# fix CMDER_ROOT from C:\blah\blah\blah to /c/blah/blah/blah
-export CMDER_ROOT=$(echo "/$CMDER_ROOT" | sed -e 's/\\/\//g' -e 's/://')
-
-#Golang
-if [ -d "/c/Go" ] ; then
-	export GOROOT=/c/go
-	export PATH=$GOROOT/bin:$PATH
-	export GOPATH=~/dev
-fi
-if [ -d "$HOME/dev/lib/go" ] ; then
-	export GOROOT=~/dev/lib/go
-	export PATH=$GOROOT/bin:$PATH
-	export GOPATH=~/dev
-fi
-
-
 # System-wide profile file
 
 # Some resources...

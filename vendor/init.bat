@@ -52,7 +52,7 @@
 )
 
 :: Enhance Path
-@set PATH=%CMDER_ROOT%\bin;%PATH%;%CMDER_ROOT%
+@set "PATH=%CMDER_ROOT%\bin;%PATH%;%CMDER_ROOT%"
 
 :: golang setup
 @if exist "C:\Go" (
@@ -66,6 +66,10 @@
 @if defined GIT_INSTALL_ROOT (
 	set "PATH=%USERPROFILE%;%GOROOT%\bin;%PATH%"
 	set "GOPATH=%USERPROFILE%\dev"
+)
+:: node , npm setup
+@if exist "%CMDER_ROOT%\vendor\nodejs" (
+	@set "PATH=%CMDER_ROOT%\vendor\nodejs;%PATH%;"
 )
 
 

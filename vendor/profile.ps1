@@ -23,6 +23,11 @@ if (Test-Path -Path "~\dev\lib\go" ) {
 	$env:GOPATH = (Join-Path $env:USERPROFILE "\dev")
 }
 
+# Add node , npm setup
+if (Test-Path -Path (Join-Path $env:CMDER_ROOT "\vendor\nodejs") ) {
+	$env:Path += ";" + (Join-Path $env:CMDER_ROOT "\vendor\nodejs")
+}
+
 if( -not $env:PSModulePath.Contains($CmderModulePath) ){
     $env:PSModulePath = $env:PSModulePath.Insert(0, "$CmderModulePath;")
 }
