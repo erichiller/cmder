@@ -39,11 +39,23 @@ try {
 	$env:Path += ";$env:CMDER_ROOT\vendor\git-for-windows\bin"
 	# add binaries
 	$env:Path += ";$env:CMDER_ROOT\vendor\git-for-windows\usr\bin"
-	# and setup aliases
+}
+
+try {
+	# test for git
+	Import-Module -Name "posh-git" -ErrorAction Stop >$null
+	# set status as true
+	$gitStatus = $true
+	# setup git-bash/msysgit aliases
 	#set-alias vim bashcall
-	set-alias vi bashcall
 	set-alias gunzip bashcall
 	set-alias irssi bashcall
+	set-alias vi vim
+	Remove-Item alias:curl
+	set-alias curl bashcall
+} catch {
+    Write-Warning "Missing git support, install posh-git with 'Install-Module posh-git' and restart cmder."
+    $gitStatus = $false
 }
 # set alias (for no arguments ) // functions (for arguments)
 Remove-Item alias:wget
@@ -51,24 +63,16 @@ function wget { wget.exe --no-check-certificate $args }
 
 # set-alias -passthru vim bashcall # debug
 function bashcall {
-	#echo "entered bashcall"
-	#echo "args="
-	#echo $args
-	#echo "last command="
-	#echo $$
-	#echo "myinvocation="
-	#echo $myinvocation
-	#echo "myinvocation.invocationname="
-	#echo $myinvocation.invocationname
-	& ( $env:CMDER_ROOT + "\vendor\git-for-windows\bin\bash.exe" ) $myinvocation.invocationname $args
-}
-
-try {
-    Import-Module -Name "posh-git" -ErrorAction Stop >$null
-    $gitStatus = $true
-} catch {
-    Write-Warning "Missing git support, install posh-git with 'Install-Module posh-git' and restart cmder."
-    $gitStatus = $false
+	echo "entered bashcall"
+	echo "args="
+	echo $args
+	echo "last command="
+	echo $$
+	echo "myinvocation="
+	echo $myinvocation
+	echo "myinvocation.invocationname="
+	echo $myinvocation.invocationname
+	& ( $env:CMDER_ROOT + "\vendor\git-for-windows\bin\bash.exe" ) -c "$myinvocation.invocationname $args"
 }
 
 function checkGit($Path) {

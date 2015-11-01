@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2015-10-25 01:51:07" build="151015">
+		<key name=".Vanilla" modified="2015-10-31 19:36:25" build="151029">
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
@@ -334,7 +334,7 @@
 			<value name="MinimizeOnLoseFocus" type="hex" data="00"/>
 			<value name="DisableFarFlashing" type="hex" data="00"/>
 			<value name="DisableAllFlashing" type="hex" data="00"/>
-			<value name="FindText" type="string" data="sg"/>
+			<value name="FindText" type="string" data="files"/>
 			<value name="FindMatchCase" type="hex" data="00"/>
 			<value name="FindMatchWholeWords" type="hex" data="00"/>
 			<value name="FindTransparent" type="hex" data="01"/>
