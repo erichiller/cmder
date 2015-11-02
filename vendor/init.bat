@@ -11,6 +11,18 @@
 @if exist "%CMDER_ROOT%\vendor\farmanager" ( 
 	@set "PATH=%CMDER_ROOT%\vendor\farmanager;%PATH%"
 )
+:: mingw
+@if exist "%CMDER_ROOT%\vendor\msys2\mingw32\bin" if "%PROCESSOR_ARCHITECTURE%"=="x86" (
+		@set "PATH=%CMDER_ROOT%\vendor\msys2\mingw32\bin;%PATH%"
+	)
+) else if exist "%CMDER_ROOT%\vendor\msys2\mingw64\bin" (
+	@if NOT "%PROCESSOR_ARCHITECTURE%"=="x86" (
+		@set "PATH=%CMDER_ROOT%\vendor\msys2\mingw64\bin;%PATH%"
+	)
+)
+
+
+
 
 :: Change the prompt style
 :: See http://ss64.com/nt/prompt.html
@@ -26,29 +38,22 @@
 :: Run clink
 @"%CMDER_ROOT%\vendor\clink\clink_x%architecture%.exe" inject --quiet --profile "%CMDER_ROOT%\config"
 
-
-
-
-:: Prepare for git-for-windows
+:: Prepare for msys2
 
 :: I do not even know, copypasted from their .bat
 @set PLINK_PROTOCOL=ssh
 @if not defined TERM set TERM=cygwin
 
-:: Check if git-for-windows is installed
-@if exist "%ProgramFiles%\Git" (
-    set "GIT_INSTALL_ROOT=%ProgramFiles%\Git"
-) else if exist "%ProgramFiles(x86)%\Git" (
-    set "GIT_INSTALL_ROOT=%ProgramFiles(x86)%\Git"
-) else if exist "%CMDER_ROOT%\vendor" (
-    set "GIT_INSTALL_ROOT=%CMDER_ROOT%\vendor\git-for-windows"
+:: Check if msys2 is installed
+@if exist "%CMDER_ROOT%\vendor\msys2" (
+    set "MSYS2_ROOT=%CMDER_ROOT%\vendor\msys2"
 )
 
-:: Add git to the path
-@if defined GIT_INSTALL_ROOT (
-    set "PATH=%GIT_INSTALL_ROOT%\bin;%GIT_INSTALL_ROOT%\usr\bin;%GIT_INSTALL_ROOT%\share\vim\vim74;%PATH%"
+:: Add svn , vim & other msys2 programs to the path
+@if defined MSYS2_ROOT (
+    set "PATH=%MSYS2_ROOT%\bin;%MSYS2_ROOT%\usr\bin;%MSYS2_ROOT%\share\vim\vim74;%PATH%"
     :: define SVN_SSH so we can use git svn with ssh svn repositories
-    if not defined SVN_SSH set "SVN_SSH=%GIT_INSTALL_ROOT:\=\\%\\bin\\ssh.exe"
+    if not defined SVN_SSH set "SVN_SSH=%MSYS2_ROOT:\=\\%\\bin\\ssh.exe"
 )
 
 :: Enhance Path
@@ -63,7 +68,7 @@
 	
 )
 :: add GOROOT to PATH ; GOROOT can only be added to PATH if checked if defined
-@if defined GIT_INSTALL_ROOT (
+@if defined MSYS2_ROOT (
 	set "PATH=%USERPROFILE%;%GOROOT%\bin;%PATH%"
 	set "GOPATH=%USERPROFILE%\dev"
 )
@@ -88,5 +93,5 @@
     )
 )
 
-@call "%GIT_INSTALL_ROOT%/cmd/start-ssh-agent.cmd"
+@call "%CMDER_ROOT%\scripts\start-ssh-agent.cmd"
 ::@call PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& 'C:\Users\SE\Desktop\ps.ps1'"

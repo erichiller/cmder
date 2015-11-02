@@ -1,0 +1,11 @@
+%FILES%
+usr/
+usr/bin/
+usr/bin/repman.exe
+usr/share/
+usr/share/licenses/
+usr/share/licenses/repman/
+usr/share/licenses/repman/LICENSE
+usr/share/licenses/repman/inih/
+usr/share/licenses/repman/inih/LICENSE
+

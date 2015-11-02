@@ -36,9 +36,8 @@ try {
     # Check if git is on PATH, i.e. Git already installed on system
     Get-command -Name "git" -ErrorAction Stop >$null
 } catch {
-	$env:Path += ";$env:CMDER_ROOT\vendor\git-for-windows\bin"
 	# add binaries
-	$env:Path += ";$env:CMDER_ROOT\vendor\git-for-windows\usr\bin"
+	$env:Path += ";$env:CMDER_ROOT\vendor\msys2\usr\bin"
 }
 
 try {
@@ -53,6 +52,12 @@ try {
 	set-alias vi vim
 	Remove-Item alias:curl
 	set-alias curl bashcall
+	# mingw
+	if ( (Test-Path -Path (Join-Path $env:CMDER_ROOT "\vendor\msys2\mingw32\bin")) -and ( $env:PROCESSOR_ARCHITECTURE -eq "x86" ) ) {
+		$env:Path += ";$env:CMDER_ROOT\vendor\msys2\mingw32\bin"
+	} elseif ( (Test-Path -Path (Join-Path $env:CMDER_ROOT "\vendor\msys2\mingw64\bin")) -and ( $env:PROCESSOR_ARCHITECTURE -eq "AMD64" ) ) {
+		$env:Path += ";$env:CMDER_ROOT\vendor\msys2\mingw64\bin"
+	}
 } catch {
     Write-Warning "Missing git support, install posh-git with 'Install-Module posh-git' and restart cmder."
     $gitStatus = $false
@@ -72,7 +77,7 @@ function bashcall {
 	echo $myinvocation
 	echo "myinvocation.invocationname="
 	echo $myinvocation.invocationname
-	& ( $env:CMDER_ROOT + "\vendor\git-for-windows\bin\bash.exe" ) -c "$myinvocation.invocationname $args"
+	& ( $env:CMDER_ROOT + "\vendor\msys2\bin\bash.exe" ) -c "$myinvocation.invocationname $args"
 }
 
 function checkGit($Path) {
@@ -102,7 +107,8 @@ function global:prompt {
 # Run the GIT- Start Agent Script rather than Post-Git
 if ($gitStatus) {
 #	Start-SshAgent
-    & ( $env:CMDER_ROOT + "\vendor\git-for-windows\cmd\start-ssh-agent.cmd" )
+    & ( $env:CMDER_ROOT + "\scripts\start-ssh-agent.cmd" )
+	echo "ended"
 #	$Env:SSH_AUTH_SOCK=$env:TMP + "\ssh-agent.sock"
 }
 

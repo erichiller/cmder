@@ -1,0 +1,280 @@
+[2015-09-16 09:33] [PACMAN] Running 'pacman -Syu --root /tmp/newmsys/msys64'
+[2015-09-16 09:33] [PACMAN] synchronizing package lists
+[2015-09-16 09:33] [PACMAN] starting full system upgrade
+[2015-09-16 09:33] [PACMAN] Running 'pacman -S --noconfirm --root /tmp/newmsys/msys64 base'
+[2015-09-16 09:34] [ALPM] transaction started
+[2015-09-16 09:34] [ALPM] installed msys2-runtime (2.2.1.16655.6ecd782-2)
+[2015-09-16 09:34] [ALPM] installed bash (4.3.042-1)
+[2015-09-16 09:34] [ALPM] installed bash-completion (2.1-6)
+[2015-09-16 09:34] [ALPM] installed gcc-libs (4.9.2-5)
+[2015-09-16 09:34] [ALPM] installed libbz2 (1.0.6-2)
+[2015-09-16 09:34] [ALPM] installed libiconv (1.14-2)
+[2015-09-16 09:34] [ALPM] installed libintl (0.19.6-1)
+[2015-09-16 09:34] [ALPM] installed libgettextpo (0.19.6-1)
+[2015-09-16 09:34] [ALPM] installed libasprintf (0.19.6-1)
+[2015-09-16 09:34] [ALPM] installed gettext (0.19.6-1)
+[2015-09-16 09:34] [ALPM] installed liblzma (5.2.1-1)
+[2015-09-16 09:34] [ALPM] installed liblzo2 (2.09-1)
+[2015-09-16 09:34] [ALPM] installed gmp (6.0.0-3)
+[2015-09-16 09:34] [ALPM] installed libnettle (3.1.1-1)
+[2015-09-16 09:34] [ALPM] installed coreutils (8.24-1)
+[2015-09-16 09:34] [ALPM] installed ncurses (6.0.20150627-2)
+[2015-09-16 09:34] [ALPM] installed libreadline (6.3.008-5)
+[2015-09-16 09:34] [ALPM] installed zlib (1.2.8-3)
+[2015-09-16 09:34] [ALPM] installed libxml2 (2.9.2-2)
+[2015-09-16 09:34] [ALPM] installed bsdcpio (3.1.2-5)
+[2015-09-16 09:34] [ALPM] installed bsdtar (3.1.2-5)
+[2015-09-16 09:34] [ALPM] installed bzip2 (1.0.6-2)
+[2015-09-16 09:34] [ALPM] installed libcatgets (1.1-2)
+[2015-09-16 09:34] [ALPM] installed catgets (1.1-2)
+[2015-09-16 09:34] [ALPM] installed libcrypt (1.1-6)
+[2015-09-16 09:34] [ALPM] installed crypt (1.1-6)
+[2015-09-16 09:34] [ALPM] installed libopenssl (1.0.2.d-1)
+[2015-09-16 09:34] [ALPM] installed openssl (1.0.2.d-1)
+[2015-09-16 09:34] [ALPM] installed findutils (4.5.14-4)
+[2015-09-16 09:34] [ALPM] installed sed (4.2.2-2)
+[2015-09-16 09:34] [ALPM] installed libffi (3.2.1-1)
+[2015-09-16 09:34] [ALPM] installed libpcre (8.37-1)
+[2015-09-16 09:34] [ALPM] installed less (481-1)
+[2015-09-16 09:34] [ALPM] installed gzip (1.6-1)
+[2015-09-16 09:34] [ALPM] installed info (6.0-1)
+[2015-09-16 09:34] [ALPM] installed libtasn1 (4.7-1)
+[2015-09-16 09:34] [ALPM] installed libp11-kit (0.23.1-1)
+[2015-09-16 09:34] [ALPM] installed p11-kit (0.23.1-1)
+[2015-09-16 09:34] [ALPM] installed ca-certificates (20150426-1)
+[2015-09-16 09:34] [ALPM] installed libidn (1.32-1)
+[2015-09-16 09:34] [ALPM] installed libexpat (2.1.0-2)
+[2015-09-16 09:34] [ALPM] installed libmetalink (0.1.2-2)
+[2015-09-16 09:34] [ALPM] installed libssh2 (1.6.0-1)
+[2015-09-16 09:34] [ALPM] installed libcurl (7.44.0-1)
+[2015-09-16 09:34] [ALPM] installed curl (7.44.0-1)
+[2015-09-16 09:34] [ALPM] installed filesystem (2015.04-3)
+[2015-09-16 09:34] [ALPM] installed grep (2.21-1)
+[2015-09-16 09:34] [ALPM] installed dash (0.5.8-1)
+[2015-09-16 09:34] [ALPM] installed file (5.24-1)
+[2015-09-16 09:34] [ALPM] installed m4 (1.4.17-4)
+[2015-09-16 09:34] [ALPM] installed flex (2.5.39-4)
+[2015-09-16 09:34] [ALPM] installed mpfr (3.1.3.p0-1)
+[2015-09-16 09:34] [ALPM] installed gawk (4.1.3-1)
+[2015-09-16 09:34] [ALPM] installed tftp-hpa (5.2-1)
+[2015-09-16 09:34] [ALPM] installed inetutils (1.9.2-1)
+[2015-09-16 09:34] [ALPM] installed lndir (1.0.3-1)
+[2015-09-16 09:34] [ALPM] installed mintty (1~2.1.5-1)
+[2015-09-16 09:34] [ALPM] installed msys2-keyring (r9.397a52e-1)
+[2015-09-16 09:34] [ALPM] installed gnupg (1.4.19-1)
+[2015-09-16 09:34] [ALPM] installed pacman-mirrors (20150722-2)
+[2015-09-16 09:34] [ALPM] installed which (2.21-2)
+[2015-09-16 09:34] [ALPM] installed xz (5.2.1-1)
+[2015-09-16 09:34] [ALPM] installed pacman (4.2.1.6198.439d376-1)
+[2015-09-16 09:34] [ALPM] installed pax-git (20140703.2.1.g469552a-1)
+[2015-09-16 09:34] [ALPM] installed libarchive (3.1.2-5)
+[2015-09-16 09:34] [ALPM] installed libpcre16 (8.37-1)
+[2015-09-16 09:34] [ALPM] installed libpcre32 (8.37-1)
+[2015-09-16 09:34] [ALPM] installed libpcrecpp (8.37-1)
+[2015-09-16 09:34] [ALPM] installed libpcreposix (8.37-1)
+[2015-09-16 09:34] [ALPM] installed pcre (8.37-1)
+[2015-09-16 09:34] [ALPM] installed pkgfile (15-1)
+[2015-09-16 09:34] [ALPM-SCRIPTLET] ==> Run 'pkgfile --update' to initialize the database
+[2015-09-16 09:34] [ALPM] installed rebase (4.4.1-6)
+[2015-09-16 09:34] [ALPM] installed repman-git (r23.87bf865-1)
+[2015-09-16 09:34] [ALPM] installed time (1.7-1)
+[2015-09-16 09:34] [ALPM] installed tzcode (2015.e-1)
+[2015-09-16 09:34] [ALPM] installed libutil-linux (2.26.2-1)
+[2015-09-16 09:34] [ALPM] installed util-linux (2.26.2-1)
+[2015-09-16 09:34] [ALPM] transaction completed
+[2015-11-01 01:31] [PACMAN] Running '/usr/bin/pacman -Sy'
+[2015-11-01 01:31] [PACMAN] synchronizing package lists
+[2015-11-01 01:31] [PACMAN] Running '/usr/bin/pacman -S --noconfirm --needed bash pacman msys2-runtime msys2-runtime-devel'
+[2015-11-01 01:31] [ALPM] transaction started
+[2015-11-01 01:31] [ALPM] upgraded msys2-runtime (2.2.1.16655.6ecd782-2 -> 2.2.1.16667.d31de1b-1)
+[2015-11-01 01:31] [ALPM] upgraded pacman (4.2.1.6198.439d376-1 -> 4.2.1.6230.6ff894e-1)
+[2015-11-01 01:31] [ALPM] installed msys2-runtime-devel (2.2.1.16667.d31de1b-1)
+[2015-11-01 01:31] [ALPM] transaction completed
+[2015-11-01 01:31] [PACMAN] Running '/usr/bin/pacman -Sy'
+[2015-11-01 01:31] [PACMAN] synchronizing package lists
+[2015-11-01 01:34] [PACMAN] Running 'pacman -S base-devel'
+[2015-11-01 01:36] [ALPM] transaction started
+[2015-11-01 01:36] [ALPM] installed libgdbm (1.11-3)
+[2015-11-01 01:36] [ALPM] installed gdbm (1.11-3)
+[2015-11-01 01:36] [ALPM] installed icu (51.2-2)
+[2015-11-01 01:36] [ALPM] installed libsqlite (3.8.8.2-1)
+[2015-11-01 01:36] [ALPM] installed python2 (2.7.10-1)
+[2015-11-01 01:36] [ALPM] installed libgpg-error (1.20-1)
+[2015-11-01 01:36] [ALPM] installed libgcrypt (1.6.4-1)
+[2015-11-01 01:36] [ALPM] reinstalled gettext (0.19.6-1)
+[2015-11-01 01:36] [ALPM] installed libxslt (1.1.28-7)
+[2015-11-01 01:36] [ALPM] installed docbook-xml (4.5-2)
+[2015-11-01 01:36] [ALPM] installed docbook-xsl (1.78.1-3)
+[2015-11-01 01:36] [ALPM] installed asciidoc (8.6.9-4)
+[2015-11-01 01:36] [ALPM] reinstalled gawk (4.1.3-1)
+[2015-11-01 01:36] [ALPM] reinstalled m4 (1.4.17-4)
+[2015-11-01 01:36] [ALPM] installed diffutils (3.3-3)
+[2015-11-01 01:36] [ALPM] installed autoconf (2.69-3)
+[2015-11-01 01:36] [ALPM] installed autoconf2.13 (2.13-2)
+[2015-11-01 01:36] [ALPM] installed libgc (7.2.d-1)
+[2015-11-01 01:36] [ALPM] installed libltdl (2.4.6-1)
+[2015-11-01 01:36] [ALPM] installed libunistring (0.9.6-1)
+[2015-11-01 01:36] [ALPM] installed libguile (2.0.11-3)
+[2015-11-01 01:36] [ALPM] installed autogen (5.18.4-2)
+[2015-11-01 01:36] [ALPM] installed libdb (5.3.28-2)
+[2015-11-01 01:36] [ALPM] installed db (5.3.28-2)
+[2015-11-01 01:36] [ALPM] installed perl (5.22.0-2)
+[2015-11-01 01:36] [ALPM] installed automake1.6 (1.6.3-2)
+[2015-11-01 01:36] [ALPM] installed automake1.7 (1.7.9-2)
+[2015-11-01 01:36] [ALPM] installed automake1.8 (1.8.5-3)
+[2015-11-01 01:36] [ALPM] installed automake1.9 (1.9.6-2)
+[2015-11-01 01:36] [ALPM] installed automake1.10 (1.10.3-3)
+[2015-11-01 01:36] [ALPM] installed automake1.11 (1.11.6-3)
+[2015-11-01 01:36] [ALPM] installed automake1.12 (1.12.6-3)
+[2015-11-01 01:36] [ALPM] installed automake1.13 (1.13.4-4)
+[2015-11-01 01:36] [ALPM] installed automake1.14 (1.14.1-3)
+[2015-11-01 01:36] [ALPM] installed automake1.15 (1.15-2)
+[2015-11-01 01:36] [ALPM] installed automake-wrapper (10-1)
+[2015-11-01 01:36] [ALPM] installed bison (3.0.4-1)
+[2015-11-01 01:36] [ALPM] installed diffstat (1.58-1)
+[2015-11-01 01:36] [ALPM] installed dos2unix (7.3.1-1)
+[2015-11-01 01:36] [ALPM] reinstalled file (5.24-1)
+[2015-11-01 01:36] [ALPM] reinstalled flex (2.5.39-4)
+[2015-11-01 01:36] [ALPM] installed expat (2.1.0-2)
+[2015-11-01 01:36] [ALPM] installed gdb (7.9-1)
+[2015-11-01 01:36] [ALPM] installed gperf (3.0.4-3)
+[2015-11-01 01:36] [ALPM] reinstalled grep (2.21-1)
+[2015-11-01 01:36] [ALPM] installed groff (1.22.3-1)
+[2015-11-01 01:36] [ALPM] installed perl-Locale-Gettext (1.05-4)
+[2015-11-01 01:36] [ALPM] installed help2man (1.47.2-1)
+[2015-11-01 01:36] [ALPM] installed perl-XML-Parser (2.44-1)
+[2015-11-01 01:36] [ALPM] installed intltool (0.51.0-2)
+[2015-11-01 01:36] [ALPM] installed lemon (3.8.7.0-1)
+[2015-11-01 01:36] [ALPM] installed tar (1.28-3)
+[2015-11-01 01:36] [ALPM] installed libtool (2.4.6-1)
+[2015-11-01 01:36] [ALPM] installed libunrar (5.3.4-1)
+[2015-11-01 01:36] [ALPM] installed make (4.1-4)
+[2015-11-01 01:36] [ALPM] installed libpipeline (1.4.0-1)
+[2015-11-01 01:36] [ALPM] installed man-db (2.7.4-1)
+[2015-11-01 01:36] [ALPM-SCRIPTLET] it's recommended to create an initial
+[2015-11-01 01:36] [ALPM-SCRIPTLET] database running as root:
+[2015-11-01 01:36] [ALPM-SCRIPTLET] "/usr/bin/mandb --quiet"
+[2015-11-01 01:36] [ALPM] reinstalled sed (4.2.2-2)
+[2015-11-01 01:36] [ALPM] reinstalled pacman (4.2.1.6230.6ff894e-1)
+[2015-11-01 01:36] [ALPM] installed patch (2.7.5-1)
+[2015-11-01 01:36] [ALPM] installed patchutils (0.3.3-2)
+[2015-11-01 01:36] [ALPM] installed glib2 (2.44.1-1)
+[2015-11-01 01:36] [ALPM] installed pkg-config (0.28-2)
+[2015-11-01 01:36] [ALPM] reinstalled pkgfile (15-1)
+[2015-11-01 01:36] [ALPM] installed rcs (5.9.4-1)
+[2015-11-01 01:36] [ALPM] installed scons (2.3.4-4)
+[2015-11-01 01:36] [ALPM] installed swig (3.0.7-1)
+[2015-11-01 01:36] [ALPM] installed texinfo (6.0-1)
+[2015-11-01 01:36] [ALPM] installed texinfo-tex (6.0-1)
+[2015-11-01 01:36] [ALPM] installed unrar (5.3.4-1)
+[2015-11-01 01:36] [ALPM] installed wget (1.16.3-1)
+[2015-11-01 01:36] [ALPM] installed perl-YAML-Syck (1.29-1)
+[2015-11-01 01:36] [ALPM] installed perl-Module-Build (0.4212-1)
+[2015-11-01 01:36] [ALPM] installed perl-Test-Pod (1.50-1)
+[2015-11-01 01:36] [ALPM] installed xmlto (0.0.26-2)
+[2015-11-01 01:36] [ALPM] transaction completed
+[2015-11-01 01:43] [PACMAN] Running 'pacman --needed -Sy bash pacman pacman-mirrors msys2-runtime'
+[2015-11-01 01:43] [PACMAN] synchronizing package lists
+[2015-11-01 01:43] [PACMAN] Running 'pacman -Su'
+[2015-11-01 01:43] [PACMAN] starting full system upgrade
+[2015-11-01 01:43] [ALPM] transaction started
+[2015-11-01 01:43] [ALPM] upgraded libcurl (7.44.0-1 -> 7.45.0-1)
+[2015-11-01 01:43] [ALPM] upgraded curl (7.44.0-1 -> 7.45.0-1)
+[2015-11-01 01:43] [ALPM] transaction completed
+[2015-11-01 01:43] [PACMAN] Running 'pacman -Su'
+[2015-11-01 01:43] [PACMAN] starting full system upgrade
+[2015-11-01 01:45] [PACMAN] Running 'pacman -S vi'
+[2015-11-01 01:45] [PACMAN] Running 'pacman -S vim'
+[2015-11-01 01:45] [ALPM] transaction started
+[2015-11-01 01:45] [ALPM] installed vim (7.4.872-2)
+[2015-11-01 01:45] [ALPM] transaction completed
+[2015-11-01 01:54] [PACMAN] Running 'pacman -S git'
+[2015-11-01 01:54] [ALPM] transaction started
+[2015-11-01 01:54] [ALPM] installed heimdal-libs (1.5.3-6)
+[2015-11-01 01:54] [ALPM] installed heimdal (1.5.3-6)
+[2015-11-01 01:54] [ALPM] installed libedit (3.1-20130712)
+[2015-11-01 01:54] [ALPM] installed openssh (7.1p1-1)
+[2015-11-01 01:54] [ALPM] installed perl-Error (0.17024-1)
+[2015-11-01 01:54] [ALPM] installed perl-Authen-SASL (2.16-2)
+[2015-11-01 01:54] [ALPM] installed perl-Encode-Locale (1.04-1)
+[2015-11-01 01:54] [ALPM] installed perl-HTTP-Date (6.02-2)
+[2015-11-01 01:54] [ALPM] installed perl-File-Listing (6.04-2)
+[2015-11-01 01:54] [ALPM] installed perl-HTML-Tagset (3.20-2)
+[2015-11-01 01:54] [ALPM] installed perl-HTML-Parser (3.71-3)
+[2015-11-01 01:54] [ALPM] installed perl-LWP-MediaTypes (6.02-2)
+[2015-11-01 01:54] [ALPM] installed perl-URI (1.68-1)
+[2015-11-01 01:54] [ALPM] installed perl-HTTP-Message (6.06-2)
+[2015-11-01 01:54] [ALPM] installed perl-HTTP-Cookies (6.01-2)
+[2015-11-01 01:54] [ALPM] installed perl-HTTP-Daemon (6.01-2)
+[2015-11-01 01:54] [ALPM] installed perl-HTTP-Negotiate (6.01-2)
+[2015-11-01 01:54] [ALPM] installed perl-Net-HTTP (6.09-1)
+[2015-11-01 01:54] [ALPM] installed perl-WWW-RobotRules (6.02-2)
+[2015-11-01 01:54] [ALPM] installed perl-libwww (6.13-1)
+[2015-11-01 01:54] [ALPM] installed perl-TimeDate (2.30-2)
+[2015-11-01 01:54] [ALPM] installed perl-MailTools (2.14-1)
+[2015-11-01 01:54] [ALPM] installed perl-IO-stringy (2.111-1)
+[2015-11-01 01:54] [ALPM] installed perl-Convert-BinHex (1.123-2)
+[2015-11-01 01:54] [ALPM-SCRIPTLET] module test... pass.
+[2015-11-01 01:54] [ALPM] installed perl-MIME-tools (5.506-1)
+[2015-11-01 01:54] [ALPM] installed perl-Net-SSLeay (1.70-1)
+[2015-11-01 01:54] [ALPM] installed perl-IO-Socket-SSL (2.016-1)
+[2015-11-01 01:54] [ALPM] installed perl-Net-SMTP-SSL (1.02-1)
+[2015-11-01 01:54] [ALPM] installed perl-TermReadKey (2.33-1)
+[2015-11-01 01:54] [ALPM] installed git (2.6.2-1)
+[2015-11-01 01:54] [ALPM] transaction completed
+[2015-11-01 01:55] [PACMAN] Running 'pacman -S gcc'
+[2015-11-01 01:55] [ALPM] transaction started
+[2015-11-01 01:55] [ALPM] installed binutils (2.25-2)
+[2015-11-01 01:55] [ALPM] installed mpc (1.0.3-1)
+[2015-11-01 01:55] [ALPM] installed isl (0.14.1-1)
+[2015-11-01 01:55] [ALPM] installed cloog (0.18.3-1)
+[2015-11-01 01:55] [ALPM] installed msys2-w32api-headers (5.0.0.4574.ce1ad45-1)
+[2015-11-01 01:55] [ALPM] installed msys2-w32api-runtime (5.0.0.4574.ce1ad45-1)
+[2015-11-01 01:55] [ALPM] installed windows-default-manifest (6.4-1)
+[2015-11-01 01:55] [ALPM] installed gcc (4.9.2-5)
+[2015-11-01 01:55] [ALPM] transaction completed
+[2015-11-01 01:56] [PACMAN] Running '/usr/bin/pacman -Sy'
+[2015-11-01 01:56] [PACMAN] synchronizing package lists
+[2015-11-01 14:12] [PACMAN] Running 'pacman -S libmingw32'
+[2015-11-01 14:16] [PACMAN] Running 'pacman -S msys2-w32api-headers'
+[2015-11-01 14:16] [ALPM] transaction started
+[2015-11-01 14:17] [ALPM] reinstalled msys2-w32api-headers (5.0.0.4574.ce1ad45-1)
+[2015-11-01 14:17] [ALPM] transaction completed
+[2015-11-01 14:20] [PACMAN] Running 'pacman -S mingwex'
+[2015-11-01 14:20] [PACMAN] Running 'pacman -U'
+[2015-11-01 14:21] [PACMAN] Running 'pacman -S mingw-makepkg'
+[2015-11-01 14:21] [PACMAN] Running 'pacman -S makepkg-mingw'
+[2015-11-01 14:35] [PACMAN] Running 'pacman -S mingw-runtime'
+[2015-11-01 14:36] [PACMAN] Running 'pacman -S gcc-core'
+[2015-11-01 14:44] [PACMAN] Running 'pacman -Rs msys2-devel msys/gcc-libs'
+[2015-11-01 14:44] [PACMAN] Running 'pacman -Rs msys2-devel base'
+[2015-11-01 14:44] [PACMAN] Running 'pacman -Rs msys2-devel'
+[2015-11-01 14:44] [ALPM] transaction started
+[2015-11-01 14:44] [ALPM] removed gcc (4.9.2-5)
+[2015-11-01 14:44] [ALPM] removed windows-default-manifest (6.4-1)
+[2015-11-01 14:44] [ALPM] removed mpc (1.0.3-1)
+[2015-11-01 14:44] [ALPM] removed cloog (0.18.3-1)
+[2015-11-01 14:44] [ALPM] removed isl (0.14.1-1)
+[2015-11-01 14:44] [ALPM] removed msys2-w32api-runtime (5.0.0.4574.ce1ad45-1)
+[2015-11-01 14:44] [ALPM] removed msys2-w32api-headers (5.0.0.4574.ce1ad45-1)
+[2015-11-01 14:44] [ALPM] removed binutils (2.25-2)
+[2015-11-01 14:44] [ALPM] transaction completed
+[2015-11-01 14:46] [PACMAN] Running 'pacman -S mingw-w64-x86_64-gcc-libs'
+[2015-11-01 14:46] [PACMAN] Running 'pacman -S mingw-w64-x86_64-gcc-libs mingw-w64-x86_64-gcc'
+[2015-11-01 14:46] [ALPM] transaction started
+[2015-11-01 14:46] [ALPM] installed mingw-w64-x86_64-gmp (6.0.0-3)
+[2015-11-01 14:46] [ALPM] installed mingw-w64-x86_64-libwinpthread-git (5.0.0.4573.628fdbf-1)
+[2015-11-01 14:46] [ALPM] installed mingw-w64-x86_64-gcc-libs (5.2.0-4)
+[2015-11-01 14:46] [ALPM] installed mingw-w64-x86_64-libiconv (1.14-5)
+[2015-11-01 14:46] [ALPM] installed mingw-w64-x86_64-bzip2 (1.0.6-4)
+[2015-11-01 14:46] [ALPM] installed mingw-w64-x86_64-zlib (1.2.8-9)
+[2015-11-01 14:46] [ALPM] installed mingw-w64-x86_64-binutils (2.25.1-1)
+[2015-11-01 14:46] [ALPM] installed mingw-w64-x86_64-headers-git (5.0.0.4578.ace70f1-1)
+[2015-11-01 14:47] [ALPM] installed mingw-w64-x86_64-crt-git (5.0.0.4573.628fdbf-1)
+[2015-11-01 14:47] [ALPM] installed mingw-w64-x86_64-isl (0.14.1-2)
+[2015-11-01 14:47] [ALPM] installed mingw-w64-x86_64-mpfr (3.1.3.p0-2)
+[2015-11-01 14:47] [ALPM] installed mingw-w64-x86_64-mpc (1.0.3-2)
+[2015-11-01 14:47] [ALPM] installed mingw-w64-x86_64-windows-default-manifest (6.4-2)
+[2015-11-01 14:47] [ALPM] installed mingw-w64-x86_64-winpthreads-git (5.0.0.4573.628fdbf-1)
+[2015-11-01 14:47] [ALPM] installed mingw-w64-x86_64-gcc (5.2.0-4)
+[2015-11-01 14:47] [ALPM] transaction completed

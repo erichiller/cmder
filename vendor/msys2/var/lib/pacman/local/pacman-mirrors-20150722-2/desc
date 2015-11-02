@@ -1,0 +1,36 @@
+%NAME%
+pacman-mirrors
+
+%VERSION%
+20150722-2
+
+%DESC%
+MSYS2 mirror list for use by pacman
+
+%URL%
+http://msys2.sourceforge.net/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1437991005
+
+%INSTALLDATE%
+1442385269
+
+%PACKAGER%
+Alexpux <alexpux@jmail.com>
+
+%SIZE%
+1024
+
+%GROUPS%
+base
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+pgp
+

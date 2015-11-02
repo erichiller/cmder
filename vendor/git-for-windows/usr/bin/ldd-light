@@ -1,7 +1,0 @@
-#!/bin/sh
-
-for path
-do
-	echo "$path:"
-	objdump -p "$path" | grep "^	DLL Name:"
-done
