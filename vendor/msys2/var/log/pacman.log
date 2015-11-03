@@ -295,3 +295,4 @@
 [2015-11-03 01:44] [ALPM] transaction completed
 [2015-11-03 01:46] [PACMAN] Running 'pacman -Su'
 [2015-11-03 01:46] [PACMAN] starting full system upgrade
+[2015-11-03 02:05] [PACMAN] Running '/usr/bin/pacman -Sc'
