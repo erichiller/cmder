@@ -278,3 +278,20 @@
 [2015-11-01 14:47] [ALPM] installed mingw-w64-x86_64-winpthreads-git (5.0.0.4573.628fdbf-1)
 [2015-11-01 14:47] [ALPM] installed mingw-w64-x86_64-gcc (5.2.0-4)
 [2015-11-01 14:47] [ALPM] transaction completed
+[2015-11-03 01:39] [PACMAN] Running 'pacman -S mingw-w64-cross-winstorecompat-git'
+[2015-11-03 01:41] [PACMAN] Running 'pacman -Rs base-devel git'
+[2015-11-03 01:41] [PACMAN] Running 'pacman -Rs git'
+[2015-11-03 01:42] [PACMAN] Running 'pacman -S mingw-w64-cross-winstorecompat-git'
+[2015-11-03 01:42] [ALPM] transaction started
+[2015-11-03 01:42] [ALPM] installed mingw-w64-cross-headers-git (5.0.0.4574.ce1ad45-1)
+[2015-11-03 01:42] [ALPM] installed mingw-w64-cross-crt-git (5.0.0.4574.ce1ad45-1)
+[2015-11-03 01:42] [ALPM] installed mingw-w64-cross-winstorecompat-git (5.0.0.4501.4421b4a-1)
+[2015-11-03 01:42] [ALPM] transaction completed
+[2015-11-03 01:44] [PACMAN] Running 'pacman -Rs mingw-w64-cross-winstorecompat-git'
+[2015-11-03 01:44] [ALPM] transaction started
+[2015-11-03 01:44] [ALPM] removed mingw-w64-cross-winstorecompat-git (5.0.0.4501.4421b4a-1)
+[2015-11-03 01:44] [ALPM] removed mingw-w64-cross-crt-git (5.0.0.4574.ce1ad45-1)
+[2015-11-03 01:44] [ALPM] removed mingw-w64-cross-headers-git (5.0.0.4574.ce1ad45-1)
+[2015-11-03 01:44] [ALPM] transaction completed
+[2015-11-03 01:46] [PACMAN] Running 'pacman -Su'
+[2015-11-03 01:46] [PACMAN] starting full system upgrade
