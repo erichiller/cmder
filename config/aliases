@@ -8,4 +8,5 @@ wget=wget --no-check-certificate $*
 ls='ls $LS_OPTIONS'  
 ll='ls $LS_OPTIONS -l'  
 l='ls $LS_OPTIONS -lA'  
-vi="vim"  
+vi="vim" 
+vim=%CMDER_ROOT%\vendor\msys2\usr\bin\bash.exe -c '/usr/bin/vim $*'

@@ -1,4 +1,4 @@
-*insert.txt*    For Vim version 7.4.  Last change: 2015 Sep 01
+*insert.txt*    For Vim version 7.4.  Last change: 2013 Jul 12
 
 
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
@@ -51,8 +51,6 @@ char		action	~
 		abbreviation.
 		Note: If your <Esc> key is hard to hit on your keyboard, train
 		yourself to use CTRL-[.
-		If Esc doesn't work and you are using a Mac, try CTRL-Esc.
-		Or disable Listening under Accessibility preferences.
 						*i_CTRL-C*
 CTRL-C		Quit insert mode, go back to Normal mode.  Do not check for
 		abbreviations.  Does not trigger the |InsertLeave| autocommand
@@ -81,11 +79,9 @@ CTRL-W		Delete the word before the cursor (see |i_backspacing| about
 		joining lines).  See the section "word motions",
 		|word-motions|, for the definition of a word.
 						*i_CTRL-U*
-CTRL-U		Delete all entered characters before the cursor in the current
-		line.  If there are no newly entered characters and
-		'backspace' is not empty, delete all characters before the
-		cursor in the current line.
-		See |i_backspacing| about joining lines.
+CTRL-U		Delete all entered characters in the current line (see
+		|i_backspacing| about joining lines).
+
 						*i_CTRL-I* *i_<Tab>* *i_Tab*
 <Tab> or CTRL-I Insert a tab.  If the 'expandtab' option is on, the
 		equivalent number of spaces is inserted (use CTRL-V <Tab> to
@@ -377,9 +373,6 @@ CTRL-O		execute one command, return to Insert mode   *i_CTRL-O*
 CTRL-\ CTRL-O	like CTRL-O but don't move the cursor	     *i_CTRL-\_CTRL-O*
 CTRL-L		when 'insertmode' is set: go to Normal mode  *i_CTRL-L*
 CTRL-G u	break undo sequence, start new change	     *i_CTRL-G_u*
-CTRL-G U	don't break undo with next left/right cursor *i_CTRL-G_U*
-		movement (but only if the cursor stays
-		within same the line)
 -----------------------------------------------------------------------
 
 Note: If the cursor keys take you out of Insert mode, check the 'noesckeys'
@@ -418,28 +411,6 @@ that, with CTRL-O u.  Another example: >
 
 This breaks undo at each line break.  It also expands abbreviations before
 this.
-
-An example for using CTRL-G U: >
-
-	inoremap <Left>  <C-G>U<Left>
-	inoremap <Right> <C-G>U<Right>
-	inoremap <expr> <Home> col('.') == match(getline('.'), '\S') + 1 ?
-	 \ repeat('<C-G>U<Left>', col('.') - 1) :
-	 \ (col('.') < match(getline('.'), '\S') ?
-	 \     repeat('<C-G>U<Right>', match(getline('.'), '\S') + 0) :
-	 \     repeat('<C-G>U<Left>', col('.') - 1 - match(getline('.'), '\S')))
-	inoremap <expr> <End> repeat('<C-G>U<Right>', col('$') - col('.'))
-	inoremap ( ()<C-G>U<Left>
-
-This makes it possible to use the cursor keys in Insert mode, without breaking
-the undo sequence and therefore using |.| (redo) will work as expected. 
-Also entering a text like (with the "(" mapping from above): >
-
-   Lorem ipsum (dolor
-
-will be repeatable by the |.|to the expected
-
-   Lorem ipsum (dolor)
 
 Using CTRL-O splits undo: the text typed before and after it is undone
 separately.  If you want to avoid this (e.g., in a mapping) you might be able
@@ -1331,7 +1302,7 @@ HTML							*ft-html-omni*
 XHTML							*ft-xhtml-omni*
 
 CTRL-X CTRL-O provides completion of various elements of (X)HTML files.  It is
-designed to support writing of XHTML 1.0 Strict files but will also work for
+designed to support writing of XHTML 1.0 Strict files but will also works for
 other versions of HTML. Features:
 
 - after "<" complete tag name depending on context (no div suggestion inside

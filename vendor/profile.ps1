@@ -46,7 +46,7 @@ try {
 	# set status as true
 	$gitStatus = $true
 	# setup git-bash/msysgit aliases
-	#set-alias vim bashcall
+	set-alias vim bashcall
 	set-alias gunzip bashcall
 	set-alias irssi bashcall
 	set-alias vi vim
@@ -68,16 +68,16 @@ function wget { wget.exe --no-check-certificate $args }
 
 # set-alias -passthru vim bashcall # debug
 function bashcall {
-	echo "entered bashcall"
-	echo "args="
-	echo $args
-	echo "last command="
-	echo $$
-	echo "myinvocation="
-	echo $myinvocation
-	echo "myinvocation.invocationname="
-	echo $myinvocation.invocationname
-	& ( $env:CMDER_ROOT + "\vendor\msys2\bin\bash.exe" ) -c "$myinvocation.invocationname $args"
+	#echo "entered bashcall"
+	#echo "args="
+	#echo $args
+	#echo "last command="
+	#echo $$
+	#echo "myinvocation="
+	#echo $myinvocation
+	#echo "myinvocation.invocationname="
+	#echo $myinvocation.invocationname
+	& ( $env:CMDER_ROOT + "\vendor\msys2\usr\bin\bash.exe" ) -c '"' $myinvocation.invocationname $args '"'
 }
 
 function checkGit($Path) {

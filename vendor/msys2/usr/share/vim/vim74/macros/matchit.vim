@@ -303,7 +303,7 @@ fun! s:CleanUp(options, mode, startline, startcol, ...)
       let regexp = s:Wholematch(matchline, a:1, currcol-1)
       let endcol = matchend(matchline, regexp)
       if endcol > currcol  " This is NOT off by one!
-	call cursor(0, endcol)
+	execute "normal!" . (endcol - currcol) . "l"
       endif
     endif " a:0
   endif " a:mode != "o" && etc.

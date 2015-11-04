@@ -2,9 +2,9 @@
 " Language:	Groovy
 " Original Author:	Alessio Pace <billy.corgan@tiscali.it>
 " Maintainer:	Tobias Rapp <yahuxo@gmx.de>
-" Version: 	0.1.14
+" Version: 	0.1.13
 " URL:	  http://www.vim.org/scripts/script.php?script_id=945
-" Last Change:	2015 Apr 21
+" Last Change:	2013 Apr 24
 
 " THE ORIGINAL AUTHOR'S NOTES:
 "
@@ -157,7 +157,7 @@ syn match groovyOperator "\.\."
 syn match groovyOperator "<\{2,3}"
 syn match groovyOperator ">\{2,3}"
 syn match groovyOperator "->"
-syn match groovyLineComment       '^\%1l#!.*'  " Shebang line
+syn match groovyExternal		'^#!.*[/\\]groovy\>'
 syn match groovyExceptions        "\<Exception\>\|\<[A-Z]\{1,}[a-zA-Z0-9]*Exception\>"
 
 " Groovy JDK stuff
@@ -220,6 +220,7 @@ syn region  groovyComment          start="/\*"  end="\*/" contains=@groovyCommen
 syn match   groovyCommentStar      contained "^\s*\*[^/]"me=e-1
 syn match   groovyCommentStar      contained "^\s*\*$"
 syn match   groovyLineComment      "//.*" contains=@groovyCommentSpecial2,groovyTodo,@Spell
+syn match   groovyLineComment      "#.*" contains=@groovyCommentSpecial2,groovyTodo,@Spell
 GroovyHiLink groovyCommentString groovyString
 GroovyHiLink groovyComment2String groovyString
 GroovyHiLink groovyCommentCharacter groovyCharacter

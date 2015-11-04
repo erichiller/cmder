@@ -1,10 +1,7 @@
 " Vim filetype plugin file
-" Language:		Zsh shell script
-" Maintainer:		Christian Brabandt <cb@256bit.org>
-" Previous Maintainer:	Nikolai Weibull <now@bitwi.se>
-" Latest Revision:	2015-05-29
-" License:		Vim (see :h license)
-" Repository:		https://github.com/chrisbra/vim-zsh
+" Language:         Zsh shell script
+" Maintainer:       Nikolai Weibull <now@bitwi.se>
+" Latest Revision:  2011-01-23
 
 if exists("b:did_ftplugin")
   finish

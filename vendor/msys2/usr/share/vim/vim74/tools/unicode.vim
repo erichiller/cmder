@@ -252,8 +252,6 @@ func! BuildWidthTable(pattern, tableName)
 endfunc
 
 
-" Try to avoid hitting E36
-set equalalways
 
 " Edit the Unicode text file.  Requires the netrw plugin.
 edit http://unicode.org/Public/UNIDATA/UnicodeData.txt

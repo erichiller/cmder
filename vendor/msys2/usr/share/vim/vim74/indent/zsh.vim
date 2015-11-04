@@ -1,10 +1,7 @@
 " Vim indent file
-" Language:             Zsh shell script
-" Maintainer:           Christian Brabandt <cb@256bit.org>
-" Previous Maintainer:  Nikolai Weibull <now@bitwi.se>
-" Latest Revision:      2015-05-29
-" License:              Vim (see :h license)
-" Repository:           https://github.com/chrisbra/vim-zsh
+" Language:	    Zsh Shell Script
+" Maintainer:       Nikolai Weibull <now@bitwi.se>
+" Latest Revision:  2006-04-19
 
 if exists("b:did_indent")
   finish

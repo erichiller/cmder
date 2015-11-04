@@ -2,7 +2,9 @@
 " Language:    R Help File
 " Maintainer: Jakson Aquino <jalvesaq@gmail.com>
 " Former Maintainer: Johannes Ranke <jranke@uni-bremen.de>
-" Last Change: Wed Jul 09, 2014  10:28PM
+" Last Change: Fri Oct 14, 2011  09:54PM
+" Version:     0.7.4
+" SVN:		   $Id: rhelp.vim 90 2010-11-22 10:58:11Z ranke $
 " Remarks:     - Includes R syntax highlighting in the appropriate
 "                sections if an r.vim file is in the same directory or in the
 "                default debian location.
@@ -20,8 +22,6 @@ if version < 600
 elseif exists("b:current_syntax")
   finish
 endif 
-
-setlocal iskeyword=@,48-57,_,.
 
 syn case match
 
@@ -51,12 +51,7 @@ syn region rhelpRcode matchgroup=Delimiter start="\\examples{" matchgroup=Delimi
 syn region rhelpRcode matchgroup=Delimiter start="\\usage{" matchgroup=Delimiter transparent end="}" contains=@R,rhelpIdentifier,rhelpS4method
 syn region rhelpRcode matchgroup=Delimiter start="\\synopsis{" matchgroup=Delimiter transparent end="}" contains=@R
 syn region rhelpRcode matchgroup=Delimiter start="\\special{" matchgroup=Delimiter transparent end="}" contains=@R
-
-if v:version > 703
-  syn region rhelpRcode matchgroup=Delimiter start="\\code{" skip='\\\@1<!{.\{-}\\\@1<!}' transparent end="}" contains=@R,rhelpDots,rhelpString,rhelpSpecialChar,rhelpLink keepend
-else
-  syn region rhelpRcode matchgroup=Delimiter start="\\code{" skip='\\\@<!{.\{-}\\\@<!}' transparent end="}" contains=@R,rhelpDots,rhelpString,rhelpSpecialChar,rhelpLink keepend
-endif
+syn region rhelpRcode matchgroup=Delimiter start="\\code{" skip='\\\@<!{.\{-}\\\@<!}' transparent end="}" contains=@R,rhelpDots,rhelpString,rhelpSpecialChar,rhelpLink keepend
 syn region rhelpS4method matchgroup=Delimiter start="\\S4method{.*}(" matchgroup=Delimiter transparent end=")" contains=@R,rhelpDots
 syn region rhelpSexpr matchgroup=Delimiter start="\\Sexpr{" matchgroup=Delimiter transparent end="}" contains=@R
 
@@ -132,13 +127,8 @@ syn region rhelpLink matchgroup=rhelpSection start="\\link\[.\{-}\]{" end="}" co
 syn region rhelpLink matchgroup=rhelpSection start="\\linkS4class{" end="}" contained keepend extend
 
 " Verbatim like {{{1
-if v:version > 703
-  syn region rhelpVerbatim matchgroup=rhelpType start="\\samp{" skip='\\\@1<!{.\{-}\\\@1<!}' end="}" contains=rhelpSpecialChar,rhelpComment
-  syn region rhelpVerbatim matchgroup=rhelpType start="\\verb{" skip='\\\@1<!{.\{-}\\\@1<!}' end="}" contains=rhelpSpecialChar,rhelpComment
-else
-  syn region rhelpVerbatim matchgroup=rhelpType start="\\samp{" skip='\\\@<!{.\{-}\\\@<!}' end="}" contains=rhelpSpecialChar,rhelpComment
-  syn region rhelpVerbatim matchgroup=rhelpType start="\\verb{" skip='\\\@<!{.\{-}\\\@<!}' end="}" contains=rhelpSpecialChar,rhelpComment
-endif
+syn region rhelpVerbatim matchgroup=rhelpType start="\\samp{" skip='\\\@<!{.\{-}\\\@<!}' end="}" contains=rhelpSpecialChar,rhelpComment
+syn region rhelpVerbatim matchgroup=rhelpType start="\\verb{" skip='\\\@<!{.\{-}\\\@<!}' end="}" contains=rhelpSpecialChar,rhelpComment
 
 " Type Styles {{{1
 syn match rhelpType		"\\emph\>"
@@ -210,8 +200,6 @@ syn match rhelpBraceError /[)}]/ contained
 syn match rhelpCurlyError /[)\]]/ contained
 syn match rhelpParenError /[\]}]/ contained
 
-syntax sync match rhelpSyncRcode grouphere rhelpRcode "\\examples{"
-
 " Define the default highlighting {{{1
 " For version 5.7 and earlier: only when not done already
 " For version 5.8 and later: only when an item doesn't have highlighting yet
@@ -245,5 +233,4 @@ if version >= 508 || !exists("did_rhelp_syntax_inits")
 endif 
 
 let   b:current_syntax = "rhelp"
-
-" vim: foldmethod=marker sw=2
+" vim: foldmethod=marker:

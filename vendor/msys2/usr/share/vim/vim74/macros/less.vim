@@ -1,6 +1,6 @@
 " Vim script to work like "less"
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last Change:	2014 May 13
+" Last Change:	2012 May 18
 
 " Avoid loading this file twice, allow the user to define his own script.
 if exists("loaded_less")
@@ -87,9 +87,6 @@ noremap <script> <Space> :call <SID>NextPage()<CR><SID>L
 map <C-V> <Space>
 map f <Space>
 map <C-F> <Space>
-map <PageDown> <Space>
-map <kPageDown> <Space>
-map <S-Down> <Space>
 map z <Space>
 map <Esc><Space> <Space>
 fun! s:NextPage()
@@ -119,14 +116,10 @@ map e <CR>
 map <C-E> <CR>
 map j <CR>
 map <C-J> <CR>
-map <Down> <CR>
 
 " Scroll one page backward
 noremap <script> b <C-B><SID>L
 map <C-B> b
-map <PageUp> b
-map <kPageUp> b
-map <S-Up> b
 map w b
 map <Esc>v b
 
@@ -140,7 +133,6 @@ map y k
 map <C-Y> k
 map <C-P> k
 map <C-K> k
-map <Up> k
 
 " Redraw
 noremap <script> r <C-L><SID>L
@@ -151,15 +143,11 @@ noremap <script> R <C-L><SID>L
 noremap <script> g gg<SID>L
 map < g
 map <Esc>< g
-map <Home> g
-map <kHome> g
 
 " End of file
 noremap <script> G G<SID>L
 map > G
 map <Esc>> G
-map <End> G
-map <kEnd> G
 
 " Go to percentage
 noremap <script> % %<SID>L
@@ -196,7 +184,6 @@ fun! s:Backward()
 endfun
 
 call s:Forward()
-cunmap <CR>
 
 " Quitting
 noremap q :q<CR>
@@ -253,18 +240,6 @@ fun! s:End()
   unmap v
   unmap /
   unmap ?
-  unmap <Up>
-  unmap <Down>
-  unmap <PageDown>
-  unmap <kPageDown>
-  unmap <PageUp>
-  unmap <kPageUp>
-  unmap <S-Down>
-  unmap <S-Up>
-  unmap <Home>
-  unmap <kHome>
-  unmap <End>
-  unmap <kEnd>
 endfun
 
 " vim: sw=2

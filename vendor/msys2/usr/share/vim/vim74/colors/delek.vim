@@ -1,10 +1,10 @@
 " Vim color file
-" Maintainer:	David Schweikert <david@schweikert.ch>
-" Last Change:	2014 Mar 19
+" Maintainer:	David Schweikert <dws@ee.ethz.ch>
+" Last Change:	2006 Apr 30
 
 hi clear
 
-let g:colors_name = "delek"
+let colors_name = "delek"
 
 " Normal should come first
 hi Normal     guifg=Black  guibg=White
@@ -28,11 +28,7 @@ hi NonText    ctermfg=Blue	   gui=bold guifg=gray guibg=white
 hi Pmenu      guibg=LightBlue
 hi PmenuSel   ctermfg=White	   ctermbg=DarkBlue  guifg=White  guibg=DarkBlue
 hi Question   ctermfg=DarkGreen    gui=bold guifg=SeaGreen
-if &background == "light"
-    hi Search     ctermfg=NONE	   ctermbg=Yellow guibg=Yellow guifg=NONE
-else
-    hi Search     ctermfg=Black	   ctermbg=Yellow guibg=Yellow guifg=Black
-endif
+hi Search     ctermfg=NONE	   ctermbg=Yellow guibg=Yellow guifg=NONE
 hi SpecialKey ctermfg=DarkBlue	   guifg=Blue
 hi StatusLine cterm=bold	   ctermbg=blue ctermfg=yellow guibg=gold guifg=blue
 hi StatusLineNC	cterm=bold	   ctermbg=blue ctermfg=black  guibg=gold guifg=blue
