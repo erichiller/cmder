@@ -1,6 +1,6 @@
 ﻿.Language=Italian,Italian (Italiano)
 
-//Version: 3.0 build 4437
+//Version: 3.0 build 4454
 
 "&Si"
 "&No"
@@ -919,9 +919,9 @@
 "T"
 "P"
 "E"
-" %1 Bytes In 1 File "
-" %1 Bytes In %2 Files "
-" %1 Bytes In %2 Files "
+// need translation:
+" Bytes: %1, files: %2, folders: %3 "
+" %1 (%2/%3) %4 %5 "
 " %1 Bytes Liberi "
 
 "Vista"

@@ -1,6 +1,6 @@
 ﻿.Language=Polish,Polish (Polski)
 
-//Version: 3.0 build 4437
+//Version: 3.0 build 4454
 
 "Tak"
 "Nie"
@@ -1067,9 +1067,9 @@
 "T"
 "P"
 "E"
-" %1 bajtów w 1 pliku "
-" %1 bajtów w %2 plikach "
-" %1 bajtów w %2 plikach "
+// need translation:
+" Bytes: %1, files: %2, folders: %3 "
+" %1 (%2/%3) %4 %5 "
 " %1 wolnych bajtów "
 
 "Podgląd"

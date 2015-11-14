@@ -1,6 +1,6 @@
 ﻿.Language=Hungarian,Hungarian (Magyar)
 
-//Version: 3.0 build 4437
+//Version: 3.0 build 4454
 
 "Igen"
 "Nem"
@@ -1060,9 +1060,9 @@
 "T"
 "P"
 "E"
-" %1 bájt 1 fájlban "
-" %1 bájt %2 fájlban "
-" %1 bájt %2 fájlban "
+// need translation:
+" Bytes: %1, files: %2, folders: %3 "
+" %1 (%2/%3) %4 %5 "
 " %1 szabad bájt "
 
 "Vizsgálat"

@@ -9,29 +9,42 @@ local MacroCallFar = far.MacroCallFar
 local gmeta = { __index=_G }
 local LastMessage = {}
 --------------------------------------------------------------------------------
--- Данный список должен в точности соответствовать enum FARMACROAREA, т.е. тот же смысл и порядок.
 local TrueAreaNames = {
- "Other", "Shell", "Viewer", "Editor", "Dialog", "Search", "Disks", "MainMenu", "Menu", "Help",
- "Info", "QView", "Tree", "FindFolder", "UserMenu", "ShellAutoCompletion", "DialogAutoCompletion",
- "Common",
+  [F.MACROAREA_OTHER]                = "Other",
+  [F.MACROAREA_SHELL]                = "Shell",
+  [F.MACROAREA_VIEWER]               = "Viewer",
+  [F.MACROAREA_EDITOR]               = "Editor",
+  [F.MACROAREA_DIALOG]               = "Dialog",
+  [F.MACROAREA_SEARCH]               = "Search",
+  [F.MACROAREA_DISKS]                = "Disks",
+  [F.MACROAREA_MAINMENU]             = "MainMenu",
+  [F.MACROAREA_MENU]                 = "Menu",
+  [F.MACROAREA_HELP]                 = "Help",
+  [F.MACROAREA_INFOPANEL]            = "Info",
+  [F.MACROAREA_QVIEWPANEL]           = "QView",
+  [F.MACROAREA_TREEPANEL]            = "Tree",
+  [F.MACROAREA_FINDFOLDER]           = "FindFolder",
+  [F.MACROAREA_USERMENU]             = "UserMenu",
+  [F.MACROAREA_SHELLAUTOCOMPLETION]  = "ShellAutoCompletion",
+  [F.MACROAREA_DIALOGAUTOCOMPLETION] = "DialogAutoCompletion",
+  [F.MACROAREA_COMMON]               = "Common",
 }
 
 local AllAreaNames = {}
-for i,v in ipairs(TrueAreaNames) do AllAreaNames[i]=v:lower() end
-for i=1,#AllAreaNames do local str=AllAreaNames[i]; AllAreaNames[str]=i; end
+for k,v in pairs(TrueAreaNames) do
+  local str = v:lower()
+  AllAreaNames[k] = str
+  AllAreaNames[str] = k
+end
 
 local SomeAreaNames = {
   "other", "viewer", "editor", "dialog", "menu", "help", "dialogautocompletion",
   "common" -- "common" должен идти последним
 }
 
-local function GetTrueAreaName(Mode) return TrueAreaNames[Mode+1] end
-local function GetAreaName(Mode)     return AllAreaNames[Mode+1] end
-
-local function GetAreaCode(Area)
-  local code = AllAreaNames[Area:lower()]
-  return code and code-1
-end
+local function GetTrueAreaName(Mode) return TrueAreaNames[Mode] end
+local function GetAreaName(Mode)     return AllAreaNames[Mode] end
+local function GetAreaCode(Area)     return AllAreaNames[Area:lower()] end
 --------------------------------------------------------------------------------
 
 local MCODE_F_CHECKALL     = 0x80C64
@@ -45,7 +58,6 @@ local LoadingInProgress
 local EnumState = {}
 local Events
 local EventGroups = {"dialogevent","editorevent","editorinput","exitfar","viewerevent", "consoleinput"}
-local AddMacro_filename
 local AddedMenuItems
 local AddedPrefixes
 
@@ -96,8 +108,8 @@ local StringToFlags, FlagsToString do
           local line1 = filename or "<not a file>"
           local btn = filename and "OK;Edit" or "OK"
           if 2 == ErrMsg(line1.."\nInvalid macro flag: "..word, nil, btn) then
-            editor.Editor(filename,nil,nil,nil,nil,nil,nil,1,nil,65001)          
-          end          
+            editor.Editor(filename,nil,nil,nil,nil,nil,nil,1,nil,65001)
+          end
         end
       end
     end
@@ -288,7 +300,7 @@ local ExpandKey do -- измеренное время исполнения на ключе "CtrlAltShiftF12" = ?
   end
 end
 
-local function AddRegularMacro (srctable)
+local function AddRegularMacro (srctable, FileName)
   local macro = {}
   if type(srctable)=="table" and type(srctable.area)=="string" then
     macro.area = srctable.area
@@ -319,7 +331,7 @@ local function AddRegularMacro (srctable)
       if f then
         macro.action = f
       else
-        if AddMacro_filename then ErrMsg(msg, isMoonScript and "MoonScript") end
+        if FileName then ErrMsg(msg, isMoonScript and "MoonScript") end
         return
       end
     end
@@ -353,7 +365,7 @@ local function AddRegularMacro (srctable)
   end
 
   if next(arFound) then
-    macro.flags = StringToFlags(srctable.flags, AddMacro_filename)
+    macro.flags = StringToFlags(srctable.flags, FileName)
 
     if type(srctable.description)=="string" then macro.description=srctable.description end
     if type(srctable.condition)=="function" then macro.condition=srctable.condition end
@@ -364,8 +376,8 @@ local function AddRegularMacro (srctable)
       macro.priority = priority>100 and 100 or priority<0 and 0 or priority
     end
 
-    if AddMacro_filename then
-      macro.FileName = AddMacro_filename
+    if FileName then
+      macro.FileName = FileName
     else
       macro.guid = srctable.guid
       macro.callback = srctable.callback
@@ -375,7 +387,7 @@ local function AddRegularMacro (srctable)
 
     macro.id = #LoadedMacros+1
     LoadedMacros[macro.id] = macro
-    return macro.id
+    return macro
   end
 end
 
@@ -416,7 +428,7 @@ local function AddRecordedMacro (srctable, filename)
 end
 
 local AddEvent_fields = {"group","action","description","priority","condition","filemask"}
-local function AddEvent (srctable)
+local function AddEvent (srctable, FileName)
   local group = type(srctable)=="table" and type(srctable.group)=="string" and srctable.group:lower()
   if not (group and Events[group]) then return end
 
@@ -426,7 +438,7 @@ local function AddEvent (srctable)
   table.insert(Events[group], macro)
 
   for _,v in ipairs(AddEvent_fields) do macro[v]=srctable[v] end
-  macro.FileName = AddMacro_filename
+  macro.FileName = FileName
 
   if type(macro.description)~="string" then macro.description=nil end
   if type(macro.condition)~="function" then macro.condition=nil end
@@ -438,10 +450,10 @@ local function AddEvent (srctable)
 
   macro.id = #LoadedMacros+1
   LoadedMacros[macro.id] = macro
-  return macro.id
+  return macro
 end
 
-local function AddMenuItem (srctable)
+local function AddMenuItem (srctable, FileName)
   if type(srctable)=="table" and
      type(srctable.menu)=="string" and
      type(srctable.guid)=="string" and
@@ -469,7 +481,7 @@ local function AddMenuItem (srctable)
       item.text = type(text)=="function" and text or function() return text end
       item.action = srctable.action
       item.description = type(srctable.description)=="string" and srctable.description or ""
-      item.FileName = AddMacro_filename
+      item.FileName = FileName
       item.id = #AddedMenuItems + 1
       AddedMenuItems[item.id] = item
       AddedMenuItems[item.guid] = item
@@ -479,7 +491,7 @@ local function AddMenuItem (srctable)
   return false
 end
 
-local function AddPrefixes (srctable)
+local function AddPrefixes (srctable, FileName)
   local result = 0
   if type(srctable)=="table" and
      type(srctable.prefixes)=="string" and
@@ -491,7 +503,7 @@ local function AddPrefixes (srctable)
           prefix = prefix,
           action = srctable.action,
           description = type(srctable.description)=="string" and srctable.description or "",
-          FileName = AddMacro_filename
+          FileName = FileName
         }
         AddedPrefixes[prefix] = item
         AddedPrefixes[1] = AddedPrefixes[1]..":"..prefix
@@ -539,7 +551,7 @@ end
 
 local function ErrMsgLoad (msg, filename, isMoonScript, mode)
   local title = isMoonScript and mode=="compile" and "MoonScript" or "LuaMacro"
-  
+
   if type(msg)~="string" and type(msg)~="number" then
     ErrMsg(filename..":\n<non-string error message>", title, nil, "w")
     return
@@ -598,6 +610,12 @@ local function LoadMacros (unload, paths)
     LoadMacrosDone = false
   end
 
+  export.ExitFAR = nil
+  export.ProcessDialogEvent = nil
+  export.ProcessEditorInput = nil
+  export.ProcessViewerEvent = nil
+  export.ProcessConsoleInput = nil
+
   local allAreas = band(MacroCallFar(MCODE_F_GETOPTIONS),0x3) == 0
   local numerrors=0
   local newAreas = {}
@@ -609,7 +627,7 @@ local function LoadMacros (unload, paths)
   if Shared.panelsort then Shared.panelsort.DeleteSortModes() end
 
   local AreaNames = allAreas and AllAreaNames or SomeAreaNames
-  for _,name in ipairs(AreaNames) do newAreas[name]={} end
+  for _,name in pairs(AreaNames) do newAreas[name]={} end
   for _,name in ipairs(EventGroups) do Events[name]={} end
   for k in pairs(package.loaded) do
     if initial_modules[k]==nil and not package.nounload[k] then
@@ -661,11 +679,13 @@ local function LoadMacros (unload, paths)
         return
       end
       local env = {
-        Macro=AddRegularMacro, Event=AddEvent, MenuItem=AddMenuItem, CommandLine=AddPrefixes,
+        Macro = function(t) return not not AddRegularMacro(t,FullPath) end;
+        Event = function(t) return not not AddEvent(t,FullPath) end;
+        MenuItem = function(t) return AddMenuItem(t,FullPath) end;
+        CommandLine = function(t) return AddPrefixes(t,FullPath) end;
         NoMacro=DummyFunc, NoEvent=DummyFunc, NoMenuItem=DummyFunc, NoCommandLine=DummyFunc }
       setmetatable(env,gmeta)
       setfenv(f, env)
-      AddMacro_filename = FullPath
       local ok, msg = pcall(f, FullPath)
       if ok then
         env.Macro, env.Event, env.MenuItem, env.CommandLine,
@@ -739,14 +759,14 @@ local function LoadMacros (unload, paths)
 
     far.RecursiveSearch (DirMacros.."\\internal", "*.lua", LoadRecordedFile, 0)
 
+    export.ExitFAR = Events.exitfar[1] and export_ExitFAR
+    export.ProcessDialogEvent = Events.dialogevent[1] and export_ProcessDialogEvent
+    export.ProcessEditorInput = Events.editorinput[1] and export_ProcessEditorInput
+    export.ProcessViewerEvent = Events.viewerevent[1] and export_ProcessViewerEvent
+    export.ProcessConsoleInput = Events.consoleinput[1] and export_ProcessConsoleInput
+
     LoadMacrosDone = true
   end
-
-  export.ExitFAR = Events.exitfar[1] and export_ExitFAR
-  export.ProcessDialogEvent = Events.dialogevent[1] and export_ProcessDialogEvent
-  export.ProcessEditorInput = Events.editorinput[1] and export_ProcessEditorInput
-  export.ProcessViewerEvent = Events.viewerevent[1] and export_ProcessViewerEvent
-  export.ProcessConsoleInput = Events.consoleinput[1] and export_ProcessConsoleInput
 
   LoadingInProgress = nil
   return numerrors==0
@@ -810,23 +830,29 @@ local function GetFromMenu (macrolist)
     if not descr or descr=="" then
       descr = ("< No description: Id=%d >"):format(macro.id)
     end
+    menuitems[i] = { text=descr, macro=macro }
+  end
+
+  table.sort(menuitems, function(a,b) return far.LStricmp(a.text, b.text) < 0 end)
+
+  for i,item in ipairs(menuitems) do
     local ch = i<10 and i or i<36 and string.char(i+55)
-    menuitems[i] = { text = ch and (ch..". "..descr) or descr }
+    item.text = ch and (ch..". "..item.text) or item.text
   end
 
   local props, bkeys = {
       Title = Msg.UtExecuteMacroTitle, Bottom = Msg.UtExecuteMacroBottom,
-      Flags = { FMENU_AUTOHIGHLIGHT=1, FMENU_WRAPMODE=1 },
+      Flags = { FMENU_AUTOHIGHLIGHT=1, FMENU_WRAPMODE=1, FMENU_CHANGECONSOLETITLE=1 },
       Id = win.Uuid("165AA6E3-C89B-4F82-A0C5-C309243FD21B") }, { {BreakKey="A+F4"} }
   while true do
     local item, pos = far.Menu(props, menuitems, bkeys)
     if not item then
       return
-    elseif item.BreakKey == nil then
-      return macrolist[pos]
+    elseif item.macro then
+      return item.macro
     elseif item.BreakKey == "A+F4" then
       props.SelectIndex = pos
-      local m = macrolist[pos]
+      local m = menuitems[pos].macro
       if m.FileName then
         local startline = m.action and debug.getinfo(m.action,"S").linedefined
         editor.Editor(m.FileName,nil,nil,nil,nil,nil,nil,startline,nil,65001)
@@ -879,7 +905,7 @@ local function GetMacro (argMode, argKey, argUseCommon, argCheckOnly)
       if not Collector[m] then
         local n = #CInfo + 1
         Collector[m] = n
-        CInfo[n] = m.priority or (areaname=="common" and 40) or 50
+        CInfo[n] = m.priority or 50
         CInfo[n+1] = areaname
       end
     end
@@ -1001,18 +1027,14 @@ end
 
 local function AddMacroFromFAR (mode, key, lang, code, flags, description, guid, callback, callbackId)
   local area = GetTrueAreaName(mode)
-  -- MCTL_ADDMACRO may be called during LoadMacros execution, hence AddMacro_filename should be restored.
-  local fname = AddMacro_filename
-  AddMacro_filename = nil
-  local Id = AddRegularMacro { area=area, key=key, code=code, flags=flags, description=description,
-                               guid=guid, callback=callback, callbackId=callbackId, language=lang }
-  local action = Id and LoadedMacros[Id].action
+  local m = AddRegularMacro { area=area, key=key, code=code, flags=flags, description=description,
+                              guid=guid, callback=callback, callbackId=callbackId, language=lang }
+  local action = m and m.action
   if action then
     local env = setmetatable({}, gmeta)
     setfenv(action, env)
   end
-  AddMacro_filename = fname
-  return not not Id
+  return not not m
 end
 
 local function DelMacro (guid, callbackId) -- MCTL_DELMACRO

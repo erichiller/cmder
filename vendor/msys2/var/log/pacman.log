@@ -296,3 +296,19 @@
 [2015-11-03 01:46] [PACMAN] Running 'pacman -Su'
 [2015-11-03 01:46] [PACMAN] starting full system upgrade
 [2015-11-03 02:05] [PACMAN] Running '/usr/bin/pacman -Sc'
+[2015-11-05 00:48] [PACMAN] Running 'pacman -S libssh2-devel'
+[2015-11-05 00:48] [ALPM] transaction started
+[2015-11-05 00:48] [ALPM] installed zlib-devel (1.2.8-3)
+[2015-11-05 00:48] [ALPM] installed openssl-devel (1.0.2.d-1)
+[2015-11-05 00:48] [ALPM] installed libssh2-devel (1.6.0-1)
+[2015-11-05 00:48] [ALPM] transaction completed
+[2015-11-05 00:52] [PACMAN] Running 'pacman -Rs openssl-devel-1.0.2.d-1 zlib-devel-1.2.8-3 libssh2-devel-1.6.0-1'
+[2015-11-05 00:52] [PACMAN] Running 'pacman -Rs libssh2-devel-1.6.0-1-x86_64'
+[2015-11-05 00:52] [PACMAN] Running 'pacman -Rs libssh2-devel-1.6.0-1-x86_64'
+[2015-11-05 00:52] [PACMAN] Running 'pacman -Rs libssh2-devel-1.6.0-1'
+[2015-11-05 00:53] [PACMAN] Running 'pacman -Rs libssh2-devel'
+[2015-11-05 00:53] [ALPM] transaction started
+[2015-11-05 00:53] [ALPM] removed libssh2-devel (1.6.0-1)
+[2015-11-05 00:53] [ALPM] removed openssl-devel (1.0.2.d-1)
+[2015-11-05 00:53] [ALPM] removed zlib-devel (1.2.8-3)
+[2015-11-05 00:53] [ALPM] transaction completed

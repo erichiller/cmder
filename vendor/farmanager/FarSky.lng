@@ -1,6 +1,6 @@
 ﻿.Language=Slovak,Slovak (Slovenčina)
 
-//Version: 3.0 build 4437
+//Version: 3.0 build 4454
 
 "Áno"
 "Nie"
@@ -942,9 +942,9 @@
 "T"
 "P"
 "E"
-" %1 bajtov v 1 súbore "
-" %1 bajtov v %2 súboroch "
-" %1 bajtov v %2 súboroch "
+// need translation:
+" Bytes: %1, files: %2, folders: %3 "
+" %1 (%2/%3) %4 %5 "
 " %1 voľných bajtov "
 
 "Zobraziť"

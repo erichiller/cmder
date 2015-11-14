@@ -1,13 +1,7 @@
-*********************************************************
-*********************************************************
-****************	ConEmu Help	*****************
-*********************************************************
-****************	Eric KeyMap	*****************
-*********************************************************
-*********************************************************
-===============================================================================
-Key-1	Key-2	Key-3	Function
-===============================================================================
+******** Eric QuickHelp ********
+Key-1	Key-2	Key-3	Function	
+================================
+
 Ctrl	?		This file
 
 Ctrl	Tab		Switch Between Verticaly Split Tabs (Top <-> Bottom)
@@ -33,8 +27,10 @@ Shift	Up		Make Window FullScreen
 Shift	Down		Make Window FullScreen
 Shift	Left		Move Window to the left side of screen
 Shift	Right		Move Window to the right side of screen
+Shift	+		Make Screen Opaque
+Shift	-		Return Screen Transparency
 
-Ctrl	[0-9]		Jump to Console#
+Ctrl	[0-9]		Go to Console#
 Ctrl	F1		New {PowerShell}
 Ctrl	F2		New {cmd}
 Ctrl	F3		New {Git Bash}
@@ -56,6 +52,14 @@ Ctrl	PgUp		Scroll up one page
 Ctrl	PgDown		Scroll down one page
 Ctrl	+		Scroll buffer up one line
 Ctrl	-		Scroll buffer down one line
+
+=== GNU SCREEN ===
+Ctrl	A	C	Open a new window
+Ctrl	A	N	Switch to window ID + 1
+Ctrl	A	P	Switch to previous window ID - 1
+Ctrl	A	D	Detach from screen & return to shell (prgm continues)
+`screen -ls`		view current screen sessions
+`screen -r xxxnamexxx`	connect to existing session
 
 === KEY ===
 Apps=Windows Key

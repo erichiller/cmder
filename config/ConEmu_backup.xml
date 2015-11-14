@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2015-10-17 03:53:31" build="151015">
+		<key name=".Vanilla" modified="2015-11-13 17:59:48" build="151109">
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
@@ -96,7 +96,7 @@
 			<value name="Multi.ShowButtons" type="hex" data="00"/>
 			<value name="Multi.ShowSearch" type="hex" data="00"/>
 			<value name="Multi.NumberInCaption" type="hex" data="00"/>
-			<value name="Multi.CloseConfirmFlags" type="hex" data="00"/>
+			<value name="Multi.CloseConfirmFlags" type="hex" data="04"/>
 			<value name="Multi.NewConfirm" type="hex" data="00"/>
 			<value name="Multi.DupConfirm" type="hex" data="00"/>
 			<value name="Multi.DetachConfirm" type="hex" data="01"/>
@@ -143,13 +143,13 @@
 			<value name="ConWnd Width" type="dword" data="00000063"/>
 			<value name="ConWnd Height" type="dword" data="0000004f"/>
 			<value name="Cascaded" type="hex" data="00"/>
-			<value name="ConWnd X" type="dword" data="00000739"/>
-			<value name="ConWnd Y" type="dword" data="fffffffd"/>
+			<value name="ConWnd X" type="dword" data="ffffff10"/>
+			<value name="ConWnd Y" type="dword" data="fffffffb"/>
 			<value name="16bit Height" type="dword" data="00000000"/>
 			<value name="AutoSaveSizePos" type="hex" data="00"/>
 			<value name="IntegralSize" type="hex" data="00"/>
 			<value name="QuakeStyle" type="hex" data="01"/>
-			<value name="Restore2ActiveMon" type="hex" data="00"/>
+			<value name="Restore2ActiveMon" type="hex" data="01"/>
 			<value name="QuakeAnimation" type="dword" data="0000012c"/>
 			<value name="HideCaption" type="hex" data="00"/>
 			<value name="HideChildCaption" type="hex" data="01"/>
@@ -333,7 +333,7 @@
 			<value name="MinimizeOnLoseFocus" type="hex" data="00"/>
 			<value name="DisableFarFlashing" type="hex" data="00"/>
 			<value name="DisableAllFlashing" type="hex" data="00"/>
-			<value name="FindText" type="string" data="netw"/>
+			<value name="FindText" type="string" data="space"/>
 			<value name="FindMatchCase" type="hex" data="00"/>
 			<value name="FindMatchWholeWords" type="hex" data="00"/>
 			<value name="FindTransparent" type="hex" data="01"/>
@@ -382,7 +382,7 @@
 			<value name="Update.DownloadPath" type="string" data="%TEMP%\ConEmu"/>
 			<value name="Update.LeavePackages" type="hex" data="00"/>
 			<value name="Update.PostUpdateCmd" type="string" data="echo Last successful update&gt;ConEmuUpdate.info &amp;&amp; date /t&gt;&gt;ConEmuUpdate.info &amp;&amp; time /t&gt;&gt;ConEmuUpdate.info"/>
-			<key name="HotKeys" modified="2015-10-17 19:00:29" build="151015">
+			<key name="HotKeys" modified="2015-11-13 17:59:48" build="151109">
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="00000011"/>
 				<value name="Multi.ArrowsModifier" type="dword" data="0000005b"/>
@@ -502,9 +502,9 @@
 				<value name="KeyMacro06.Text" type="string" data="Tab(10,1,-1)"/>
 				<value name="KeyMacro07" type="dword" data="000011bf"/>
 				<value name="KeyMacro07.Text" type="string" data="Shell(&quot;&quot;,&quot;&quot;,&quot;cmd.exe /C \&quot;TYPE \&quot;%CMDER_ROOT%\scripts\helpfile.txt\&quot; &amp;&amp; pause &amp;&amp; exit\&quot;&quot;)"/>
-				<value name="KeyMacro08" type="dword" data="0000a04f"/>
+				<value name="KeyMacro08" type="dword" data="0000a06b"/>
 				<value name="KeyMacro08.Text" type="string" data="Transparency(0,255)"/>
-				<value name="KeyMacro09" type="dword" data="00001054"/>
+				<value name="KeyMacro09" type="dword" data="0000a06d"/>
 				<value name="KeyMacro09.Text" type="string" data="Transparency(0,200)"/>
 				<value name="KeyMacro10" type="dword" data="00000000"/>
 				<value name="KeyMacro10.Text" type="string" data=""/>
@@ -561,9 +561,9 @@
 				<value name="DndRKey" type="hex" data="00"/>
 				<value name="WndDragKey" type="dword" data="00121101"/>
 			</key>
-			<key name="Tasks" modified="2015-10-17 19:00:29" build="151015">
+			<key name="Tasks" modified="2015-11-13 17:59:48" build="151109">
 				<value name="Count" type="dword" data="00000006"/>
-				<key name="Task1" modified="2015-10-17 19:00:29" build="151015">
+				<key name="Task1" modified="2015-11-13 17:59:48" build="151109">
 					<value name="Name" type="string" data="{PowerShell}"/>
 					<value name="Flags" type="dword" data="00000001"/>
 					<value name="Hotkey" type="dword" data="00001170"/>
@@ -572,7 +572,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task2" modified="2015-10-17 19:00:29" build="151015">
+				<key name="Task2" modified="2015-11-13 17:59:48" build="151109">
 					<value name="Name" type="string" data="{cmd}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00001171"/>
@@ -581,25 +581,25 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task3" modified="2015-10-17 19:00:29" build="151015">
-					<value name="Name" type="string" data="{Git Bash}"/>
+				<key name="Task3" modified="2015-11-13 17:59:48" build="151109">
+					<value name="Name" type="string" data="{Msys2}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00001172"/>
 					<value name="GuiArgs" type="string" data="/icon &quot;%CMDER_ROOT%\cmder.exe&quot; /Dir %USERPROFILE%"/>
-					<value name="Cmd1" type="string" data="&quot;%ConEmuDir%\..\git-for-windows\bin\sh.exe&quot; -i -l"/>
+					<value name="Cmd1" type="string" data="&quot;%ConEmuDir%\..\msys2\usr\bin\bash.exe&quot; -i -l"/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task4" modified="2015-10-17 19:00:29" build="151015">
+				<key name="Task4" modified="2015-11-13 17:59:48" build="151109">
 					<value name="Name" type="string" data="{Far}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00001173"/>
 					<value name="GuiArgs" type="string" data="/icon &quot;%CMDER_ROOT%\vendor\farmanager\far.exe&quot;"/>
-					<value name="Cmd1" type="string" data="&quot;&quot;%CMDER_ROOT%\vendor\farmanager/far.exe&quot; &quot;%USERPROFILE%&quot; &quot;%USERPROFILE%&quot; -new_console:t:&quot;Far&quot;:d&quot;"/>
+					<value name="Cmd1" type="string" data="&quot;&quot;%CMDER_ROOT%\vendor\farmanager/far.exe&quot; -s &quot;%CMDER_ROOT%/config/farmanager&quot; &quot;%APPDATA%/farmanager&quot; &quot;%USERPROFILE%&quot; &quot;%USERPROFILE%&quot; -new_console:t:&quot;Far&quot;:d&quot;"/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task5" modified="2015-10-17 19:00:29" build="151015">
+				<key name="Task5" modified="2015-11-13 17:59:48" build="151109">
 					<value name="Name" type="string" data="{PowerShell as Admin}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00001174"/>
@@ -608,7 +608,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task6" modified="2015-10-17 19:00:29" build="151015">
+				<key name="Task6" modified="2015-11-13 17:59:48" build="151109">
 					<value name="Name" type="string" data="{irssi}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00001175"/>
@@ -618,7 +618,7 @@
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
 			</key>
-			<key name="Apps" modified="2015-10-17 19:00:29" build="151015">
+			<key name="Apps" modified="2015-11-13 17:59:48" build="151109">
 				<value name="Count" type="dword" data="00000000"/>
 				<key name="App1" modified="2015-10-10 19:32:31" build="150913">
 					<value name="AppNames" type="string" data="far.exe"/>
@@ -645,9 +645,9 @@
 					<value name="ClipboardDeleteLeftWord" type="hex" data="00"/>
 				</key>
 			</key>
-			<key name="Colors" modified="2015-10-17 19:00:29" build="151015">
+			<key name="Colors" modified="2015-11-13 17:59:48" build="151109">
 				<value name="Count" type="dword" data="00000002"/>
-				<key name="Palette1" modified="2015-10-17 19:00:29" build="151015">
+				<key name="Palette1" modified="2015-11-13 17:59:48" build="151109">
 					<value name="Name" type="string" data="#Attached:ConEmuC"/>
 					<value name="ExtendColors" type="hex" data="00"/>
 					<value name="ExtendColorIdx" type="hex" data="0e"/>
@@ -688,7 +688,7 @@
 					<value name="ColorTable30" type="dword" data="0000ffff"/>
 					<value name="ColorTable31" type="dword" data="00ffffff"/>
 				</key>
-				<key name="Palette2" modified="2015-10-17 19:00:29" build="151015">
+				<key name="Palette2" modified="2015-11-13 17:59:48" build="151109">
 					<value name="Name" type="string" data="Monokai"/>
 					<value name="ExtendColors" type="hex" data="00"/>
 					<value name="ExtendColorIdx" type="hex" data="0e"/>

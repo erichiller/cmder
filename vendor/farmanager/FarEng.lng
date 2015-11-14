@@ -1,6 +1,6 @@
 ﻿.Language=English,English
 
-//Version: 3.0 build 4437
+//Version: 3.0 build 4454
 
 "Yes"
 "No"
@@ -939,9 +939,8 @@
 "T"
 "P"
 "E"
-" %1 bytes in 1 file "
-" %1 bytes in %2 files "
-" %1 bytes in %2 files "
+" Bytes: %1, files: %2, folders: %3 "
+" %1 (%2/%3) %4 %5 "
 " %1 free bytes "
 
 "View"

@@ -2,7 +2,7 @@
 .PluginContents=arclite
 
 @Contents
-$^#arclite 1.6.15#
+$^#arclite 1.6.19#
 	Archive management based on 7z.dll from ~7-Zip~@http://7-zip.org@ project.
 
 	~Plugin duscussion~@http://forum.farmanager.com/viewtopic.php?t=5637@
@@ -14,7 +14,7 @@ $^#arclite 1.6.15#
 	~Command line parameters~@Prefix@
 
 @Extract
-$^#arclite 1.6.15#
+$^#arclite 1.6.19#
 $ #Extract archive#
 
 	Extract single archive by selecting it and pressing #Shift-F2#.
@@ -47,7 +47,7 @@ unpacking entire archive and archive's root directory contains more than one ele
 after successful extraction.
 
 @Update
-$^#arclite 1.6.15#
+$^#arclite 1.6.19#
 $ #Create and update archive#
 
 	In order to create an archive select files and press #Shift-F1# or select #Create archive#
@@ -118,7 +118,7 @@ ask user, overwrite or skip file.
 Empty directories are not archived when filter is active.
 
 @Config
-$^#arclite 1.6.15#
+$^#arclite 1.6.19#
 $ #Plugin settings#
 
 	Press #Alt-Shift-F9# to open Settings dialog.
@@ -149,7 +149,7 @@ with Ctrl-PgDn.
 	#max_check_size# - Maximum number of bytes to load when detecting archive format (DWORD). Default is 1 Mb.
 
 @Prefix
-$^#arclite 1.6.15#
+$^#arclite 1.6.19#
 $ #Prefix command line format#
 
 	#Open archive#
@@ -197,7 +197,7 @@ $ #Prefix command line format#
 	<archive> ... = list of archives
 
 @SfxOptions
-$^#arclite 1.6.15#
+$^#arclite 1.6.19#
 $ #Self-extracting archive options#
 
 	#Module name# - Select one of the available SFX modules:
