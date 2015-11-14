@@ -49,7 +49,6 @@ try {
 	set-alias vim bashcall
 	set-alias gunzip bashcall
 	set-alias irssi bashcall
-	set-alias vi vim
 	Remove-Item alias:curl
 	set-alias curl bashcall
 	# mingw
@@ -65,6 +64,8 @@ try {
 # set alias (for no arguments ) // functions (for arguments)
 Remove-Item alias:wget
 function wget { wget.exe --no-check-certificate $args }
+
+function vi { & ( $env:CMDER_ROOT + "\vendor\msys2\usr\bin\bash.exe" ) -c '"' vim $args '"' }
 
 # set-alias -passthru vim bashcall # debug
 function bashcall {

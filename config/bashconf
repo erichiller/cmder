@@ -1,0 +1,39 @@
+#Golang
+if [ -d "/c/Go" ] ; then
+	export GOROOT=/c/go
+	export PATH=$GOROOT/bin:$PATH
+	export GOPATH=~/dev
+fi
+if [ -d "$HOME/dev/lib/go" ] ; then
+	export GOROOT=~/dev/lib/go
+	export PATH=$GOROOT/bin:$PATH
+	export GOPATH=~/dev
+fi
+#NodeJs , NPM
+if [ -d "$CMDER_ROOT/vendor/nodejs" ] ; then
+	export PATH=$CMDER_ROOT/vendor/nodejs:$PATH
+	alias npm='npm.cmd'
+fi
+
+# for terminal line coloring
+export PS1="\[$(tput sgr0)\]\[$(tput setaf 1)\]\u \[$(tput setaf 6)\]\w \[$(tput setaf 1)\]\\$ \[$(tput setaf 2)\]"
+none="$(tput sgr0)"
+trap 'echo -ne "${none}"' DEBUG
+
+# ls dir coloring
+export LS_OPTIONS='--color=auto'
+eval "`dircolors -b`"
+alias ls='ls $LS_OPTIONS'
+alias ll='ls $LS_OPTIONS -l'
+alias l='ls $LS_OPTIONS -lA'
+alias vi="vim"
+
+# ERIC's CONFIGs
+# fix CMDER_ROOT from C:\blah\blah\blah to /c/blah/blah/blah
+export CMDER_ROOT=$(echo "/$CMDER_ROOT" | sed -e 's/\\/\//g' -e 's/://')
+# add CMDER_ROOT/bin to path
+PATH="${CMDER_ROOT}/bin::${PATH}"
+${CMDER_ROOT}/scripts/start-ssh-agent.cmd
+
+if [ -f ~/.profile ]; then . ~/.profile; fi
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi

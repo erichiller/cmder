@@ -24,5 +24,5 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 #fi
 #echo "DIR is '$DIR'"
 
-$DIR/../share/vim/vim74/vim.exe "$@"
-echo ""
+$DIR/../share/vim/vim74/vim.exe "$@" -u "$ConEmuDir/../../config/.vimrc"
+echo "" # this line is needed else there is a weird space on the line after vim closes

@@ -14,20 +14,29 @@ see: https://github.com/Maximus5/ConEmu/issues/334#event-419601706
 
 	<!-- EVIL LINE; BREAKS FAR.EXE				<value name="WndDragKey" type="dword" data="80808001"/>		-->
 
-Try to maintain portability. I BELIEVE all customizations to be in: (but don't count on it)
-	!! also remember that user settings are in HOME DIRECTORY
-	
+# Main goals / Purpose
+Try to maintain portability.
+	!! trying to keep user _settings_ in /config
+	!! trying to keep user  _secure data_
+							_history_
+							_temporary files_ in %USERPROFILE% (aka the home directory)
+
+ I BELIEVE all customizations to be in: (but don't count on it):
 	vendor/profile.ps1
 	vendor/init.bat
 	config/
 	bin/
-	github's bin additions
+	msys2/usr/bin/vim
+	msys2/etc/profile
 	scripts/helpfile
 	vendor/irssi
 !!!!	vendor/github-for-windows/cmd/start-ssh-agent.bat
 ------------> I rewrote this and it is important!!!!!
 
-(put the conemu plugins into farmanager)
+# Far Manager
+1. put the conemu plugins into farmanager
+2. Erase the autowrap plugin
+3. Put the maximus wrap plugin into farmanager
 
 # Directory Copy (no files)
 
