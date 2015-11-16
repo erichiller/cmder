@@ -1,11 +1,11 @@
  ConEmuLn
 
- Timestamp is 5641211f (Tue Nov 10 01:41:35 2015)
+ Timestamp is 564922ff (Mon Nov 16 03:27:43 2015)
 
  Preferred load address is 10000000
 
  Start         Length     Name                   Class
- 0001:00000000 00004ef2H .text                   CODE
+ 0001:00000000 00004f22H .text                   CODE
  0002:00000000 000000acH .idata$5                DATA
  0002:000000b0 000004e0H .rdata                  DATA
  0002:00000590 00000010H .rdata$sxdata           DATA
@@ -51,81 +51,81 @@
  0001:00000da1       _DllMain@12                10001da1 f   ConEmuLn.obj
  0001:00000df2       __DllMainCRTStartup@12     10001df2 f   ConEmuLn.obj
  0001:00000e09       ?GetPluginInfoW995@@YIXPAX@Z 10001e09 f   ConEmuLn995.obj
- 0001:00000e51       ?SetStartupInfoW995@@YIXPAX@Z 10001e51 f   ConEmuLn995.obj
- 0001:00000f96       _OpenPluginW@8             10001f96 f   ConEmuLn995.obj
- 0001:00000fb4       ?ExitFARW995@@YIXXZ        10001fb4 f   ConEmuLn995.obj
- 0001:00000ffa       ?GetMsgW995@@YIPB_WH@Z     10001ffa f   ConEmuLn995.obj
- 0001:0000189f       ?ConfigureW995@@YIHH@Z     1000289f f   ConEmuLn995.obj
- 0001:000018b0       ?SettingsLoadW995@@YIXXZ   100028b0 f   ConEmuLn995.obj
- 0001:000018bb       ?SettingsSaveW995@@YIXXZ   100028bb f   ConEmuLn995.obj
- 0001:000018c6       ?GetPluginInfoW1900@@YIXPAX@Z 100028c6 f   ConEmuLn1900.obj
- 0001:00001916       ?SetStartupInfoW1900@@YIXPAX@Z 10002916 f   ConEmuLn1900.obj
- 0001:00001a04       ?ExitFARW1900@@YIXXZ       10002a04 f   ConEmuLn1900.obj
- 0001:00001a33       ?GetMsgW1900@@YIPB_WH@Z    10002a33 f   ConEmuLn1900.obj
- 0001:00002362       ?ConfigureW1900@@YIHH@Z    10003362 f   ConEmuLn1900.obj
- 0001:00002373       ?SettingsLoadW1900@@YIXXZ  10003373 f   ConEmuLn1900.obj
- 0001:00002464       ?SettingsSaveW1900@@YIXXZ  10003464 f   ConEmuLn1900.obj
- 0001:0000252d       _GetGlobalInfoW@4          1000352d f   ConEmuLn2800.obj
- 0001:000025c0       ?GetPluginInfoW2800@@YIXPAX@Z 100035c0 f   ConEmuLn2800.obj
- 0001:00002610       ?SetStartupInfoW2800@@YIXPAX@Z 10003610 f   ConEmuLn2800.obj
- 0001:000026fe       ?OpenW2800@@YGPAXPBX@Z     100036fe f   ConEmuLn2800.obj
- 0001:000026fe       ?OpenW1900@@YGPAXPBX@Z     100036fe f   ConEmuLn1900.obj
- 0001:0000271d       ?ExitFARW2800@@YIXXZ       1000371d f   ConEmuLn2800.obj
- 0001:0000274c       ?GetMsgW2800@@YIPB_WH@Z    1000374c f   ConEmuLn2800.obj
- 0001:000030a8       ?ConfigureW2800@@YIHH@Z    100040a8 f   ConEmuLn2800.obj
- 0001:000030b9       ?SettingsLoadW2800@@YIXXZ  100040b9 f   ConEmuLn2800.obj
- 0001:00003199       ?SettingsSaveW2800@@YIXXZ  10004199 f   ConEmuLn2800.obj
- 0001:00003258       _GetMinFarVersion@0        10004258 f   ConEmuLnA.obj
- 0001:00003287       _SetStartupInfo@4          10004287 f   ConEmuLnA.obj
- 0001:000033f9       _GetPluginInfo@4           100043f9 f   ConEmuLnA.obj
- 0001:00003459       _ExitFAR@0                 10004459 f   ConEmuLnA.obj
- 0001:00003dc4       _Configure@4               10004dc4 f   ConEmuLnA.obj
- 0001:00003dd9       _OpenPlugin@8              10004dd9 f   ConEmuLnA.obj
- 0001:00003def       ?SettingsLoadA@@YIXXZ      10004def f   ConEmuLnA.obj
- 0001:00003dfa       ?SettingsSaveA@@YIXXZ      10004dfa f   ConEmuLnA.obj
- 0001:00003e05       ?HeapInitialize@@YI_NXZ    10004e05 f   Memory.obj
- 0001:00003e2b       ?HeapDeinitialize@@YIXXZ   10004e2b f   Memory.obj
- 0001:00003e43       ?xf_calloc@@YAPAXII@Z      10004e43 f   Memory.obj
- 0001:00003e5c       ?xf_free@@YAXPAX@Z         10004e5c f   Memory.obj
- 0001:00003e80       _memset                    10004e80 f   libCRT:memset.obj
- 0001:00003ec0       _memmove                   10004ec0 f   libCRT:memmove.obj
- 0001:000040c0       _wcstoul                   100050c0 f   libCRT:strtol.obj
- 0001:00004260       _strtoul                   10005260 f   libCRT:strtol.obj
- 0001:0000427a       _VerQueryValueW@16         1000527a f   version:VERSION.dll
- 0001:00004280       _GetFileVersionInfoW@16    10005280 f   version:VERSION.dll
- 0001:00004286       _GetFileVersionInfoSizeW@8 10005286 f   version:VERSION.dll
- 0001:0000428c       __SEH_prolog               1000528c f   LIBCMT:sehprolg.obj
- 0001:000042c7       __SEH_epilog               100052c7 f   LIBCMT:sehprolg.obj
- 0001:000042e0       __except_handler3          100052e0 f   LIBCMT:exsup3.obj
- 0001:000043de       __seh_longjmp_unwind@4     100053de f   LIBCMT:exsup3.obj
- 0001:00004400       __alloca_probe             10005400     LIBCMT:chkstk.obj
- 0001:00004400       __chkstk                   10005400 f   LIBCMT:chkstk.obj
- 0001:0000442b       _CallDestructExceptionObject 1000542b f   LIBCMT:calldtor.obj
- 0001:00004464       __global_unwind2           10005464 f   LIBCMT:exsup.obj
- 0001:000044c9       __local_unwind2            100054c9 f   LIBCMT:exsup.obj
- 0001:0000454d       __abnormal_termination     1000554d f   LIBCMT:exsup.obj
- 0001:00004570       __NLG_Notify1              10005570 f   LIBCMT:exsup.obj
- 0001:00004579       __NLG_Notify               10005579 f   LIBCMT:exsup.obj
- 0001:00004590       __NLG_Dispatch2            10005590     LIBCMT:exsup.obj
- 0001:00004590       __NLG_Dispatch             10005590     LIBCMT:exsup.obj
- 0001:00004598       __NLG_Call                 10005598 f   LIBCMT:exsup.obj
- 0001:0000459a       __NLG_Return2              1000559a     LIBCMT:exsup.obj
- 0001:00004660       __ValidateEH3RN            10005660 f   LIBCMT:eh3valid.obj
- 0001:000049d0       __ValidateImageBase        100059d0 f   LIBCMT:pesect.obj
- 0001:00004a10       __FindPESection            10005a10 f   LIBCMT:pesect.obj
- 0001:00004a54       __IsNonwritableInCurrentImage 10005a54 f   LIBCMT:pesect.obj
- 0001:00004ac0       @__security_check_cookie@4 10005ac0 f   LIBCMT:secchk.obj
- 0001:00004ad0       __except_handler4          10005ad0 f   LIBCMT:chandler4.obj
- 0001:00004c5c       __SEH_prolog4              10005c5c f   LIBCMT:sehprolg4.obj
- 0001:00004ca1       __SEH_epilog4              10005ca1 f   LIBCMT:sehprolg4.obj
- 0001:00004cb5       ___report_gsfailure        10005cb5 f   LIBCMT:gs_report.obj
- 0001:00004d98       __local_unwind4            10005d98 f   LIBCMT:exsup4.obj
- 0001:00004e6e       __seh_longjmp_unwind4@4    10005e6e f   LIBCMT:exsup4.obj
- 0001:00004e8a       @_EH4_CallFilterFunc@8     10005e8a f   LIBCMT:exsup4.obj
- 0001:00004ea1       @_EH4_TransferToHandler@8  10005ea1 f   LIBCMT:exsup4.obj
- 0001:00004eba       @_EH4_GlobalUnwind@4       10005eba f   LIBCMT:exsup4.obj
- 0001:00004ed4       @_EH4_LocalUnwind@16       10005ed4 f   LIBCMT:exsup4.obj
- 0001:00004eec       _RtlUnwind@16              10005eec f   kernel32:KERNEL32.dll
+ 0001:00000e5a       ?SetStartupInfoW995@@YIXPAX@Z 10001e5a f   ConEmuLn995.obj
+ 0001:00000f9f       _OpenPluginW@8             10001f9f f   ConEmuLn995.obj
+ 0001:00000fbd       ?ExitFARW995@@YIXXZ        10001fbd f   ConEmuLn995.obj
+ 0001:00001003       ?GetMsgW995@@YIPB_WH@Z     10002003 f   ConEmuLn995.obj
+ 0001:000018a8       ?ConfigureW995@@YIHH@Z     100028a8 f   ConEmuLn995.obj
+ 0001:000018b9       ?SettingsLoadW995@@YIXXZ   100028b9 f   ConEmuLn995.obj
+ 0001:000018c4       ?SettingsSaveW995@@YIXXZ   100028c4 f   ConEmuLn995.obj
+ 0001:000018cf       ?GetPluginInfoW1900@@YIXPAX@Z 100028cf f   ConEmuLn1900.obj
+ 0001:00001930       ?SetStartupInfoW1900@@YIXPAX@Z 10002930 f   ConEmuLn1900.obj
+ 0001:00001a1e       ?ExitFARW1900@@YIXXZ       10002a1e f   ConEmuLn1900.obj
+ 0001:00001a4d       ?GetMsgW1900@@YIPB_WH@Z    10002a4d f   ConEmuLn1900.obj
+ 0001:0000237c       ?ConfigureW1900@@YIHH@Z    1000337c f   ConEmuLn1900.obj
+ 0001:0000238d       ?SettingsLoadW1900@@YIXXZ  1000338d f   ConEmuLn1900.obj
+ 0001:0000247e       ?SettingsSaveW1900@@YIXXZ  1000347e f   ConEmuLn1900.obj
+ 0001:00002547       _GetGlobalInfoW@4          10003547 f   ConEmuLn2800.obj
+ 0001:000025d5       ?GetPluginInfoW2800@@YIXPAX@Z 100035d5 f   ConEmuLn2800.obj
+ 0001:00002636       ?SetStartupInfoW2800@@YIXPAX@Z 10003636 f   ConEmuLn2800.obj
+ 0001:00002724       ?OpenW2800@@YGPAXPBX@Z     10003724 f   ConEmuLn2800.obj
+ 0001:00002724       ?OpenW1900@@YGPAXPBX@Z     10003724 f   ConEmuLn1900.obj
+ 0001:00002743       ?ExitFARW2800@@YIXXZ       10003743 f   ConEmuLn2800.obj
+ 0001:00002772       ?GetMsgW2800@@YIPB_WH@Z    10003772 f   ConEmuLn2800.obj
+ 0001:000030ce       ?ConfigureW2800@@YIHH@Z    100040ce f   ConEmuLn2800.obj
+ 0001:000030df       ?SettingsLoadW2800@@YIXXZ  100040df f   ConEmuLn2800.obj
+ 0001:000031bf       ?SettingsSaveW2800@@YIXXZ  100041bf f   ConEmuLn2800.obj
+ 0001:0000327e       _GetMinFarVersion@0        1000427e f   ConEmuLnA.obj
+ 0001:000032ad       _SetStartupInfo@4          100042ad f   ConEmuLnA.obj
+ 0001:0000341f       _GetPluginInfo@4           1000441f f   ConEmuLnA.obj
+ 0001:00003488       _ExitFAR@0                 10004488 f   ConEmuLnA.obj
+ 0001:00003df3       _Configure@4               10004df3 f   ConEmuLnA.obj
+ 0001:00003e08       _OpenPlugin@8              10004e08 f   ConEmuLnA.obj
+ 0001:00003e1e       ?SettingsLoadA@@YIXXZ      10004e1e f   ConEmuLnA.obj
+ 0001:00003e29       ?SettingsSaveA@@YIXXZ      10004e29 f   ConEmuLnA.obj
+ 0001:00003e34       ?HeapInitialize@@YI_NXZ    10004e34 f   Memory.obj
+ 0001:00003e5a       ?HeapDeinitialize@@YIXXZ   10004e5a f   Memory.obj
+ 0001:00003e72       ?xf_calloc@@YAPAXII@Z      10004e72 f   Memory.obj
+ 0001:00003e8b       ?xf_free@@YAXPAX@Z         10004e8b f   Memory.obj
+ 0001:00003eb0       _memset                    10004eb0 f   libCRT:memset.obj
+ 0001:00003ef0       _memmove                   10004ef0 f   libCRT:memmove.obj
+ 0001:000040f0       _wcstoul                   100050f0 f   libCRT:strtol.obj
+ 0001:00004290       _strtoul                   10005290 f   libCRT:strtol.obj
+ 0001:000042aa       _VerQueryValueW@16         100052aa f   version:VERSION.dll
+ 0001:000042b0       _GetFileVersionInfoW@16    100052b0 f   version:VERSION.dll
+ 0001:000042b6       _GetFileVersionInfoSizeW@8 100052b6 f   version:VERSION.dll
+ 0001:000042bc       __SEH_prolog               100052bc f   LIBCMT:sehprolg.obj
+ 0001:000042f7       __SEH_epilog               100052f7 f   LIBCMT:sehprolg.obj
+ 0001:00004310       __except_handler3          10005310 f   LIBCMT:exsup3.obj
+ 0001:0000440e       __seh_longjmp_unwind@4     1000540e f   LIBCMT:exsup3.obj
+ 0001:00004430       __alloca_probe             10005430     LIBCMT:chkstk.obj
+ 0001:00004430       __chkstk                   10005430 f   LIBCMT:chkstk.obj
+ 0001:0000445b       _CallDestructExceptionObject 1000545b f   LIBCMT:calldtor.obj
+ 0001:00004494       __global_unwind2           10005494 f   LIBCMT:exsup.obj
+ 0001:000044f9       __local_unwind2            100054f9 f   LIBCMT:exsup.obj
+ 0001:0000457d       __abnormal_termination     1000557d f   LIBCMT:exsup.obj
+ 0001:000045a0       __NLG_Notify1              100055a0 f   LIBCMT:exsup.obj
+ 0001:000045a9       __NLG_Notify               100055a9 f   LIBCMT:exsup.obj
+ 0001:000045c0       __NLG_Dispatch2            100055c0     LIBCMT:exsup.obj
+ 0001:000045c0       __NLG_Dispatch             100055c0     LIBCMT:exsup.obj
+ 0001:000045c8       __NLG_Call                 100055c8 f   LIBCMT:exsup.obj
+ 0001:000045ca       __NLG_Return2              100055ca     LIBCMT:exsup.obj
+ 0001:00004690       __ValidateEH3RN            10005690 f   LIBCMT:eh3valid.obj
+ 0001:00004a00       __ValidateImageBase        10005a00 f   LIBCMT:pesect.obj
+ 0001:00004a40       __FindPESection            10005a40 f   LIBCMT:pesect.obj
+ 0001:00004a84       __IsNonwritableInCurrentImage 10005a84 f   LIBCMT:pesect.obj
+ 0001:00004af0       @__security_check_cookie@4 10005af0 f   LIBCMT:secchk.obj
+ 0001:00004b00       __except_handler4          10005b00 f   LIBCMT:chandler4.obj
+ 0001:00004c8c       __SEH_prolog4              10005c8c f   LIBCMT:sehprolg4.obj
+ 0001:00004cd1       __SEH_epilog4              10005cd1 f   LIBCMT:sehprolg4.obj
+ 0001:00004ce5       ___report_gsfailure        10005ce5 f   LIBCMT:gs_report.obj
+ 0001:00004dc8       __local_unwind4            10005dc8 f   LIBCMT:exsup4.obj
+ 0001:00004e9e       __seh_longjmp_unwind4@4    10005e9e f   LIBCMT:exsup4.obj
+ 0001:00004eba       @_EH4_CallFilterFunc@8     10005eba f   LIBCMT:exsup4.obj
+ 0001:00004ed1       @_EH4_TransferToHandler@8  10005ed1 f   LIBCMT:exsup4.obj
+ 0001:00004eea       @_EH4_GlobalUnwind@4       10005eea f   LIBCMT:exsup4.obj
+ 0001:00004f04       @_EH4_LocalUnwind@16       10005f04 f   LIBCMT:exsup4.obj
+ 0001:00004f1c       _RtlUnwind@16              10005f1c f   kernel32:KERNEL32.dll
  0002:00000000       __imp__RegSetValueExW@24   10006000     advapi32:ADVAPI32.dll
  0002:00000004       __imp__RegOpenKeyExW@20    10006004     advapi32:ADVAPI32.dll
  0002:00000008       __imp__RegQueryValueExW@24 10006008     advapi32:ADVAPI32.dll
@@ -254,17 +254,17 @@
  0001:00000a60       ?LoadModuleVersion@@YI_NPB_WAAUtagVS_FIXEDFILEINFO@@PA_WI@Z 10001a60 f   ConEmuLn.obj
  0001:00000bf4       ?LoadFarVersion@@YI_NPB_WAAUFarVersion@@AAY0CAA@_W@Z 10001bf4 f   ConEmuLn.obj
  0001:00000c60       ?LoadFarVersion@@YI_NAAUFarVersion@@AAY0CAA@_W@Z 10001c60 f   ConEmuLn.obj
- 0001:00001017       ?ConfigDlgProc@@YGJPAXHHJ@Z 10002017 f   ConEmuLn995.obj
- 0001:00001136       ?ConfigureProc@@YIHH@Z     10002136 f   ConEmuLn995.obj
- 0001:00001a52       ?ConfigDlgProc@@YGHPAXHH0@Z 10002a52 f   ConEmuLn1900.obj
- 0001:00001b71       ?ConfigureProc@@YIHH@Z     10002b71 f   ConEmuLn1900.obj
- 0001:0000276b       ?ConfigDlgProc@@YGHPAXHH0@Z 1000376b f   ConEmuLn2800.obj
- 0001:0000288a       ?ConfigureProc@@YIHH@Z     1000388a f   ConEmuLn2800.obj
- 0001:000034a4       ?GetMsg@@YIPADH@Z          100044a4 f   ConEmuLnA.obj
- 0001:000034bc       ?ConfigDlgProc@@YGJPAXHHJ@Z 100044bc f   ConEmuLnA.obj
- 0001:000035df       ?ConfigureProc@@YIHH@Z     100045df f   ConEmuLnA.obj
- 0001:00003f20       ?strtoxl@@YAKPB_WPAPA_WHH@Z 10004f20 f   libCRT:strtol.obj
- 0001:000040e0       ?strtoxl@@YAKPBDPAPADHH@Z  100050e0 f   libCRT:strtol.obj
- 0001:00004484       __unwind_handler           10005484 f   LIBCMT:exsup.obj
- 0001:000045a0       _ValidateScopeTableHandlers 100055a0 f   LIBCMT:eh3valid.obj
- 0001:00004e28       __unwind_handler4          10005e28 f   LIBCMT:exsup4.obj
+ 0001:00001020       ?ConfigDlgProc@@YGJPAXHHJ@Z 10002020 f   ConEmuLn995.obj
+ 0001:0000113f       ?ConfigureProc@@YIHH@Z     1000213f f   ConEmuLn995.obj
+ 0001:00001a6c       ?ConfigDlgProc@@YGHPAXHH0@Z 10002a6c f   ConEmuLn1900.obj
+ 0001:00001b8b       ?ConfigureProc@@YIHH@Z     10002b8b f   ConEmuLn1900.obj
+ 0001:00002791       ?ConfigDlgProc@@YGHPAXHH0@Z 10003791 f   ConEmuLn2800.obj
+ 0001:000028b0       ?ConfigureProc@@YIHH@Z     100038b0 f   ConEmuLn2800.obj
+ 0001:000034d3       ?GetMsg@@YIPADH@Z          100044d3 f   ConEmuLnA.obj
+ 0001:000034eb       ?ConfigDlgProc@@YGJPAXHHJ@Z 100044eb f   ConEmuLnA.obj
+ 0001:0000360e       ?ConfigureProc@@YIHH@Z     1000460e f   ConEmuLnA.obj
+ 0001:00003f50       ?strtoxl@@YAKPB_WPAPA_WHH@Z 10004f50 f   libCRT:strtol.obj
+ 0001:00004110       ?strtoxl@@YAKPBDPAPADHH@Z  10005110 f   libCRT:strtol.obj
+ 0001:000044b4       __unwind_handler           100054b4 f   LIBCMT:exsup.obj
+ 0001:000045d0       _ValidateScopeTableHandlers 100055d0 f   LIBCMT:eh3valid.obj
+ 0001:00004e58       __unwind_handler4          10005e58 f   LIBCMT:exsup4.obj
