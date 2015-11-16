@@ -35,5 +35,8 @@ export CMDER_ROOT=$(echo "/$CMDER_ROOT" | sed -e 's/\\/\//g' -e 's/://')
 PATH="${CMDER_ROOT}/bin::${PATH}"
 ${CMDER_ROOT}/scripts/start-ssh-agent.cmd
 
+# input rc
+if [ -f ${CMDER_ROOT}/config/.inputrc ] ; then bind -f ${CMDER_ROOT}/config/inputrc ; fi
+
 if [ -f ~/.profile ]; then . ~/.profile; fi
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
