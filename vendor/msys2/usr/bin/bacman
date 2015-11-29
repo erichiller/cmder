@@ -25,7 +25,7 @@ shopt -s extglob
 shopt -s nullglob
 
 declare -r myname='bacman'
-declare -r myver='4.2.1-345-g6a9e1-dirty'
+declare -r myver='4.2.1-373-g4c60-dirty'
 USE_COLOR='y'
 INCLUDE_PACNEW='n'
 # Required for fakeroot because options are shifted off the array.

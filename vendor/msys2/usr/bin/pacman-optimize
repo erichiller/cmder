@@ -26,7 +26,7 @@ export TEXTDOMAINDIR='/usr/share/locale'
 
 USE_COLOR='y'
 
-declare -r myver='4.2.1-345-g6a9e1-dirty'
+declare -r myver='4.2.1-373-g4c60-dirty'
 
 eval $(awk '/DBPath/ {print $1$2$3}' /etc/pacman.conf)
 dbroot="${DBPath:-/var/lib/pacman/}"

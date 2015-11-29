@@ -312,3 +312,40 @@
 [2015-11-05 00:53] [ALPM] removed openssl-devel (1.0.2.d-1)
 [2015-11-05 00:53] [ALPM] removed zlib-devel (1.2.8-3)
 [2015-11-05 00:53] [ALPM] transaction completed
+[2015-11-28 22:44] [PACMAN] Running '/usr/bin/pacman -Sy'
+[2015-11-28 22:44] [PACMAN] synchronizing package lists
+[2015-11-28 22:44] [PACMAN] Running '/usr/bin/pacman -S --noconfirm --needed bash pacman msys2-runtime msys2-runtime-devel'
+[2015-11-28 22:44] [ALPM] transaction started
+[2015-11-28 22:44] [ALPM] upgraded msys2-runtime (2.2.1.16667.d31de1b-1 -> 2.4.0.16752.6eb10ef-1)
+[2015-11-28 22:44] [ALPM] upgraded bash (4.3.042-1 -> 4.3.042-2)
+[2015-11-28 22:44] [ALPM] upgraded pacman (4.2.1.6230.6ff894e-1 -> 4.2.1.6258.f5bbd79-1)
+[2015-11-28 22:44] [ALPM] upgraded msys2-runtime-devel (2.2.1.16667.d31de1b-1 -> 2.4.0.16752.6eb10ef-1)
+[2015-11-28 22:44] [ALPM] transaction completed
+[2015-11-28 22:45] [PACMAN] Running '/usr/bin/pacman -Sy'
+[2015-11-28 22:45] [PACMAN] synchronizing package lists
+[2015-11-28 22:45] [PACMAN] Running 'pacman -Su'
+[2015-11-28 22:45] [PACMAN] starting full system upgrade
+[2015-11-28 22:46] [ALPM] transaction started
+[2015-11-28 22:46] [ALPM] upgraded gcc-libs (4.9.2-5 -> 4.9.2-6)
+[2015-11-28 22:46] [ALPM] upgraded dos2unix (7.3.1-1 -> 7.3.2-1)
+[2015-11-28 22:46] [ALPM] upgraded flex (2.5.39-4 -> 2.6.0-1)
+[2015-11-28 22:46] [ALPM] upgraded gmp (6.0.0-3 -> 6.1.0-1)
+[2015-11-28 22:46] [ALPM] upgraded ncurses (6.0.20150627-2 -> 6.0.20151121-1)
+[2015-11-28 22:46] [ALPM] upgraded libreadline (6.3.008-5 -> 6.3.008-6)
+[2015-11-28 22:46] [ALPM] upgraded git (2.6.2-1 -> 2.6.3-1)
+[2015-11-28 22:46] [ALPM] upgraded grep (2.21-1 -> 2.22-1)
+[2015-11-28 22:46] [ALPM] upgraded help2man (1.47.2-1 -> 1.47.3-1)
+[2015-11-28 22:46] [ALPM] upgraded libunrar (5.3.4-1 -> 5.3.7-1)
+[2015-11-28 22:46] [ALPM] upgraded mingw-w64-x86_64-headers-git (5.0.0.4578.ace70f1-1 -> 5.0.0.4592.90b8472-1)
+[2015-11-28 22:46] [ALPM] upgraded mingw-w64-x86_64-crt-git (5.0.0.4573.628fdbf-1 -> 5.0.0.4592.90b8472-1)
+[2015-11-28 22:46] [ALPM] upgraded mingw-w64-x86_64-gmp (6.0.0-3 -> 6.1.0-1)
+[2015-11-28 22:46] [ALPM] upgraded mintty (1~2.1.5-1 -> 1~2.2.1-1)
+[2015-11-28 22:46] [ALPM] upgraded scons (2.3.4-4 -> 2.4.1-1)
+[2015-11-28 22:46] [ALPM] upgraded unrar (5.3.4-1 -> 5.3.7-1)
+[2015-11-28 22:46] [ALPM] transaction completed
+[2015-11-28 22:47] [PACMAN] Running 'pacman -Su'
+[2015-11-28 22:47] [PACMAN] starting full system upgrade
+[2015-11-28 22:47] [PACMAN] Running 'pacman -Su'
+[2015-11-28 22:47] [PACMAN] starting full system upgrade
+[2015-11-28 22:47] [PACMAN] Running 'pacman -Sc'
+[2015-11-28 23:19] [PACMAN] Running 'pacman --needed -S bash pacman pacman-mirrors msys2-runtime'

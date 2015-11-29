@@ -112,14 +112,14 @@ int	_EXFUN(mkostemp,(char *, int));
 int	_EXFUN(mkostemps,(char *, int, int));
 int	_EXFUN(mkstemp,(char *));
 int	_EXFUN(mkstemps,(char *, int));
-char *	_EXFUN(mktemp,(char *) _ATTRIBUTE ((__warning__ ("the use of `mktemp' is dangerous; use `mkstemp' instead"))));
+char *	_EXFUN(mktemp,(char *) _ATTRIBUTE ((__deprecated__("the use of `mktemp' is dangerous; use `mkstemp' instead"))));
 #endif
 char *	_EXFUN(_mkdtemp_r, (struct _reent *, char *));
 int	_EXFUN(_mkostemp_r, (struct _reent *, char *, int));
 int	_EXFUN(_mkostemps_r, (struct _reent *, char *, int, int));
 int	_EXFUN(_mkstemp_r, (struct _reent *, char *));
 int	_EXFUN(_mkstemps_r, (struct _reent *, char *, int));
-char *	_EXFUN(_mktemp_r, (struct _reent *, char *) _ATTRIBUTE ((__warning__ ("the use of `mktemp' is dangerous; use `mkstemp' instead"))));
+char *	_EXFUN(_mktemp_r, (struct _reent *, char *) _ATTRIBUTE ((__deprecated__("the use of `mktemp' is dangerous; use `mkstemp' instead"))));
 #endif
 _VOID	_EXFUN(qsort,(_PTR __base, size_t __nmemb, size_t __size, __compar_fn_t _compar));
 int	_EXFUN(rand,(_VOID));
@@ -127,6 +127,7 @@ _PTR	_EXFUN_NOTHROW(realloc,(_PTR __r, size_t __size));
 #ifndef __STRICT_ANSI__
 _PTR	_EXFUN(reallocf,(_PTR __r, size_t __size));
 char *	_EXFUN(realpath, (const char *__restrict path, char *__restrict resolved_path));
+int	_EXFUN(rpmatch, (const char *response));
 #endif
 _VOID	_EXFUN(srand,(unsigned __seed));
 double	_EXFUN(strtod,(const char *__restrict __n, char **__restrict __end_PTR));
@@ -273,6 +274,7 @@ _VOID	_EXFUN(qsort_r,(_PTR __base, size_t __nmemb, size_t __size, int (*_compar)
 
 /* On platforms where long double equals double.  */
 #ifdef _HAVE_LONG_DOUBLE
+extern long double _strtold_r (struct _reent *, const char *__restrict, char **__restrict);
 #if !defined(__STRICT_ANSI__) || \
   (defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L) || \
   (defined(__cplusplus) && __cplusplus >= 201103L)

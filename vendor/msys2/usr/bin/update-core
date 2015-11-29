@@ -23,7 +23,7 @@ shopt -s extglob
 export TEXTDOMAIN='pacman-scripts'
 export TEXTDOMAINDIR='/usr/share/locale'
 
-declare -r myver='4.2.1-345-g6a9e1-dirty'
+declare -r myver='4.2.1-373-g4c60-dirty'
 declare -r confdir='/etc'
 declare -r CRITICAL_PACKAGES="bash pacman msys2-runtime"
 declare -r OPTIONAL_PACKAGES="msys2-runtime-devel"
@@ -182,11 +182,17 @@ else
   warning "When the update has completed, you MUST close this MSYS2 window"
   warning "(use Alt-F4 or red [ X ], etc.), rather than 'exit'!!!"
   read -p "Press [Enter] key when ready to start update..."
+  export PS1='Please close this window.'
+  export PROMPT_COMMAND=
   msg "Updating core packages..."
   if ! run_pacman -S --noconfirm --needed ${CRITICAL_PACKAGES} ${OPTIONAL_PACKAGES}; then
     error "$(gettext "'%s' failed to update core packages.")" "$PACMAN"
     exit 1 # TODO: error code
   fi
+  while :
+  do
+    read -p  "Please close this window."
+  done
 fi
 
 # vim: set noet:

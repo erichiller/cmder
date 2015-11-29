@@ -1,10 +1,17 @@
+# ERIC - EDH - setup bash
+
+# fix CMDER_ROOT from C:\blah\blah\blah to /c/blah/blah/blah
+export CMDER_ROOT=$(echo "/$CMDER_ROOT" | sed -e 's/\\/\//g' -e 's/://')
+# add CMDER_ROOT/bin to path
+PATH="${CMDER_ROOT}/bin::${PATH}"
+${CMDER_ROOT}/scripts/start-ssh-agent.cmd
+
 #Golang
 if [ -d "/c/Go" ] ; then
 	export GOROOT=/c/go
 	export PATH=$GOROOT/bin:$PATH
 	export GOPATH=~/dev
-fi
-if [ -d "$HOME/dev/lib/go" ] ; then
+elif [ -d "$HOME/dev/lib/go" ] ; then
 	export GOROOT=~/dev/lib/go
 	export PATH=$GOROOT/bin:$PATH
 	export GOPATH=~/dev
@@ -14,6 +21,7 @@ if [ -d "$CMDER_ROOT/vendor/nodejs" ] ; then
 	export PATH=$CMDER_ROOT/vendor/nodejs:$PATH
 	alias npm='npm.cmd'
 fi
+#
 
 # for terminal line coloring
 export PS1="\[$(tput sgr0)\]\[$(tput setaf 1)\]\u \[$(tput setaf 6)\]\w \[$(tput setaf 1)\]\\$ \[$(tput setaf 2)\]"
@@ -28,14 +36,7 @@ alias ll='ls $LS_OPTIONS -l'
 alias l='ls $LS_OPTIONS -lA'
 alias vi="vim"
 
-# ERIC's CONFIGs
-# fix CMDER_ROOT from C:\blah\blah\blah to /c/blah/blah/blah
-export CMDER_ROOT=$(echo "/$CMDER_ROOT" | sed -e 's/\\/\//g' -e 's/://')
-# add CMDER_ROOT/bin to path
-PATH="${CMDER_ROOT}/bin::${PATH}"
-${CMDER_ROOT}/scripts/start-ssh-agent.cmd
-
-# input rc
+# now read input rc
 if [ -f ${CMDER_ROOT}/config/inputrc ] ; then bind -f ${CMDER_ROOT}/config/inputrc ; fi
 
 if [ -f ~/.profile ]; then . ~/.profile; fi

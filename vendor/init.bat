@@ -68,7 +68,7 @@
 	
 )
 :: add GOROOT to PATH ; GOROOT can only be added to PATH if checked if defined
-@if defined MSYS2_ROOT (
+@if defined GOROOT (
 	set "PATH=%USERPROFILE%;%GOROOT%\bin;%PATH%"
 	set "GOPATH=%USERPROFILE%\dev"
 )
@@ -76,8 +76,6 @@
 @if exist "%CMDER_ROOT%\vendor\nodejs" (
 	@set "PATH=%CMDER_ROOT%\vendor\nodejs;%PATH%;"
 )
-
-
 
 :: Add aliases
 @doskey /macrofile="%CMDER_ROOT%\config\aliases"

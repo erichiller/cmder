@@ -25,7 +25,7 @@ shopt -s extglob
 export TEXTDOMAIN='pacman-scripts'
 export TEXTDOMAINDIR='/usr/share/locale'
 
-declare -r myver='4.2.1-345-g6a9e1-dirty'
+declare -r myver='4.2.1-373-g4c60-dirty'
 declare -r confdir='/etc'
 
 QUIET=0
@@ -259,7 +259,7 @@ db_remove_delta() {
 		msg2 "$(gettext "Removing existing entry '%s'...")" "$filename"
 		# empty deltas file contains only "%DELTAS%"
 		if (( $(wc -l < "$deltas") == 1 )); then
-			msg2 "$(gettext "Removing empty deltas file ...")"
+			msg2 "$(gettext "Removing empty deltas file...")"
 			rm "$deltas"
 		fi
 

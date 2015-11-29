@@ -22,6 +22,11 @@
 typedef interface ID3D11DeviceChild ID3D11DeviceChild;
 #endif
 
+#ifndef __ID3D11VideoContext_FWD_DEFINED__
+#define __ID3D11VideoContext_FWD_DEFINED__
+typedef interface ID3D11VideoContext ID3D11VideoContext;
+#endif
+
 #ifndef __ID3D11Asynchronous_FWD_DEFINED__
 #define __ID3D11Asynchronous_FWD_DEFINED__
 typedef interface ID3D11Asynchronous ID3D11Asynchronous;

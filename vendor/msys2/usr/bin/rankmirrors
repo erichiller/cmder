@@ -22,7 +22,7 @@
 trap finaloutput INT
 
 declare -r myname='rankmirrors'
-declare -r myver='4.2.1-345-g6a9e1-dirty'
+declare -r myver='4.2.1-373-g4c60-dirty'
 
 usage() {
 	echo "${myname} (pacman) v${myver}"
