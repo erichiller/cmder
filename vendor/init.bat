@@ -35,8 +35,7 @@
     set architecture=64
 )
 
-:: Run clink
-@"%CMDER_ROOT%\vendor\clink\clink_x%architecture%.exe" inject --quiet --profile "%CMDER_ROOT%\config"
+
 
 :: Prepare for msys2
 
@@ -51,10 +50,13 @@
 
 :: Add svn , vim & other msys2 programs to the path
 @if defined MSYS2_ROOT (
-    set "PATH=%MSYS2_ROOT%\bin;%MSYS2_ROOT%\usr\bin;%MSYS2_ROOT%\share\vim\vim74;%PATH%"
+    set "PATH=%MSYS2_ROOT%\usr\bin;%PATH%"
     :: define SVN_SSH so we can use git svn with ssh svn repositories
     if not defined SVN_SSH set "SVN_SSH=%MSYS2_ROOT:\=\\%\\bin\\ssh.exe"
 )
+
+:: Run clink
+@"%CMDER_ROOT%\vendor\clink\clink_x%architecture%.exe" inject --quiet --profile "%CMDER_ROOT%\config"
 
 :: Enhance Path
 @set "PATH=%CMDER_ROOT%\bin;%PATH%;%CMDER_ROOT%"

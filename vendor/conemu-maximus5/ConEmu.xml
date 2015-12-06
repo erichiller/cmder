@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2015-11-07 08:24:44" build="151101">
+		<key name=".Vanilla" modified="2015-12-05 22:09:13" build="151202">
 			<value name="StartType" type="hex" data="00"/>
 			<value name="CmdLine" type="string" data="&quot;../farmanager/far.exe&quot; &quot;C:\Users\Eric Hiller&quot; -cur_console:d"/>
 			<value name="StartTasksFile" type="string" data=""/>
@@ -244,14 +244,14 @@
 			<value name="ConWnd Height" type="dword" data="0000003f"/>
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
-			<value name="ConWnd X" type="dword" data="00000194"/>
-			<value name="ConWnd Y" type="dword" data="fffffff9"/>
+			<value name="ConWnd X" type="dword" data="00000606"/>
+			<value name="ConWnd Y" type="dword" data="00000410"/>
 			<value name="16bit Height" type="dword" data="00000000"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
-			<value name="LastMonitor" type="dword" data="0019e9c8"/>
+			<value name="LastMonitor" type="string" data="1440,0,2880,2520"/>
 			<value name="CmdLineHistory" type="multi">
-				<line data="{Shells::PowerShell}"/>
 				<line data="{Shells::cmd}"/>
+				<line data="{Shells::PowerShell}"/>
 				<line data="{Shells::cmd 64/32}"/>
 			</value>
 			<value name="StartCreateDelay" type="dword" data="00000064"/>

@@ -1,6 +1,6 @@
  ConEmuLn
 
- Timestamp is 565827dc (Fri Nov 27 12:52:28 2015)
+ Timestamp is 5663a3ab (Sun Dec 06 05:55:39 2015)
 
  Preferred load address is 10000000
 
@@ -148,14 +148,14 @@
  0002:0000004c       __imp__HeapDestroy@4       1000604c     kernel32:KERNEL32.dll
  0002:00000050       __imp__HeapAlloc@12        10006050     kernel32:KERNEL32.dll
  0002:00000054       __imp__lstrcpyW@8          10006054     kernel32:KERNEL32.dll
- 0002:00000058       __imp__HeapFree@12         10006058     kernel32:KERNEL32.dll
- 0002:0000005c       __imp__SetUnhandledExceptionFilter@4 1000605c     kernel32:KERNEL32.dll
- 0002:00000060       __imp__UnhandledExceptionFilter@4 10006060     kernel32:KERNEL32.dll
- 0002:00000064       __imp__GetCurrentProcess@0 10006064     kernel32:KERNEL32.dll
- 0002:00000068       __imp__TerminateProcess@8  10006068     kernel32:KERNEL32.dll
- 0002:0000006c       __imp__lstrlenW@4          1000606c     kernel32:KERNEL32.dll
- 0002:00000070       __imp__VirtualProtect@16   10006070     kernel32:KERNEL32.dll
- 0002:00000074       __imp__GetLastError@0      10006074     kernel32:KERNEL32.dll
+ 0002:00000058       __imp__SetUnhandledExceptionFilter@4 10006058     kernel32:KERNEL32.dll
+ 0002:0000005c       __imp__UnhandledExceptionFilter@4 1000605c     kernel32:KERNEL32.dll
+ 0002:00000060       __imp__GetCurrentProcess@0 10006060     kernel32:KERNEL32.dll
+ 0002:00000064       __imp__TerminateProcess@8  10006064     kernel32:KERNEL32.dll
+ 0002:00000068       __imp__lstrlenW@4          10006068     kernel32:KERNEL32.dll
+ 0002:0000006c       __imp__VirtualProtect@16   1000606c     kernel32:KERNEL32.dll
+ 0002:00000070       __imp__GetLastError@0      10006070     kernel32:KERNEL32.dll
+ 0002:00000074       __imp__HeapFree@12         10006074     kernel32:KERNEL32.dll
  0002:00000078       __imp__lstrcpynA@12        10006078     kernel32:KERNEL32.dll
  0002:0000007c       __imp__InterlockedExchange@8 1000607c     kernel32:KERNEL32.dll
  0002:00000080       __imp__VirtualQuery@12     10006080     kernel32:KERNEL32.dll

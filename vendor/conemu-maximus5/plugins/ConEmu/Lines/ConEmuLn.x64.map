@@ -1,6 +1,6 @@
  ConEmuLn.x64
 
- Timestamp is 565828c5 (Fri Nov 27 12:56:21 2015)
+ Timestamp is 5663a497 (Sun Dec 06 05:59:35 2015)
 
  Preferred load address is 0000000180000000
 
@@ -100,8 +100,8 @@
  0001:000055e0       _NLG_Notify                00000001800065e0 f   LIBCMT:notify.obj
  0001:00005600       __NLG_Dispatch2            0000000180006600 f   LIBCMT:notify.obj
  0001:00005610       __NLG_Return2              0000000180006610 f   LIBCMT:notify.obj
- 0001:00005630       __chkstk                   0000000180006630 f   LIBCMT:chkstk.obj
  0001:00005630       _alloca_probe              0000000180006630     LIBCMT:chkstk.obj
+ 0001:00005630       __chkstk                   0000000180006630 f   LIBCMT:chkstk.obj
  0002:00000000       __imp_RegQueryValueExW     0000000180007000     advapi32:ADVAPI32.dll
  0002:00000008       __imp_RegOpenKeyExW        0000000180007008     advapi32:ADVAPI32.dll
  0002:00000010       __imp_RegSetValueExW       0000000180007010     advapi32:ADVAPI32.dll
@@ -121,13 +121,13 @@
  0002:00000080       __imp_lstrlenA             0000000180007080     kernel32:KERNEL32.dll
  0002:00000088       __imp_lstrcpyA             0000000180007088     kernel32:KERNEL32.dll
  0002:00000090       __imp_HeapCreate           0000000180007090     kernel32:KERNEL32.dll
- 0002:00000098       __imp_HeapAlloc            0000000180007098     kernel32:KERNEL32.dll
+ 0002:00000098       __imp_HeapDestroy          0000000180007098     kernel32:KERNEL32.dll
  0002:000000a0       __imp_lstrcpyW             00000001800070a0     kernel32:KERNEL32.dll
- 0002:000000a8       __imp_HeapFree             00000001800070a8     kernel32:KERNEL32.dll
- 0002:000000b0       __imp_lstrlenW             00000001800070b0     kernel32:KERNEL32.dll
- 0002:000000b8       __imp_VirtualProtect       00000001800070b8     kernel32:KERNEL32.dll
- 0002:000000c0       __imp_GetLastError         00000001800070c0     kernel32:KERNEL32.dll
- 0002:000000c8       __imp_HeapDestroy          00000001800070c8     kernel32:KERNEL32.dll
+ 0002:000000a8       __imp_lstrlenW             00000001800070a8     kernel32:KERNEL32.dll
+ 0002:000000b0       __imp_VirtualProtect       00000001800070b0     kernel32:KERNEL32.dll
+ 0002:000000b8       __imp_GetLastError         00000001800070b8     kernel32:KERNEL32.dll
+ 0002:000000c0       __imp_HeapFree             00000001800070c0     kernel32:KERNEL32.dll
+ 0002:000000c8       __imp_HeapAlloc            00000001800070c8     kernel32:KERNEL32.dll
  0002:000000d0       __imp_lstrcpynA            00000001800070d0     kernel32:KERNEL32.dll
  0002:000000d8       \177KERNEL32_NULL_THUNK_DATA 00000001800070d8     kernel32:KERNEL32.dll
  0002:000000e0       __imp_wsprintfW            00000001800070e0     user32:USER32.dll

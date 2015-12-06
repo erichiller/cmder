@@ -65,6 +65,10 @@ try {
 Remove-Item alias:wget
 function wget { wget.exe --no-check-certificate $args }
 
+# set alias (for no arguments ) // functions (for arguments)
+Remove-Item alias:ls
+function ls { ls.exe -l --color $args }
+
 function vi { & ( $env:CMDER_ROOT + "\vendor\msys2\usr\bin\bash.exe" ) -c '"' vim $args '"' }
 
 # set-alias -passthru vim bashcall # debug

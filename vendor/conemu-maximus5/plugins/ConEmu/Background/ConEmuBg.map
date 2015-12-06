@@ -1,6 +1,6 @@
  ConEmuBg
 
- Timestamp is 565827e1 (Fri Nov 27 12:52:33 2015)
+ Timestamp is 5663a3b1 (Sun Dec 06 05:55:45 2015)
 
  Preferred load address is 10000000
 
@@ -95,17 +95,17 @@
  0001:00004149       ?FMatchW995@@YI_NPB_WPA_W@Z 10005149 f   ConEmuBg995.obj
  0001:00004161       ?GetPluginInfoW1900@@YIXPAX@Z 10005161 f   ConEmuBg1900.obj
  0001:000041c2       ?SetStartupInfoW1900@@YIXPAX@Z 100051c2 f   ConEmuBg1900.obj
- 0001:000042b0       ?OpenW1900@@YGPAXPBX@Z     100052b0 f   ConEmuBg1900.obj
- 0001:000042b0       ?OpenW2800@@YGPAXPBX@Z     100052b0 f   ConEmuBg2800.obj
- 0001:000042cf       ?ExitFARW1900@@YIXXZ       100052cf f   ConEmuBg1900.obj
- 0001:000042fe       ?GetMsgW1900@@YIPB_WH@Z    100052fe f   ConEmuBg1900.obj
- 0001:00004715       ?ConfigureW1900@@YIHH@Z    10005715 f   ConEmuBg1900.obj
- 0001:00004726       ?SettingsLoadW1900@@YIXXZ  10005726 f   ConEmuBg1900.obj
- 0001:00004863       ?SettingsSaveW1900@@YIXXZ  10005863 f   ConEmuBg1900.obj
- 0001:00004947       ?FMatchW1900@@YI_NPB_WPA_W@Z 10005947 f   ConEmuBg1900.obj
- 0001:00004960       _GetGlobalInfoW@4          10005960 f   ConEmuBg2800.obj
- 0001:000049f3       ?GetPluginInfoW2800@@YIXPAX@Z 100059f3 f   ConEmuBg2800.obj
- 0001:00004a54       ?SetStartupInfoW2800@@YIXPAX@Z 10005a54 f   ConEmuBg2800.obj
+ 0001:000042b0       ?ExitFARW1900@@YIXXZ       100052b0 f   ConEmuBg1900.obj
+ 0001:000042df       ?GetMsgW1900@@YIPB_WH@Z    100052df f   ConEmuBg1900.obj
+ 0001:000046f6       ?ConfigureW1900@@YIHH@Z    100056f6 f   ConEmuBg1900.obj
+ 0001:00004707       ?SettingsLoadW1900@@YIXXZ  10005707 f   ConEmuBg1900.obj
+ 0001:00004844       ?SettingsSaveW1900@@YIXXZ  10005844 f   ConEmuBg1900.obj
+ 0001:00004928       ?FMatchW1900@@YI_NPB_WPA_W@Z 10005928 f   ConEmuBg1900.obj
+ 0001:00004941       _GetGlobalInfoW@4          10005941 f   ConEmuBg2800.obj
+ 0001:000049d4       ?GetPluginInfoW2800@@YIXPAX@Z 100059d4 f   ConEmuBg2800.obj
+ 0001:00004a35       ?SetStartupInfoW2800@@YIXPAX@Z 10005a35 f   ConEmuBg2800.obj
+ 0001:00004b23       ?OpenW1900@@YGPAXPBX@Z     10005b23 f   ConEmuBg1900.obj
+ 0001:00004b23       ?OpenW2800@@YGPAXPBX@Z     10005b23 f   ConEmuBg2800.obj
  0001:00004b42       ?ExitFARW2800@@YIXXZ       10005b42 f   ConEmuBg2800.obj
  0001:00004b71       ?GetMsgW2800@@YIPB_WH@Z    10005b71 f   ConEmuBg2800.obj
  0001:00004f93       ?ConfigureW2800@@YIHH@Z    10005f93 f   ConEmuBg2800.obj
@@ -126,8 +126,8 @@
  0001:000058c5       ?xf_malloc@@YAPAXI@Z       100068c5 f   Memory.obj
  0001:000058d8       ?xf_calloc@@YAPAXII@Z      100068d8 f   Memory.obj
  0001:000058f1       ?xf_free@@YAXPAX@Z         100068f1 f   Memory.obj
- 0001:0000590f       ??2@YAPAXI@Z               1000690f f   Memory.obj
  0001:0000590f       ??_U@YAPAXI@Z              1000690f f   Memory.obj
+ 0001:0000590f       ??2@YAPAXI@Z               1000690f f   Memory.obj
  0001:00005914       ??_V@YAXPAX@Z              10006914 f   Memory.obj
  0001:00005914       ??3@YAXPAX@Z               10006914 f   Memory.obj
  0001:00005919       ?lstrdup@@YIPA_WPB_WI@Z    10006919 f   Memory.obj
@@ -432,8 +432,8 @@
  0001:0000063a       ?ChangeExports@@YI_NPBUExportFunc@@PAUHINSTANCE__@@@Z 1000163a f   ConEmuBg.obj
  0001:00003d72       ?ConfigDlgProc@@YGJPAXHHJ@Z 10004d72 f   ConEmuBg995.obj
  0001:00003e06       ?ConfigureProc@@YIHH@Z     10004e06 f   ConEmuBg995.obj
- 0001:0000431d       ?ConfigDlgProc@@YGHPAXHH0@Z 1000531d f   ConEmuBg1900.obj
- 0001:000043b1       ?ConfigureProc@@YIHH@Z     100053b1 f   ConEmuBg1900.obj
+ 0001:000042fe       ?ConfigDlgProc@@YGHPAXHH0@Z 100052fe f   ConEmuBg1900.obj
+ 0001:00004392       ?ConfigureProc@@YIHH@Z     10005392 f   ConEmuBg1900.obj
  0001:00004b90       ?ConfigDlgProc@@YGHPAXHH0@Z 10005b90 f   ConEmuBg2800.obj
  0001:00004c24       ?ConfigureProc@@YIHH@Z     10005c24 f   ConEmuBg2800.obj
  0001:00005415       ?GetMsg@@YIPADH@Z          10006415 f   ConEmuBgA.obj

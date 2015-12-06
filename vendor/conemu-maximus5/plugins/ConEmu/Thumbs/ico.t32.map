@@ -1,19 +1,19 @@
  ico
 
- Timestamp is 565827d7 (Fri Nov 27 12:52:23 2015)
+ Timestamp is 5663a3a6 (Sun Dec 06 05:55:34 2015)
 
  Preferred load address is 10000000
 
  Start         Length     Name                   Class
- 0001:00000000 000000a4H .idata$5                CODE
+ 0001:00000000 000000a8H .idata$5                CODE
  0001:000000b0 000006b4H .rdata                  CODE
  0001:00000764 00000060H .rdata$debug            CODE
- 0001:000007d0 00001c90H .text                   CODE
- 0001:00002460 00000050H .idata$2                CODE
- 0001:000024b0 00000014H .idata$3                CODE
- 0001:000024c4 000000a4H .idata$4                CODE
- 0001:00002568 000002a8H .idata$6                CODE
- 0001:00002810 00000091H .edata                  CODE
+ 0001:000007d0 00001d26H .text                   CODE
+ 0001:000024f8 00000050H .idata$2                CODE
+ 0001:00002548 00000014H .idata$3                CODE
+ 0001:0000255c 000000a8H .idata$4                CODE
+ 0001:00002604 000002beH .idata$6                CODE
+ 0001:000028d0 00000091H .edata                  CODE
  0002:00000000 00000004H .data                   DATA
  0002:00000008 0000784cH .bss                    DATA
  0003:00000000 00000058H .rsrc$01                DATA
@@ -37,33 +37,34 @@
  0001:0000002c       __imp__lstrcpyW@8          1000102c     kernel32:KERNEL32.dll
  0001:00000030       __imp__lstrlenW@4          10001030     kernel32:KERNEL32.dll
  0001:00000034       __imp__MultiByteToWideChar@24 10001034     kernel32:KERNEL32.dll
- 0001:00000038       __imp__lstrcpynA@12        10001038     kernel32:KERNEL32.dll
- 0001:0000003c       __imp__GetTickCount@0      1000103c     kernel32:KERNEL32.dll
- 0001:00000040       __imp__GetCurrentThreadId@0 10001040     kernel32:KERNEL32.dll
- 0001:00000044       __imp__SetLastError@4      10001044     kernel32:KERNEL32.dll
- 0001:00000048       __imp__ResumeThread@4      10001048     kernel32:KERNEL32.dll
- 0001:0000004c       __imp__GetLastError@0      1000104c     kernel32:KERNEL32.dll
- 0001:00000050       __imp__CreateThread@24     10001050     kernel32:KERNEL32.dll
- 0001:00000054       __imp__TerminateThread@8   10001054     kernel32:KERNEL32.dll
- 0001:00000058       \177KERNEL32_NULL_THUNK_DATA 10001058     kernel32:KERNEL32.dll
- 0001:0000005c       __imp__wsprintfA           1000105c     user32:USER32.dll
- 0001:00000060       __imp__wsprintfW           10001060     user32:USER32.dll
- 0001:00000064       \177USER32_NULL_THUNK_DATA 10001064     user32:USER32.dll
- 0001:00000068       __imp__GdipCloneImage@8    10001068     gdiplus:gdiplus.dll
- 0001:0000006c       __imp__GdiplusStartup@12   1000106c     gdiplus:gdiplus.dll
- 0001:00000070       __imp__GdiplusShutdown@4   10001070     gdiplus:gdiplus.dll
- 0001:00000074       __imp__GdipAlloc@4         10001074     gdiplus:gdiplus.dll
- 0001:00000078       __imp__GdipFree@4          10001078     gdiplus:gdiplus.dll
- 0001:0000007c       __imp__GdipDisposeImage@4  1000107c     gdiplus:gdiplus.dll
- 0001:00000080       __imp__GdipGetImagePixelFormat@8 10001080     gdiplus:gdiplus.dll
- 0001:00000084       __imp__GdipCreateBitmapFromStream@8 10001084     gdiplus:gdiplus.dll
- 0001:00000088       __imp__GdipCreateBitmapFromStreamICM@8 10001088     gdiplus:gdiplus.dll
- 0001:0000008c       __imp__GdipBitmapLockBits@20 1000108c     gdiplus:gdiplus.dll
- 0001:00000090       __imp__GdipBitmapUnlockBits@8 10001090     gdiplus:gdiplus.dll
- 0001:00000094       \177gdiplus_NULL_THUNK_DATA 10001094     gdiplus:gdiplus.dll
- 0001:00000098       __imp__CoInitialize@4      10001098     ole32:ole32.dll
- 0001:0000009c       __imp__CoUninitialize@0    1000109c     ole32:ole32.dll
- 0001:000000a0       \177ole32_NULL_THUNK_DATA  100010a0     ole32:ole32.dll
+ 0001:00000038       __imp__WideCharToMultiByte@32 10001038     kernel32:KERNEL32.dll
+ 0001:0000003c       __imp__lstrcpynA@12        1000103c     kernel32:KERNEL32.dll
+ 0001:00000040       __imp__GetTickCount@0      10001040     kernel32:KERNEL32.dll
+ 0001:00000044       __imp__GetCurrentThreadId@0 10001044     kernel32:KERNEL32.dll
+ 0001:00000048       __imp__SetLastError@4      10001048     kernel32:KERNEL32.dll
+ 0001:0000004c       __imp__ResumeThread@4      1000104c     kernel32:KERNEL32.dll
+ 0001:00000050       __imp__GetLastError@0      10001050     kernel32:KERNEL32.dll
+ 0001:00000054       __imp__CreateThread@24     10001054     kernel32:KERNEL32.dll
+ 0001:00000058       __imp__TerminateThread@8   10001058     kernel32:KERNEL32.dll
+ 0001:0000005c       \177KERNEL32_NULL_THUNK_DATA 1000105c     kernel32:KERNEL32.dll
+ 0001:00000060       __imp__wsprintfA           10001060     user32:USER32.dll
+ 0001:00000064       __imp__wsprintfW           10001064     user32:USER32.dll
+ 0001:00000068       \177USER32_NULL_THUNK_DATA 10001068     user32:USER32.dll
+ 0001:0000006c       __imp__GdipCloneImage@8    1000106c     gdiplus:gdiplus.dll
+ 0001:00000070       __imp__GdiplusStartup@12   10001070     gdiplus:gdiplus.dll
+ 0001:00000074       __imp__GdiplusShutdown@4   10001074     gdiplus:gdiplus.dll
+ 0001:00000078       __imp__GdipAlloc@4         10001078     gdiplus:gdiplus.dll
+ 0001:0000007c       __imp__GdipFree@4          1000107c     gdiplus:gdiplus.dll
+ 0001:00000080       __imp__GdipDisposeImage@4  10001080     gdiplus:gdiplus.dll
+ 0001:00000084       __imp__GdipGetImagePixelFormat@8 10001084     gdiplus:gdiplus.dll
+ 0001:00000088       __imp__GdipCreateBitmapFromStream@8 10001088     gdiplus:gdiplus.dll
+ 0001:0000008c       __imp__GdipCreateBitmapFromStreamICM@8 1000108c     gdiplus:gdiplus.dll
+ 0001:00000090       __imp__GdipBitmapLockBits@20 10001090     gdiplus:gdiplus.dll
+ 0001:00000094       __imp__GdipBitmapUnlockBits@8 10001094     gdiplus:gdiplus.dll
+ 0001:00000098       \177gdiplus_NULL_THUNK_DATA 10001098     gdiplus:gdiplus.dll
+ 0001:0000009c       __imp__CoInitialize@4      1000109c     ole32:ole32.dll
+ 0001:000000a0       __imp__CoUninitialize@0    100010a0     ole32:ole32.dll
+ 0001:000000a4       \177ole32_NULL_THUNK_DATA  100010a4     ole32:ole32.dll
  0001:000000cc       ??_7Image@Gdiplus@@6B@     100010cc     ico.obj
  0001:000000d4       ??_7Bitmap@Gdiplus@@6B@    100010d4     ico.obj
  0001:000000dc       ??_7MStream@@6B@           100010dc     ico.obj
@@ -74,6 +75,7 @@
  0001:00000170       ??_C@_17OGLEMJPJ@?$AAI?$AAC?$AAO?$AA?$AA@ 10001170     ico.obj
  0001:00000178       ??_C@_11LOCGONAA@?$AA?$AA@ 10001178     ico.obj
  0001:0000017c       ??_C@_1O@PALLNO@?$AA?5?$AA?$FL?$AAP?$AAN?$AAG?$AA?$FN?$AA?$AA@ 1000117c     ico.obj
+ 0001:0000018a       ??_C@_00CNPNBAHC@?$AA@     1000118a     Memory.obj
  0001:0000018c       ??_C@_05LCABBMOG@?$CFs?3?$CFi?$AA@ 1000118c     WThreads.obj
  0001:00000194       _IID_IUnknown              10001194     uuid:unknwn_i.obj
  0001:000001a4       _IID_AsyncIUnknown         100011a4     uuid:unknwn_i.obj
@@ -217,11 +219,11 @@
  0001:0000165a       ?CET_Done@@YGXPAUCET_Init@@@Z 1000265a f   ico.obj
  0001:0000167e       ?CET_Free@@YGXPAUCET_LoadInfo@@@Z 1000267e f   ico.obj
  0001:000016b4       ?CET_Cancel@@YGXPAX@Z      100026b4 f   ico.obj
- 0001:000016ce       ??_EImage@Gdiplus@@UAEPAXI@Z 100026ce f i ico.obj
  0001:000016ce       ??_GImage@Gdiplus@@UAEPAXI@Z 100026ce f i ico.obj
+ 0001:000016ce       ??_EImage@Gdiplus@@UAEPAXI@Z 100026ce f i ico.obj
  0001:000016f2       ??0Image@Gdiplus@@IAE@PAVGpImage@1@W4Status@1@@Z 100026f2 f i ico.obj
- 0001:0000170b       ??_EBitmap@Gdiplus@@UAEPAXI@Z 1000270b f i ico.obj
  0001:0000170b       ??_GBitmap@Gdiplus@@UAEPAXI@Z 1000270b f i ico.obj
+ 0001:0000170b       ??_EBitmap@Gdiplus@@UAEPAXI@Z 1000270b f i ico.obj
  0001:0000172f       ?Release@MStream@@UAGKXZ   1000272f f i ico.obj
  0001:0000175c       ??0ISequentialStream@@QAE@XZ 1000275c f i ico.obj
  0001:0000175f       ?Clone@Image@Gdiplus@@UAEPAV12@XZ 1000275f f i ico.obj
@@ -244,58 +246,60 @@
  0001:00001df0       ?lstrdup@@YIPADPBD@Z       10002df0 f   Memory.obj
  0001:00001e29       ?lstrdup@@YIPA_WPB_WI@Z    10002e29 f   Memory.obj
  0001:00001e69       ?lstrdupW@@YIPA_WPBDI@Z    10002e69 f   Memory.obj
- 0001:00001eb1       ?lstrmerge@@YIPA_WPB_W0000@Z 10002eb1 f   Memory.obj
- 0001:00001f44       ?lstrmerge@@YI_NPAPA_WPB_W111@Z 10002f44 f   Memory.obj
- 0001:00001f7b       ??0ConEmuThreadStartArg@@QAE@P6GKPAX@Z0K@Z 10002f7b f i WThreads.obj
- 0001:00001f9c       ?apiThreadHelper@@YGKPAX@Z 10002f9c f   WThreads.obj
- 0001:000020ea       ?apiCreateThread@@YIPAXP6GKPAX@Z0PAKPBDH@Z 100030ea f   WThreads.obj
- 0001:000021d9       ?apiTerminateThreadEx@@YIHPAXKPBDH@Z 100031d9 f   WThreads.obj
- 0001:000022a0       _memmove                   100032a0 f   libCRT:memmove.obj
- 0001:00002300       _memset                    10003300 f   libCRT:memset.obj
- 0001:00002340       _strchr                    10003340 f   libCRT:strchr.obj
- 0001:00002360       _strrchr                   10003360 f   libCRT:strrchr.obj
- 0001:00002382       _HeapFree@12               10003382 f   kernel32:KERNEL32.dll
- 0001:00002388       _GetProcessHeap@0          10003388 f   kernel32:KERNEL32.dll
- 0001:0000238e       _HeapAlloc@12              1000338e f   kernel32:KERNEL32.dll
- 0001:00002394       _HeapReAlloc@16            10003394 f   kernel32:KERNEL32.dll
- 0001:0000239a       _SystemTimeToFileTime@8    1000339a f   kernel32:KERNEL32.dll
- 0001:000023a0       _GetLocalTime@4            100033a0 f   kernel32:KERNEL32.dll
- 0001:000023a6       _HeapCreate@12             100033a6 f   kernel32:KERNEL32.dll
- 0001:000023ac       _HeapDestroy@4             100033ac f   kernel32:KERNEL32.dll
- 0001:000023b2       _HeapValidate@12           100033b2 f   kernel32:KERNEL32.dll
- 0001:000023b8       _lstrcpyA@8                100033b8 f   kernel32:KERNEL32.dll
- 0001:000023be       _lstrlenA@4                100033be f   kernel32:KERNEL32.dll
- 0001:000023c4       _lstrcpyW@8                100033c4 f   kernel32:KERNEL32.dll
- 0001:000023ca       _lstrlenW@4                100033ca f   kernel32:KERNEL32.dll
- 0001:000023d0       _MultiByteToWideChar@24    100033d0 f   kernel32:KERNEL32.dll
- 0001:000023d6       _lstrcpynA@12              100033d6 f   kernel32:KERNEL32.dll
- 0001:000023dc       _GetTickCount@0            100033dc f   kernel32:KERNEL32.dll
- 0001:000023e2       _GetCurrentThreadId@0      100033e2 f   kernel32:KERNEL32.dll
- 0001:000023e8       _SetLastError@4            100033e8 f   kernel32:KERNEL32.dll
- 0001:000023ee       _ResumeThread@4            100033ee f   kernel32:KERNEL32.dll
- 0001:000023f4       _GetLastError@0            100033f4 f   kernel32:KERNEL32.dll
- 0001:000023fa       _CreateThread@24           100033fa f   kernel32:KERNEL32.dll
- 0001:00002400       _TerminateThread@8         10003400 f   kernel32:KERNEL32.dll
- 0001:00002406       _wsprintfW                 10003406 f   user32:USER32.dll
- 0001:0000240c       _wsprintfA                 1000340c f   user32:USER32.dll
- 0001:00002412       _CoInitialize@4            10003412 f   ole32:ole32.dll
- 0001:00002418       _CoUninitialize@0          10003418 f   ole32:ole32.dll
- 0001:0000241e       _GdipAlloc@4               1000341e f   gdiplus:gdiplus.dll
- 0001:00002424       _GdipFree@4                10003424 f   gdiplus:gdiplus.dll
- 0001:0000242a       _GdipDisposeImage@4        1000342a f   gdiplus:gdiplus.dll
- 0001:00002430       _GdipGetImagePixelFormat@8 10003430 f   gdiplus:gdiplus.dll
- 0001:00002436       _GdipCreateBitmapFromStream@8 10003436 f   gdiplus:gdiplus.dll
- 0001:0000243c       _GdipCreateBitmapFromStreamICM@8 1000343c f   gdiplus:gdiplus.dll
- 0001:00002442       _GdipBitmapLockBits@20     10003442 f   gdiplus:gdiplus.dll
- 0001:00002448       _GdipBitmapUnlockBits@8    10003448 f   gdiplus:gdiplus.dll
- 0001:0000244e       _GdiplusShutdown@4         1000344e f   gdiplus:gdiplus.dll
- 0001:00002454       _GdiplusStartup@12         10003454 f   gdiplus:gdiplus.dll
- 0001:0000245a       _GdipCloneImage@8          1000345a f   gdiplus:gdiplus.dll
- 0001:00002460       __IMPORT_DESCRIPTOR_KERNEL32 10003460     kernel32:KERNEL32.dll
- 0001:00002474       __IMPORT_DESCRIPTOR_USER32 10003474     user32:USER32.dll
- 0001:00002488       __IMPORT_DESCRIPTOR_ole32  10003488     ole32:ole32.dll
- 0001:0000249c       __IMPORT_DESCRIPTOR_gdiplus 1000349c     gdiplus:gdiplus.dll
- 0001:000024b0       __NULL_IMPORT_DESCRIPTOR   100034b0     kernel32:KERNEL32.dll
+ 0001:00001eb1       ?lstrdupA@@YIPADPB_WIPAH@Z 10002eb1 f   Memory.obj
+ 0001:00001f4a       ?lstrmerge@@YIPA_WPB_W0000@Z 10002f4a f   Memory.obj
+ 0001:00001fdd       ?lstrmerge@@YI_NPAPA_WPB_W111@Z 10002fdd f   Memory.obj
+ 0001:00002014       ??0ConEmuThreadStartArg@@QAE@P6GKPAX@Z0K@Z 10003014 f i WThreads.obj
+ 0001:00002035       ?apiThreadHelper@@YGKPAX@Z 10003035 f   WThreads.obj
+ 0001:00002183       ?apiCreateThread@@YIPAXP6GKPAX@Z0PAKPBDH@Z 10003183 f   WThreads.obj
+ 0001:00002272       ?apiTerminateThreadEx@@YIHPAXKPBDH@Z 10003272 f   WThreads.obj
+ 0001:00002330       _memmove                   10003330 f   libCRT:memmove.obj
+ 0001:00002390       _memset                    10003390 f   libCRT:memset.obj
+ 0001:000023d0       _strchr                    100033d0 f   libCRT:strchr.obj
+ 0001:000023f0       _strrchr                   100033f0 f   libCRT:strrchr.obj
+ 0001:00002412       _HeapFree@12               10003412 f   kernel32:KERNEL32.dll
+ 0001:00002418       _GetProcessHeap@0          10003418 f   kernel32:KERNEL32.dll
+ 0001:0000241e       _HeapAlloc@12              1000341e f   kernel32:KERNEL32.dll
+ 0001:00002424       _HeapReAlloc@16            10003424 f   kernel32:KERNEL32.dll
+ 0001:0000242a       _SystemTimeToFileTime@8    1000342a f   kernel32:KERNEL32.dll
+ 0001:00002430       _GetLocalTime@4            10003430 f   kernel32:KERNEL32.dll
+ 0001:00002436       _HeapCreate@12             10003436 f   kernel32:KERNEL32.dll
+ 0001:0000243c       _HeapDestroy@4             1000343c f   kernel32:KERNEL32.dll
+ 0001:00002442       _HeapValidate@12           10003442 f   kernel32:KERNEL32.dll
+ 0001:00002448       _lstrcpyA@8                10003448 f   kernel32:KERNEL32.dll
+ 0001:0000244e       _lstrlenA@4                1000344e f   kernel32:KERNEL32.dll
+ 0001:00002454       _lstrcpyW@8                10003454 f   kernel32:KERNEL32.dll
+ 0001:0000245a       _lstrlenW@4                1000345a f   kernel32:KERNEL32.dll
+ 0001:00002460       _MultiByteToWideChar@24    10003460 f   kernel32:KERNEL32.dll
+ 0001:00002466       _WideCharToMultiByte@32    10003466 f   kernel32:KERNEL32.dll
+ 0001:0000246c       _lstrcpynA@12              1000346c f   kernel32:KERNEL32.dll
+ 0001:00002472       _GetTickCount@0            10003472 f   kernel32:KERNEL32.dll
+ 0001:00002478       _GetCurrentThreadId@0      10003478 f   kernel32:KERNEL32.dll
+ 0001:0000247e       _SetLastError@4            1000347e f   kernel32:KERNEL32.dll
+ 0001:00002484       _ResumeThread@4            10003484 f   kernel32:KERNEL32.dll
+ 0001:0000248a       _GetLastError@0            1000348a f   kernel32:KERNEL32.dll
+ 0001:00002490       _CreateThread@24           10003490 f   kernel32:KERNEL32.dll
+ 0001:00002496       _TerminateThread@8         10003496 f   kernel32:KERNEL32.dll
+ 0001:0000249c       _wsprintfW                 1000349c f   user32:USER32.dll
+ 0001:000024a2       _wsprintfA                 100034a2 f   user32:USER32.dll
+ 0001:000024a8       _CoInitialize@4            100034a8 f   ole32:ole32.dll
+ 0001:000024ae       _CoUninitialize@0          100034ae f   ole32:ole32.dll
+ 0001:000024b4       _GdipAlloc@4               100034b4 f   gdiplus:gdiplus.dll
+ 0001:000024ba       _GdipFree@4                100034ba f   gdiplus:gdiplus.dll
+ 0001:000024c0       _GdipDisposeImage@4        100034c0 f   gdiplus:gdiplus.dll
+ 0001:000024c6       _GdipGetImagePixelFormat@8 100034c6 f   gdiplus:gdiplus.dll
+ 0001:000024cc       _GdipCreateBitmapFromStream@8 100034cc f   gdiplus:gdiplus.dll
+ 0001:000024d2       _GdipCreateBitmapFromStreamICM@8 100034d2 f   gdiplus:gdiplus.dll
+ 0001:000024d8       _GdipBitmapLockBits@20     100034d8 f   gdiplus:gdiplus.dll
+ 0001:000024de       _GdipBitmapUnlockBits@8    100034de f   gdiplus:gdiplus.dll
+ 0001:000024e4       _GdiplusShutdown@4         100034e4 f   gdiplus:gdiplus.dll
+ 0001:000024ea       _GdiplusStartup@12         100034ea f   gdiplus:gdiplus.dll
+ 0001:000024f0       _GdipCloneImage@8          100034f0 f   gdiplus:gdiplus.dll
+ 0001:000024f8       __IMPORT_DESCRIPTOR_KERNEL32 100034f8     kernel32:KERNEL32.dll
+ 0001:0000250c       __IMPORT_DESCRIPTOR_USER32 1000350c     user32:USER32.dll
+ 0001:00002520       __IMPORT_DESCRIPTOR_ole32  10003520     ole32:ole32.dll
+ 0001:00002534       __IMPORT_DESCRIPTOR_gdiplus 10003534     gdiplus:gdiplus.dll
+ 0001:00002548       __NULL_IMPORT_DESCRIPTOR   10003548     kernel32:KERNEL32.dll
  0002:00000000       ?g_TerminatedThreadIdx@@3JA 10004000     WThreads.obj
  0002:0000003c       ?gnLastWin32Error@@3KA     1000403c     ico.obj
  0002:00000040       ?ghModule@@3PAUHINSTANCE__@@A 10004040     ico.obj

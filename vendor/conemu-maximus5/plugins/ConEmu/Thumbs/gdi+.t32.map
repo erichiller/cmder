@@ -1,19 +1,19 @@
  gdi+
 
- Timestamp is 565827d1 (Fri Nov 27 12:52:17 2015)
+ Timestamp is 5663a39f (Sun Dec 06 05:55:27 2015)
 
  Preferred load address is 10000000
 
  Start         Length     Name                   Class
- 0001:00000000 000000c8H .idata$5                CODE
- 0001:000000d0 00000888H .rdata                  CODE
- 0001:00000958 00000062H .rdata$debug            CODE
- 0001:000009c0 00001d76H .text                   CODE
- 0001:00002738 00000050H .idata$2                CODE
- 0001:00002788 00000014H .idata$3                CODE
- 0001:0000279c 000000c8H .idata$4                CODE
- 0001:00002864 000002feH .idata$6                CODE
- 0001:00002b70 00000092H .edata                  CODE
+ 0001:00000000 000000ccH .idata$5                CODE
+ 0001:000000d0 0000088cH .rdata                  CODE
+ 0001:0000095c 00000062H .rdata$debug            CODE
+ 0001:000009c0 00001e1cH .text                   CODE
+ 0001:000027dc 00000050H .idata$2                CODE
+ 0001:0000282c 00000014H .idata$3                CODE
+ 0001:00002840 000000ccH .idata$4                CODE
+ 0001:0000290c 00000314H .idata$6                CODE
+ 0001:00002c20 00000092H .edata                  CODE
  0002:00000000 00000010H .data                   DATA
  0002:00000010 0000784cH .bss                    DATA
  0003:00000000 00000058H .rsrc$01                DATA
@@ -43,36 +43,37 @@
  0001:00000044       __imp__CreateFileW@28      10001044     kernel32:KERNEL32.dll
  0001:00000048       __imp__GetTempFileNameW@16 10001048     kernel32:KERNEL32.dll
  0001:0000004c       __imp__GetTempPathW@8      1000104c     kernel32:KERNEL32.dll
- 0001:00000050       __imp__FreeLibrary@4       10001050     kernel32:KERNEL32.dll
- 0001:00000054       __imp__HeapCreate@12       10001054     kernel32:KERNEL32.dll
+ 0001:00000050       __imp__lstrcpynW@12        10001050     kernel32:KERNEL32.dll
+ 0001:00000054       __imp__FreeLibrary@4       10001054     kernel32:KERNEL32.dll
  0001:00000058       __imp__HeapDestroy@4       10001058     kernel32:KERNEL32.dll
  0001:0000005c       __imp__HeapValidate@12     1000105c     kernel32:KERNEL32.dll
  0001:00000060       __imp__lstrcpyA@8          10001060     kernel32:KERNEL32.dll
  0001:00000064       __imp__lstrlenA@4          10001064     kernel32:KERNEL32.dll
  0001:00000068       __imp__MultiByteToWideChar@24 10001068     kernel32:KERNEL32.dll
- 0001:0000006c       __imp__lstrcpynA@12        1000106c     kernel32:KERNEL32.dll
- 0001:00000070       __imp__GetTickCount@0      10001070     kernel32:KERNEL32.dll
- 0001:00000074       __imp__GetCurrentThreadId@0 10001074     kernel32:KERNEL32.dll
- 0001:00000078       __imp__SetLastError@4      10001078     kernel32:KERNEL32.dll
- 0001:0000007c       __imp__ResumeThread@4      1000107c     kernel32:KERNEL32.dll
- 0001:00000080       __imp__CreateThread@24     10001080     kernel32:KERNEL32.dll
- 0001:00000084       __imp__TerminateThread@8   10001084     kernel32:KERNEL32.dll
- 0001:00000088       __imp__GetLocalTime@4      10001088     kernel32:KERNEL32.dll
- 0001:0000008c       __imp__SystemTimeToFileTime@8 1000108c     kernel32:KERNEL32.dll
- 0001:00000090       __imp__HeapReAlloc@16      10001090     kernel32:KERNEL32.dll
- 0001:00000094       __imp__HeapAlloc@12        10001094     kernel32:KERNEL32.dll
- 0001:00000098       __imp__GetProcessHeap@0    10001098     kernel32:KERNEL32.dll
- 0001:0000009c       __imp__lstrcpynW@12        1000109c     kernel32:KERNEL32.dll
- 0001:000000a0       __imp__HeapFree@12         100010a0     kernel32:KERNEL32.dll
- 0001:000000a4       \177KERNEL32_NULL_THUNK_DATA 100010a4     kernel32:KERNEL32.dll
- 0001:000000a8       __imp__wsprintfA           100010a8     user32:USER32.dll
- 0001:000000ac       __imp__CharLowerBuffW@8    100010ac     user32:USER32.dll
- 0001:000000b0       __imp__wsprintfW           100010b0     user32:USER32.dll
- 0001:000000b4       __imp__FillRect@12         100010b4     user32:USER32.dll
- 0001:000000b8       \177USER32_NULL_THUNK_DATA 100010b8     user32:USER32.dll
- 0001:000000bc       __imp__CoUninitialize@0    100010bc     ole32:ole32.dll
- 0001:000000c0       __imp__CoInitialize@4      100010c0     ole32:ole32.dll
- 0001:000000c4       \177ole32_NULL_THUNK_DATA  100010c4     ole32:ole32.dll
+ 0001:0000006c       __imp__WideCharToMultiByte@32 1000106c     kernel32:KERNEL32.dll
+ 0001:00000070       __imp__lstrcpynA@12        10001070     kernel32:KERNEL32.dll
+ 0001:00000074       __imp__GetTickCount@0      10001074     kernel32:KERNEL32.dll
+ 0001:00000078       __imp__GetCurrentThreadId@0 10001078     kernel32:KERNEL32.dll
+ 0001:0000007c       __imp__SetLastError@4      1000107c     kernel32:KERNEL32.dll
+ 0001:00000080       __imp__ResumeThread@4      10001080     kernel32:KERNEL32.dll
+ 0001:00000084       __imp__CreateThread@24     10001084     kernel32:KERNEL32.dll
+ 0001:00000088       __imp__TerminateThread@8   10001088     kernel32:KERNEL32.dll
+ 0001:0000008c       __imp__GetLocalTime@4      1000108c     kernel32:KERNEL32.dll
+ 0001:00000090       __imp__SystemTimeToFileTime@8 10001090     kernel32:KERNEL32.dll
+ 0001:00000094       __imp__HeapReAlloc@16      10001094     kernel32:KERNEL32.dll
+ 0001:00000098       __imp__HeapAlloc@12        10001098     kernel32:KERNEL32.dll
+ 0001:0000009c       __imp__GetProcessHeap@0    1000109c     kernel32:KERNEL32.dll
+ 0001:000000a0       __imp__HeapCreate@12       100010a0     kernel32:KERNEL32.dll
+ 0001:000000a4       __imp__HeapFree@12         100010a4     kernel32:KERNEL32.dll
+ 0001:000000a8       \177KERNEL32_NULL_THUNK_DATA 100010a8     kernel32:KERNEL32.dll
+ 0001:000000ac       __imp__wsprintfA           100010ac     user32:USER32.dll
+ 0001:000000b0       __imp__CharLowerBuffW@8    100010b0     user32:USER32.dll
+ 0001:000000b4       __imp__wsprintfW           100010b4     user32:USER32.dll
+ 0001:000000b8       __imp__FillRect@12         100010b8     user32:USER32.dll
+ 0001:000000bc       \177USER32_NULL_THUNK_DATA 100010bc     user32:USER32.dll
+ 0001:000000c0       __imp__CoUninitialize@0    100010c0     ole32:ole32.dll
+ 0001:000000c4       __imp__CoInitialize@4      100010c4     ole32:ole32.dll
+ 0001:000000c8       \177ole32_NULL_THUNK_DATA  100010c8     ole32:ole32.dll
  0001:000000ec       _FrameDimensionTime        100010ec     gdip.obj
  0001:000000fc       _FrameDimensionPage        100010fc     gdip.obj
  0001:0000010c       ??_7MStream@@6B@           1000110c     gdip.obj
@@ -109,100 +110,101 @@
  0001:00000368       ??_C@_17PGBJPCEM@?$AAE?$AAM?$AAF?$AA?$AA@ 10001368     gdip.obj
  0001:00000370       ??_C@_17IJKOPDBG@?$AAB?$AAM?$AAP?$AA?$AA@ 10001370     gdip.obj
  0001:00000378       ??_C@_17CGDFOGLC@?$AAC?$AAE?$AAT?$AA?$AA@ 10001378     gdip.obj
- 0001:00000380       ??_C@_05LCABBMOG@?$CFs?3?$CFi?$AA@ 10001380     WThreads.obj
- 0001:00000388       _IID_IUnknown              10001388     uuid:unknwn_i.obj
- 0001:00000398       _IID_AsyncIUnknown         10001398     uuid:unknwn_i.obj
- 0001:000003a8       _IID_IClassFactory         100013a8     uuid:unknwn_i.obj
- 0001:000003b8       _IID_IMarshal              100013b8     uuid:objidl_i.obj
- 0001:000003c8       _IID_IMarshal2             100013c8     uuid:objidl_i.obj
- 0001:000003d8       _IID_IMalloc               100013d8     uuid:objidl_i.obj
- 0001:000003e8       _IID_IMallocSpy            100013e8     uuid:objidl_i.obj
- 0001:000003f8       _IID_IStdMarshalInfo       100013f8     uuid:objidl_i.obj
- 0001:00000408       _IID_IExternalConnection   10001408     uuid:objidl_i.obj
- 0001:00000418       _IID_IMultiQI              10001418     uuid:objidl_i.obj
- 0001:00000428       _IID_AsyncIMultiQI         10001428     uuid:objidl_i.obj
- 0001:00000438       _IID_IInternalUnknown      10001438     uuid:objidl_i.obj
- 0001:00000448       _IID_IEnumUnknown          10001448     uuid:objidl_i.obj
- 0001:00000458       _IID_IBindCtx              10001458     uuid:objidl_i.obj
- 0001:00000468       _IID_IEnumMoniker          10001468     uuid:objidl_i.obj
- 0001:00000478       _IID_IRunnableObject       10001478     uuid:objidl_i.obj
- 0001:00000488       _IID_IRunningObjectTable   10001488     uuid:objidl_i.obj
- 0001:00000498       _IID_IPersist              10001498     uuid:objidl_i.obj
- 0001:000004a8       _IID_IPersistStream        100014a8     uuid:objidl_i.obj
- 0001:000004b8       _IID_IMoniker              100014b8     uuid:objidl_i.obj
- 0001:000004c8       _IID_IROTData              100014c8     uuid:objidl_i.obj
- 0001:000004d8       _IID_IEnumString           100014d8     uuid:objidl_i.obj
- 0001:000004e8       _IID_ISequentialStream     100014e8     uuid:objidl_i.obj
- 0001:000004f8       _IID_IStream               100014f8     uuid:objidl_i.obj
- 0001:00000508       _IID_IEnumSTATSTG          10001508     uuid:objidl_i.obj
- 0001:00000518       _IID_IStorage              10001518     uuid:objidl_i.obj
- 0001:00000528       _IID_IPersistFile          10001528     uuid:objidl_i.obj
- 0001:00000538       _IID_IPersistStorage       10001538     uuid:objidl_i.obj
- 0001:00000548       _IID_ILockBytes            10001548     uuid:objidl_i.obj
- 0001:00000558       _IID_IEnumFORMATETC        10001558     uuid:objidl_i.obj
- 0001:00000568       _IID_IEnumSTATDATA         10001568     uuid:objidl_i.obj
- 0001:00000578       _IID_IRootStorage          10001578     uuid:objidl_i.obj
- 0001:00000588       _IID_IAdviseSink           10001588     uuid:objidl_i.obj
- 0001:00000598       _IID_AsyncIAdviseSink      10001598     uuid:objidl_i.obj
- 0001:000005a8       _IID_IAdviseSink2          100015a8     uuid:objidl_i.obj
- 0001:000005b8       _IID_AsyncIAdviseSink2     100015b8     uuid:objidl_i.obj
- 0001:000005c8       _IID_IDataObject           100015c8     uuid:objidl_i.obj
- 0001:000005d8       _IID_IDataAdviseHolder     100015d8     uuid:objidl_i.obj
- 0001:000005e8       _IID_IMessageFilter        100015e8     uuid:objidl_i.obj
- 0001:000005f8       _IID_IRpcChannelBuffer     100015f8     uuid:objidl_i.obj
- 0001:00000608       _IID_IRpcChannelBuffer2    10001608     uuid:objidl_i.obj
- 0001:00000618       _IID_IAsyncRpcChannelBuffer 10001618     uuid:objidl_i.obj
- 0001:00000628       _IID_IRpcChannelBuffer3    10001628     uuid:objidl_i.obj
- 0001:00000638       _IID_IRpcSyntaxNegotiate   10001638     uuid:objidl_i.obj
- 0001:00000648       _IID_IRpcProxyBuffer       10001648     uuid:objidl_i.obj
- 0001:00000658       _IID_IRpcStubBuffer        10001658     uuid:objidl_i.obj
- 0001:00000668       _IID_IPSFactoryBuffer      10001668     uuid:objidl_i.obj
- 0001:00000678       _IID_IChannelHook          10001678     uuid:objidl_i.obj
- 0001:00000688       _IID_IClientSecurity       10001688     uuid:objidl_i.obj
- 0001:00000698       _IID_IServerSecurity       10001698     uuid:objidl_i.obj
- 0001:000006a8       _IID_IClassActivator       100016a8     uuid:objidl_i.obj
- 0001:000006b8       _IID_IRpcOptions           100016b8     uuid:objidl_i.obj
- 0001:000006c8       _IID_IGlobalOptions        100016c8     uuid:objidl_i.obj
- 0001:000006d8       _IID_IFillLockBytes        100016d8     uuid:objidl_i.obj
- 0001:000006e8       _IID_IProgressNotify       100016e8     uuid:objidl_i.obj
- 0001:000006f8       _IID_ILayoutStorage        100016f8     uuid:objidl_i.obj
- 0001:00000708       _IID_IBlockingLock         10001708     uuid:objidl_i.obj
- 0001:00000718       _IID_ITimeAndNoticeControl 10001718     uuid:objidl_i.obj
- 0001:00000728       _IID_IOplockStorage        10001728     uuid:objidl_i.obj
- 0001:00000738       _IID_ISurrogate            10001738     uuid:objidl_i.obj
- 0001:00000748       _IID_IGlobalInterfaceTable 10001748     uuid:objidl_i.obj
- 0001:00000758       _IID_IDirectWriterLock     10001758     uuid:objidl_i.obj
- 0001:00000768       _IID_ISynchronize          10001768     uuid:objidl_i.obj
- 0001:00000778       _IID_ISynchronizeHandle    10001778     uuid:objidl_i.obj
- 0001:00000788       _IID_ISynchronizeEvent     10001788     uuid:objidl_i.obj
- 0001:00000798       _IID_ISynchronizeContainer 10001798     uuid:objidl_i.obj
- 0001:000007a8       _IID_ISynchronizeMutex     100017a8     uuid:objidl_i.obj
- 0001:000007b8       _IID_ICancelMethodCalls    100017b8     uuid:objidl_i.obj
- 0001:000007c8       _IID_IAsyncManager         100017c8     uuid:objidl_i.obj
- 0001:000007d8       _IID_ICallFactory          100017d8     uuid:objidl_i.obj
- 0001:000007e8       _IID_IRpcHelper            100017e8     uuid:objidl_i.obj
- 0001:000007f8       _IID_IReleaseMarshalBuffers 100017f8     uuid:objidl_i.obj
- 0001:00000808       _IID_IWaitMultiple         10001808     uuid:objidl_i.obj
- 0001:00000818       _IID_IUrlMon               10001818     uuid:objidl_i.obj
- 0001:00000828       _IID_IForegroundTransfer   10001828     uuid:objidl_i.obj
- 0001:00000838       _IID_IAddrTrackingControl  10001838     uuid:objidl_i.obj
- 0001:00000848       _IID_IAddrExclusionControl 10001848     uuid:objidl_i.obj
- 0001:00000858       _IID_IPipeByte             10001858     uuid:objidl_i.obj
- 0001:00000868       _IID_AsyncIPipeByte        10001868     uuid:objidl_i.obj
- 0001:00000878       _IID_IPipeLong             10001878     uuid:objidl_i.obj
- 0001:00000888       _IID_AsyncIPipeLong        10001888     uuid:objidl_i.obj
- 0001:00000898       _IID_IPipeDouble           10001898     uuid:objidl_i.obj
- 0001:000008a8       _IID_AsyncIPipeDouble      100018a8     uuid:objidl_i.obj
- 0001:000008b8       _IID_IThumbnailExtractor   100018b8     uuid:objidl_i.obj
- 0001:000008c8       _IID_IDummyHICONIncluder   100018c8     uuid:objidl_i.obj
- 0001:000008d8       _IID_IEnumContextProps     100018d8     uuid:objidl_i.obj
- 0001:000008e8       _IID_IContext              100018e8     uuid:objidl_i.obj
- 0001:000008f8       _IID_IObjContext           100018f8     uuid:objidl_i.obj
- 0001:00000908       _IID_IProcessLock          10001908     uuid:objidl_i.obj
- 0001:00000918       _IID_ISurrogateService     10001918     uuid:objidl_i.obj
- 0001:00000928       _IID_IComThreadingInfo     10001928     uuid:objidl_i.obj
- 0001:00000938       _IID_IProcessInitControl   10001938     uuid:objidl_i.obj
- 0001:00000948       _IID_IInitializeSpy        10001948     uuid:objidl_i.obj
+ 0001:00000380       ??_C@_00CNPNBAHC@?$AA@     10001380     Memory.obj
+ 0001:00000384       ??_C@_05LCABBMOG@?$CFs?3?$CFi?$AA@ 10001384     WThreads.obj
+ 0001:0000038c       _IID_IUnknown              1000138c     uuid:unknwn_i.obj
+ 0001:0000039c       _IID_AsyncIUnknown         1000139c     uuid:unknwn_i.obj
+ 0001:000003ac       _IID_IClassFactory         100013ac     uuid:unknwn_i.obj
+ 0001:000003bc       _IID_IMarshal              100013bc     uuid:objidl_i.obj
+ 0001:000003cc       _IID_IMarshal2             100013cc     uuid:objidl_i.obj
+ 0001:000003dc       _IID_IMalloc               100013dc     uuid:objidl_i.obj
+ 0001:000003ec       _IID_IMallocSpy            100013ec     uuid:objidl_i.obj
+ 0001:000003fc       _IID_IStdMarshalInfo       100013fc     uuid:objidl_i.obj
+ 0001:0000040c       _IID_IExternalConnection   1000140c     uuid:objidl_i.obj
+ 0001:0000041c       _IID_IMultiQI              1000141c     uuid:objidl_i.obj
+ 0001:0000042c       _IID_AsyncIMultiQI         1000142c     uuid:objidl_i.obj
+ 0001:0000043c       _IID_IInternalUnknown      1000143c     uuid:objidl_i.obj
+ 0001:0000044c       _IID_IEnumUnknown          1000144c     uuid:objidl_i.obj
+ 0001:0000045c       _IID_IBindCtx              1000145c     uuid:objidl_i.obj
+ 0001:0000046c       _IID_IEnumMoniker          1000146c     uuid:objidl_i.obj
+ 0001:0000047c       _IID_IRunnableObject       1000147c     uuid:objidl_i.obj
+ 0001:0000048c       _IID_IRunningObjectTable   1000148c     uuid:objidl_i.obj
+ 0001:0000049c       _IID_IPersist              1000149c     uuid:objidl_i.obj
+ 0001:000004ac       _IID_IPersistStream        100014ac     uuid:objidl_i.obj
+ 0001:000004bc       _IID_IMoniker              100014bc     uuid:objidl_i.obj
+ 0001:000004cc       _IID_IROTData              100014cc     uuid:objidl_i.obj
+ 0001:000004dc       _IID_IEnumString           100014dc     uuid:objidl_i.obj
+ 0001:000004ec       _IID_ISequentialStream     100014ec     uuid:objidl_i.obj
+ 0001:000004fc       _IID_IStream               100014fc     uuid:objidl_i.obj
+ 0001:0000050c       _IID_IEnumSTATSTG          1000150c     uuid:objidl_i.obj
+ 0001:0000051c       _IID_IStorage              1000151c     uuid:objidl_i.obj
+ 0001:0000052c       _IID_IPersistFile          1000152c     uuid:objidl_i.obj
+ 0001:0000053c       _IID_IPersistStorage       1000153c     uuid:objidl_i.obj
+ 0001:0000054c       _IID_ILockBytes            1000154c     uuid:objidl_i.obj
+ 0001:0000055c       _IID_IEnumFORMATETC        1000155c     uuid:objidl_i.obj
+ 0001:0000056c       _IID_IEnumSTATDATA         1000156c     uuid:objidl_i.obj
+ 0001:0000057c       _IID_IRootStorage          1000157c     uuid:objidl_i.obj
+ 0001:0000058c       _IID_IAdviseSink           1000158c     uuid:objidl_i.obj
+ 0001:0000059c       _IID_AsyncIAdviseSink      1000159c     uuid:objidl_i.obj
+ 0001:000005ac       _IID_IAdviseSink2          100015ac     uuid:objidl_i.obj
+ 0001:000005bc       _IID_AsyncIAdviseSink2     100015bc     uuid:objidl_i.obj
+ 0001:000005cc       _IID_IDataObject           100015cc     uuid:objidl_i.obj
+ 0001:000005dc       _IID_IDataAdviseHolder     100015dc     uuid:objidl_i.obj
+ 0001:000005ec       _IID_IMessageFilter        100015ec     uuid:objidl_i.obj
+ 0001:000005fc       _IID_IRpcChannelBuffer     100015fc     uuid:objidl_i.obj
+ 0001:0000060c       _IID_IRpcChannelBuffer2    1000160c     uuid:objidl_i.obj
+ 0001:0000061c       _IID_IAsyncRpcChannelBuffer 1000161c     uuid:objidl_i.obj
+ 0001:0000062c       _IID_IRpcChannelBuffer3    1000162c     uuid:objidl_i.obj
+ 0001:0000063c       _IID_IRpcSyntaxNegotiate   1000163c     uuid:objidl_i.obj
+ 0001:0000064c       _IID_IRpcProxyBuffer       1000164c     uuid:objidl_i.obj
+ 0001:0000065c       _IID_IRpcStubBuffer        1000165c     uuid:objidl_i.obj
+ 0001:0000066c       _IID_IPSFactoryBuffer      1000166c     uuid:objidl_i.obj
+ 0001:0000067c       _IID_IChannelHook          1000167c     uuid:objidl_i.obj
+ 0001:0000068c       _IID_IClientSecurity       1000168c     uuid:objidl_i.obj
+ 0001:0000069c       _IID_IServerSecurity       1000169c     uuid:objidl_i.obj
+ 0001:000006ac       _IID_IClassActivator       100016ac     uuid:objidl_i.obj
+ 0001:000006bc       _IID_IRpcOptions           100016bc     uuid:objidl_i.obj
+ 0001:000006cc       _IID_IGlobalOptions        100016cc     uuid:objidl_i.obj
+ 0001:000006dc       _IID_IFillLockBytes        100016dc     uuid:objidl_i.obj
+ 0001:000006ec       _IID_IProgressNotify       100016ec     uuid:objidl_i.obj
+ 0001:000006fc       _IID_ILayoutStorage        100016fc     uuid:objidl_i.obj
+ 0001:0000070c       _IID_IBlockingLock         1000170c     uuid:objidl_i.obj
+ 0001:0000071c       _IID_ITimeAndNoticeControl 1000171c     uuid:objidl_i.obj
+ 0001:0000072c       _IID_IOplockStorage        1000172c     uuid:objidl_i.obj
+ 0001:0000073c       _IID_ISurrogate            1000173c     uuid:objidl_i.obj
+ 0001:0000074c       _IID_IGlobalInterfaceTable 1000174c     uuid:objidl_i.obj
+ 0001:0000075c       _IID_IDirectWriterLock     1000175c     uuid:objidl_i.obj
+ 0001:0000076c       _IID_ISynchronize          1000176c     uuid:objidl_i.obj
+ 0001:0000077c       _IID_ISynchronizeHandle    1000177c     uuid:objidl_i.obj
+ 0001:0000078c       _IID_ISynchronizeEvent     1000178c     uuid:objidl_i.obj
+ 0001:0000079c       _IID_ISynchronizeContainer 1000179c     uuid:objidl_i.obj
+ 0001:000007ac       _IID_ISynchronizeMutex     100017ac     uuid:objidl_i.obj
+ 0001:000007bc       _IID_ICancelMethodCalls    100017bc     uuid:objidl_i.obj
+ 0001:000007cc       _IID_IAsyncManager         100017cc     uuid:objidl_i.obj
+ 0001:000007dc       _IID_ICallFactory          100017dc     uuid:objidl_i.obj
+ 0001:000007ec       _IID_IRpcHelper            100017ec     uuid:objidl_i.obj
+ 0001:000007fc       _IID_IReleaseMarshalBuffers 100017fc     uuid:objidl_i.obj
+ 0001:0000080c       _IID_IWaitMultiple         1000180c     uuid:objidl_i.obj
+ 0001:0000081c       _IID_IUrlMon               1000181c     uuid:objidl_i.obj
+ 0001:0000082c       _IID_IForegroundTransfer   1000182c     uuid:objidl_i.obj
+ 0001:0000083c       _IID_IAddrTrackingControl  1000183c     uuid:objidl_i.obj
+ 0001:0000084c       _IID_IAddrExclusionControl 1000184c     uuid:objidl_i.obj
+ 0001:0000085c       _IID_IPipeByte             1000185c     uuid:objidl_i.obj
+ 0001:0000086c       _IID_AsyncIPipeByte        1000186c     uuid:objidl_i.obj
+ 0001:0000087c       _IID_IPipeLong             1000187c     uuid:objidl_i.obj
+ 0001:0000088c       _IID_AsyncIPipeLong        1000188c     uuid:objidl_i.obj
+ 0001:0000089c       _IID_IPipeDouble           1000189c     uuid:objidl_i.obj
+ 0001:000008ac       _IID_AsyncIPipeDouble      100018ac     uuid:objidl_i.obj
+ 0001:000008bc       _IID_IThumbnailExtractor   100018bc     uuid:objidl_i.obj
+ 0001:000008cc       _IID_IDummyHICONIncluder   100018cc     uuid:objidl_i.obj
+ 0001:000008dc       _IID_IEnumContextProps     100018dc     uuid:objidl_i.obj
+ 0001:000008ec       _IID_IContext              100018ec     uuid:objidl_i.obj
+ 0001:000008fc       _IID_IObjContext           100018fc     uuid:objidl_i.obj
+ 0001:0000090c       _IID_IProcessLock          1000190c     uuid:objidl_i.obj
+ 0001:0000091c       _IID_ISurrogateService     1000191c     uuid:objidl_i.obj
+ 0001:0000092c       _IID_IComThreadingInfo     1000192c     uuid:objidl_i.obj
+ 0001:0000093c       _IID_IProcessInitControl   1000193c     uuid:objidl_i.obj
+ 0001:0000094c       _IID_IInitializeSpy        1000194c     uuid:objidl_i.obj
  0001:000009c0       ??0GdiplusStartupInput@Gdiplus@@QAE@P6GXW4DebugEventLevel@1@PAD@ZHH@Z 100019c0 f i gdip.obj
  0001:000009e0       ??_H@YGXPAXIHP6EPAX0@Z@Z   100019e0 f i gdip.obj
  0001:000009fe       ??1MStream@@QAE@XZ         100019fe f i gdip.obj
@@ -254,70 +256,72 @@
  0001:00001f75       ?lstrdup@@YIPADPBD@Z       10002f75 f   Memory.obj
  0001:00001fae       ?lstrdup@@YIPA_WPB_WI@Z    10002fae f   Memory.obj
  0001:00001fee       ?lstrdupW@@YIPA_WPBDI@Z    10002fee f   Memory.obj
- 0001:00002036       ?lstrmerge@@YIPA_WPB_W0000@Z 10003036 f   Memory.obj
- 0001:000020c9       ?lstrmerge@@YI_NPAPA_WPB_W111@Z 100030c9 f   Memory.obj
- 0001:00002100       ??0ConEmuThreadStartArg@@QAE@P6GKPAX@Z0K@Z 10003100 f i WThreads.obj
- 0001:00002121       ?apiThreadHelper@@YGKPAX@Z 10003121 f   WThreads.obj
- 0001:0000226f       ?apiCreateThread@@YIPAXP6GKPAX@Z0PAKPBDH@Z 1000326f f   WThreads.obj
- 0001:0000235e       ?apiTerminateThreadEx@@YIHPAXKPBDH@Z 1000335e f   WThreads.obj
- 0001:00002420       _memmove                   10003420 f   libCRT:memmove.obj
- 0001:00002480       __alldiv                   10003480 f   libCRT:vc_lldiv.obj
- 0001:00002530       __allmul                   10003530 f   libCRT:vc_llmul.obj
- 0001:00002570       _wcsrchr                   10003570 f   libCRT:strrchr.obj
- 0001:000025a0       _memset                    100035a0 f   libCRT:memset.obj
- 0001:000025e0       _strchr                    100035e0 f   libCRT:strchr.obj
- 0001:00002600       _strrchr                   10003600 f   libCRT:strrchr.obj
- 0001:00002622       _HeapFree@12               10003622 f   kernel32:KERNEL32.dll
- 0001:00002628       _GetProcessHeap@0          10003628 f   kernel32:KERNEL32.dll
- 0001:0000262e       _HeapAlloc@12              1000362e f   kernel32:KERNEL32.dll
- 0001:00002634       _HeapReAlloc@16            10003634 f   kernel32:KERNEL32.dll
- 0001:0000263a       _SystemTimeToFileTime@8    1000363a f   kernel32:KERNEL32.dll
- 0001:00002640       _GetLocalTime@4            10003640 f   kernel32:KERNEL32.dll
- 0001:00002646       _FreeLibrary@4             10003646 f   kernel32:KERNEL32.dll
- 0001:0000264c       _GetLastError@0            1000364c f   kernel32:KERNEL32.dll
- 0001:00002652       _GetProcAddress@8          10003652 f   kernel32:KERNEL32.dll
- 0001:00002658       _LoadLibraryW@4            10003658 f   kernel32:KERNEL32.dll
- 0001:0000265e       _CloseHandle@4             1000365e f   kernel32:KERNEL32.dll
- 0001:00002664       _WaitForSingleObject@8     10003664 f   kernel32:KERNEL32.dll
- 0001:0000266a       _DeleteFileW@4             1000366a f   kernel32:KERNEL32.dll
- 0001:00002670       _lstrcatW@8                10003670 f   kernel32:KERNEL32.dll
- 0001:00002676       _lstrlenW@4                10003676 f   kernel32:KERNEL32.dll
- 0001:0000267c       _lstrcpyW@8                1000367c f   kernel32:KERNEL32.dll
- 0001:00002682       _WriteFile@20              10003682 f   kernel32:KERNEL32.dll
- 0001:00002688       _CreateFileW@28            10003688 f   kernel32:KERNEL32.dll
- 0001:0000268e       _GetTempFileNameW@16       1000368e f   kernel32:KERNEL32.dll
- 0001:00002694       _GetTempPathW@8            10003694 f   kernel32:KERNEL32.dll
- 0001:0000269a       _lstrcpynW@12              1000369a f   kernel32:KERNEL32.dll
- 0001:000026a0       _HeapCreate@12             100036a0 f   kernel32:KERNEL32.dll
- 0001:000026a6       _HeapDestroy@4             100036a6 f   kernel32:KERNEL32.dll
- 0001:000026ac       _HeapValidate@12           100036ac f   kernel32:KERNEL32.dll
- 0001:000026b2       _lstrcpyA@8                100036b2 f   kernel32:KERNEL32.dll
- 0001:000026b8       _lstrlenA@4                100036b8 f   kernel32:KERNEL32.dll
- 0001:000026be       _MultiByteToWideChar@24    100036be f   kernel32:KERNEL32.dll
- 0001:000026c4       _lstrcpynA@12              100036c4 f   kernel32:KERNEL32.dll
- 0001:000026ca       _GetTickCount@0            100036ca f   kernel32:KERNEL32.dll
- 0001:000026d0       _GetCurrentThreadId@0      100036d0 f   kernel32:KERNEL32.dll
- 0001:000026d6       _SetLastError@4            100036d6 f   kernel32:KERNEL32.dll
- 0001:000026dc       _ResumeThread@4            100036dc f   kernel32:KERNEL32.dll
- 0001:000026e2       _CreateThread@24           100036e2 f   kernel32:KERNEL32.dll
- 0001:000026e8       _TerminateThread@8         100036e8 f   kernel32:KERNEL32.dll
- 0001:000026ee       _FillRect@12               100036ee f   user32:USER32.dll
- 0001:000026f4       _wsprintfW                 100036f4 f   user32:USER32.dll
- 0001:000026fa       _CharLowerBuffW@8          100036fa f   user32:USER32.dll
- 0001:00002700       _wsprintfA                 10003700 f   user32:USER32.dll
- 0001:00002706       _DeleteDC@4                10003706 f   gdi32:GDI32.dll
- 0001:0000270c       _DeleteObject@4            1000370c f   gdi32:GDI32.dll
- 0001:00002712       _SelectObject@8            10003712 f   gdi32:GDI32.dll
- 0001:00002718       _CreateSolidBrush@4        10003718 f   gdi32:GDI32.dll
- 0001:0000271e       _CreateDIBSection@24       1000371e f   gdi32:GDI32.dll
- 0001:00002724       _CreateCompatibleDC@4      10003724 f   gdi32:GDI32.dll
- 0001:0000272a       _CoInitialize@4            1000372a f   ole32:ole32.dll
- 0001:00002730       _CoUninitialize@0          10003730 f   ole32:ole32.dll
- 0001:00002738       __IMPORT_DESCRIPTOR_KERNEL32 10003738     kernel32:KERNEL32.dll
- 0001:0000274c       __IMPORT_DESCRIPTOR_USER32 1000374c     user32:USER32.dll
- 0001:00002760       __IMPORT_DESCRIPTOR_GDI32  10003760     gdi32:GDI32.dll
- 0001:00002774       __IMPORT_DESCRIPTOR_ole32  10003774     ole32:ole32.dll
- 0001:00002788       __NULL_IMPORT_DESCRIPTOR   10003788     kernel32:KERNEL32.dll
+ 0001:00002036       ?lstrdupA@@YIPADPB_WIPAH@Z 10003036 f   Memory.obj
+ 0001:000020cf       ?lstrmerge@@YIPA_WPB_W0000@Z 100030cf f   Memory.obj
+ 0001:00002162       ?lstrmerge@@YI_NPAPA_WPB_W111@Z 10003162 f   Memory.obj
+ 0001:00002199       ??0ConEmuThreadStartArg@@QAE@P6GKPAX@Z0K@Z 10003199 f i WThreads.obj
+ 0001:000021ba       ?apiThreadHelper@@YGKPAX@Z 100031ba f   WThreads.obj
+ 0001:00002308       ?apiCreateThread@@YIPAXP6GKPAX@Z0PAKPBDH@Z 10003308 f   WThreads.obj
+ 0001:000023f7       ?apiTerminateThreadEx@@YIHPAXKPBDH@Z 100033f7 f   WThreads.obj
+ 0001:000024c0       _memmove                   100034c0 f   libCRT:memmove.obj
+ 0001:00002520       __alldiv                   10003520 f   libCRT:vc_lldiv.obj
+ 0001:000025d0       __allmul                   100035d0 f   libCRT:vc_llmul.obj
+ 0001:00002610       _wcsrchr                   10003610 f   libCRT:strrchr.obj
+ 0001:00002640       _memset                    10003640 f   libCRT:memset.obj
+ 0001:00002680       _strchr                    10003680 f   libCRT:strchr.obj
+ 0001:000026a0       _strrchr                   100036a0 f   libCRT:strrchr.obj
+ 0001:000026c2       _HeapFree@12               100036c2 f   kernel32:KERNEL32.dll
+ 0001:000026c8       _GetProcessHeap@0          100036c8 f   kernel32:KERNEL32.dll
+ 0001:000026ce       _HeapAlloc@12              100036ce f   kernel32:KERNEL32.dll
+ 0001:000026d4       _HeapReAlloc@16            100036d4 f   kernel32:KERNEL32.dll
+ 0001:000026da       _SystemTimeToFileTime@8    100036da f   kernel32:KERNEL32.dll
+ 0001:000026e0       _GetLocalTime@4            100036e0 f   kernel32:KERNEL32.dll
+ 0001:000026e6       _FreeLibrary@4             100036e6 f   kernel32:KERNEL32.dll
+ 0001:000026ec       _GetLastError@0            100036ec f   kernel32:KERNEL32.dll
+ 0001:000026f2       _GetProcAddress@8          100036f2 f   kernel32:KERNEL32.dll
+ 0001:000026f8       _LoadLibraryW@4            100036f8 f   kernel32:KERNEL32.dll
+ 0001:000026fe       _CloseHandle@4             100036fe f   kernel32:KERNEL32.dll
+ 0001:00002704       _WaitForSingleObject@8     10003704 f   kernel32:KERNEL32.dll
+ 0001:0000270a       _DeleteFileW@4             1000370a f   kernel32:KERNEL32.dll
+ 0001:00002710       _lstrcatW@8                10003710 f   kernel32:KERNEL32.dll
+ 0001:00002716       _lstrlenW@4                10003716 f   kernel32:KERNEL32.dll
+ 0001:0000271c       _lstrcpyW@8                1000371c f   kernel32:KERNEL32.dll
+ 0001:00002722       _WriteFile@20              10003722 f   kernel32:KERNEL32.dll
+ 0001:00002728       _CreateFileW@28            10003728 f   kernel32:KERNEL32.dll
+ 0001:0000272e       _GetTempFileNameW@16       1000372e f   kernel32:KERNEL32.dll
+ 0001:00002734       _GetTempPathW@8            10003734 f   kernel32:KERNEL32.dll
+ 0001:0000273a       _lstrcpynW@12              1000373a f   kernel32:KERNEL32.dll
+ 0001:00002740       _HeapCreate@12             10003740 f   kernel32:KERNEL32.dll
+ 0001:00002746       _HeapDestroy@4             10003746 f   kernel32:KERNEL32.dll
+ 0001:0000274c       _HeapValidate@12           1000374c f   kernel32:KERNEL32.dll
+ 0001:00002752       _lstrcpyA@8                10003752 f   kernel32:KERNEL32.dll
+ 0001:00002758       _lstrlenA@4                10003758 f   kernel32:KERNEL32.dll
+ 0001:0000275e       _MultiByteToWideChar@24    1000375e f   kernel32:KERNEL32.dll
+ 0001:00002764       _WideCharToMultiByte@32    10003764 f   kernel32:KERNEL32.dll
+ 0001:0000276a       _lstrcpynA@12              1000376a f   kernel32:KERNEL32.dll
+ 0001:00002770       _GetTickCount@0            10003770 f   kernel32:KERNEL32.dll
+ 0001:00002776       _GetCurrentThreadId@0      10003776 f   kernel32:KERNEL32.dll
+ 0001:0000277c       _SetLastError@4            1000377c f   kernel32:KERNEL32.dll
+ 0001:00002782       _ResumeThread@4            10003782 f   kernel32:KERNEL32.dll
+ 0001:00002788       _CreateThread@24           10003788 f   kernel32:KERNEL32.dll
+ 0001:0000278e       _TerminateThread@8         1000378e f   kernel32:KERNEL32.dll
+ 0001:00002794       _FillRect@12               10003794 f   user32:USER32.dll
+ 0001:0000279a       _wsprintfW                 1000379a f   user32:USER32.dll
+ 0001:000027a0       _CharLowerBuffW@8          100037a0 f   user32:USER32.dll
+ 0001:000027a6       _wsprintfA                 100037a6 f   user32:USER32.dll
+ 0001:000027ac       _DeleteDC@4                100037ac f   gdi32:GDI32.dll
+ 0001:000027b2       _DeleteObject@4            100037b2 f   gdi32:GDI32.dll
+ 0001:000027b8       _SelectObject@8            100037b8 f   gdi32:GDI32.dll
+ 0001:000027be       _CreateSolidBrush@4        100037be f   gdi32:GDI32.dll
+ 0001:000027c4       _CreateDIBSection@24       100037c4 f   gdi32:GDI32.dll
+ 0001:000027ca       _CreateCompatibleDC@4      100037ca f   gdi32:GDI32.dll
+ 0001:000027d0       _CoInitialize@4            100037d0 f   ole32:ole32.dll
+ 0001:000027d6       _CoUninitialize@0          100037d6 f   ole32:ole32.dll
+ 0001:000027dc       __IMPORT_DESCRIPTOR_KERNEL32 100037dc     kernel32:KERNEL32.dll
+ 0001:000027f0       __IMPORT_DESCRIPTOR_USER32 100037f0     user32:USER32.dll
+ 0001:00002804       __IMPORT_DESCRIPTOR_GDI32  10003804     gdi32:GDI32.dll
+ 0001:00002818       __IMPORT_DESCRIPTOR_ole32  10003818     ole32:ole32.dll
+ 0001:0000282c       __NULL_IMPORT_DESCRIPTOR   1000382c     kernel32:KERNEL32.dll
  0002:00000000       ?g_TerminatedThreadIdx@@3JA 10004000     WThreads.obj
  0002:00000010       ?ghModule@@3PAUHINSTANCE__@@A 10004010     gdip.obj
  0002:00000048       ?gnLastWin32Error@@3KA     10004048     gdip.obj
