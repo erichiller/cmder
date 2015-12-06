@@ -34,8 +34,9 @@
 ) else (
     set architecture=64
 )
-
-
+:: Run clink
+@"%CMDER_ROOT%\vendor\clink\clink_x%architecture%.exe" inject --quiet --profile "%USERPROFILE%"
+@title cmd
 
 :: Prepare for msys2
 
@@ -54,9 +55,6 @@
     :: define SVN_SSH so we can use git svn with ssh svn repositories
     if not defined SVN_SSH set "SVN_SSH=%MSYS2_ROOT:\=\\%\\bin\\ssh.exe"
 )
-
-:: Run clink
-@"%CMDER_ROOT%\vendor\clink\clink_x%architecture%.exe" inject --quiet --profile "%CMDER_ROOT%\config"
 
 :: Enhance Path
 @set "PATH=%CMDER_ROOT%\bin;%PATH%;%CMDER_ROOT%"
