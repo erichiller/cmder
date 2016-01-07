@@ -1,4 +1,4 @@
-*spell.txt*	For Vim version 7.4.  Last change: 2013 Jul 17
+*spell.txt*	For Vim version 7.4.  Last change: 2014 Sep 19
 
 
 		  VIM REFERENCE MANUAL	  by Bram Moolenaar
@@ -268,6 +268,13 @@ In a table:
 	utf-8		yi		Yiddish
 	latin1		yi		transliterated Yiddish
 	utf-8		yi-tr		transliterated Yiddish
+
+							*spell-cjk*
+Chinese, Japanese and other East Asian characters are normally marked as
+errors, because spell checking of these characters is not supported. If
+'spelllang' includes "cjk", these characters are not marked as errors.  This
+is useful when editing text with spell checking while some Asian words are
+present.
 
 
 SPELL FILES						*spell-load*
@@ -932,9 +939,10 @@ be combined without errors.
 
 If you get an E763 warning that the word tables differ you need to update your
 ".spl" spell files.  If you downloaded the files, get the latest version of
-all spell files you use.  Otherwise generate the .spl file again with
-|:mkspell|.  If you still get errors check the FOL, LOW and UPP lines in the
-used .aff files.
+all spell files you use.  If you are only using one, e.g., German, then also
+download the recent English spell files.  Otherwise generate the .spl file
+again with |:mkspell|.  If you still get errors check the FOL, LOW and UPP
+lines in the used .aff files.
 
 The XX.ascii.spl spell file generated with the "-ascii" argument will not
 contain the table with characters, so that it can be combine with spell files
@@ -1050,6 +1058,9 @@ this text to start with a "#" so that mistakes don't go unnoticed.  Example:
 	SFX F 0 in   [^i]n      # Spion > Spionin  ~
 	SFX F 0 nen  in		# Bauerin > Bauerinnen ~
 
+However, to avoid lots of errors in affix files written for Myspell, you can
+add the IGNOREEXTRA flag.
+
 Apparently Myspell allows an affix name to appear more than once.  Since this
 might also be a mistake, Vim checks for an extra "S".  The affix files for
 Myspell that use this feature apparently have this flag.  Example:
@@ -1101,6 +1112,14 @@ Specifically, the affix flags can be used for:
   word.  |spell-compound|
 - NEEDAFFIX: another affix is needed to make a valid word.
 - CIRCUMFIX, as explained just below.
+
+
+IGNOREEXTRA						*spell-IGNOREEXTRA*
+
+Normally Vim gives an error for an extra field that does not start with '#'.
+This avoids errors going unnoticed.  However, some files created for Myspell
+or Hunspell may contain many entries with an extra field.  Use the IGNOREEXTRA
+flag to avoid lots of errors.
 
 
 CIRCUMFIX						*spell-CIRCUMFIX*

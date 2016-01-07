@@ -14,13 +14,13 @@ $CmderModulePath = Join-path $PSScriptRoot "psmodules/"
 # Add GOPATH
 if (Test-Path -Path "C:\Go" ) {
 	$env:GOROOT = "C:\Go"
-	$env:Path += ";$env:GOROOT\bin\"
 	$env:GOPATH = (Join-Path $env:USERPROFILE "\dev")
+	$env:Path += ";$env:GOROOT\bin\;$env:GOPATH\bin\"
 }
 if (Test-Path -Path "~\dev\lib\go" ) {
 	$env:GOROOT = (Join-Path $env:USERPROFILE "\dev\lib\go")
-	$env:Path += ";$env:GOROOT\bin\"
 	$env:GOPATH = (Join-Path $env:USERPROFILE "\dev")
+	$env:Path += ";$env:GOROOT\bin\;$env:GOPATH\bin\"
 }
 
 # Add node , npm setup
@@ -46,7 +46,6 @@ try {
 	# set status as true
 	$gitStatus = $true
 	# setup git-bash/msysgit aliases
-	set-alias vim bashcall
 	set-alias gunzip bashcall
 	set-alias irssi bashcall
 	Remove-Item alias:curl
@@ -69,9 +68,10 @@ function wget { wget.exe --no-check-certificate $args }
 Remove-Item alias:ls
 function ls { ls.exe -l --color $args }
 
-function vi { & ( $env:CMDER_ROOT + "\vendor\msys2\usr\bin\bash.exe" ) -c '"' vim $args '"' }
+Set-Alias vi vim
+function vim { & ( (Join-Path $env:CMDER_ROOT '\vendor\vim\vim74\vim.exe') ) -u (Join-Path $env:CMDER_ROOT '/config/.vimrc' ) $args  }
 
-# set-alias -passthru vim bashcall # debug
+# set-alias -passthru bashcall # debug
 function bashcall {
 	#echo "entered bashcall"
 	#echo "args="

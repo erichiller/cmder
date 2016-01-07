@@ -29,6 +29,7 @@ enum isl_ast_op_type {
 	isl_ast_op_fdiv_q,	/* Round towards -infty */
 	isl_ast_op_pdiv_q,	/* Dividend is non-negative */
 	isl_ast_op_pdiv_r,	/* Dividend is non-negative */
+	isl_ast_op_zdiv_r,	/* Result only compared against zero */
 	isl_ast_op_cond,
 	isl_ast_op_select,
 	isl_ast_op_eq,
@@ -54,7 +55,16 @@ enum isl_ast_node_type {
 	isl_ast_node_for = 1,
 	isl_ast_node_if,
 	isl_ast_node_block,
+	isl_ast_node_mark,
 	isl_ast_node_user
+};
+
+enum isl_ast_loop_type {
+	isl_ast_loop_error = -1,
+	isl_ast_loop_default = 0,
+	isl_ast_loop_atomic,
+	isl_ast_loop_unroll,
+	isl_ast_loop_separate
 };
 
 struct isl_ast_print_options;

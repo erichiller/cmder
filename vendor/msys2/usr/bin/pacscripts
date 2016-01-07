@@ -26,7 +26,7 @@ set -o nounset
 set -o errexit
 
 declare -r myname='pacscripts'
-declare -r myver='4.2.1-373-g4c60-dirty'
+declare -r myver='4.2.1-432-ga10ea-dirty'
 
 conf="/etc/pacman.conf"
 

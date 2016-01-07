@@ -349,3 +349,245 @@
 [2015-11-28 22:47] [PACMAN] starting full system upgrade
 [2015-11-28 22:47] [PACMAN] Running 'pacman -Sc'
 [2015-11-28 23:19] [PACMAN] Running 'pacman --needed -S bash pacman pacman-mirrors msys2-runtime'
+[2016-01-07 09:58] [PACMAN] Running 'pacman -Rs vim'
+[2016-01-07 09:58] [PACMAN] Running 'pacman -Rs git'
+[2016-01-07 09:59] [ALPM] transaction started
+[2016-01-07 09:59] [ALPM] removed git (2.6.3-1)
+[2016-01-07 09:59] [ALPM] removed perl-libwww (6.13-1)
+[2016-01-07 09:59] [ALPM] removed perl-WWW-RobotRules (6.02-2)
+[2016-01-07 09:59] [ALPM] removed perl-Net-HTTP (6.09-1)
+[2016-01-07 09:59] [ALPM] removed perl-HTTP-Negotiate (6.01-2)
+[2016-01-07 09:59] [ALPM] removed perl-HTTP-Daemon (6.01-2)
+[2016-01-07 09:59] [ALPM] removed perl-HTTP-Cookies (6.01-2)
+[2016-01-07 09:59] [ALPM] removed perl-HTTP-Message (6.06-2)
+[2016-01-07 09:59] [ALPM] removed perl-HTML-Parser (3.71-3)
+[2016-01-07 09:59] [ALPM] removed perl-HTML-Tagset (3.20-2)
+[2016-01-07 09:59] [ALPM] removed perl-Encode-Locale (1.04-1)
+[2016-01-07 09:59] [ALPM] removed perl-LWP-MediaTypes (6.02-2)
+[2016-01-07 09:59] [ALPM] removed perl-File-Listing (6.04-2)
+[2016-01-07 09:59] [ALPM] removed perl-HTTP-Date (6.02-2)
+[2016-01-07 09:59] [ALPM] removed perl-TermReadKey (2.33-1)
+[2016-01-07 09:59] [ALPM] removed perl-Net-SMTP-SSL (1.02-1)
+[2016-01-07 09:59] [ALPM] removed perl-IO-Socket-SSL (2.016-1)
+[2016-01-07 09:59] [ALPM] removed perl-URI (1.68-1)
+[2016-01-07 09:59] [ALPM] removed perl-Net-SSLeay (1.70-1)
+[2016-01-07 09:59] [ALPM] removed perl-MIME-tools (5.506-1)
+[2016-01-07 09:59] [ALPM] removed perl-MailTools (2.14-1)
+[2016-01-07 09:59] [ALPM] removed perl-TimeDate (2.30-2)
+[2016-01-07 09:59] [ALPM] removed perl-IO-stringy (2.111-1)
+[2016-01-07 09:59] [ALPM] removed perl-Convert-BinHex (1.123-2)
+[2016-01-07 09:59] [ALPM] removed perl-Error (0.17024-1)
+[2016-01-07 09:59] [ALPM] removed perl-Authen-SASL (2.16-2)
+[2016-01-07 09:59] [ALPM] removed openssh (7.1p1-1)
+[2016-01-07 09:59] [ALPM] removed libedit (3.1-20130712)
+[2016-01-07 09:59] [ALPM] removed heimdal (1.5.3-6)
+[2016-01-07 09:59] [ALPM] removed heimdal-libs (1.5.3-6)
+[2016-01-07 09:59] [ALPM] transaction completed
+[2016-01-07 09:59] [PACMAN] Running 'pacman -Rs vim'
+[2016-01-07 09:59] [ALPM] transaction started
+[2016-01-07 09:59] [ALPM] removed vim (7.4.872-2)
+[2016-01-07 09:59] [ALPM] transaction completed
+[2016-01-07 10:00] [PACMAN] Running 'pacman -Sc'
+[2016-01-07 10:01] [PACMAN] Running 'pacman -S git'
+[2016-01-07 10:01] [ALPM] transaction started
+[2016-01-07 10:01] [ALPM] installed vim (7.4.872-2)
+[2016-01-07 10:01] [ALPM] installed heimdal-libs (1.5.3-6)
+[2016-01-07 10:01] [ALPM] installed heimdal (1.5.3-6)
+[2016-01-07 10:01] [ALPM] installed libedit (3.1-20130712)
+[2016-01-07 10:01] [ALPM] installed openssh (7.1p1-1)
+[2016-01-07 10:01] [ALPM] installed perl-Error (0.17024-1)
+[2016-01-07 10:01] [ALPM] installed perl-Authen-SASL (2.16-2)
+[2016-01-07 10:01] [ALPM] installed perl-Encode-Locale (1.04-1)
+[2016-01-07 10:01] [ALPM] installed perl-HTTP-Date (6.02-2)
+[2016-01-07 10:01] [ALPM] installed perl-File-Listing (6.04-2)
+[2016-01-07 10:01] [ALPM] installed perl-HTML-Tagset (3.20-2)
+[2016-01-07 10:01] [ALPM] installed perl-HTML-Parser (3.71-3)
+[2016-01-07 10:01] [ALPM] installed perl-LWP-MediaTypes (6.02-2)
+[2016-01-07 10:01] [ALPM] installed perl-URI (1.68-1)
+[2016-01-07 10:01] [ALPM] installed perl-HTTP-Message (6.06-2)
+[2016-01-07 10:01] [ALPM] installed perl-HTTP-Cookies (6.01-2)
+[2016-01-07 10:01] [ALPM] installed perl-HTTP-Daemon (6.01-2)
+[2016-01-07 10:01] [ALPM] installed perl-HTTP-Negotiate (6.01-2)
+[2016-01-07 10:01] [ALPM] installed perl-Net-HTTP (6.09-1)
+[2016-01-07 10:01] [ALPM] installed perl-WWW-RobotRules (6.02-2)
+[2016-01-07 10:01] [ALPM] installed perl-libwww (6.13-1)
+[2016-01-07 10:01] [ALPM] installed perl-TimeDate (2.30-2)
+[2016-01-07 10:01] [ALPM] installed perl-MailTools (2.14-1)
+[2016-01-07 10:01] [ALPM] installed perl-IO-stringy (2.111-1)
+[2016-01-07 10:01] [ALPM] installed perl-Convert-BinHex (1.123-2)
+[2016-01-07 10:01] [ALPM-SCRIPTLET] module test... pass.
+[2016-01-07 10:01] [ALPM] installed perl-MIME-tools (5.506-1)
+[2016-01-07 10:01] [ALPM] installed perl-Net-SSLeay (1.70-1)
+[2016-01-07 10:01] [ALPM] installed perl-IO-Socket-SSL (2.016-1)
+[2016-01-07 10:01] [ALPM] installed perl-Net-SMTP-SSL (1.02-1)
+[2016-01-07 10:01] [ALPM] installed perl-TermReadKey (2.33-1)
+[2016-01-07 10:01] [ALPM] installed git (2.6.3-1)
+[2016-01-07 10:01] [ALPM] transaction completed
+[2016-01-07 10:02] [PACMAN] Running '/usr/bin/pacman -Sy'
+[2016-01-07 10:02] [PACMAN] synchronizing package lists
+[2016-01-07 10:03] [PACMAN] Running '/usr/bin/pacman -S --noconfirm --needed bash pacman msys2-runtime msys2-runtime-devel'
+[2016-01-07 10:03] [ALPM] transaction started
+[2016-01-07 10:03] [ALPM] upgraded msys2-runtime (2.4.0.16752.6eb10ef-1 -> 2.4.0.16814.ac5d7ed-1)
+[2016-01-07 10:03] [ALPM] upgraded bash (4.3.042-2 -> 4.3.042-4)
+[2016-01-07 10:03] [ALPM] upgraded pacman (4.2.1.6258.f5bbd79-1 -> 4.2.1.6317.6ac7836-1)
+[2016-01-07 10:03] [ALPM] upgraded msys2-runtime-devel (2.4.0.16752.6eb10ef-1 -> 2.4.0.16814.ac5d7ed-1)
+[2016-01-07 10:03] [ALPM] transaction completed
+[2016-01-07 10:10] [PACMAN] Running 'pacman -Rs vim'
+[2016-01-07 10:10] [PACMAN] Running 'pacman -Rs git'
+[2016-01-07 10:10] [ALPM] transaction started
+[2016-01-07 10:10] [ALPM] removed git (2.6.3-1)
+[2016-01-07 10:10] [ALPM] removed vim (7.4.872-2)
+[2016-01-07 10:10] [ALPM] removed perl-libwww (6.13-1)
+[2016-01-07 10:10] [ALPM] removed perl-WWW-RobotRules (6.02-2)
+[2016-01-07 10:10] [ALPM] removed perl-Net-HTTP (6.09-1)
+[2016-01-07 10:10] [ALPM] removed perl-HTTP-Negotiate (6.01-2)
+[2016-01-07 10:10] [ALPM] removed perl-HTTP-Daemon (6.01-2)
+[2016-01-07 10:10] [ALPM] removed perl-HTTP-Cookies (6.01-2)
+[2016-01-07 10:10] [ALPM] removed perl-HTTP-Message (6.06-2)
+[2016-01-07 10:10] [ALPM] removed perl-HTML-Parser (3.71-3)
+[2016-01-07 10:10] [ALPM] removed perl-HTML-Tagset (3.20-2)
+[2016-01-07 10:10] [ALPM] removed perl-Encode-Locale (1.04-1)
+[2016-01-07 10:10] [ALPM] removed perl-LWP-MediaTypes (6.02-2)
+[2016-01-07 10:10] [ALPM] removed perl-File-Listing (6.04-2)
+[2016-01-07 10:10] [ALPM] removed perl-HTTP-Date (6.02-2)
+[2016-01-07 10:10] [ALPM] removed perl-TermReadKey (2.33-1)
+[2016-01-07 10:10] [ALPM] removed perl-Net-SMTP-SSL (1.02-1)
+[2016-01-07 10:10] [ALPM] removed perl-IO-Socket-SSL (2.016-1)
+[2016-01-07 10:10] [ALPM] removed perl-URI (1.68-1)
+[2016-01-07 10:10] [ALPM] removed perl-Net-SSLeay (1.70-1)
+[2016-01-07 10:10] [ALPM] removed perl-MIME-tools (5.506-1)
+[2016-01-07 10:10] [ALPM] removed perl-MailTools (2.14-1)
+[2016-01-07 10:10] [ALPM] removed perl-TimeDate (2.30-2)
+[2016-01-07 10:10] [ALPM] removed perl-IO-stringy (2.111-1)
+[2016-01-07 10:10] [ALPM] removed perl-Convert-BinHex (1.123-2)
+[2016-01-07 10:10] [ALPM] removed perl-Error (0.17024-1)
+[2016-01-07 10:10] [ALPM] removed perl-Authen-SASL (2.16-2)
+[2016-01-07 10:10] [ALPM] removed openssh (7.1p1-1)
+[2016-01-07 10:10] [ALPM] removed libedit (3.1-20130712)
+[2016-01-07 10:10] [ALPM] removed heimdal (1.5.3-6)
+[2016-01-07 10:10] [ALPM] removed heimdal-libs (1.5.3-6)
+[2016-01-07 10:10] [ALPM] transaction completed
+[2016-01-07 10:10] [PACMAN] Running 'pacman -Rs vim'
+[2016-01-07 10:11] [PACMAN] Running 'pacman -Sc'
+[2016-01-07 10:12] [PACMAN] Running '/usr/bin/pacman -Sy'
+[2016-01-07 10:12] [PACMAN] synchronizing package lists
+[2016-01-07 10:12] [PACMAN] Running 'pacman -Su'
+[2016-01-07 10:12] [PACMAN] starting full system upgrade
+[2016-01-07 10:12] [ALPM] transaction started
+[2016-01-07 10:12] [ALPM] upgraded libreadline (6.3.008-6 -> 6.3.008-7)
+[2016-01-07 10:12] [ALPM] upgraded mingw-w64-x86_64-headers-git (5.0.0.4592.90b8472-1 -> 5.0.0.4598.fc005cd-1)
+[2016-01-07 10:12] [ALPM] upgraded mingw-w64-x86_64-crt-git (5.0.0.4592.90b8472-1 -> 5.0.0.4598.fc005cd-1)
+[2016-01-07 10:12] [ALPM] upgraded mingw-w64-x86_64-isl (0.14.1-2 -> 0.15-1)
+[2016-01-07 10:12] [ALPM] upgraded mingw-w64-x86_64-gcc-libs (5.2.0-4 -> 5.3.0-1)
+[2016-01-07 10:12] [ALPM] upgraded mingw-w64-x86_64-gcc (5.2.0-4 -> 5.3.0-1)
+[2016-01-07 10:12] [ALPM] transaction completed
+[2016-01-07 10:13] [PACMAN] Running 'pacman -S git'
+[2016-01-07 10:13] [ALPM] transaction started
+[2016-01-07 10:13] [ALPM] installed vim (7.4.872-2)
+[2016-01-07 10:13] [ALPM] installed heimdal-libs (1.5.3-6)
+[2016-01-07 10:13] [ALPM] installed heimdal (1.5.3-6)
+[2016-01-07 10:13] [ALPM] installed libedit (3.1-20130712)
+[2016-01-07 10:13] [ALPM] installed openssh (7.1p1-1)
+[2016-01-07 10:13] [ALPM] installed perl-Error (0.17024-1)
+[2016-01-07 10:13] [ALPM] installed perl-Authen-SASL (2.16-2)
+[2016-01-07 10:13] [ALPM] installed perl-Encode-Locale (1.04-1)
+[2016-01-07 10:13] [ALPM] installed perl-HTTP-Date (6.02-2)
+[2016-01-07 10:13] [ALPM] installed perl-File-Listing (6.04-2)
+[2016-01-07 10:13] [ALPM] installed perl-HTML-Tagset (3.20-2)
+[2016-01-07 10:13] [ALPM] installed perl-HTML-Parser (3.71-3)
+[2016-01-07 10:13] [ALPM] installed perl-LWP-MediaTypes (6.02-2)
+[2016-01-07 10:13] [ALPM] installed perl-URI (1.68-1)
+[2016-01-07 10:13] [ALPM] installed perl-HTTP-Message (6.06-2)
+[2016-01-07 10:13] [ALPM] installed perl-HTTP-Cookies (6.01-2)
+[2016-01-07 10:13] [ALPM] installed perl-HTTP-Daemon (6.01-2)
+[2016-01-07 10:13] [ALPM] installed perl-HTTP-Negotiate (6.01-2)
+[2016-01-07 10:13] [ALPM] installed perl-Net-HTTP (6.09-1)
+[2016-01-07 10:13] [ALPM] installed perl-WWW-RobotRules (6.02-2)
+[2016-01-07 10:13] [ALPM] installed perl-libwww (6.13-1)
+[2016-01-07 10:13] [ALPM] installed perl-TimeDate (2.30-2)
+[2016-01-07 10:13] [ALPM] installed perl-MailTools (2.14-1)
+[2016-01-07 10:13] [ALPM] installed perl-IO-stringy (2.111-1)
+[2016-01-07 10:13] [ALPM] installed perl-Convert-BinHex (1.123-2)
+[2016-01-07 10:13] [ALPM-SCRIPTLET] module test... pass.
+[2016-01-07 10:13] [ALPM] installed perl-MIME-tools (5.506-1)
+[2016-01-07 10:13] [ALPM] installed perl-Net-SSLeay (1.70-1)
+[2016-01-07 10:13] [ALPM] installed perl-IO-Socket-SSL (2.016-1)
+[2016-01-07 10:13] [ALPM] installed perl-Net-SMTP-SSL (1.02-1)
+[2016-01-07 10:13] [ALPM] installed perl-TermReadKey (2.33-1)
+[2016-01-07 10:13] [ALPM] installed git (2.6.3-1)
+[2016-01-07 10:13] [ALPM] transaction completed
+[2016-01-07 10:57] [PACMAN] Running 'pacman -Su'
+[2016-01-07 10:57] [PACMAN] starting full system upgrade
+[2016-01-07 11:01] [PACMAN] Running 'pacman -Rs git'
+[2016-01-07 11:01] [ALPM] transaction started
+[2016-01-07 11:01] [ALPM] removed git (2.6.3-1)
+[2016-01-07 11:01] [ALPM] removed vim (7.4.872-2)
+[2016-01-07 11:01] [ALPM] removed perl-libwww (6.13-1)
+[2016-01-07 11:01] [ALPM] removed perl-WWW-RobotRules (6.02-2)
+[2016-01-07 11:01] [ALPM] removed perl-Net-HTTP (6.09-1)
+[2016-01-07 11:01] [ALPM] removed perl-HTTP-Negotiate (6.01-2)
+[2016-01-07 11:01] [ALPM] removed perl-HTTP-Daemon (6.01-2)
+[2016-01-07 11:01] [ALPM] removed perl-HTTP-Cookies (6.01-2)
+[2016-01-07 11:02] [ALPM] removed perl-HTTP-Message (6.06-2)
+[2016-01-07 11:02] [ALPM] removed perl-HTML-Parser (3.71-3)
+[2016-01-07 11:02] [ALPM] removed perl-HTML-Tagset (3.20-2)
+[2016-01-07 11:02] [ALPM] removed perl-Encode-Locale (1.04-1)
+[2016-01-07 11:02] [ALPM] removed perl-LWP-MediaTypes (6.02-2)
+[2016-01-07 11:02] [ALPM] removed perl-File-Listing (6.04-2)
+[2016-01-07 11:02] [ALPM] removed perl-HTTP-Date (6.02-2)
+[2016-01-07 11:02] [ALPM] removed perl-TermReadKey (2.33-1)
+[2016-01-07 11:02] [ALPM] removed perl-Net-SMTP-SSL (1.02-1)
+[2016-01-07 11:02] [ALPM] removed perl-IO-Socket-SSL (2.016-1)
+[2016-01-07 11:02] [ALPM] removed perl-URI (1.68-1)
+[2016-01-07 11:02] [ALPM] removed perl-Net-SSLeay (1.70-1)
+[2016-01-07 11:02] [ALPM] removed perl-MIME-tools (5.506-1)
+[2016-01-07 11:02] [ALPM] removed perl-MailTools (2.14-1)
+[2016-01-07 11:02] [ALPM] removed perl-TimeDate (2.30-2)
+[2016-01-07 11:02] [ALPM] removed perl-IO-stringy (2.111-1)
+[2016-01-07 11:02] [ALPM] removed perl-Convert-BinHex (1.123-2)
+[2016-01-07 11:02] [ALPM] removed perl-Error (0.17024-1)
+[2016-01-07 11:02] [ALPM] removed perl-Authen-SASL (2.16-2)
+[2016-01-07 11:02] [ALPM] removed openssh (7.1p1-1)
+[2016-01-07 11:02] [ALPM] removed libedit (3.1-20130712)
+[2016-01-07 11:02] [ALPM] removed heimdal (1.5.3-6)
+[2016-01-07 11:02] [ALPM] removed heimdal-libs (1.5.3-6)
+[2016-01-07 11:02] [ALPM] transaction completed
+[2016-01-07 11:02] [PACMAN] Running 'pacman -Sc'
+[2016-01-07 11:03] [PACMAN] Running 'pacman -S vim'
+[2016-01-07 11:03] [ALPM] transaction started
+[2016-01-07 11:03] [ALPM] installed vim (7.4.872-2)
+[2016-01-07 11:03] [ALPM] transaction completed
+[2016-01-07 11:03] [PACMAN] Running 'pacman -S git'
+[2016-01-07 11:04] [ALPM] transaction started
+[2016-01-07 11:04] [ALPM] installed heimdal-libs (1.5.3-6)
+[2016-01-07 11:04] [ALPM] installed heimdal (1.5.3-6)
+[2016-01-07 11:04] [ALPM] installed libedit (3.1-20130712)
+[2016-01-07 11:04] [ALPM] installed openssh (7.1p1-1)
+[2016-01-07 11:04] [ALPM] installed perl-Error (0.17024-1)
+[2016-01-07 11:04] [ALPM] installed perl-Authen-SASL (2.16-2)
+[2016-01-07 11:04] [ALPM] installed perl-Encode-Locale (1.04-1)
+[2016-01-07 11:04] [ALPM] installed perl-HTTP-Date (6.02-2)
+[2016-01-07 11:04] [ALPM] installed perl-File-Listing (6.04-2)
+[2016-01-07 11:04] [ALPM] installed perl-HTML-Tagset (3.20-2)
+[2016-01-07 11:04] [ALPM] installed perl-HTML-Parser (3.71-3)
+[2016-01-07 11:04] [ALPM] installed perl-LWP-MediaTypes (6.02-2)
+[2016-01-07 11:04] [ALPM] installed perl-URI (1.68-1)
+[2016-01-07 11:04] [ALPM] installed perl-HTTP-Message (6.06-2)
+[2016-01-07 11:04] [ALPM] installed perl-HTTP-Cookies (6.01-2)
+[2016-01-07 11:04] [ALPM] installed perl-HTTP-Daemon (6.01-2)
+[2016-01-07 11:04] [ALPM] installed perl-HTTP-Negotiate (6.01-2)
+[2016-01-07 11:04] [ALPM] installed perl-Net-HTTP (6.09-1)
+[2016-01-07 11:04] [ALPM] installed perl-WWW-RobotRules (6.02-2)
+[2016-01-07 11:04] [ALPM] installed perl-libwww (6.13-1)
+[2016-01-07 11:04] [ALPM] installed perl-TimeDate (2.30-2)
+[2016-01-07 11:04] [ALPM] installed perl-MailTools (2.14-1)
+[2016-01-07 11:04] [ALPM] installed perl-IO-stringy (2.111-1)
+[2016-01-07 11:04] [ALPM] installed perl-Convert-BinHex (1.123-2)
+[2016-01-07 11:04] [ALPM-SCRIPTLET] module test... pass.
+[2016-01-07 11:04] [ALPM] installed perl-MIME-tools (5.506-1)
+[2016-01-07 11:04] [ALPM] installed perl-Net-SSLeay (1.70-1)
+[2016-01-07 11:04] [ALPM] installed perl-IO-Socket-SSL (2.016-1)
+[2016-01-07 11:04] [ALPM] installed perl-Net-SMTP-SSL (1.02-1)
+[2016-01-07 11:04] [ALPM] installed perl-TermReadKey (2.33-1)
+[2016-01-07 11:04] [ALPM] installed git (2.6.3-1)
+[2016-01-07 11:04] [ALPM] transaction completed

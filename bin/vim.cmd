@@ -1,2 +1,2 @@
 @ECHO OFF
-%CMDER_ROOT%\vendor\msys2\usr\bin\bash.exe -c '/usr/bin/vim %*'
+%CMDER_ROOT%\vendor\vim\vim74\vim.exe -u %CMDER_ROOT%\config\.vimrc %*

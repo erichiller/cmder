@@ -1,4 +1,4 @@
-*repeat.txt*    For Vim version 7.4.  Last change: 2013 Jul 25
+*repeat.txt*    For Vim version 7.4.  Last change: 2015 Apr 13
 
 
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
@@ -26,10 +26,14 @@ Chapter 26 of the user manual introduces repeating |usr_26.txt|.
 
 Simple changes can be repeated with the "." command.  Without a count, the
 count of the last change is used.  If you enter a count, it will replace the
-last one.  If the last change included a specification of a numbered register,
-the register number will be incremented.  See |redo-register| for an example
-how to use this.  Note that when repeating a command that used a Visual
-selection, the same SIZE of area is used, see |visual-repeat|.
+last one.  |v:count| and |v:count1| will be set.
+
+If the last change included a specification of a numbered register, the
+register number will be incremented.  See |redo-register| for an example how
+to use this.
+
+Note that when repeating a command that used a Visual selection, the same SIZE
+of area is used, see |visual-repeat|.
 
 							*@:*
 @:			Repeat last command-line [count] times.
@@ -59,6 +63,9 @@ This is useful if you want to include a '/' in the search pattern or
 replacement string.
 
 For the definition of a pattern, see |pattern|.
+
+NOTE [cmd] may contain a range; see |collapse| and |edit-paragraph-join| for
+examples.
 
 The global commands work by first scanning through the [range] lines and
 marking each line where a match occurs (for a multi-line pattern, only the
@@ -228,8 +235,8 @@ For writing a Vim script, see chapter 41 of the user manual |usr_41.txt|.
 			command is ignored.
 			{not in Vi}
 
-						*:scrip* *:scriptnames*
-:scrip[tnames]		List all sourced script names, in the order they were
+						*:scr* *:scriptnames*
+:scr[iptnames]		List all sourced script names, in the order they were
 			first sourced.  The number is used for the script ID
 			|<SID>|.
 			{not in Vi} {not available when compiled without the
@@ -584,9 +591,16 @@ the |+reltime| feature, which is present more often.
 
 For profiling syntax highlighting see |:syntime|.
 
+For example, to profile the one_script.vim script file: >
+	:profile start /tmp/one_script_profile
+	:profile file one_script.vim
+	:source one_script.vim
+	:exit
+
 
 :prof[ile] start {fname}			*:prof* *:profile* *E750*
 		Start profiling, write the output in {fname} upon exit.
+		"~/" and environment variables in {fname} will be expanded.
 		If {fname} already exists it will be silently overwritten.
 		The variable |v:profiling| is set to one.
 
@@ -608,8 +622,10 @@ For profiling syntax highlighting see |:syntime|.
 		This only profiles the script itself, not the functions
 		defined in it.
 		When the [!] is added then all functions defined in the script
-		will also be profiled.  But only if the script is loaded after
-		this command.
+		will also be profiled.
+		Note that profiling only starts when the script is loaded
+		after this command.  A :profile command in the script itself
+		won't work.
 
 
 :profd[el] ...						*:profd* *:profdel*

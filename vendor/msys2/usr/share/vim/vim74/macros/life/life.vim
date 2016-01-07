@@ -103,7 +103,7 @@ map z ,^,&,*,&<1,*<2
 "
 "  ----- Initialisation -----
 "
-map ,- :s/./-/g
+map ,- :s/./-/g
 map ,o oPut 'X's in the left box, then hit 'C' or 'R'
 map ,R 03stop
 "
@@ -159,7 +159,7 @@ map B ,%k>,$
 map > 0 LWWWWWWWWWWWWWWWWWW,rj
 "
 " Refresh board (used by show next)
-map & :%s/^\(-[ A-Z]*-\)\(-[ A-Z]*-\)\(-[.]*-\)$/\2\3\3/
+map & :%s/^\(-[ A-Z]*-\)\(-[ A-Z]*-\)\(-[.]*-\)$/\2\3\3/
 "
 "
 " Work around vi multiple yank/put in a single macro limitation
@@ -209,13 +209,13 @@ map ( ,s,i,X0i?^#A 0,df.l,Y21h
 "
 " Delete 's'paces (deads);
 " The number of remaining characters is the number of living neighbours.
-map ,s :.g/ /s///g
+map ,s :.g/ /s///g
 "
 " Insert current character in the last line
 map ,i `ay GP
 "
 " Replace any uppercase letter with 'X';
-map ,X :.g/[A-Z]/s//X/g
+map ,X :.g/[A-Z]/s//X/g
 "
 " Delete and execute the rest of the line
 map ,d "qd$@q
@@ -240,7 +240,7 @@ map ,a `a,jGi?=,ma0,dll,j`a21l,ml,nh
 "  ----- timing macros  -----
 "
 " Get current date (used by time a generation)
-map << :r!date
+map << :r!date
 map <1 G?^topO<<
 map <2 G?^topk<<
 "

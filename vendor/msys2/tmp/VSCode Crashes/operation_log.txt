@@ -1,0 +1,29 @@
+[7792:7560:1206/184621:VERBOSE1:crash_service_main.cc(68)] Session start. cmdline is [--reporter-url=https://ticinocrashreporter.azurewebsites.net/crash --application-name=VSCode --v=1]
+[7792:7560:1206/184621:VERBOSE1:crash_service.cc(142)] window handle is 00240E48
+[7792:7560:1206/184621:VERBOSE1:crash_service.cc(290)] pipe name is \\.\pipe\VSCode Crash Service
+dumps at C:\cmder\vendor\msys2\tmp\VSCode Crashes
+[7792:7560:1206/184621:VERBOSE1:crash_service.cc(294)] checkpoint is C:\cmder\vendor\msys2\tmp\VSCode Crashes\crash_checkpoint.txt
+server is https://ticinocrashreporter.azurewebsites.net/crash
+maximum 128 reports/day
+reporter is electron-crash-service
+[7792:7560:1206/184621:VERBOSE1:crash_service_main.cc(84)] Ready to process crash requests
+[7792:11164:1206/184621:VERBOSE1:crash_service.cc(323)] client start. pid = 11468
+[7792:11164:1206/184621:VERBOSE1:crash_service.cc(323)] client start. pid = 9052
+[9300:11312:1206/184621:VERBOSE1:crash_service_main.cc(68)] Session start. cmdline is [--reporter-url=https://ticinocrashreporter.azurewebsites.net/crash --application-name=VSCode --v=1]
+[9300:11312:1206/184621:VERBOSE1:crash_service.cc(142)] window handle is 006805C6
+[9300:11312:1206/184621:VERBOSE1:crash_service.cc(290)] pipe name is \\.\pipe\VSCode Crash Service
+dumps at C:\cmder\vendor\msys2\tmp\VSCode Crashes
+[9300:11312:1206/184621:VERBOSE1:crash_service.cc(294)] checkpoint is C:\cmder\vendor\msys2\tmp\VSCode Crashes\crash_checkpoint.txt
+server is https://ticinocrashreporter.azurewebsites.net/crash
+maximum 128 reports/day
+reporter is electron-crash-service
+[9300:11312:1206/184621:ERROR:crash_service.cc(301)] could not start dumper
+[7792:4056:1206/184625:VERBOSE1:crash_service.cc(331)] client end. pid = 11468
+[7792:4056:1206/184625:VERBOSE1:crash_service.cc(331)] client end. pid = 9052
+[7792:4056:1206/184626:VERBOSE1:crash_service.cc(352)] zero clients. exiting
+[7792:7560:1206/184626:VERBOSE1:crash_service.cc(490)] session ending..
+[7792:7560:1206/184626:VERBOSE1:crash_service.cc(495)] clients connected :2
+clients terminated :2
+dumps serviced :0
+dumps reported :0
+[7792:7560:1206/184626:VERBOSE1:crash_service_main.cc(89)] Session end. return code is 0

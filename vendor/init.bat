@@ -69,8 +69,8 @@
 )
 :: add GOROOT to PATH ; GOROOT can only be added to PATH if checked if defined
 @if defined GOROOT (
-	set "PATH=%USERPROFILE%;%GOROOT%\bin;%PATH%"
 	set "GOPATH=%USERPROFILE%\dev"
+	set "PATH=%USERPROFILE%;%GOROOT%\bin;%GOPATH%\bin;%PATH%"
 )
 :: node , npm setup
 @if exist "%CMDER_ROOT%\vendor\nodejs" (

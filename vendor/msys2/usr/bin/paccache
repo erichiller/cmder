@@ -21,7 +21,7 @@
 shopt -s extglob
 
 declare -r myname='paccache'
-declare -r myver='4.2.1-373-g4c60-dirty'
+declare -r myver='4.2.1-432-ga10ea-dirty'
 
 declare -a cachedirs=() candidates=() cmdopts=() whitelist=() blacklist=()
 declare -i delete=0 dryrun=0 filecount=0 move=0 totalsaved=0 verbose=0

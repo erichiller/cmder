@@ -9,12 +9,12 @@ ${CMDER_ROOT}/scripts/start-ssh-agent.cmd
 #Golang
 if [ -d "/c/Go" ] ; then
 	export GOROOT=/c/go
-	export PATH=$GOROOT/bin:$PATH
 	export GOPATH=~/dev
+	export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 elif [ -d "$HOME/dev/lib/go" ] ; then
 	export GOROOT=~/dev/lib/go
-	export PATH=$GOROOT/bin:$PATH
 	export GOPATH=~/dev
+	export PATH=$GOROOT/bin:$GOPATH/bin:$PATH	
 fi
 #NodeJs , NPM
 if [ -d "$CMDER_ROOT/vendor/nodejs" ] ; then
@@ -34,7 +34,8 @@ eval "`dircolors -b`"
 alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -l'
 alias l='ls $LS_OPTIONS -lA'
-alias vi="vim"
+alias vi='vim -u $ConEmuDir/../../config/.vimrc'
+alias vim='vim -u $ConEmuDir/../../config/.vimrc'
 
 # now read input rc
 if [ -f ${CMDER_ROOT}/config/inputrc ] ; then bind -f ${CMDER_ROOT}/config/inputrc ; fi

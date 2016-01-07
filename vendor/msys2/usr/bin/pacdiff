@@ -21,7 +21,7 @@
 shopt -s extglob
 
 declare -r myname='pacdiff'
-declare -r myver='4.2.1-373-g4c60-dirty'
+declare -r myver='4.2.1-432-ga10ea-dirty'
 
 diffprog=${DIFFPROG:-'vim -d'}
 diffsearchpath=${DIFFSEARCHPATH:-/etc}
@@ -171,7 +171,7 @@ fi
 readonly ALL_OFF BOLD BLUE GREEN RED YELLOW
 
 
-if ! type -p ${diffprog%% *} >/dev/null; then
+if ! type -p ${diffprog%% *} >/dev/null && (( ! OUTPUTONLY )); then
 	error "Cannot find the $diffprog binary required for viewing differences."
 	exit 1
 fi

@@ -1,11 +1,11 @@
  ConEmuLn
 
- Timestamp is 5663a3ab (Sun Dec 06 05:55:39 2015)
+ Timestamp is 567c84ea (Fri Dec 25 02:51:06 2015)
 
  Preferred load address is 10000000
 
  Start         Length     Name                   Class
- 0001:00000000 00004f32H .text                   CODE
+ 0001:00000000 00004f46H .text                   CODE
  0002:00000000 000000acH .idata$5                DATA
  0002:000000b0 000004e0H .rdata                  DATA
  0002:00000590 00000010H .rdata$sxdata           DATA
@@ -13,10 +13,10 @@
  0002:000005dc 00000064H .idata$2                DATA
  0002:00000640 00000014H .idata$3                DATA
  0002:00000654 000000acH .idata$4                DATA
- 0002:00000700 000002aeH .idata$6                DATA
+ 0002:00000700 000002acH .idata$6                DATA
  0002:000009b0 0000018bH .edata                  DATA
  0003:00000000 00000148H .data                   DATA
- 0003:00000148 00008328H .bss                    DATA
+ 0003:00000148 00008334H .bss                    DATA
  0004:00000000 00000058H .rsrc$01                DATA
  0004:00000060 000002e8H .rsrc$02                DATA
 
@@ -98,34 +98,33 @@
  0001:00004307       __SEH_epilog               10005307 f   LIBCMT:sehprolg.obj
  0001:00004320       __except_handler3          10005320 f   LIBCMT:exsup3.obj
  0001:0000441e       __seh_longjmp_unwind@4     1000541e f   LIBCMT:exsup3.obj
- 0001:00004440       __alloca_probe             10005440     LIBCMT:chkstk.obj
  0001:00004440       __chkstk                   10005440 f   LIBCMT:chkstk.obj
+ 0001:00004440       __alloca_probe             10005440     LIBCMT:chkstk.obj
  0001:0000446b       _CallDestructExceptionObject 1000546b f   LIBCMT:calldtor.obj
  0001:000044a4       __global_unwind2           100054a4 f   LIBCMT:exsup.obj
  0001:00004509       __local_unwind2            10005509 f   LIBCMT:exsup.obj
  0001:0000458d       __abnormal_termination     1000558d f   LIBCMT:exsup.obj
  0001:000045b0       __NLG_Notify1              100055b0 f   LIBCMT:exsup.obj
  0001:000045b9       __NLG_Notify               100055b9 f   LIBCMT:exsup.obj
- 0001:000045d0       __NLG_Dispatch2            100055d0     LIBCMT:exsup.obj
  0001:000045d0       __NLG_Dispatch             100055d0     LIBCMT:exsup.obj
+ 0001:000045d0       __NLG_Dispatch2            100055d0     LIBCMT:exsup.obj
  0001:000045d8       __NLG_Call                 100055d8 f   LIBCMT:exsup.obj
  0001:000045da       __NLG_Return2              100055da     LIBCMT:exsup.obj
  0001:000046a0       __ValidateEH3RN            100056a0 f   LIBCMT:eh3valid.obj
- 0001:00004a10       __ValidateImageBase        10005a10 f   LIBCMT:pesect.obj
- 0001:00004a50       __FindPESection            10005a50 f   LIBCMT:pesect.obj
- 0001:00004a94       __IsNonwritableInCurrentImage 10005a94 f   LIBCMT:pesect.obj
- 0001:00004b00       @__security_check_cookie@4 10005b00 f   LIBCMT:secchk.obj
- 0001:00004b10       __except_handler4          10005b10 f   LIBCMT:chandler4.obj
- 0001:00004c9c       __SEH_prolog4              10005c9c f   LIBCMT:sehprolg4.obj
- 0001:00004ce1       __SEH_epilog4              10005ce1 f   LIBCMT:sehprolg4.obj
- 0001:00004cf5       ___report_gsfailure        10005cf5 f   LIBCMT:gs_report.obj
- 0001:00004dd8       __local_unwind4            10005dd8 f   LIBCMT:exsup4.obj
- 0001:00004eae       __seh_longjmp_unwind4@4    10005eae f   LIBCMT:exsup4.obj
- 0001:00004eca       @_EH4_CallFilterFunc@8     10005eca f   LIBCMT:exsup4.obj
- 0001:00004ee1       @_EH4_TransferToHandler@8  10005ee1 f   LIBCMT:exsup4.obj
- 0001:00004efa       @_EH4_GlobalUnwind@4       10005efa f   LIBCMT:exsup4.obj
- 0001:00004f14       @_EH4_LocalUnwind@16       10005f14 f   LIBCMT:exsup4.obj
- 0001:00004f2c       _RtlUnwind@16              10005f2c f   kernel32:KERNEL32.dll
+ 0001:000049f0       __ValidateImageBase        100059f0 f   LIBCMT:pesect.obj
+ 0001:00004a30       __FindPESection            10005a30 f   LIBCMT:pesect.obj
+ 0001:00004a80       __IsNonwritableInCurrentImage 10005a80 f   LIBCMT:pesect.obj
+ 0001:00004b3d       @__security_check_cookie@4 10005b3d f   LIBCMT:secchk.obj
+ 0001:00004b50       __except_handler4          10005b50 f   LIBCMT:chandler4.obj
+ 0001:00004cdc       ___report_gsfailure        10005cdc f   LIBCMT:gs_report.obj
+ 0001:00004de4       __local_unwind4            10005de4 f   LIBCMT:exsup4.obj
+ 0001:00004eba       __seh_longjmp_unwind4@4    10005eba f   LIBCMT:exsup4.obj
+ 0001:00004ed6       @_EH4_CallFilterFunc@8     10005ed6 f   LIBCMT:exsup4.obj
+ 0001:00004eed       @_EH4_TransferToHandler@8  10005eed f   LIBCMT:exsup4.obj
+ 0001:00004f06       @_EH4_GlobalUnwind@4       10005f06 f   LIBCMT:exsup4.obj
+ 0001:00004f20       @_EH4_LocalUnwind@16       10005f20 f   LIBCMT:exsup4.obj
+ 0001:00004f37       __crt_debugger_hook        10005f37 f   LIBCMT:dbghook.obj
+ 0001:00004f40       _RtlUnwind@16              10005f40 f   kernel32:KERNEL32.dll
  0002:00000000       __imp__RegSetValueExW@24   10006000     advapi32:ADVAPI32.dll
  0002:00000004       __imp__RegOpenKeyExW@20    10006004     advapi32:ADVAPI32.dll
  0002:00000008       __imp__RegQueryValueExW@24 10006008     advapi32:ADVAPI32.dll
@@ -148,26 +147,26 @@
  0002:0000004c       __imp__HeapDestroy@4       1000604c     kernel32:KERNEL32.dll
  0002:00000050       __imp__HeapAlloc@12        10006050     kernel32:KERNEL32.dll
  0002:00000054       __imp__lstrcpyW@8          10006054     kernel32:KERNEL32.dll
- 0002:00000058       __imp__SetUnhandledExceptionFilter@4 10006058     kernel32:KERNEL32.dll
- 0002:0000005c       __imp__UnhandledExceptionFilter@4 1000605c     kernel32:KERNEL32.dll
- 0002:00000060       __imp__GetCurrentProcess@0 10006060     kernel32:KERNEL32.dll
- 0002:00000064       __imp__TerminateProcess@8  10006064     kernel32:KERNEL32.dll
+ 0002:00000058       __imp__UnhandledExceptionFilter@4 10006058     kernel32:KERNEL32.dll
+ 0002:0000005c       __imp__GetCurrentProcess@0 1000605c     kernel32:KERNEL32.dll
+ 0002:00000060       __imp__TerminateProcess@8  10006060     kernel32:KERNEL32.dll
+ 0002:00000064       __imp__VirtualQuery@12     10006064     kernel32:KERNEL32.dll
  0002:00000068       __imp__lstrlenW@4          10006068     kernel32:KERNEL32.dll
  0002:0000006c       __imp__VirtualProtect@16   1000606c     kernel32:KERNEL32.dll
  0002:00000070       __imp__GetLastError@0      10006070     kernel32:KERNEL32.dll
- 0002:00000074       __imp__HeapFree@12         10006074     kernel32:KERNEL32.dll
- 0002:00000078       __imp__lstrcpynA@12        10006078     kernel32:KERNEL32.dll
- 0002:0000007c       __imp__InterlockedExchange@8 1000607c     kernel32:KERNEL32.dll
- 0002:00000080       __imp__VirtualQuery@12     10006080     kernel32:KERNEL32.dll
- 0002:00000084       __imp__RtlUnwind@16        10006084     kernel32:KERNEL32.dll
+ 0002:00000074       __imp__IsDebuggerPresent@0 10006074     kernel32:KERNEL32.dll
+ 0002:00000078       __imp__HeapFree@12         10006078     kernel32:KERNEL32.dll
+ 0002:0000007c       __imp__lstrcpynA@12        1000607c     kernel32:KERNEL32.dll
+ 0002:00000080       __imp__RtlUnwind@16        10006080     kernel32:KERNEL32.dll
+ 0002:00000084       __imp__SetUnhandledExceptionFilter@4 10006084     kernel32:KERNEL32.dll
  0002:00000088       \177KERNEL32_NULL_THUNK_DATA 10006088     kernel32:KERNEL32.dll
- 0002:0000008c       __imp__FillRect@12         1000608c     user32:USER32.dll
- 0002:00000090       __imp__wsprintfW           10006090     user32:USER32.dll
- 0002:00000094       __imp__wsprintfA           10006094     user32:USER32.dll
+ 0002:0000008c       __imp__wsprintfA           1000608c     user32:USER32.dll
+ 0002:00000090       __imp__FillRect@12         10006090     user32:USER32.dll
+ 0002:00000094       __imp__wsprintfW           10006094     user32:USER32.dll
  0002:00000098       \177USER32_NULL_THUNK_DATA 10006098     user32:USER32.dll
- 0002:0000009c       __imp__VerQueryValueW@16   1000609c     version:VERSION.dll
+ 0002:0000009c       __imp__GetFileVersionInfoSizeW@8 1000609c     version:VERSION.dll
  0002:000000a0       __imp__GetFileVersionInfoW@16 100060a0     version:VERSION.dll
- 0002:000000a4       __imp__GetFileVersionInfoSizeW@8 100060a4     version:VERSION.dll
+ 0002:000000a4       __imp__VerQueryValueW@16   100060a4     version:VERSION.dll
  0002:000000a8       \177VERSION_NULL_THUNK_DATA 100060a8     version:VERSION.dll
  0002:000000b0       ??_C@_0L@DJCGGOCO@ConfigureW?$AA@ 100060b0     ConEmuLn.obj
  0002:000000bc       ??_C@_08BCACMCCB@ExitFARW?$AA@ 100060bc     ConEmuLn.obj
@@ -242,7 +241,8 @@
  0003:00007fb4       ?FSFA@@3PAUFarStandardFunctions@@A 1000efb4     ConEmuLnA.obj
  0003:000080c0       ?AssertMsgBox@@3P6IHPB_WI0PAUHWND__@@_N@ZA 1000f0c0     MAssert.obj
  0003:000080c4       ?ghHeap@@3PAXA             1000f0c4     Memory.obj
- 0003:0000846c       __pDestructExceptionObject 1000f46c     <common>
+ 0003:00008474       __debugger_hook_dummy      1000f474     <common>
+ 0003:00008478       __pDestructExceptionObject 1000f478     <common>
 
  entry point at        0001:00000df2
 
@@ -267,4 +267,4 @@
  0001:00004120       ?strtoxl@@YAKPBDPAPADHH@Z  10005120 f   libCRT:strtol.obj
  0001:000044c4       __unwind_handler           100054c4 f   LIBCMT:exsup.obj
  0001:000045e0       _ValidateScopeTableHandlers 100055e0 f   LIBCMT:eh3valid.obj
- 0001:00004e68       __unwind_handler4          10005e68 f   LIBCMT:exsup4.obj
+ 0001:00004e74       __unwind_handler4          10005e74 f   LIBCMT:exsup4.obj

@@ -1,4 +1,4 @@
-*index.txt*     For Vim version 7.4.  Last change: 2013 Jul 17
+*index.txt*     For Vim version 7.4.  Last change: 2015 Sep 08
 
 
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
@@ -702,12 +702,16 @@ tag		char	      note action in Normal mode	~
 |g'|		g'{mark}	1  like |'| but without changing the jumplist
 |g`|		g`{mark}	1  like |`| but without changing the jumplist
 |gstar|		g*		1  like "*", but without using "\<" and "\>"
+|g+|		g+		   go to newer text state N times
+|g,|		g,		1  go to N newer position in change list
+|g-|		g-		   go to older text state N times
 |g0|		g0		1  when 'wrap' off go to leftmost character of
 				   the current line that is on the screen;
 				   when 'wrap' on go to the leftmost character
 				   of the current screen line
 |g8|		g8		   print hex value of bytes used in UTF-8
 				   character under the cursor
+|g;|		g;		1  go to N older position in change list
 |g<|		g<		   display previous command output
 |g?|		g?		2  Rot13 encoding operator
 |g?g?|		g??		2  Rot13 encode current line
@@ -736,6 +740,7 @@ tag		char	      note action in Normal mode	~
 				   the screen; when 'wrap' on go to the
 				   leftmost non-white character of the current
 				   screen line
+|g_|		g_		1  cursor to the last CHAR N - 1 lines lower
 |ga|		ga		   print ascii value of character under the
 				   cursor
 |gd|		gd		1  go to definition of word under the cursor
@@ -1124,8 +1129,8 @@ tag	      command	      action ~
 |:cNfile|	:cNf[ile]	go to last error in previous file
 |:cabbrev|	:ca[bbrev]	like ":abbreviate" but for Command-line mode
 |:cabclear|	:cabc[lear]	clear all abbreviations for Command-line mode
-|:caddbuffer|	:caddb[uffer]	add errors from buffer
-|:caddexpr|	:cad[dexpr]	add errors from expr
+|:caddbuffer|	:cad[dbuffer]	add errors from buffer
+|:caddexpr|	:cadde[xpr]	add errors from expr
 |:caddfile|	:caddf[ile]	add error message to current quickfix list
 |:call|		:cal[l]		call a function
 |:catch|	:cat[ch]	part of a :try command
@@ -1133,6 +1138,8 @@ tag	      command	      action ~
 |:cc|		:cc		go to specific error
 |:cclose|	:ccl[ose]	close quickfix window
 |:cd|		:cd		change directory
+|:cdo|		:cdo		execute command in each valid error list entry
+|:cfdo|		:cfd[o]		execute command in each file in error list
 |:center|	:ce[nter]	format lines at the center
 |:cexpr|	:cex[pr]	read errors from expr and jump to first
 |:cfile|	:cf[ile]	read file with error messages and jump to first
@@ -1191,12 +1198,12 @@ tag	      command	      action ~
 |:digraphs|	:dig[raphs]	show or enter digraphs
 |:display|	:di[splay]	display registers
 |:djump|	:dj[ump]	jump to #define
-|:dl|		:dl		short for |:delete|
-|:dl|		:del[ete]l	short for |:delete|
+|:dl|		:dl		short for |:delete| with the 'l' flag
+|:dl|		:del[ete]l	short for |:delete| with the 'l' flag
 |:dlist|	:dli[st]	list #defines
 |:doautocmd|	:do[autocmd]	apply autocommands to current buffer
 |:doautoall|	:doautoa[ll]	apply autocommands for all loaded buffers
-|:dp|		:d[elete]p	short for |:delete|
+|:dp|		:d[elete]p	short for |:delete| with the 'p' flag
 |:drop|		:dr[op]		jump to window editing file or edit file in
 				current window
 |:dsearch|	:ds[earch]	list one #define
@@ -1244,6 +1251,7 @@ tag	      command	      action ~
 |:gvim|		:gv[im]		start the GUI
 |:hardcopy|	:ha[rdcopy]	send text to the printer
 |:help|		:h[elp]		open a help window
+|:helpclose|	:helpc[lose]	close one help window
 |:helpfind|	:helpf[ind]	dialog to open a help window
 |:helpgrep|	:helpg[rep]	like ":grep" but searches help files
 |:helptags|	:helpt[ags]	generate help tags for a directory
@@ -1275,6 +1283,7 @@ tag	      command	      action ~
 |:keepalt|	:keepa[lt]	following command keeps the alternate file
 |:keepmarks|	:kee[pmarks]	following command keeps marks where they are
 |:keepjumps|	:keepj[umps]	following command keeps jumplist and marks
+|:keeppatterns|	:keepp[atterns]	following command keeps search pattern history
 |:lNext|	:lN[ext]	go to previous entry in location list
 |:lNfile|	:lNf[ile]	go to last entry in previous file
 |:list|		:l[ist]		print lines
@@ -1289,6 +1298,8 @@ tag	      command	      action ~
 |:lchdir|	:lch[dir]	change directory locally
 |:lclose|	:lcl[ose]	close location window
 |:lcscope|	:lcs[cope]      like ":cscope" but uses location list
+|:ldo|		:ld[o]		execute command in valid location list entries
+|:lfdo|		:lfd[o]		execute command in each file in location list
 |:left|		:le[ft]		left align lines
 |:leftabove|	:lefta[bove]	make split window appear left or above
 |:let|		:let		assign a value to a variable or option
@@ -1360,13 +1371,14 @@ tag	      command	      action ~
 |:nmenu|	:nme[nu]	add menu for Normal mode
 |:nnoremap|	:nn[oremap]	like ":noremap" but for Normal mode
 |:nnoremenu|	:nnoreme[nu]	like ":noremenu" but for Normal mode
-|:noautocmd|	:noa[utocmd]	following command don't trigger autocommands
+|:noautocmd|	:noa[utocmd]	following commands don't trigger autocommands
 |:noremap|	:no[remap]	enter a mapping that will not be remapped
 |:nohlsearch|	:noh[lsearch]	suspend 'hlsearch' highlighting
 |:noreabbrev|	:norea[bbrev]	enter an abbreviation that will not be
 				remapped
 |:noremenu|	:noreme[nu]	enter a menu that will not be remapped
 |:normal|	:norm[al]	execute Normal mode commands
+|:noswapfile|	:nos[wapfile]	following commands don't create a swap file
 |:number|	:nu[mber]	print lines with line number
 |:nunmap|	:nun[map]	like ":unmap" but for Normal mode
 |:nunmenu|	:nunme[nu]	remove menu for Normal mode
@@ -1462,7 +1474,7 @@ tag	      command	      action ~
 				buffer list
 |:sbrewind|	:sbr[ewind]	split window and go to first file in the
 				buffer list
-|:scriptnames|	:scrip[tnames]	list names of all sourced Vim scripts
+|:scriptnames|	:scr[iptnames]	list names of all sourced Vim scripts
 |:scriptencoding| :scripte[ncoding]	encoding used in sourced Vim script
 |:scscope|	:scs[cope]	split window and execute cscope command
 |:set|		:se[t]		show or set options

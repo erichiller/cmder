@@ -8,7 +8,7 @@ map! t 7
 map L 1G/tX/^0$P1GJ$An$BGC0e$X0E0F$X/T@f@h$A1GJ@f0l$Xn$PU
 map g IL
 
-map J /^0[^t]*$
+map J /^0[^t]*$
 map X x
 map P p
 map U L

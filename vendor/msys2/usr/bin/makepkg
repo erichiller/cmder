@@ -41,7 +41,7 @@ unset CDPATH
 # Ensure GREP_OPTIONS doesn't screw with our grep calls
 unset GREP_OPTIONS
 
-declare -r makepkg_version='4.2.1-373-g4c60-dirty'
+declare -r makepkg_version='4.2.1-432-ga10ea-dirty'
 declare -r confdir='/etc'
 declare -r BUILDSCRIPT='PKGBUILD'
 declare -r startdir="$PWD"
@@ -54,7 +54,7 @@ splitpkg_overrides=('pkgdesc' 'arch' 'url' 'license' 'groups' 'depends'
                     'options' 'install' 'changelog')
 readonly -a build_options splitpkg_overrides
 
-known_hash_algos=('md5' 'sha1' 'sha224' 'sha256' 'sha384' 'sha512')
+known_hash_algos=('md5' 'sha1' 'sha224' 'sha256' 'sha384' 'sha512' 'whirlpool')
 
 # Options
 ASDEPS=0
@@ -784,10 +784,6 @@ merge_arch_attrs() {
 
 source_buildfile() {
 	source_safe "$@"
-
-	if (( !SOURCEONLY )); then
-		merge_arch_attrs
-	fi
 }
 
 run_function_safe() {
@@ -1171,19 +1167,23 @@ write_pkginfo() {
 	[[ $optdepends ]]   && printf "optdepend = %s\n"   "${optdepends[@]//+([[:space:]])/ }"
 	[[ $makedepends ]]  && printf "makedepend = %s\n"  "${makedepends[@]}"
 	[[ $checkdepends ]] && printf "checkdepend = %s\n" "${checkdepends[@]}"
+}
 
-	local it
-	for it in "${packaging_options[@]}"; do
-		check_option "$it" "y"
-		case $? in
-			0)
-				printf "makepkgopt = %s\n" "$it"
-				;;
-			1)
-				printf "makepkgopt = %s\n" "!$it"
-				;;
-		esac
-	done
+write_buildinfo() {
+	msg2 "$(gettext "Generating %s file...")" ".BUILDINFO"
+
+	printf "builddir = %s\n"  "${BUILDDIR}"
+
+	local sum="$(openssl dgst -sha256 "${BUILDFILE}")"
+	sum=${sum##* }
+
+	printf "pkgbuild_sha256sum = %s\n" $sum
+
+	printf "buildenv = %s\n" "${BUILDENV[@]}"
+	printf "options = %s\n" "${OPTIONS[@]}"
+
+	local pkglist=($(run_pacman -Q | sed "s# #-#"))
+	printf "installed = %s\n" "${pkglist[@]}"
 }
 
 create_package() {
@@ -1200,8 +1200,9 @@ create_package() {
 
 	pkgarch=$(get_pkg_arch)
 	write_pkginfo > .PKGINFO
+	write_buildinfo > .BUILDINFO
 
-	local comp_files=('.PKGINFO')
+	local comp_files=('.PKGINFO' '.BUILDINFO')
 
 	# check for changelog/install files
 	for i in 'changelog/.CHANGELOG' 'install/.INSTALL'; do
@@ -2140,8 +2141,15 @@ else
 	source_buildfile "$BUILDFILE"
 fi
 
-# set defaults if they weren't specified in buildfile
 pkgbase=${pkgbase:-${pkgname[0]}}
+
+# check the PKGBUILD for some basic requirements
+lint_pkgbuild || exit 1
+
+if (( !SOURCEONLY )); then
+	merge_arch_attrs
+fi
+
 basever=$(get_full_version)
 
 if [[ $BUILDDIR = "$startdir" ]]; then
@@ -2168,9 +2176,6 @@ fi
 if have_function pkgver; then
 	PKGVERFUNC=1
 fi
-
-# check the PKGBUILD for some basic requirements
-lint_pkgbuild || exit 1
 
 # check we have the software required to process the PKGBUILD
 check_software || exit 1
@@ -2258,7 +2263,6 @@ if (( SOURCEONLY )); then
 fi
 
 if (( NODEPS || ( VERIFYSOURCE && !DEP_BIN ) )); then
-	# no warning message needed for nobuild
 	if (( NODEPS )); then
 		warning "$(gettext "Skipping dependency checks.")"
 	fi
@@ -2310,14 +2314,15 @@ elif (( !REPKG )); then
 	fi
 
 	extract_sources
-	if (( PKGVERFUNC )); then
-		update_pkgver
-		basever=$(get_full_version)
-		check_build_status
-	fi
-	if (( PREPAREFUNC )); then
-		run_prepare
-	fi
+fi
+
+if (( PKGVERFUNC )); then
+	update_pkgver
+	basever=$(get_full_version)
+	check_build_status
+fi
+if (( PREPAREFUNC )); then
+	run_prepare
 fi
 
 if (( NOBUILD )); then

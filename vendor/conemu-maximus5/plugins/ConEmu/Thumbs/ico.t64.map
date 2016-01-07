@@ -1,6 +1,6 @@
  ico
 
- Timestamp is 5663a490 (Sun Dec 06 05:59:28 2015)
+ Timestamp is 567c8612 (Fri Dec 25 02:56:02 2015)
 
  Preferred load address is 0000000180000000
 
@@ -53,20 +53,20 @@
  0001:000000c0       __imp_wsprintfA            00000001800010c0     user32:USER32.dll
  0001:000000c8       __imp_wsprintfW            00000001800010c8     user32:USER32.dll
  0001:000000d0       \177USER32_NULL_THUNK_DATA 00000001800010d0     user32:USER32.dll
- 0001:000000d8       __imp_GdipCloneImage       00000001800010d8     gdiplus:gdiplus.dll
- 0001:000000e0       __imp_GdiplusStartup       00000001800010e0     gdiplus:gdiplus.dll
- 0001:000000e8       __imp_GdiplusShutdown      00000001800010e8     gdiplus:gdiplus.dll
- 0001:000000f0       __imp_GdipAlloc            00000001800010f0     gdiplus:gdiplus.dll
- 0001:000000f8       __imp_GdipFree             00000001800010f8     gdiplus:gdiplus.dll
- 0001:00000100       __imp_GdipDisposeImage     0000000180001100     gdiplus:gdiplus.dll
- 0001:00000108       __imp_GdipGetImagePixelFormat 0000000180001108     gdiplus:gdiplus.dll
- 0001:00000110       __imp_GdipCreateBitmapFromStream 0000000180001110     gdiplus:gdiplus.dll
- 0001:00000118       __imp_GdipCreateBitmapFromStreamICM 0000000180001118     gdiplus:gdiplus.dll
- 0001:00000120       __imp_GdipBitmapLockBits   0000000180001120     gdiplus:gdiplus.dll
- 0001:00000128       __imp_GdipBitmapUnlockBits 0000000180001128     gdiplus:gdiplus.dll
+ 0001:000000d8       __imp_GdipAlloc            00000001800010d8     gdiplus:gdiplus.dll
+ 0001:000000e0       __imp_GdipFree             00000001800010e0     gdiplus:gdiplus.dll
+ 0001:000000e8       __imp_GdipDisposeImage     00000001800010e8     gdiplus:gdiplus.dll
+ 0001:000000f0       __imp_GdipGetImagePixelFormat 00000001800010f0     gdiplus:gdiplus.dll
+ 0001:000000f8       __imp_GdipCreateBitmapFromStream 00000001800010f8     gdiplus:gdiplus.dll
+ 0001:00000100       __imp_GdipCreateBitmapFromStreamICM 0000000180001100     gdiplus:gdiplus.dll
+ 0001:00000108       __imp_GdipBitmapLockBits   0000000180001108     gdiplus:gdiplus.dll
+ 0001:00000110       __imp_GdipBitmapUnlockBits 0000000180001110     gdiplus:gdiplus.dll
+ 0001:00000118       __imp_GdiplusShutdown      0000000180001118     gdiplus:gdiplus.dll
+ 0001:00000120       __imp_GdiplusStartup       0000000180001120     gdiplus:gdiplus.dll
+ 0001:00000128       __imp_GdipCloneImage       0000000180001128     gdiplus:gdiplus.dll
  0001:00000130       \177gdiplus_NULL_THUNK_DATA 0000000180001130     gdiplus:gdiplus.dll
- 0001:00000138       __imp_CoInitialize         0000000180001138     ole32:ole32.dll
- 0001:00000140       __imp_CoUninitialize       0000000180001140     ole32:ole32.dll
+ 0001:00000138       __imp_CoUninitialize       0000000180001138     ole32:ole32.dll
+ 0001:00000140       __imp_CoInitialize         0000000180001140     ole32:ole32.dll
  0001:00000148       \177ole32_NULL_THUNK_DATA  0000000180001148     ole32:ole32.dll
  0001:00000170       ??_7Image@Gdiplus@@6B@     0000000180001170     ico.obj
  0001:00000180       ??_7Bitmap@Gdiplus@@6B@    0000000180001180     ico.obj
@@ -285,23 +285,23 @@
  0001:00003050       TerminateThread            0000000180004050 f   kernel32:KERNEL32.dll
  0001:00003056       wsprintfW                  0000000180004056 f   user32:USER32.dll
  0001:0000305c       wsprintfA                  000000018000405c f   user32:USER32.dll
- 0001:00003062       CoInitialize               0000000180004062 f   ole32:ole32.dll
- 0001:00003068       CoUninitialize             0000000180004068 f   ole32:ole32.dll
- 0001:0000306e       GdipAlloc                  000000018000406e f   gdiplus:gdiplus.dll
- 0001:00003074       GdipFree                   0000000180004074 f   gdiplus:gdiplus.dll
- 0001:0000307a       GdipDisposeImage           000000018000407a f   gdiplus:gdiplus.dll
- 0001:00003080       GdipGetImagePixelFormat    0000000180004080 f   gdiplus:gdiplus.dll
- 0001:00003086       GdipCreateBitmapFromStream 0000000180004086 f   gdiplus:gdiplus.dll
- 0001:0000308c       GdipCreateBitmapFromStreamICM 000000018000408c f   gdiplus:gdiplus.dll
- 0001:00003092       GdipBitmapLockBits         0000000180004092 f   gdiplus:gdiplus.dll
- 0001:00003098       GdipBitmapUnlockBits       0000000180004098 f   gdiplus:gdiplus.dll
- 0001:0000309e       GdiplusShutdown            000000018000409e f   gdiplus:gdiplus.dll
- 0001:000030a4       GdiplusStartup             00000001800040a4 f   gdiplus:gdiplus.dll
- 0001:000030aa       GdipCloneImage             00000001800040aa f   gdiplus:gdiplus.dll
+ 0001:00003062       GdipAlloc                  0000000180004062 f   gdiplus:gdiplus.dll
+ 0001:00003068       GdipFree                   0000000180004068 f   gdiplus:gdiplus.dll
+ 0001:0000306e       GdipDisposeImage           000000018000406e f   gdiplus:gdiplus.dll
+ 0001:00003074       GdipGetImagePixelFormat    0000000180004074 f   gdiplus:gdiplus.dll
+ 0001:0000307a       GdipCreateBitmapFromStream 000000018000407a f   gdiplus:gdiplus.dll
+ 0001:00003080       GdipCreateBitmapFromStreamICM 0000000180004080 f   gdiplus:gdiplus.dll
+ 0001:00003086       GdipBitmapLockBits         0000000180004086 f   gdiplus:gdiplus.dll
+ 0001:0000308c       GdipBitmapUnlockBits       000000018000408c f   gdiplus:gdiplus.dll
+ 0001:00003092       GdiplusShutdown            0000000180004092 f   gdiplus:gdiplus.dll
+ 0001:00003098       GdiplusStartup             0000000180004098 f   gdiplus:gdiplus.dll
+ 0001:0000309e       GdipCloneImage             000000018000409e f   gdiplus:gdiplus.dll
+ 0001:000030a4       CoInitialize               00000001800040a4 f   ole32:ole32.dll
+ 0001:000030aa       CoUninitialize             00000001800040aa f   ole32:ole32.dll
  0001:000033e0       __IMPORT_DESCRIPTOR_KERNEL32 00000001800043e0     kernel32:KERNEL32.dll
  0001:000033f4       __IMPORT_DESCRIPTOR_USER32 00000001800043f4     user32:USER32.dll
- 0001:00003408       __IMPORT_DESCRIPTOR_ole32  0000000180004408     ole32:ole32.dll
- 0001:0000341c       __IMPORT_DESCRIPTOR_gdiplus 000000018000441c     gdiplus:gdiplus.dll
+ 0001:00003408       __IMPORT_DESCRIPTOR_gdiplus 0000000180004408     gdiplus:gdiplus.dll
+ 0001:0000341c       __IMPORT_DESCRIPTOR_ole32  000000018000441c     ole32:ole32.dll
  0001:00003430       __NULL_IMPORT_DESCRIPTOR   0000000180004430     kernel32:KERNEL32.dll
  0002:00000000       ?g_TerminatedThreadIdx@@3JA 0000000180005000     WThreads.obj
  0002:00000078       ?gnLastWin32Error@@3KA     0000000180005078     ico.obj
