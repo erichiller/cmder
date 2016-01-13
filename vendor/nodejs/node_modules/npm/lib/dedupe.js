@@ -23,7 +23,7 @@ var childPath = require('./utils/child-path.js')
 module.exports = dedupe
 module.exports.Deduper = Deduper
 
-dedupe.usage = 'npm dedupe [package names...]'
+dedupe.usage = 'npm dedupe'
 
 function dedupe (args, cb) {
   validate('AF', arguments)
@@ -68,9 +68,9 @@ Deduper.prototype.loadIdealTree = function (cb) {
     [this, this.finishTracker, 'cloneCurrentTree'],
 
     [this.newTracker(this.progress.loadIdealTree, 'loadAllDepsIntoIdealTree', 10)],
-    [function (next) {
+    [ function (next) {
       loadExtraneous(self.idealTree, self.progress.loadAllDepsIntoIdealTree, next)
-    }],
+    } ],
     [this, this.finishTracker, 'loadAllDepsIntoIdealTree'],
 
     [this, function (next) { recalculateMetadata(this.idealTree, log, next) }]
@@ -151,10 +151,10 @@ function hoistChildren_ (tree, diff, seen, next) {
       chain([
         [recalculateMetadata, hoistTo, log],
         [hoistChildren_, child, diff, seen],
-        [function (next) {
+        [ function (next) {
           moveRemainingChildren(child, diff)
           next()
-        }]
+        } ]
       ], done)
     } else {
       done()
