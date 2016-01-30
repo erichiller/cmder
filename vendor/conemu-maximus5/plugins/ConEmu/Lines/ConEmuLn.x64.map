@@ -1,6 +1,6 @@
  ConEmuLn.x64
 
- Timestamp is 56940abe (Mon Jan 11 23:04:14 2016)
+ Timestamp is 56a57bd6 (Mon Jan 25 04:35:18 2016)
 
  Preferred load address is 0000000180000000
 
@@ -17,7 +17,7 @@
  0002:00000a10 00000228H .idata$6                DATA
  0002:00000c40 0000018fH .edata                  DATA
  0003:00000000 000001d0H .data                   DATA
- 0003:000001d0 00008fe0H .bss                    DATA
+ 0003:000001d0 00008fe8H .bss                    DATA
  0004:00000000 00000378H .pdata                  DATA
  0005:00000000 00000058H .rsrc$01                DATA
  0005:00000060 000002e8H .rsrc$02                DATA
@@ -62,16 +62,16 @@
  0001:00001f10       ?SettingsSaveW995@@YAXXZ   0000000180002f10 f   ConEmuLn995.obj
  0001:00001f1c       ?GetPluginInfoW1900@@YAXPEAX@Z 0000000180002f1c f   ConEmuLn1900.obj
  0001:00001fa4       ?SetStartupInfoW1900@@YAXPEAX@Z 0000000180002fa4 f   ConEmuLn1900.obj
- 0001:000020e0       ?OpenW1900@@YAPEAXPEBX@Z   00000001800030e0 f   ConEmuLn1900.obj
- 0001:000020e0       ?OpenW2800@@YAPEAXPEBX@Z   00000001800030e0 f   ConEmuLn2800.obj
- 0001:00002104       ?ExitFARW1900@@YAXXZ       0000000180003104 f   ConEmuLn1900.obj
- 0001:00002140       ?GetMsgW1900@@YAPEB_WH@Z   0000000180003140 f   ConEmuLn1900.obj
- 0001:00002dc4       ?ConfigureW1900@@YAHH@Z    0000000180003dc4 f   ConEmuLn1900.obj
- 0001:00002de0       ?SettingsLoadW1900@@YAXXZ  0000000180003de0 f   ConEmuLn1900.obj
- 0001:00002f24       ?SettingsSaveW1900@@YAXXZ  0000000180003f24 f   ConEmuLn1900.obj
- 0001:00003048       GetGlobalInfoW             0000000180004048 f   ConEmuLn2800.obj
- 0001:00003100       ?GetPluginInfoW2800@@YAXPEAX@Z 0000000180004100 f   ConEmuLn2800.obj
- 0001:00003188       ?SetStartupInfoW2800@@YAXPEAX@Z 0000000180004188 f   ConEmuLn2800.obj
+ 0001:000020e0       ?ExitFARW1900@@YAXXZ       00000001800030e0 f   ConEmuLn1900.obj
+ 0001:0000211c       ?GetMsgW1900@@YAPEB_WH@Z   000000018000311c f   ConEmuLn1900.obj
+ 0001:00002da0       ?ConfigureW1900@@YAHH@Z    0000000180003da0 f   ConEmuLn1900.obj
+ 0001:00002dbc       ?SettingsLoadW1900@@YAXXZ  0000000180003dbc f   ConEmuLn1900.obj
+ 0001:00002f00       ?SettingsSaveW1900@@YAXXZ  0000000180003f00 f   ConEmuLn1900.obj
+ 0001:00003024       GetGlobalInfoW             0000000180004024 f   ConEmuLn2800.obj
+ 0001:000030dc       ?GetPluginInfoW2800@@YAXPEAX@Z 00000001800040dc f   ConEmuLn2800.obj
+ 0001:00003164       ?SetStartupInfoW2800@@YAXPEAX@Z 0000000180004164 f   ConEmuLn2800.obj
+ 0001:000032a0       ?OpenW1900@@YAPEAXPEBX@Z   00000001800042a0 f   ConEmuLn1900.obj
+ 0001:000032a0       ?OpenW2800@@YAPEAXPEBX@Z   00000001800042a0 f   ConEmuLn2800.obj
  0001:000032c4       ?ExitFARW2800@@YAXXZ       00000001800042c4 f   ConEmuLn2800.obj
  0001:00003300       ?GetMsgW2800@@YAPEB_WH@Z   0000000180004300 f   ConEmuLn2800.obj
  0001:00003f50       ?ConfigureW2800@@YAHH@Z    0000000180004f50 f   ConEmuLn2800.obj
@@ -123,13 +123,13 @@
  0002:00000080       __imp_lstrlenA             0000000180007080     kernel32:KERNEL32.dll
  0002:00000088       __imp_lstrcpyA             0000000180007088     kernel32:KERNEL32.dll
  0002:00000090       __imp_HeapCreate           0000000180007090     kernel32:KERNEL32.dll
- 0002:00000098       __imp_HeapDestroy          0000000180007098     kernel32:KERNEL32.dll
+ 0002:00000098       __imp_HeapAlloc            0000000180007098     kernel32:KERNEL32.dll
  0002:000000a0       __imp_lstrcpyW             00000001800070a0     kernel32:KERNEL32.dll
- 0002:000000a8       __imp_lstrlenW             00000001800070a8     kernel32:KERNEL32.dll
- 0002:000000b0       __imp_VirtualProtect       00000001800070b0     kernel32:KERNEL32.dll
- 0002:000000b8       __imp_GetLastError         00000001800070b8     kernel32:KERNEL32.dll
- 0002:000000c0       __imp_HeapFree             00000001800070c0     kernel32:KERNEL32.dll
- 0002:000000c8       __imp_HeapAlloc            00000001800070c8     kernel32:KERNEL32.dll
+ 0002:000000a8       __imp_HeapFree             00000001800070a8     kernel32:KERNEL32.dll
+ 0002:000000b0       __imp_lstrlenW             00000001800070b0     kernel32:KERNEL32.dll
+ 0002:000000b8       __imp_VirtualProtect       00000001800070b8     kernel32:KERNEL32.dll
+ 0002:000000c0       __imp_GetLastError         00000001800070c0     kernel32:KERNEL32.dll
+ 0002:000000c8       __imp_HeapDestroy          00000001800070c8     kernel32:KERNEL32.dll
  0002:000000d0       __imp_lstrcpynA            00000001800070d0     kernel32:KERNEL32.dll
  0002:000000d8       __imp_RtlUnwindEx          00000001800070d8     kernel32:KERNEL32.dll
  0002:000000e0       \177KERNEL32_NULL_THUNK_DATA 00000001800070e0     kernel32:KERNEL32.dll
@@ -208,7 +208,8 @@
  0003:00009080       ?InfoA@@3PEAUPluginStartupInfo@@EA 0000000180011080     ConEmuLnA.obj
  0003:00009088       ?FSFA@@3PEAUFarStandardFunctions@@EA 0000000180011088     ConEmuLnA.obj
  0003:000091a0       ?AssertMsgBox@@3P6AHPEB_WI0PEAUHWND__@@_N@ZEA 00000001800111a0     MAssert.obj
- 0003:000091a8       ?ghHeap@@3PEAXEA           00000001800111a8     Memory.obj
+ 0003:000091a8       ?gfnHooksUnlockerProc@@3P6A_N_N@ZEA 00000001800111a8     MAssert.obj
+ 0003:000091b0       ?ghHeap@@3PEAXEA           00000001800111b0     Memory.obj
 
  entry point at        0001:000010c8
 
@@ -218,8 +219,8 @@
  0001:00000cc4       ?LoadModuleVersion@@YA_NPEB_WAEAUtagVS_FIXEDFILEINFO@@PEA_W_K@Z 0000000180001cc4 f   ConEmuLn.obj
  0001:00001398       ?ConfigDlgProc@@YA_JPEAXHH_J@Z 0000000180002398 f   ConEmuLn995.obj
  0001:000014fc       ?ConfigureProc@@YAHH@Z     00000001800024fc f   ConEmuLn995.obj
- 0001:00002174       ?ConfigDlgProc@@YA_JPEAXHH0@Z 0000000180003174 f   ConEmuLn1900.obj
- 0001:000022d8       ?ConfigureProc@@YAHH@Z     00000001800032d8 f   ConEmuLn1900.obj
+ 0001:00002150       ?ConfigDlgProc@@YA_JPEAXHH0@Z 0000000180003150 f   ConEmuLn1900.obj
+ 0001:000022b4       ?ConfigureProc@@YAHH@Z     00000001800032b4 f   ConEmuLn1900.obj
  0001:00003334       ?ConfigDlgProc@@YA_JPEAX_J10@Z 0000000180004334 f   ConEmuLn2800.obj
  0001:000034ac       ?ConfigureProc@@YAHH@Z     00000001800044ac f   ConEmuLn2800.obj
  0001:000044cc       ?ConfigDlgProc@@YA_JPEAXHH_J@Z 00000001800054cc f   ConEmuLnA.obj

@@ -1,6 +1,6 @@
  ConEmuLn
 
- Timestamp is 56940999 (Mon Jan 11 22:59:21 2016)
+ Timestamp is 56a57adc (Mon Jan 25 04:31:08 2016)
 
  Preferred load address is 10000000
 
@@ -16,7 +16,7 @@
  0002:00000700 000002acH .idata$6                DATA
  0002:000009b0 0000018bH .edata                  DATA
  0003:00000000 00000148H .data                   DATA
- 0003:00000148 00008334H .bss                    DATA
+ 0003:00000148 0000833cH .bss                    DATA
  0004:00000000 00000058H .rsrc$01                DATA
  0004:00000060 000002e8H .rsrc$02                DATA
 
@@ -68,8 +68,8 @@
  0001:00002547       _GetGlobalInfoW@4          10003547 f   ConEmuLn2800.obj
  0001:000025da       ?GetPluginInfoW2800@@YIXPAX@Z 100035da f   ConEmuLn2800.obj
  0001:0000263b       ?SetStartupInfoW2800@@YIXPAX@Z 1000363b f   ConEmuLn2800.obj
- 0001:00002729       ?OpenW2800@@YGPAXPBX@Z     10003729 f   ConEmuLn2800.obj
  0001:00002729       ?OpenW1900@@YGPAXPBX@Z     10003729 f   ConEmuLn1900.obj
+ 0001:00002729       ?OpenW2800@@YGPAXPBX@Z     10003729 f   ConEmuLn2800.obj
  0001:00002748       ?ExitFARW2800@@YIXXZ       10003748 f   ConEmuLn2800.obj
  0001:00002777       ?GetMsgW2800@@YIPB_WH@Z    10003777 f   ConEmuLn2800.obj
  0001:000030d6       ?ConfigureW2800@@YIHH@Z    100040d6 f   ConEmuLn2800.obj
@@ -106,8 +106,8 @@
  0001:0000458d       __abnormal_termination     1000558d f   LIBCMT:exsup.obj
  0001:000045b0       __NLG_Notify1              100055b0 f   LIBCMT:exsup.obj
  0001:000045b9       __NLG_Notify               100055b9 f   LIBCMT:exsup.obj
- 0001:000045d0       __NLG_Dispatch             100055d0     LIBCMT:exsup.obj
  0001:000045d0       __NLG_Dispatch2            100055d0     LIBCMT:exsup.obj
+ 0001:000045d0       __NLG_Dispatch             100055d0     LIBCMT:exsup.obj
  0001:000045d8       __NLG_Call                 100055d8 f   LIBCMT:exsup.obj
  0001:000045da       __NLG_Return2              100055da     LIBCMT:exsup.obj
  0001:000046a0       __ValidateEH3RN            100056a0 f   LIBCMT:eh3valid.obj
@@ -147,26 +147,26 @@
  0002:0000004c       __imp__HeapDestroy@4       1000604c     kernel32:KERNEL32.dll
  0002:00000050       __imp__HeapAlloc@12        10006050     kernel32:KERNEL32.dll
  0002:00000054       __imp__lstrcpyW@8          10006054     kernel32:KERNEL32.dll
- 0002:00000058       __imp__UnhandledExceptionFilter@4 10006058     kernel32:KERNEL32.dll
- 0002:0000005c       __imp__GetCurrentProcess@0 1000605c     kernel32:KERNEL32.dll
- 0002:00000060       __imp__TerminateProcess@8  10006060     kernel32:KERNEL32.dll
- 0002:00000064       __imp__VirtualQuery@12     10006064     kernel32:KERNEL32.dll
- 0002:00000068       __imp__lstrlenW@4          10006068     kernel32:KERNEL32.dll
- 0002:0000006c       __imp__VirtualProtect@16   1000606c     kernel32:KERNEL32.dll
- 0002:00000070       __imp__GetLastError@0      10006070     kernel32:KERNEL32.dll
- 0002:00000074       __imp__IsDebuggerPresent@0 10006074     kernel32:KERNEL32.dll
- 0002:00000078       __imp__HeapFree@12         10006078     kernel32:KERNEL32.dll
+ 0002:00000058       __imp__HeapFree@12         10006058     kernel32:KERNEL32.dll
+ 0002:0000005c       __imp__SetUnhandledExceptionFilter@4 1000605c     kernel32:KERNEL32.dll
+ 0002:00000060       __imp__UnhandledExceptionFilter@4 10006060     kernel32:KERNEL32.dll
+ 0002:00000064       __imp__GetCurrentProcess@0 10006064     kernel32:KERNEL32.dll
+ 0002:00000068       __imp__TerminateProcess@8  10006068     kernel32:KERNEL32.dll
+ 0002:0000006c       __imp__lstrlenW@4          1000606c     kernel32:KERNEL32.dll
+ 0002:00000070       __imp__VirtualProtect@16   10006070     kernel32:KERNEL32.dll
+ 0002:00000074       __imp__GetLastError@0      10006074     kernel32:KERNEL32.dll
+ 0002:00000078       __imp__IsDebuggerPresent@0 10006078     kernel32:KERNEL32.dll
  0002:0000007c       __imp__lstrcpynA@12        1000607c     kernel32:KERNEL32.dll
- 0002:00000080       __imp__RtlUnwind@16        10006080     kernel32:KERNEL32.dll
- 0002:00000084       __imp__SetUnhandledExceptionFilter@4 10006084     kernel32:KERNEL32.dll
+ 0002:00000080       __imp__VirtualQuery@12     10006080     kernel32:KERNEL32.dll
+ 0002:00000084       __imp__RtlUnwind@16        10006084     kernel32:KERNEL32.dll
  0002:00000088       \177KERNEL32_NULL_THUNK_DATA 10006088     kernel32:KERNEL32.dll
- 0002:0000008c       __imp__wsprintfA           1000608c     user32:USER32.dll
- 0002:00000090       __imp__FillRect@12         10006090     user32:USER32.dll
- 0002:00000094       __imp__wsprintfW           10006094     user32:USER32.dll
+ 0002:0000008c       __imp__FillRect@12         1000608c     user32:USER32.dll
+ 0002:00000090       __imp__wsprintfW           10006090     user32:USER32.dll
+ 0002:00000094       __imp__wsprintfA           10006094     user32:USER32.dll
  0002:00000098       \177USER32_NULL_THUNK_DATA 10006098     user32:USER32.dll
- 0002:0000009c       __imp__GetFileVersionInfoSizeW@8 1000609c     version:VERSION.dll
+ 0002:0000009c       __imp__VerQueryValueW@16   1000609c     version:VERSION.dll
  0002:000000a0       __imp__GetFileVersionInfoW@16 100060a0     version:VERSION.dll
- 0002:000000a4       __imp__VerQueryValueW@16   100060a4     version:VERSION.dll
+ 0002:000000a4       __imp__GetFileVersionInfoSizeW@8 100060a4     version:VERSION.dll
  0002:000000a8       \177VERSION_NULL_THUNK_DATA 100060a8     version:VERSION.dll
  0002:000000b0       ??_C@_0L@DJCGGOCO@ConfigureW?$AA@ 100060b0     ConEmuLn.obj
  0002:000000bc       ??_C@_08BCACMCCB@ExitFARW?$AA@ 100060bc     ConEmuLn.obj
@@ -240,9 +240,10 @@
  0003:00007fb0       ?InfoA@@3PAUPluginStartupInfo@@A 1000efb0     ConEmuLnA.obj
  0003:00007fb4       ?FSFA@@3PAUFarStandardFunctions@@A 1000efb4     ConEmuLnA.obj
  0003:000080c0       ?AssertMsgBox@@3P6IHPB_WI0PAUHWND__@@_N@ZA 1000f0c0     MAssert.obj
- 0003:000080c4       ?ghHeap@@3PAXA             1000f0c4     Memory.obj
- 0003:00008474       __debugger_hook_dummy      1000f474     <common>
- 0003:00008478       __pDestructExceptionObject 1000f478     <common>
+ 0003:000080c4       ?gfnHooksUnlockerProc@@3P6I_N_N@ZA 1000f0c4     MAssert.obj
+ 0003:000080c8       ?ghHeap@@3PAXA             1000f0c8     Memory.obj
+ 0003:0000847c       __debugger_hook_dummy      1000f47c     <common>
+ 0003:00008480       __pDestructExceptionObject 1000f480     <common>
 
  entry point at        0001:00000df2
 

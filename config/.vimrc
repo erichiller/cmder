@@ -22,7 +22,6 @@ set shiftwidth=4				" Number of spaces to use for each step of (auto)indent.
 filetype plugin indent on 		" Enable file type detection. to automatically do language-dependent indenting.
 
 set number						" Show line numbers.
-set mouse=a						" Enable the use of the mouse.
 set history=50					" keep 50 lines of command line history
 set showcmd						" display incomplete commands
 set incsearch					" do incremental searching
@@ -62,20 +61,34 @@ if has("autocmd")
       autocmd Syntax gitcommit setlocal textwidth=74
 endif " has("autocmd")
 
+
 " ConEmu
 if !empty($CONEMUBUILD)
-	set termencoding=utf8
-	set term=pcansi
-	"set term=xterm
+	if $TERM ==# "xterm-256color"
+		set term=xterm
+	else
+		set term=pcansi
+	endif
+
 	"set term=xterm-256color
 	set t_Co=256
 	let &t_AB="\e[48;5;%dm"
 	let &t_AF="\e[38;5;%dm"
-    colorscheme delek " best I found, other considerations:
+	colorscheme delek " best I found, other considerations:
 	" darkblue
 	" slate
 	" murphy
 	" desert
 	" koehler
-	" zellner
+	"colorscheme zellner
+
+	set termencoding=utf8
+	
+	" Enable the use of the mouse.
+	set mouse=a
+	" mouse wheel
+	inoremap <Esc>[62~ <C-X><C-E>
+	inoremap <Esc>[63~ <C-X><C-Y>
+	nnoremap <Esc>[62~ <C-E>
+	nnoremap <Esc>[63~ <C-Y>
 endif

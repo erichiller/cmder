@@ -21,12 +21,12 @@ Basics
 * Bash: (bash).                 The GNU Bourne-Again SHell.
 * Common options: (inetutils)Common options.
                                 Common options.
+* Finding files: (find).        Operating on files matching certain criteria.
 * Inetutils: (inetutils).       GNU networking utilities.
 * Coreutils: (coreutils).       Core GNU (file, text, shell) utilities.
 * Date input formats: (coreutils)Date input formats.
 * File permissions: (coreutils)File permissions.
                                 Access modes.
-* Finding files: (find).        Operating on files matching certain criteria.
 
 C++ libraries
 * autosprintf: (autosprintf).   Support for printf format strings in C++.
@@ -93,6 +93,9 @@ GNU libraries
 * gmp: (gmp).                   GNU Multiple Precision Arithmetic Library.
 
 GNU Libraries
+* Assuan: (assuan).             An IPC library for non-persistent servers.
+* GPGME: (gpgme).               Adding support for cryptography to your 
+                                  program.
 * libgcrypt: (gcrypt).          Cryptographic function library.
 * libgomp: (libgomp).           GNU OpenMP runtime library
 * libquadmath: (libquadmath).   GCC Quad-Precision Math Library

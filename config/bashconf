@@ -1,10 +1,12 @@
 # ERIC - EDH - setup bash
 
-# fix CMDER_ROOT from C:\blah\blah\blah to /c/blah/blah/blah
-export CMDER_ROOT=$(echo "/$CMDER_ROOT" | sed -e 's/\\/\//g' -e 's/://')
-# add CMDER_ROOT/bin to path
-PATH="${CMDER_ROOT}/bin::${PATH}"
-${CMDER_ROOT}/scripts/start-ssh-agent.cmd
+# if on CMDER -> fix CMDER_ROOT from C:\blah\blah\blah to /c/blah/blah/blah
+if [ -v CMDER_ROOT ] ; then 
+	export CMDER_ROOT=$(echo "/$CMDER_ROOT" | sed -e 's/\\/\//g' -e 's/://')
+	# add CMDER_ROOT/bin to path
+	PATH="${CMDER_ROOT}/bin::${PATH}"
+	${CMDER_ROOT}/scripts/start-ssh-agent.cmd
+fi
 
 #Golang
 if [ -d "/c/Go" ] ; then
@@ -34,11 +36,21 @@ eval "`dircolors -b`"
 alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -l'
 alias l='ls $LS_OPTIONS -lA'
-alias vi='vim -u $ConEmuDir/../../config/.vimrc'
-alias vim='vim -u $ConEmuDir/../../config/.vimrc'
+
+# alias vim if we are on ConEmu
+if [ -f $ConEmuDir/../../config/.vimrc ] ; then
+	alias vi='vim -u $ConEmuDir/../../config/.vimrc'
+	alias vim='vim -u $ConEmuDir/../../config/.vimrc'
+fi
 
 # now read input rc
 if [ -f ${CMDER_ROOT}/config/inputrc ] ; then bind -f ${CMDER_ROOT}/config/inputrc ; fi
 
-if [ -f ~/.profile ]; then . ~/.profile; fi
-if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+# see startup sequence : https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html
+# if this is global read user files, if it is local, I am done.
+# sometimes this file is used as .bashrc, sometimes it isn't, let's keep it from causing infinite loops
+# (it's happened, it wasn't fun)
+if [ `basename "$BASH_SOURCE"` != ".bashrc" ]; then
+	if [ -f ~/.profile ]; then . ~/.profile; fi
+	if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+fi

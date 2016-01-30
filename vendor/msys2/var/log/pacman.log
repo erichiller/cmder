@@ -593,3 +593,40 @@
 [2016-01-07 11:04] [ALPM] transaction completed
 [2016-01-13 13:21] [PACMAN] Running 'pacman -Su'
 [2016-01-13 13:21] [PACMAN] starting full system upgrade
+[2016-01-28 10:18] [PACMAN] Running '/usr/bin/pacman -Sy'
+[2016-01-28 10:18] [PACMAN] synchronizing package lists
+[2016-01-28 10:21] [PACMAN] Running '/usr/bin/pacman -S --noconfirm --needed bash pacman msys2-runtime msys2-runtime-devel'
+[2016-01-28 10:21] [ALPM] transaction started
+[2016-01-28 10:21] [ALPM] upgraded msys2-runtime (2.4.0.16814.ac5d7ed-1 -> 2.4.0.16836.5ea1fb5-1)
+[2016-01-28 10:21] [ALPM] upgraded msys2-runtime-devel (2.4.0.16814.ac5d7ed-1 -> 2.4.0.16836.5ea1fb5-1)
+[2016-01-28 10:21] [ALPM] transaction completed
+[2016-01-28 10:22] [PACMAN] Running 'pacman -Su'
+[2016-01-28 10:22] [PACMAN] starting full system upgrade
+[2016-01-28 10:23] [ALPM] transaction started
+[2016-01-28 10:23] [ALPM] upgraded libedit (3.1-20130712 -> 3.1-20150325)
+[2016-01-28 10:23] [ALPM] upgraded icu (51.2-2 -> 56.1-1)
+[2016-01-28 10:23] [ALPM] upgraded libsqlite (3.8.8.2-1 -> 3.10.0.0-1)
+[2016-01-28 10:23] [ALPM] upgraded heimdal-libs (1.5.3-6 -> 1.5.3-8)
+[2016-01-28 10:23] [ALPM] upgraded findutils (4.5.14-4 -> 4.6.0-1)
+[2016-01-28 10:23] [ALPM] upgraded libpcre (8.37-1 -> 8.38-1)
+[2016-01-28 10:23] [ALPM] upgraded libp11-kit (0.23.1-1 -> 0.23.2-1)
+[2016-01-28 10:23] [ALPM] upgraded p11-kit (0.23.1-1 -> 0.23.2-1)
+[2016-01-28 10:23] [ALPM] upgraded libcurl (7.45.0-1 -> 7.46.0-2)
+[2016-01-28 10:23] [ALPM] upgraded curl (7.45.0-1 -> 7.46.0-2)
+[2016-01-28 10:23] [ALPM] upgraded dos2unix (7.3.2-1 -> 7.3.2-2)
+[2016-01-28 10:23] [ALPM] upgraded heimdal (1.5.3-6 -> 1.5.3-8)
+[2016-01-28 10:23] [ALPM] upgraded openssh (7.1p1-1 -> 7.1p2-1)
+[2016-01-28 10:23] [ALPM] upgraded git (2.6.3-1 -> 2.7.0-1)
+[2016-01-28 10:23] [ALPM] upgraded libgpg-error (1.20-1 -> 1.21-1)
+[2016-01-28 10:23] [ALPM] upgraded libpcre16 (8.37-1 -> 8.38-1)
+[2016-01-28 10:23] [ALPM] upgraded libpcre32 (8.37-1 -> 8.38-1)
+[2016-01-28 10:23] [ALPM] upgraded libpcrecpp (8.37-1 -> 8.38-1)
+[2016-01-28 10:23] [ALPM] upgraded libpcreposix (8.37-1 -> 8.38-1)
+[2016-01-28 10:23] [ALPM] upgraded mintty (1~2.2.1-1 -> 1~2.2.2-1)
+[2016-01-28 10:23] [ALPM] upgraded pacman-mirrors (20150722-2 -> 20160112-1)
+[2016-01-28 10:23] [ALPM] upgraded pcre (8.37-1 -> 8.38-1)
+[2016-01-28 10:23] [ALPM] upgraded scons (2.4.1-1 -> 2.4.1-2)
+[2016-01-28 10:23] [ALPM] installed libassuan (2.4.2-1)
+[2016-01-28 10:23] [ALPM] installed libgpgme (1.6.0-1)
+[2016-01-28 10:23] [ALPM] upgraded wget (1.16.3-1 -> 1.17.1-2)
+[2016-01-28 10:23] [ALPM] transaction completed
