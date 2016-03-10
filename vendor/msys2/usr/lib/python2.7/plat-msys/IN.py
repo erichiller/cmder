@@ -9,8 +9,13 @@
 # Included from machine/_default_types.h
 
 # Included from sys/features.h
+
+# Included from _newlib_version.h
+_NEWLIB_VERSION_H__ = 1
+_NEWLIB_VERSION = "2.3.0"
 __NEWLIB__ = 2
-__NEWLIB_MINOR__ = 2
+__NEWLIB_MINOR__ = 3
+__NEWLIB_PATCHLEVEL__ = 0
 _POSIX_JOB_CONTROL = 1
 _POSIX_SAVED_IDS = 1
 _POSIX_VERSION = 199309L
@@ -55,47 +60,49 @@ _POSIX_THREAD_PRIORITY_SCHEDULING = 1
 _POSIX_JOB_CONTROL = 1
 _POSIX_SAVED_IDS = 1
 _POSIX_VERSION = 199009L
-_POSIX_VERSION = 200112L
-_POSIX2_VERSION = 200112L
+_POSIX_VERSION = 200809L
+_POSIX2_VERSION = 200809L
 _XOPEN_VERSION = 600
-_POSIX_ADVISORY_INFO = 200112L
+_POSIX_ADVISORY_INFO = 200809L
+_POSIX_BARRIERS = 200809L
 _POSIX_CHOWN_RESTRICTED = 1
-_POSIX_CLOCK_SELECTION = 200112L
-_POSIX_CPUTIME = 200112L
-_POSIX_FSYNC = 200112L
-_POSIX_IPV6 = 200112L
+_POSIX_CLOCK_SELECTION = 200809L
+_POSIX_CPUTIME = 200809L
+_POSIX_FSYNC = 200809L
+_POSIX_IPV6 = 200809L
 _POSIX_JOB_CONTROL = 1
-_POSIX_MAPPED_FILES = 200112L
-_POSIX_MEMLOCK_RANGE = 200112L
-_POSIX_MEMORY_PROTECTION = 200112L
-_POSIX_MESSAGE_PASSING = 200112L
-_POSIX_MONOTONIC_CLOCK = 200112L
+_POSIX_MAPPED_FILES = 200809L
+_POSIX_MEMLOCK_RANGE = 200809L
+_POSIX_MEMORY_PROTECTION = 200809L
+_POSIX_MESSAGE_PASSING = 200809L
+_POSIX_MONOTONIC_CLOCK = 200809L
 _POSIX_NO_TRUNC = 1
-_POSIX_PRIORITY_SCHEDULING = 200112L
-_POSIX_RAW_SOCKETS = 200112L
-_POSIX_READER_WRITER_LOCKS = 200112L
-_POSIX_REALTIME_SIGNALS = 200112L
+_POSIX_PRIORITY_SCHEDULING = 200809L
+_POSIX_RAW_SOCKETS = 200809L
+_POSIX_READER_WRITER_LOCKS = 200809L
+_POSIX_REALTIME_SIGNALS = 200809L
 _POSIX_REGEXP = 1
 _POSIX_SAVED_IDS = 1
-_POSIX_SEMAPHORES = 200112L
-_POSIX_SHARED_MEMORY_OBJECTS = 200112L
+_POSIX_SEMAPHORES = 200809L
+_POSIX_SHARED_MEMORY_OBJECTS = 200809L
 _POSIX_SHELL = 1
-_POSIX_SPIN_LOCKS = 200112L
-_POSIX_SYNCHRONIZED_IO = 200112L
-_POSIX_THREAD_ATTR_STACKADDR = 200112L
-_POSIX_THREAD_ATTR_STACKSIZE = 200112L
-_POSIX_THREAD_CPUTIME = 200112L
-_POSIX_THREAD_PRIORITY_SCHEDULING = 200112L
-_POSIX_THREAD_PROCESS_SHARED = 200112L
-_POSIX_THREAD_SAFE_FUNCTIONS = 200112L
-_POSIX_THREADS = 200112L
+_POSIX_SPAWN = 200809L
+_POSIX_SPIN_LOCKS = 200809L
+_POSIX_SYNCHRONIZED_IO = 200809L
+_POSIX_THREAD_ATTR_STACKADDR = 200809L
+_POSIX_THREAD_ATTR_STACKSIZE = 200809L
+_POSIX_THREAD_CPUTIME = 200809L
+_POSIX_THREAD_PRIORITY_SCHEDULING = 200809L
+_POSIX_THREAD_PROCESS_SHARED = 200809L
+_POSIX_THREAD_SAFE_FUNCTIONS = 200809L
+_POSIX_THREADS = 200809L
 _POSIX_TIMERS = 1
 _POSIX_VDISABLE = ord('\0')
-_POSIX2_C_BIND = 200112L
-_POSIX2_C_DEV = 200112L
-_POSIX2_CHAR_TERM = 200112L
-_POSIX2_SW_DEV = 200112L
-_POSIX2_UPE = 200112L
+_POSIX2_C_BIND = 200809L
+_POSIX2_C_DEV = 200809L
+_POSIX2_CHAR_TERM = 200809L
+_POSIX2_SW_DEV = 200809L
+_POSIX2_UPE = 200809L
 _POSIX_V6_ILP32_OFF32 = -1
 _POSIX_V6_ILP32_OFFBIG = -1
 _POSIX_V6_LP64_OFF64 = 1
@@ -128,6 +135,8 @@ def __EXP(x): return x
 def __PMT(args): return args
 
 __flexarr = [0]
+def __has_attribute(x): return 0
+
 def __has_feature(x): return 0
 
 def __has_include(x): return 0
@@ -168,9 +177,9 @@ def __aligned(x): return __attribute__((__aligned__(x)))
 
 def __section(x): return __attribute__((__section__(x)))
 
-def __aligned(x): return __attribute__((__aligned__(x)))
+def __alloc_size(x): return __attribute__((__alloc_size__(x)))
 
-def __section(x): return __attribute__((__section__(x)))
+def __alloc_align(x): return __attribute__((__alloc_align__(x)))
 
 def _Alignas(x): return alignas(x)
 
@@ -234,6 +243,12 @@ __POSIX_VISIBLE = 200809
 __XSI_VISIBLE = 700
 __BSD_VISIBLE = 1
 __ISO_C_VISIBLE = 2011
+def __lock_annotate(x): return __attribute__((x))
+
+def __guarded_by(x): return __lock_annotate(guarded_by(x))
+
+def __pt_guarded_by(x): return __lock_annotate(pt_guarded_by(x))
+
 
 # Included from bits/wordsize.h
 _WORDSIZE_H = 1
@@ -390,8 +405,45 @@ __have_longlong64 = 1
 __have_long64 = 1
 __have_long32 = 1
 signed = +0
-int = +0
-long = +1
+unsigned = +0
+char = +0
+short = +1
+__int20 = +2
+int = +2
+long = +4
+__INT8 = "hh"
+__INT8 = "h"
+__INT8 = "l"
+__INT8 = "ll"
+__INT16 = "h"
+__INT16 = "l"
+__INT16 = "ll"
+__INT32 = "l"
+__INT32 = "ll"
+__INT64 = "l"
+__INT64 = "ll"
+__FAST8 = "hh"
+__FAST8 = "h"
+__FAST8 = "l"
+__FAST8 = "ll"
+__FAST16 = "h"
+__FAST16 = "l"
+__FAST16 = "ll"
+__FAST32 = "l"
+__FAST32 = "ll"
+__FAST64 = "l"
+__FAST64 = "ll"
+__LEAST8 = "hh"
+__LEAST8 = "h"
+__LEAST8 = "l"
+__LEAST8 = "ll"
+__LEAST16 = "h"
+__LEAST16 = "l"
+__LEAST16 = "ll"
+__LEAST32 = "l"
+__LEAST32 = "ll"
+__LEAST64 = "l"
+__LEAST64 = "ll"
 
 # Included from sys/_stdint.h
 __int8_t_defined = 1
@@ -532,7 +584,6 @@ _SS_MAXSIZE = 128
 
 # Included from newlib.h
 __NEWLIB_H__ = 1
-_NEWLIB_VERSION = "2.2.0"
 _WANT_IO_C99_FORMATS = 1
 _WANT_IO_LONG_LONG = 1
 _WANT_IO_LONG_DOUBLE = 1
@@ -570,16 +621,21 @@ INT_MAX = __INT_MAX__
 INT_MAX = 32767
 INT_MAX = 2147483647
 INT_MAX = __INT_MAX__
+_POINTER_INT = short
 INT_MAX = __INT_MAX__
+_POINTER_INT = short
 __LARGE64_FILES = 1
 _LARGEFILE64_SOURCE = 1
+_POINTER_INT = short
 INT_MAX = __INT_MAX__
 MALLOC_ALIGNMENT = 8
+_POINTER_INT = short
 __BUFSIZ__ = 16
 _POINTER_INT = long
 _POINTER_INT = int
 INT_MAX = __INT_MAX__
 MALLOC_ALIGNMENT = 8
+_POINTER_INT = short
 _POINTER_INT = long
 __BUFSIZ__ = 16
 MALLOC_ALIGNMENT = 16
@@ -634,8 +690,6 @@ unsigned = signed
 
 # Included from machine/types.h
 _TIME_T_ = long
-NBBY = 8
-FD_SETSIZE = 64
 
 # Included from sys/sched.h
 

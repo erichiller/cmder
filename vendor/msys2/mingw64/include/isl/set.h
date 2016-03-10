@@ -433,12 +433,16 @@ int isl_set_n_basic_set(__isl_keep isl_set *set);
 __isl_export
 isl_stat isl_set_foreach_basic_set(__isl_keep isl_set *set,
 	isl_stat (*fn)(__isl_take isl_basic_set *bset, void *user), void *user);
+__isl_give isl_basic_set_list *isl_set_get_basic_set_list(
+	__isl_keep isl_set *set);
 
 isl_stat isl_set_foreach_point(__isl_keep isl_set *set,
 	isl_stat (*fn)(__isl_take isl_point *pnt, void *user), void *user);
 __isl_give isl_val *isl_set_count_val(__isl_keep isl_set *set);
 
+__isl_constructor
 __isl_give isl_basic_set *isl_basic_set_from_point(__isl_take isl_point *pnt);
+__isl_constructor
 __isl_give isl_set *isl_set_from_point(__isl_take isl_point *pnt);
 __isl_give isl_basic_set *isl_basic_set_box_from_points(
 	__isl_take isl_point *pnt1, __isl_take isl_point *pnt2);

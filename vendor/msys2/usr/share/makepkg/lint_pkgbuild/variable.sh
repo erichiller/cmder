@@ -2,7 +2,7 @@
 #
 #   variable.sh - Check that variables are or are not arrays as appropriate
 #
-#   Copyright (c) 2014-2015 Pacman Development Team <pacman-dev@archlinux.org>
+#   Copyright (c) 2014-2016 Pacman Development Team <pacman-dev@archlinux.org>
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -43,7 +43,7 @@ lint_variable() {
 	for i in ${array[@]} ${arch_array[@]}; do
 		eval "keys=(\"\${!$i[@]}\")"
 		if (( ${#keys[*]} > 0 )); then
-				if [[ "$(declare -p $i)" != "declare -a "* ]]; then
+			if ! is_array $i; then
 				error "$(gettext "%s should be an array")" "$i"
 				ret=1
 			fi
@@ -57,7 +57,7 @@ lint_variable() {
 			v="${i}_${a}"
 			eval "keys=(\"\${!${v}[@]}\")"
 			if (( ${#keys[*]} > 0 )); then
-				if [[ "$(declare -p $i)" != "declare -a "* ]]; then
+				if ! is_array $v; then
 					error "$(gettext "%s_%s should be an array")" "$i" "$a"
 					ret=1
 				fi
@@ -68,7 +68,7 @@ lint_variable() {
 	for i in ${string[@]}; do
 		eval "keys=(\"\${!$i[@]}\")"
 		if (( ${#keys[*]} > 0 )); then
-			if [[ "$(declare -p $i)" == "declare -a "* ]]; then
+			if is_array $i; then
 				error "$(gettext "%s should not be an array")" "$i"
 				ret=1
 			fi

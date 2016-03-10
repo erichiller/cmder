@@ -1,6 +1,6 @@
  ConEmuBg.x64
 
- Timestamp is 56a57bdd (Mon Jan 25 04:35:25 2016)
+ Timestamp is 56df5255 (Wed Mar 09 01:29:41 2016)
 
  Preferred load address is 0000000180000000
 
@@ -32,12 +32,12 @@
  0001:00000168       ?Write@MStream@@UEAAJPEBXKPEAK@Z 0000000180001168 f i ConEmuBg.obj
  0001:00000230       ?Seek@MStream@@UEAAJT_LARGE_INTEGER@@KPEAT_ULARGE_INTEGER@@@Z 0000000180001230 f i ConEmuBg.obj
  0001:000002a0       ?SetSize@MStream@@UEAAJT_ULARGE_INTEGER@@@Z 00000001800012a0 f i ConEmuBg.obj
- 0001:00000354       ?UnlockRegion@MStream@@UEAAJT_ULARGE_INTEGER@@0K@Z 0000000180001354 f i ConEmuBg.obj
- 0001:00000354       ?CopyTo@MStream@@UEAAJPEAUIStream@@T_ULARGE_INTEGER@@PEAT3@2@Z 0000000180001354 f i ConEmuBg.obj
- 0001:00000354       ?Revert@MStream@@UEAAJXZ   0000000180001354 f i ConEmuBg.obj
- 0001:00000354       ?Clone@MStream@@UEAAJPEAPEAUIStream@@@Z 0000000180001354 f i ConEmuBg.obj
- 0001:00000354       ?LockRegion@MStream@@UEAAJT_ULARGE_INTEGER@@0K@Z 0000000180001354 f i ConEmuBg.obj
- 0001:0000035c       ?Commit@MStream@@UEAAJK@Z  000000018000135c f i ConEmuBg.obj
+ 0001:00000354       ?Commit@MStream@@UEAAJK@Z  0000000180001354 f i ConEmuBg.obj
+ 0001:00000360       ?Revert@MStream@@UEAAJXZ   0000000180001360 f i ConEmuBg.obj
+ 0001:00000360       ?LockRegion@MStream@@UEAAJT_ULARGE_INTEGER@@0K@Z 0000000180001360 f i ConEmuBg.obj
+ 0001:00000360       ?UnlockRegion@MStream@@UEAAJT_ULARGE_INTEGER@@0K@Z 0000000180001360 f i ConEmuBg.obj
+ 0001:00000360       ?CopyTo@MStream@@UEAAJPEAUIStream@@T_ULARGE_INTEGER@@PEAT3@2@Z 0000000180001360 f i ConEmuBg.obj
+ 0001:00000360       ?Clone@MStream@@UEAAJPEAPEAUIStream@@@Z 0000000180001360 f i ConEmuBg.obj
  0001:00000368       ?Stat@MStream@@UEAAJPEAUtagSTATSTG@@K@Z 0000000180001368 f i ConEmuBg.obj
  0001:000003c8       ??_EMStream@@UEAAPEAXI@Z   00000001800013c8 f i ConEmuBg.obj
  0001:000003c8       ??_GMStream@@UEAAPEAXI@Z   00000001800013c8 f i ConEmuBg.obj
@@ -75,8 +75,8 @@
  0001:000029c0       ??$SafeDelete@UMSectionSimple@@@@YAXAEAPEAUMSectionSimple@@@Z 00000001800039c0 f i ConEmuBg.obj
  0001:000029f0       ?GdipDone@@YAXXZ           00000001800039f0 f   ConEmuBg.obj
  0001:00002b08       ?ExitPlugin@@YAXXZ         0000000180003b08 f   ConEmuBg.obj
- 0001:00002b60       ?ExitFARW3@@YAXPEAX@Z      0000000180003b60 f   ConEmuBg.obj
  0001:00002b60       ExitFARW                   0000000180003b60 f   ConEmuBg.obj
+ 0001:00002b60       ?ExitFARW3@@YAXPEAX@Z      0000000180003b60 f   ConEmuBg.obj
  0001:00002b9c       ?FillPanelParams@@YAHPEAUPaintBackgroundArg@@PEAUBkPanelInfo@@PEAUDrawInfo@@@Z 0000000180003b9c f   ConEmuBg.obj
  0001:00003ac4       ?PaintPanel@@YAHPEAUPaintBackgroundArg@@HAEAKAEAH@Z 0000000180004ac4 f   ConEmuBg.obj
  0001:00004ce0       ?PaintConEmuBackground@@YAHPEAUPaintBackgroundArg@@@Z 0000000180005ce0 f   ConEmuBg.obj
@@ -94,17 +94,17 @@
  0001:000057f0       ?FMatchW995@@YA_NPEB_WPEA_W@Z 00000001800067f0 f   ConEmuBg995.obj
  0001:00005814       ?GetPluginInfoW1900@@YAXPEAX@Z 0000000180006814 f   ConEmuBg1900.obj
  0001:0000589c       ?SetStartupInfoW1900@@YAXPEAX@Z 000000018000689c f   ConEmuBg1900.obj
- 0001:000059d8       ?OpenW2800@@YAPEAXPEBX@Z   00000001800069d8 f   ConEmuBg2800.obj
- 0001:000059d8       ?OpenW1900@@YAPEAXPEBX@Z   00000001800069d8 f   ConEmuBg1900.obj
- 0001:000059fc       ?ExitFARW1900@@YAXXZ       00000001800069fc f   ConEmuBg1900.obj
- 0001:00005a38       ?GetMsgW1900@@YAPEB_WH@Z   0000000180006a38 f   ConEmuBg1900.obj
- 0001:00005fc4       ?ConfigureW1900@@YAHH@Z    0000000180006fc4 f   ConEmuBg1900.obj
- 0001:00005fe0       ?SettingsLoadW1900@@YAXXZ  0000000180006fe0 f   ConEmuBg1900.obj
- 0001:00006188       ?SettingsSaveW1900@@YAXXZ  0000000180007188 f   ConEmuBg1900.obj
- 0001:000062c4       ?FMatchW1900@@YA_NPEB_WPEA_W@Z 00000001800072c4 f   ConEmuBg1900.obj
- 0001:000062e8       GetGlobalInfoW             00000001800072e8 f   ConEmuBg2800.obj
- 0001:000063a0       ?GetPluginInfoW2800@@YAXPEAX@Z 00000001800073a0 f   ConEmuBg2800.obj
- 0001:00006428       ?SetStartupInfoW2800@@YAXPEAX@Z 0000000180007428 f   ConEmuBg2800.obj
+ 0001:000059d8       ?ExitFARW1900@@YAXXZ       00000001800069d8 f   ConEmuBg1900.obj
+ 0001:00005a14       ?GetMsgW1900@@YAPEB_WH@Z   0000000180006a14 f   ConEmuBg1900.obj
+ 0001:00005fa0       ?ConfigureW1900@@YAHH@Z    0000000180006fa0 f   ConEmuBg1900.obj
+ 0001:00005fbc       ?SettingsLoadW1900@@YAXXZ  0000000180006fbc f   ConEmuBg1900.obj
+ 0001:00006164       ?SettingsSaveW1900@@YAXXZ  0000000180007164 f   ConEmuBg1900.obj
+ 0001:000062a0       ?FMatchW1900@@YA_NPEB_WPEA_W@Z 00000001800072a0 f   ConEmuBg1900.obj
+ 0001:000062c4       GetGlobalInfoW             00000001800072c4 f   ConEmuBg2800.obj
+ 0001:0000637c       ?GetPluginInfoW2800@@YAXPEAX@Z 000000018000737c f   ConEmuBg2800.obj
+ 0001:00006404       ?SetStartupInfoW2800@@YAXPEAX@Z 0000000180007404 f   ConEmuBg2800.obj
+ 0001:00006540       ?OpenW1900@@YAPEAXPEBX@Z   0000000180007540 f   ConEmuBg1900.obj
+ 0001:00006540       ?OpenW2800@@YAPEAXPEBX@Z   0000000180007540 f   ConEmuBg2800.obj
  0001:00006564       ?ExitFARW2800@@YAXXZ       0000000180007564 f   ConEmuBg2800.obj
  0001:000065a0       ?GetMsgW2800@@YAPEB_WH@Z   00000001800075a0 f   ConEmuBg2800.obj
  0001:00006b34       ?ConfigureW2800@@YAHH@Z    0000000180007b34 f   ConEmuBg2800.obj
@@ -123,12 +123,12 @@
  0001:00007774       ?HeapInitialize@@YA_NXZ    0000000180008774 f   Memory.obj
  0001:000077ac       ?HeapDeinitialize@@YAXXZ   00000001800087ac f   Memory.obj
  0001:000077d0       ?xf_malloc@@YAPEAX_K@Z     00000001800087d0 f   Memory.obj
- 0001:000077d0       ??_U@YAPEAX_K@Z            00000001800087d0 f   Memory.obj
  0001:000077d0       ??2@YAPEAX_K@Z             00000001800087d0 f   Memory.obj
+ 0001:000077d0       ??_U@YAPEAX_K@Z            00000001800087d0 f   Memory.obj
  0001:000077e4       ?xf_calloc@@YAPEAX_K0@Z    00000001800087e4 f   Memory.obj
  0001:00007800       ?xf_free@@YAXPEAX@Z        0000000180008800 f   Memory.obj
- 0001:00007828       ??3@YAXPEAX@Z              0000000180008828 f   Memory.obj
  0001:00007828       ??_V@YAXPEAX@Z             0000000180008828 f   Memory.obj
+ 0001:00007828       ??3@YAXPEAX@Z              0000000180008828 f   Memory.obj
  0001:00007830       ?TryEnter@MSectionSimple@@QEAA_NXZ 0000000180008830 f   MSectionSimple.obj
  0001:00007858       ??0MSectionLockSimple@@QEAA@XZ 0000000180008858 f   MSectionSimple.obj
  0001:00007864       ?Unlock@MSectionLockSimple@@QEAAXXZ 0000000180008864 f   MSectionSimple.obj
@@ -427,8 +427,8 @@
  0001:00000660       ?ChangeExports@@YA_NPEBUExportFunc@@PEAUHINSTANCE__@@@Z 0000000180001660 f   ConEmuBg.obj
  0001:000052cc       ?ConfigDlgProc@@YA_JPEAXHH_J@Z 00000001800062cc f   ConEmuBg995.obj
  0001:000053a4       ?ConfigureProc@@YAHH@Z     00000001800063a4 f   ConEmuBg995.obj
- 0001:00005a6c       ?ConfigDlgProc@@YA_JPEAXHH0@Z 0000000180006a6c f   ConEmuBg1900.obj
- 0001:00005b44       ?ConfigureProc@@YAHH@Z     0000000180006b44 f   ConEmuBg1900.obj
+ 0001:00005a48       ?ConfigDlgProc@@YA_JPEAXHH0@Z 0000000180006a48 f   ConEmuBg1900.obj
+ 0001:00005b20       ?ConfigureProc@@YAHH@Z     0000000180006b20 f   ConEmuBg1900.obj
  0001:000065d4       ?ConfigDlgProc@@YA_JPEAX_J10@Z 00000001800075d4 f   ConEmuBg2800.obj
  0001:000066b0       ?ConfigureProc@@YAHH@Z     00000001800076b0 f   ConEmuBg2800.obj
  0001:00007150       ?ConfigDlgProc@@YA_JPEAXHH_J@Z 0000000180008150 f   ConEmuBgA.obj

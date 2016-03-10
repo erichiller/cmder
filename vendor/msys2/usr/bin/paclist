@@ -18,7 +18,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 declare -r myname='paclist'
-declare -r myver='4.2.1-432-ga10ea-dirty'
+declare -r myver='4.2.1-503-g62b54-dirty'
 
 export TEXTDOMAIN='pacman'
 export TEXTDOMAINDIR='/usr/share/locale'

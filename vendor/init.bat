@@ -26,7 +26,8 @@
 
 :: Change the prompt style
 :: See http://ss64.com/nt/prompt.html
-@prompt $E[1;32;40m$P$S$_[$T]$S$G$S
+ @prompt $E[1;32;40m$P$S$_[$T]$S$G$S
+:: @prompt %username%$S$P$S$$
 
 :: Pick right version of clink
 @if "%PROCESSOR_ARCHITECTURE%"=="x86" (

@@ -2,7 +2,7 @@
 #
 #   util.sh - general utility functions
 #
-#   Copyright (c) 2006-2015 Pacman Development Team <pacman-dev@archlinux.org>
+#   Copyright (c) 2006-2016 Pacman Development Team <pacman-dev@archlinux.org>
 #   Copyright (c) 2002-2006 by Judd Vinet <jvinet@zeroflux.org>
 #
 #   This program is free software; you can redistribute it and/or modify
@@ -35,6 +35,23 @@ in_array() {
 		[[ $item = "$needle" ]] && return 0 # Found
 	done
 	return 1 # Not Found
+}
+
+# tests if a variable is an array
+is_array() {
+	local v=$1
+	local ret=1
+
+	# this function requires extglob - save current options to restore later
+	local shellopts=$(shopt -p)
+	shopt -s extglob
+
+	if [[ $(declare -p "$v") == declare\ -*([[:alnum:]])a*([[:alnum:]])\ * ]]; then
+		ret=0
+	fi
+
+	eval "$shellopts"
+	return $ret
 }
 
 # Canonicalize a directory path if it exists

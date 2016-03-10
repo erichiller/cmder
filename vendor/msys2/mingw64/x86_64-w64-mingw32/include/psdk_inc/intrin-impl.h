@@ -1336,6 +1336,18 @@ void __cpuid(int CPUInfo[4], int InfoType) {
 #define __INTRINSIC_DEFINED___cpuid
 #endif /* __INTRINSIC_PROLOG */
 
+#if __INTRINSIC_PROLOG(__cpuidex)
+void __cpuidex(int CPUInfo[4], int, int);
+__INTRINSICS_USEINLINE
+void __cpuidex(int CPUInfo[4], int function_id, int subfunction_id) {
+   __asm__ __volatile__ (
+      "cpuid"
+      : "=a" (CPUInfo [0]), "=b" (CPUInfo [1]), "=c" (CPUInfo [2]), "=d" (CPUInfo [3])
+      : "a" (function_id), "c" (subfunction_id));
+}
+#define __INTRINSIC_DEFINED___cpuidex
+#endif /* __INTRINSIC_PROLOG */
+
 #if __INTRINSIC_PROLOG(__readmsr)
 __MINGW_EXTENSION unsigned __int64 __readmsr(unsigned __LONG32);
 __INTRINSICS_USEINLINE
@@ -1390,6 +1402,28 @@ void __movsd(unsigned __LONG32 *Dest, unsigned __LONG32 const *Source, size_t Co
 __INTRINSICS_USEINLINE
 __buildmov(__movsd, unsigned __LONG32, "d")
 #define __INTRINSIC_DEFINED___movsd
+#endif /* __INTRINSIC_PROLOG */
+
+/* NOTE: This should be in immintrin.h */
+#if __INTRINSIC_PROLOG(_xgetbv)
+unsigned __int64 _xgetbv(unsigned int);
+__INTRINSICS_USEINLINE
+unsigned __int64 _xgetbv(unsigned int index)
+{
+#if defined(__x86_64__) || defined(_AMD64_)
+   unsigned __int64 val1, val2;
+#else
+   unsigned __LONG32 val1, val2;
+#endif /* defined(__x86_64__) || defined(_AMD64_) */
+
+   __asm__ __volatile__(
+      "xgetbv"
+      : "=a" (val1), "=d" (val2)
+      : "c" (index));
+
+   return (((unsigned __int64)val2) << 32) | val1;
+}
+#define __INTRINSIC_DEFINED__xgetbv
 #endif /* __INTRINSIC_PROLOG */
 
 #endif /* defined(__x86_64__) || defined(_AMD64_) || defined(__i386__) || defined(_X86_) */

@@ -36,3 +36,12 @@ server is https://ticinocrashreporter.azurewebsites.net/crash
 maximum 128 reports/day
 reporter is electron-crash-service
 [7392:15856:0130/221608:ERROR:crash_service.cc(301)] could not start dumper
+[880:4364:0225/174302:VERBOSE1:crash_service_main.cc(68)] Session start. cmdline is [--reporter-url=https://ticinocrashreporter.azurewebsites.net/crash --application-name=VSCode --v=1]
+[880:4364:0225/174302:VERBOSE1:crash_service.cc(142)] window handle is 00090990
+[880:4364:0225/174302:VERBOSE1:crash_service.cc(290)] pipe name is \\.\pipe\VSCode Crash Service
+dumps at C:\cmder\vendor\msys2\tmp\VSCode Crashes
+[880:4364:0225/174302:VERBOSE1:crash_service.cc(294)] checkpoint is C:\cmder\vendor\msys2\tmp\VSCode Crashes\crash_checkpoint.txt
+server is https://ticinocrashreporter.azurewebsites.net/crash
+maximum 128 reports/day
+reporter is electron-crash-service
+[880:4364:0225/174302:ERROR:crash_service.cc(301)] could not start dumper

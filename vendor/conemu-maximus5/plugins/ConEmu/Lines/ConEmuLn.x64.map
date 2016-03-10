@@ -1,6 +1,6 @@
  ConEmuLn.x64
 
- Timestamp is 56a57bd6 (Mon Jan 25 04:35:18 2016)
+ Timestamp is 56df524c (Wed Mar 09 01:29:32 2016)
 
  Preferred load address is 0000000180000000
 
@@ -24,8 +24,8 @@
 
   Address         Publics by Value              Rva+Base               Lib:Object
 
- 0000:00000000       ___safe_se_handler_count   0000000000000000     <absolute>
  0000:00000000       ___safe_se_handler_table   0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_count   0000000000000000     <absolute>
  0000:00000000       __ImageBase                0000000180000000     <linker-defined>
  0001:00000000       GetMinFarVersionW          0000000180001000 f   ConEmuLn.obj
  0001:00000008       ?GetPluginInfoWcmn@@YAXPEAX@Z 0000000180001008 f   ConEmuLn.obj
@@ -70,8 +70,8 @@
  0001:00003024       GetGlobalInfoW             0000000180004024 f   ConEmuLn2800.obj
  0001:000030dc       ?GetPluginInfoW2800@@YAXPEAX@Z 00000001800040dc f   ConEmuLn2800.obj
  0001:00003164       ?SetStartupInfoW2800@@YAXPEAX@Z 0000000180004164 f   ConEmuLn2800.obj
- 0001:000032a0       ?OpenW1900@@YAPEAXPEBX@Z   00000001800042a0 f   ConEmuLn1900.obj
  0001:000032a0       ?OpenW2800@@YAPEAXPEBX@Z   00000001800042a0 f   ConEmuLn2800.obj
+ 0001:000032a0       ?OpenW1900@@YAPEAXPEBX@Z   00000001800042a0 f   ConEmuLn1900.obj
  0001:000032c4       ?ExitFARW2800@@YAXXZ       00000001800042c4 f   ConEmuLn2800.obj
  0001:00003300       ?GetMsgW2800@@YAPEB_WH@Z   0000000180004300 f   ConEmuLn2800.obj
  0001:00003f50       ?ConfigureW2800@@YAHH@Z    0000000180004f50 f   ConEmuLn2800.obj

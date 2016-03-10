@@ -409,9 +409,10 @@ typedef struct {
 typedef __uint32_t pthread_cond_t;       /* identify a condition variable */
 
 typedef struct {
-  int   is_initialized;
+  int      is_initialized;
+  clock_t  clock;             /* specifiy clock for timeouts */
 #if defined(_POSIX_THREAD_PROCESS_SHARED)
-  int   process_shared;       /* allow this to be shared amongst processes */
+  int      process_shared;    /* allow this to be shared amongst processes */
 #endif
 } pthread_condattr_t;         /* a condition attribute object */
 
@@ -431,6 +432,7 @@ typedef struct {
 
 /* POSIX Barrier Types */
 
+#if !defined(__CYGWIN__)
 #if defined(_POSIX_BARRIERS)
 typedef __uint32_t pthread_barrier_t;        /* POSIX Barrier Object */
 typedef struct {
@@ -443,7 +445,6 @@ typedef struct {
 
 /* POSIX Spin Lock Types */
 
-#if !defined (__CYGWIN__)
 #if defined(_POSIX_SPIN_LOCKS)
 typedef __uint32_t pthread_spinlock_t;        /* POSIX Spin Lock Object */
 #endif /* defined(_POSIX_SPIN_LOCKS) */

@@ -1,13 +1,13 @@
  ConEmuTh.x64
 
- Timestamp is 56a57bc3 (Mon Jan 25 04:34:59 2016)
+ Timestamp is 56df5235 (Wed Mar 09 01:29:09 2016)
 
  Preferred load address is 0000000180000000
 
  Start         Length     Name                   Class
- 0001:00000000 00018b6cH .text                   CODE
- 0001:00018b70 0000005eH .text$00                CODE
- 0001:00018bd0 0000013cH .text$x                 CODE
+ 0001:00000000 00018bacH .text                   CODE
+ 0001:00018bb0 0000005eH .text$00                CODE
+ 0001:00018c10 0000013cH .text$x                 CODE
  0002:00000000 00000628H .idata$5                DATA
  0002:00000628 00000008H .CRT$XCA                DATA
  0002:00000630 00000008H .CRT$XCZ                DATA
@@ -18,19 +18,19 @@
  0002:00000660 00000008H .CRT$XPZ                DATA
  0002:00000668 00000008H .CRT$XTA                DATA
  0002:00000670 00000008H .CRT$XTZ                DATA
- 0002:00000680 0000268bH .rdata                  DATA
- 0002:00002d10 00000008H .rtc$IAA                DATA
- 0002:00002d18 00000008H .rtc$IZZ                DATA
- 0002:00002d20 00000008H .rtc$TAA                DATA
- 0002:00002d28 00000008H .rtc$TZZ                DATA
- 0002:00002d30 00000dc4H .xdata                  DATA
- 0002:00003af4 0000008cH .idata$2                DATA
- 0002:00003b80 00000014H .idata$3                DATA
- 0002:00003b98 00000628H .idata$4                DATA
- 0002:000041c0 00000d7cH .idata$6                DATA
- 0002:00004f40 0000016cH .edata                  DATA
+ 0002:00000680 0000269bH .rdata                  DATA
+ 0002:00002d20 00000008H .rtc$IAA                DATA
+ 0002:00002d28 00000008H .rtc$IZZ                DATA
+ 0002:00002d30 00000008H .rtc$TAA                DATA
+ 0002:00002d38 00000008H .rtc$TZZ                DATA
+ 0002:00002d40 00000dd4H .xdata                  DATA
+ 0002:00003b14 0000008cH .idata$2                DATA
+ 0002:00003ba0 00000014H .idata$3                DATA
+ 0002:00003bb8 00000628H .idata$4                DATA
+ 0002:000041e0 00000d7cH .idata$6                DATA
+ 0002:00004f60 0000016cH .edata                  DATA
  0003:00000000 000010ecH .data                   DATA
- 0003:00001100 0002afc0H .bss                    DATA
+ 0003:00001100 0002afa0H .bss                    DATA
  0004:00000000 00001194H .pdata                  DATA
  0005:00000000 000000e8H .rsrc$01                DATA
  0005:000000f0 000013a8H .rsrc$02                DATA
@@ -40,21 +40,21 @@
  0000:00000000       ___safe_se_handler_count   0000000000000000     <absolute>
  0000:00000000       ___safe_se_handler_table   0000000000000000     <absolute>
  0000:00000000       __ImageBase                0000000180000000     <linker-defined>
- 0001:00000000       ??BCEStr@@QEBAPEB_WXZ      0000000180001000 f   CEStr.obj
- 0001:00000004       ?GetMaxCount@CEStr@@QEAA_JXZ 0000000180001004 f   CEStr.obj
- 0001:00000034       ?GetBuffer@CEStr@@QEAAPEA_W_J@Z 0000000180001034 f   CEStr.obj
- 0001:000000ec       ?Empty@CEStr@@QEAAXXZ      00000001800010ec f   CEStr.obj
- 0001:0000010c       ?StringCchCopyNW@@YAJPEA_W_KPEB_W1@Z 000000018000110c f i CEStr.obj
- 0001:00000184       ??0CEStr@@QEAA@XZ          0000000180001184 f   CEStr.obj
- 0001:000001a4       ??1CEStr@@QEAA@XZ          00000001800011a4 f   CEStr.obj
- 0001:000001f0       ?AttachInt@CEStr@@AEAAPEB_WAEAPEA_W@Z 00000001800011f0 f   CEStr.obj
- 0001:00000268       ?Set@CEStr@@QEAAPEB_WPEB_W_J@Z 0000000180001268 f   CEStr.obj
- 0001:00000314       ?SavePathVar@CEStr@@QEAAXPEB_W@Z 0000000180001314 f   CEStr.obj
- 0001:0000034c       ?Attach@CEStr@@QEAAPEB_WPEA_W@Z 000000018000134c f   CEStr.obj
- 0001:00000364       ?PointToName@@YAPEB_WPEB_W@Z 0000000180001364 f   CmdLine.obj
- 0001:000003c0       ?PointToExt@@YAPEB_WPEB_W@Z 00000001800013c0 f   CmdLine.obj
- 0001:000003e0       ?Unquote@@YAPEB_WPEA_W_N@Z 00000001800013e0 f   CmdLine.obj
- 0001:0000044c       ?CommonShutdown@@YAXXZ     000000018000144c f   Common.obj
+ 0001:00000000       ?Empty@CEStr@@QEAAXXZ      0000000180001000 f   CEStr.obj
+ 0001:00000024       ??BCEStr@@QEBAPEB_WXZ      0000000180001024 f   CEStr.obj
+ 0001:00000028       ?GetMaxCount@CEStr@@QEAA_JXZ 0000000180001028 f   CEStr.obj
+ 0001:00000058       ?GetBuffer@CEStr@@QEAAPEA_W_J@Z 0000000180001058 f   CEStr.obj
+ 0001:00000110       ?AttachInt@CEStr@@AEAAPEB_WAEAPEA_W@Z 0000000180001110 f   CEStr.obj
+ 0001:00000168       ?StringCchCopyNW@@YAJPEA_W_KPEB_W1@Z 0000000180001168 f i CEStr.obj
+ 0001:000001e0       ??0CEStr@@QEAA@XZ          00000001800011e0 f   CEStr.obj
+ 0001:000001fc       ??1CEStr@@QEAA@XZ          00000001800011fc f   CEStr.obj
+ 0001:00000248       ?Attach@CEStr@@QEAAPEB_WPEA_W@Z 0000000180001248 f   CEStr.obj
+ 0001:00000260       ?Set@CEStr@@QEAAPEB_WPEB_W_J@Z 0000000180001260 f   CEStr.obj
+ 0001:00000344       ?SavePathVar@CEStr@@QEAAXPEB_W@Z 0000000180001344 f   CEStr.obj
+ 0001:0000037c       ?PointToName@@YAPEB_WPEB_W@Z 000000018000137c f   CmdLine.obj
+ 0001:000003d8       ?PointToExt@@YAPEB_WPEB_W@Z 00000001800013d8 f   CmdLine.obj
+ 0001:000003f8       ?Unquote@@YAPEB_WPEA_W_N@Z 00000001800013f8 f   CmdLine.obj
+ 0001:00000464       ?CommonShutdown@@YAXXZ     0000000180001464 f   Common.obj
  0001:00000474       ?ExecutePrepareCmd@@YAXPEAUCESERVER_REQ_HDR@@K_K@Z 0000000180001474 f   ConEmuCheck.obj
  0001:000004e4       ?ExecuteFreeResult@@YAXAEAPEAUCESERVER_REQ@@@Z 00000001800014e4 f   ConEmuCheck.obj
  0001:00000504       ?StringCchCopyW@@YAJPEA_W_KPEB_W@Z 0000000180001504 f i ConEmuCheck.obj
@@ -110,8 +110,8 @@
  0001:00002afc       ?OnPostPeekConsole@@YAHPEAXPEAU_INPUT_RECORD@@KPEAKPEAH@Z 0000000180003afc f   ConEmuTh.obj
  0001:00002b3c       ?OnPostReadConsole@@YAHPEAXPEAU_INPUT_RECORD@@KPEAKPEAH@Z 0000000180003b3c f   ConEmuTh.obj
  0001:00002b80       ?ExitPlugin@@YAXXZ         0000000180003b80 f   ConEmuTh.obj
- 0001:00002cec       ExitFARW                   0000000180003cec f   ConEmuTh.obj
  0001:00002cec       ?ExitFARW3@@YAXPEAX@Z      0000000180003cec f   ConEmuTh.obj
+ 0001:00002cec       ExitFARW                   0000000180003cec f   ConEmuTh.obj
  0001:00002d28       ?OnReadyForPanelsReload@@YAXXZ 0000000180003d28 f   ConEmuTh.obj
  0001:00002e98       ?ProcessSynchroEventCommon@@YAHHPEAX@Z 0000000180003e98 f   ConEmuTh.obj
  0001:00003004       ProcessSynchroEventW       0000000180004004 f   ConEmuTh.obj
@@ -242,266 +242,266 @@
  0001:0000c680       ??0?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@QEAA@XZ 000000018000d680 f i ImgCache.obj
  0001:0000c6f4       ?IsStopRequested@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@UEAA_NAEBQEAUIMAGE_CACHE_INFO@@@Z 000000018000d6f4 f i ImgCache.obj
  0001:0000c704       ?ProcessItem@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAJAEAPEAUIMAGE_CACHE_INFO@@_J@Z 000000018000d704 f i ImgCache.obj
- 0001:0000c70c       ?IsTerminationRequested@CImgLoader@@UEAA_NXZ 000000018000d70c f i ImgCache.obj
- 0001:0000c70c       ?IsTerminationRequested@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAA_NXZ 000000018000d70c f i ImgCache.obj
- 0001:0000c710       __set_flsgetvalue          000000018000d710 f i LIBCMT:tidtable.obj
- 0001:0000c710       ?OnThreadStarted@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAJXZ 000000018000d710 f i ImgCache.obj
- 0001:0000c714       ?CopyItem@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXPEBQEAUIMAGE_CACHE_INFO@@PEAPEAU2@@Z 000000018000d714 f i ImgCache.obj
- 0001:0000c734       ?SettingsLoadOtherW2800@@YAXXZ 000000018000d734 f i ConEmuTh2800.obj
- 0001:0000c734       ?FreeItem@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEBQEAUIMAGE_CACHE_INFO@@@Z 000000018000d734 f i ImgCache.obj
- 0001:0000c734       ?SettingsLoadOtherW1900@@YAXXZ 000000018000d734 f i ConEmuTh1900.obj
- 0001:0000c734       ?LoadPanelItemInfoA@@YAXPEAUCeFullPanelInfo@@_J@Z 000000018000d734 f i ConEmuThA.obj
- 0001:0000c734       ?OnItemReady@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEAPEAUIMAGE_CACHE_INFO@@_J@Z 000000018000d734 f i ImgCache.obj
- 0001:0000c734       ?OnItemFailed@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEAPEAUIMAGE_CACHE_INFO@@_J@Z 000000018000d734 f i ImgCache.obj
- 0001:0000c734       ?ApplyChanges@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEAPEAUIMAGE_CACHE_INFO@@AEBQEAU2@@Z 000000018000d734 f i ImgCache.obj
- 0001:0000c734       ?OnThreadStopped@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXXZ 000000018000d734 f i ImgCache.obj
- 0001:0000c734       _initp_misc_winxfltr       000000018000d734 f i LIBCMT:winxfltr.obj
- 0001:0000c738       ?IsEqual@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAA_NAEBQEAUIMAGE_CACHE_INFO@@_J01@Z 000000018000d738 f i ImgCache.obj
- 0001:0000c758       ?ClearQueue@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@AEAAXXZ 000000018000d758 f i ImgCache.obj
- 0001:0000c7e0       ?InitializeQueue@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@AEAAXH@Z 000000018000d7e0 f i ImgCache.obj
- 0001:0000c884       ?ProcessItem@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@IEAAJPEAUProcessingItem@1@@Z 000000018000d884 f i ImgCache.obj
- 0001:0000c8b0       ??0CImgCache@@QEAA@PEAUHINSTANCE__@@@Z 000000018000d8b0 f   ImgCache.obj
- 0001:0000c9ec       ?PaintItem@CImgCache@@QEAAHPEAUHDC__@@HHHPEAUCePluginPanelItem@@PEAPEB_WPEAH@Z 000000018000d9ec f   ImgCache.obj
- 0001:0000cf50       ?FindOrCreate@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@AEAAPEAUProcessingItem@1@AEBQEAUIMAGE_CACHE_INFO@@_J_NW4ProcessingPriority@@@Z 000000018000df50 f i ImgCache.obj
- 0001:0000d1a0       ?ProcessingStep@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@IEAA_NXZ 000000018000e1a0 f i ImgCache.obj
- 0001:0000d3ac       ??$SafeDelete@UMSectionSimple@@@@YAXAEAPEAUMSectionSimple@@@Z 000000018000e3ac f i ImgCache.obj
- 0001:0000d3dc       ?Reset@CImgCache@@QEAAXXZ  000000018000e3dc f   ImgCache.obj
- 0001:0000d5b0       ?Init@CImgCache@@QEAAXK@Z  000000018000e5b0 f   ImgCache.obj
- 0001:0000d610       ??1?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@UEAA@XZ 000000018000e610 f i ImgCache.obj
- 0001:0000d6c4       ??_ECImgLoader@@UEAAPEAXI@Z 000000018000e6c4 f i ImgCache.obj
- 0001:0000d6c4       ??_E?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@UEAAPEAXI@Z 000000018000e6c4 f i ImgCache.obj
- 0001:0000d6c4       ??_G?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@UEAAPEAXI@Z 000000018000e6c4 f i ImgCache.obj
- 0001:0000d6c4       ??_GCImgLoader@@UEAAPEAXI@Z 000000018000e6c4 f i ImgCache.obj
- 0001:0000d6f4       ?ProcessingThread@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@KAKPEAX@Z 000000018000e6f4 f i ImgCache.obj
- 0001:0000d724       ??1CImgCache@@QEAA@XZ      000000018000e724 f   ImgCache.obj
- 0001:0000d7dc       ?OnThreadStarted@CImgLoader@@UEAAJXZ 000000018000e7dc f i ImgCache.obj
- 0001:0000d7f0       ?OnThreadStopped@CImgLoader@@UEAAXXZ 000000018000e7f0 f i ImgCache.obj
- 0001:0000d7f8       ?IsEqual@CImgLoader@@UEAA_NAEAPEBUIMAGE_CACHE_INFO@@_JAEAPEAU2@1@Z 000000018000e7f8 f i ImgCache.obj
- 0001:0000d810       ?CheckHighPriority@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAA_NAEBQEAUIMAGE_CACHE_INFO@@@Z 000000018000e810 f i ImgCache.obj
- 0001:0000d810       ?CheckHighPriority@CImgLoader@@UEAA_NAEAPEBUIMAGE_CACHE_INFO@@@Z 000000018000e810 f i ImgCache.obj
- 0001:0000d814       ?ProcessItem@CImgLoader@@UEAAJAEAPEAUIMAGE_CACHE_INFO@@_J@Z 000000018000e814 f i ImgCache.obj
- 0001:0000d86c       ?CheckThread@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@IEAAJXZ 000000018000e86c f i ImgCache.obj
- 0001:0000d92c       ?RequestItem@CImgCache@@QEAAHPEAUCePluginPanelItem@@I@Z 000000018000e92c f   ImgCache.obj
- 0001:0000da28       ?HeapInitialize@@YA_NXZ    000000018000ea28 f   Memory.obj
- 0001:0000da60       ?HeapDeinitialize@@YAXXZ   000000018000ea60 f   Memory.obj
- 0001:0000da84       ?xf_malloc@@YAPEAX_K@Z     000000018000ea84 f   Memory.obj
- 0001:0000da84       ??2@YAPEAX_K@Z             000000018000ea84 f   Memory.obj
- 0001:0000da84       ??_U@YAPEAX_K@Z            000000018000ea84 f   Memory.obj
- 0001:0000da98       ?xf_calloc@@YAPEAX_K0@Z    000000018000ea98 f   Memory.obj
- 0001:0000dab4       ?xf_realloc@@YAPEAXPEAX_K@Z 000000018000eab4 f   Memory.obj
- 0001:0000daf0       ?xf_free@@YAXPEAX@Z        000000018000eaf0 f   Memory.obj
- 0001:0000db18       ??_V@YAXPEAX@Z             000000018000eb18 f   Memory.obj
- 0001:0000db18       ??3@YAXPEAX@Z              000000018000eb18 f   Memory.obj
- 0001:0000db20       ??0MSection@@QEAA@XZ       000000018000eb20 f   MSection.obj
- 0001:0000dbb8       ??1MSection@@QEAA@XZ       000000018000ebb8 f   MSection.obj
- 0001:0000dc30       ?AddRef@MSection@@IEAAXK@Z 000000018000ec30 f   MSection.obj
- 0001:0000dcd0       ?ReleaseRef@MSection@@IEAAHK@Z 000000018000ecd0 f   MSection.obj
- 0001:0000dd74       ?WaitUnlocked@MSection@@IEAAXKK@Z 000000018000ed74 f   MSection.obj
- 0001:0000de08       ?MyEnterCriticalSection@MSection@@IEAA_NK@Z 000000018000ee08 f   MSection.obj
- 0001:0000df3c       ?Lock@MSection@@IEAAHHK@Z  000000018000ef3c f   MSection.obj
- 0001:0000e040       ?Unlock@MSection@@IEAAXH@Z 000000018000f040 f   MSection.obj
- 0001:0000e098       ??0MSectionLock@@QEAA@XZ   000000018000f098 f   MSection.obj
- 0001:0000e0a8       ?Lock@MSectionLock@@QEAAHPEAVMSection@@HK@Z 000000018000f0a8 f   MSection.obj
- 0001:0000e0fc       ?Unlock@MSectionLock@@QEAAXXZ 000000018000f0fc f   MSection.obj
- 0001:0000e128       ??1MSectionLock@@QEAA@XZ   000000018000f128 f   MSection.obj
- 0001:0000e14c       ?Init@MSectionSimple@@QEAAXXZ 000000018000f14c f   MSectionSimple.obj
- 0001:0000e16c       ?Enter@MSectionSimple@@QEAAXXZ 000000018000f16c f   MSectionSimple.obj
- 0001:0000e174       ?Leave@MSectionSimple@@QEAAXXZ 000000018000f174 f   MSectionSimple.obj
- 0001:0000e17c       ?TryEnter@MSectionSimple@@QEAA_NXZ 000000018000f17c f   MSectionSimple.obj
- 0001:0000e1a4       ?RecreateAndLock@MSectionSimple@@QEAA_NXZ 000000018000f1a4 f   MSectionSimple.obj
- 0001:0000e214       ??0MSectionLockSimple@@QEAA@XZ 000000018000f214 f   MSectionSimple.obj
- 0001:0000e220       ?Unlock@MSectionLockSimple@@QEAAXXZ 000000018000f220 f   MSectionSimple.obj
- 0001:0000e248       ??0MSectionSimple@@QEAA@_N@Z 000000018000f248 f   MSectionSimple.obj
- 0001:0000e280       ?Close@MSectionSimple@@QEAAXXZ 000000018000f280 f   MSectionSimple.obj
- 0001:0000e280       ??1MSectionSimple@@QEAA@XZ 000000018000f280 f   MSectionSimple.obj
- 0001:0000e2a0       ??1MSectionLockSimple@@QEAA@XZ 000000018000f2a0 f   MSectionSimple.obj
- 0001:0000e2b4       ?Lock@MSectionLockSimple@@QEAAHPEAUMSectionSimple@@K@Z 000000018000f2b4 f   MSectionSimple.obj
- 0001:0000e34c       ??_GMNullDesc@@QEAAPEAXI@Z 000000018000f34c f i MSecurity.obj
- 0001:0000e3c0       ?LoadAdvApi@MNullDesc@@IEAAHXZ 000000018000f3c0 f i MSecurity.obj
- 0001:0000e558       ?LocalSecurity@MNullDesc@@QEAAPEAU_SECURITY_ATTRIBUTES@@XZ 000000018000f558 f i MSecurity.obj
- 0001:0000e70c       ?LocalSecurity@@YAPEAU_SECURITY_ATTRIBUTES@@XZ 000000018000f70c f   MSecurity.obj
- 0001:0000e76c       ?ShutdownSecurity@@YAXXZ   000000018000f76c f   MSecurity.obj
- 0001:0000e794       ?lstrdup@@YAPEA_WPEB_W_K@Z 000000018000f794 f   MStrDup.obj
- 0001:0000e804       ?lstrmerge@@YAPEA_WPEB_W00000000@Z 000000018000f804 f   MStrDup.obj
- 0001:0000e92c       ?msprintf@@YAPEB_WPEA_W_KPEB_WZZ 000000018000f92c f   MStrSafe.obj
- 0001:0000ed18       ??0CRgnDetect@@QEAA@XZ     000000018000fd18 f   RgnDetect.obj
- 0001:0000edf0       ??1CRgnDetect@@QEAA@XZ     000000018000fdf0 f   RgnDetect.obj
- 0001:0000ee4c       ?GetDetectedDialogsPtr@CRgnDetect@@QEBAPEBUtag_DetectedDialog@@XZ 000000018000fe4c f   RgnDetect.obj
- 0001:0000ee54       ?GetFlags@CRgnDetect@@QEBAKXZ 000000018000fe54 f   RgnDetect.obj
- 0001:0000ee5c       ?FindFrameRight_ByBottom@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH22@Z 000000018000fe5c f   RgnDetect.obj
- 0001:0000ef34       ?FindFrameLeft_ByBottom@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH22@Z 000000018000ff34 f   RgnDetect.obj
- 0001:0000f000       ?FindFrameTop_ByLeft@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH22@Z 0000000180010000 f   RgnDetect.obj
- 0001:0000f0b0       ?FindFrameTop_ByRight@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH22@Z 00000001800100b0 f   RgnDetect.obj
- 0001:0000f198       ?FindFrameBottom_ByRight@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH22@Z 0000000180010198 f   RgnDetect.obj
- 0001:0000f274       ?FindFrameBottom_ByLeft@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH22@Z 0000000180010274 f   RgnDetect.obj
- 0001:0000f328       ?FindDialog_Inner@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH2@Z 0000000180010328 f   RgnDetect.obj
- 0001:0000f494       ?FindFrame_TopLeft@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH222@Z 0000000180010494 f   RgnDetect.obj
- 0001:0000f594       ?ExpandDialogFrame@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH2HH22@Z 0000000180010594 f   RgnDetect.obj
- 0001:0000f86c       ?FindByBackground@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH222AEA_N@Z 000000018001086c f   RgnDetect.obj
- 0001:0000f988       ?MarkDialog@CRgnDetect@@IEAAHPEA_WPEAUtag_CharAttr@@HHHHHHI_NK@Z 0000000180010988 f   RgnDetect.obj
- 0001:000103a8       ?OnWindowSizeChanged@CRgnDetect@@QEAAXXZ 00000001800113a8 f   RgnDetect.obj
- 0001:000103b0       ?OnWriteConsoleOutput@CRgnDetect@@QEAAXPEBU_CHAR_INFO@@U_COORD@@1PEAU_SMALL_RECT@@PEBK@Z 00000001800113b0 f   RgnDetect.obj
- 0001:0001065c       ?SetFarRect@CRgnDetect@@QEAAXPEAU_SMALL_RECT@@@Z 000000018001165c f   RgnDetect.obj
- 0001:000106e0       ?TextWidth@CRgnDetect@@QEAAHXZ 00000001800116e0 f   RgnDetect.obj
- 0001:0001070c       ?TextHeight@CRgnDetect@@QEAAHXZ 000000018001170c f   RgnDetect.obj
- 0001:00010738       ?GetCharAttr@CRgnDetect@@QEAAHHHAEA_WAEAUtag_CharAttr@@@Z 0000000180011738 f   RgnDetect.obj
- 0001:000107c8       ?FindFrameRight_ByTop@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH22@Z 00000001800117c8 f   RgnDetect.obj
- 0001:00010904       ?FindFrameLeft_ByTop@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH22@Z 0000000180011904 f   RgnDetect.obj
- 0001:00010a6c       ?FindDialog_TopLeft@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH222AEA_N@Z 0000000180011a6c f   RgnDetect.obj
- 0001:00010b7c       ?FindDialog_TopRight@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH222AEA_N@Z 0000000180011b7c f   RgnDetect.obj
- 0001:00010c94       ?FindDialog_Left@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH222AEA_N@Z 0000000180011c94 f   RgnDetect.obj
- 0001:00010ea4       ?FindDialog_Right@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH222AEA_N@Z 0000000180011ea4 f   RgnDetect.obj
- 0001:0001100c       ?FindDialog_Any@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH222AEA_N@Z 000000018001200c f   RgnDetect.obj
- 0001:000112a0       ?DetectDialog@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHHHPEAH2@Z 00000001800122a0 f   RgnDetect.obj
- 0001:00011710       ?InitializeSBI@CRgnDetect@@QEAAHPEBK@Z 0000000180012710 f   RgnDetect.obj
- 0001:00011b80       ?PrepareTransparent@CRgnDetect@@QEAAXPEBUCEFAR_INFO_MAPPING@@PEBKPEBU_CONSOLE_SCREEN_BUFFER_INFO@@PEA_WPEAUtag_CharAttr@@HH@Z 0000000180012b80 f   RgnDetect.obj
- 0001:00012408       ?PrepareTransparent@CRgnDetect@@QEAAXPEBUCEFAR_INFO_MAPPING@@PEBK@Z 0000000180013408 f   RgnDetect.obj
- 0001:000124dc       ?SearchAppPaths@@YA_NPEB_WAEAUCEStr@@_NPEAU1@@Z 00000001800134dc f   WFiles.obj
- 0001:00012904       ?FileExists@@YA_NPEB_WPEAK@Z 0000000180013904 f   WObjects.obj
- 0001:00012a88       ?IsWindows64@@YA_NXZ       0000000180013a88 f   WObjects.obj
- 0001:00012aac       ?isTerminalMode@@YA_NXZ    0000000180013aac f   WObjects.obj
- 0001:00012ce4       ?ExpandEnvStr@@YAPEA_WPEB_W@Z 0000000180013ce4 f   WObjects.obj
- 0001:00012d8c       ?GetEnvVar@@YAPEA_WPEB_W@Z 0000000180013d8c f   WObjects.obj
- 0001:00012e30       ?apiTerminateThreadEx@@YAHPEAXKPEBDH@Z 0000000180013e30 f   WThreads.obj
- 0001:00012f38       ?SetThreadName@@YAXKPEAD@Z 0000000180013f38 f   WThreads.obj
- 0001:00012f70       ?apiThreadHelper@@YAKPEAX@Z 0000000180013f70 f   WThreads.obj
- 0001:00013160       ?apiCreateThread@@YAPEAXP6AKPEAX@Z0PEAKPEBDH@Z 0000000180014160 f   WThreads.obj
- 0001:000132ac       ?apiShowWindow@@YA_NPEAUHWND__@@H@Z 00000001800142ac f   WUser.obj
- 0001:000132c0       Thread32Next               00000001800142c0 f   kernel32:KERNEL32.dll
- 0001:000132c6       Thread32First              00000001800142c6 f   kernel32:KERNEL32.dll
- 0001:000132cc       CreateToolhelp32Snapshot   00000001800142cc f   kernel32:KERNEL32.dll
- 0001:000132d2       Process32NextW             00000001800142d2 f   kernel32:KERNEL32.dll
- 0001:000132d8       Process32FirstW            00000001800142d8 f   kernel32:KERNEL32.dll
- 0001:000132de       VerQueryValueW             00000001800142de f   version:VERSION.dll
- 0001:000132e4       GetFileVersionInfoW        00000001800142e4 f   version:VERSION.dll
- 0001:000132ea       GetFileVersionInfoSizeW    00000001800142ea f   version:VERSION.dll
- 0001:000132f0       wcschr                     00000001800142f0 f   LIBCMT:wcschr.obj
- 0001:00013310       wcsrchr                    0000000180014310 f   LIBCMT:wcsrchr.obj
- 0001:0001333c       wcspbrk                    000000018001433c f   LIBCMT:wcspbrk.obj
- 0001:00013374       strrchr                    0000000180014374 f   LIBCMT:strrchr.obj
- 0001:000133b0       memset                     00000001800143b0 f   LIBCMT:memset.obj
- 0001:000134b0       memmove                    00000001800144b0     LIBCMT:memcpy.obj
- 0001:000134b0       memcpy                     00000001800144b0 f   LIBCMT:memcpy.obj
- 0001:00013800       memcmp                     0000000180014800 f   LIBCMT:memcmp.obj
- 0001:000138c8       __C_specific_handler       00000001800148c8 f   LIBCMT:chandler.obj
- 0001:00013a6c       ??0_LocaleUpdate@@QEAA@PEAUlocaleinfo_struct@@@Z 0000000180014a6c f i LIBCMT:wcstol.obj
- 0001:00013b18       strchr                     0000000180014b18 f   LIBCMT:strchr.obj
- 0001:00013b34       _CRT_INIT                  0000000180014b34 f   LIBCMT:dllcrt0.obj
- 0001:00013d88       _DllMainCRTStartup         0000000180014d88 f   LIBCMT:dllcrt0.obj
- 0001:00013de0       _local_unwind              0000000180014de0 f   LIBCMT:jmpuwind.obj
- 0001:00013e10       _NLG_Notify                0000000180014e10 f   LIBCMT:jmpuwind.obj
- 0001:00013e30       __NLG_Dispatch2            0000000180014e30 f   LIBCMT:jmpuwind.obj
- 0001:00013e40       __NLG_Return2              0000000180014e40 f   LIBCMT:jmpuwind.obj
- 0001:00013e50       _ValidateImageBase         0000000180014e50 f   LIBCMT:pesect.obj
- 0001:00013e80       _FindPESection             0000000180014e80 f   LIBCMT:pesect.obj
- 0001:00013ed0       _IsNonwritableInCurrentImage 0000000180014ed0 f   LIBCMT:pesect.obj
- 0001:0001418c       __updatetmbcinfo           000000018001518c f   LIBCMT:mbctype.obj
- 0001:000142d8       _setmbcp_nolock            00000001800152d8 f   LIBCMT:mbctype.obj
- 0001:00014550       _setmbcp                   0000000180015550 f   LIBCMT:mbctype.obj
- 0001:00014748       __initmbctable             0000000180015748 f   LIBCMT:mbctype.obj
- 0001:00014770       __freetlocinfo             0000000180015770 f   LIBCMT:setlocal.obj
- 0001:000148ec       __addlocaleref             00000001800158ec f   LIBCMT:setlocal.obj
- 0001:00014984       __removelocaleref          0000000180015984 f   LIBCMT:setlocal.obj
- 0001:00014a84       __updatetlocinfo           0000000180015a84 f   LIBCMT:setlocal.obj
- 0001:00014afc       _encode_pointer            0000000180015afc f   LIBCMT:tidtable.obj
- 0001:00014b04       _encoded_null              0000000180015b04 f   LIBCMT:tidtable.obj
- 0001:00014b10       _decode_pointer            0000000180015b10 f   LIBCMT:tidtable.obj
- 0001:00014b18       _mtterm                    0000000180015b18 f   LIBCMT:tidtable.obj
- 0001:00014b40       _initptd                   0000000180015b40 f   LIBCMT:tidtable.obj
- 0001:00014bf4       _getptd_noexit             0000000180015bf4 f   LIBCMT:tidtable.obj
- 0001:00014c78       _getptd                    0000000180015c78 f   LIBCMT:tidtable.obj
- 0001:00014c9c       _freefls                   0000000180015c9c f   LIBCMT:tidtable.obj
- 0001:00014dd4       _freeptd                   0000000180015dd4 f   LIBCMT:tidtable.obj
- 0001:00014e14       _mtinit                    0000000180015e14 f   LIBCMT:tidtable.obj
- 0001:00014e98       _initp_misc_invarg         0000000180015e98 f   LIBCMT:invarg.obj
- 0001:00014ea0       _invoke_watson             0000000180015ea0 f   LIBCMT:invarg.obj
- 0001:00014fc8       _invalid_parameter         0000000180015fc8 f   LIBCMT:invarg.obj
- 0001:00015050       _get_errno_from_oserr      0000000180016050 f   LIBCMT:dosmap.obj
- 0001:00015098       _errno                     0000000180016098 f   LIBCMT:dosmap.obj
- 0001:000150b8       free                       00000001800160b8 f   LIBCMT:free.obj
- 0001:000150f8       _malloc_crt                00000001800160f8 f   LIBCMT:crtheap.obj
- 0001:00015164       _calloc_crt                0000000180016164 f   LIBCMT:crtheap.obj
- 0001:000151e8       _realloc_crt               00000001800161e8 f   LIBCMT:crtheap.obj
- 0001:00015270       _amsg_exit                 0000000180016270 f   LIBCMT:crt0dat.obj
- 0001:000152a0       __crtCorExitProcess        00000001800162a0 f   LIBCMT:crt0dat.obj
- 0001:000152dc       __crtExitProcess           00000001800162dc f   LIBCMT:crt0dat.obj
- 0001:000152f4       _lockexit                  00000001800162f4 f   LIBCMT:crt0dat.obj
- 0001:00015300       _unlockexit                0000000180016300 f   LIBCMT:crt0dat.obj
- 0001:00015340       _initterm_e                0000000180016340 f   LIBCMT:crt0dat.obj
- 0001:0001537c       _cinit                     000000018001637c f   LIBCMT:crt0dat.obj
- 0001:000155b8       _exit                      00000001800165b8 f   LIBCMT:crt0dat.obj
- 0001:000155c4       _cexit                     00000001800165c4 f   LIBCMT:crt0dat.obj
- 0001:000155d4       _init_pointers             00000001800165d4 f   LIBCMT:crt0dat.obj
- 0001:0001563c       _ioinit                    000000018001663c f   LIBCMT:ioinit.obj
- 0001:0001592c       _ioterm                    000000018001692c f   LIBCMT:ioinit.obj
- 0001:00015998       _setenvp                   0000000180016998 f   LIBCMT:stdenvp.obj
- 0001:00015c98       _setargv                   0000000180016c98 f   LIBCMT:stdargv.obj
- 0001:00015d90       __crtGetEnvironmentStringsA 0000000180016d90 f   LIBCMT:a_env.obj
- 0001:00015f44       _RTC_Initialize            0000000180016f44 f   LIBCMT:_initsect_.obj
- 0001:00015f7c       _RTC_Terminate             0000000180016f7c f   LIBCMT:_initsect_.obj
- 0001:00015fb4       _heap_init                 0000000180016fb4 f   LIBCMT:heapinit.obj
- 0001:00016000       _heap_term                 0000000180017000 f   LIBCMT:heapinit.obj
- 0001:00016020       _XcptFilter                0000000180017020 f   LIBCMT:winxfltr.obj
- 0001:000161f0       __CppXcptFilter            00000001800171f0 f   LIBCMT:winxfltr.obj
- 0001:00016210       __security_init_cookie     0000000180017210 f   LIBCMT:gs_support.obj
- 0001:000162c4       __GSHandlerCheckCommon     00000001800172c4 f   LIBCMT:gshandler.obj
- 0001:00016328       __GSHandlerCheck           0000000180017328 f   LIBCMT:gshandler.obj
- 0001:00016888       __crtLCMapStringA          0000000180017888 f   LIBCMT:a_map.obj
- 0001:00016b8c       __crtGetStringTypeA        0000000180017b8c f   LIBCMT:a_str.obj
- 0001:00016c30       __security_check_cookie    0000000180017c30 f   LIBCMT:amdsecgs.obj
- 0001:00016c50       _mtinitlocks               0000000180017c50 f   LIBCMT:mlock.obj
- 0001:00016cdc       _mtdeletelocks             0000000180017cdc f   LIBCMT:mlock.obj
- 0001:00016d60       _unlock                    0000000180017d60 f   LIBCMT:mlock.obj
- 0001:00016d78       _mtinitlocknum             0000000180017d78 f   LIBCMT:mlock.obj
- 0001:00016e60       _lock                      0000000180017e60 f   LIBCMT:mlock.obj
- 0001:00016ea4       __free_lc_time             0000000180017ea4 f   LIBCMT:inittime.obj
- 0001:00017090       __free_lconv_num           0000000180018090 f   LIBCMT:initnum.obj
- 0001:000170d8       __free_lconv_mon           00000001800180d8 f   LIBCMT:initmon.obj
- 0001:00017170       strcat_s                   0000000180018170 f   LIBCMT:strcat_s.obj
- 0001:000171fc       strncpy_s                  00000001800181fc f   LIBCMT:strncpy_s.obj
- 0001:000172d4       strcpy_s                   00000001800182d4 f   LIBCMT:strcpy_s.obj
- 0001:00017360       strcmp                     0000000180018360 f   LIBCMT:strcmp.obj
- 0001:00017420       strlen                     0000000180018420 f   LIBCMT:strlen.obj
- 0001:000174e0       strncmp                    00000001800184e0 f   LIBCMT:strncmp.obj
- 0001:00017598       __crt_debugger_hook        0000000180018598 f   LIBCMT:dbghook.obj
- 0001:000175a0       malloc                     00000001800185a0 f   LIBCMT:malloc.obj
- 0001:00017658       _calloc_impl               0000000180018658 f   LIBCMT:calloc_impl.obj
- 0001:00017708       realloc                    0000000180018708 f   LIBCMT:realloc.obj
- 0001:000177dc       _NMSG_WRITE                00000001800187dc f   LIBCMT:crt0msg.obj
- 0001:00017a04       _FF_MSGBANNER              0000000180018a04 f   LIBCMT:crt0msg.obj
- 0001:00017a48       __onexitinit               0000000180018a48 f   LIBCMT:onexit.obj
- 0001:00017a8c       _onexit                    0000000180018a8c f   LIBCMT:onexit.obj
- 0001:00017b94       atexit                     0000000180018b94 f   LIBCMT:onexit.obj
- 0001:00017bac       _initp_misc_cfltcvt_tab    0000000180018bac f   LIBCMT:cmiscdat.obj
- 0001:00017be4       ?terminate@@YAXXZ          0000000180018be4 f   LIBCMT:hooks.obj
- 0001:00017c08       _initp_eh_hooks            0000000180018c08 f   LIBCMT:hooks.obj
- 0001:00017c24       _initp_misc_winsig         0000000180018c24 f   LIBCMT:winsig.obj
- 0001:00017c44       __get_sigabrt              0000000180018c44 f   LIBCMT:winsig.obj
- 0001:00017c50       raise                      0000000180018c50 f   LIBCMT:winsig.obj
- 0001:00017ec4       _initp_misc_rand_s         0000000180018ec4 f   LIBCMT:rand_s.obj
- 0001:00017ecc       _initp_misc_purevirt       0000000180018ecc f   LIBCMT:inithelp.obj
- 0001:00017ed4       _initp_misc_initcrit       0000000180018ed4 f   LIBCMT:initcrit.obj
- 0001:00017edc       __crtInitCritSecAndSpinCount 0000000180018edc f   LIBCMT:initcrit.obj
- 0001:00017f14       _initp_heap_handler        0000000180018f14 f   LIBCMT:handler.obj
- 0001:00017f1c       _callnewh                  0000000180018f1c f   LIBCMT:handler.obj
- 0001:00017fcc       _ismbblead                 0000000180018fcc f   LIBCMT:ismbbyte.obj
- 0001:00017fe0       __ansicp                   0000000180018fe0 f   LIBCMT:convrtcp.obj
- 0001:00018034       __convertcp                0000000180019034 f   LIBCMT:convrtcp.obj
- 0001:000182c0       __report_gsfailure         00000001800192c0 f   LIBCMT:gs_report.obj
- 0001:0001840c       _isleadbyte_l              000000018001940c f i LIBCMT:_wctype.obj
- 0001:00018454       atol                       0000000180019454 f   LIBCMT:atox.obj
- 0001:00018460       _msize                     0000000180019460 f   LIBCMT:msize.obj
- 0001:000184a8       __crtMessageBoxA           00000001800194a8 f   LIBCMT:crtmbox.obj
- 0001:0001869c       _set_error_mode            000000018001969c f   LIBCMT:errmode.obj
- 0001:000186ec       _fptrap                    00000001800196ec f   LIBCMT:crt0fp.obj
- 0001:000186f8       abort                      00000001800196f8 f   LIBCMT:abort.obj
- 0001:00018a20       strtol                     0000000180019a20 f   LIBCMT:strtol.obj
- 0001:00018a50       _isctype_l                 0000000180019a50 f   LIBCMT:isctype.obj
- 0001:00018b5a       RtlUnwindEx                0000000180019b5a f   kernel32:KERNEL32.dll
- 0001:00018b60       RtlVirtualUnwind           0000000180019b60 f   kernel32:KERNEL32.dll
- 0001:00018b66       RtlLookupFunctionEntry     0000000180019b66 f   kernel32:KERNEL32.dll
- 0001:00018b80       _alloca_probe              0000000180019b80     LIBCMT:chkstk.obj
- 0001:00018b80       __chkstk                   0000000180019b80 f   LIBCMT:chkstk.obj
+ 0001:0000c70c       ?OnThreadStarted@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAJXZ 000000018000d70c f i ImgCache.obj
+ 0001:0000c70c       __set_flsgetvalue          000000018000d70c f i LIBCMT:tidtable.obj
+ 0001:0000c710       ?CopyItem@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXPEBQEAUIMAGE_CACHE_INFO@@PEAPEAU2@@Z 000000018000d710 f i ImgCache.obj
+ 0001:0000c730       ?IsEqual@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAA_NAEBQEAUIMAGE_CACHE_INFO@@_J01@Z 000000018000d730 f i ImgCache.obj
+ 0001:0000c750       ?CheckHighPriority@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAA_NAEBQEAUIMAGE_CACHE_INFO@@@Z 000000018000d750 f i ImgCache.obj
+ 0001:0000c750       ?CheckHighPriority@CImgLoader@@UEAA_NAEAPEBUIMAGE_CACHE_INFO@@@Z 000000018000d750 f i ImgCache.obj
+ 0001:0000c754       ?ClearQueue@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@AEAAXXZ 000000018000d754 f i ImgCache.obj
+ 0001:0000c7dc       ?InitializeQueue@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@AEAAXH@Z 000000018000d7dc f i ImgCache.obj
+ 0001:0000c880       ?ProcessItem@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@IEAAJPEAUProcessingItem@1@@Z 000000018000d880 f i ImgCache.obj
+ 0001:0000c8ac       ??0CImgCache@@QEAA@PEAUHINSTANCE__@@@Z 000000018000d8ac f   ImgCache.obj
+ 0001:0000c9e8       ?PaintItem@CImgCache@@QEAAHPEAUHDC__@@HHHPEAUCePluginPanelItem@@PEAPEB_WPEAH@Z 000000018000d9e8 f   ImgCache.obj
+ 0001:0000cf4c       ?FindOrCreate@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@AEAAPEAUProcessingItem@1@AEBQEAUIMAGE_CACHE_INFO@@_J_NW4ProcessingPriority@@@Z 000000018000df4c f i ImgCache.obj
+ 0001:0000d19c       ?ProcessingStep@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@IEAA_NXZ 000000018000e19c f i ImgCache.obj
+ 0001:0000d3a8       ??$SafeDelete@UMSectionSimple@@@@YAXAEAPEAUMSectionSimple@@@Z 000000018000e3a8 f i ImgCache.obj
+ 0001:0000d3d8       ?Reset@CImgCache@@QEAAXXZ  000000018000e3d8 f   ImgCache.obj
+ 0001:0000d5ac       ?Init@CImgCache@@QEAAXK@Z  000000018000e5ac f   ImgCache.obj
+ 0001:0000d60c       ??1?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@UEAA@XZ 000000018000e60c f i ImgCache.obj
+ 0001:0000d6c0       ??_ECImgLoader@@UEAAPEAXI@Z 000000018000e6c0 f i ImgCache.obj
+ 0001:0000d6c0       ??_G?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@UEAAPEAXI@Z 000000018000e6c0 f i ImgCache.obj
+ 0001:0000d6c0       ??_E?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@UEAAPEAXI@Z 000000018000e6c0 f i ImgCache.obj
+ 0001:0000d6c0       ??_GCImgLoader@@UEAAPEAXI@Z 000000018000e6c0 f i ImgCache.obj
+ 0001:0000d6f0       ?ProcessingThread@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@KAKPEAX@Z 000000018000e6f0 f i ImgCache.obj
+ 0001:0000d720       ??1CImgCache@@QEAA@XZ      000000018000e720 f   ImgCache.obj
+ 0001:0000d7d8       ?OnThreadStarted@CImgLoader@@UEAAJXZ 000000018000e7d8 f i ImgCache.obj
+ 0001:0000d7ec       ?OnThreadStopped@CImgLoader@@UEAAXXZ 000000018000e7ec f i ImgCache.obj
+ 0001:0000d7f4       ?IsEqual@CImgLoader@@UEAA_NAEAPEBUIMAGE_CACHE_INFO@@_JAEAPEAU2@1@Z 000000018000e7f4 f i ImgCache.obj
+ 0001:0000d80c       ?ProcessItem@CImgLoader@@UEAAJAEAPEAUIMAGE_CACHE_INFO@@_J@Z 000000018000e80c f i ImgCache.obj
+ 0001:0000d864       ?IsTerminationRequested@CImgLoader@@UEAA_NXZ 000000018000e864 f i ImgCache.obj
+ 0001:0000d864       ?IsTerminationRequested@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAA_NXZ 000000018000e864 f i ImgCache.obj
+ 0001:0000d868       ?CheckThread@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@IEAAJXZ 000000018000e868 f i ImgCache.obj
+ 0001:0000d928       ?RequestItem@CImgCache@@QEAAHPEAUCePluginPanelItem@@I@Z 000000018000e928 f   ImgCache.obj
+ 0001:0000da24       ?HeapInitialize@@YA_NXZ    000000018000ea24 f   Memory.obj
+ 0001:0000da5c       ?HeapDeinitialize@@YAXXZ   000000018000ea5c f   Memory.obj
+ 0001:0000da80       ?xf_calloc@@YAPEAX_K0@Z    000000018000ea80 f   Memory.obj
+ 0001:0000da9c       ?xf_realloc@@YAPEAXPEAX_K@Z 000000018000ea9c f   Memory.obj
+ 0001:0000dad8       ?xf_free@@YAXPEAX@Z        000000018000ead8 f   Memory.obj
+ 0001:0000db00       ??2@YAPEAX_K@Z             000000018000eb00 f   Memory.obj
+ 0001:0000db00       ??_U@YAPEAX_K@Z            000000018000eb00 f   Memory.obj
+ 0001:0000db00       ?xf_malloc@@YAPEAX_K@Z     000000018000eb00 f   Memory.obj
+ 0001:0000db14       ??_V@YAXPEAX@Z             000000018000eb14 f   Memory.obj
+ 0001:0000db14       ??3@YAXPEAX@Z              000000018000eb14 f   Memory.obj
+ 0001:0000db1c       ??0MSection@@QEAA@XZ       000000018000eb1c f   MSection.obj
+ 0001:0000dbb4       ??1MSection@@QEAA@XZ       000000018000ebb4 f   MSection.obj
+ 0001:0000dc2c       ?AddRef@MSection@@IEAAXK@Z 000000018000ec2c f   MSection.obj
+ 0001:0000dccc       ?ReleaseRef@MSection@@IEAAHK@Z 000000018000eccc f   MSection.obj
+ 0001:0000dd70       ?WaitUnlocked@MSection@@IEAAXKK@Z 000000018000ed70 f   MSection.obj
+ 0001:0000de04       ?MyEnterCriticalSection@MSection@@IEAA_NK@Z 000000018000ee04 f   MSection.obj
+ 0001:0000df38       ?Lock@MSection@@IEAAHHK@Z  000000018000ef38 f   MSection.obj
+ 0001:0000e03c       ?Unlock@MSection@@IEAAXH@Z 000000018000f03c f   MSection.obj
+ 0001:0000e094       ??0MSectionLock@@QEAA@XZ   000000018000f094 f   MSection.obj
+ 0001:0000e0a4       ?Lock@MSectionLock@@QEAAHPEAVMSection@@HK@Z 000000018000f0a4 f   MSection.obj
+ 0001:0000e0f8       ?Unlock@MSectionLock@@QEAAXXZ 000000018000f0f8 f   MSection.obj
+ 0001:0000e124       ??1MSectionLock@@QEAA@XZ   000000018000f124 f   MSection.obj
+ 0001:0000e148       ?Init@MSectionSimple@@QEAAXXZ 000000018000f148 f   MSectionSimple.obj
+ 0001:0000e168       ?Close@MSectionSimple@@QEAAXXZ 000000018000f168 f   MSectionSimple.obj
+ 0001:0000e168       ??1MSectionSimple@@QEAA@XZ 000000018000f168 f   MSectionSimple.obj
+ 0001:0000e188       ?Enter@MSectionSimple@@QEAAXXZ 000000018000f188 f   MSectionSimple.obj
+ 0001:0000e190       ?Leave@MSectionSimple@@QEAAXXZ 000000018000f190 f   MSectionSimple.obj
+ 0001:0000e198       ?TryEnter@MSectionSimple@@QEAA_NXZ 000000018000f198 f   MSectionSimple.obj
+ 0001:0000e1c0       ?RecreateAndLock@MSectionSimple@@QEAA_NXZ 000000018000f1c0 f   MSectionSimple.obj
+ 0001:0000e230       ??0MSectionLockSimple@@QEAA@XZ 000000018000f230 f   MSectionSimple.obj
+ 0001:0000e23c       ?Unlock@MSectionLockSimple@@QEAAXXZ 000000018000f23c f   MSectionSimple.obj
+ 0001:0000e264       ??0MSectionSimple@@QEAA@_N@Z 000000018000f264 f   MSectionSimple.obj
+ 0001:0000e29c       ??1MSectionLockSimple@@QEAA@XZ 000000018000f29c f   MSectionSimple.obj
+ 0001:0000e2b0       ?Lock@MSectionLockSimple@@QEAAHPEAUMSectionSimple@@K@Z 000000018000f2b0 f   MSectionSimple.obj
+ 0001:0000e348       ??_GMNullDesc@@QEAAPEAXI@Z 000000018000f348 f i MSecurity.obj
+ 0001:0000e3bc       ?LoadAdvApi@MNullDesc@@IEAAHXZ 000000018000f3bc f i MSecurity.obj
+ 0001:0000e554       ?LocalSecurity@MNullDesc@@QEAAPEAU_SECURITY_ATTRIBUTES@@XZ 000000018000f554 f i MSecurity.obj
+ 0001:0000e708       ?LocalSecurity@@YAPEAU_SECURITY_ATTRIBUTES@@XZ 000000018000f708 f   MSecurity.obj
+ 0001:0000e768       ?ShutdownSecurity@@YAXXZ   000000018000f768 f   MSecurity.obj
+ 0001:0000e790       ?lstrdup@@YAPEA_WPEB_W_K@Z 000000018000f790 f   MStrDup.obj
+ 0001:0000e800       ?lstrmerge@@YAPEA_WPEB_W00000000@Z 000000018000f800 f   MStrDup.obj
+ 0001:0000e928       ?msprintf@@YAPEB_WPEA_W_KPEB_WZZ 000000018000f928 f   MStrSafe.obj
+ 0001:0000ed68       ??0CRgnDetect@@QEAA@XZ     000000018000fd68 f   RgnDetect.obj
+ 0001:0000ee40       ??1CRgnDetect@@QEAA@XZ     000000018000fe40 f   RgnDetect.obj
+ 0001:0000ee9c       ?GetDetectedDialogsPtr@CRgnDetect@@QEBAPEBUtag_DetectedDialog@@XZ 000000018000fe9c f   RgnDetect.obj
+ 0001:0000eea4       ?GetFlags@CRgnDetect@@QEBAKXZ 000000018000fea4 f   RgnDetect.obj
+ 0001:0000eeac       ?FindFrameRight_ByBottom@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH22@Z 000000018000feac f   RgnDetect.obj
+ 0001:0000ef84       ?FindFrameLeft_ByBottom@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH22@Z 000000018000ff84 f   RgnDetect.obj
+ 0001:0000f050       ?FindFrameTop_ByLeft@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH22@Z 0000000180010050 f   RgnDetect.obj
+ 0001:0000f100       ?FindFrameTop_ByRight@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH22@Z 0000000180010100 f   RgnDetect.obj
+ 0001:0000f1e8       ?FindFrameBottom_ByRight@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH22@Z 00000001800101e8 f   RgnDetect.obj
+ 0001:0000f2c4       ?FindFrameBottom_ByLeft@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH22@Z 00000001800102c4 f   RgnDetect.obj
+ 0001:0000f378       ?FindDialog_Inner@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH2@Z 0000000180010378 f   RgnDetect.obj
+ 0001:0000f4e4       ?FindFrame_TopLeft@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH222@Z 00000001800104e4 f   RgnDetect.obj
+ 0001:0000f5e4       ?ExpandDialogFrame@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH2HH22@Z 00000001800105e4 f   RgnDetect.obj
+ 0001:0000f8bc       ?FindByBackground@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH222AEA_N@Z 00000001800108bc f   RgnDetect.obj
+ 0001:0000f9d8       ?MarkDialog@CRgnDetect@@IEAAHPEA_WPEAUtag_CharAttr@@HHHHHHI_NK@Z 00000001800109d8 f   RgnDetect.obj
+ 0001:000103f8       ?OnWindowSizeChanged@CRgnDetect@@QEAAXXZ 00000001800113f8 f   RgnDetect.obj
+ 0001:00010400       ?OnWriteConsoleOutput@CRgnDetect@@QEAAXPEBU_CHAR_INFO@@U_COORD@@1PEAU_SMALL_RECT@@PEBK@Z 0000000180011400 f   RgnDetect.obj
+ 0001:000106ac       ?SetFarRect@CRgnDetect@@QEAAXPEAU_SMALL_RECT@@@Z 00000001800116ac f   RgnDetect.obj
+ 0001:00010730       ?TextWidth@CRgnDetect@@QEAAHXZ 0000000180011730 f   RgnDetect.obj
+ 0001:0001075c       ?TextHeight@CRgnDetect@@QEAAHXZ 000000018001175c f   RgnDetect.obj
+ 0001:00010788       ?GetCharAttr@CRgnDetect@@QEAAHHHAEA_WAEAUtag_CharAttr@@@Z 0000000180011788 f   RgnDetect.obj
+ 0001:00010818       ?FindFrameRight_ByTop@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH22@Z 0000000180011818 f   RgnDetect.obj
+ 0001:00010954       ?FindFrameLeft_ByTop@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH22@Z 0000000180011954 f   RgnDetect.obj
+ 0001:00010abc       ?FindDialog_TopLeft@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH222AEA_N@Z 0000000180011abc f   RgnDetect.obj
+ 0001:00010bcc       ?FindDialog_TopRight@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH222AEA_N@Z 0000000180011bcc f   RgnDetect.obj
+ 0001:00010ce4       ?FindDialog_Left@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH222AEA_N@Z 0000000180011ce4 f   RgnDetect.obj
+ 0001:00010ef4       ?FindDialog_Right@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH222AEA_N@Z 0000000180011ef4 f   RgnDetect.obj
+ 0001:0001105c       ?FindDialog_Any@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHAEAH222AEA_N@Z 000000018001205c f   RgnDetect.obj
+ 0001:000112f0       ?DetectDialog@CRgnDetect@@IEAA_NPEA_WPEAUtag_CharAttr@@HHHHPEAH2@Z 00000001800122f0 f   RgnDetect.obj
+ 0001:00011760       ?InitializeSBI@CRgnDetect@@QEAAHPEBK@Z 0000000180012760 f   RgnDetect.obj
+ 0001:00011bd0       ?PrepareTransparent@CRgnDetect@@QEAAXPEBUCEFAR_INFO_MAPPING@@PEBKPEBU_CONSOLE_SCREEN_BUFFER_INFO@@PEA_WPEAUtag_CharAttr@@HH@Z 0000000180012bd0 f   RgnDetect.obj
+ 0001:00012458       ?PrepareTransparent@CRgnDetect@@QEAAXPEBUCEFAR_INFO_MAPPING@@PEBK@Z 0000000180013458 f   RgnDetect.obj
+ 0001:0001252c       ?SearchAppPaths@@YA_NPEB_WAEAUCEStr@@_NPEAU1@@Z 000000018001352c f   WFiles.obj
+ 0001:00012954       ?FileExists@@YA_NPEB_WPEAK@Z 0000000180013954 f   WObjects.obj
+ 0001:00012ad8       ?IsWindows64@@YA_NXZ       0000000180013ad8 f   WObjects.obj
+ 0001:00012afc       ?isTerminalMode@@YA_NXZ    0000000180013afc f   WObjects.obj
+ 0001:00012d34       ?ExpandEnvStr@@YAPEA_WPEB_W@Z 0000000180013d34 f   WObjects.obj
+ 0001:00012ddc       ?GetEnvVar@@YAPEA_WPEB_W@Z 0000000180013ddc f   WObjects.obj
+ 0001:00012e80       ?apiTerminateThreadEx@@YAHPEAXKPEBDH@Z 0000000180013e80 f   WThreads.obj
+ 0001:00012f88       ?SetThreadName@@YAXKPEAD@Z 0000000180013f88 f   WThreads.obj
+ 0001:00012fc0       ?apiThreadHelper@@YAKPEAX@Z 0000000180013fc0 f   WThreads.obj
+ 0001:000131b0       ?apiCreateThread@@YAPEAXP6AKPEAX@Z0PEAKPEBDH@Z 00000001800141b0 f   WThreads.obj
+ 0001:000132fc       ?apiShowWindow@@YA_NPEAUHWND__@@H@Z 00000001800142fc f   WUser.obj
+ 0001:00013310       Thread32Next               0000000180014310 f   kernel32:KERNEL32.dll
+ 0001:00013316       Thread32First              0000000180014316 f   kernel32:KERNEL32.dll
+ 0001:0001331c       CreateToolhelp32Snapshot   000000018001431c f   kernel32:KERNEL32.dll
+ 0001:00013322       Process32NextW             0000000180014322 f   kernel32:KERNEL32.dll
+ 0001:00013328       Process32FirstW            0000000180014328 f   kernel32:KERNEL32.dll
+ 0001:0001332e       VerQueryValueW             000000018001432e f   version:VERSION.dll
+ 0001:00013334       GetFileVersionInfoW        0000000180014334 f   version:VERSION.dll
+ 0001:0001333a       GetFileVersionInfoSizeW    000000018001433a f   version:VERSION.dll
+ 0001:00013350       memcpy                     0000000180014350 f   LIBCMT:memcpy.obj
+ 0001:00013350       memmove                    0000000180014350     LIBCMT:memcpy.obj
+ 0001:00013684       wcschr                     0000000180014684 f   LIBCMT:wcschr.obj
+ 0001:000136a4       wcsrchr                    00000001800146a4 f   LIBCMT:wcsrchr.obj
+ 0001:000136d0       wcspbrk                    00000001800146d0 f   LIBCMT:wcspbrk.obj
+ 0001:00013708       strrchr                    0000000180014708 f   LIBCMT:strrchr.obj
+ 0001:00013740       memset                     0000000180014740 f   LIBCMT:memset.obj
+ 0001:00013840       memcmp                     0000000180014840 f   LIBCMT:memcmp.obj
+ 0001:00013908       __C_specific_handler       0000000180014908 f   LIBCMT:chandler.obj
+ 0001:00013aac       ??0_LocaleUpdate@@QEAA@PEAUlocaleinfo_struct@@@Z 0000000180014aac f i LIBCMT:wcstol.obj
+ 0001:00013b58       strchr                     0000000180014b58 f   LIBCMT:strchr.obj
+ 0001:00013b74       _CRT_INIT                  0000000180014b74 f   LIBCMT:dllcrt0.obj
+ 0001:00013dc8       _DllMainCRTStartup         0000000180014dc8 f   LIBCMT:dllcrt0.obj
+ 0001:00013e20       _local_unwind              0000000180014e20 f   LIBCMT:jmpuwind.obj
+ 0001:00013e50       _NLG_Notify                0000000180014e50 f   LIBCMT:jmpuwind.obj
+ 0001:00013e70       __NLG_Dispatch2            0000000180014e70 f   LIBCMT:jmpuwind.obj
+ 0001:00013e80       __NLG_Return2              0000000180014e80 f   LIBCMT:jmpuwind.obj
+ 0001:00013e90       _ValidateImageBase         0000000180014e90 f   LIBCMT:pesect.obj
+ 0001:00013ec0       _FindPESection             0000000180014ec0 f   LIBCMT:pesect.obj
+ 0001:00013f10       _IsNonwritableInCurrentImage 0000000180014f10 f   LIBCMT:pesect.obj
+ 0001:000141cc       __updatetmbcinfo           00000001800151cc f   LIBCMT:mbctype.obj
+ 0001:00014318       _setmbcp_nolock            0000000180015318 f   LIBCMT:mbctype.obj
+ 0001:00014590       _setmbcp                   0000000180015590 f   LIBCMT:mbctype.obj
+ 0001:00014788       __initmbctable             0000000180015788 f   LIBCMT:mbctype.obj
+ 0001:000147b0       __freetlocinfo             00000001800157b0 f   LIBCMT:setlocal.obj
+ 0001:0001492c       __addlocaleref             000000018001592c f   LIBCMT:setlocal.obj
+ 0001:000149c4       __removelocaleref          00000001800159c4 f   LIBCMT:setlocal.obj
+ 0001:00014ac4       __updatetlocinfo           0000000180015ac4 f   LIBCMT:setlocal.obj
+ 0001:00014b3c       _encode_pointer            0000000180015b3c f   LIBCMT:tidtable.obj
+ 0001:00014b44       _encoded_null              0000000180015b44 f   LIBCMT:tidtable.obj
+ 0001:00014b50       _decode_pointer            0000000180015b50 f   LIBCMT:tidtable.obj
+ 0001:00014b58       _mtterm                    0000000180015b58 f   LIBCMT:tidtable.obj
+ 0001:00014b80       _initptd                   0000000180015b80 f   LIBCMT:tidtable.obj
+ 0001:00014c34       _getptd_noexit             0000000180015c34 f   LIBCMT:tidtable.obj
+ 0001:00014cb8       _getptd                    0000000180015cb8 f   LIBCMT:tidtable.obj
+ 0001:00014cdc       _freefls                   0000000180015cdc f   LIBCMT:tidtable.obj
+ 0001:00014e14       _freeptd                   0000000180015e14 f   LIBCMT:tidtable.obj
+ 0001:00014e54       _mtinit                    0000000180015e54 f   LIBCMT:tidtable.obj
+ 0001:00014ed8       _initp_misc_invarg         0000000180015ed8 f   LIBCMT:invarg.obj
+ 0001:00014ee0       _invoke_watson             0000000180015ee0 f   LIBCMT:invarg.obj
+ 0001:00015008       _invalid_parameter         0000000180016008 f   LIBCMT:invarg.obj
+ 0001:00015090       _get_errno_from_oserr      0000000180016090 f   LIBCMT:dosmap.obj
+ 0001:000150d8       _errno                     00000001800160d8 f   LIBCMT:dosmap.obj
+ 0001:000150f8       free                       00000001800160f8 f   LIBCMT:free.obj
+ 0001:00015138       _malloc_crt                0000000180016138 f   LIBCMT:crtheap.obj
+ 0001:000151a4       _calloc_crt                00000001800161a4 f   LIBCMT:crtheap.obj
+ 0001:00015228       _realloc_crt               0000000180016228 f   LIBCMT:crtheap.obj
+ 0001:000152b0       _amsg_exit                 00000001800162b0 f   LIBCMT:crt0dat.obj
+ 0001:000152e0       __crtCorExitProcess        00000001800162e0 f   LIBCMT:crt0dat.obj
+ 0001:0001531c       __crtExitProcess           000000018001631c f   LIBCMT:crt0dat.obj
+ 0001:00015334       _lockexit                  0000000180016334 f   LIBCMT:crt0dat.obj
+ 0001:00015340       _unlockexit                0000000180016340 f   LIBCMT:crt0dat.obj
+ 0001:00015380       _initterm_e                0000000180016380 f   LIBCMT:crt0dat.obj
+ 0001:000153bc       _cinit                     00000001800163bc f   LIBCMT:crt0dat.obj
+ 0001:000155f8       _exit                      00000001800165f8 f   LIBCMT:crt0dat.obj
+ 0001:00015604       _cexit                     0000000180016604 f   LIBCMT:crt0dat.obj
+ 0001:00015614       _init_pointers             0000000180016614 f   LIBCMT:crt0dat.obj
+ 0001:0001567c       _ioinit                    000000018001667c f   LIBCMT:ioinit.obj
+ 0001:0001596c       _ioterm                    000000018001696c f   LIBCMT:ioinit.obj
+ 0001:000159d8       _setenvp                   00000001800169d8 f   LIBCMT:stdenvp.obj
+ 0001:00015cd8       _setargv                   0000000180016cd8 f   LIBCMT:stdargv.obj
+ 0001:00015dd0       __crtGetEnvironmentStringsA 0000000180016dd0 f   LIBCMT:a_env.obj
+ 0001:00015f84       _RTC_Initialize            0000000180016f84 f   LIBCMT:_initsect_.obj
+ 0001:00015fbc       _RTC_Terminate             0000000180016fbc f   LIBCMT:_initsect_.obj
+ 0001:00015ff4       _heap_init                 0000000180016ff4 f   LIBCMT:heapinit.obj
+ 0001:00016040       _heap_term                 0000000180017040 f   LIBCMT:heapinit.obj
+ 0001:00016060       _initp_misc_winxfltr       0000000180017060 f   LIBCMT:winxfltr.obj
+ 0001:00016060       ?OnItemReady@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEAPEAUIMAGE_CACHE_INFO@@_J@Z 0000000180017060 f   ImgCache.obj
+ 0001:00016060       ?LoadPanelItemInfoA@@YAXPEAUCeFullPanelInfo@@_J@Z 0000000180017060 f   ConEmuThA.obj
+ 0001:00016060       ?SettingsLoadOtherW1900@@YAXXZ 0000000180017060 f   ConEmuTh1900.obj
+ 0001:00016060       ?SettingsLoadOtherW2800@@YAXXZ 0000000180017060 f   ConEmuTh2800.obj
+ 0001:00016060       ?OnThreadStopped@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXXZ 0000000180017060 f   ImgCache.obj
+ 0001:00016060       ?FreeItem@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEBQEAUIMAGE_CACHE_INFO@@@Z 0000000180017060 f   ImgCache.obj
+ 0001:00016060       ?OnItemFailed@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEAPEAUIMAGE_CACHE_INFO@@_J@Z 0000000180017060 f   ImgCache.obj
+ 0001:00016060       ?ApplyChanges@?$CQueueProcessor@PEAUIMAGE_CACHE_INFO@@@@MEAAXAEAPEAUIMAGE_CACHE_INFO@@AEBQEAU2@@Z 0000000180017060 f   ImgCache.obj
+ 0001:00016064       _XcptFilter                0000000180017064 f   LIBCMT:winxfltr.obj
+ 0001:00016234       __CppXcptFilter            0000000180017234 f   LIBCMT:winxfltr.obj
+ 0001:00016254       __security_init_cookie     0000000180017254 f   LIBCMT:gs_support.obj
+ 0001:00016308       __GSHandlerCheckCommon     0000000180017308 f   LIBCMT:gshandler.obj
+ 0001:0001636c       __GSHandlerCheck           000000018001736c f   LIBCMT:gshandler.obj
+ 0001:000168cc       __crtLCMapStringA          00000001800178cc f   LIBCMT:a_map.obj
+ 0001:00016bd0       __crtGetStringTypeA        0000000180017bd0 f   LIBCMT:a_str.obj
+ 0001:00016c70       __security_check_cookie    0000000180017c70 f   LIBCMT:amdsecgs.obj
+ 0001:00016c90       _mtinitlocks               0000000180017c90 f   LIBCMT:mlock.obj
+ 0001:00016d1c       _mtdeletelocks             0000000180017d1c f   LIBCMT:mlock.obj
+ 0001:00016da0       _unlock                    0000000180017da0 f   LIBCMT:mlock.obj
+ 0001:00016db8       _mtinitlocknum             0000000180017db8 f   LIBCMT:mlock.obj
+ 0001:00016ea0       _lock                      0000000180017ea0 f   LIBCMT:mlock.obj
+ 0001:00016ee4       __free_lc_time             0000000180017ee4 f   LIBCMT:inittime.obj
+ 0001:000170d0       __free_lconv_num           00000001800180d0 f   LIBCMT:initnum.obj
+ 0001:00017118       __free_lconv_mon           0000000180018118 f   LIBCMT:initmon.obj
+ 0001:000171b0       strcat_s                   00000001800181b0 f   LIBCMT:strcat_s.obj
+ 0001:0001723c       strncpy_s                  000000018001823c f   LIBCMT:strncpy_s.obj
+ 0001:00017314       strcpy_s                   0000000180018314 f   LIBCMT:strcpy_s.obj
+ 0001:000173a0       strcmp                     00000001800183a0 f   LIBCMT:strcmp.obj
+ 0001:00017460       strlen                     0000000180018460 f   LIBCMT:strlen.obj
+ 0001:00017520       strncmp                    0000000180018520 f   LIBCMT:strncmp.obj
+ 0001:000175d8       __crt_debugger_hook        00000001800185d8 f   LIBCMT:dbghook.obj
+ 0001:000175e0       malloc                     00000001800185e0 f   LIBCMT:malloc.obj
+ 0001:00017698       _calloc_impl               0000000180018698 f   LIBCMT:calloc_impl.obj
+ 0001:00017748       realloc                    0000000180018748 f   LIBCMT:realloc.obj
+ 0001:0001781c       _NMSG_WRITE                000000018001881c f   LIBCMT:crt0msg.obj
+ 0001:00017a44       _FF_MSGBANNER              0000000180018a44 f   LIBCMT:crt0msg.obj
+ 0001:00017a88       __onexitinit               0000000180018a88 f   LIBCMT:onexit.obj
+ 0001:00017acc       _onexit                    0000000180018acc f   LIBCMT:onexit.obj
+ 0001:00017bd4       atexit                     0000000180018bd4 f   LIBCMT:onexit.obj
+ 0001:00017bec       _initp_misc_cfltcvt_tab    0000000180018bec f   LIBCMT:cmiscdat.obj
+ 0001:00017c24       ?terminate@@YAXXZ          0000000180018c24 f   LIBCMT:hooks.obj
+ 0001:00017c48       _initp_eh_hooks            0000000180018c48 f   LIBCMT:hooks.obj
+ 0001:00017c64       _initp_misc_winsig         0000000180018c64 f   LIBCMT:winsig.obj
+ 0001:00017c84       __get_sigabrt              0000000180018c84 f   LIBCMT:winsig.obj
+ 0001:00017c90       raise                      0000000180018c90 f   LIBCMT:winsig.obj
+ 0001:00017f04       _initp_misc_rand_s         0000000180018f04 f   LIBCMT:rand_s.obj
+ 0001:00017f0c       _initp_misc_purevirt       0000000180018f0c f   LIBCMT:inithelp.obj
+ 0001:00017f14       _initp_misc_initcrit       0000000180018f14 f   LIBCMT:initcrit.obj
+ 0001:00017f1c       __crtInitCritSecAndSpinCount 0000000180018f1c f   LIBCMT:initcrit.obj
+ 0001:00017f54       _initp_heap_handler        0000000180018f54 f   LIBCMT:handler.obj
+ 0001:00017f5c       _callnewh                  0000000180018f5c f   LIBCMT:handler.obj
+ 0001:0001800c       _ismbblead                 000000018001900c f   LIBCMT:ismbbyte.obj
+ 0001:00018020       __ansicp                   0000000180019020 f   LIBCMT:convrtcp.obj
+ 0001:00018074       __convertcp                0000000180019074 f   LIBCMT:convrtcp.obj
+ 0001:00018300       __report_gsfailure         0000000180019300 f   LIBCMT:gs_report.obj
+ 0001:0001844c       _isleadbyte_l              000000018001944c f i LIBCMT:_wctype.obj
+ 0001:00018494       atol                       0000000180019494 f   LIBCMT:atox.obj
+ 0001:000184a0       _msize                     00000001800194a0 f   LIBCMT:msize.obj
+ 0001:000184e8       __crtMessageBoxA           00000001800194e8 f   LIBCMT:crtmbox.obj
+ 0001:000186dc       _set_error_mode            00000001800196dc f   LIBCMT:errmode.obj
+ 0001:0001872c       _fptrap                    000000018001972c f   LIBCMT:crt0fp.obj
+ 0001:00018738       abort                      0000000180019738 f   LIBCMT:abort.obj
+ 0001:00018a60       strtol                     0000000180019a60 f   LIBCMT:strtol.obj
+ 0001:00018a90       _isctype_l                 0000000180019a90 f   LIBCMT:isctype.obj
+ 0001:00018b9a       RtlUnwindEx                0000000180019b9a f   kernel32:KERNEL32.dll
+ 0001:00018ba0       RtlVirtualUnwind           0000000180019ba0 f   kernel32:KERNEL32.dll
+ 0001:00018ba6       RtlLookupFunctionEntry     0000000180019ba6 f   kernel32:KERNEL32.dll
+ 0001:00018bc0       __chkstk                   0000000180019bc0 f   LIBCMT:chkstk.obj
+ 0001:00018bc0       _alloca_probe              0000000180019bc0     LIBCMT:chkstk.obj
  0002:00000000       __imp_RegCreateKeyExW      000000018001a000     advapi32:ADVAPI32.dll
  0002:00000008       __imp_RegSetValueExW       000000018001a008     advapi32:ADVAPI32.dll
  0002:00000010       __imp_RegOpenKeyExW        000000018001a010     advapi32:ADVAPI32.dll
@@ -530,23 +530,23 @@
  0002:000000c8       __imp_CreateSolidBrush     000000018001a0c8     gdi32:GDI32.dll
  0002:000000d0       __imp_SetStretchBltMode    000000018001a0d0     gdi32:GDI32.dll
  0002:000000d8       \177GDI32_NULL_THUNK_DATA  000000018001a0d8     gdi32:GDI32.dll
- 0002:000000e0       __imp_GetStdHandle         000000018001a0e0     kernel32:KERNEL32.dll
- 0002:000000e8       __imp_WideCharToMultiByte  000000018001a0e8     kernel32:KERNEL32.dll
- 0002:000000f0       __imp_LocalFree            000000018001a0f0     kernel32:KERNEL32.dll
- 0002:000000f8       __imp_lstrcpyW             000000018001a0f8     kernel32:KERNEL32.dll
- 0002:00000100       __imp_ReadConsoleInputW    000000018001a100     kernel32:KERNEL32.dll
- 0002:00000108       __imp_lstrcpynA            000000018001a108     kernel32:KERNEL32.dll
- 0002:00000110       __imp_MultiByteToWideChar  000000018001a110     kernel32:KERNEL32.dll
- 0002:00000118       __imp_lstrlenA             000000018001a118     kernel32:KERNEL32.dll
- 0002:00000120       __imp_LocalAlloc           000000018001a120     kernel32:KERNEL32.dll
- 0002:00000128       __imp_FileTimeToSystemTime 000000018001a128     kernel32:KERNEL32.dll
- 0002:00000130       __imp_GetExitCodeThread    000000018001a130     kernel32:KERNEL32.dll
- 0002:00000138       __imp_WaitForMultipleObjects 000000018001a138     kernel32:KERNEL32.dll
- 0002:00000140       __imp_CreateEventW         000000018001a140     kernel32:KERNEL32.dll
- 0002:00000148       __imp_SetEvent             000000018001a148     kernel32:KERNEL32.dll
- 0002:00000150       __imp_FindClose            000000018001a150     kernel32:KERNEL32.dll
- 0002:00000158       __imp_FindNextFileW        000000018001a158     kernel32:KERNEL32.dll
- 0002:00000160       __imp_FreeLibrary          000000018001a160     kernel32:KERNEL32.dll
+ 0002:000000e0       __imp_WideCharToMultiByte  000000018001a0e0     kernel32:KERNEL32.dll
+ 0002:000000e8       __imp_LocalFree            000000018001a0e8     kernel32:KERNEL32.dll
+ 0002:000000f0       __imp_lstrcpyW             000000018001a0f0     kernel32:KERNEL32.dll
+ 0002:000000f8       __imp_ReadConsoleInputW    000000018001a0f8     kernel32:KERNEL32.dll
+ 0002:00000100       __imp_lstrcpynA            000000018001a100     kernel32:KERNEL32.dll
+ 0002:00000108       __imp_MultiByteToWideChar  000000018001a108     kernel32:KERNEL32.dll
+ 0002:00000110       __imp_lstrlenA             000000018001a110     kernel32:KERNEL32.dll
+ 0002:00000118       __imp_LocalAlloc           000000018001a118     kernel32:KERNEL32.dll
+ 0002:00000120       __imp_FileTimeToSystemTime 000000018001a120     kernel32:KERNEL32.dll
+ 0002:00000128       __imp_GetExitCodeThread    000000018001a128     kernel32:KERNEL32.dll
+ 0002:00000130       __imp_WaitForMultipleObjects 000000018001a130     kernel32:KERNEL32.dll
+ 0002:00000138       __imp_CreateEventW         000000018001a138     kernel32:KERNEL32.dll
+ 0002:00000140       __imp_SetEvent             000000018001a140     kernel32:KERNEL32.dll
+ 0002:00000148       __imp_FindClose            000000018001a148     kernel32:KERNEL32.dll
+ 0002:00000150       __imp_FindNextFileW        000000018001a150     kernel32:KERNEL32.dll
+ 0002:00000158       __imp_FreeLibrary          000000018001a158     kernel32:KERNEL32.dll
+ 0002:00000160       __imp_LoadLibraryW         000000018001a160     kernel32:KERNEL32.dll
  0002:00000168       __imp_FindFirstFileW       000000018001a168     kernel32:KERNEL32.dll
  0002:00000170       __imp_GetTempPathW         000000018001a170     kernel32:KERNEL32.dll
  0002:00000178       __imp_IsBadReadPtr         000000018001a178     kernel32:KERNEL32.dll
@@ -571,7 +571,7 @@
  0002:00000210       __imp_Process32FirstW      000000018001a210     kernel32:KERNEL32.dll
  0002:00000218       __imp_ExpandEnvironmentStringsW 000000018001a218     kernel32:KERNEL32.dll
  0002:00000220       __imp_GetEnvironmentVariableW 000000018001a220     kernel32:KERNEL32.dll
- 0002:00000228       __imp_WriteConsoleInputW   000000018001a228     kernel32:KERNEL32.dll
+ 0002:00000228       __imp_GetStdHandle         000000018001a228     kernel32:KERNEL32.dll
  0002:00000230       __imp_TerminateThread      000000018001a230     kernel32:KERNEL32.dll
  0002:00000238       __imp_RaiseException       000000018001a238     kernel32:KERNEL32.dll
  0002:00000240       __imp_ResumeThread         000000018001a240     kernel32:KERNEL32.dll
@@ -610,12 +610,12 @@
  0002:00000348       __imp_EncodePointer        000000018001a348     kernel32:KERNEL32.dll
  0002:00000350       __imp_IsValidCodePage      000000018001a350     kernel32:KERNEL32.dll
  0002:00000358       __imp_GetOEMCP             000000018001a358     kernel32:KERNEL32.dll
- 0002:00000360       __imp_VirtualProtect       000000018001a360     kernel32:KERNEL32.dll
- 0002:00000368       __imp_CreateToolhelp32Snapshot 000000018001a368     kernel32:KERNEL32.dll
- 0002:00000370       __imp_Thread32First        000000018001a370     kernel32:KERNEL32.dll
- 0002:00000378       __imp_Thread32Next         000000018001a378     kernel32:KERNEL32.dll
- 0002:00000380       __imp_CreateFileMappingW   000000018001a380     kernel32:KERNEL32.dll
- 0002:00000388       __imp_LoadLibraryW         000000018001a388     kernel32:KERNEL32.dll
+ 0002:00000360       __imp_WriteConsoleInputW   000000018001a360     kernel32:KERNEL32.dll
+ 0002:00000368       __imp_VirtualProtect       000000018001a368     kernel32:KERNEL32.dll
+ 0002:00000370       __imp_CreateToolhelp32Snapshot 000000018001a370     kernel32:KERNEL32.dll
+ 0002:00000378       __imp_Thread32First        000000018001a378     kernel32:KERNEL32.dll
+ 0002:00000380       __imp_Thread32Next         000000018001a380     kernel32:KERNEL32.dll
+ 0002:00000388       __imp_CreateFileMappingW   000000018001a388     kernel32:KERNEL32.dll
  0002:00000390       __imp_WriteFile            000000018001a390     kernel32:KERNEL32.dll
  0002:00000398       __imp_TransactNamedPipe    000000018001a398     kernel32:KERNEL32.dll
  0002:000003a0       __imp_ReadFile             000000018001a3a0     kernel32:KERNEL32.dll
@@ -682,15 +682,15 @@
  0002:00000588       __imp_ShowWindowAsync      000000018001a588     user32:USER32.dll
  0002:00000590       __imp_PostMessageW         000000018001a590     user32:USER32.dll
  0002:00000598       __imp_GetWindowThreadProcessId 000000018001a598     user32:USER32.dll
- 0002:000005a0       __imp_MessageBoxW          000000018001a5a0     user32:USER32.dll
- 0002:000005a8       __imp_IsWindowVisible      000000018001a5a8     user32:USER32.dll
- 0002:000005b0       __imp_GetClientRect        000000018001a5b0     user32:USER32.dll
- 0002:000005b8       __imp_MapWindowPoints      000000018001a5b8     user32:USER32.dll
- 0002:000005c0       __imp_ChildWindowFromPointEx 000000018001a5c0     user32:USER32.dll
- 0002:000005c8       __imp_WindowFromPoint      000000018001a5c8     user32:USER32.dll
- 0002:000005d0       __imp_IntersectRect        000000018001a5d0     user32:USER32.dll
- 0002:000005d8       __imp_wsprintfW            000000018001a5d8     user32:USER32.dll
- 0002:000005e0       __imp_GetKeyState          000000018001a5e0     user32:USER32.dll
+ 0002:000005a0       __imp_IsWindowVisible      000000018001a5a0     user32:USER32.dll
+ 0002:000005a8       __imp_GetClientRect        000000018001a5a8     user32:USER32.dll
+ 0002:000005b0       __imp_MapWindowPoints      000000018001a5b0     user32:USER32.dll
+ 0002:000005b8       __imp_ChildWindowFromPointEx 000000018001a5b8     user32:USER32.dll
+ 0002:000005c0       __imp_WindowFromPoint      000000018001a5c0     user32:USER32.dll
+ 0002:000005c8       __imp_IntersectRect        000000018001a5c8     user32:USER32.dll
+ 0002:000005d0       __imp_wsprintfW            000000018001a5d0     user32:USER32.dll
+ 0002:000005d8       __imp_GetKeyState          000000018001a5d8     user32:USER32.dll
+ 0002:000005e0       __imp_MessageBoxW          000000018001a5e0     user32:USER32.dll
  0002:000005e8       \177USER32_NULL_THUNK_DATA 000000018001a5e8     user32:USER32.dll
  0002:000005f0       __imp_GetFileVersionInfoW  000000018001a5f0     version:VERSION.dll
  0002:000005f8       __imp_GetFileVersionInfoSizeW 000000018001a5f8     version:VERSION.dll
@@ -811,113 +811,114 @@
  0002:00001a48       ??_C@_1BK@BIGILECK@?$AAA?$AAd?$AAv?$AAa?$AAp?$AAi?$AA3?$AA2?$AA?4?$AAd?$AAl?$AAl?$AA?$AA@ 000000018001ba48     MSecurity.obj
  0002:00001a68       ??_C@_1BO@HJHEFHMO@?$AAK?$AAe?$AAr?$AAn?$AAe?$AAl?$AAB?$AAa?$AAs?$AAe?$AA?4?$AAd?$AAl?$AAl?$AA?$AA@ 000000018001ba68     MSecurity.obj
  0002:00001a88       ??_C@_15LKGMKBFA@?$AA0?$AA0?$AA?$AA@ 000000018001ba88     MStrSafe.obj
- 0002:00001a90       ??_C@_1BC@LMIJMNIA@?$AA0?$AA0?$AA0?$AA0?$AA0?$AA0?$AA0?$AA0?$AA?$AA@ 000000018001ba90     MStrSafe.obj
- 0002:00001aa8       ??_C@_1CA@DHOHMJCG@?$AAU?$AAn?$AAi?$AAc?$AAo?$AAd?$AAe?$AA?5?$AAC?$AAh?$AAa?$AAr?$AAM?$AAa?$AAp?$AA?$AA@ 000000018001baa8     RgnDetect.obj
- 0002:00001ac8       ??_C@_13PJJBFPED@?$AA?$DL?$AA?$AA@ 000000018001bac8     WFiles.obj
- 0002:00001ad0       ??_C@_1GK@PPEHOOAL@?$AAS?$AAO?$AAF?$AAT?$AAW?$AAA?$AAR?$AAE?$AA?2?$AAM?$AAi?$AAc?$AAr?$AAo?$AAs?$AAo?$AAf?$AAt?$AA?2?$AAW?$AAi?$AAn?$AAd?$AAo?$AAw?$AAs?$AA?2?$AAC?$AAu?$AAr?$AAr?$AAe@ 000000018001bad0     WFiles.obj
- 0002:00001b40       ??_C@_1BI@MPDCNJBA@?$AAt?$AAl?$AAn?$AAt?$AAs?$AAv?$AAr?$AA?4?$AAe?$AAx?$AAe?$AA?$AA@ 000000018001bb40     WObjects.obj
- 0002:00001b58       ??_C@_1BK@HHKNEJDC@?$AAt?$AAl?$AAn?$AAt?$AAs?$AAe?$AAs?$AAs?$AA?4?$AAe?$AAx?$AAe?$AA?$AA@ 000000018001bb58     WObjects.obj
- 0002:00001b74       ??_C@_05LCABBMOG@?$CFs?3?$CFi?$AA@ 000000018001bb74     WThreads.obj
- 0002:00001b80       _pRawDllMain               000000018001bb80     LIBCMT:dllcrt0.obj
- 0002:00001b80       _pDefaultRawDllMain        000000018001bb80     LIBCMT:dllcrt0.obj
- 0002:00001c10       ??_C@_0P@MIGLKIOC@CorExitProcess?$AA@ 000000018001bc10     LIBCMT:crt0dat.obj
- 0002:00001c20       ??_C@_1BI@BGOHAHKC@?$AAm?$AAs?$AAc?$AAo?$AAr?$AAe?$AAe?$AA?4?$AAd?$AAl?$AAl?$AA?$AA@ 000000018001bc20     LIBCMT:crt0dat.obj
- 0002:00001c40       _XcptActTab                000000018001bc40     LIBCMT:winxfltr.obj
- 0002:00001ce0       ??_C@_13NOLLCAOD@?$AA?$AA?$AA?$AA@ 000000018001bce0     LIBCMT:a_map.obj
- 0002:00001cf0       __newctype                 000000018001bcf0     LIBCMT:ctype.obj
- 0002:00001ff0       _wctype                    000000018001bff0     LIBCMT:ctype.obj
- 0002:00002200       __newclmap                 000000018001c200     LIBCMT:ctype.obj
- 0002:00002380       __newcumap                 000000018001c380     LIBCMT:ctype.obj
- 0002:00002500       ??_C@_08JCCMCCIL@HH?3mm?3ss?$AA@ 000000018001c500     LIBCMT:strftime.obj
- 0002:00002510       ??_C@_0BE@CKGJFCPC@dddd?0?5MMMM?5dd?0?5yyyy?$AA@ 000000018001c510     LIBCMT:strftime.obj
- 0002:00002528       ??_C@_08BPBNCDIB@MM?1dd?1yy?$AA@ 000000018001c528     LIBCMT:strftime.obj
- 0002:00002534       ??_C@_02CJNFDJBF@PM?$AA@   000000018001c534     LIBCMT:strftime.obj
- 0002:00002538       ??_C@_02DEDBPAFC@AM?$AA@   000000018001c538     LIBCMT:strftime.obj
- 0002:00002540       ??_C@_08EDHMEBNP@December?$AA@ 000000018001c540     LIBCMT:strftime.obj
- 0002:00002550       ??_C@_08HCHEGEOA@November?$AA@ 000000018001c550     LIBCMT:strftime.obj
- 0002:00002560       ??_C@_07JJNFCEND@October?$AA@ 000000018001c560     LIBCMT:strftime.obj
- 0002:00002568       ??_C@_09BHHEALKD@September?$AA@ 000000018001c568     LIBCMT:strftime.obj
- 0002:00002574       ??_C@_06LBBHFDDG@August?$AA@ 000000018001c574     LIBCMT:strftime.obj
- 0002:0000257c       ??_C@_04MIEPOIFP@July?$AA@ 000000018001c57c     LIBCMT:strftime.obj
- 0002:00002584       ??_C@_04CNLMGBGM@June?$AA@ 000000018001c584     LIBCMT:strftime.obj
- 0002:0000258c       ??_C@_05DMJDNLEJ@April?$AA@ 000000018001c58c     LIBCMT:strftime.obj
- 0002:00002594       ??_C@_05HPCKOFNC@March?$AA@ 000000018001c594     LIBCMT:strftime.obj
- 0002:000025a0       ??_C@_08GNJGEPFN@February?$AA@ 000000018001c5a0     LIBCMT:strftime.obj
- 0002:000025b0       ??_C@_07CGJPFGJA@January?$AA@ 000000018001c5b0     LIBCMT:strftime.obj
- 0002:000025b8       ??_C@_03MKABNOCG@Dec?$AA@  000000018001c5b8     LIBCMT:strftime.obj
- 0002:000025bc       ??_C@_03JPJOFNIA@Nov?$AA@  000000018001c5bc     LIBCMT:strftime.obj
- 0002:000025c0       ??_C@_03BMAOKBAD@Oct?$AA@  000000018001c5c0     LIBCMT:strftime.obj
- 0002:000025c4       ??_C@_03GGCAPAJC@Sep?$AA@  000000018001c5c4     LIBCMT:strftime.obj
- 0002:000025c8       ??_C@_03IFJFEIGA@Aug?$AA@  000000018001c5c8     LIBCMT:strftime.obj
- 0002:000025cc       ??_C@_03LBGABGKK@Jul?$AA@  000000018001c5cc     LIBCMT:strftime.obj
- 0002:000025d0       ??_C@_03IDFGHECI@Jun?$AA@  000000018001c5d0     LIBCMT:strftime.obj
- 0002:000025d4       ??_C@_03CNMDKL@May?$AA@    000000018001c5d4     LIBCMT:strftime.obj
- 0002:000025d8       ??_C@_03LEOLGMJP@Apr?$AA@  000000018001c5d8     LIBCMT:strftime.obj
- 0002:000025dc       ??_C@_03ODNJBKGA@Mar?$AA@  000000018001c5dc     LIBCMT:strftime.obj
- 0002:000025e0       ??_C@_03HJBDCHOM@Feb?$AA@  000000018001c5e0     LIBCMT:strftime.obj
- 0002:000025e4       ??_C@_03JIHJHPIE@Jan?$AA@  000000018001c5e4     LIBCMT:strftime.obj
- 0002:000025e8       ??_C@_08INBOOONO@Saturday?$AA@ 000000018001c5e8     LIBCMT:strftime.obj
- 0002:000025f4       ??_C@_06JECMNKMI@Friday?$AA@ 000000018001c5f4     LIBCMT:strftime.obj
- 0002:00002600       ??_C@_08HACCIKIA@Thursday?$AA@ 000000018001c600     LIBCMT:strftime.obj
- 0002:00002610       ??_C@_09DLIGFAKA@Wednesday?$AA@ 000000018001c610     LIBCMT:strftime.obj
- 0002:00002620       ??_C@_07BAAGCFCM@Tuesday?$AA@ 000000018001c620     LIBCMT:strftime.obj
- 0002:00002628       ??_C@_06JLEDEDGH@Monday?$AA@ 000000018001c628     LIBCMT:strftime.obj
- 0002:00002630       ??_C@_06OOPIFAJ@Sunday?$AA@ 000000018001c630     LIBCMT:strftime.obj
- 0002:00002638       ??_C@_03FEFJNEK@Sat?$AA@   000000018001c638     LIBCMT:strftime.obj
- 0002:0000263c       ??_C@_03IDIOELNC@Fri?$AA@  000000018001c63c     LIBCMT:strftime.obj
- 0002:00002640       ??_C@_03IOFIKPDN@Thu?$AA@  000000018001c640     LIBCMT:strftime.obj
- 0002:00002644       ??_C@_03MHOMLAJA@Wed?$AA@  000000018001c644     LIBCMT:strftime.obj
- 0002:00002648       ??_C@_03NAGEINEP@Tue?$AA@  000000018001c648     LIBCMT:strftime.obj
- 0002:0000264c       ??_C@_03PDAGKDH@Mon?$AA@   000000018001c64c     LIBCMT:strftime.obj
- 0002:00002650       ??_C@_03KOEHGMDN@Sun?$AA@  000000018001c650     LIBCMT:strftime.obj
- 0002:00002658       ??_C@_0P@GGKDKEEG@runtime?5error?5?$AA@ 000000018001c658     LIBCMT:crt0msg.obj
- 0002:00002668       ??_C@_02PCIJFNDE@?$AN?6?$AA@ 000000018001c668     LIBCMT:crt0msg.obj
- 0002:00002670       ??_C@_0O@MJNIPGOH@TLOSS?5error?$AN?6?$AA@ 000000018001c670     LIBCMT:crt0msg.obj
- 0002:00002680       ??_C@_0N@BONNPDHF@SING?5error?$AN?6?$AA@ 000000018001c680     LIBCMT:crt0msg.obj
- 0002:00002690       ??_C@_0P@MBDAJNE@DOMAIN?5error?$AN?6?$AA@ 000000018001c690     LIBCMT:crt0msg.obj
- 0002:000026a0       ??_C@_0JL@DFDOOABL@R6034?$AN?6An?5application?5has?5made?5a@ 000000018001c6a0     LIBCMT:crt0msg.obj
- 0002:00002740       ??_C@_0PH@EPAFIJ@R6033?$AN?6?9?5Attempt?5to?5use?5MSIL?5cod@ 000000018001c740     LIBCMT:crt0msg.obj
- 0002:00002838       ??_C@_0DD@BKEEABMM@R6032?$AN?6?9?5not?5enough?5space?5for?5lo@ 000000018001c838     LIBCMT:crt0msg.obj
- 0002:00002870       ??_C@_0GD@OFKILIED@R6031?$AN?6?9?5Attempt?5to?5initialize?5t@ 000000018001c870     LIBCMT:crt0msg.obj
- 0002:000028d8       ??_C@_0BP@LPMHJOKI@R6030?$AN?6?9?5CRT?5not?5initialized?$AN?6?$AA@ 000000018001c8d8     LIBCMT:crt0msg.obj
- 0002:000028f8       ??_C@_0CF@KJDAIALP@R6028?$AN?6?9?5unable?5to?5initialize?5he@ 000000018001c8f8     LIBCMT:crt0msg.obj
- 0002:00002920       ??_C@_0DF@GAKBPDFP@R6027?$AN?6?9?5not?5enough?5space?5for?5lo@ 000000018001c920     LIBCMT:crt0msg.obj
- 0002:00002958       ??_C@_0DF@IBLNNAIG@R6026?$AN?6?9?5not?5enough?5space?5for?5st@ 000000018001c958     LIBCMT:crt0msg.obj
- 0002:00002990       ??_C@_0CG@IOHKGFNJ@R6025?$AN?6?9?5pure?5virtual?5function?5c@ 000000018001c990     LIBCMT:crt0msg.obj
- 0002:000029b8       ??_C@_0DF@JIJJFJDC@R6024?$AN?6?9?5not?5enough?5space?5for?5_o@ 000000018001c9b8     LIBCMT:crt0msg.obj
- 0002:000029f0       ??_C@_0CJ@EGEJHFME@R6019?$AN?6?9?5unable?5to?5open?5console?5@ 000000018001c9f0     LIBCMT:crt0msg.obj
- 0002:00002a20       ??_C@_0CB@GNHNIELH@R6018?$AN?6?9?5unexpected?5heap?5error?$AN?6@ 000000018001ca20     LIBCMT:crt0msg.obj
- 0002:00002a48       ??_C@_0CN@FOLDKNG@R6017?$AN?6?9?5unexpected?5multithread?5@ 000000018001ca48     LIBCMT:crt0msg.obj
- 0002:00002a78       ??_C@_0CM@FAHFJNHO@R6016?$AN?6?9?5not?5enough?5space?5for?5th@ 000000018001ca78     LIBCMT:crt0msg.obj
- 0002:00002ab0       ??_C@_0JG@LBKMGKLD@?$AN?6This?5application?5has?5requested@ 000000018001cab0     LIBCMT:crt0msg.obj
- 0002:00002b48       ??_C@_0CM@FLCNIPKK@R6009?$AN?6?9?5not?5enough?5space?5for?5en@ 000000018001cb48     LIBCMT:crt0msg.obj
- 0002:00002b78       ??_C@_0CK@KMMJOAPP@R6008?$AN?6?9?5not?5enough?5space?5for?5ar@ 000000018001cb78     LIBCMT:crt0msg.obj
- 0002:00002ba8       ??_C@_0CN@LEKKICBM@R6002?$AN?6?9?5floating?5point?5support?5@ 000000018001cba8     LIBCMT:crt0msg.obj
- 0002:00002bd8       ??_C@_0CF@GOGNBNAK@Microsoft?5Visual?5C?$CL?$CL?5Runtime?5Lib@ 000000018001cbd8     LIBCMT:crt0msg.obj
- 0002:00002c00       ??_C@_02PHMGELLB@?6?6?$AA@ 000000018001cc00     LIBCMT:crt0msg.obj
- 0002:00002c04       ??_C@_03KHICJKCI@?4?4?4?$AA@ 000000018001cc04     LIBCMT:crt0msg.obj
- 0002:00002c08       ??_C@_0BH@DNAGHKFM@?$DMprogram?5name?5unknown?$DO?$AA@ 000000018001cc08     LIBCMT:crt0msg.obj
- 0002:00002c20       ??_C@_0BK@OFGJDLJJ@Runtime?5Error?$CB?6?6Program?3?5?$AA@ 000000018001cc20     LIBCMT:crt0msg.obj
- 0002:00002c50       __dnames                   000000018001cc50     LIBCMT:timeset.obj
- 0002:00002c68       __mnames                   000000018001cc68     LIBCMT:timeset.obj
- 0002:00002c90       ??_C@_0BI@DFKBFLJE@GetProcessWindowStation?$AA@ 000000018001cc90     LIBCMT:crtmbox.obj
- 0002:00002ca8       ??_C@_0BK@CIDNPOGP@GetUserObjectInformationA?$AA@ 000000018001cca8     LIBCMT:crtmbox.obj
- 0002:00002cc8       ??_C@_0BD@HHGDFDBJ@GetLastActivePopup?$AA@ 000000018001ccc8     LIBCMT:crtmbox.obj
- 0002:00002ce0       ??_C@_0BA@HNOPNCHB@GetActiveWindow?$AA@ 000000018001cce0     LIBCMT:crtmbox.obj
- 0002:00002cf0       ??_C@_0M@CHKKJDAI@MessageBoxA?$AA@ 000000018001ccf0     LIBCMT:crtmbox.obj
- 0002:00002d00       ??_C@_0L@NDEGIDAG@USER32?4DLL?$AA@ 000000018001cd00     LIBCMT:crtmbox.obj
- 0002:00002d10       __rtc_iaa                  000000018001cd10     LIBCMT:_initsect_.obj
- 0002:00002d18       __rtc_izz                  000000018001cd18     LIBCMT:_initsect_.obj
- 0002:00002d20       __rtc_taa                  000000018001cd20     LIBCMT:_initsect_.obj
- 0002:00002d28       __rtc_tzz                  000000018001cd28     LIBCMT:_initsect_.obj
- 0002:00003af4       __IMPORT_DESCRIPTOR_KERNEL32 000000018001daf4     kernel32:KERNEL32.dll
- 0002:00003b08       __IMPORT_DESCRIPTOR_USER32 000000018001db08     user32:USER32.dll
- 0002:00003b1c       __IMPORT_DESCRIPTOR_GDI32  000000018001db1c     gdi32:GDI32.dll
- 0002:00003b30       __IMPORT_DESCRIPTOR_ADVAPI32 000000018001db30     advapi32:ADVAPI32.dll
- 0002:00003b44       __IMPORT_DESCRIPTOR_SHELL32 000000018001db44     shell32:SHELL32.dll
- 0002:00003b58       __IMPORT_DESCRIPTOR_ole32  000000018001db58     ole32:ole32.dll
- 0002:00003b6c       __IMPORT_DESCRIPTOR_VERSION 000000018001db6c     version:VERSION.dll
- 0002:00003b80       __NULL_IMPORT_DESCRIPTOR   000000018001db80     kernel32:KERNEL32.dll
+ 0002:00001a90       ??_C@_19FBKLJMA@?$AA0?$AA0?$AA0?$AA0?$AA?$AA@ 000000018001ba90     MStrSafe.obj
+ 0002:00001aa0       ??_C@_1BC@LMIJMNIA@?$AA0?$AA0?$AA0?$AA0?$AA0?$AA0?$AA0?$AA0?$AA?$AA@ 000000018001baa0     MStrSafe.obj
+ 0002:00001ab8       ??_C@_1CA@DHOHMJCG@?$AAU?$AAn?$AAi?$AAc?$AAo?$AAd?$AAe?$AA?5?$AAC?$AAh?$AAa?$AAr?$AAM?$AAa?$AAp?$AA?$AA@ 000000018001bab8     RgnDetect.obj
+ 0002:00001ad8       ??_C@_13PJJBFPED@?$AA?$DL?$AA?$AA@ 000000018001bad8     WFiles.obj
+ 0002:00001ae0       ??_C@_1GK@PPEHOOAL@?$AAS?$AAO?$AAF?$AAT?$AAW?$AAA?$AAR?$AAE?$AA?2?$AAM?$AAi?$AAc?$AAr?$AAo?$AAs?$AAo?$AAf?$AAt?$AA?2?$AAW?$AAi?$AAn?$AAd?$AAo?$AAw?$AAs?$AA?2?$AAC?$AAu?$AAr?$AAr?$AAe@ 000000018001bae0     WFiles.obj
+ 0002:00001b50       ??_C@_1BI@MPDCNJBA@?$AAt?$AAl?$AAn?$AAt?$AAs?$AAv?$AAr?$AA?4?$AAe?$AAx?$AAe?$AA?$AA@ 000000018001bb50     WObjects.obj
+ 0002:00001b68       ??_C@_1BK@HHKNEJDC@?$AAt?$AAl?$AAn?$AAt?$AAs?$AAe?$AAs?$AAs?$AA?4?$AAe?$AAx?$AAe?$AA?$AA@ 000000018001bb68     WObjects.obj
+ 0002:00001b84       ??_C@_05LCABBMOG@?$CFs?3?$CFi?$AA@ 000000018001bb84     WThreads.obj
+ 0002:00001b90       _pRawDllMain               000000018001bb90     LIBCMT:dllcrt0.obj
+ 0002:00001b90       _pDefaultRawDllMain        000000018001bb90     LIBCMT:dllcrt0.obj
+ 0002:00001c20       ??_C@_0P@MIGLKIOC@CorExitProcess?$AA@ 000000018001bc20     LIBCMT:crt0dat.obj
+ 0002:00001c30       ??_C@_1BI@BGOHAHKC@?$AAm?$AAs?$AAc?$AAo?$AAr?$AAe?$AAe?$AA?4?$AAd?$AAl?$AAl?$AA?$AA@ 000000018001bc30     LIBCMT:crt0dat.obj
+ 0002:00001c50       _XcptActTab                000000018001bc50     LIBCMT:winxfltr.obj
+ 0002:00001cf0       ??_C@_13NOLLCAOD@?$AA?$AA?$AA?$AA@ 000000018001bcf0     LIBCMT:a_map.obj
+ 0002:00001d00       __newctype                 000000018001bd00     LIBCMT:ctype.obj
+ 0002:00002000       _wctype                    000000018001c000     LIBCMT:ctype.obj
+ 0002:00002210       __newclmap                 000000018001c210     LIBCMT:ctype.obj
+ 0002:00002390       __newcumap                 000000018001c390     LIBCMT:ctype.obj
+ 0002:00002510       ??_C@_08JCCMCCIL@HH?3mm?3ss?$AA@ 000000018001c510     LIBCMT:strftime.obj
+ 0002:00002520       ??_C@_0BE@CKGJFCPC@dddd?0?5MMMM?5dd?0?5yyyy?$AA@ 000000018001c520     LIBCMT:strftime.obj
+ 0002:00002538       ??_C@_08BPBNCDIB@MM?1dd?1yy?$AA@ 000000018001c538     LIBCMT:strftime.obj
+ 0002:00002544       ??_C@_02CJNFDJBF@PM?$AA@   000000018001c544     LIBCMT:strftime.obj
+ 0002:00002548       ??_C@_02DEDBPAFC@AM?$AA@   000000018001c548     LIBCMT:strftime.obj
+ 0002:00002550       ??_C@_08EDHMEBNP@December?$AA@ 000000018001c550     LIBCMT:strftime.obj
+ 0002:00002560       ??_C@_08HCHEGEOA@November?$AA@ 000000018001c560     LIBCMT:strftime.obj
+ 0002:00002570       ??_C@_07JJNFCEND@October?$AA@ 000000018001c570     LIBCMT:strftime.obj
+ 0002:00002578       ??_C@_09BHHEALKD@September?$AA@ 000000018001c578     LIBCMT:strftime.obj
+ 0002:00002584       ??_C@_06LBBHFDDG@August?$AA@ 000000018001c584     LIBCMT:strftime.obj
+ 0002:0000258c       ??_C@_04MIEPOIFP@July?$AA@ 000000018001c58c     LIBCMT:strftime.obj
+ 0002:00002594       ??_C@_04CNLMGBGM@June?$AA@ 000000018001c594     LIBCMT:strftime.obj
+ 0002:0000259c       ??_C@_05DMJDNLEJ@April?$AA@ 000000018001c59c     LIBCMT:strftime.obj
+ 0002:000025a4       ??_C@_05HPCKOFNC@March?$AA@ 000000018001c5a4     LIBCMT:strftime.obj
+ 0002:000025b0       ??_C@_08GNJGEPFN@February?$AA@ 000000018001c5b0     LIBCMT:strftime.obj
+ 0002:000025c0       ??_C@_07CGJPFGJA@January?$AA@ 000000018001c5c0     LIBCMT:strftime.obj
+ 0002:000025c8       ??_C@_03MKABNOCG@Dec?$AA@  000000018001c5c8     LIBCMT:strftime.obj
+ 0002:000025cc       ??_C@_03JPJOFNIA@Nov?$AA@  000000018001c5cc     LIBCMT:strftime.obj
+ 0002:000025d0       ??_C@_03BMAOKBAD@Oct?$AA@  000000018001c5d0     LIBCMT:strftime.obj
+ 0002:000025d4       ??_C@_03GGCAPAJC@Sep?$AA@  000000018001c5d4     LIBCMT:strftime.obj
+ 0002:000025d8       ??_C@_03IFJFEIGA@Aug?$AA@  000000018001c5d8     LIBCMT:strftime.obj
+ 0002:000025dc       ??_C@_03LBGABGKK@Jul?$AA@  000000018001c5dc     LIBCMT:strftime.obj
+ 0002:000025e0       ??_C@_03IDFGHECI@Jun?$AA@  000000018001c5e0     LIBCMT:strftime.obj
+ 0002:000025e4       ??_C@_03CNMDKL@May?$AA@    000000018001c5e4     LIBCMT:strftime.obj
+ 0002:000025e8       ??_C@_03LEOLGMJP@Apr?$AA@  000000018001c5e8     LIBCMT:strftime.obj
+ 0002:000025ec       ??_C@_03ODNJBKGA@Mar?$AA@  000000018001c5ec     LIBCMT:strftime.obj
+ 0002:000025f0       ??_C@_03HJBDCHOM@Feb?$AA@  000000018001c5f0     LIBCMT:strftime.obj
+ 0002:000025f4       ??_C@_03JIHJHPIE@Jan?$AA@  000000018001c5f4     LIBCMT:strftime.obj
+ 0002:000025f8       ??_C@_08INBOOONO@Saturday?$AA@ 000000018001c5f8     LIBCMT:strftime.obj
+ 0002:00002604       ??_C@_06JECMNKMI@Friday?$AA@ 000000018001c604     LIBCMT:strftime.obj
+ 0002:00002610       ??_C@_08HACCIKIA@Thursday?$AA@ 000000018001c610     LIBCMT:strftime.obj
+ 0002:00002620       ??_C@_09DLIGFAKA@Wednesday?$AA@ 000000018001c620     LIBCMT:strftime.obj
+ 0002:00002630       ??_C@_07BAAGCFCM@Tuesday?$AA@ 000000018001c630     LIBCMT:strftime.obj
+ 0002:00002638       ??_C@_06JLEDEDGH@Monday?$AA@ 000000018001c638     LIBCMT:strftime.obj
+ 0002:00002640       ??_C@_06OOPIFAJ@Sunday?$AA@ 000000018001c640     LIBCMT:strftime.obj
+ 0002:00002648       ??_C@_03FEFJNEK@Sat?$AA@   000000018001c648     LIBCMT:strftime.obj
+ 0002:0000264c       ??_C@_03IDIOELNC@Fri?$AA@  000000018001c64c     LIBCMT:strftime.obj
+ 0002:00002650       ??_C@_03IOFIKPDN@Thu?$AA@  000000018001c650     LIBCMT:strftime.obj
+ 0002:00002654       ??_C@_03MHOMLAJA@Wed?$AA@  000000018001c654     LIBCMT:strftime.obj
+ 0002:00002658       ??_C@_03NAGEINEP@Tue?$AA@  000000018001c658     LIBCMT:strftime.obj
+ 0002:0000265c       ??_C@_03PDAGKDH@Mon?$AA@   000000018001c65c     LIBCMT:strftime.obj
+ 0002:00002660       ??_C@_03KOEHGMDN@Sun?$AA@  000000018001c660     LIBCMT:strftime.obj
+ 0002:00002668       ??_C@_0P@GGKDKEEG@runtime?5error?5?$AA@ 000000018001c668     LIBCMT:crt0msg.obj
+ 0002:00002678       ??_C@_02PCIJFNDE@?$AN?6?$AA@ 000000018001c678     LIBCMT:crt0msg.obj
+ 0002:00002680       ??_C@_0O@MJNIPGOH@TLOSS?5error?$AN?6?$AA@ 000000018001c680     LIBCMT:crt0msg.obj
+ 0002:00002690       ??_C@_0N@BONNPDHF@SING?5error?$AN?6?$AA@ 000000018001c690     LIBCMT:crt0msg.obj
+ 0002:000026a0       ??_C@_0P@MBDAJNE@DOMAIN?5error?$AN?6?$AA@ 000000018001c6a0     LIBCMT:crt0msg.obj
+ 0002:000026b0       ??_C@_0JL@DFDOOABL@R6034?$AN?6An?5application?5has?5made?5a@ 000000018001c6b0     LIBCMT:crt0msg.obj
+ 0002:00002750       ??_C@_0PH@EPAFIJ@R6033?$AN?6?9?5Attempt?5to?5use?5MSIL?5cod@ 000000018001c750     LIBCMT:crt0msg.obj
+ 0002:00002848       ??_C@_0DD@BKEEABMM@R6032?$AN?6?9?5not?5enough?5space?5for?5lo@ 000000018001c848     LIBCMT:crt0msg.obj
+ 0002:00002880       ??_C@_0GD@OFKILIED@R6031?$AN?6?9?5Attempt?5to?5initialize?5t@ 000000018001c880     LIBCMT:crt0msg.obj
+ 0002:000028e8       ??_C@_0BP@LPMHJOKI@R6030?$AN?6?9?5CRT?5not?5initialized?$AN?6?$AA@ 000000018001c8e8     LIBCMT:crt0msg.obj
+ 0002:00002908       ??_C@_0CF@KJDAIALP@R6028?$AN?6?9?5unable?5to?5initialize?5he@ 000000018001c908     LIBCMT:crt0msg.obj
+ 0002:00002930       ??_C@_0DF@GAKBPDFP@R6027?$AN?6?9?5not?5enough?5space?5for?5lo@ 000000018001c930     LIBCMT:crt0msg.obj
+ 0002:00002968       ??_C@_0DF@IBLNNAIG@R6026?$AN?6?9?5not?5enough?5space?5for?5st@ 000000018001c968     LIBCMT:crt0msg.obj
+ 0002:000029a0       ??_C@_0CG@IOHKGFNJ@R6025?$AN?6?9?5pure?5virtual?5function?5c@ 000000018001c9a0     LIBCMT:crt0msg.obj
+ 0002:000029c8       ??_C@_0DF@JIJJFJDC@R6024?$AN?6?9?5not?5enough?5space?5for?5_o@ 000000018001c9c8     LIBCMT:crt0msg.obj
+ 0002:00002a00       ??_C@_0CJ@EGEJHFME@R6019?$AN?6?9?5unable?5to?5open?5console?5@ 000000018001ca00     LIBCMT:crt0msg.obj
+ 0002:00002a30       ??_C@_0CB@GNHNIELH@R6018?$AN?6?9?5unexpected?5heap?5error?$AN?6@ 000000018001ca30     LIBCMT:crt0msg.obj
+ 0002:00002a58       ??_C@_0CN@FOLDKNG@R6017?$AN?6?9?5unexpected?5multithread?5@ 000000018001ca58     LIBCMT:crt0msg.obj
+ 0002:00002a88       ??_C@_0CM@FAHFJNHO@R6016?$AN?6?9?5not?5enough?5space?5for?5th@ 000000018001ca88     LIBCMT:crt0msg.obj
+ 0002:00002ac0       ??_C@_0JG@LBKMGKLD@?$AN?6This?5application?5has?5requested@ 000000018001cac0     LIBCMT:crt0msg.obj
+ 0002:00002b58       ??_C@_0CM@FLCNIPKK@R6009?$AN?6?9?5not?5enough?5space?5for?5en@ 000000018001cb58     LIBCMT:crt0msg.obj
+ 0002:00002b88       ??_C@_0CK@KMMJOAPP@R6008?$AN?6?9?5not?5enough?5space?5for?5ar@ 000000018001cb88     LIBCMT:crt0msg.obj
+ 0002:00002bb8       ??_C@_0CN@LEKKICBM@R6002?$AN?6?9?5floating?5point?5support?5@ 000000018001cbb8     LIBCMT:crt0msg.obj
+ 0002:00002be8       ??_C@_0CF@GOGNBNAK@Microsoft?5Visual?5C?$CL?$CL?5Runtime?5Lib@ 000000018001cbe8     LIBCMT:crt0msg.obj
+ 0002:00002c10       ??_C@_02PHMGELLB@?6?6?$AA@ 000000018001cc10     LIBCMT:crt0msg.obj
+ 0002:00002c14       ??_C@_03KHICJKCI@?4?4?4?$AA@ 000000018001cc14     LIBCMT:crt0msg.obj
+ 0002:00002c18       ??_C@_0BH@DNAGHKFM@?$DMprogram?5name?5unknown?$DO?$AA@ 000000018001cc18     LIBCMT:crt0msg.obj
+ 0002:00002c30       ??_C@_0BK@OFGJDLJJ@Runtime?5Error?$CB?6?6Program?3?5?$AA@ 000000018001cc30     LIBCMT:crt0msg.obj
+ 0002:00002c60       __dnames                   000000018001cc60     LIBCMT:timeset.obj
+ 0002:00002c78       __mnames                   000000018001cc78     LIBCMT:timeset.obj
+ 0002:00002ca0       ??_C@_0BI@DFKBFLJE@GetProcessWindowStation?$AA@ 000000018001cca0     LIBCMT:crtmbox.obj
+ 0002:00002cb8       ??_C@_0BK@CIDNPOGP@GetUserObjectInformationA?$AA@ 000000018001ccb8     LIBCMT:crtmbox.obj
+ 0002:00002cd8       ??_C@_0BD@HHGDFDBJ@GetLastActivePopup?$AA@ 000000018001ccd8     LIBCMT:crtmbox.obj
+ 0002:00002cf0       ??_C@_0BA@HNOPNCHB@GetActiveWindow?$AA@ 000000018001ccf0     LIBCMT:crtmbox.obj
+ 0002:00002d00       ??_C@_0M@CHKKJDAI@MessageBoxA?$AA@ 000000018001cd00     LIBCMT:crtmbox.obj
+ 0002:00002d10       ??_C@_0L@NDEGIDAG@USER32?4DLL?$AA@ 000000018001cd10     LIBCMT:crtmbox.obj
+ 0002:00002d20       __rtc_iaa                  000000018001cd20     LIBCMT:_initsect_.obj
+ 0002:00002d28       __rtc_izz                  000000018001cd28     LIBCMT:_initsect_.obj
+ 0002:00002d30       __rtc_taa                  000000018001cd30     LIBCMT:_initsect_.obj
+ 0002:00002d38       __rtc_tzz                  000000018001cd38     LIBCMT:_initsect_.obj
+ 0002:00003b14       __IMPORT_DESCRIPTOR_KERNEL32 000000018001db14     kernel32:KERNEL32.dll
+ 0002:00003b28       __IMPORT_DESCRIPTOR_USER32 000000018001db28     user32:USER32.dll
+ 0002:00003b3c       __IMPORT_DESCRIPTOR_GDI32  000000018001db3c     gdi32:GDI32.dll
+ 0002:00003b50       __IMPORT_DESCRIPTOR_ADVAPI32 000000018001db50     advapi32:ADVAPI32.dll
+ 0002:00003b64       __IMPORT_DESCRIPTOR_SHELL32 000000018001db64     shell32:SHELL32.dll
+ 0002:00003b78       __IMPORT_DESCRIPTOR_ole32  000000018001db78     ole32:ole32.dll
+ 0002:00003b8c       __IMPORT_DESCRIPTOR_VERSION 000000018001db8c     version:VERSION.dll
+ 0002:00003ba0       __NULL_IMPORT_DESCRIPTOR   000000018001dba0     kernel32:KERNEL32.dll
  0003:00000000       ?gsInternalCommands@@3PEB_WEB 0000000180020000     CmdLine.obj
  0003:00000010       ?gbPreloadByDefault@@3HA   0000000180020010     ConEmuTh.obj
  0003:00000018       ?gcrCurColors@@3PEAKEA     0000000180020018     ConEmuTh.obj
@@ -965,123 +966,122 @@
  0003:00001080       _lpdays                    0000000180021080     LIBCMT:days.obj
  0003:000010b8       _days                      00000001800210b8     LIBCMT:days.obj
  0003:00001100       ?gbInCommonShutdown@@3HA   0000000180021100     Common.obj
- 0003:00001108       ?OnShutdownConsole@@3P6AXXZEA 0000000180021108     Common.obj
- 0003:00001110       ?gpLocalSecurity@@3PEAU_SECURITY_ATTRIBUTES@@EA 0000000180021110     ConEmuCheck.obj
- 0003:00001118       ?ghWorkingModule@@3_KA     0000000180021118     ConEmuCheck.obj
- 0003:00001120       ?gfGetRealConsoleWindow@@3P6APEAUHWND__@@XZEA 0000000180021120     ConEmuCheck.obj
- 0003:00001170       ?gsHardLink@@3PA_WA        0000000180021170     ConEmuTh.obj
- 0003:000011f0       ?gsJunction@@3PA_WA        00000001800211f0     ConEmuTh.obj
- 0003:00001270       ?gsSymLink@@3PA_WA         0000000180021270     ConEmuTh.obj
- 0003:000012f0       ?gsTitleThumbs@@3PA_WA     00000001800212f0     ConEmuTh.obj
- 0003:00001370       ?gsTitleTiles@@3PA_WA      0000000180021370     ConEmuTh.obj
- 0003:000013f0       ?gsFolder@@3PA_WA          00000001800213f0     ConEmuTh.obj
- 0003:00001470       ?gdwModes@@3PAKA           0000000180021470     ConEmuTh.obj
- 0003:00001478       ?ghConEmuRoot@@3PEAUHWND__@@EA 0000000180021478     ConEmuTh.obj
- 0003:00001480       ?gThSet@@3UPanelViewSetMapping@@A 0000000180021480     ConEmuTh.obj
- 0003:00001698       ?ghConEmuWnd@@3PEAUHWND__@@EA 0000000180021698     ConEmuTh.obj
- 0003:000016a0       ?ghPluginModule@@3PEAUHINSTANCE__@@EA 00000001800216a0     ConEmuTh.obj
- 0003:000016a8       ?TerminalMode@@3HA         00000001800216a8     ConEmuTh.obj
- 0003:000016ac       ?gnSelfPID@@3KA            00000001800216ac     ConEmuTh.obj
- 0003:000016b0       ?gnMainThreadId@@3KA       00000001800216b0     ConEmuTh.obj
- 0003:000016b4       ?gnMainThreadIdInitial@@3KA 00000001800216b4     ConEmuTh.obj
- 0003:000016b8       ?ghDisplayThread@@3PEAXEA  00000001800216b8     ConEmuTh.obj
- 0003:000016c0       ?gnDisplayThreadId@@3KA    00000001800216c0     ConEmuTh.obj
- 0003:000016c4       ?gbFadeColors@@3_NA        00000001800216c4     ConEmuTh.obj
- 0003:000016c5       ?gbFarPanelsReady@@3_NA    00000001800216c5     ConEmuTh.obj
- 0003:000016c6       ?gbConsoleChangesSyncho@@3_NA 00000001800216c6     ConEmuTh.obj
- 0003:000016c7       ?gbSynchoRedrawPanelRequested@@3_NA 00000001800216c7     ConEmuTh.obj
- 0003:000016c8       ?gFarVersion@@3UFarVersion@@A 00000001800216c8     ConEmuTh.obj
- 0003:000016d4       ?gnRgnDetectFlags@@3KA     00000001800216d4     ConEmuTh.obj
- 0003:000016d8       ?gfRegisterPanelView@@3P6AHPEAUPanelViewInit@@@ZEA 00000001800216d8     ConEmuTh.obj
- 0003:000016e0       ?gfGetFarHWND2@@3P6APEAUHWND__@@H@ZEA 00000001800216e0     ConEmuTh.obj
- 0003:000016e8       ?gpRgnDetect@@3PEAVCRgnDetect@@EA 00000001800216e8     ConEmuTh.obj
- 0003:000016f0       ?pviLeft@@3UCeFullPanelInfo@@A 00000001800216f0     ConEmuTh.obj
- 0003:000019b0       ?pviRight@@3UCeFullPanelInfo@@A 00000001800219b0     ConEmuTh.obj
- 0003:00001c70       ?gpImgCache@@3PEAVCImgCache@@EA 0000000180021c70     ConEmuTh.obj
- 0003:00001c78       ?gFarPanelSettings@@3UCEFarPanelSettings@@A 0000000180021c78     ConEmuTh.obj
- 0003:00001c7c       ?gFarInterfaceSettings@@3UCEFarInterfaceSettings@@A 0000000180021c7c     ConEmuTh.obj
- 0003:00001c80       ?gFarInfo@@3UCEFAR_INFO_MAPPING@@A 0000000180021c80     ConEmuTh.obj
- 0003:00021fb8       ?gnWaitForKeySeqTick@@3KA  0000000180041fb8     ConEmuTh.obj
- 0003:00021fbc       ?wScanCodeUp@@3GA          0000000180041fbc     ConEmuTh.obj
- 0003:00021fc0       ?gThPal@@3UCESERVER_PALETTE@@A 0000000180041fc0     ConEmuTh.obj
- 0003:00022040       ?wScanCodeDown@@3GA        0000000180042040     ConEmuTh.obj
- 0003:00022044       ?gnConsoleChanges@@3KA     0000000180042044     ConEmuTh.obj
- 0003:00022048       ?gpLastSynchroArg@@3PEAUConEmuThSynchroArg@@EA 0000000180042048     ConEmuTh.obj
- 0003:00022050       ?gpDbgDlg@@3PEAV?$MFileMapping@Utag_DetectedDialog@@@@EA 0000000180042050     ConEmuTh.obj
- 0003:00022058       ?gbInfoW_OK@@3HA           0000000180042058     ConEmuTh.obj
- 0003:00022060       ?InfoW1900@@3PEAUPluginStartupInfo@@EA 0000000180042060     ConEmuTh1900.obj
- 0003:00022068       ?FSFW1900@@3PEAUFarStandardFunctions@@EA 0000000180042068     ConEmuTh1900.obj
- 0003:00022070       ?LastIndex@?1??Color2FgIndex@Far3Color@@SAXKAEAGPEBK@Z@4HA 0000000180042070     ConEmuTh1900.obj
- 0003:00022074       ?LastColor@?1??Color2FgIndex@Far3Color@@SAXKAEAGPEBK@Z@4KA 0000000180042074     ConEmuTh1900.obj
- 0003:00022078       ?LastIndex@?1??Color2BgIndex@Far3Color@@SAXKHAEAGPEBK@Z@4HA 0000000180042078     ConEmuTh1900.obj
- 0003:0002207c       ?LastColor@?1??Color2BgIndex@Far3Color@@SAXKHAEAGPEBK@Z@4KA 000000018004207c     ConEmuTh1900.obj
- 0003:00022290       ?InfoW2800@@3PEAUPluginStartupInfo@@EA 0000000180042290     ConEmuTh2800.obj
- 0003:00022298       ?FSFW2800@@3PEAUFarStandardFunctions@@EA 0000000180042298     ConEmuTh2800.obj
- 0003:000224b0       ?InfoW995@@3PEAUPluginStartupInfo@@EA 00000001800424b0     ConEmuTh995.obj
- 0003:000224b8       ?FSFW995@@3PEAUFarStandardFunctions@@EA 00000001800424b8     ConEmuTh995.obj
- 0003:000226d0       ?InfoA@@3PEAUPluginStartupInfo@@EA 00000001800426d0     ConEmuThA.obj
- 0003:000226d8       ?FSFA@@3PEAUFarStandardFunctions@@EA 00000001800426d8     ConEmuThA.obj
- 0003:000227f8       ?ghCreateEvent@@3PEAXEA    00000001800427f8     Display.obj
- 0003:00022800       ?gnCreateViewError@@3HA    0000000180042800     Display.obj
- 0003:00022804       ?gnWin32Error@@3KA         0000000180042804     Display.obj
- 0003:00022808       ?gbCancelAll@@3HA          0000000180042808     Display.obj
- 0003:0002280c       ?gnConEmuFadeMsg@@3IA      000000018004280c     Display.obj
- 0003:00022810       ?gnConEmuSettingsMsg@@3IA  0000000180042810     Display.obj
- 0003:00022814       ?gnMapCoordMsg@@3IA        0000000180042814     Display.obj
- 0003:00022818       ?hkFunc@@3UHkFunc@@A       0000000180042818     HkFunc.obj
- 0003:00022820       ?ghUpIcon@@3PEAUHICON__@@EA 0000000180042820     ImgCache.obj
- 0003:00022828       ?AssertMsgBox@@3P6AHPEB_WI0PEAUHWND__@@_N@ZEA 0000000180042828     MAssert.obj
- 0003:00022830       ?gfnHooksUnlockerProc@@3P6A_N_N@ZEA 0000000180042830     MAssert.obj
- 0003:00022838       ?ghHeap@@3PEAXEA           0000000180042838     Memory.obj
- 0003:00022840       ?gNullDesc@@3PEAVMNullDesc@@EA 0000000180042840     MSecurity.obj
- 0003:00022850       ?gfnSearchAppPaths@@3P6A_NPEB_WAEAUCEStr@@_NPEAU1@@ZEA 0000000180042850     WObjects.obj
- 0003:0002b060       ?g_ThreadsIdx@@3JA         000000018004b060     WThreads.obj
- 0003:0002b06c       __error_mode               000000018004b06c     LIBCMT:dllcrt0.obj
- 0003:0002b070       _aenvptr                   000000018004b070     LIBCMT:dllcrt0.obj
- 0003:0002b078       _wenvptr                   000000018004b078     LIBCMT:dllcrt0.obj
- 0003:0002b080       __app_type                 000000018004b080     LIBCMT:dllcrt0.obj
- 0003:0002b090       __mbulinfo                 000000018004b090     LIBCMT:mbctype.obj
- 0003:0002b09c       __mbcodepage               000000018004b09c     LIBCMT:mbctype.obj
- 0003:0002b0a0       __ismbcodepage             000000018004b0a0     LIBCMT:mbctype.obj
- 0003:0002b0a4       __mblcid                   000000018004b0a4     LIBCMT:mbctype.obj
- 0003:0002b0a8       __locale_changed           000000018004b0a8     LIBCMT:setlocal.obj
- 0003:0002b0b0       __lc_handle                000000018004b0b0     LIBCMT:nlsdata2.obj
- 0003:0002b0c8       __lc_codepage              000000018004b0c8     LIBCMT:nlsdata2.obj
- 0003:0002b0cc       __lc_collate_cp            000000018004b0cc     LIBCMT:nlsdata2.obj
- 0003:0002b0d0       __pInvalidArgHandler       000000018004b0d0     LIBCMT:invarg.obj
- 0003:0002b0d8       _maxwait                   000000018004b0d8     LIBCMT:crtheap.obj
- 0003:0002b0e0       _umaskval                  000000018004b0e0     LIBCMT:crt0dat.obj
- 0003:0002b0e4       __argc                     000000018004b0e4     LIBCMT:crt0dat.obj
- 0003:0002b0e8       __argv                     000000018004b0e8     LIBCMT:crt0dat.obj
- 0003:0002b0f0       __wargv                    000000018004b0f0     LIBCMT:crt0dat.obj
- 0003:0002b0f8       _environ                   000000018004b0f8     LIBCMT:crt0dat.obj
- 0003:0002b100       __initenv                  000000018004b100     LIBCMT:crt0dat.obj
- 0003:0002b108       _wenviron                  000000018004b108     LIBCMT:crt0dat.obj
- 0003:0002b110       __winitenv                 000000018004b110     LIBCMT:crt0dat.obj
- 0003:0002b118       _pgmptr                    000000018004b118     LIBCMT:crt0dat.obj
- 0003:0002b120       _wpgmptr                   000000018004b120     LIBCMT:crt0dat.obj
- 0003:0002b128       _exitflag                  000000018004b128     LIBCMT:crt0dat.obj
- 0003:0002b12c       _C_Termination_Done        000000018004b12c     LIBCMT:crt0dat.obj
- 0003:0002b130       _C_Exit_Done               000000018004b130     LIBCMT:crt0dat.obj
- 0003:0002b250       _crtheap                   000000018004b250     LIBCMT:heapinit.obj
- 0003:0002b490       __lconv_static_null        000000018004b490     LIBCMT:lconv.obj
- 0003:0002b7b8       ?__pInconsistency@@3P6AXXZEA 000000018004b7b8     LIBCMT:hooks.obj
- 0003:0002b7f8       __pPurecall                000000018004b7f8     LIBCMT:inithelp.obj
- 0003:0002b808       ?_pnhHeap@@3P6AH_K@ZEA     000000018004b808     LIBCMT:handler.obj
- 0003:0002be3c       _newmode                   000000018004be3c     LIBCMT:_newmode.obj
- 0003:0002be68       _debugger_hook_dummy       000000018004be68     <common>
- 0003:0002be6c       _nhandle                   000000018004be6c     <common>
- 0003:0002be80       __pioinfo                  000000018004be80     <common>
- 0003:0002c080       __env_initialized          000000018004c080     <common>
- 0003:0002c088       __onexitend                000000018004c088     <common>
- 0003:0002c090       __onexitbegin              000000018004c090     <common>
- 0003:0002c098       __mbctype_initialized      000000018004c098     <common>
- 0003:0002c0a0       _FPinit                    000000018004c0a0     <common>
- 0003:0002c0a8       __dyn_tls_init_callback    000000018004c0a8     <common>
- 0003:0002c0b0       _acmdln                    000000018004c0b0     <common>
- 0003:0002c0b8       _pDestructExceptionObject  000000018004c0b8     <common>
+ 0003:00001108       ?gpLocalSecurity@@3PEAU_SECURITY_ATTRIBUTES@@EA 0000000180021108     ConEmuCheck.obj
+ 0003:00001110       ?ghWorkingModule@@3_KA     0000000180021110     ConEmuCheck.obj
+ 0003:00001118       ?gfGetRealConsoleWindow@@3P6APEAUHWND__@@XZEA 0000000180021118     ConEmuCheck.obj
+ 0003:00001160       ?gsHardLink@@3PA_WA        0000000180021160     ConEmuTh.obj
+ 0003:000011e0       ?gsJunction@@3PA_WA        00000001800211e0     ConEmuTh.obj
+ 0003:00001260       ?gsSymLink@@3PA_WA         0000000180021260     ConEmuTh.obj
+ 0003:000012e0       ?gsTitleThumbs@@3PA_WA     00000001800212e0     ConEmuTh.obj
+ 0003:00001360       ?gsTitleTiles@@3PA_WA      0000000180021360     ConEmuTh.obj
+ 0003:000013e0       ?gsFolder@@3PA_WA          00000001800213e0     ConEmuTh.obj
+ 0003:00001460       ?gdwModes@@3PAKA           0000000180021460     ConEmuTh.obj
+ 0003:00001468       ?ghConEmuRoot@@3PEAUHWND__@@EA 0000000180021468     ConEmuTh.obj
+ 0003:00001470       ?gThSet@@3UPanelViewSetMapping@@A 0000000180021470     ConEmuTh.obj
+ 0003:00001688       ?ghConEmuWnd@@3PEAUHWND__@@EA 0000000180021688     ConEmuTh.obj
+ 0003:00001690       ?ghPluginModule@@3PEAUHINSTANCE__@@EA 0000000180021690     ConEmuTh.obj
+ 0003:00001698       ?TerminalMode@@3HA         0000000180021698     ConEmuTh.obj
+ 0003:0000169c       ?gnSelfPID@@3KA            000000018002169c     ConEmuTh.obj
+ 0003:000016a0       ?gnMainThreadId@@3KA       00000001800216a0     ConEmuTh.obj
+ 0003:000016a4       ?gnMainThreadIdInitial@@3KA 00000001800216a4     ConEmuTh.obj
+ 0003:000016a8       ?ghDisplayThread@@3PEAXEA  00000001800216a8     ConEmuTh.obj
+ 0003:000016b0       ?gnDisplayThreadId@@3KA    00000001800216b0     ConEmuTh.obj
+ 0003:000016b4       ?gbFadeColors@@3_NA        00000001800216b4     ConEmuTh.obj
+ 0003:000016b5       ?gbFarPanelsReady@@3_NA    00000001800216b5     ConEmuTh.obj
+ 0003:000016b6       ?gbConsoleChangesSyncho@@3_NA 00000001800216b6     ConEmuTh.obj
+ 0003:000016b7       ?gbSynchoRedrawPanelRequested@@3_NA 00000001800216b7     ConEmuTh.obj
+ 0003:000016b8       ?gFarVersion@@3UFarVersion@@A 00000001800216b8     ConEmuTh.obj
+ 0003:000016c4       ?gnRgnDetectFlags@@3KA     00000001800216c4     ConEmuTh.obj
+ 0003:000016c8       ?gfRegisterPanelView@@3P6AHPEAUPanelViewInit@@@ZEA 00000001800216c8     ConEmuTh.obj
+ 0003:000016d0       ?gfGetFarHWND2@@3P6APEAUHWND__@@H@ZEA 00000001800216d0     ConEmuTh.obj
+ 0003:000016d8       ?gpRgnDetect@@3PEAVCRgnDetect@@EA 00000001800216d8     ConEmuTh.obj
+ 0003:000016e0       ?pviLeft@@3UCeFullPanelInfo@@A 00000001800216e0     ConEmuTh.obj
+ 0003:000019a0       ?pviRight@@3UCeFullPanelInfo@@A 00000001800219a0     ConEmuTh.obj
+ 0003:00001c60       ?gpImgCache@@3PEAVCImgCache@@EA 0000000180021c60     ConEmuTh.obj
+ 0003:00001c68       ?gFarPanelSettings@@3UCEFarPanelSettings@@A 0000000180021c68     ConEmuTh.obj
+ 0003:00001c6c       ?gFarInterfaceSettings@@3UCEFarInterfaceSettings@@A 0000000180021c6c     ConEmuTh.obj
+ 0003:00001c70       ?gFarInfo@@3UCEFAR_INFO_MAPPING@@A 0000000180021c70     ConEmuTh.obj
+ 0003:00021fa8       ?gnWaitForKeySeqTick@@3KA  0000000180041fa8     ConEmuTh.obj
+ 0003:00021fac       ?wScanCodeUp@@3GA          0000000180041fac     ConEmuTh.obj
+ 0003:00021fb0       ?gThPal@@3UCESERVER_PALETTE@@A 0000000180041fb0     ConEmuTh.obj
+ 0003:00022030       ?wScanCodeDown@@3GA        0000000180042030     ConEmuTh.obj
+ 0003:00022034       ?gnConsoleChanges@@3KA     0000000180042034     ConEmuTh.obj
+ 0003:00022038       ?gpLastSynchroArg@@3PEAUConEmuThSynchroArg@@EA 0000000180042038     ConEmuTh.obj
+ 0003:00022040       ?gpDbgDlg@@3PEAV?$MFileMapping@Utag_DetectedDialog@@@@EA 0000000180042040     ConEmuTh.obj
+ 0003:00022048       ?gbInfoW_OK@@3HA           0000000180042048     ConEmuTh.obj
+ 0003:00022050       ?InfoW1900@@3PEAUPluginStartupInfo@@EA 0000000180042050     ConEmuTh1900.obj
+ 0003:00022058       ?FSFW1900@@3PEAUFarStandardFunctions@@EA 0000000180042058     ConEmuTh1900.obj
+ 0003:00022060       ?LastIndex@?1??Color2FgIndex@Far3Color@@SAXKAEAGPEBK@Z@4HA 0000000180042060     ConEmuTh1900.obj
+ 0003:00022064       ?LastColor@?1??Color2FgIndex@Far3Color@@SAXKAEAGPEBK@Z@4KA 0000000180042064     ConEmuTh1900.obj
+ 0003:00022068       ?LastIndex@?1??Color2BgIndex@Far3Color@@SAXKHAEAGPEBK@Z@4HA 0000000180042068     ConEmuTh1900.obj
+ 0003:0002206c       ?LastColor@?1??Color2BgIndex@Far3Color@@SAXKHAEAGPEBK@Z@4KA 000000018004206c     ConEmuTh1900.obj
+ 0003:00022280       ?InfoW2800@@3PEAUPluginStartupInfo@@EA 0000000180042280     ConEmuTh2800.obj
+ 0003:00022288       ?FSFW2800@@3PEAUFarStandardFunctions@@EA 0000000180042288     ConEmuTh2800.obj
+ 0003:000224a0       ?InfoW995@@3PEAUPluginStartupInfo@@EA 00000001800424a0     ConEmuTh995.obj
+ 0003:000224a8       ?FSFW995@@3PEAUFarStandardFunctions@@EA 00000001800424a8     ConEmuTh995.obj
+ 0003:000226c0       ?InfoA@@3PEAUPluginStartupInfo@@EA 00000001800426c0     ConEmuThA.obj
+ 0003:000226c8       ?FSFA@@3PEAUFarStandardFunctions@@EA 00000001800426c8     ConEmuThA.obj
+ 0003:000227e8       ?ghCreateEvent@@3PEAXEA    00000001800427e8     Display.obj
+ 0003:000227f0       ?gnCreateViewError@@3HA    00000001800427f0     Display.obj
+ 0003:000227f4       ?gnWin32Error@@3KA         00000001800427f4     Display.obj
+ 0003:000227f8       ?gbCancelAll@@3HA          00000001800427f8     Display.obj
+ 0003:000227fc       ?gnConEmuFadeMsg@@3IA      00000001800427fc     Display.obj
+ 0003:00022800       ?gnConEmuSettingsMsg@@3IA  0000000180042800     Display.obj
+ 0003:00022804       ?gnMapCoordMsg@@3IA        0000000180042804     Display.obj
+ 0003:00022808       ?hkFunc@@3UHkFunc@@A       0000000180042808     HkFunc.obj
+ 0003:00022810       ?ghUpIcon@@3PEAUHICON__@@EA 0000000180042810     ImgCache.obj
+ 0003:00022818       ?AssertMsgBox@@3P6AHPEB_WI0PEAUHWND__@@_N@ZEA 0000000180042818     MAssert.obj
+ 0003:00022820       ?gfnHooksUnlockerProc@@3P6A_N_N@ZEA 0000000180042820     MAssert.obj
+ 0003:00022828       ?ghHeap@@3PEAXEA           0000000180042828     Memory.obj
+ 0003:00022830       ?gNullDesc@@3PEAVMNullDesc@@EA 0000000180042830     MSecurity.obj
+ 0003:00022840       ?gfnSearchAppPaths@@3P6A_NPEB_WAEAUCEStr@@_NPEAU1@@ZEA 0000000180042840     WObjects.obj
+ 0003:0002b050       ?g_ThreadsIdx@@3JA         000000018004b050     WThreads.obj
+ 0003:0002b05c       __error_mode               000000018004b05c     LIBCMT:dllcrt0.obj
+ 0003:0002b060       _aenvptr                   000000018004b060     LIBCMT:dllcrt0.obj
+ 0003:0002b068       _wenvptr                   000000018004b068     LIBCMT:dllcrt0.obj
+ 0003:0002b070       __app_type                 000000018004b070     LIBCMT:dllcrt0.obj
+ 0003:0002b080       __mbulinfo                 000000018004b080     LIBCMT:mbctype.obj
+ 0003:0002b08c       __mbcodepage               000000018004b08c     LIBCMT:mbctype.obj
+ 0003:0002b090       __ismbcodepage             000000018004b090     LIBCMT:mbctype.obj
+ 0003:0002b094       __mblcid                   000000018004b094     LIBCMT:mbctype.obj
+ 0003:0002b098       __locale_changed           000000018004b098     LIBCMT:setlocal.obj
+ 0003:0002b0a0       __lc_handle                000000018004b0a0     LIBCMT:nlsdata2.obj
+ 0003:0002b0b8       __lc_codepage              000000018004b0b8     LIBCMT:nlsdata2.obj
+ 0003:0002b0bc       __lc_collate_cp            000000018004b0bc     LIBCMT:nlsdata2.obj
+ 0003:0002b0c0       __pInvalidArgHandler       000000018004b0c0     LIBCMT:invarg.obj
+ 0003:0002b0c8       _maxwait                   000000018004b0c8     LIBCMT:crtheap.obj
+ 0003:0002b0d0       _umaskval                  000000018004b0d0     LIBCMT:crt0dat.obj
+ 0003:0002b0d4       __argc                     000000018004b0d4     LIBCMT:crt0dat.obj
+ 0003:0002b0d8       __argv                     000000018004b0d8     LIBCMT:crt0dat.obj
+ 0003:0002b0e0       __wargv                    000000018004b0e0     LIBCMT:crt0dat.obj
+ 0003:0002b0e8       _environ                   000000018004b0e8     LIBCMT:crt0dat.obj
+ 0003:0002b0f0       __initenv                  000000018004b0f0     LIBCMT:crt0dat.obj
+ 0003:0002b0f8       _wenviron                  000000018004b0f8     LIBCMT:crt0dat.obj
+ 0003:0002b100       __winitenv                 000000018004b100     LIBCMT:crt0dat.obj
+ 0003:0002b108       _pgmptr                    000000018004b108     LIBCMT:crt0dat.obj
+ 0003:0002b110       _wpgmptr                   000000018004b110     LIBCMT:crt0dat.obj
+ 0003:0002b118       _exitflag                  000000018004b118     LIBCMT:crt0dat.obj
+ 0003:0002b11c       _C_Termination_Done        000000018004b11c     LIBCMT:crt0dat.obj
+ 0003:0002b120       _C_Exit_Done               000000018004b120     LIBCMT:crt0dat.obj
+ 0003:0002b240       _crtheap                   000000018004b240     LIBCMT:heapinit.obj
+ 0003:0002b480       __lconv_static_null        000000018004b480     LIBCMT:lconv.obj
+ 0003:0002b7a8       ?__pInconsistency@@3P6AXXZEA 000000018004b7a8     LIBCMT:hooks.obj
+ 0003:0002b7e8       __pPurecall                000000018004b7e8     LIBCMT:inithelp.obj
+ 0003:0002b7f8       ?_pnhHeap@@3P6AH_K@ZEA     000000018004b7f8     LIBCMT:handler.obj
+ 0003:0002be2c       _newmode                   000000018004be2c     LIBCMT:_newmode.obj
+ 0003:0002be58       _debugger_hook_dummy       000000018004be58     <common>
+ 0003:0002be5c       _nhandle                   000000018004be5c     <common>
+ 0003:0002be60       __pioinfo                  000000018004be60     <common>
+ 0003:0002c060       __env_initialized          000000018004c060     <common>
+ 0003:0002c068       __onexitend                000000018004c068     <common>
+ 0003:0002c070       __onexitbegin              000000018004c070     <common>
+ 0003:0002c078       __mbctype_initialized      000000018004c078     <common>
+ 0003:0002c080       _FPinit                    000000018004c080     <common>
+ 0003:0002c088       __dyn_tls_init_callback    000000018004c088     <common>
+ 0003:0002c090       _acmdln                    000000018004c090     <common>
+ 0003:0002c098       _pDestructExceptionObject  000000018004c098     <common>
 
- entry point at        0001:00013d88
+ entry point at        0001:00013dc8
 
  Static symbols
 
@@ -1093,29 +1093,29 @@
  0001:000057c0       ?LoadFarSettingsW2800@@YAXPEAUCEFarInterfaceSettings@@PEAUCEFarPanelSettings@@@Z 00000001800067c0 f   ConEmuTh2800.obj
  0001:00006b0c       ?LoadFarSettingsW995@@YAXPEAUCEFarInterfaceSettings@@PEAUCEFarPanelSettings@@@Z 0000000180007b0c f   ConEmuTh995.obj
  0001:000075c8       ?LoadFarSettingsA@@YAXPEAUCEFarInterfaceSettings@@PEAUCEFarPanelSettings@@@Z 00000001800085c8 f   ConEmuThA.obj
- 0001:00013c70       __DllMainCRTStartup        0000000180014c70 f   LIBCMT:dllcrt0.obj
- 0001:00013f14       ?setSBCS@@YAXPEAUthreadmbcinfostruct@@@Z 0000000180014f14 f   LIBCMT:mbctype.obj
- 0001:00013fa8       ?setSBUpLow@@YAXPEAUthreadmbcinfostruct@@@Z 0000000180014fa8 f   LIBCMT:mbctype.obj
- 0001:00014248       ?getSystemCP@@YAHH@Z       0000000180015248 f   LIBCMT:mbctype.obj
- 0001:00014a2c       _updatetlocinfoEx_nolock   0000000180015a2c f   LIBCMT:setlocal.obj
- 0001:0001530c       _initterm                  000000018001630c f   LIBCMT:crt0dat.obj
- 0001:0001542c       doexit                     000000018001642c f   LIBCMT:crt0dat.obj
- 0001:00015ac8       parse_cmdline              0000000180016ac8 f   LIBCMT:stdargv.obj
- 0001:00016348       ?__crtLCMapStringA_stat@@YAHPEAUlocaleinfo_struct@@KKPEBDHPEADHHH@Z 0000000180017348 f   LIBCMT:a_map.obj
- 0001:00016920       ?__crtGetStringTypeA_stat@@YAHPEAUlocaleinfo_struct@@KPEBDHPEAGHHH@Z 0000000180017920 f   LIBCMT:a_str.obj
- 0001:00017f50       ?x_ismbbtype_l@@YAHPEAUlocaleinfo_struct@@IHH@Z 0000000180018f50 f   LIBCMT:ismbbyte.obj
- 0001:0001879c       ?strtoxl@@YAKPEAUlocaleinfo_struct@@PEBDPEAPEBDHH@Z 000000018001979c f   LIBCMT:strtol.obj
- 0001:00018bd0       __DllMainCRTStartup$filt$0 0000000180019bd0 f   LIBCMT:dllcrt0.obj
- 0001:00018bf0       _IsNonwritableInCurrentImage$filt$0 0000000180019bf0 f   LIBCMT:pesect.obj
- 0001:00018c11       _setmbcp$fin$0             0000000180019c11 f   LIBCMT:mbctype.obj
- 0001:00018c11       __updatetmbcinfo$fin$0     0000000180019c11 f   LIBCMT:mbctype.obj
- 0001:00018c2a       __updatetlocinfo$fin$0     0000000180019c2a f   LIBCMT:setlocal.obj
- 0001:00018c43       _freefls$fin$1             0000000180019c43 f   LIBCMT:tidtable.obj
- 0001:00018c43       _initptd$fin$1             0000000180019c43 f   LIBCMT:tidtable.obj
- 0001:00018c63       _freefls$fin$0             0000000180019c63 f   LIBCMT:tidtable.obj
- 0001:00018c63       _initptd$fin$0             0000000180019c63 f   LIBCMT:tidtable.obj
- 0001:00018c7c       doexit$fin$0               0000000180019c7c f   LIBCMT:crt0dat.obj
- 0001:00018c9e       _mtinitlocknum$fin$0       0000000180019c9e f   LIBCMT:mlock.obj
- 0001:00018cba       _onexit$fin$0              0000000180019cba f   LIBCMT:onexit.obj
- 0001:00018cce       raise$fin$0                0000000180019cce f   LIBCMT:winsig.obj
- 0001:00018cea       __crtInitCritSecAndSpinCount$filt$0 0000000180019cea f   LIBCMT:initcrit.obj
+ 0001:00013cb0       __DllMainCRTStartup        0000000180014cb0 f   LIBCMT:dllcrt0.obj
+ 0001:00013f54       ?setSBCS@@YAXPEAUthreadmbcinfostruct@@@Z 0000000180014f54 f   LIBCMT:mbctype.obj
+ 0001:00013fe8       ?setSBUpLow@@YAXPEAUthreadmbcinfostruct@@@Z 0000000180014fe8 f   LIBCMT:mbctype.obj
+ 0001:00014288       ?getSystemCP@@YAHH@Z       0000000180015288 f   LIBCMT:mbctype.obj
+ 0001:00014a6c       _updatetlocinfoEx_nolock   0000000180015a6c f   LIBCMT:setlocal.obj
+ 0001:0001534c       _initterm                  000000018001634c f   LIBCMT:crt0dat.obj
+ 0001:0001546c       doexit                     000000018001646c f   LIBCMT:crt0dat.obj
+ 0001:00015b08       parse_cmdline              0000000180016b08 f   LIBCMT:stdargv.obj
+ 0001:0001638c       ?__crtLCMapStringA_stat@@YAHPEAUlocaleinfo_struct@@KKPEBDHPEADHHH@Z 000000018001738c f   LIBCMT:a_map.obj
+ 0001:00016964       ?__crtGetStringTypeA_stat@@YAHPEAUlocaleinfo_struct@@KPEBDHPEAGHHH@Z 0000000180017964 f   LIBCMT:a_str.obj
+ 0001:00017f90       ?x_ismbbtype_l@@YAHPEAUlocaleinfo_struct@@IHH@Z 0000000180018f90 f   LIBCMT:ismbbyte.obj
+ 0001:000187dc       ?strtoxl@@YAKPEAUlocaleinfo_struct@@PEBDPEAPEBDHH@Z 00000001800197dc f   LIBCMT:strtol.obj
+ 0001:00018c10       __DllMainCRTStartup$filt$0 0000000180019c10 f   LIBCMT:dllcrt0.obj
+ 0001:00018c30       _IsNonwritableInCurrentImage$filt$0 0000000180019c30 f   LIBCMT:pesect.obj
+ 0001:00018c51       _setmbcp$fin$0             0000000180019c51 f   LIBCMT:mbctype.obj
+ 0001:00018c51       __updatetmbcinfo$fin$0     0000000180019c51 f   LIBCMT:mbctype.obj
+ 0001:00018c6a       __updatetlocinfo$fin$0     0000000180019c6a f   LIBCMT:setlocal.obj
+ 0001:00018c83       _freefls$fin$1             0000000180019c83 f   LIBCMT:tidtable.obj
+ 0001:00018c83       _initptd$fin$1             0000000180019c83 f   LIBCMT:tidtable.obj
+ 0001:00018ca3       _freefls$fin$0             0000000180019ca3 f   LIBCMT:tidtable.obj
+ 0001:00018ca3       _initptd$fin$0             0000000180019ca3 f   LIBCMT:tidtable.obj
+ 0001:00018cbc       doexit$fin$0               0000000180019cbc f   LIBCMT:crt0dat.obj
+ 0001:00018cde       _mtinitlocknum$fin$0       0000000180019cde f   LIBCMT:mlock.obj
+ 0001:00018cfa       _onexit$fin$0              0000000180019cfa f   LIBCMT:onexit.obj
+ 0001:00018d0e       raise$fin$0                0000000180019d0e f   LIBCMT:winsig.obj
+ 0001:00018d2a       __crtInitCritSecAndSpinCount$filt$0 0000000180019d2a f   LIBCMT:initcrit.obj

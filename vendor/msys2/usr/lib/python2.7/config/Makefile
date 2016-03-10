@@ -28,8 +28,8 @@ MODLIBS=        $(LOCALMODLIBS) $(BASEMODLIBS)
 VERSION=	2.7
 srcdir=		.
 
-abs_srcdir=	/build2/python2/src/Python-2.7.10
-abs_builddir=	/build2/python2/src/Python-2.7.10
+abs_srcdir=	/msys_scripts/python2/src/Python-2.7.11
+abs_builddir=	/msys_scripts/python2/src/Python-2.7.11
 build=		x86_64-pc-msys
 host=		x86_64-pc-msys
 
@@ -43,6 +43,11 @@ SVNVERSION=	svnversion $(srcdir)
 HGVERSION=	hg id -i $(srcdir)
 HGTAG=		hg id -t $(srcdir)
 HGBRANCH=	hg id -b $(srcdir)
+PGO_PROF_GEN_FLAG=-fprofile-generate
+PGO_PROF_USE_FLAG=-fprofile-use -fprofile-correction
+LLVM_PROF_MERGER=true
+LLVM_PROF_FILE=
+LLVM_PROF_ERR=no
 
 GNULD=          yes
 
@@ -205,8 +210,7 @@ TCLTK_INCLUDES=
 TCLTK_LIBS=	
 
 # The task to run while instrument when building the profile-opt target
-PROFILE_TASK=	$(srcdir)/Tools/pybench/pybench.py -n 2 --with-gc --with-syscheck
-#PROFILE_TASK=	$(srcdir)/Lib/test/regrtest.py
+PROFILE_TASK=-m test.regrtest --pgo
 
 # === Definitions added by makesetup ===
 
@@ -317,6 +321,16 @@ ASDLGEN=	$(srcdir)/Parser/asdl_c.py
 
 ##########################################################################
 # Python
+
+OPCODETARGETS_H= \
+		$(srcdir)/Python/opcode_targets.h
+		
+OPCODETARGETGEN= \
+		$(srcdir)/Python/makeopcodetargets.py
+
+OPCODETARGETGEN_FILES= \
+		$(OPCODETARGETGEN) $(srcdir)/Lib/opcode.py
+
 PYTHON_OBJS=	\
 		Python/_warnings.o \
 		Python/Python-ast.o \
@@ -427,27 +441,38 @@ LIBRARY_OBJS=	\
 all:		build_all
 build_all:	$(BUILDPYTHON) oldsharedmods sharedmods gdbhooks
 
-# Compile a binary with gcc profile guided optimization.
+# Compile a binary with profile guided optimization.
 profile-opt:
+	@if [ $(LLVM_PROF_ERR) == yes ]; then \
+		echo "Error: Cannot perform PGO build because llvm-profdata was not found in PATH" ;\
+		echo "Please add it to PATH and run ./configure again" ;\
+		exit 1;\
+	fi
 	@echo "Building with support for profile generation:"
 	$(MAKE) clean
-	$(MAKE) build_all_generate_profile
-	@echo "Running benchmark to generate profile data:"
 	$(MAKE) profile-removal
+	$(MAKE) build_all_generate_profile
+	$(MAKE) profile-removal
+	@echo "Running code to generate profile data (this can take a while):"
 	$(MAKE) run_profile_task
+	$(MAKE) build_all_merge_profile
 	@echo "Rebuilding with profile guided optimizations:"
 	$(MAKE) clean
 	$(MAKE) build_all_use_profile
+	$(MAKE) profile-removal
 
 build_all_generate_profile:
-	$(MAKE) all CFLAGS="$(CFLAGS) -fprofile-generate" LIBS="$(LIBS) -lgcov"
+	$(MAKE) all CFLAGS="$(CFLAGS) $(PGO_PROF_GEN_FLAG)" LDFLAGS="$(LDFLAGS) $(PGO_PROF_GEN_FLAG)" LIBS="$(LIBS)"
 
 run_profile_task:
 	: # FIXME: can't run for a cross build
-	./$(BUILDPYTHON) $(PROFILE_TASK)
+	$(LLVM_PROF_FILE) ./$(BUILDPYTHON) $(PROFILE_TASK) || true
+
+build_all_merge_profile:
+	$(LLVM_PROF_MERGER)
 
 build_all_use_profile:
-	$(MAKE) all CFLAGS="$(CFLAGS) -fprofile-use"
+	$(MAKE) all CFLAGS="$(CFLAGS) $(PGO_PROF_USE_FLAG)"
 
 coverage:
 	@echo "Building with support for coverage checking:"
@@ -687,6 +712,11 @@ Objects/bytearrayobject.o: $(srcdir)/Objects/bytearrayobject.c \
 
 Objects/stringobject.o: $(srcdir)/Objects/stringobject.c \
 				$(STRINGLIB_HEADERS)
+
+$(OPCODETARGETS_H): $(OPCODETARGETGEN_FILES)
+	$(OPCODETARGETGEN) $(OPCODETARGETS_H)
+
+Python/ceval.o: $(OPCODETARGETS_H)
 
 Python/formatter_unicode.o: $(srcdir)/Python/formatter_unicode.c \
 				$(STRINGLIB_HEADERS)
@@ -1332,9 +1362,11 @@ clean: pycremoval
 	find build -name 'fficonfig.h' -exec rm -f {} ';' || true
 	find build -name 'fficonfig.py' -exec rm -f {} ';' || true
 	-rm -f Lib/lib2to3/*Grammar*.pickle
+	-rm -rf build
 
 profile-removal:
 	find . -name '*.gc??' -exec rm -f {} ';'
+	find . -name '*.profclang?' -exec rm -f {} ';'
 
 clobber: clean profile-removal
 	-rm -f $(BUILDPYTHON) $(PGEN) $(LIBRARY) $(LDLIBRARY) $(DLLLIBRARY) \

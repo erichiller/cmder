@@ -38,8 +38,14 @@ Try to maintain portability.
 2. Erase the autowrap plugin
 3. Put the maximus wrap plugin into farmanager
 
-# Directory Copy (no files)
+# Transfer Directory Structure
 
-This will create a directory of all the directories, empty
+Git does NOT upload blank directories, but (msys2 especially) the destination machine can require these upon restoration.
 
-	xcopy /t /e "C:\cmder" cmder-dir
+To back up the directories run(in msys2/bash):
+
+	find /c/cmder -type d > directory.listing
+	
+And then restore with
+
+	cat directory.list.txt | xargs mkdir

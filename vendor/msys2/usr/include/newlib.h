@@ -11,7 +11,7 @@
 /* #undef _ELIX_LEVEL */
 
 /* Newlib version */
-#define _NEWLIB_VERSION "2.3.0"
+#include <_newlib_version.h>
 
 /* C99 formats support (such as %a, %zu, ...) in IO functions like
  * printf/scanf enabled */

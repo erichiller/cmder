@@ -71,21 +71,14 @@ int		 getgrnam_r (const char *, struct group *,
 			char *, size_t, struct group **);
 int		 getgrgid_r (gid_t, struct group *,
 			char *, size_t, struct group **);
-#ifndef _POSIX_SOURCE
+#if __BSD_VISIBLE || __XSI_VISIBLE >= 500
 struct group	*getgrent (void);
 void		 setgrent (void);
 void		 endgrent (void);
-#ifndef __CYGWIN__
-void		 setgrfile (const char *);
-#endif /* !__CYGWIN__ */
-#ifndef _XOPEN_SOURCE
-#ifndef __CYGWIN__
-char		*group_from_gid (gid_t, int);
-int		 setgroupent (int);
-#endif /* !__CYGWIN__ */
+#endif /* __BSD_VISIBLE || __XSI_VISIBLE >= 500 */
+#if __BSD_VISIBLE
 int		 initgroups (const char *, gid_t);
-#endif /* !_XOPEN_SOURCE */
-#endif /* !_POSIX_SOURCE */
+#endif /* __BSD_VISIBLE */
 #endif /* !__INSIDE_CYGWIN__ */
 
 #ifdef __cplusplus

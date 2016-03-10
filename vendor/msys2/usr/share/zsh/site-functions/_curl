@@ -35,6 +35,7 @@ _arguments -C -S \
   {-O,--remote-name}'[Write output to a file named as the remote file]' \
   --socks5-gssapi-service'[SOCKS5 proxy service name for GSS-API]':NAME \
   --stderr'[Where to redirect stderr (use "-" for stdout)]':FILE:_files \
+  --expect100-timeout'[How long to wait for 100-continue (H)]':SECONDS \
   {-g,--globoff}'[Disable URL sequences and ranges using {} and \[\]]' \
   --post301'[Do not switch to GET after following a 301 redirect (H)]' \
   --post302'[Do not switch to GET after following a 302 redirect (H)]' \

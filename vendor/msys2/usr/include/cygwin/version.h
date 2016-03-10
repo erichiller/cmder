@@ -42,7 +42,7 @@ details. */
 	 the Cygwin shared library".  This version is used to track important
 	 changes to the DLL and is mainly informative in nature. */
 
-#define CYGWIN_VERSION_DLL_MAJOR 2004
+#define CYGWIN_VERSION_DLL_MAJOR 2005
 #define CYGWIN_VERSION_DLL_MINOR 0
 
       /* Major numbers before CYGWIN_VERSION_DLL_EPOCH are
@@ -475,13 +475,14 @@ details. */
       291: Export aligned_alloc, at_quick_exit, quick_exit.
       292: Export rpmatch.
       293: Convert utmpname/utmpxname to int.
+      294: Export clog10, clog10f.
      */
 
      /* Note that we forgot to bump the api for ualarm, strtoll, strtoull,
 	sigaltstack, sethostname. */
 
 #define CYGWIN_VERSION_API_MAJOR 0
-#define CYGWIN_VERSION_API_MINOR 293
+#define CYGWIN_VERSION_API_MINOR 294
 
      /* There is also a compatibity version number associated with the
 	shared memory regions.  It is incremented when incompatible

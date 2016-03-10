@@ -27,7 +27,7 @@ use File::Path qw/rmtree/;
 use File::Basename;
 use Getopt::Long qw(:config require_order no_ignore_case);
 
-my $VERSION = '2.7.0';
+my $VERSION = '2.7.2';
 
 my $log = GITCVS::log->new();
 my $cfg;
@@ -2665,7 +2665,7 @@ sub argsfromdir
     #   co  # Obtain list directly.
     #   remove # HERE: TEST: MAYBE client does the recursion for us,
     #          # since it only makes sense to remove stuff already in
-    #          # the sandobx?
+    #          # the sandbox?
     #   ci # HERE: Similar to remove...
     #      # Don't try to implement the confusing/weird
     #      # ci -r bug er.."feature".

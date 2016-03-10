@@ -19,7 +19,7 @@
 #
 
 declare -r myname='checkupdates'
-declare -r myver='4.2.1-432-ga10ea-dirty'
+declare -r myver='4.2.1-503-g62b54-dirty'
 
 plain() {
 	(( QUIET )) && return

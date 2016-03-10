@@ -24,7 +24,7 @@ use warnings;
 use Term::ANSIColor;
 
 my $myname = 'pacsearch';
-my $myver = '4.2.1-432-ga10ea-dirty';
+my $myver = '4.2.1-503-g62b54-dirty';
 
 sub usage {
 	print "$myname (pacman) v$myver\n\n";

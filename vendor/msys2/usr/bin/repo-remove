@@ -4,7 +4,7 @@
 #   repo-remove - remove a package entry from a given repo database file
 #   Generated from repo-add.sh.in; do not edit by hand.
 #
-#   Copyright (c) 2006-2015 Pacman Development Team <pacman-dev@archlinux.org>
+#   Copyright (c) 2006-2016 Pacman Development Team <pacman-dev@archlinux.org>
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -25,7 +25,7 @@ shopt -s extglob
 export TEXTDOMAIN='pacman-scripts'
 export TEXTDOMAINDIR='/usr/share/locale'
 
-declare -r myver='4.2.1-432-ga10ea-dirty'
+declare -r myver='4.2.1-503-g62b54-dirty'
 declare -r confdir='/etc'
 
 QUIET=0
@@ -161,7 +161,7 @@ version() {
 	cmd=${0##*/}
 	printf "%s (pacman) %s\n\n" "$cmd" "$myver"
 	printf -- "$(gettext "\
-Copyright (c) 2006-2015 Pacman Development Team <pacman-dev@archlinux.org>\n\n\
+Copyright (c) 2006-2016 Pacman Development Team <pacman-dev@archlinux.org>\n\n\
 This is free software; see the source for copying conditions.\n\
 There is NO WARRANTY, to the extent permitted by law.\n")"
 }
@@ -614,8 +614,8 @@ prepare_repo_db() {
 					# TODO: remove if statement
 					if [[ $repo == "db" ]]; then
 						error "$(gettext "Repository file '%s' was not found.")" "$dbfile"
+						exit 1
 					fi
-					exit 1
 					;;
 				repo-add)
 					# check if the file can be created (write permission, directory existence, etc)
@@ -889,6 +889,17 @@ if (( SIGN || VERIFY )); then
 fi
 
 check_xdelta
+
+if (( VERIFY && ${#args[@]} == 1 )); then
+	for repo in "db" "files"; do
+		dbfile=${repodir}/$REPO_DB_PREFIX.$repo.$REPO_DB_SUFFIX
+
+		if [[ -f $dbfile ]]; then
+			verify_signature "$dbfile"
+		fi
+	done
+	exit 0
+fi
 
 prepare_repo_db
 
