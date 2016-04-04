@@ -1,11 +1,11 @@
  ConEmuLn
 
- Timestamp is 564922ff (Mon Nov 16 03:27:43 2015)
+ Timestamp is 56e1ec7e (Fri Mar 11 00:51:58 2016)
 
  Preferred load address is 10000000
 
  Start         Length     Name                   Class
- 0001:00000000 00004f22H .text                   CODE
+ 0001:00000000 00004f36H .text                   CODE
  0002:00000000 000000acH .idata$5                DATA
  0002:000000b0 000004e0H .rdata                  DATA
  0002:00000590 00000010H .rdata$sxdata           DATA
@@ -13,10 +13,10 @@
  0002:000005dc 00000064H .idata$2                DATA
  0002:00000640 00000014H .idata$3                DATA
  0002:00000654 000000acH .idata$4                DATA
- 0002:00000700 000002aeH .idata$6                DATA
+ 0002:00000700 000002acH .idata$6                DATA
  0002:000009b0 0000018bH .edata                  DATA
  0003:00000000 00000148H .data                   DATA
- 0003:00000148 00008328H .bss                    DATA
+ 0003:00000148 0000833cH .bss                    DATA
  0004:00000000 00000058H .rsrc$01                DATA
  0004:00000060 000002e8H .rsrc$02                DATA
 
@@ -66,27 +66,27 @@
  0001:0000238d       ?SettingsLoadW1900@@YIXXZ  1000338d f   ConEmuLn1900.obj
  0001:0000247e       ?SettingsSaveW1900@@YIXXZ  1000347e f   ConEmuLn1900.obj
  0001:00002547       _GetGlobalInfoW@4          10003547 f   ConEmuLn2800.obj
- 0001:000025d5       ?GetPluginInfoW2800@@YIXPAX@Z 100035d5 f   ConEmuLn2800.obj
- 0001:00002636       ?SetStartupInfoW2800@@YIXPAX@Z 10003636 f   ConEmuLn2800.obj
- 0001:00002724       ?OpenW2800@@YGPAXPBX@Z     10003724 f   ConEmuLn2800.obj
- 0001:00002724       ?OpenW1900@@YGPAXPBX@Z     10003724 f   ConEmuLn1900.obj
- 0001:00002743       ?ExitFARW2800@@YIXXZ       10003743 f   ConEmuLn2800.obj
- 0001:00002772       ?GetMsgW2800@@YIPB_WH@Z    10003772 f   ConEmuLn2800.obj
- 0001:000030ce       ?ConfigureW2800@@YIHH@Z    100040ce f   ConEmuLn2800.obj
- 0001:000030df       ?SettingsLoadW2800@@YIXXZ  100040df f   ConEmuLn2800.obj
- 0001:000031bf       ?SettingsSaveW2800@@YIXXZ  100041bf f   ConEmuLn2800.obj
- 0001:0000327e       _GetMinFarVersion@0        1000427e f   ConEmuLnA.obj
- 0001:000032ad       _SetStartupInfo@4          100042ad f   ConEmuLnA.obj
- 0001:0000341f       _GetPluginInfo@4           1000441f f   ConEmuLnA.obj
- 0001:00003488       _ExitFAR@0                 10004488 f   ConEmuLnA.obj
- 0001:00003df3       _Configure@4               10004df3 f   ConEmuLnA.obj
- 0001:00003e08       _OpenPlugin@8              10004e08 f   ConEmuLnA.obj
- 0001:00003e1e       ?SettingsLoadA@@YIXXZ      10004e1e f   ConEmuLnA.obj
- 0001:00003e29       ?SettingsSaveA@@YIXXZ      10004e29 f   ConEmuLnA.obj
- 0001:00003e34       ?HeapInitialize@@YI_NXZ    10004e34 f   Memory.obj
- 0001:00003e5a       ?HeapDeinitialize@@YIXXZ   10004e5a f   Memory.obj
- 0001:00003e72       ?xf_calloc@@YAPAXII@Z      10004e72 f   Memory.obj
- 0001:00003e8b       ?xf_free@@YAXPAX@Z         10004e8b f   Memory.obj
+ 0001:000025d7       ?GetPluginInfoW2800@@YIXPAX@Z 100035d7 f   ConEmuLn2800.obj
+ 0001:00002638       ?SetStartupInfoW2800@@YIXPAX@Z 10003638 f   ConEmuLn2800.obj
+ 0001:00002726       ?OpenW1900@@YGPAXPBX@Z     10003726 f   ConEmuLn1900.obj
+ 0001:00002726       ?OpenW2800@@YGPAXPBX@Z     10003726 f   ConEmuLn2800.obj
+ 0001:00002745       ?ExitFARW2800@@YIXXZ       10003745 f   ConEmuLn2800.obj
+ 0001:00002774       ?GetMsgW2800@@YIPB_WH@Z    10003774 f   ConEmuLn2800.obj
+ 0001:000030d0       ?ConfigureW2800@@YIHH@Z    100040d0 f   ConEmuLn2800.obj
+ 0001:000030e1       ?SettingsLoadW2800@@YIXXZ  100040e1 f   ConEmuLn2800.obj
+ 0001:000031c1       ?SettingsSaveW2800@@YIXXZ  100041c1 f   ConEmuLn2800.obj
+ 0001:00003280       _GetMinFarVersion@0        10004280 f   ConEmuLnA.obj
+ 0001:000032af       _SetStartupInfo@4          100042af f   ConEmuLnA.obj
+ 0001:00003421       _GetPluginInfo@4           10004421 f   ConEmuLnA.obj
+ 0001:0000348a       _ExitFAR@0                 1000448a f   ConEmuLnA.obj
+ 0001:00003df5       _Configure@4               10004df5 f   ConEmuLnA.obj
+ 0001:00003e0a       _OpenPlugin@8              10004e0a f   ConEmuLnA.obj
+ 0001:00003e20       ?SettingsLoadA@@YIXXZ      10004e20 f   ConEmuLnA.obj
+ 0001:00003e2b       ?SettingsSaveA@@YIXXZ      10004e2b f   ConEmuLnA.obj
+ 0001:00003e36       ?HeapInitialize@@YI_NXZ    10004e36 f   Memory.obj
+ 0001:00003e5c       ?HeapDeinitialize@@YIXXZ   10004e5c f   Memory.obj
+ 0001:00003e74       ?xf_calloc@@YAPAXII@Z      10004e74 f   Memory.obj
+ 0001:00003e8d       ?xf_free@@YAXPAX@Z         10004e8d f   Memory.obj
  0001:00003eb0       _memset                    10004eb0 f   libCRT:memset.obj
  0001:00003ef0       _memmove                   10004ef0 f   libCRT:memmove.obj
  0001:000040f0       _wcstoul                   100050f0 f   libCRT:strtol.obj
@@ -98,34 +98,33 @@
  0001:000042f7       __SEH_epilog               100052f7 f   LIBCMT:sehprolg.obj
  0001:00004310       __except_handler3          10005310 f   LIBCMT:exsup3.obj
  0001:0000440e       __seh_longjmp_unwind@4     1000540e f   LIBCMT:exsup3.obj
- 0001:00004430       __alloca_probe             10005430     LIBCMT:chkstk.obj
  0001:00004430       __chkstk                   10005430 f   LIBCMT:chkstk.obj
+ 0001:00004430       __alloca_probe             10005430     LIBCMT:chkstk.obj
  0001:0000445b       _CallDestructExceptionObject 1000545b f   LIBCMT:calldtor.obj
  0001:00004494       __global_unwind2           10005494 f   LIBCMT:exsup.obj
  0001:000044f9       __local_unwind2            100054f9 f   LIBCMT:exsup.obj
  0001:0000457d       __abnormal_termination     1000557d f   LIBCMT:exsup.obj
  0001:000045a0       __NLG_Notify1              100055a0 f   LIBCMT:exsup.obj
  0001:000045a9       __NLG_Notify               100055a9 f   LIBCMT:exsup.obj
- 0001:000045c0       __NLG_Dispatch2            100055c0     LIBCMT:exsup.obj
  0001:000045c0       __NLG_Dispatch             100055c0     LIBCMT:exsup.obj
+ 0001:000045c0       __NLG_Dispatch2            100055c0     LIBCMT:exsup.obj
  0001:000045c8       __NLG_Call                 100055c8 f   LIBCMT:exsup.obj
  0001:000045ca       __NLG_Return2              100055ca     LIBCMT:exsup.obj
  0001:00004690       __ValidateEH3RN            10005690 f   LIBCMT:eh3valid.obj
- 0001:00004a00       __ValidateImageBase        10005a00 f   LIBCMT:pesect.obj
- 0001:00004a40       __FindPESection            10005a40 f   LIBCMT:pesect.obj
- 0001:00004a84       __IsNonwritableInCurrentImage 10005a84 f   LIBCMT:pesect.obj
- 0001:00004af0       @__security_check_cookie@4 10005af0 f   LIBCMT:secchk.obj
- 0001:00004b00       __except_handler4          10005b00 f   LIBCMT:chandler4.obj
- 0001:00004c8c       __SEH_prolog4              10005c8c f   LIBCMT:sehprolg4.obj
- 0001:00004cd1       __SEH_epilog4              10005cd1 f   LIBCMT:sehprolg4.obj
- 0001:00004ce5       ___report_gsfailure        10005ce5 f   LIBCMT:gs_report.obj
- 0001:00004dc8       __local_unwind4            10005dc8 f   LIBCMT:exsup4.obj
- 0001:00004e9e       __seh_longjmp_unwind4@4    10005e9e f   LIBCMT:exsup4.obj
- 0001:00004eba       @_EH4_CallFilterFunc@8     10005eba f   LIBCMT:exsup4.obj
- 0001:00004ed1       @_EH4_TransferToHandler@8  10005ed1 f   LIBCMT:exsup4.obj
- 0001:00004eea       @_EH4_GlobalUnwind@4       10005eea f   LIBCMT:exsup4.obj
- 0001:00004f04       @_EH4_LocalUnwind@16       10005f04 f   LIBCMT:exsup4.obj
- 0001:00004f1c       _RtlUnwind@16              10005f1c f   kernel32:KERNEL32.dll
+ 0001:000049e0       __ValidateImageBase        100059e0 f   LIBCMT:pesect.obj
+ 0001:00004a20       __FindPESection            10005a20 f   LIBCMT:pesect.obj
+ 0001:00004a70       __IsNonwritableInCurrentImage 10005a70 f   LIBCMT:pesect.obj
+ 0001:00004b2d       @__security_check_cookie@4 10005b2d f   LIBCMT:secchk.obj
+ 0001:00004b40       __except_handler4          10005b40 f   LIBCMT:chandler4.obj
+ 0001:00004ccc       ___report_gsfailure        10005ccc f   LIBCMT:gs_report.obj
+ 0001:00004dd4       __local_unwind4            10005dd4 f   LIBCMT:exsup4.obj
+ 0001:00004eaa       __seh_longjmp_unwind4@4    10005eaa f   LIBCMT:exsup4.obj
+ 0001:00004ec6       @_EH4_CallFilterFunc@8     10005ec6 f   LIBCMT:exsup4.obj
+ 0001:00004edd       @_EH4_TransferToHandler@8  10005edd f   LIBCMT:exsup4.obj
+ 0001:00004ef6       @_EH4_GlobalUnwind@4       10005ef6 f   LIBCMT:exsup4.obj
+ 0001:00004f10       @_EH4_LocalUnwind@16       10005f10 f   LIBCMT:exsup4.obj
+ 0001:00004f27       __crt_debugger_hook        10005f27 f   LIBCMT:dbghook.obj
+ 0001:00004f30       _RtlUnwind@16              10005f30 f   kernel32:KERNEL32.dll
  0002:00000000       __imp__RegSetValueExW@24   10006000     advapi32:ADVAPI32.dll
  0002:00000004       __imp__RegOpenKeyExW@20    10006004     advapi32:ADVAPI32.dll
  0002:00000008       __imp__RegQueryValueExW@24 10006008     advapi32:ADVAPI32.dll
@@ -156,8 +155,8 @@
  0002:0000006c       __imp__lstrlenW@4          1000606c     kernel32:KERNEL32.dll
  0002:00000070       __imp__VirtualProtect@16   10006070     kernel32:KERNEL32.dll
  0002:00000074       __imp__GetLastError@0      10006074     kernel32:KERNEL32.dll
- 0002:00000078       __imp__lstrcpynA@12        10006078     kernel32:KERNEL32.dll
- 0002:0000007c       __imp__InterlockedExchange@8 1000607c     kernel32:KERNEL32.dll
+ 0002:00000078       __imp__IsDebuggerPresent@0 10006078     kernel32:KERNEL32.dll
+ 0002:0000007c       __imp__lstrcpynA@12        1000607c     kernel32:KERNEL32.dll
  0002:00000080       __imp__VirtualQuery@12     10006080     kernel32:KERNEL32.dll
  0002:00000084       __imp__RtlUnwind@16        10006084     kernel32:KERNEL32.dll
  0002:00000088       \177KERNEL32_NULL_THUNK_DATA 10006088     kernel32:KERNEL32.dll
@@ -241,8 +240,10 @@
  0003:00007fb0       ?InfoA@@3PAUPluginStartupInfo@@A 1000efb0     ConEmuLnA.obj
  0003:00007fb4       ?FSFA@@3PAUFarStandardFunctions@@A 1000efb4     ConEmuLnA.obj
  0003:000080c0       ?AssertMsgBox@@3P6IHPB_WI0PAUHWND__@@_N@ZA 1000f0c0     MAssert.obj
- 0003:000080c4       ?ghHeap@@3PAXA             1000f0c4     Memory.obj
- 0003:0000846c       __pDestructExceptionObject 1000f46c     <common>
+ 0003:000080c4       ?gfnHooksUnlockerProc@@3P6I_N_N@ZA 1000f0c4     MAssert.obj
+ 0003:000080c8       ?ghHeap@@3PAXA             1000f0c8     Memory.obj
+ 0003:0000847c       __debugger_hook_dummy      1000f47c     <common>
+ 0003:00008480       __pDestructExceptionObject 1000f480     <common>
 
  entry point at        0001:00000df2
 
@@ -258,13 +259,13 @@
  0001:0000113f       ?ConfigureProc@@YIHH@Z     1000213f f   ConEmuLn995.obj
  0001:00001a6c       ?ConfigDlgProc@@YGHPAXHH0@Z 10002a6c f   ConEmuLn1900.obj
  0001:00001b8b       ?ConfigureProc@@YIHH@Z     10002b8b f   ConEmuLn1900.obj
- 0001:00002791       ?ConfigDlgProc@@YGHPAXHH0@Z 10003791 f   ConEmuLn2800.obj
- 0001:000028b0       ?ConfigureProc@@YIHH@Z     100038b0 f   ConEmuLn2800.obj
- 0001:000034d3       ?GetMsg@@YIPADH@Z          100044d3 f   ConEmuLnA.obj
- 0001:000034eb       ?ConfigDlgProc@@YGJPAXHHJ@Z 100044eb f   ConEmuLnA.obj
- 0001:0000360e       ?ConfigureProc@@YIHH@Z     1000460e f   ConEmuLnA.obj
+ 0001:00002793       ?ConfigDlgProc@@YGHPAXHH0@Z 10003793 f   ConEmuLn2800.obj
+ 0001:000028b2       ?ConfigureProc@@YIHH@Z     100038b2 f   ConEmuLn2800.obj
+ 0001:000034d5       ?GetMsg@@YIPADH@Z          100044d5 f   ConEmuLnA.obj
+ 0001:000034ed       ?ConfigDlgProc@@YGJPAXHHJ@Z 100044ed f   ConEmuLnA.obj
+ 0001:00003610       ?ConfigureProc@@YIHH@Z     10004610 f   ConEmuLnA.obj
  0001:00003f50       ?strtoxl@@YAKPB_WPAPA_WHH@Z 10004f50 f   libCRT:strtol.obj
  0001:00004110       ?strtoxl@@YAKPBDPAPADHH@Z  10005110 f   libCRT:strtol.obj
  0001:000044b4       __unwind_handler           100054b4 f   LIBCMT:exsup.obj
  0001:000045d0       _ValidateScopeTableHandlers 100055d0 f   LIBCMT:eh3valid.obj
- 0001:00004e58       __unwind_handler4          10005e58 f   LIBCMT:exsup4.obj
+ 0001:00004e64       __unwind_handler4          10005e64 f   LIBCMT:exsup4.obj

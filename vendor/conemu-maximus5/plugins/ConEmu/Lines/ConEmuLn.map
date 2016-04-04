@@ -1,6 +1,6 @@
  ConEmuLn
 
- Timestamp is 56df5117 (Wed Mar 09 01:24:23 2016)
+ Timestamp is 56fb92af (Wed Mar 30 11:47:43 2016)
 
  Preferred load address is 10000000
 
@@ -16,7 +16,7 @@
  0002:00000700 000002acH .idata$6                DATA
  0002:000009b0 0000018bH .edata                  DATA
  0003:00000000 00000148H .data                   DATA
- 0003:00000148 0000833cH .bss                    DATA
+ 0003:00000148 00008344H .bss                    DATA
  0004:00000000 00000058H .rsrc$01                DATA
  0004:00000060 000002e8H .rsrc$02                DATA
 
@@ -60,16 +60,16 @@
  0001:000018c4       ?SettingsSaveW995@@YIXXZ   100028c4 f   ConEmuLn995.obj
  0001:000018cf       ?GetPluginInfoW1900@@YIXPAX@Z 100028cf f   ConEmuLn1900.obj
  0001:00001930       ?SetStartupInfoW1900@@YIXPAX@Z 10002930 f   ConEmuLn1900.obj
- 0001:00001a1e       ?ExitFARW1900@@YIXXZ       10002a1e f   ConEmuLn1900.obj
- 0001:00001a4d       ?GetMsgW1900@@YIPB_WH@Z    10002a4d f   ConEmuLn1900.obj
- 0001:0000237c       ?ConfigureW1900@@YIHH@Z    1000337c f   ConEmuLn1900.obj
- 0001:0000238d       ?SettingsLoadW1900@@YIXXZ  1000338d f   ConEmuLn1900.obj
- 0001:0000247e       ?SettingsSaveW1900@@YIXXZ  1000347e f   ConEmuLn1900.obj
- 0001:00002547       _GetGlobalInfoW@4          10003547 f   ConEmuLn2800.obj
- 0001:000025d7       ?GetPluginInfoW2800@@YIXPAX@Z 100035d7 f   ConEmuLn2800.obj
- 0001:00002638       ?SetStartupInfoW2800@@YIXPAX@Z 10003638 f   ConEmuLn2800.obj
- 0001:00002726       ?OpenW1900@@YGPAXPBX@Z     10003726 f   ConEmuLn1900.obj
- 0001:00002726       ?OpenW2800@@YGPAXPBX@Z     10003726 f   ConEmuLn2800.obj
+ 0001:00001a1e       ?OpenW2800@@YGPAXPBX@Z     10002a1e f   ConEmuLn2800.obj
+ 0001:00001a1e       ?OpenW1900@@YGPAXPBX@Z     10002a1e f   ConEmuLn1900.obj
+ 0001:00001a3d       ?ExitFARW1900@@YIXXZ       10002a3d f   ConEmuLn1900.obj
+ 0001:00001a6c       ?GetMsgW1900@@YIPB_WH@Z    10002a6c f   ConEmuLn1900.obj
+ 0001:0000239b       ?ConfigureW1900@@YIHH@Z    1000339b f   ConEmuLn1900.obj
+ 0001:000023ac       ?SettingsLoadW1900@@YIXXZ  100033ac f   ConEmuLn1900.obj
+ 0001:0000249d       ?SettingsSaveW1900@@YIXXZ  1000349d f   ConEmuLn1900.obj
+ 0001:00002566       _GetGlobalInfoW@4          10003566 f   ConEmuLn2800.obj
+ 0001:000025f6       ?GetPluginInfoW2800@@YIXPAX@Z 100035f6 f   ConEmuLn2800.obj
+ 0001:00002657       ?SetStartupInfoW2800@@YIXPAX@Z 10003657 f   ConEmuLn2800.obj
  0001:00002745       ?ExitFARW2800@@YIXXZ       10003745 f   ConEmuLn2800.obj
  0001:00002774       ?GetMsgW2800@@YIPB_WH@Z    10003774 f   ConEmuLn2800.obj
  0001:000030d0       ?ConfigureW2800@@YIHH@Z    100040d0 f   ConEmuLn2800.obj
@@ -221,29 +221,29 @@
  0003:00000140       ___security_cookie         10007140     LIBCMT:gs_cookie.obj
  0003:00000144       ___security_cookie_complement 10007144     LIBCMT:gs_cookie.obj
  0003:00007948       ?g_ThreadsIdx@@3JA         1000e948     WThreads.obj
- 0003:0000794c       ?ghPluginModule@@3PAUHINSTANCE__@@A 1000e94c     ConEmuLn.obj
- 0003:00007950       ?gFarVersion@@3UFarVersion@@A 1000e950     ConEmuLn.obj
- 0003:00007960       ?gbInStartPlugin@@3_NA     1000e960     ConEmuLn.obj
- 0003:00007961       ?gbSetStartupInfoOk@@3_NA  1000e961     ConEmuLn.obj
- 0003:00007964       ?gbBackgroundEnabled@@3HA  1000e964     ConEmuLn.obj
- 0003:00007968       ?gbLinesColorEditor@@3HA   1000e968     ConEmuLn.obj
- 0003:0000796c       ?gbLinesColorViewer@@3HA   1000e96c     ConEmuLn.obj
- 0003:00007970       ?giHilightType@@3HA        1000e970     ConEmuLn.obj
- 0003:00007974       ?gbHilightPlugins@@3HA     1000e974     ConEmuLn.obj
- 0003:00007978       ?gbInfoW_OK@@3HA           1000e978     ConEmuLn.obj
- 0003:00007980       ?InfoW995@@3PAUPluginStartupInfo@@A 1000e980     ConEmuLn995.obj
- 0003:00007984       ?FSFW995@@3PAUFarStandardFunctions@@A 1000e984     ConEmuLn995.obj
- 0003:00007b90       ?InfoW1900@@3PAUPluginStartupInfo@@A 1000eb90     ConEmuLn1900.obj
- 0003:00007b94       ?FSFW1900@@3PAUFarStandardFunctions@@A 1000eb94     ConEmuLn1900.obj
- 0003:00007da0       ?InfoW2800@@3PAUPluginStartupInfo@@A 1000eda0     ConEmuLn2800.obj
- 0003:00007da4       ?FSFW2800@@3PAUFarStandardFunctions@@A 1000eda4     ConEmuLn2800.obj
- 0003:00007fb0       ?InfoA@@3PAUPluginStartupInfo@@A 1000efb0     ConEmuLnA.obj
- 0003:00007fb4       ?FSFA@@3PAUFarStandardFunctions@@A 1000efb4     ConEmuLnA.obj
- 0003:000080c0       ?AssertMsgBox@@3P6IHPB_WI0PAUHWND__@@_N@ZA 1000f0c0     MAssert.obj
- 0003:000080c4       ?gfnHooksUnlockerProc@@3P6I_N_N@ZA 1000f0c4     MAssert.obj
- 0003:000080c8       ?ghHeap@@3PAXA             1000f0c8     Memory.obj
- 0003:0000847c       __debugger_hook_dummy      1000f47c     <common>
- 0003:00008480       __pDestructExceptionObject 1000f480     <common>
+ 0003:00007950       ?ghPluginModule@@3PAUHINSTANCE__@@A 1000e950     ConEmuLn.obj
+ 0003:00007954       ?gFarVersion@@3UFarVersion@@A 1000e954     ConEmuLn.obj
+ 0003:00007964       ?gbInStartPlugin@@3_NA     1000e964     ConEmuLn.obj
+ 0003:00007965       ?gbSetStartupInfoOk@@3_NA  1000e965     ConEmuLn.obj
+ 0003:00007968       ?gbBackgroundEnabled@@3HA  1000e968     ConEmuLn.obj
+ 0003:0000796c       ?gbLinesColorEditor@@3HA   1000e96c     ConEmuLn.obj
+ 0003:00007970       ?gbLinesColorViewer@@3HA   1000e970     ConEmuLn.obj
+ 0003:00007974       ?giHilightType@@3HA        1000e974     ConEmuLn.obj
+ 0003:00007978       ?gbHilightPlugins@@3HA     1000e978     ConEmuLn.obj
+ 0003:0000797c       ?gbInfoW_OK@@3HA           1000e97c     ConEmuLn.obj
+ 0003:00007984       ?InfoW995@@3PAUPluginStartupInfo@@A 1000e984     ConEmuLn995.obj
+ 0003:00007988       ?FSFW995@@3PAUFarStandardFunctions@@A 1000e988     ConEmuLn995.obj
+ 0003:00007b98       ?InfoW1900@@3PAUPluginStartupInfo@@A 1000eb98     ConEmuLn1900.obj
+ 0003:00007b9c       ?FSFW1900@@3PAUFarStandardFunctions@@A 1000eb9c     ConEmuLn1900.obj
+ 0003:00007da8       ?InfoW2800@@3PAUPluginStartupInfo@@A 1000eda8     ConEmuLn2800.obj
+ 0003:00007dac       ?FSFW2800@@3PAUFarStandardFunctions@@A 1000edac     ConEmuLn2800.obj
+ 0003:00007fb8       ?InfoA@@3PAUPluginStartupInfo@@A 1000efb8     ConEmuLnA.obj
+ 0003:00007fbc       ?FSFA@@3PAUFarStandardFunctions@@A 1000efbc     ConEmuLnA.obj
+ 0003:000080c8       ?AssertMsgBox@@3P6IHPB_WI0PAUHWND__@@_N@ZA 1000f0c8     MAssert.obj
+ 0003:000080cc       ?gfnHooksUnlockerProc@@3P6I_N_N@ZA 1000f0cc     MAssert.obj
+ 0003:000080d0       ?ghHeap@@3PAXA             1000f0d0     Memory.obj
+ 0003:00008484       __debugger_hook_dummy      1000f484     <common>
+ 0003:00008488       __pDestructExceptionObject 1000f488     <common>
 
  entry point at        0001:00000df2
 
@@ -257,8 +257,8 @@
  0001:00000c60       ?LoadFarVersion@@YI_NAAUFarVersion@@AAY0CAA@_W@Z 10001c60 f   ConEmuLn.obj
  0001:00001020       ?ConfigDlgProc@@YGJPAXHHJ@Z 10002020 f   ConEmuLn995.obj
  0001:0000113f       ?ConfigureProc@@YIHH@Z     1000213f f   ConEmuLn995.obj
- 0001:00001a6c       ?ConfigDlgProc@@YGHPAXHH0@Z 10002a6c f   ConEmuLn1900.obj
- 0001:00001b8b       ?ConfigureProc@@YIHH@Z     10002b8b f   ConEmuLn1900.obj
+ 0001:00001a8b       ?ConfigDlgProc@@YGHPAXHH0@Z 10002a8b f   ConEmuLn1900.obj
+ 0001:00001baa       ?ConfigureProc@@YIHH@Z     10002baa f   ConEmuLn1900.obj
  0001:00002793       ?ConfigDlgProc@@YGHPAXHH0@Z 10003793 f   ConEmuLn2800.obj
  0001:000028b2       ?ConfigureProc@@YIHH@Z     100038b2 f   ConEmuLn2800.obj
  0001:000034d5       ?GetMsg@@YIPADH@Z          100044d5 f   ConEmuLnA.obj

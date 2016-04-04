@@ -1,6 +1,6 @@
  ConEmuBg
 
- Timestamp is 56df511e (Wed Mar 09 01:24:30 2016)
+ Timestamp is 56fb92b5 (Wed Mar 30 11:47:49 2016)
 
  Preferred load address is 10000000
 
@@ -14,7 +14,7 @@
  0002:00001510 000005feH .idata$6                DATA
  0002:00001b10 0000018bH .edata                  DATA
  0003:00000000 000016e0H .data                   DATA
- 0003:000016e0 000081bcH .bss                    DATA
+ 0003:000016e0 000081c0H .bss                    DATA
  0004:00000000 00000058H .rsrc$01                DATA
  0004:00000060 000002e8H .rsrc$02                DATA
 
@@ -128,8 +128,8 @@
  0001:000058f8       ?xf_free@@YAXPAX@Z         100068f8 f   Memory.obj
  0001:00005916       ??2@YAPAXI@Z               10006916 f   Memory.obj
  0001:00005916       ??_U@YAPAXI@Z              10006916 f   Memory.obj
- 0001:0000591b       ??3@YAXPAX@Z               1000691b f   Memory.obj
  0001:0000591b       ??_V@YAXPAX@Z              1000691b f   Memory.obj
+ 0001:0000591b       ??3@YAXPAX@Z               1000691b f   Memory.obj
  0001:00005920       ?Init@MSectionSimple@@QAEXXZ 10006920 f   MSectionSimple.obj
  0001:00005936       ?Close@MSectionSimple@@QAEXXZ 10006936 f   MSectionSimple.obj
  0001:0000594c       ?TryEnter@MSectionSimple@@QAE_NXZ 1000694c f   MSectionSimple.obj

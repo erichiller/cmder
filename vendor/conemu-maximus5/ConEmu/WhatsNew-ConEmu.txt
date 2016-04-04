@@ -20,6 +20,105 @@ https://conemu.github.io/en/Whats_New.html
 -------------------------------------------
 
 
+2016.3.29
+* Redesign ‘Keys & Macro’ settings page. Let `Alt+F` put focus into the ‘Filter’ field.
+* Hotkey `Ctrl+Alt+Break` was not processed properly.
+* LogFile was not created when ‘Internal LogFiles’ checkbox was on.
+* Simplify switching between Tasks on the ‘Tasks’ settings page (Up/Down keys if checkbox/button has focus).
+* gh-404, gh-322: Fix crash in the integrated applications after ConEmu update (DefTerm).
+  The effect will be noticed on the **next** update.
+
+
+2016.3.28
+* New default hotkeys for process termination:
+  * `Win+Alt+Break` - Terminate all but shell processes in the current console;
+  * `Ctrl+Alt+Break` - Terminate active process in the current console.
+* gh-605: Fix regressions on ‘App distinct’ settings page (EOL).
+* gh-294: Add ‘Filter’ field to ‘Keys and Macro’ settings page.
+* gh-318: With ES_NUMBER user can't enter negative value (X/Y).
+* gh-318: Get rid of gap in Quake mode when frame width is less than 3 pix.
+* gh-165: Allow to drag Quake consoles between monitors.
+* Show `Ctrl+Break` but `Pause` in the hotkeys list.
+* l10n. Update resources
+* gh-304: Use full monitor working area for maximized/fullscreen Quake mode.
+
+
+2016.3.27
+* Add palette change logging. Ref: gh-599, searching for bottle neck
+* gh-593: Background color index was cropped to 8-color palette after `\e[9999;1H`.
+* gh-587: Fix text selection when cursor passes the selection anchor (downright).
+* Update chinese translation.
+* Improve double-click (word) selection.
+  For example, select `daily` by double-click inside brackets of `ConEmu [daily]>`.
+* ANSI: Sequence `ESC [ 1 4 t` reports terminal window size in pixels as `ESC [ 4 ; height ; width t`.
+* gh-605: Fix regressions on ‘App distinct’ settings page.
+* Log extended information during console shutdown.
+  Ref: gh-604: Last conemu versions often can't attach to started console
+
+
+2016.3.24
+* Unify LogFile names: `ConEmu-gui-...`, `ConEmu-con-...`, `ConEmu-srv-...`.
+* To start console as ‘System’ use `-new_console:aA` switch.
+* Update {Show ANSI colors} and fit in 76 chars.
+* Show compiler version and colorize output of `-Args`.
+* Try to show and re-apply `-new_console:XXX` switches in ‘Recreate’ dialog.
+* gh-581: Restart ConEmu after automatic update in the same directory it was started before.
+* Update chinese translation.
+* Update Russian translation.
+* If ConEmu started with `-detached` switch, don't close it automatically when last tab is terminated.
+* ConEmuC: Don't fall into `Press Enter or Esc to close console...` if invalid arguments were specified.
+  This is critical, especially if our process was started under non-interactive account,
+  than ExitWaitForKey causes the infinitely running process, which user can't kill easily
+* ConEmuC: Don't fall into `Press Enter or Esc to close console...` if server was not connected to GUI.
+  Avoid situation when `ConEmuC /ROOT` was started from running console (bare `cmd.exe`)
+  and ConEmuC (our started server) was not connected to GUI, then we get infinite loop
+  when ConEmuC waits for cmd termination and vice versa.
+* Avoid ‘Unknown state’ appeared in the StatusBar during console startup.
+* LogFiles may be enabled permanently via Settings -> Features -> ‘Internal LogFiles location’.
+* CmdInit.cmd: Reset colors on each prompt (`$E[m`).
+* gh-587: Fix text selection when cursor passes the selection anchor (changing selection direction).
+* gh-598: Improve pasting options for `Shift+Ins` and `Ctrl+V` (multi-line text).
+  Now, `Ctrl+V` will insert all lines, space-separated, and `Shift+Ins` insert
+  multi-line text as before. User may change actions on the ‘Paste’ settings page.
+* gh-101: Switch `-UseExport` may be specified before `-GuiMacro` to export result as env.var.
+  Without `-UseExport` specified before `-GuiMacro`, ConEmuC.exe will not try
+  to export GuiMacro result as environment variable `ConEmuMacroResult`
+  to the parent process.
+* Variable `ConEmuMacroResult` was skipped during environment exporting.
+* Settings pages names localization.
+
+
+2016.3.13
+* On WinXP/Vista the icon in the TitleBar was unexpectedly changed to active tab icon.
+* Intelligent selection: RClick over selected region will Paste selected text,
+  bypassing Windows' clipboard, and Reset selection region.
+* Fix garbage displayed in VCon during console startup on WinXP.
+* gh-571: `ConEmu -demote ...` starts process for the wrong user.
+* Log current SessionID, improve Desktop and Title representation.
+
+
+2016.3.10
+* TaskBar icon fixes (Overlay icon on any OS, update icon on Restart console).
+  * Option ‘Show overlay icon (Win7 and higher)’ now works on any system,
+    and need to be renamed. So, if TaskBar uses small icons, ConEmu shows
+    icon from active console via WM_GETICON.
+  * Icon was not updated on restart console with another icon.
+* Updates on Intelligent selection.
+  * Double and Triple clicks selection do not require modifiers.
+  * Click outside selection region - would reset active selection.
+  * Do `Internal Copy & Paste` if LBtn is still down and RBtn is clicked.
+  * Avoid blinking on double/triple clicks.
+  * Selection: In some cases Shift+DblClick slipped to console.
+* gh-328: Improve double-click word selection logic.
+  * Don't select space after word.
+  * Don't select pseudographics before/after alphabeticals.
+  * Trim trailing punctuations.
+  * Trim leading punctuations except dots (e.g. `.bashrc`).
+* Fix wrong quotation rules on Settings/Environment. Was not working properly:
+    echo ""
+    echo """C:\Program Files\Git\bin\git.exe"" fetch --progress ""--all"" "
+
+
 2016.3.8
 * Option ‘Retard inactive panes’ was ignored in some cases.
 * Trailing dot was not trimmed after md-style hyperlink.

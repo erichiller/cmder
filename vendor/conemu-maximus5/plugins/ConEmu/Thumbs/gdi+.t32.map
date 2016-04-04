@@ -1,6 +1,6 @@
  gdi+
 
- Timestamp is 56df5106 (Wed Mar 09 01:24:06 2016)
+ Timestamp is 56fb92a0 (Wed Mar 30 11:47:28 2016)
 
  Preferred load address is 10000000
 
@@ -15,7 +15,7 @@
  0001:00001c90 000002a8H .idata$6                CODE
  0001:00001f40 00000092H .edata                  CODE
  0002:00000000 00000010H .data                   DATA
- 0002:00000010 0000784cH .bss                    DATA
+ 0002:00000010 00007850H .bss                    DATA
  0003:00000000 00000058H .rsrc$01                DATA
  0003:00000060 000002b8H .rsrc$02                DATA
 
@@ -138,6 +138,7 @@
  0001:000015e0       ?apiThreadHelper@@YGKPAX@Z 100025e0 f   WThreads.obj
  0001:0000172e       ?apiCreateThread@@YIPAXP6GKPAX@Z0PAKPBDH@Z 1000272e f   WThreads.obj
  0001:0000181d       ?apiTerminateThreadEx@@YIHPAXKPBDH@Z 1000281d f   WThreads.obj
+ 0001:000018d3       ?wasTerminateThreadCalled@@YI_NXZ 100028d3 f   WThreads.obj
  0001:000018e0       __alldiv                   100028e0 f   libCRT:vc_lldiv.obj
  0001:00001990       __allmul                   10002990 f   libCRT:vc_llmul.obj
  0001:000019d0       _wcsrchr                   100029d0 f   libCRT:strrchr.obj

@@ -9,9 +9,9 @@
 
 /* Package name      : perl5
  * Source directory  : .
- * Configuration time: Thu Jun 18 09:27:20 MSK 2015
- * Configured by     : alexey
- * Target system     : msys_nt-6.1 cab8 2.1.4(0.28753) 2015-06-08 22:11 x86_64 msys 
+ * Configuration time: Fri Mar 11 09:30:57 MSK 2016
+ * Configured by     : warlock+alexx
+ * Target system     : msys_nt-6.1 warlock 2.5.0(0.29453) 2016-03-01 13:48 x86_64 msys 
  */
 
 #ifndef _config_h_
@@ -883,7 +883,7 @@
  *	feature tests from Configure are generally more reliable.
  */
 #define OSNAME "msys"		/**/
-#define OSVERS "2.1.4(0.28753)"		/**/
+#define OSVERS "2.5.0(0.29453)"		/**/
 
 /* MULTIARCH:
  *	This symbol, if defined, signifies that the build
@@ -1173,9 +1173,9 @@
 /* CSH:
  *	This symbol, if defined, contains the full pathname of csh.
  */
-#define HAS_CSH		/**/
+/*#define HAS_CSH		/ **/
 #ifdef HAS_CSH
-#define CSH "/usr/bin/csh"	/**/
+#define CSH "csh"	/**/
 #endif
 
 /* HAS_CTERMID_R:
@@ -3200,9 +3200,9 @@
  *	This variable contains the number of elements of the SIG_NAME
  *	and SIG_NUM arrays, excluding the final NULL entry.
  */
-#define SIG_NAME "ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "LOST", "USR1", "USR2", "RTMIN", "NUM33", "NUM34", "NUM35", "NUM36", "NUM37", "NUM38", "NUM39", "NUM40", "NUM41", "NUM42", "NUM43", "NUM44", "NUM45", "NUM46", "NUM47", "NUM48", "NUM49", "NUM50", "NUM51", "NUM52", "NUM53", "NUM54", "NUM55", "NUM56", "NUM57", "NUM58", "NUM59", "NUM60", "NUM61", "NUM62", "NUM63", "RTMAX", "CLD", "POLL", "PWR", 0		/**/
-#define SIG_NUM  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 20, 23, 29, 0		/**/
-#define SIG_SIZE 68			/**/
+#define SIG_NAME "ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "LOST", "USR1", "USR2", "RTMIN", "NUM33", "NUM34", "NUM35", "NUM36", "NUM37", "NUM38", "NUM39", "NUM40", "NUM41", "NUM42", "NUM43", "NUM44", "NUM45", "NUM46", "NUM47", "NUM48", "NUM49", "NUM50", "NUM51", "NUM52", "NUM53", "NUM54", "NUM55", "NUM56", "NUM57", "NUM58", "NUM59", "NUM60", "NUM61", "NUM62", "NUM63", "RTMAX", "IOT", "CLD", "POLL", "PWR", 0		/**/
+#define SIG_NUM  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 6, 20, 23, 29, 0		/**/
+#define SIG_SIZE 69			/**/
 
 /* SITEARCH:
  *	This symbol contains the name of the private library for this package.

@@ -1,6 +1,6 @@
  pe
 
- Timestamp is 56df510b (Wed Mar 09 01:24:11 2016)
+ Timestamp is 56fb92a4 (Wed Mar 30 11:47:32 2016)
 
  Preferred load address is 10000000
 
@@ -15,7 +15,7 @@
  0001:00001dfc 00000190H .idata$6                CODE
  0001:00001f90 00000090H .edata                  CODE
  0002:00000000 00000004H .data                   DATA
- 0002:00000008 00007814H .bss                    DATA
+ 0002:00000008 00007818H .bss                    DATA
  0003:00000000 00000058H .rsrc$01                DATA
  0003:00000060 000002b8H .rsrc$02                DATA
 
@@ -137,6 +137,7 @@
  0001:000018ca       ?apiThreadHelper@@YGKPAX@Z 100028ca f   WThreads.obj
  0001:00001a18       ?apiCreateThread@@YIPAXP6GKPAX@Z0PAKPBDH@Z 10002a18 f   WThreads.obj
  0001:00001b07       ?apiTerminateThreadEx@@YIHPAXKPBDH@Z 10002b07 f   WThreads.obj
+ 0001:00001bbd       ?wasTerminateThreadCalled@@YI_NXZ 10002bbd f   WThreads.obj
  0001:00001bd0       _wcschr                    10002bd0 f   libCRT:strchr.obj
  0001:00001c00       _wcsrchr                   10002c00 f   libCRT:strrchr.obj
  0001:00001c30       _memset                    10002c30 f   libCRT:memset.obj

@@ -776,3 +776,128 @@
 [2016-03-10 11:03] [PACMAN] Running 'pacman -Sc'
 [2016-03-10 11:03] [PACMAN] Running 'pacman -Su'
 [2016-03-10 11:03] [PACMAN] starting full system upgrade
+[2016-04-03 11:50] [PACMAN] Running 'pacman -Su'
+[2016-04-03 11:50] [PACMAN] starting full system upgrade
+[2016-04-03 11:52] [PACMAN] Running '/usr/bin/pacman --color auto -Sy'
+[2016-04-03 11:52] [PACMAN] synchronizing package lists
+[2016-04-03 11:56] [PACMAN] Running '/usr/bin/pacman --color auto -S --noconfirm --needed bash pacman msys2-runtime msys2-runtime-devel'
+[2016-04-03 11:56] [ALPM] transaction started
+[2016-04-03 11:56] [ALPM] upgraded msys2-runtime (2.5.0.16903.1bd983f-1 -> 2.5.0.17040.9d5d874-1)
+[2016-04-03 11:56] [ALPM] upgraded pacman (5.0.1.6388.dcb2397-1 -> 5.0.1.6403.520736d-1)
+[2016-04-03 11:56] [ALPM] upgraded msys2-runtime-devel (2.5.0.16903.1bd983f-1 -> 2.5.0.17040.9d5d874-1)
+[2016-04-03 11:56] [ALPM] transaction completed
+[2016-04-03 12:21] [PACMAN] Running 'pacman -Su'
+[2016-04-03 12:21] [PACMAN] starting core system upgrade
+[2016-04-03 12:21] [ALPM] transaction started
+[2016-04-03 12:21] [ALPM] warning: /etc/profile installed as /etc/profile.pacnew
+[2016-04-03 12:21] [ALPM] upgraded filesystem (2015.04-3 -> 2016.03-2)
+[2016-04-03 12:21] [ALPM] transaction completed
+[2016-04-03 12:21] [PACMAN] Running 'pacman -Su'
+[2016-04-03 12:21] [PACMAN] starting core system upgrade
+[2016-04-03 12:21] [PACMAN] starting full system upgrade
+[2016-04-03 12:22] [ALPM] transaction started
+[2016-04-03 12:22] [ALPM] upgraded gmp (6.1.0-1 -> 6.1.0-2)
+[2016-04-03 12:22] [ALPM] upgraded gcc-libs (4.9.2-6 -> 5.3.0-3)
+[2016-04-03 12:22] [ALPM] upgraded coreutils (8.24-1 -> 8.25-1)
+[2016-04-03 12:22] [ALPM] upgraded libcrypt (1.1-6 -> 1.3-1)
+[2016-04-03 12:22] [ALPM] upgraded crypt (1.1-6 -> 1.3-1)
+[2016-04-03 12:22] [ALPM] upgraded expat (2.1.0-2 -> 2.1.1-1)
+[2016-04-03 12:22] [ALPM] upgraded perl (5.22.0-2 -> 5.22.1-1)
+[2016-04-03 12:22] [ALPM] upgraded heimdal-libs (1.5.3-8 -> 1.5.3-9)
+[2016-04-03 12:22] [ALPM] upgraded libexpat (2.1.0-2 -> 2.1.1-1)
+[2016-04-03 12:22] [ALPM] upgraded heimdal (1.5.3-8 -> 1.5.3-9)
+[2016-04-03 12:22] [ALPM] upgraded perl-Net-SSLeay (1.70-1 -> 1.72-1)
+[2016-04-03 12:22] [ALPM] upgraded git (2.7.2-1 -> 2.8.0-1)
+[2016-04-03 12:22] [ALPM] upgraded glib2 (2.44.1-1 -> 2.48.0-1)
+[2016-04-03 12:22] [ALPM] upgraded grep (2.22-1 -> 2.22-3)
+[2016-04-03 12:22] [ALPM] upgraded libltdl (2.4.6-1 -> 2.4.6-2)
+[2016-04-03 12:22] [ALPM] upgraded libtool (2.4.6-1 -> 2.4.6-2)
+[2016-04-03 12:22] [ALPM] upgraded mingw-w64-x86_64-headers-git (5.0.0.4627.53be55d-1 -> 5.0.0.4636.c0ad18a-1)
+[2016-04-03 12:22] [ALPM] upgraded mingw-w64-x86_64-crt-git (5.0.0.4627.03684c4-1 -> 5.0.0.4636.2595836-1)
+[2016-04-03 12:22] [ALPM] upgraded mingw-w64-x86_64-libwinpthread-git (5.0.0.4573.628fdbf-1 -> 5.0.0.4634.697f757-1)
+[2016-04-03 12:22] [ALPM] upgraded mingw-w64-x86_64-gcc-libs (5.3.0-2 -> 5.3.0-5)
+[2016-04-03 12:22] [ALPM] upgraded mingw-w64-x86_64-winpthreads-git (5.0.0.4573.628fdbf-1 -> 5.0.0.4634.697f757-1)
+[2016-04-03 12:22] [ALPM] upgraded mingw-w64-x86_64-gcc (5.3.0-2 -> 5.3.0-5)
+[2016-04-03 12:22] [ALPM] upgraded mpfr (3.1.3.p0-1 -> 3.1.4-1)
+[2016-04-03 12:22] [ALPM] upgraded rebase (4.4.1-6 -> 4.4.2-1)
+[2016-04-03 12:22] [ALPM] transaction completed
+[2016-04-03 12:23] [PACMAN] Running 'pacman -Su'
+[2016-04-03 12:23] [PACMAN] starting core system upgrade
+[2016-04-03 12:23] [PACMAN] starting full system upgrade
+[2016-04-03 13:01] [PACMAN] Running 'pacman -U'
+[2016-04-03 13:01] [PACMAN] Running 'pacman -U mingw-w64-x86_64-binutils'
+[2016-04-03 13:01] [PACMAN] Running 'pacman -U mingw'
+[2016-04-03 13:01] [PACMAN] Running 'pacman -U mingw64'
+[2016-04-03 13:01] [PACMAN] Running 'pacman -U mingw'
+[2016-04-03 13:02] [PACMAN] Running 'pacman -Sc'
+[2016-04-03 13:02] [PACMAN] Running 'pacman -Su'
+[2016-04-03 13:02] [PACMAN] starting core system upgrade
+[2016-04-03 13:02] [PACMAN] starting full system upgrade
+[2016-04-03 13:12] [PACMAN] Running 'pacman -Sy pacman'
+[2016-04-03 13:12] [PACMAN] synchronizing package lists
+[2016-04-03 13:12] [ALPM] transaction started
+[2016-04-03 13:12] [ALPM] reinstalled pacman (5.0.1.6403.520736d-1)
+[2016-04-03 13:12] [ALPM] transaction completed
+[2016-04-03 15:22] [PACMAN] Running 'pacman -Sy mingw-w64-x86_64-binutils'
+[2016-04-03 15:22] [PACMAN] synchronizing package lists
+[2016-04-03 15:23] [PACMAN] Running 'pacman -Sy mingw-w64-x86_64-binutils'
+[2016-04-03 15:23] [PACMAN] synchronizing package lists
+[2016-04-03 15:23] [ALPM] transaction started
+[2016-04-03 15:23] [ALPM] downgraded mingw-w64-x86_64-binutils (2.26-21 -> 2.25.1-4)
+[2016-04-03 15:23] [ALPM] transaction completed
+[2016-04-03 15:52] [PACMAN] Running 'pacman -Su'
+[2016-04-03 15:52] [PACMAN] starting core system upgrade
+[2016-04-03 15:52] [PACMAN] starting full system upgrade
+[2016-04-03 15:52] [PACMAN] Running 'pacman -Sy mingw-w64-x86_64-mpfr'
+[2016-04-03 15:52] [PACMAN] synchronizing package lists
+[2016-04-03 15:52] [ALPM] transaction started
+[2016-04-03 15:52] [ALPM] downgraded mingw-w64-x86_64-mpfr (3.1.4.-2 -> 3.1.4-3)
+[2016-04-03 15:52] [ALPM] transaction completed
+[2016-04-03 15:52] [PACMAN] Running 'pacman -Su'
+[2016-04-03 15:52] [PACMAN] starting core system upgrade
+[2016-04-03 15:52] [PACMAN] starting full system upgrade
+[2016-04-03 15:55] [PACMAN] Running 'pacman -Syuu'
+[2016-04-03 15:55] [PACMAN] synchronizing package lists
+[2016-04-03 15:55] [PACMAN] starting core system upgrade
+[2016-04-03 15:55] [PACMAN] starting full system upgrade
+[2016-04-03 15:56] [PACMAN] Running 'pacman -Sy'
+[2016-04-03 15:56] [PACMAN] synchronizing package lists
+[2016-04-03 15:56] [PACMAN] Running 'pacman -Suu'
+[2016-04-03 15:56] [PACMAN] starting core system upgrade
+[2016-04-03 15:56] [PACMAN] starting full system upgrade
+[2016-04-03 15:57] [PACMAN] Running 'pacman --needed -S bash pacman pacman-mirrors msys2-runtime'
+[2016-04-03 15:57] [PACMAN] Running 'pacman -Suu'
+[2016-04-03 15:57] [PACMAN] starting core system upgrade
+[2016-04-03 15:57] [PACMAN] starting full system upgrade
+[2016-04-03 16:01] [PACMAN] Running 'pacman -Sy --noconfirm pacman'
+[2016-04-03 16:01] [PACMAN] synchronizing package lists
+[2016-04-03 16:01] [ALPM] transaction started
+[2016-04-03 16:02] [ALPM] reinstalled pacman (5.0.1.6403.520736d-1)
+[2016-04-03 16:02] [ALPM] transaction completed
+[2016-04-03 16:02] [PACMAN] Running 'pacman -Su'
+[2016-04-03 16:02] [PACMAN] starting core system upgrade
+[2016-04-03 16:02] [PACMAN] starting full system upgrade
+[2016-04-03 16:02] [PACMAN] Running 'pacman -Syuu'
+[2016-04-03 16:02] [PACMAN] synchronizing package lists
+[2016-04-03 16:02] [PACMAN] starting core system upgrade
+[2016-04-03 16:02] [PACMAN] starting full system upgrade
+[2016-04-03 16:02] [PACMAN] Running 'pacman -Sy --noconfirm pacman'
+[2016-04-03 16:02] [PACMAN] synchronizing package lists
+[2016-04-03 16:02] [ALPM] transaction started
+[2016-04-03 16:02] [ALPM] reinstalled pacman (5.0.1.6403.520736d-1)
+[2016-04-03 16:02] [ALPM] transaction completed
+[2016-04-03 16:03] [PACMAN] Running 'pacman -Su'
+[2016-04-03 16:03] [PACMAN] starting core system upgrade
+[2016-04-03 16:03] [PACMAN] starting full system upgrade
+[2016-04-03 16:06] [PACMAN] Running '/usr/bin/pacman -Su'
+[2016-04-03 16:06] [PACMAN] starting core system upgrade
+[2016-04-03 16:06] [PACMAN] starting full system upgrade
+[2016-04-03 16:06] [PACMAN] Running '/usr/bin/pacman -Sc'
+[2016-04-03 16:07] [PACMAN] Running '/usr/bin/pacman -Su'
+[2016-04-03 16:07] [PACMAN] starting core system upgrade
+[2016-04-03 16:07] [PACMAN] starting full system upgrade
+[2016-04-03 16:07] [PACMAN] Running '/usr/bin/pacman -Sy --noconfirm pacman'
+[2016-04-03 16:07] [PACMAN] synchronizing package lists
+[2016-04-03 16:07] [ALPM] transaction started
+[2016-04-03 16:07] [ALPM] reinstalled pacman (5.0.1.6403.520736d-1)
+[2016-04-03 16:07] [ALPM] transaction completed

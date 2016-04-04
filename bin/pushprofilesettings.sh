@@ -55,8 +55,8 @@ elif [ $# -eq 1 ] ; then
 	elif [ "$1" == "help" ] ; then dispHelp ;
 	else
 		# default actions
-		pushprofile $1
 		pushKey ~/.ssh/id_rsa.pub $1
+		pushprofile $1
 	fi;
 else dispHelp;
 fi;

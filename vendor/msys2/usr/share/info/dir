@@ -19,14 +19,13 @@ Archiving
 
 Basics
 * Bash: (bash).                 The GNU Bourne-Again SHell.
-* Common options: (inetutils)Common options.
-                                Common options.
-* Finding files: (find).        Operating on files matching certain criteria.
-* Inetutils: (inetutils).       GNU networking utilities.
+* Common options: (coreutils)Common options.
 * Coreutils: (coreutils).       Core GNU (file, text, shell) utilities.
 * Date input formats: (coreutils)Date input formats.
 * File permissions: (coreutils)File permissions.
                                 Access modes.
+* Finding files: (find).        Operating on files matching certain criteria.
+* Inetutils: (inetutils).       GNU networking utilities.
 
 C++ libraries
 * autosprintf: (autosprintf).   Support for printf format strings in C++.
@@ -97,7 +96,8 @@ GNU Libraries
 * GPGME: (gpgme).               Adding support for cryptography to your 
                                   program.
 * libgcrypt: (gcrypt).          Cryptographic function library.
-* libgomp: (libgomp).           GNU OpenMP runtime library
+* libgomp: (libgomp).           GNU Offloading and Multi Processing Runtime 
+                                  Library.
 * libquadmath: (libquadmath).   GCC Quad-Precision Math Library
 
 GNU organization
@@ -154,6 +154,7 @@ Individual utilities
 * autoupdate: (autoconf)autoupdate Invocation.  Automatic update of 
                                                   'configure.ac'
 * awk: (gawk)Invoking gawk.                     Text scanning and processing.
+* base32: (coreutils)base32 invocation.         Base32 encode/decode data.
 * base64: (coreutils)base64 invocation.         Base64 encode/decode data.
 * basename: (coreutils)basename invocation.     Strip directory and suffix.
 * cat: (coreutils)cat invocation.               Concatenate and write files.
@@ -178,8 +179,8 @@ Individual utilities
 * diff: (diffutils)Invoking diff.               Compare 2 files line by line.
 * diff3: (diffutils)Invoking diff3.             Compare 3 files line by line.
 * dir: (coreutils)dir invocation.               List directories briefly.
-* dirname: (coreutils)dirname invocation.       Strip last file name component.
 * dircolors: (coreutils)dircolors invocation.   Color setup for ls.
+* dirname: (coreutils)dirname invocation.       Strip last file name component.
 * dnsdomainname: (inetutils)dnsdomainname invocation.
                                                 Show DNS domain name.
 * du: (coreutils)du invocation.                 Report on disk usage.
@@ -199,7 +200,7 @@ Individual utilities
 * gzexe: (gzip)Overview.                        Compress executables.
 * head: (coreutils)head invocation.             Output the first part of files.
 * hostid: (coreutils)hostid invocation.         Print numeric host identifier.
-* hostname: (inetutils)hostname invocation.     Show or set system host name.
+* hostname: (coreutils)hostname invocation.     Print or set system name.
 * id: (coreutils)id invocation.                 Print user identity.
 * ifnames: (autoconf)ifnames Invocation.        Listing conditionals in source.
 * inetd: (inetutils)inetd invocation.           Internet super-server.
