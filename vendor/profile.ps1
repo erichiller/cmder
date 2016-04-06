@@ -98,16 +98,30 @@ function checkGit($Path) {
 
 # Set up a Cmder prompt, adding the git prompt parts inside git repos
 function global:prompt {
-    $realLASTEXITCODE = $LASTEXITCODE
-    $Host.UI.RawUI.ForegroundColor = "White"
-    Write-Host $pwd.ProviderPath -NoNewLine -ForegroundColor Green
-    if($gitStatus){
-        checkGit($pwd.ProviderPath)
-    }
-    $global:LASTEXITCODE = $realLASTEXITCODE
-    Write-Host "`nλ" -NoNewLine -ForegroundColor "DarkGray"
-    return " "
+	$realLASTEXITCODE = $LASTEXITCODE
+	$Host.UI.RawUI.ForegroundColor = "White"
+	# see https://technet.microsoft.com/library/hh849877.aspx for Write-Host information
+	Write-Host ($Env:USERNAME,"") -NoNewLine -ForegroundColor Red
+	Write-Host $pwd.ProviderPath -NoNewLine -ForegroundColor Cyan
+	if($gitStatus){
+		checkGit($pwd.ProviderPath)
+	}
+	$global:LASTEXITCODE = $realLASTEXITCODE
+	Write-Host " $" -NoNewLine -ForegroundColor Red
+	# write the title as the current Path
+	$host.ui.RawUI.WindowTitle = $(Get-Location)
+	return " "
 }
+# load local psmodules
+#$global:UserModuleBasePath = Join-Path -Path $ENV:CMDER_ROOT -ChildPath 'vendor\psmodules'
+$global:UserModuleBasePath = $PSScriptRoot
+# load GitStatusCachePoshClient
+# see: https://github.com/cmarcusreid/git-status-cache-posh-client
+Import-Module -Name "GitStatusCachePoshClient" -ErrorAction Stop >$null
+# For information on Git display variables, see:
+# C:\cmder\vendor\psmodules\posh-git\GitPrompt.ps1
+# posh-git change name of tab // remove annoying
+$GitPromptSettings.EnableWindowTitle = "git:"
 
 # Run the GIT- Start Agent Script rather than Post-Git
 if ($gitStatus) {

@@ -26,8 +26,12 @@
 
 :: Change the prompt style
 :: See http://ss64.com/nt/prompt.html
- @prompt $E[1;32;40m$P$S$_[$T]$S$G$S
-:: @prompt %username%$S$P$S$$
+:: See http://ascii-table.com/ansi-escape-sequences.php
+::
+:: this is the old one I had->
+:: @prompt $E[1;32;40m$P$S$_[$T]$S$G$S
+
+@prompt $E[0;31;40m%username%$S$E[0;36;40m$P$S$E[0;31;40m$$$E[0;32;40m$S
 
 :: Pick right version of clink
 @if "%PROCESSOR_ARCHITECTURE%"=="x86" (
@@ -35,9 +39,13 @@
 ) else (
     set architecture=64
 )
+
 :: Run clink
 @"%CMDER_ROOT%\vendor\clink\clink_x%architecture%.exe" inject --quiet --profile "%USERPROFILE%"
-@title cmd
+
+:: Set the title to the current directory
+:: later directory changes handled by alias ` cd=cd $*$T title %=c:% `
+@title %=c:%
 
 :: Prepare for msys2
 

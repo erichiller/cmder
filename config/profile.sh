@@ -1,5 +1,12 @@
 # ERIC - EDH - setup bash
 
+# If not running interactively, don't do anything
+# this keeps SCP (file transfer from throwing errors) -- stops here
+case $- in
+	*i*) ;;
+		*) return;;
+esac
+
 # if on CMDER -> fix CMDER_ROOT from C:\blah\blah\blah to /c/blah/blah/blah
 if [ -v CMDER_ROOT ] ; then 
 	export CMDER_ROOT=$(echo "/$CMDER_ROOT" | sed -e 's/\\/\//g' -e 's/://')
@@ -29,6 +36,15 @@ fi
 export PS1="\[$(tput sgr0)\]\[$(tput setaf 1)\]\u \[$(tput setaf 6)\]\w \[$(tput setaf 1)\]\\$ \[$(tput setaf 2)\]"
 none="$(tput sgr0)"
 trap 'echo -ne "${none}"' DEBUG
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+	export PS1="\[\e]0;\u@\h: \w\a\]$PS1"
+	;;
+*)
+	;;
+esac
 
 # ls dir coloring
 export LS_OPTIONS='--color=auto'

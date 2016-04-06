@@ -10,3 +10,4 @@ ll=ls -l --color $*
 l=ls -lA --color $*
 vim=vim.cmd $*
 vi=vim.cmd $*
+cd=cd $*$T title %=c:%

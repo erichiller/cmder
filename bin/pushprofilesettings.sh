@@ -10,7 +10,7 @@ cat <<EOM
     Please enter username@hostname that you would like your settings pushed to
 	
     Your settings (.bashrc and .vimrc) will be created from ConEmu->/config
-    config/bashconf will become .bashrc and config/.vimrc will become ~/.vimrc 
+    config/profile.sh will become .bashrc and config/.vimrc will become ~/.vimrc 
     
     Your public key will be taken from ~/.ssh/id_rsa.pub [windows home]
 	
@@ -23,7 +23,7 @@ exit
 
 function pushprofile {
 	echo Sending .bashrc to $1
-	cat "$CMDER_ROOT/config/bashconf" | dos2unix | ssh $1 "cat > ~/.bashrc" >nul 2>&1
+	cat "$CMDER_ROOT/config/profile.sh" | dos2unix | ssh $1 "cat > ~/.bashrc" >nul 2>&1
 	
 	echo Sending .vimrc to $1
 	cat "$CMDER_ROOT/config/.vimrc" | dos2unix | ssh $1 "cat > ~/.vimrc" >nul 2>&1
