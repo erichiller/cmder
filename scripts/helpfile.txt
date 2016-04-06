@@ -36,22 +36,24 @@ Ctrl	F2		New {cmd}
 Ctrl	F3		New {Git Bash}
 Ctrl	F4		New {Far}
 Ctrl	F5		New {PowerShell as Admin}
+Ctrl	F6		New {IRSSI}
 
 Ctrl	Left		Switch to left tab
 Ctrl	Right		Switch to right tab
 Ctrl	Down		Closes Console
 Ctrl	Up		Duplicate active tab type
 
-Windows	Delete		Closes All Consoles but the active one
+Windows Backspace	Closes all Processes in current tab, but shell
+Windows	Delete		Closes all Consoles but the active one
 Windows	F4		Closes all tabs
 Windows	S		Take a Screenshot of the current window
 
-Ctrl	HOME		Scroll to top of buffer
-Ctrl	End		Scroll to bottom of buffer
-Ctrl	PgUp		Scroll up one page
-Ctrl	PgDown		Scroll down one page
-Ctrl	+		Scroll buffer up one line
-Ctrl	-		Scroll buffer down one line
+Shift	HOME		Scroll to top of buffer
+Shift	End		Scroll to bottom of buffer
+Shift	PgUp		Scroll up one page
+Shift	PgDown		Scroll down one page
+Shift	+		Scroll buffer up one line
+Shift	-		Scroll buffer down one line
 
 === GNU SCREEN ===
 Ctrl	A	C	Open a new window
@@ -68,7 +70,7 @@ Apps=Windows Key
 Shift	F4		In FarNet this will create a new Host Config for SCP / SFTP
 
 ### Update Git - Commit Changes to Remote and Upload ###
-1. `git add .`
+1. `git add -A`
 2. `git commit -m "Notate changes here"`
 3. `git push origin master` (master can be a different branch)
 ===========
