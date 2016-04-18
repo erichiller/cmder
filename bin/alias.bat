@@ -1,6 +1,6 @@
 @echo off
 
-set ALIASES=%CMDER_ROOT%\config\aliases
+set ALIASES=%ConEmuDir%\config\aliases
 
 if ["%*"] == [""] echo Use /? for help & echo. & goto :p_show
 if ["%1"] == ["/?"] goto:p_help

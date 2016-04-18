@@ -2,7 +2,7 @@
 setlocal
 
 set dir=%cd%
-cd %CMDER_ROOT%/vendor/irssi
+cd %ConEmuDir%/vendor/irssi
 irssi.bat
 
 cd %cd%

@@ -1,2 +1,2 @@
 @ECHO OFF
-%CMDER_ROOT%\vendor\vim\vim74\vim.exe -u %CMDER_ROOT%\config\.vimrc %*
+%ConEmuDir%\vendor\vim\vim74\vim.exe -u %ConEmuDir%\config\.vimrc %*

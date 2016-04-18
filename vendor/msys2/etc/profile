@@ -138,8 +138,8 @@ then
   export ACLOCAL_PATH
 fi
 
-if [ -f "$ConEmuDir/../../config/profile.sh" ]; then
-	source "$ConEmuDir/../../config/profile.sh"
+if [ -f "$ConEmuDir/config/profile.sh" ]; then
+	source "$ConEmuDir/config/profile.sh"
 fi
 
 export PATH MANPATH INFOPATH PKG_CONFIG_PATH USER TMP TEMP PRINTER HOSTNAME PS1 SHELL tmp temp

@@ -1,0 +1,12 @@
+{"vendors":[
+	{
+		"name": "node",
+		"path": "nodejs",
+		"binpath": "nodejs"
+	},
+	{
+		"name": "bind",
+		"path": "bind",
+		"binpath": "bind"
+	}
+]}

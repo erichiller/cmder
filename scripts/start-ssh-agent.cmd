@@ -24,7 +24,7 @@
     )
     @REM Get the ssh-add executable
     @FOR %%s IN ("!SSH_AGENT!") DO @SET BIN_DIR=%%~dps
-    @FOR /D %%s in ("!BIN_DIR!\ssh-add.exe") DO @SET SSH_ADD=%%~s
+    @FOR /D %%s in ("!BIN_DIR!ssh-add.exe") DO @SET SSH_ADD=%%~s
     @IF NOT EXIST "!SSH_ADD!" @ECHO ssh-add.exe not found
     @IF NOT EXIST "!SSH_ADD!" @CALL :SSHAgentDone
 	@REM Check if the agent is running
@@ -45,7 +45,7 @@
 
 :: Check if ssh-agent already started and if so find its socket
 :TryExistingSocket
-@SET PID_DIR="%CMDER_ROOT%\vendor\msys2\tmp\"
+@SET PID_DIR="%ConEmuDir%\vendor\msys2\tmp"
 @IF "%DEBUG%" == "TRUE" @( @ECHO [DEBUG] looking for existing socket in %PID_DIR% )
 :: Should there be no SSH_AGENT_PID then remove all the ssh-* dirs in /tmp
 :: And kill any invalid running ssh-agent processes

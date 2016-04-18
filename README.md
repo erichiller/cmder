@@ -1,6 +1,8 @@
 # README -- EDH NOTES
 
-Quite custom build - sourced from 1.2, but massively changed.
+This project started from cmder, which itself was a compilation of software around the wonderful conemu.
+
+**THIS FILE NEEDS TO BE REWORKED**
 
 
 add paths for new programs into:
@@ -44,7 +46,7 @@ Git does NOT upload blank directories, but (msys2 especially) the destination ma
 
 To back up the directories run(in msys2/bash):
 
-	find /c/cmder -type d > directory.listing
+	find /c/blue -type d > directory.listing
 	
 And then restore with
 

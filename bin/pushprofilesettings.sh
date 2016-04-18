@@ -23,10 +23,10 @@ exit
 
 function pushprofile {
 	echo Sending .bashrc to $1
-	cat "$CMDER_ROOT/config/profile.sh" | dos2unix | ssh $1 "cat > ~/.bashrc" >nul 2>&1
+	cat "$ConEmuDir/config/profile.sh" | dos2unix | ssh $1 "cat > ~/.bashrc" >nul 2>&1
 	
 	echo Sending .vimrc to $1
-	cat "$CMDER_ROOT/config/.vimrc" | dos2unix | ssh $1 "cat > ~/.vimrc" >nul 2>&1
+	cat "$ConEmuDir/config/.vimrc" | dos2unix | ssh $1 "cat > ~/.vimrc" >nul 2>&1
 }
 
 function pushKey {

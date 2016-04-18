@@ -74,6 +74,6 @@ Shift	F4		In FarNet this will create a new Host Config for SCP / SFTP
 2. `git commit -m "Notate changes here"`
 3. `git push origin master` (master can be a different branch)
 ===========
-This file is located @ %CMDER_ROOT%\scripts\helpfile.txt
+This file is located @ %ConEmuDir%\scripts\helpfile.txt
 
 ~el fin

@@ -1,2 +1,2 @@
 @ECHO OFF
-cat %CMDER_ROOT%\config\.history
+cat %ConEmuDir%\config\.history

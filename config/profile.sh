@@ -7,12 +7,14 @@ case $- in
 		*) return;;
 esac
 
-# if on CMDER -> fix CMDER_ROOT from C:\blah\blah\blah to /c/blah/blah/blah
-if [ -v CMDER_ROOT ] ; then 
-	export CMDER_ROOT=$(echo "/$CMDER_ROOT" | sed -e 's/\\/\//g' -e 's/://')
-	# add CMDER_ROOT/bin to path
-	PATH="${CMDER_ROOT}/bin::${PATH}"
-	${CMDER_ROOT}/scripts/start-ssh-agent.cmd
+# if on CONEMU -> fix CONEMU from C:\blah\blah\blah to /c/blah/blah/blah
+if [ -v ConEmuDir ] ; then 
+	export ConEmuDir=$(echo "/$ConEmuDir" | sed -e 's/\\/\//g' -e 's/://')
+	export ConEmuBaseDir=$(echo "/$ConEmuBaseDir" | sed -e 's/\\/\//g' -e 's/://')
+	# add ConEmu Directories to path for ConEmu and ConEmuC
+	PATH="${ConEmuBaseDir}:${PATH}"
+	PATH="${ConEmuDir}:${PATH}"
+	${ConEmuDir}/scripts/start-ssh-agent.cmd
 fi
 
 #Golang
@@ -26,11 +28,23 @@ elif [ -d "$HOME/dev/lib/go" ] ; then
 	export PATH=$GOROOT/bin:$GOPATH/bin:$PATH	
 fi
 #NodeJs , NPM
-if [ -d "$CMDER_ROOT/vendor/nodejs" ] ; then
-	export PATH=$CMDER_ROOT/vendor/nodejs:$PATH
+if [ -d "$ConEmuDir/vendor/nodejs" ] ; then
+	export PATH=$ConEmuDir/vendor/nodejs:$PATH
 	alias npm='npm.cmd'
 fi
-#
+
+# auto-add vendors
+for dir in $( cat $ConEmuDir/config/vendors.json | $ConEmuDir/bin/jq.exe -r '.vendors[].binpath' ); do
+	# trim newlines
+	dir=$(echo $dir | tr -d '\n\r')
+	dir=$ConEmuDir/vendor/$dir
+	# ensure filepath exists
+	if [[ -d $dir ]] ; then
+		if ! $(echo "$PATH" | grep -q $dir) ; then
+			export PATH=$dir:$PATH
+		fi
+	fi
+done
 
 # for terminal line coloring
 export PS1="\[$(tput sgr0)\]\[$(tput setaf 1)\]\u \[$(tput setaf 6)\]\w \[$(tput setaf 1)\]\\$ \[$(tput setaf 2)\]"
@@ -55,12 +69,12 @@ alias l='ls $LS_OPTIONS -lA'
 
 # alias vim if we are on ConEmu
 if [ -f $ConEmuDir/../../config/.vimrc ] ; then
-	alias vi='vim -u $ConEmuDir/../../config/.vimrc'
-	alias vim='vim -u $ConEmuDir/../../config/.vimrc'
+	alias vi='vim -u $ConEmuDir/config/.vimrc'
+	alias vim='vim -u $ConEmuDir/config/.vimrc'
 fi
 
 # now read input rc
-if [ -f ${CMDER_ROOT}/config/inputrc ] ; then bind -f ${CMDER_ROOT}/config/inputrc ; fi
+if [ -f ${ConEmuDir}/config/inputrc ] ; then bind -f ${ConEmuDir}/config/inputrc ; fi
 
 # see startup sequence : https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html
 # if this is global read user files, if it is local, I am done.
