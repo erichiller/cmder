@@ -27,6 +27,10 @@ _perl()
         temp=$cur
         prev=${temp:0:2}
         cur=${temp:2}
+        if [[ $prev == -d && $cur == t* ]]; then
+            prev=-dt
+            cur=${cur:1}
+        fi
         optPrefix=-P$prev
         optSuffix=-S/
         prefix=$prev
@@ -68,7 +72,6 @@ _perl()
                 cur="Devel::$temp"
                 _perlmodules $1
             fi
-            return 0
             ;;
     esac
 
@@ -122,12 +125,12 @@ _perldoc()
             if [[ $cur == p* ]]; then
                 COMPREPLY+=( $( compgen -W \
                     '$( PERLDOC_PAGER=/bin/cat "$1" -u perl |  \
-                     sed -ne "/perl.*Perl overview/,/perlwin32/p" | \
+                     command sed -ne "/perl.*Perl overview/,/perlwin32/p" | \
                      awk "\$NF=2 && \$1 ~ /^perl/ { print \$1 }" )' \
                     -- "$cur" ) )
             fi
         fi
-        _filedir 'p@(l|m|od)'
+        _filedir 'p@([lm]|od)'
     fi
 } &&
 complete -F _perldoc -o bashdefault perldoc

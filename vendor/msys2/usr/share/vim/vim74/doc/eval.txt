@@ -1,4 +1,4 @@
-*eval.txt*	For Vim version 7.4.  Last change: 2016 Feb 27
+*eval.txt*	For Vim version 7.4.  Last change: 2016 Mar 29
 
 
 		  VIM REFERENCE MANUAL	  by Bram Moolenaar
@@ -113,16 +113,8 @@ to Float, printf() for Float to String and float2nr() for Float to Number.
 			*E891* *E892* *E893* *E894* *E907* *E911* *E914*
 When expecting a Float a Number can also be used, but nothing else.
 
-						*E706* *sticky-type-checking*
-You will get an error if you try to change the type of a variable.  You need
-to |:unlet| it first to avoid this error.  String and Number are considered
-equivalent though, as well are Float and Number.  Consider this sequence of
-commands: >
-	:let l = "string"
-	:let l = 44		" changes type from String to Number
-	:let l = [1, 2, 3]	" error!  l is still a Number
-	:let l = 4.4		" changes type from Number to Float
-	:let l = "string"	" error!
+						*no-type-checking*
+You will not get an error if you try to change the type of a variable.
 
 
 1.2 Function references ~
@@ -357,10 +349,6 @@ This works like: >
 	:   :call Doit(item)
 	:   let index = index + 1
 	:endwhile
-
-Note that all items in the list should be of the same type, otherwise this
-results in error |E706|.  To avoid this |:unlet| the variable at the end of
-the loop.
 
 If all you want to do is modify each item in the list then the |map()|
 function will be a simpler method than a for loop.
@@ -765,20 +753,35 @@ recursively.  Ignoring case means case is ignored when comparing item values.
 
 							*E693* *E694*
 A |Funcref| can only be compared with a |Funcref| and only "equal" and "not
-equal" can be used.  Case is never ignored.
+equal" can be used.  Case is never ignored.  Whether arguments or a Dictionary
+are bound (with a partial) is ignored.  This is so that when a function is
+made a member of a Dictionary it is still considered to be the same function.
+To compare partials to see if they bind the same argument and Dictionary
+values use string(): >
+	echo string(Partial1) == string(Partial2)
 
 When using "is" or "isnot" with a |List| or a |Dictionary| this checks if the
 expressions are referring to the same |List| or |Dictionary| instance.  A copy
 of a |List| is different from the original |List|.  When using "is" without
 a |List| or a |Dictionary| it is equivalent to using "equal", using "isnot"
 equivalent to using "not equal".  Except that a different type means the
-values are different: "4 == '4'" is true, "4 is '4'" is false and "0 is []" is
-false and not an error. "is#"/"isnot#" and "is?"/"isnot?" can be used to match
-and ignore case.
+values are different: >
+	echo 4 == '4'
+	1
+	echo 4 is '4'
+	0
+	echo 0 is []
+	0
+"is#"/"isnot#" and "is?"/"isnot?" can be used to match and ignore case.
 
 When comparing a String with a Number, the String is converted to a Number,
-and the comparison is done on Numbers.	This means that "0 == 'x'" is TRUE,
-because 'x' converted to a Number is zero.
+and the comparison is done on Numbers.	This means that: >
+	echo 0 == 'x'
+	1
+because 'x' converted to a Number is zero.  However: >
+	echo [0] == ['x']
+	0
+Inside a List or Dictionary this conversion is not used.
 
 When comparing two Strings, this is done with strcmp() or stricmp().  This
 results in the mathematical difference (comparing byte values), not
@@ -1759,6 +1762,10 @@ v:version	Version number of Vim: Major version number times 100 plus
 		version 5.0 and 5.1 may have a patch 123, but these are
 		completely different.
 
+				*v:vim_did_enter* *vim_did_enter-variable*
+v:vim_did_enter	Zero until most of startup is done.  It is set to one just
+		before |VimEnter| autocommands are triggered.
+
 					*v:warningmsg* *warningmsg-variable*
 v:warningmsg	Last given warning message.  It's allowed to set this variable.
 
@@ -1794,10 +1801,13 @@ arglistid( [{winnr} [, {tabnr}]])
 				Number	argument list id
 argv( {nr})			String	{nr} entry of the argument list
 argv()				List	the argument list
-assert_equal( {exp}, {act} [, {msg}]) none  assert {exp} equals {act}
+assert_equal( {exp}, {act} [, {msg}]) none  assert {exp} is equal to {act}
 assert_exception( {error} [, {msg}])  none  assert {error} is in v:exception
 assert_fails( {cmd} [, {error}])      none  assert {cmd} fails
 assert_false( {actual} [, {msg}])     none  assert {actual} is false
+assert_match( {pat}, {text} [, {msg}]) none  assert {pat} matches {text}
+assert_notequal( {exp}, {act} [, {msg}]) none  assert {exp} is not equal {act}
+assert_notmatch( {pat}, {text} [, {msg}]) none  assert {pat} not matches {text}
 assert_true( {actual} [, {msg}])      none  assert {actual} is true
 asin( {expr})			Float	arc sine of {expr}
 atan( {expr})			Float	arc tangent of {expr}
@@ -1817,24 +1827,25 @@ byteidxcomp( {expr}, {nr})	Number	byte index of {nr}'th char in {expr}
 call( {func}, {arglist} [, {dict}])
 				any	call {func} with arguments {arglist}
 ceil( {expr})			Float	round {expr} up
-ch_close( {channel})		none	close {channel}
-ch_evalexpr( {channel}, {expr} [, {options}])
-				any	evaluate {expr} on JSON {channel}
-ch_evalraw( {channel}, {string} [, {options}])
-				any	evaluate {string} on raw {channel}
-ch_getbufnr( {channel}, {what})	Number	get buffer number for {channel}/{what}
+ch_close( {handle})		none	close {handle}
+ch_evalexpr( {handle}, {expr} [, {options}])
+				any	evaluate {expr} on JSON {handle}
+ch_evalraw( {handle}, {string} [, {options}])
+				any	evaluate {string} on raw {handle}
+ch_getbufnr( {handle}, {what})	Number	get buffer number for {handle}/{what}
 ch_getjob( {channel})		Job	get the Job of {channel}
-ch_log( {msg} [, {channel}])	none	write {msg} in the channel log file
+ch_info( {handle})		String	info about channel  {handle}
+ch_log( {msg} [, {handle}])	none	write {msg} in the channel log file
 ch_logfile( {fname} [, {mode}])	none	start logging channel activity
 ch_open( {address} [, {options}]) Channel open a channel to {address}
-ch_read( {channel} [, {options}])  String  read from  {channel}
-ch_readraw( {channel} [, {options}])  String  read raw from  {channel}
-ch_sendexpr( {channel}, {expr} [, {options}])
-				any	send {expr} over JSON {channel}
-ch_sendraw( {channel}, {string} [, {options}])
-				any	send {string} over raw {channel}
-ch_setoptions( {channel}, {options})  none  set options for {channel}
-ch_status( {channel})		String	status of  {channel}
+ch_read( {handle} [, {options}])  String  read from  {handle}
+ch_readraw( {handle} [, {options}])  String  read raw from  {handle}
+ch_sendexpr( {handle}, {expr} [, {options}])
+				any	send {expr} over JSON {handle}
+ch_sendraw( {handle}, {string} [, {options}])
+				any	send {string} over raw {handle}
+ch_setoptions( {handle}, {options})  none  set options for {handle}
+ch_status( {handle})		String	status of channel  {handle}
 changenr()			Number	current change number
 char2nr( {expr}[, {utf8}])	Number	ASCII/UTF8 value of first char in {expr}
 cindent( {lnum})		Number	C indent for line {lnum}
@@ -1893,7 +1904,8 @@ foldlevel( {lnum})		Number	fold level at {lnum}
 foldtext()			String	line displayed for closed fold
 foldtextresult( {lnum})		String	text for closed fold at {lnum}
 foreground()			Number	bring the Vim window to the foreground
-function( {name})		Funcref reference to function {name}
+function({name} [, {arglist}] [, {dict}])
+				Funcref reference to function {name}
 garbagecollect( [{atexit}])	none	free memory, breaking cyclic references
 get( {list}, {idx} [, {def}])	any	get item {idx} from {list} or {def}
 get( {dict}, {key} [, {def}])	any	get item {key} from {dict} or {def}
@@ -1969,6 +1981,7 @@ islocked( {expr})		Number	TRUE if {expr} is locked
 isnan( {expr})			Number  TRUE if {expr} is NaN
 items( {dict})			List	key-value pairs in {dict}
 job_getchannel( {job})		Channel	get the channel handle for {job}
+job_info( {job})		Dict	get information about {job}
 job_setoptions( {job}, {options}) none	set options for {job}
 job_start( {command} [, {options}]) Job	 start a job
 job_status( {job})		String	get the status of {job}
@@ -2009,6 +2022,8 @@ matchlist( {expr}, {pat}[, {start}[, {count}]])
 				List	match and submatches of {pat} in {expr}
 matchstr( {expr}, {pat}[, {start}[, {count}]])
 				String	{count}'th match of {pat} in {expr}
+matchstrpos( {expr}, {pat}[, {start}[, {count}]])
+				List	{count}'th match of {pat} in {expr}
 max( {list})			Number	maximum value of items in {list}
 min( {list})			Number	minimum value of items in {list}
 mkdir( {name} [, {path} [, {prot}]])
@@ -2067,6 +2082,7 @@ serverlist()			String	get a list of available servers
 setbufvar( {expr}, {varname}, {val})	set {varname} in buffer {expr} to {val}
 setcharsearch( {dict})		Dict	set character search from {dict}
 setcmdpos( {pos})		Number	set cursor position in command-line
+setfperm( {fname}, {mode})	Number	set {fname} file permissions to {mode}
 setline( {lnum}, {line})	Number	set line {lnum} to {line}
 setloclist( {nr}, {list}[, {action}])
 				Number	modify location list using {list}
@@ -2128,9 +2144,12 @@ tabpagewinnr( {tabarg}[, {arg}])
 				Number	number of current window in tab page
 taglist( {expr})		List	list of tags matching {expr}
 tagfiles()			List	tags files used
-tempname()			String	name for a temporary file
 tan( {expr})			Float	tangent of {expr}
 tanh( {expr})			Float	hyperbolic tangent of {expr}
+tempname()			String	name for a temporary file
+timer_start( {time}, {callback} [, {options}])
+				Number	create a timer
+timer_stop( {timer})		none	stop a timer
 tolower( {expr})		String	the String {expr} switched to lowercase
 toupper( {expr})		String	the String {expr} switched to uppercase
 tr( {src}, {fromstr}, {tostr})	String	translate chars of {src} in {fromstr}
@@ -2145,6 +2164,11 @@ values( {dict})			List	values in {dict}
 virtcol( {expr})		Number	screen column of cursor or mark
 visualmode( [expr])		String	last visual mode used
 wildmenumode()			Number	whether 'wildmenu' mode is active
+win_findbuf( {bufnr}) 		List	find windows containing {bufnr}
+win_getid( [{win} [, {tab}]]) 	Number	get window ID for {win} in {tab}
+win_gotoid( {expr})		Number	go to window with ID {expr}
+win_id2tabwin( {expr})		List	get tab and window nr from window ID
+win_id2win( {expr})		Number	get window nr from window ID
 winbufnr( {nr})			Number	buffer number of window {nr}
 wincol()			Number	window column of the cursor
 winheight( {nr})		Number	height of window {nr}
@@ -2295,6 +2319,36 @@ assert_false({actual} [, {msg}])				*assert_false()*
 		number the assert fails.
 		When {msg} is omitted an error in the form "Expected False but
 		got {actual}" is produced.
+
+								*assert_match()*
+assert_match({pattern}, {actual} [, {msg}])
+		When {pattern} does not match {actual} an error message is
+		added to |v:errors|.
+
+		{pattern} is used as with |=~|: The matching is always done
+		like 'magic' was set and 'cpoptions' is empty, no matter what
+		the actual value of 'magic' or 'cpoptions' is.
+
+		{actual} is used as a string, automatic conversion applies.
+		Use "^" and "$" to match with the start and end of the text.
+		Use both to match the whole text.
+
+		When {msg} is omitted an error in the form "Pattern {pattern}
+		does not match {actual}" is produced.
+		Example: >
+	assert_match('^f.*o$', 'foobar')
+<		Will result in a string to be added to |v:errors|:
+	test.vim line 12: Pattern '^f.*o$' does not match 'foobar' ~
+
+							*assert_notequal()*
+assert_notequal({expected}, {actual} [, {msg}])
+		The opposite of `assert_equal()`: add an error message to
+		|v:errors| when {expected} and {actual} are equal.
+
+							*assert_notmatch()*
+assert_notmatch({pattern}, {actual} [, {msg}])
+		The opposite of `assert_match()`: add an error message to
+		|v:errors| when {pattern} matches {actual}.
 
 assert_true({actual} [, {msg}])					*assert_true()*
 		When {actual} is not true an error message is added to
@@ -2693,17 +2747,21 @@ confirm({msg} [, {choices} [, {default} [, {type}]]])
 		don't fit, a vertical layout is used anyway.  For some systems
 		the horizontal layout is always used.
 
-ch_close({channel})						*ch_close()*
-		Close {channel}.  See |channel-close|.
+ch_close({handle})						*ch_close()*
+		Close {handle}.  See |channel-close|.
+		{handle} can be Channel or a Job that has a Channel.
+
 		{only available when compiled with the |+channel| feature}
 
-ch_evalexpr({channel}, {expr} [, {options}])			*ch_evalexpr()*
-		Send {expr} over {channel}.  The {expr} is encoded
+ch_evalexpr({handle}, {expr} [, {options}])			*ch_evalexpr()*
+		Send {expr} over {handle}.  The {expr} is encoded
 		according to the type of channel.  The function cannot be used
 		with a raw channel.  See |channel-use|.
+		{handle} can be Channel or a Job that has a Channel.
 								*E917*
 		{options} must be a Dictionary.  It must not have a "callback"
-		entry.
+		entry.  It can have a "timeout" entry to specify the timeout
+		for this specific request.
 
 		ch_evalexpr() waits for a response and returns the decoded
 		expression.  When there is an error or timeout it returns an
@@ -2711,8 +2769,10 @@ ch_evalexpr({channel}, {expr} [, {options}])			*ch_evalexpr()*
 
 		{only available when compiled with the |+channel| feature}
 
-ch_evalraw({channel}, {string} [, {options}])		*ch_evalraw()*
-		Send {string} over {channel}.
+ch_evalraw({handle}, {string} [, {options}])		*ch_evalraw()*
+		Send {string} over {handle}.
+		{handle} can be Channel or a Job that has a Channel.
+
 		Works like |ch_evalexpr()|, but does not encode the request or
 		decode the response.  The caller is responsible for the
 		correct contents.  Also does not add a newline for a channel
@@ -2722,8 +2782,9 @@ ch_evalraw({channel}, {string} [, {options}])		*ch_evalraw()*
 
 		{only available when compiled with the |+channel| feature}
 
-ch_getbufnr({channel}, {what})				 *ch_getbufnr()*
-		Get the buffer number that {channel} is using for {what}.
+ch_getbufnr({handle}, {what})				 *ch_getbufnr()*
+		Get the buffer number that {handle} is using for {what}.
+		{handle} can be Channel or a Job that has a Channel.
 		{what} can be "err" for stderr, "out" for stdout or empty for
 		socket output.
 		Returns -1 when there is no buffer.
@@ -2737,11 +2798,39 @@ ch_getjob({channel})						*ch_getjob()*
 		{only available when compiled with the |+channel| and
 		|+job| features}
 
-ch_log({msg} [, {channel}])					*ch_log()*
+ch_info({handle})						*ch_info()*
+		Returns a Dictionary with information about {handle}.  The
+		items are:
+		   "id"		  number of the channel
+		   "status"	  "open" (any part is open) or "closed"
+		When opened with ch_open():
+		   "hostname"	  the hostname of the address
+		   "port"	  the port of the address
+		   "sock_status"  "open" or "closed"
+		   "sock_mode"	  "NL", "RAW", "JSON" or "JS"
+		   "sock_io"	  "socket"
+		   "sock_timeout" timeout in msec
+		When opened with job_start():
+		   "out_status"	  "open" or "closed"
+		   "out_mode"	  "NL", "RAW", "JSON" or "JS"
+		   "out_io"	  "null", "pipe", "file" or "buffer"
+		   "out_timeout"  timeout in msec
+		   "err_status"	  "open" or "closed"
+		   "err_mode"	  "NL", "RAW", "JSON" or "JS"
+		   "err_io"	  "out", "null", "pipe", "file" or "buffer"
+		   "err_timeout"  timeout in msec
+		   "in_status"	  "open" or "closed"
+		   "in_mode"	  "NL", "RAW", "JSON" or "JS"
+		   "in_io"	  "null", "pipe", "file" or "buffer"
+		   "in_timeout"	  timeout in msec
+
+ch_log({msg} [, {handle}])					*ch_log()*
 		Write {msg} in the channel log file, if it was opened with
 		|ch_logfile()|.
-		When {channel} is passed the channel number is used for the
-		message.  {channel} must be an open channel.
+		When {handle} is passed the channel number is used for the
+		message.
+		{handle} can be Channel or a Job that has a Channel.  The
+		Channel must open.
 
 ch_logfile({fname} [, {mode}])					*ch_logfile()*
 		Start logging channel activity to {fname}.
@@ -2753,69 +2842,41 @@ ch_logfile({fname} [, {mode}])					*ch_logfile()*
 		The file is flushed after every message, on Unix you can use
 		"tail -f" to see what is going on in real time.
 
+
 ch_open({address} [, {options}])				*ch_open()*
 		Open a channel to {address}.  See |channel|.
-		Returns a Channel.  Use |ch_status()| to check for
-		failure.
+		Returns a Channel.  Use |ch_status()| to check for failure.
 
 		{address} has the form "hostname:port", e.g.,
 		"localhost:8765".
 
-		If {options} is given it must be a |Dictionary|.  The optional
-		items are:
-			mode        "raw", "js" or "json".
-				    Default "json".
-			callback    function to call for requests with a zero
-				    sequence number.  See |channel-callback|.
-				    Default: none.
-			waittime    Specify connect timeout as milliseconds.
-				    Negative means forever.
-				    Default: 0 (don't wait)
-			timeout	    Specify response read timeout value in
-				    milliseconds. 
-				    Default: 2000.
+		If {options} is given it must be a |Dictionary|.
+		See |channel-open-options|.
+
 		{only available when compiled with the |+channel| feature}
 
-ch_read({channel} [, {options}])				*ch_read()*
-		Read from {channel} and return the received message.
+ch_read({handle} [, {options}])					*ch_read()*
+		Read from {handle} and return the received message.
+		{handle} can be Channel or a Job that has a Channel.
+		See |channel-more|.
+		{only available when compiled with the |+channel| feature}
 
-		This uses the channel timeout.  When there is nothing to read
-		within that time an empty string is returned.  To specify a
-		different timeout in msec use the "timeout" option:
-			{"timeout": 123} ~
-		To read from the error output use the "part" option:
-			{"part": "err"} ~
-		To read a message with a specific ID, on a JS or JSON channel:
-			{"id": 99} ~
-		When no ID is specified or the ID is -1, the first message is
-		returned. This overrules any callback waiting for this
-		message.
-
-		For a RAW channel this returns whatever is available, since
-		Vim does not know where a message ends.
-		For a NL channel this returns one message.
-		For a JS or JSON channel this returns one decoded message.
-		This includes any sequence number.
-
-ch_readraw({channel} [, {options}])			*ch_readraw()*
+ch_readraw({handle} [, {options}])			*ch_readraw()*
 		Like ch_read() but for a JS and JSON channel does not decode
-		the message.
+		the message.  See |channel-more|.
+		{only available when compiled with the |+channel| feature}
 
-ch_sendexpr({channel}, {expr} [, {options}])			*ch_sendexpr()*
-		Send {expr} over {channel}.  The {expr} is encoded
+ch_sendexpr({handle}, {expr} [, {options}])			*ch_sendexpr()*
+		Send {expr} over {handle}.  The {expr} is encoded
 		according to the type of channel.  The function cannot be used
-		with a raw channel.  See |channel-use|. *E912*
-
-		{options} must be a Dictionary.  The "callback" item is a
-		Funcref or the name of a function it is invoked when the
-		response is received.  See |channel-callback|.
-		Without "callback" the channel handler is invoked, otherwise
-		any received message is dropped.
+		with a raw channel.
+		See |channel-use|.				*E912*
+		{handle} can be Channel or a Job that has a Channel.
 
 		{only available when compiled with the |+channel| feature}
 
-ch_sendraw({channel}, {string} [, {options}])		*ch_sendraw()*
-		Send {string} over {channel}.
+ch_sendraw({handle}, {string} [, {options}])		*ch_sendraw()*
+		Send {string} over {handle}.
 		Works like |ch_sendexpr()|, but does not encode the request or
 		decode the response.  The caller is responsible for the
 		correct contents.  Also does not add a newline for a channel
@@ -2825,12 +2886,13 @@ ch_sendraw({channel}, {string} [, {options}])		*ch_sendraw()*
 
 		{only available when compiled with the |+channel| feature}
 
-ch_setoptions({channel}, {options})			*ch_setoptions()*
-		Set options on {channel}:
+ch_setoptions({handle}, {options})			*ch_setoptions()*
+		Set options on {handle}:
 			"callback"	the channel callback
 			"timeout"	default read timeout in msec
 			"mode"		mode for the whole channel
 		See |ch_open()| for more explanation.
+		{handle} can be Channel or a Job that has a Channel.
 
 		Note that changing the mode may cause queued messages to be
 		lost.
@@ -2838,11 +2900,12 @@ ch_setoptions({channel}, {options})			*ch_setoptions()*
 		These options cannot be changed:
 			"waittime"	only applies to "ch_open()|
 
-ch_status({channel})						*ch_status()*
-		Return the status of {channel}:
+ch_status({handle})						*ch_status()*
+		Return the status of {handle}:
 			"fail"		failed to open the channel
 			"open"		channel can be used
 			"closed"	channel can not be used
+		{handle} can be Channel or a Job that has a Channel.
 
 							*copy()*
 copy({expr})	Make a copy of {expr}.	For Numbers and Strings this isn't
@@ -3539,9 +3602,68 @@ foreground()	Move the Vim window to the foreground.	Useful when sent from
 		Win32 console version}
 
 
-function({name})					*function()* *E700*
+					*function()* *E700* *E922* *E923*
+function({name} [, {arglist}] [, {dict}])
 		Return a |Funcref| variable that refers to function {name}.
-		{name} can be a user defined function or an internal function.
+		{name} can be the name of a user defined function or an
+		internal function.
+
+		{name} can also be a Funcref, also a partial.  When it is a
+		partial the dict stored in it will be used and the {dict}
+		argument is not allowed. E.g.: >
+			let FuncWithArg = function(dict.Func, [arg])
+			let Broken = function(dict.Func, [arg], dict)
+<
+		When {arglist} or {dict} is present this creates a partial.
+		That mans the argument list and/or the dictionary is stored in
+		the Funcref and will be used when the Funcref is called.
+		
+		The arguments are passed to the function in front of other
+		arguments.  Example: >
+			func Callback(arg1, arg2, name)
+			...
+			let Func = function('Callback', ['one', 'two'])
+			...
+			call Func('name')
+<		Invokes the function as with: >
+			call Callback('one', 'two', 'name')
+
+<		The function() call can be nested to add more arguments to the
+		Funcref.  The extra arguments are appended to the list of
+		arguments.  Example: >
+			func Callback(arg1, arg2, name)
+			...
+			let Func = function('Callback', ['one'])
+			let Func2 = function(Func, ['two'])
+			...
+			call Func2('name')
+<		Invokes the function as with: >
+			call Callback('one', 'two', 'name')
+
+<		The Dictionary is only useful when calling a "dict" function.
+		In that case the {dict} is passed in as "self". Example: >
+			function Callback() dict
+			   echo "called for " . self.name
+			endfunction
+			...
+			let context = {"name": "example"}
+			let Func = function('Callback', context)
+			...
+			call Func()	" will echo: called for example
+<		The use of function() is not needed when there are no extra
+		arguments, these two are equivalent: >
+			let Func = function('Callback', context)
+			let Func = context.Callback
+
+<		The argument list and the Dictionary can be combined: >
+			function Callback(arg1, count) dict
+			...
+			let context = {"name": "example"}
+			let Func = function('Callback', ['one'], context)
+			...
+			call Func(500)
+<		Invokes the function as with: >
+			call context.Callback('one', 500)
 
 
 garbagecollect([{atexit}])				*garbagecollect()*
@@ -3809,6 +3931,8 @@ getfperm({fname})					*getfperm()*
 			:echo getfperm(expand("~/.vimrc"))
 <		This will hopefully (from a security point of view) display
 		the string "rw-r--r--" or even "rw-------".
+
+		For setting permissins use |setfperm()|.
 
 getftime({fname})					*getftime()*
 		The result is a Number, which is the last modification time of
@@ -4445,12 +4569,23 @@ items({dict})						*items()*
 
 job_getchannel({job})					 *job_getchannel()*
 		Get the channel handle that {job} is using.
+		To check if the job has no channel: >
+			if string(job_getchannel()) == 'channel fail'
+<
 		{only available when compiled with the |+job| feature}
+
+job_info({job})						*job_info()*
+		Returns a Dictionary with information about {job}:
+		   "status"	what |job_status()| returns
+		   "channel"	what |job_getchannel()| returns
+		   "exitval"	only valid when "status" is "dead"
+		   "exit_cb"	function to be called on exit
+		   "stoponexit"	|job-stoponexit|
 
 job_setoptions({job}, {options})			*job_setoptions()*
 		Change options for {job}.  Supported are:
-			"stoponexit"	|job-stoponexit|
-			"exit-cb"	|job-exit-cb|
+		   "stoponexit"	|job-stoponexit|
+		   "exit_cb"	|job-exit_cb|
 
 job_start({command} [, {options}])			*job_start()*
 		Start a job and return a Job object.  Unlike |system()| and
@@ -4500,6 +4635,8 @@ job_status({job})					*job_status()* *E916*
 		
 		If an exit callback was set with the "exit-cb" option and the
 		job is now detected to be "dead" the callback will be invoked.
+
+		For more information see |job_info()|.
 
 		{only available when compiled with the |+job| feature}
 
@@ -5081,6 +5218,24 @@ matchstr({expr}, {pat}[, {start}[, {count}]])			*matchstr()*
 			:echo matchstr("testing", "ing", 5)
 <		result is "".
 		When {expr} is a |List| then the matching item is returned.
+		The type isn't changed, it's not necessarily a String.
+
+matchstrpos({expr}, {pat}[, {start}[, {count}]])		*matchstrpos()*
+		Same as |matchstr()|, but return the matched string, the start
+		position and the end position of the match.  Example: >
+			:echo matchstrpos("testing", "ing")
+<		results in ["ing", 4, 7].
+		When there is no match ["", -1, -1] is returned.
+		The {start}, if given, has the same meaning as for |match()|. >
+			:echo matchstrpos("testing", "ing", 2)
+<		results in ["ing", 4, 7]. >
+			:echo matchstrpos("testing", "ing", 5)
+<		result is ["", -1, -1].
+		When {expr} is a |List| then the matching item, the index
+		of first item where {pat} matches, the start position and the
+		end position of the match are returned. >
+			:echo matchstrpos([1, '__x'], '\a')
+<		result is ["x", 1, 2, 3].
 		The type isn't changed, it's not necessarily a String.
 
 							*max()*
@@ -5981,6 +6136,24 @@ setcmdpos({pos})					*setcmdpos()*
 		Returns 0 when successful, 1 when not editing the command
 		line.
 
+setfperm({fname}, {mode})				*setfperm()* *chmod*
+		Set the file permissions for {fname} to {mode}.
+		{mode} must be a string with 9 characters.  It is of the form
+		"rwxrwxrwx", where each group of "rwx" flags represent, in
+		turn, the permissions of the owner of the file, the group the
+		file belongs to, and other users.  A '-' character means the
+		permission is off, any other character means on.  Multi-byte
+		characters are not supported.
+
+		For example "rw-r-----" means read-write for the user,
+		readable by the group, not accessible by others.  "xx-x-----"
+		would do the same thing.
+
+		Returns non-zero for success, zero for failure.
+
+		To read permissions see |getfperm()|.
+
+
 setline({lnum}, {text})					*setline()*
 		Set line {lnum} of the current buffer to {text}.  To insert
 		lines use |append()|.
@@ -6518,13 +6691,17 @@ string({expr})	Return {expr} converted to a String.  If {expr} is a Number,
 		Float, String or a composition of them, then the result can be
 		parsed back with |eval()|.
 			{expr} type	result ~
-			String		'string'
+			String		'string' (single quotes are doubled)
 			Number		123
 			Float		123.123456 or 1.123456e8
 			Funcref		function('name')
 			List		[item, item]
 			Dictionary	{key: value, key: value}
-		Note that in String values the ' character is doubled.
+
+		When a List or Dictionary has a recursive reference it is
+		replaced by "[...]" or "{...}".  Using eval() on the result
+		will then fail.
+
 		Also see |strtrans()|.
 
 							*strlen()*
@@ -6798,8 +6975,7 @@ systemlist({expr} [, {input}])				*systemlist()*
 		is the same as |readfile()| will output with {binary} argument 
 		set to "b".
 
-		Returns an empty string on error, so be careful not to run 
-		into |E706|.
+		Returns an empty string on error.
 
 
 tabpagebuflist([{arg}])					*tabpagebuflist()*
@@ -6914,6 +7090,37 @@ tanh({expr})						*tanh()*
 <			-0.761594
 		{only available when compiled with the |+float| feature}
 
+
+							*timer_start()*
+timer_start({time}, {callback} [, {options}])
+		Create a timer and return the timer ID.
+
+		{time} is the waiting time in milliseconds. This is the
+		minimum time before invoking the callback.  When the system is
+		busy or Vim is not waiting for input the time will be longer.
+
+		{callback} is the function to call.  It can be the name of a
+		function or a Funcref.  It is called with one argument, which
+		is the timer ID.  The callback is only invoked when Vim is
+		waiting for input.
+
+		{options} is a dictionary.  Supported entries:
+		   "repeat"	Number of times to repeat calling the
+		   		callback.  -1 means forever.
+
+		Example: >
+			func MyHandler(timer)
+			  echo 'Handler called'
+			endfunc
+			let timer = timer_start(500, 'MyHandler',
+				\ {'repeat': 3})
+<		This will invoke MyHandler() three times at 500 msec
+		intervals.
+		{only available when compiled with the |+timers| feature}
+
+timer_stop({timer})					*timer_stop()*
+		Stop a timer.  {timer} is an ID returned by timer_start().
+		The timer callback will no longer be invoked.
 
 tolower({expr})						*tolower()*
 		The result is a copy of the String given, with all uppercase
@@ -7114,6 +7321,33 @@ wildmenumode()					*wildmenumode()*
 <
 		(Note, this needs the 'wildcharm' option set appropriately).
 
+
+win_findbuf({bufnr})					*win_findbuf()*
+		Returns a list with window IDs for windows that contain buffer
+		{bufnr}.  When there is none the list is empty.
+
+win_getid([{win} [, {tab}]])				*win_getid()*
+		Get the window ID for the specified window.
+		When {win} is missing use the current window.
+		With {win} this is the window number.  The top window has
+		number 1.
+		Without {tab} use the current tab, otherwise the tab with
+		number {tab}.  The first tab has number one.
+		Return zero if the window cannot be found.
+
+win_gotoid({expr})					*win_gotoid()*
+		Go to window with ID {expr}.  This may also change the current
+		tabpage.
+		Return 1 if successful, 0 if the window cannot be found.
+
+win_id2tabwin({expr}					*win_id2tabwin()*
+		Return a list with the tab number and window number of window
+		with ID {expr}: [tabnr, winnr].
+		Return [0, 0] if the window cannot be found.
+
+win_id2win({expr})					*win_id2win()*
+		Return the window number of window with ID {expr}.
+		Return 0 if the window cannot be found in the current tabpage.
 
 							*winbufnr()*
 winbufnr({nr})	The result is a Number, which is the number of the buffer
@@ -7444,12 +7678,14 @@ termresponse		Compiled with support for |t_RV| and |v:termresponse|.
 textobjects		Compiled with support for |text-objects|.
 tgetent			Compiled with tgetent support, able to use a termcap
 			or terminfo file.
+timers			Compiled with |timer_start()| support.
 title			Compiled with window title support |'title'|.
 toolbar			Compiled with support for |gui-toolbar|.
 unix			Unix version of Vim.
 user_commands		User-defined commands.
 vertsplit		Compiled with vertically split windows |:vsplit|.
 vim_starting		True while initial source'ing takes place. |startup|
+			*vim_starting*
 viminfo			Compiled with viminfo support.
 virtualedit		Compiled with 'virtualedit' option.
 visual			Compiled with Visual mode.

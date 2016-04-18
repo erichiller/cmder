@@ -1,4 +1,4 @@
-*starting.txt*  For Vim version 7.4.  Last change: 2016 Feb 27
+*starting.txt*  For Vim version 7.4.  Last change: 2016 Mar 26
 
 
 		  VIM REFERENCE MANUAL    by Bram Moolenaar
@@ -45,6 +45,7 @@ filename	One or more file names.  The first one will be the current
 			vim -- -filename
 <		All arguments after the "--" will be interpreted as file names,
 		no other options or "+command" argument can follow.
+		For behavior of quotes on MS-Windows, see |win32-quotes|.
 
 							*--*
 -		This argument can mean two things, depending on whether Ex
@@ -832,6 +833,8 @@ accordingly.  Vim proceeds in this order:
 	-  The user exrc file(s).  Same as for the user vimrc file, but with
 	   "vimrc" replaced by "exrc".  But only one of ".exrc" and "_exrc" is
 	   used, depending on the system.  And without the (*)!
+	-  You would usually have "syntax on" and/or "filetype on" commands,
+	   which trigger initializing filetype detection, see |syntax-loading|.
 
      d. If the 'exrc' option is on (which is not the default), the current
 	directory is searched for three files.  The first that exists is used,
@@ -863,8 +866,8 @@ accordingly.  Vim proceeds in this order:
 	use "--cmd 'set noloadplugins'" |--cmd|.
 
 	Plugin packs are loaded.  These are plugins, as above, but found in
-	'packpath' directories.  Every plugin directory found is added in
-	'runtimepath'.  See |packages|.
+	'packpath' "start" directories.  Every plugin directory found is added
+	in 'runtimepath'.  See |packages|.
 
 5. Set 'shellpipe' and 'shellredir'
 	The 'shellpipe' and 'shellredir' options are set according to the
@@ -902,8 +905,9 @@ accordingly.  Vim proceeds in this order:
 12. Execute startup commands
 	If a "-t" flag was given to Vim, the tag is jumped to.
 	The commands given with the |-c| and |+cmd| arguments are executed.
-	The starting flag is reset, has("vim_starting") will now return zero.
 	If the 'insertmode' option is set, Insert mode is entered.
+	The starting flag is reset, has("vim_starting") will now return zero.
+	The |v:vim_did_enter| variable is set to 1.
 	The |VimEnter| autocommands are executed.
 
 Some hints on using initializations:

@@ -42,8 +42,8 @@ _mount()
         if [[ -n $host ]]; then
             COMPREPLY=( $( compgen -P "//$host" -W \
                 "$( smbclient -d 0 -NL $host 2>/dev/null |
-                sed -ne '/^['"$'\t '"']*Sharename/,/^$/p' |
-                sed -ne '3,$s|^[^A-Za-z]*\([^'"$'\t '"']*\).*$|/\1|p' )" \
+                command sed -ne '/^[[:blank:]]*Sharename/,/^$/p' |
+                command sed -ne '3,$s|^[^A-Za-z]*\([^[:blank:]]*\).*$|/\1|p' )" \
                     -- "${cur#//$host}" ) )
         fi
     elif [[ -r /etc/vfstab ]]; then
@@ -51,7 +51,7 @@ _mount()
         COMPREPLY=( $( compgen -W "$( awk '! /^[ \t]*#/ {if ($3 ~ /\//) print $3}' /etc/vfstab )" -- "$cur" ) )
     elif [[ ! -e /etc/fstab ]]; then
         # probably Cygwin
-        COMPREPLY=( $( compgen -W "$( mount | awk '! /^[ \t]*#/ {if ($3 ~ /\//) print $3}' )" -- "$cur" ) )
+        COMPREPLY=( $( compgen -W "$( $1 | awk '! /^[ \t]*#/ {if ($3 ~ /\//) print $3}' )" -- "$cur" ) )
     else
         # probably BSD
         COMPREPLY=( $( compgen -W "$( awk '! /^[ \t]*#/ {if ($2 ~ /\//) print $2}' /etc/fstab )" -- "$cur" ) )

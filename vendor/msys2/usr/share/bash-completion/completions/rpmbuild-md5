@@ -7,7 +7,7 @@ _rpm_installed_packages()
     if [[ -r /var/log/rpmpkgs && \
         /var/log/rpmpkgs -nt /var/lib/rpm/Packages ]]; then
         # using RHL 7.2 or later - this is quicker than querying the DB
-        COMPREPLY=( $( compgen -W "$( sed -ne \
+        COMPREPLY=( $( compgen -W "$( command sed -ne \
             's|^\([^[:space:]]\{1,\}\)-[^[:space:]-]\{1,\}-[^[:space:]-]\{1,\}\.rpm$|\1|p' \
             /var/log/rpmpkgs )" -- "$cur" ) )
     elif type rpmqpack &>/dev/null ; then
@@ -29,14 +29,14 @@ _rpm_groups()
 _rpm_macros()
 {
     # get a list of macros
-    COMPREPLY=( $( compgen -W "$( ${1:-rpm} --showrc | sed -ne \
+    COMPREPLY=( $( compgen -W "$( ${1:-rpm} --showrc | command sed -ne \
         's/^-\{0,1\}[0-9]\{1,\}[:=][[:space:]]\{1,\}\([^[:space:](]\{3,\}\).*/%\1/p' )" \
         -- "$cur" ) )
 }
 
 _rpm_buildarchs()
 {
-    COMPREPLY=( $( compgen -W "$( ${1:-rpm} --showrc | sed -ne \
+    COMPREPLY=( $( compgen -W "$( ${1:-rpm} --showrc | command sed -ne \
         's/^\s*compatible\s\s*build\s\s*archs\s*:\s*\(.*\)/\1/ p' )" \
         -- "$cur" ) )
 }
@@ -89,27 +89,24 @@ _rpm()
             _filedir spec
             return 0
             ;;
-        --whatprovides)
+        --whatenchances|--whatprovides|--whatrecommends|--whatrequires|\
+        --whatsuggests|--whatsupplements)
             if [[ "$cur" == */* ]]; then
                 _filedir
             else
                 # complete on capabilities
-                local IFS=$'\n'
+                local IFS=$'\n' fmt
+                case $prev in
+                    *enhances) fmt=ENHANCENAME ;;
+                    *provides) fmt=PROVIDENAME ;;
+                    *recommends) fmt=RECOMMENDNAME ;;
+                    *requires) fmt=REQUIRENAME ;;
+                    *suggests) fmt=SUGGESTNAME ;;
+                    *supplements) fmt=SUPPLEMENTNAME ;;
+                esac
                 COMPREPLY=( $( compgen -W "$( $1 -qa --nodigest --nosignature \
-                    --queryformat='%{PROVIDENAME}\n' 2>/dev/null )" \
-                    -- "$cur" ) )
-            fi
-            return 0
-            ;;
-        --whatrequires)
-            if [[ "$cur" == */* ]]; then
-                _filedir
-            else
-                # complete on capabilities
-                local IFS=$'\n'
-                COMPREPLY=( $( compgen -W "$( $1 -qa --nodigest --nosignature \
-                    --queryformat='%{REQUIRENAME}\n' 2>/dev/null )" \
-                    -- "$cur" ) )
+                    --queryformat=\"%{$fmt}\\n\" 2>/dev/null |
+                    command grep -vF '(none)' )" -- "$cur" ) )
             fi
             return 0
             ;;
@@ -153,7 +150,8 @@ _rpm()
                 --enhances --filesbypkg --filecaps --fileclass --filecolor
                 --fileprovide --filerequire --filesbypkg --info --list
                 --obsoletes --pipe --provides --queryformat= --requires
-                --scripts --suggests --triggers --xml"
+                --scripts --suggests --triggers --xml --recommends
+                --supplements"
 
             if [[ ${words[@]} == *\ -@(*([^ -])f|-file )* ]]; then
                 # -qf completion
@@ -180,7 +178,9 @@ _rpm()
                     COMPREPLY=( $( compgen -W "$opts --all --file --fileid
                         --dbpath --fscontext --ftswalk --group --hdrid --last
                         --package --pkgid --root= --specfile --state
-                        --triggeredby --whatprovides --whatrequires" \
+                        --triggeredby --whatenhances --whatprovides
+                        --whatrecommends --whatrequires --whatsuggests
+                        --whatsupplements" \
                             -- "$cur" ) )
                 elif [[ ${words[@]} != *\ -@(*([^ -])a|-all )* ]]; then
                     _rpm_installed_packages $1
@@ -200,7 +200,9 @@ _rpm()
                 COMPREPLY=( $( compgen -W "$opts --root= --dbpath --nodeps
                     --nogroup --nolinkto --nomode --nomtime --nordev --nouser
                     --nofiles --noscripts --nomd5 --querytags --specfile
-                    --whatrequires --whatprovides" -- "$cur" ) )
+                    --whatenhances --whatprovides --whatrecommends
+                    --whatrequires --whatsuggests --whatsupplements" \
+                        -- "$cur" ) )
             # check whether we're doing file completion
             elif [[ ${words[@]} == *\ -@(*([^ -])f|-file )* ]]; then
                 _filedir
@@ -262,7 +264,7 @@ _rpmbuild()
             local cfgdir=$( $rpm --eval '%{_rpmconfigdir}' 2>/dev/null )
             if [[ $cfgdir ]]; then
                 COMPREPLY=( $( compgen -W "$( command ls $cfgdir 2>/dev/null \
-                    | sed -ne 's/^brp-//p' )" -- "$cur" ) )
+                    | command sed -ne 's/^brp-//p' )" -- "$cur" ) )
             fi
             ;;
         --define|-D|--with|--without)
@@ -282,7 +284,7 @@ _rpmbuild()
     local word ext
     for word in ${words[@]}; do
         case $word in
-            -b?)
+            -b?|--clean|--nobuild)
                 ext=spec
                 break
                 ;;

@@ -6,6 +6,9 @@ _wget()
     _init_completion -s || return
 
     case $prev in
+        -V|--version|-h|--help)
+            return
+            ;;
         --progress)
             COMPREPLY=( $( compgen -W 'bar dot' -- "$cur" ) )
             return
@@ -100,7 +103,7 @@ _wget()
             ;;
         -Q|--quota|--limit-rate|--warc-max-size)
             # expect size
-            if [[ $cur == *@(k|m) ]]; then
+            if [[ $cur == *[km] ]]; then
                 COMPREPLY=( $( compgen -W "$cur" ) )
             elif [[ $cur ]]; then
                 COMPREPLY=( $( compgen -P "$cur" -W "{0..9} k m" ) )
@@ -112,7 +115,7 @@ _wget()
             return
             ;;
         --user|--http-user|--proxy-user|--ftp-user)
-            COMPREPLY=( $( compgen -W "$( sed -n \
+            COMPREPLY=( $( compgen -W "$( command sed -n \
                 '/^login/s/^[[:blank:]]*login[[:blank:]]//p' ~/.netrc \
                 2>/dev/null )" -- "$cur" ) )
             return
@@ -134,19 +137,24 @@ _wget()
         --local-encoding|--remote-encoding)
             type -P xauth &>/dev/null && \
             COMPREPLY=( $( compgen -W '$( iconv -l 2>/dev/null | \
-                sed -e "s@/*\$@@" -e "s/[,()]//g" 2>/dev/null )' -- "$cur" ) )
+                command sed -e "s@/*\$@@" -e "s/[,()]//g" 2>/dev/null )' -- "$cur" ) )
             return
             ;;
         -e|--execute)
             return # TODO base=STR
             ;;
-        -nv|--report-speed)
+        --report-speed)
             COMPREPLY=( $( compgen -W 'bits' -- "$cur" ) )
+            return
+            ;;
+        --regex-type)
+            COMPREPLY=( $( compgen -W 'posix' -- "$cur" ) )
             return
             ;;
         -B|--base|--password|--ftp-password|--http-password|--proxy-password|\
         --default-page|--referer|-U|--user-agent|--post-data|--warc-header|-A|\
-        --accept|-R|--reject|-I|--include-directories|-X|--exclude-directories)
+        --accept|-R|--reject|--accept-regex|--reject-regex|-I|\
+        --include-directories|-X|--exclude-directories)
             # argument required but no completions available
             return
             ;;

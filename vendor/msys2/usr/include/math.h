@@ -137,6 +137,25 @@ extern double fmod _PARAMS((double, double));
 #endif /* ! defined (__math_68881) */
 #endif /* ! defined (_REENT_ONLY) */
 
+#if __MISC_VISIBLE
+extern int finite _PARAMS((double));
+extern int finitef _PARAMS((float));
+extern int finitel _PARAMS((long double));
+extern int isinff _PARAMS((float));
+extern int isnanf _PARAMS((float));
+#ifdef __CYGWIN__ /* not implemented in newlib yet */
+extern int isinfl _PARAMS((long double));
+extern int isnanl _PARAMS((long double));
+#endif
+#if !defined(__cplusplus) || __cplusplus < 201103L
+extern int isinf _PARAMS((double));
+#endif
+#endif /* __MISC_VISIBLE */
+#if (__MISC_VISIBLE || (__XSI_VISIBLE && __XSI_VISIBLE < 600)) \
+  && (!defined(__cplusplus) || __cplusplus < 201103L)
+extern int isnan _PARAMS((double));
+#endif
+
 #if __ISO_C_VISIBLE >= 1999
 /* ISO C99 types and macros. */
 
@@ -209,7 +228,7 @@ extern int __signbitd (double x);
  *       supporting multiple floating point types.  Thus, they are
  *       now defined as macros.  Implementations of the old functions
  *       taking double arguments still exist for compatibility purposes
- *       (prototypes for them are in <ieeefp.h>).  */
+ *       (prototypes for them are earlier in this header).  */
 
 #if __GNUC_PREREQ (4, 4)
   #define fpclassify(__x) (__builtin_fpclassify (FP_NAN, FP_INFINITE, \
@@ -289,15 +308,10 @@ extern int __signbitd (double x);
                            fpclassify(__a) == FP_NAN || fpclassify(__b) == FP_NAN;}))
 #endif
 
-/* Non ANSI long double precision functions.  */
-
-extern int finitel _PARAMS((long double));
-
 /* Non ANSI double precision functions.  */
 
 extern double infinity _PARAMS((void));
 extern double nan _PARAMS((const char *));
-extern int finite _PARAMS((double));
 extern double copysign _PARAMS((double, double));
 extern double logb _PARAMS((double));
 extern int ilogb _PARAMS((double));
@@ -396,7 +410,6 @@ extern float fmaf _PARAMS((float, float, float));
 
 extern float infinityf _PARAMS((void));
 extern float nanf _PARAMS((const char *));
-extern int finitef _PARAMS((float));
 extern float copysignf _PARAMS((float, float));
 extern float logbf _PARAMS((float));
 extern int ilogbf _PARAMS((float));
@@ -421,8 +434,12 @@ extern float log2f _PARAMS((float));
 extern float hypotf _PARAMS((float, float));
 #endif /* ! defined (_REENT_ONLY) */
 
-/* On platforms where long double equals double.  */
-#ifdef _LDBL_EQ_DBL
+/* Newlib doesn't fully support long double math functions so far.
+   On platforms where long double equals double the long double functions
+   simply call the double functions.  On Cygwin the long double functions
+   are implemented independently from newlib to be able to use optimized
+   assembler functions despite using the Microsoft x86_64 ABI. */
+#if defined (_LDBL_EQ_DBL) || defined (__CYGWIN__)
 /* Reentrant ANSI C functions.  */
 #ifndef __math_68881
 extern long double atanl _PARAMS((long double));
@@ -492,7 +509,7 @@ extern long double lgammal _PARAMS((long double));
 extern long double erfl _PARAMS((long double));
 extern long double erfcl _PARAMS((long double));
 #endif /* ! defined (_REENT_ONLY) */
-#else /* !_LDBL_EQ_DBL */
+#else /* !_LDBL_EQ_DBL && !__CYGWIN__ */
 extern long double hypotl _PARAMS((long double, long double));
 extern long double sqrtl _PARAMS((long double));
 #ifdef __i386__
@@ -501,13 +518,16 @@ extern _LONG_DOUBLE rintl _PARAMS((_LONG_DOUBLE));
 extern long int lrintl _PARAMS((_LONG_DOUBLE));
 extern long long int llrintl _PARAMS((_LONG_DOUBLE));
 #endif /* __i386__ */
-#endif /* !_LDBL_EQ_DBL */
+#endif /* !_LDBL_EQ_DBL && !__CYGWIN__ */
 
 #endif /* __ISO_C_VISIBLE >= 1999 */
 
 #if __MISC_VISIBLE
 extern double drem _PARAMS((double, double));
 extern float dremf _PARAMS((float, float));
+#ifdef __CYGWIN__
+extern float dreml _PARAMS((long double, long double));
+#endif /* __CYGWIN__ */
 extern double gamma_r _PARAMS((double, int *));
 extern double lgamma_r _PARAMS((double, int *));
 extern float gammaf_r _PARAMS((float, int *));
@@ -536,6 +556,9 @@ extern float jnf _PARAMS((int, float));
 #if __GNU_VISIBLE
 extern void sincos _PARAMS((double, double *, double *));
 extern void sincosf _PARAMS((float, float *, float *));
+#ifdef __CYGWIN__
+extern void sincosl _PARAMS((long double, long double *, long double *));
+#endif /* __CYGWIN__ */
 # ifndef exp10
 extern double exp10 _PARAMS((double));
 # endif
@@ -548,6 +571,14 @@ extern float exp10f _PARAMS((float));
 # ifndef pow10f
 extern float pow10f _PARAMS((float));
 # endif
+#ifdef __CYGWIN__
+# ifndef exp10l
+extern float exp10l _PARAMS((float));
+# endif
+# ifndef pow10l
+extern float pow10l _PARAMS((float));
+# endif
+#endif /* __CYGWIN__ */
 #endif /* __GNU_VISIBLE */
 
 #if __MISC_VISIBLE || __XSI_VISIBLE

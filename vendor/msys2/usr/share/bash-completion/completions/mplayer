@@ -4,8 +4,8 @@ _mplayer_options_list()
 {
     cur=${cur%\\}
     COMPREPLY=( $( compgen -W "$( $1 -nomsgcolor -nomsgmodule $2 help 2>/dev/null | \
-        sed -e '/^Available/,/^$/!d' -e '/^Available/d' | awk '{print $1}' | \
-        sed -e 's/:$//' -e 's/^'${2#-}'$//' -e 's/<.*//' )" -- "$cur" ) )
+        command sed -e '/^Available/,/^$/!d' -e '/^Available/d' | awk '{print $1}' | \
+        command sed -e 's/:$//' -e 's/^'${2#-}'$//' -e 's/<.*//' )" -- "$cur" ) )
 }
 
 _mplayer()
@@ -25,8 +25,8 @@ _mplayer()
             _mplayer_options_list $cmd -profile
             return 0
             ;;
-        -audiofile)
-            _filedir '@(mp3|mpg|ogg|w?(a)v|mid|flac|mka|ape)'
+        -audiofile|-audio-file)
+            _filedir '@(mp3|mpg|ogg|w?(a)v|mid|flac|mka|ac3|ape)'
             return 0
             ;;
         -font|-subfont)
@@ -39,7 +39,7 @@ _mplayer()
             COMPREPLY+=( $( compgen -W '$( fc-list 2>/dev/null )' -- "$cur" ) )
             return 0
             ;;
-        -sub)
+        -sub|-sub-file)
             _filedir '@(srt|sub|txt|utf|rar|mpsub|smi|js|ssa|ass)'
             return 0
             ;;
@@ -57,7 +57,7 @@ _mplayer()
             ;;
         -subcp|-msgcharset)
             local cp
-            cp=( $( iconv --list 2>/dev/null | sed -e "s@//@@;" 2>/dev/null ) )
+            cp=( $( iconv --list 2>/dev/null | command sed -e "s@//@@;" 2>/dev/null ) )
             if [[ "$cur" == "${cur,,}" ]]; then
                 COMPREPLY=( $( compgen -W '${cp[@],,}' -- "$cur" ) )
             else
@@ -86,7 +86,7 @@ _mplayer()
             local IFS=$'\n'
             for i in ~/.mplayer/skins ${dirs[@]}; do
                 if [[ -d $i && -r $i ]]; then
-                    for j in $( compgen -d $i/$cur ); do
+                    for j in $( compgen -d -- $i/$cur ); do
                         COMPREPLY[$k]=${j#$i/}
                         k=$((++k))
                     done
@@ -100,7 +100,8 @@ _mplayer()
             return 0
             ;;
         -dvd-device)
-            _filedir
+            _dvd_devices
+            _filedir iso
             return 0
             ;;
         -bluray-device)
@@ -274,12 +275,12 @@ _mplayer()
     case $cur in
         -*)
             COMPREPLY=( $( compgen -W '$( $cmd -nomsgcolor -nomsgmodule -list-options 2>/dev/null | \
-                sed -ne '1,/^[[:space:]]*Name/d' \
+                command sed -ne '1,/^[[:space:]]*Name/d' \
                     -e "s/^[[:space:]]*/-/" -e "s/[[:space:]:].*//" \
                     -e "/^-\(Total\|.*\*\)\{0,1\}$/!p" )' -- "$cur" ) )
             ;;
         *)
-            _filedir '@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|ASF|vob|VOB|bin|BIN|dat|DAT|vcd|VCD|ps|PS|pes|PES|fl[iv]|FL[IV]|fxm|FXM|viv|VIV|rm?(j)|RM?(J)|ra?(m)|RA?(M)|yuv|YUV|mov|MOV|qt|QT|mp[234]|MP[234]|m4[av]|M4[AV]|og[gmavx]|OG[GMAVX]|w?(a)v|W?(A)V|dump|DUMP|mk[av]|MK[AV]|m4a|M4A|aac|AAC|m[24]v|M[24]V|dv|DV|rmvb|RMVB|mid|MID|t[ps]|T[PS]|3g[p2]|3gpp?(2)|mpc|MPC|flac|FLAC|vro|VRO|divx|DIVX|aif?(f)|AIF?(F)|m2t?(s)|M2T?(S)|vdr|VDR|xvid|XVID|ape|APE|gif|GIF|nut|NUT|bik|BIK|webm|WEBM|amr|AMR|awb|AWB|iso|ISO|opus|OPUS)?(.part)'
+            _filedir '@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|ASF|vob|VOB|bin|BIN|dat|DAT|vcd|VCD|ps|PS|pes|PES|fl[iv]|FL[IV]|fxm|FXM|viv|VIV|rm?(j)|RM?(J)|ra?(m)|RA?(M)|yuv|YUV|mov|MOV|qt|QT|mp[234]|MP[234]|m4[av]|M4[AV]|og[gmavx]|OG[GMAVX]|w?(a)v|W?(A)V|dump|DUMP|mk[av]|MK[AV]|m4a|M4A|aac|AAC|m[24]v|M[24]V|dv|DV|rmvb|RMVB|mid|MID|t[ps]|T[PS]|3g[p2]|3gpp?(2)|mpc|MPC|flac|FLAC|vro|VRO|divx|DIVX|aif?(f)|AIF?(F)|m2t?(s)|M2T?(S)|mts|MTS|vdr|VDR|xvid|XVID|ape|APE|gif|GIF|nut|NUT|bik|BIK|webm|WEBM|amr|AMR|awb|AWB|iso|ISO|opus|OPUS)?(.part)'
             ;;
     esac
 

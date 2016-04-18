@@ -8,11 +8,11 @@ _comp_dpkg_installed_packages()
 } || {
 _comp_dpkg_installed_packages()
 {
-    command grep -A 1 "Package: $1" /var/lib/dpkg/status | \
+    command grep -A 1 "Package: $1" /var/lib/dpkg/status 2>/dev/null | \
         command grep -B 1 -Ee "ok installed|half-installed|unpacked| \
             half-configured" \
             -Ee "^Essential: yes" | \
-        command grep "Package: $1" | cut -d\  -f2
+        awk "/Package: $1/ { print \$2 }" 2>/dev/null
 }
 }
 
@@ -24,11 +24,11 @@ _comp_dpkg_purgeable_packages()
 } || {
 _comp_dpkg_purgeable_packages()
 {
-    command grep -A 1 "Package: $1" /var/lib/dpkg/status | \
+    command grep -A 1 "Package: $1" /var/lib/dpkg/status 2>/dev/null | \
         command grep -B 1 -Ee "ok installed|half-installed|unpacked| \
             half-configured|config-files" \
             -Ee "^Essential: yes" | \
-        command grep "Package: $1" | cut -d\  -f2
+        awk "/Package: $1/ { print \$2 }" 2>/dev/null
 }
 }
 
@@ -55,7 +55,7 @@ _dpkg()
         -c|-i|-A|-I|-f|-e|-x|-X|-W|--install|--unpack|--record-avail| \
         --contents|--info|--fsys-tarfile|--field|--control|--extract| \
         --show)
-            _filedir '?(u)deb'
+            _filedir '?(u|d)deb'
             return 0
             ;;
         -b|--build)

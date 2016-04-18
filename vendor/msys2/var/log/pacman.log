@@ -901,3 +901,31 @@
 [2016-04-03 16:07] [ALPM] transaction started
 [2016-04-03 16:07] [ALPM] reinstalled pacman (5.0.1.6403.520736d-1)
 [2016-04-03 16:07] [ALPM] transaction completed
+[2016-04-18 10:24] [PACMAN] Running 'pacman -Syuu'
+[2016-04-18 10:24] [PACMAN] synchronizing package lists
+[2016-04-18 10:24] [PACMAN] starting core system upgrade
+[2016-04-18 10:24] [ALPM] transaction started
+[2016-04-18 10:24] [ALPM] warning: /etc/profile installed as /etc/profile.pacnew
+[2016-04-18 10:24] [ALPM] upgraded filesystem (2016.03-2 -> 2016.04-3)
+[2016-04-18 10:24] [ALPM] upgraded msys2-runtime (2.5.0.17040.9d5d874-1 -> 2.5.0.17080.65c939c-1)
+[2016-04-18 10:24] [ALPM] upgraded msys2-runtime-devel (2.5.0.17040.9d5d874-1 -> 2.5.0.17080.65c939c-1)
+[2016-04-18 10:24] [ALPM] transaction completed
+[2016-04-18 10:25] [PACMAN] Running 'pacman -Syuu'
+[2016-04-18 10:25] [PACMAN] synchronizing package lists
+[2016-04-18 10:25] [PACMAN] starting core system upgrade
+[2016-04-18 10:25] [PACMAN] starting full system upgrade
+[2016-04-18 10:25] [ALPM] transaction started
+[2016-04-18 10:25] [ALPM] upgraded bash-completion (2.1-6 -> 2.3-1)
+[2016-04-18 10:25] [ALPM] upgraded gzip (1.6-1 -> 1.7-1)
+[2016-04-18 10:25] [ALPM] upgraded libcurl (7.47.1-2 -> 7.48.0-1)
+[2016-04-18 10:25] [ALPM] upgraded curl (7.47.1-2 -> 7.48.0-1)
+[2016-04-18 10:25] [ALPM] upgraded vim (7.4.1468-1 -> 7.4.1721-1)
+[2016-04-18 10:25] [ALPM] upgraded git (2.8.0-1 -> 2.8.1-1)
+[2016-04-18 10:25] [ALPM] upgraded liblzma (5.2.1-1 -> 5.2.2-1)
+[2016-04-18 10:25] [ALPM] upgraded pkg-config (0.28-2 -> 0.29.1-1)
+[2016-04-18 10:25] [ALPM] upgraded xz (5.2.1-1 -> 5.2.2-1)
+[2016-04-18 10:25] [ALPM] transaction completed
+[2016-04-18 10:28] [PACMAN] Running 'pacman -Syuu'
+[2016-04-18 10:28] [PACMAN] synchronizing package lists
+[2016-04-18 10:28] [PACMAN] starting core system upgrade
+[2016-04-18 10:28] [PACMAN] starting full system upgrade

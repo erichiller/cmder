@@ -12,7 +12,7 @@ _python()
     _init_completion || return
 
     case $prev in
-        -'?'|-h|--help|-V|--version|-c)
+        -'?'|-h|--help|-V|--version|-c|-X)
             return 0
             ;;
         -m)
@@ -28,30 +28,23 @@ _python()
                 -- "$cur" ) )
             return 0
             ;;
-        !(?(*/)python*([0-9.])|-?))
-            [[ $cword -lt 2 || ${words[cword-2]} != -@(Q|W) ]] \
-                && _filedir
+        !(?(*/)python*([0-9.])|?(*/)pypy*([0-9.])|-?))
+            [[ $cword -lt 2 || ${words[cword-2]} != -[QWX] ]] && _filedir
             ;;
     esac
 
 
-    # if '-c' is already given, complete all kind of files.
-    local i
-    for (( i=0; i < ${#words[@]}-1; i++ )); do
-        if [[ ${words[i]} == -c ]]; then
-            _filedir
-        fi
-    done
-
-
-    if [[ "$cur" != -* ]]; then
-        _filedir 'py?([co])'
+    # if -c or -m is already given, complete all kind of files.
+    if [[ "${words[@]::$cword}" == *\ -[cm]\ * ]]; then
+        _filedir
+    elif [[ "$cur" != -* ]]; then
+        _filedir 'py?([coz])'
     else
         COMPREPLY=( $( compgen -W '$( _parse_help "$1" -h )' -- "$cur" ) )
     fi
 
     return 0
 } &&
-complete -F _python python python2 python3
+complete -F _python python python2 python3 pypy
 
 # ex: ts=4 sw=4 et filetype=sh

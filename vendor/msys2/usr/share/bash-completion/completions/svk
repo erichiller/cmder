@@ -28,7 +28,7 @@ _svk()
                 ;;
             --encoding)
                 COMPREPLY=( $( compgen -W \
-                    '$( iconv --list | sed -e "s@//@@;" )' -- "$cur" ) )
+                    '$( iconv --list | command sed -e "s@//@@;" )' -- "$cur" ) )
                 return 0
                 ;;
         esac
@@ -191,7 +191,7 @@ _svk()
                         --delete' -- "$cur" ) )
                     ;;
                 sync)
-                    COMPREPLY=( $( compgen -W "$( svk mirror --list \
+                    COMPREPLY=( $( compgen -W "$( $1 mirror --list \
                         2>/dev/null | awk '/^\//{print $1}' )" -- "$cur" ) )
                     ;;
                 co|checkout|push|pull)
@@ -200,8 +200,8 @@ _svk()
                     else
                         path=//
                     fi
-                    COMPREPLY=( $( compgen -W "$( svk list $path 2>/dev/null | \
-                        sed -e 's|\(.*\)|'$path'\1|')" -- "$cur" ) )
+                    COMPREPLY=( $( compgen -W "$( $1 list $path 2>/dev/null | \
+                        command sed -e 's|\(.*\)|'$path'\1|')" -- "$cur" ) )
                     ;;
                 *)
                     _filedir

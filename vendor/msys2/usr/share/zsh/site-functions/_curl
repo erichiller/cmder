@@ -121,6 +121,7 @@ _arguments -C -S \
   --no-sessionid'[Disable SSL session-ID reusing (SSL)]' \
   --path-as-is'[Do not squash .. sequences in URL path]' \
   --proxy-service-name'[SPNEGO proxy service name]':NAME \
+  --tftp-no-options'[Do not send TFTP options requests]' \
   --ftp-ssl-ccc-mode'[Set CCC mode (F)]':ACTIVE/PASSIVE \
   --mail-rcpt'[Mail to this/these addresses (SMTP)]':TO \
   --metalink'[Process given URLs as metalink XML file]' \

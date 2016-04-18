@@ -2,8 +2,8 @@
 
 _dictdata()
 {
-    dict $host $port $1 2>/dev/null | sed -ne \
-        's/^['$'\t '']['$'\t '']*\([^'$'\t '']*\).*$/\1/p'
+    dict $host $port $1 2>/dev/null | command sed -ne \
+        's/^[[:blank:]]\{1,\}\([^[:blank:]]*\).*$/\1/p'
 }
 
 _dict()
@@ -35,7 +35,7 @@ _dict()
         esac
     done
 
-    if [[ "$cur" = -* ]]; then
+    if [[ "$cur" == -* ]]; then
         COMPREPLY=( $( compgen -W '$( _parse_help "$1" )' -- "$cur" ) )
         return 0
     fi

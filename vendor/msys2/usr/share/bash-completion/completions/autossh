@@ -1,16 +1,31 @@
 # ssh(1) completion                                        -*- shell-script -*-
 
+_ssh_queries()
+{
+    COMPREPLY+=( $( compgen -W \
+        "cipher cipher-auth mac kex key protocol-version" -- "$cur" ) )
+}
+
+_ssh_query()
+{
+    ${1:-ssh} -Q $2 2>/dev/null
+}
+
 _ssh_ciphers()
 {
-    COMPREPLY+=( $( compgen -W '3des-cbc aes128-cbc aes192-cbc aes256-cbc
+    local ciphers='$( _ssh_query "$1" cipher )'
+    [[ $ciphers ]] || ciphers="3des-cbc aes128-cbc aes192-cbc aes256-cbc
         aes128-ctr aes192-ctr aes256-ctr arcfour128 arcfour256 arcfour
-        blowfish-cbc cast128-cbc' -- "$cur" ) )
+        blowfish-cbc cast128-cbc"
+    COMPREPLY+=( $( compgen -W "$ciphers" -- "$cur" ) )
 }
 
 _ssh_macs()
 {
-    COMPREPLY+=( $( compgen -W 'hmac-md5 hmac-sha1 umac-64@openssh.com
-        hmac-ripemd160 hmac-sha1-96 hmac-md5-96' -- "$cur" ) )
+    local macs='$( _ssh_query "$1" mac )'
+    [[ $macs ]] || macs="hmac-md5 hmac-sha1 umac-64@openssh.com hmac-ripemd160
+        hmac-sha1-96 hmac-md5-96"
+    COMPREPLY+=( $( compgen -W "$macs" -- "$cur" ) )
 }
 
 _ssh_options()
@@ -39,7 +54,8 @@ _ssh_options()
 }
 
 # Complete a ssh suboption (like ForwardAgent=y<tab>)
-# Only one parameter: the string to complete including the equal sign.
+# Two parameters: the string to complete including the equal sign, and
+# the ssh executable to invoke (optional).
 # Not all suboptions are completed.
 # Doesn't handle comma-separated lists.
 _ssh_suboption()
@@ -74,6 +90,12 @@ _ssh_suboption()
             COMPREPLY=( $( compgen -W 'af1{1..4} af2{2..3} af3{1..3} af4{1..3}
                 cs{0..7} ef lowdelay throughput reliability' -- "$cur" ) )
             ;;
+        HostbasedKeyTypes|HostKeyAlgorithms)
+            COMPREPLY=( $( compgen -W '$( _ssh_query "$2" key )' -- "$cur" ) )
+            ;;
+        KexAlgorithms)
+            COMPREPLY=( $( compgen -W '$( _ssh_query "$2" kex )' -- "$cur" ) )
+            ;;
         Protocol)
             COMPREPLY=( $( compgen -W '1 2 1,2 2,1' -- "$cur" ) )
             ;;
@@ -89,10 +111,10 @@ _ssh_suboption()
                 keyboard-interactive password' -- "$cur" ) )
             ;;
         MACs)
-            _ssh_macs
+            _ssh_macs "$2"
             ;;
         Ciphers)
-            _ssh_ciphers
+            _ssh_ciphers "$2"
             ;;
     esac
     return 0
@@ -106,10 +128,28 @@ _ssh_suboption_check()
     # Get prev and cur words without splitting on =
     local cureq=`_get_cword :=` preveq=`_get_pword :=`
     if [[ $cureq == *=* && $preveq == -o ]]; then
-        _ssh_suboption $cureq
+        _ssh_suboption $cureq "$1"
         return $?
     fi
     return 1
+}
+
+# Search COMP_WORDS for '-F configfile' or '-Fconfigfile' argument
+_ssh_configfile()
+{
+    set -- "${words[@]}"
+    while [[ $# -gt 0 ]]; do
+        if [[ $1 == -F* ]]; then
+            if [[ ${#1} -gt 2 ]]; then
+                configfile="$(dequote "${1:2}")"
+            else
+                shift
+                [[ $1 ]] && configfile="$(dequote "$1")"
+            fi
+            break
+        fi
+        shift
+    done
 }
 
 _ssh()
@@ -117,10 +157,9 @@ _ssh()
     local cur prev words cword
     _init_completion -n : || return
 
-    local configfile
     local -a config
 
-    _ssh_suboption_check && return 0
+    _ssh_suboption_check "$1" && return 0
 
     case $prev in
         -F|-i|-S)
@@ -128,11 +167,11 @@ _ssh()
             return 0
             ;;
         -c)
-            _ssh_ciphers
+            _ssh_ciphers "$1"
             return 0
             ;;
         -m)
-            _ssh_macs
+            _ssh_macs "$1"
             return 0
             ;;
         -l)
@@ -145,6 +184,10 @@ _ssh()
             ;;
         -o)
             _ssh_options
+            return 0
+            ;;
+        -Q)
+            _ssh_queries "$1"
             return 0
             ;;
         -w)
@@ -169,22 +212,13 @@ _ssh()
     elif [[ "$cur" == -* ]]; then
         COMPREPLY=( $( compgen -W '$( _parse_usage "$1" )' -- "$cur" ) )
     else
-        # Search COMP_WORDS for '-F configfile' or '-Fconfigfile' argument
-        set -- "${words[@]}"
-        while [[ $# -gt 0 ]]; do
-            if [[ $1 == -F* ]]; then
-                if [[ ${#1} -gt 2 ]]; then
-                    configfile="$(dequote "${1:2}")"
-                else
-                    shift
-                    [[ $1 ]] && configfile="$(dequote "$1")"
-                fi
-                break
-            fi
-            shift
-        done
+        local configfile
+        _ssh_configfile
         _known_hosts_real -a -F "$configfile" "$cur"
-        if [[ $cword -ne 1 ]]; then
+
+        local args
+        _count_args
+        if [[ $args -gt 1 ]]; then
             compopt -o filenames
             COMPREPLY+=( $( compgen -c -- "$cur" ) )
         fi
@@ -201,8 +235,6 @@ _sftp()
     local cur prev words cword
     _init_completion || return
 
-    local configfile
-
     _ssh_suboption_check && return 0
 
     case $prev in
@@ -218,7 +250,11 @@ _sftp()
             _ssh_ciphers
             return 0
             ;;
-        -B|-D|-P|-R|-S|-s)
+        -S)
+            _command
+            return 0
+            ;;
+        -B|-D|-l|-P|-R|-s)
             return 0
             ;;
     esac
@@ -232,20 +268,8 @@ _sftp()
     elif [[ "$cur" == -* ]]; then
         COMPREPLY=( $( compgen -W '$( _parse_usage "$1" )' -- "$cur" ) )
     else
-        # Search COMP_WORDS for '-F configfile' argument
-        set -- "${words[@]}"
-        while [[ $# -gt 0 ]]; do
-            if [[ $1 == -F* ]]; then
-                if [[ ${#1} -gt 2 ]]; then
-                    configfile="$(dequote "${1:2}")"
-                else
-                    shift
-                    [[ $1 ]] && configfile="$(dequote "$1")"
-                fi
-                break
-            fi
-            shift
-        done
+        local configfile
+        _ssh_configfile
         _known_hosts_real -a -F "$configfile" "$cur"
     fi
 
@@ -269,7 +293,7 @@ _scp_remote_files()
     local path=${cur#*:}
 
     # unescape (3 backslashes to 1 for chars we escaped)
-    path=$( sed -e 's/\\\\\\\('$_scp_path_esc'\)/\\\1/g' <<<"$path" )
+    path=$( command sed -e 's/\\\\\\\('$_scp_path_esc'\)/\\\1/g' <<<"$path" )
 
     # default to home dir of specified user on remote host
     if [[ -z $path ]]; then
@@ -281,13 +305,13 @@ _scp_remote_files()
         # escape problematic characters; remove non-dirs
         files=$( ssh -o 'Batchmode yes' $userhost \
             command ls -aF1dL "$path*" 2>/dev/null | \
-            sed -e 's/'$_scp_path_esc'/\\\\\\&/g' -e '/[^\/]$/d' )
+            command sed -e 's/'$_scp_path_esc'/\\\\\\&/g' -e '/[^\/]$/d' )
     else
         # escape problematic characters; remove executables, aliases, pipes
         # and sockets; add space at end of file names
         files=$( ssh -o 'Batchmode yes' $userhost \
             command ls -aF1dL "$path*" 2>/dev/null | \
-            sed -e 's/'$_scp_path_esc'/\\\\\\&/g' -e 's/[*@|=]$//g' \
+            command sed -e 's/'$_scp_path_esc'/\\\\\\&/g' -e 's/[*@|=]$//g' \
             -e 's/[^\/]$/& /g' )
     fi
     COMPREPLY+=( $files )
@@ -309,10 +333,10 @@ _scp_local_files()
 
     if $dirsonly ; then
         COMPREPLY+=( $( command ls -aF1dL $cur* 2>/dev/null | \
-            sed -e "s/$_scp_path_esc/\\\\&/g" -e '/[^\/]$/d' -e "s/^/$1/") )
+            command sed -e "s/$_scp_path_esc/\\\\&/g" -e '/[^\/]$/d' -e "s/^/$1/") )
     else
         COMPREPLY+=( $( command ls -aF1dL $cur* 2>/dev/null | \
-            sed -e "s/$_scp_path_esc/\\\\&/g" -e 's/[*@|=]$//g' \
+            command sed -e "s/$_scp_path_esc/\\\\&/g" -e 's/[*@|=]$//g' \
             -e 's/[^\/]$/& /g' -e "s/^/$1/") )
     fi
 }
@@ -324,7 +348,7 @@ _scp()
     local cur prev words cword
     _init_completion -n : || return
 
-    local configfile prefix
+    local prefix
 
     _ssh_suboption_check && {
         COMPREPLY=( "${COMPREPLY[@]/%/ }" )
@@ -335,7 +359,7 @@ _scp()
         -l|-P)
             return 0
             ;;
-        -F|-i|-S)
+        -F|-i)
             _filedir
             compopt +o nospace
             return 0
@@ -347,6 +371,11 @@ _scp()
             ;;
         -o)
             _ssh_options
+            return 0
+            ;;
+        -S)
+            _command
+            compopt +o nospace
             return 0
             ;;
     esac
@@ -362,21 +391,6 @@ _scp()
         cur=${cur#-F}
         prefix=-F
     else
-        # Search COMP_WORDS for '-F configfile' or '-Fconfigfile' argument
-        set -- "${words[@]}"
-        while [[ $# -gt 0 ]]; do
-            if [[ $1 == -F* ]]; then
-                if [[ ${#1} -gt 2 ]]; then
-                    configfile="$(dequote "${1:2}")"
-                else
-                    shift
-                    [[ $1 ]] && configfile="$(dequote "$1")"
-                fi
-                break
-            fi
-            shift
-        done
-
         case $cur in
             -*)
                 COMPREPLY=( $( compgen -W '$( _parse_usage "${words[0]}" )' \
@@ -388,6 +402,8 @@ _scp()
                 # not a known host, pass through
                 ;;
             *)
+                local configfile
+                _ssh_configfile
                 _known_hosts_real -c -a -F "$configfile" "$cur"
                 ;;
         esac
