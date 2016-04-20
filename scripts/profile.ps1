@@ -139,7 +139,7 @@ $global:UserModuleBasePath = $PSScriptRoot
 # see: https://github.com/cmarcusreid/git-status-cache-posh-client
 Import-Module -Name "GitStatusCachePoshClient" -ErrorAction Stop >$null
 # For information on Git display variables, see:
-# C:\cmder\vendor\psmodules\posh-git\GitPrompt.ps1
+# $env:ConEmuDir\vendor\psmodules\posh-git\GitPrompt.ps1
 # posh-git change name of tab // remove annoying
 $GitPromptSettings.EnableWindowTitle = "git:"
 

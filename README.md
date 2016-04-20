@@ -1,8 +1,22 @@
-# README -- EDH NOTES
+# DESCRIPTION 
 
-This project started from cmder, which itself was a compilation of software around the wonderful conemu.
+Readme for **EDH dist ConEmu setup** -- EDH NOTES
+
+This project started from cmder, which itself was a compendium of software around the wonderful ConEmu.
 
 **THIS FILE NEEDS TO BE REWORKED**
+
+## Upgrade
+
+vscode
+
+
+
+Use the `upgrade.bat` script in `scripts/`
+
+	%ConEmuDir%\scripts\upgrade.bat
+
+As this will kill the console that it runs in - **Ensure to run this in an _out of ConEmu_ `cmd.exe` prompt**, this can be done by pressing `WIN` + `R` keys and typing `cmd.exe` 
 
 
 add paths for new programs into:
@@ -12,7 +26,7 @@ add paths for new programs into:
 	vendor/msys2
 
 This line in ConEmu.xml config breaks Far.exe left click:
-see: https://github.com/Maximus5/ConEmu/issues/334#event-419601706
+see: <https://github.com/Maximus5/ConEmu/issues/334#event-419601706>
 
 	<!-- EVIL LINE; BREAKS FAR.EXE				<value name="WndDragKey" type="dword" data="80808001"/>		-->
 

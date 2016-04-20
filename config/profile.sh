@@ -9,13 +9,31 @@ esac
 
 # if on CONEMU -> fix CONEMU from C:\blah\blah\blah to /c/blah/blah/blah
 if [ -v ConEmuDir ] ; then 
-	export ConEmuDir=$(echo "/$ConEmuDir" | sed -e 's/\\/\//g' -e 's/://')
-	export ConEmuBaseDir=$(echo "/$ConEmuBaseDir" | sed -e 's/\\/\//g' -e 's/://')
-	# add ConEmu Directories to path for ConEmu and ConEmuC
-	PATH="${ConEmuBaseDir}:${PATH}"
-	PATH="${ConEmuDir}:${PATH}"
-	${ConEmuDir}/scripts/start-ssh-agent.cmd
+	# ensure ConEmuDir is in fact a Windows style directory and hasn't already been converted
+	if [[ $ConEmuDir == *":\\"* ]] ; then
+		export ConEmuDir=$(echo "/$ConEmuDir" | sed -e 's/\\/\//g' -e 's/://')
+		export ConEmuBaseDir=$(echo "/$ConEmuBaseDir" | sed -e 's/\\/\//g' -e 's/://')
+		# add ConEmu Directories to path for ConEmu and ConEmuC
+		PATH="${ConEmuBaseDir}:${PATH}"
+		PATH="${ConEmuDir}:${PATH}"
+		PATH="${ConEmuDir}/bin:${PATH}"
+		${ConEmuDir}/scripts/start-ssh-agent.cmd
+	fi
 fi
+
+# auto-add vendors
+for dir in $( cat $ConEmuDir/config/vendors.json | $ConEmuDir/bin/jq.exe -r '.vendors[].binpath' ); do
+	# trim newlines
+	dir=$(echo $dir | tr -d '\n\r')
+	dir=$ConEmuDir/vendor/$dir
+	# ensure filepath exists
+	if [[ -d $dir ]] ; then
+		if ! $(echo "$PATH" | grep -q $dir) ; then
+			export PATH=$dir:$PATH
+		fi
+	fi
+done
+
 
 #Golang
 if [ -d "/c/Go" ] ; then
@@ -32,19 +50,6 @@ if [ -d "$ConEmuDir/vendor/nodejs" ] ; then
 	export PATH=$ConEmuDir/vendor/nodejs:$PATH
 	alias npm='npm.cmd'
 fi
-
-# auto-add vendors
-for dir in $( cat $ConEmuDir/config/vendors.json | $ConEmuDir/bin/jq.exe -r '.vendors[].binpath' ); do
-	# trim newlines
-	dir=$(echo $dir | tr -d '\n\r')
-	dir=$ConEmuDir/vendor/$dir
-	# ensure filepath exists
-	if [[ -d $dir ]] ; then
-		if ! $(echo "$PATH" | grep -q $dir) ; then
-			export PATH=$dir:$PATH
-		fi
-	fi
-done
 
 # for terminal line coloring
 export PS1="\[$(tput sgr0)\]\[$(tput setaf 1)\]\u \[$(tput setaf 6)\]\w \[$(tput setaf 1)\]\\$ \[$(tput setaf 2)\]"
@@ -68,7 +73,7 @@ alias ll='ls $LS_OPTIONS -l'
 alias l='ls $LS_OPTIONS -lA'
 
 # alias vim if we are on ConEmu
-if [ -f $ConEmuDir/../../config/.vimrc ] ; then
+if [ -f $ConEmuDir/config/.vimrc ] ; then
 	alias vi='vim -u $ConEmuDir/config/.vimrc'
 	alias vim='vim -u $ConEmuDir/config/.vimrc'
 fi

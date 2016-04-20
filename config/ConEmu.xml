@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2016-04-17 18:13:18" build="160413">
+		<key name=".Vanilla" modified="2016-04-19 07:37:40" build="160416">
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
@@ -175,6 +175,7 @@
 			<value name="ComSpec.UncPaths" type="hex" data="00"/>
 			<value name="ComSpec.Path" type="string" data=""/>
 			<value name="EnvironmentSet" type="multi">
+				<line data="set PATH=%ConEmuBaseDir%\Scripts;%PATH%"/>
 			</value>
 			<value name="CTS.Intelligent" type="hex" data="01"/>
 			<value name="CTS.IntelligentExceptions" type="string" data="far.exe | vim.exe"/>
@@ -384,7 +385,7 @@
 			<value name="Update.DownloadPath" type="string" data="%TEMP%\ConEmu"/>
 			<value name="Update.LeavePackages" type="hex" data="00"/>
 			<value name="Update.PostUpdateCmd" type="string" data="echo Last successful update&gt;ConEmuUpdate.info &amp;&amp; date /t&gt;&gt;ConEmuUpdate.info &amp;&amp; time /t&gt;&gt;ConEmuUpdate.info"/>
-			<key name="HotKeys" modified="2016-04-17 18:13:18" build="160413">
+			<key name="HotKeys" modified="2016-04-19 07:37:40" build="160416">
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="00000011"/>
 				<value name="Multi.ArrowsModifier" type="dword" data="0000005b"/>
@@ -569,9 +570,9 @@
 				<value name="Key.DumpTree" type="dword" data="00000000"/>
 				<value name="Key.ResetTerm" type="dword" data="0010112e"/>
 			</key>
-			<key name="Tasks" modified="2016-04-17 18:13:18" build="160413">
-				<value name="Count" type="long" data="8"/>
-				<key name="Task1" modified="2016-04-17 18:13:18" build="160413">
+			<key name="Tasks" modified="2016-04-19 07:37:40" build="160416">
+				<value name="Count" type="long" data="7"/>
+				<key name="Task1" modified="2016-04-19 07:37:40" build="160416">
 					<value name="Name" type="string" data="{PowerShell}"/>
 					<value name="Flags" type="dword" data="00000001"/>
 					<value name="Hotkey" type="dword" data="00001170"/>
@@ -580,7 +581,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task2" modified="2016-04-17 18:13:18" build="160413">
+				<key name="Task2" modified="2016-04-19 07:37:40" build="160416">
 					<value name="Name" type="string" data="{cmd}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00001171"/>
@@ -589,7 +590,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task3" modified="2016-04-17 18:13:18" build="160413">
+				<key name="Task3" modified="2016-04-19 07:37:40" build="160416">
 					<value name="Name" type="string" data="{Msys2}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00001172"/>
@@ -598,7 +599,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task4" modified="2016-04-17 18:13:18" build="160413">
+				<key name="Task4" modified="2016-04-19 07:37:40" build="160416">
 					<value name="Name" type="string" data="{Far}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00001173"/>
@@ -607,7 +608,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task5" modified="2016-04-17 18:13:18" build="160413">
+				<key name="Task5" modified="2016-04-19 07:37:40" build="160416">
 					<value name="Name" type="string" data="{PowerShell as Admin}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00001174"/>
@@ -616,7 +617,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task6" modified="2016-04-17 18:13:18" build="160413">
+				<key name="Task6" modified="2016-04-19 07:37:40" build="160416">
 					<value name="Name" type="string" data="{irssi}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00001175"/>
@@ -625,7 +626,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task7" modified="2016-04-17 18:13:18" build="160413">
+				<key name="Task7" modified="2016-04-19 07:37:40" build="160416">
 					<value name="Name" type="string" data="{PowerShell_Here}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -644,7 +645,7 @@
 					<value name="Count" type="long" data="1"/>
 				</key>
 			</key>
-			<key name="Apps" modified="2016-04-17 18:13:18" build="160413">
+			<key name="Apps" modified="2016-04-19 07:37:40" build="160416">
 				<value name="Count" type="long" data="0"/>
 				<key name="App1" modified="2015-10-10 19:32:31" build="150913">
 					<value name="AppNames" type="string" data="far.exe"/>
@@ -671,9 +672,9 @@
 					<value name="ClipboardDeleteLeftWord" type="hex" data="00"/>
 				</key>
 			</key>
-			<key name="Colors" modified="2016-04-17 18:13:18" build="160413">
+			<key name="Colors" modified="2016-04-19 07:37:40" build="160416">
 				<value name="Count" type="long" data="2"/>
-				<key name="Palette1" modified="2016-04-17 18:13:18" build="160413">
+				<key name="Palette1" modified="2016-04-19 07:37:40" build="160416">
 					<value name="Name" type="string" data="#Attached:ConEmuC"/>
 					<value name="ExtendColors" type="hex" data="00"/>
 					<value name="ExtendColorIdx" type="hex" data="0e"/>
@@ -714,7 +715,7 @@
 					<value name="ColorTable30" type="dword" data="0000ffff"/>
 					<value name="ColorTable31" type="dword" data="00ffffff"/>
 				</key>
-				<key name="Palette2" modified="2016-04-17 18:13:18" build="160413">
+				<key name="Palette2" modified="2016-04-19 07:37:40" build="160416">
 					<value name="Name" type="string" data="Monokai"/>
 					<value name="ExtendColors" type="hex" data="00"/>
 					<value name="ExtendColorIdx" type="hex" data="0e"/>
