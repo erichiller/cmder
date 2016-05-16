@@ -933,3 +933,10 @@
 [2016-05-05 16:48] [ALPM] transaction started
 [2016-05-05 16:48] [ALPM] installed gnu-netcat (0.7.1-1)
 [2016-05-05 16:48] [ALPM] transaction completed
+[2016-05-15 20:15] [PACMAN] Running '/usr/bin/pacman -Syuu'
+[2016-05-15 20:15] [PACMAN] synchronizing package lists
+[2016-05-15 20:15] [PACMAN] starting core system upgrade
+[2016-05-15 20:15] [PACMAN] starting full system upgrade
+[2016-05-15 20:15] [ALPM] transaction started
+[2016-05-15 20:15] [ALPM] upgraded repman-git (r23.87bf865-1 -> r25.92edb44-1)
+[2016-05-15 20:15] [ALPM] transaction completed

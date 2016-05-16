@@ -8,18 +8,6 @@ This project started from cmder, which itself was a compendium of software aroun
 
 ## Upgrade
 
-vscode 
-
-foobar2
-
-QQQ
-
-
-
-ad
-I quite 
-Foo bar
-foobar this is a staens Eric was here nosre
 
 ```
 vendor/profile.ps1 for powershell

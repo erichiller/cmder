@@ -2,7 +2,7 @@
 repman-git
 
 %VERSION%
-r23.87bf865-1
+r25.92edb44-1
 
 %DESC%
 Pacman repository manager
@@ -14,16 +14,16 @@ https://github.com/renatosilva/repman
 x86_64
 
 %BUILDDATE%
-1425283447
+1461049845
 
 %INSTALLDATE%
-1442385270
+1463368521
 
 %PACKAGER%
 Alexey Pavlov <alexpux@gmail.com>
 
 %SIZE%
-17408
+19456
 
 %GROUPS%
 base
