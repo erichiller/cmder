@@ -8,9 +8,24 @@ This project started from cmder, which itself was a compendium of software aroun
 
 ## Upgrade
 
-vscode
+vscode 
+
+foobar2
+
+QQQ
 
 
+
+ad
+I quite 
+Foo bar
+foobar this is a staens Eric was here nosre
+
+```
+vendor/profile.ps1 for powershell
+vendor/init.bat for cmd
+vendor/msys2
+```
 
 Use the `upgrade.bat` script in `scripts/`
 
@@ -25,8 +40,9 @@ add paths for new programs into:
 	vendor/init.bat for cmd
 	vendor/msys2
 
-This line in ConEmu.xml config breaks Far.exe left click:
-see: <https://github.com/Maximus5/ConEmu/issues/334#event-419601706>
+# Prior Pitfalls
+
+This from the cmder distribution in the `ConEmu.xml` config breaks `Far.exe` left click ,see [issue#334](<https://github.com/Maximus5/ConEmu/issues/334#event-419601706)
 
 	<!-- EVIL LINE; BREAKS FAR.EXE				<value name="WndDragKey" type="dword" data="80808001"/>		-->
 

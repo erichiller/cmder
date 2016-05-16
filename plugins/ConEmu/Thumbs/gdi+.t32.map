@@ -1,21 +1,21 @@
  gdi+
 
- Timestamp is 5712d442 (Sun Apr 17 03:09:38 2016)
+ Timestamp is 572a856d (Thu May 05 02:27:41 2016)
 
  Preferred load address is 10000000
 
  Start         Length     Name                   Class
  0001:00000000 000000b4H .idata$5                CODE
- 0001:000000c0 00000282H .rdata                  CODE
- 0001:00000344 00000062H .rdata$debug            CODE
- 0001:000003b0 00001848H .text                   CODE
- 0001:00001bf8 00000050H .idata$2                CODE
- 0001:00001c48 00000014H .idata$3                CODE
- 0001:00001c5c 000000b4H .idata$4                CODE
- 0001:00001d10 000002a8H .idata$6                CODE
- 0001:00001fc0 00000092H .edata                  CODE
+ 0001:000000c0 000002aaH .rdata                  CODE
+ 0001:0000036c 00000062H .rdata$debug            CODE
+ 0001:000003d0 00001a4cH .text                   CODE
+ 0001:00001e1c 00000050H .idata$2                CODE
+ 0001:00001e6c 00000014H .idata$3                CODE
+ 0001:00001e80 000000b4H .idata$4                CODE
+ 0001:00001f34 000002a4H .idata$6                CODE
+ 0001:000021e0 00000092H .edata                  CODE
  0002:00000000 00000010H .data                   DATA
- 0002:00000010 00007850H .bss                    DATA
+ 0002:00000010 00007858H .bss                    DATA
  0003:00000000 00000058H .rsrc$01                DATA
  0003:00000060 000002b8H .rsrc$02                DATA
 
@@ -43,11 +43,11 @@
  0001:00000044       __imp__lstrcpynW@12        10001044     kernel32:KERNEL32.dll
  0001:00000048       __imp__CloseHandle@4       10001048     kernel32:KERNEL32.dll
  0001:0000004c       __imp__HeapDestroy@4       1000104c     kernel32:KERNEL32.dll
- 0001:00000050       __imp__HeapReAlloc@16      10001050     kernel32:KERNEL32.dll
- 0001:00000054       __imp__HeapValidate@12     10001054     kernel32:KERNEL32.dll
- 0001:00000058       __imp__lstrcpynA@12        10001058     kernel32:KERNEL32.dll
- 0001:0000005c       __imp__GetTickCount@0      1000105c     kernel32:KERNEL32.dll
- 0001:00000060       __imp__GetCurrentThreadId@0 10001060     kernel32:KERNEL32.dll
+ 0001:00000050       __imp__lstrcpynA@12        10001050     kernel32:KERNEL32.dll
+ 0001:00000054       __imp__GetTickCount@0      10001054     kernel32:KERNEL32.dll
+ 0001:00000058       __imp__GetCurrentThreadId@0 10001058     kernel32:KERNEL32.dll
+ 0001:0000005c       __imp__HeapReAlloc@16      1000105c     kernel32:KERNEL32.dll
+ 0001:00000060       __imp__HeapSize@12         10001060     kernel32:KERNEL32.dll
  0001:00000064       __imp__SetLastError@4      10001064     kernel32:KERNEL32.dll
  0001:00000068       __imp__ResumeThread@4      10001068     kernel32:KERNEL32.dll
  0001:0000006c       __imp__CreateThread@24     1000106c     kernel32:KERNEL32.dll
@@ -104,105 +104,110 @@
  0001:00000328       ??_C@_17IJKOPDBG@?$AAB?$AAM?$AAP?$AA?$AA@ 10001328     gdip.obj
  0001:00000330       ??_C@_17CGDFOGLC@?$AAC?$AAE?$AAT?$AA?$AA@ 10001330     gdip.obj
  0001:00000338       ??_C@_11LOCGONAA@?$AA?$AA@ 10001338     MAssert.obj
- 0001:0000033c       ??_C@_05LCABBMOG@?$CFs?3?$CFi?$AA@ 1000133c     WThreads.obj
- 0001:000003b0       ??0GdiplusStartupInput@Gdiplus@@QAE@P6GXW4DebugEventLevel@1@PAD@ZHH@Z 100013b0 f i gdip.obj
- 0001:000003d0       ??_H@YGXPAXIHP6EPAX0@Z@Z   100013d0 f i gdip.obj
- 0001:000003ee       ?Init@GDIPlusDecoder@@QAE_NPAUCET_Init@@@Z 100013ee f i gdip.obj
- 0001:000005fa       ?FreeThreadProc@GDIPlusDecoder@@SGKPAX@Z 100015fa f i gdip.obj
- 0001:00000615       ?Close@GDIPlusDecoder@@QAEXXZ 10001615 f i gdip.obj
- 0001:000006b3       ?Close@GDIPlusData@@QAEXXZ 100016b3 f i gdip.obj
- 0001:000006f0       ?OpenBitmapFromFile@GDIPlusImage@@QAEPAVGpImage@Gdiplus@@PB_WU_COORD@@@Z 100016f0 f i gdip.obj
- 0001:00000735       ?SelectPage@GDIPlusImage@@QAE_NI@Z 10001735 f i gdip.obj
- 0001:000007d0       ?Close@GDIPlusImage@@QAEXXZ 100017d0 f i gdip.obj
- 0001:0000082a       ?DrawImageAbortCallback@GDIPlusImage@@SGHPAUGDIPlusDecoder@@@Z 1000182a f i gdip.obj
- 0001:0000083c       ?GetExifTagValueAsInt@GDIPlusImage@@QAE_NKAAH@Z 1000183c f i gdip.obj
- 0001:000008df       ?CalculateShowSize@GDIPlusImage@@QAEXAAH0000@Z 100018df f i gdip.obj
- 0001:00000af2       ?GetPageBits@GDIPlusImage@@QAE_NPAUCET_LoadInfo@@@Z 10001af2 f i gdip.obj
- 0001:00000ec9       ?CET_Init@@YGHPAU0@@Z      10001ec9 f   gdip.obj
- 0001:00000f37       ?CET_Done@@YGXPAUCET_Init@@@Z 10001f37 f   gdip.obj
- 0001:00000f5b       ?CET_Free@@YGXPAUCET_LoadInfo@@@Z 10001f5b f   gdip.obj
- 0001:00000fb2       ?CET_Cancel@@YGXPAX@Z      10001fb2 f   gdip.obj
- 0001:00000fcc       ?Open@GDIPlusImage@@QAE_N_NPB_WPBE_JU_COORD@@@Z 10001fcc f i gdip.obj
- 0001:000012a9       ?CET_Load@@YGHPAUCET_LoadInfo@@@Z 100022a9 f   gdip.obj
- 0001:000014e5       ?StripSourceRoot@@YIPB_WPB_W@Z 100024e5 f   MAssert.obj
- 0001:00001530       ?HeapInitialize@@YI_NXZ    10002530 f   Memory.obj
- 0001:00001556       ?HeapDeinitialize@@YIXXZ   10002556 f   Memory.obj
- 0001:0000156e       ?xf_malloc@@YAPAXI@Z       1000256e f   Memory.obj
- 0001:00001581       ?xf_calloc@@YAPAXII@Z      10002581 f   Memory.obj
- 0001:0000159a       ?xf_realloc@@YAPAXPAXI@Z   1000259a f   Memory.obj
- 0001:000015bf       ?xf_free@@YAXPAX@Z         100025bf f   Memory.obj
- 0001:000015dd       ?xf_validate@@YA_NPAX@Z    100025dd f   Memory.obj
- 0001:000015f6       ??2@YAPAXI@Z               100025f6 f   Memory.obj
- 0001:000015fb       ??_U@YAPAXI@Z              100025fb f   Memory.obj
- 0001:00001600       ??3@YAXPAX@Z               10002600 f   Memory.obj
- 0001:00001605       ??_V@YAXPAX@Z              10002605 f   Memory.obj
- 0001:0000160a       ??0ConEmuThreadStartArg@@QAE@P6GKPAX@Z0K@Z 1000260a f i WThreads.obj
- 0001:0000162b       ?apiThreadHelper@@YGKPAX@Z 1000262b f   WThreads.obj
- 0001:00001779       ?apiCreateThread@@YIPAXP6GKPAX@Z0PAKPBDH@Z 10002779 f   WThreads.obj
- 0001:00001868       ?apiTerminateThreadEx@@YIHPAXKPBDH@Z 10002868 f   WThreads.obj
- 0001:0000191e       ?wasTerminateThreadCalled@@YI_NXZ 1000291e f   WThreads.obj
- 0001:00001930       __alldiv                   10002930 f   libCRT:vc_lldiv.obj
- 0001:000019e0       __allmul                   100029e0 f   libCRT:vc_llmul.obj
- 0001:00001a20       _wcsrchr                   10002a20 f   libCRT:strrchr.obj
- 0001:00001a50       _wcschr                    10002a50 f   libCRT:strchr.obj
- 0001:00001a80       _memset                    10002a80 f   libCRT:memset.obj
- 0001:00001ac0       _strchr                    10002ac0 f   libCRT:strchr.obj
- 0001:00001ae0       _strrchr                   10002ae0 f   libCRT:strrchr.obj
- 0001:00001b02       _FreeLibrary@4             10002b02 f   kernel32:KERNEL32.dll
- 0001:00001b08       _GetLastError@0            10002b08 f   kernel32:KERNEL32.dll
- 0001:00001b0e       _GetProcAddress@8          10002b0e f   kernel32:KERNEL32.dll
- 0001:00001b14       _LoadLibraryW@4            10002b14 f   kernel32:KERNEL32.dll
- 0001:00001b1a       _HeapFree@12               10002b1a f   kernel32:KERNEL32.dll
- 0001:00001b20       _GetProcessHeap@0          10002b20 f   kernel32:KERNEL32.dll
- 0001:00001b26       _CloseHandle@4             10002b26 f   kernel32:KERNEL32.dll
- 0001:00001b2c       _WaitForSingleObject@8     10002b2c f   kernel32:KERNEL32.dll
- 0001:00001b32       _DeleteFileW@4             10002b32 f   kernel32:KERNEL32.dll
- 0001:00001b38       _HeapAlloc@12              10002b38 f   kernel32:KERNEL32.dll
- 0001:00001b3e       _lstrcatW@8                10002b3e f   kernel32:KERNEL32.dll
- 0001:00001b44       _lstrlenW@4                10002b44 f   kernel32:KERNEL32.dll
- 0001:00001b4a       _lstrcpyW@8                10002b4a f   kernel32:KERNEL32.dll
- 0001:00001b50       _WriteFile@20              10002b50 f   kernel32:KERNEL32.dll
- 0001:00001b56       _CreateFileW@28            10002b56 f   kernel32:KERNEL32.dll
- 0001:00001b5c       _GetTempFileNameW@16       10002b5c f   kernel32:KERNEL32.dll
- 0001:00001b62       _GetTempPathW@8            10002b62 f   kernel32:KERNEL32.dll
- 0001:00001b68       _lstrcpynW@12              10002b68 f   kernel32:KERNEL32.dll
- 0001:00001b6e       _HeapCreate@12             10002b6e f   kernel32:KERNEL32.dll
- 0001:00001b74       _HeapDestroy@4             10002b74 f   kernel32:KERNEL32.dll
- 0001:00001b7a       _HeapReAlloc@16            10002b7a f   kernel32:KERNEL32.dll
- 0001:00001b80       _HeapValidate@12           10002b80 f   kernel32:KERNEL32.dll
- 0001:00001b86       _lstrcpynA@12              10002b86 f   kernel32:KERNEL32.dll
- 0001:00001b8c       _GetTickCount@0            10002b8c f   kernel32:KERNEL32.dll
- 0001:00001b92       _GetCurrentThreadId@0      10002b92 f   kernel32:KERNEL32.dll
- 0001:00001b98       _SetLastError@4            10002b98 f   kernel32:KERNEL32.dll
- 0001:00001b9e       _ResumeThread@4            10002b9e f   kernel32:KERNEL32.dll
- 0001:00001ba4       _CreateThread@24           10002ba4 f   kernel32:KERNEL32.dll
- 0001:00001baa       _TerminateThread@8         10002baa f   kernel32:KERNEL32.dll
- 0001:00001bb0       _FillRect@12               10002bb0 f   user32:USER32.dll
- 0001:00001bb6       _wsprintfW                 10002bb6 f   user32:USER32.dll
- 0001:00001bbc       _CharLowerBuffW@8          10002bbc f   user32:USER32.dll
- 0001:00001bc2       _wsprintfA                 10002bc2 f   user32:USER32.dll
- 0001:00001bc8       _DeleteDC@4                10002bc8 f   gdi32:GDI32.dll
- 0001:00001bce       _DeleteObject@4            10002bce f   gdi32:GDI32.dll
- 0001:00001bd4       _SelectObject@8            10002bd4 f   gdi32:GDI32.dll
- 0001:00001bda       _CreateSolidBrush@4        10002bda f   gdi32:GDI32.dll
- 0001:00001be0       _CreateDIBSection@24       10002be0 f   gdi32:GDI32.dll
- 0001:00001be6       _CreateCompatibleDC@4      10002be6 f   gdi32:GDI32.dll
- 0001:00001bec       _CoInitialize@4            10002bec f   ole32:ole32.dll
- 0001:00001bf2       _CoUninitialize@0          10002bf2 f   ole32:ole32.dll
- 0001:00001bf8       __IMPORT_DESCRIPTOR_KERNEL32 10002bf8     kernel32:KERNEL32.dll
- 0001:00001c0c       __IMPORT_DESCRIPTOR_USER32 10002c0c     user32:USER32.dll
- 0001:00001c20       __IMPORT_DESCRIPTOR_GDI32  10002c20     gdi32:GDI32.dll
- 0001:00001c34       __IMPORT_DESCRIPTOR_ole32  10002c34     ole32:ole32.dll
- 0001:00001c48       __NULL_IMPORT_DESCRIPTOR   10002c48     kernel32:KERNEL32.dll
+ 0001:0000033c       ??_C@_08OIBPMBEH@?L?L?L?L?L?L?L?L?$AA@ 1000133c     Memory.obj
+ 0001:00000348       ??_C@_0BM@HOKIHDHM@?4?4?1?4?4?1?4?4?1common?1?2Memory?4cpp?$AA@ 10001348     Memory.obj
+ 0001:00000364       ??_C@_05LCABBMOG@?$CFs?3?$CFi?$AA@ 10001364     WThreads.obj
+ 0001:000003d0       ??0GdiplusStartupInput@Gdiplus@@QAE@P6GXW4DebugEventLevel@1@PAD@ZHH@Z 100013d0 f i gdip.obj
+ 0001:000003f0       ??_H@YGXPAXIHP6EPAX0@Z@Z   100013f0 f i gdip.obj
+ 0001:0000040e       ?Init@GDIPlusDecoder@@QAE_NPAUCET_Init@@@Z 1000140e f i gdip.obj
+ 0001:0000061a       ?FreeThreadProc@GDIPlusDecoder@@SGKPAX@Z 1000161a f i gdip.obj
+ 0001:00000635       ?Close@GDIPlusDecoder@@QAEXXZ 10001635 f i gdip.obj
+ 0001:000006d3       ?Close@GDIPlusData@@QAEXXZ 100016d3 f i gdip.obj
+ 0001:00000710       ?OpenBitmapFromFile@GDIPlusImage@@QAEPAVGpImage@Gdiplus@@PB_WU_COORD@@@Z 10001710 f i gdip.obj
+ 0001:00000755       ?SelectPage@GDIPlusImage@@QAE_NI@Z 10001755 f i gdip.obj
+ 0001:000007f0       ?Close@GDIPlusImage@@QAEXXZ 100017f0 f i gdip.obj
+ 0001:0000084a       ?DrawImageAbortCallback@GDIPlusImage@@SGHPAUGDIPlusDecoder@@@Z 1000184a f i gdip.obj
+ 0001:0000085c       ?GetExifTagValueAsInt@GDIPlusImage@@QAE_NKAAH@Z 1000185c f i gdip.obj
+ 0001:000008ff       ?CalculateShowSize@GDIPlusImage@@QAEXAAH0000@Z 100018ff f i gdip.obj
+ 0001:00000b12       ?GetPageBits@GDIPlusImage@@QAE_NPAUCET_LoadInfo@@@Z 10001b12 f i gdip.obj
+ 0001:00000ee9       ?CET_Init@@YGHPAU0@@Z      10001ee9 f   gdip.obj
+ 0001:00000f57       ?CET_Done@@YGXPAUCET_Init@@@Z 10001f57 f   gdip.obj
+ 0001:00000f7b       ?CET_Free@@YGXPAUCET_LoadInfo@@@Z 10001f7b f   gdip.obj
+ 0001:00000fd2       ?CET_Cancel@@YGXPAX@Z      10001fd2 f   gdip.obj
+ 0001:00000fec       ?Open@GDIPlusImage@@QAE_N_NPB_WPBE_JU_COORD@@@Z 10001fec f i gdip.obj
+ 0001:000012c9       ?CET_Load@@YGHPAUCET_LoadInfo@@@Z 100022c9 f   gdip.obj
+ 0001:00001505       ?StripSourceRoot@@YIPB_WPB_W@Z 10002505 f   MAssert.obj
+ 0001:00001584       ?HeapInitialize@@YI_NXZ    10002584 f   Memory.obj
+ 0001:000015aa       ?HeapDeinitialize@@YIXXZ   100025aa f   Memory.obj
+ 0001:000015c2       ?xf_set_tag@@YIXPAXPBDH_N@Z 100025c2 f   Memory.obj
+ 0001:0000163d       ?xf_malloc@@YAPAXIPBDH@Z   1000263d f   Memory.obj
+ 0001:00001688       ?xf_calloc@@YAPAXIIPBDH@Z  10002688 f   Memory.obj
+ 0001:000016d8       ?xf_realloc@@YAPAXPAXIPBDH@Z 100026d8 f   Memory.obj
+ 0001:00001751       ?xf_free@@YAXPAXPBDH@Z     10002751 f   Memory.obj
+ 0001:00001783       ?xf_validate@@YA_NPAX@Z    10002783 f   Memory.obj
+ 0001:000017b6       ??2@YAPAXI@Z               100027b6 f   Memory.obj
+ 0001:000017dc       ??_U@YAPAXI@Z              100027dc f   Memory.obj
+ 0001:000017f3       ??3@YAXPAX@Z               100027f3 f   Memory.obj
+ 0001:0000180a       ??_V@YAXPAX@Z              1000280a f   Memory.obj
+ 0001:00001821       ??0ConEmuThreadStartArg@@QAE@P6GKPAX@Z0K@Z 10002821 f i WThreads.obj
+ 0001:00001842       ?apiThreadHelper@@YGKPAX@Z 10002842 f   WThreads.obj
+ 0001:00001990       ?apiCreateThread@@YIPAXP6GKPAX@Z0PAKPBDH@Z 10002990 f   WThreads.obj
+ 0001:00001a7f       ?apiTerminateThreadEx@@YIHPAXKPBDH@Z 10002a7f f   WThreads.obj
+ 0001:00001b35       ?wasTerminateThreadCalled@@YI_NXZ 10002b35 f   WThreads.obj
+ 0001:00001b50       __alldiv                   10002b50 f   libCRT:vc_lldiv.obj
+ 0001:00001c00       __allmul                   10002c00 f   libCRT:vc_llmul.obj
+ 0001:00001c40       _wcsrchr                   10002c40 f   libCRT:strrchr.obj
+ 0001:00001c70       _wcschr                    10002c70 f   libCRT:strchr.obj
+ 0001:00001ca0       _strrchr                   10002ca0 f   libCRT:strrchr.obj
+ 0001:00001cd0       _memset                    10002cd0 f   libCRT:memset.obj
+ 0001:00001d10       _strchr                    10002d10 f   libCRT:strchr.obj
+ 0001:00001d26       _FreeLibrary@4             10002d26 f   kernel32:KERNEL32.dll
+ 0001:00001d2c       _GetLastError@0            10002d2c f   kernel32:KERNEL32.dll
+ 0001:00001d32       _GetProcAddress@8          10002d32 f   kernel32:KERNEL32.dll
+ 0001:00001d38       _LoadLibraryW@4            10002d38 f   kernel32:KERNEL32.dll
+ 0001:00001d3e       _HeapFree@12               10002d3e f   kernel32:KERNEL32.dll
+ 0001:00001d44       _GetProcessHeap@0          10002d44 f   kernel32:KERNEL32.dll
+ 0001:00001d4a       _CloseHandle@4             10002d4a f   kernel32:KERNEL32.dll
+ 0001:00001d50       _WaitForSingleObject@8     10002d50 f   kernel32:KERNEL32.dll
+ 0001:00001d56       _DeleteFileW@4             10002d56 f   kernel32:KERNEL32.dll
+ 0001:00001d5c       _HeapAlloc@12              10002d5c f   kernel32:KERNEL32.dll
+ 0001:00001d62       _lstrcatW@8                10002d62 f   kernel32:KERNEL32.dll
+ 0001:00001d68       _lstrlenW@4                10002d68 f   kernel32:KERNEL32.dll
+ 0001:00001d6e       _lstrcpyW@8                10002d6e f   kernel32:KERNEL32.dll
+ 0001:00001d74       _WriteFile@20              10002d74 f   kernel32:KERNEL32.dll
+ 0001:00001d7a       _CreateFileW@28            10002d7a f   kernel32:KERNEL32.dll
+ 0001:00001d80       _GetTempFileNameW@16       10002d80 f   kernel32:KERNEL32.dll
+ 0001:00001d86       _GetTempPathW@8            10002d86 f   kernel32:KERNEL32.dll
+ 0001:00001d8c       _lstrcpynW@12              10002d8c f   kernel32:KERNEL32.dll
+ 0001:00001d92       _HeapCreate@12             10002d92 f   kernel32:KERNEL32.dll
+ 0001:00001d98       _HeapDestroy@4             10002d98 f   kernel32:KERNEL32.dll
+ 0001:00001d9e       _lstrcpynA@12              10002d9e f   kernel32:KERNEL32.dll
+ 0001:00001da4       _GetTickCount@0            10002da4 f   kernel32:KERNEL32.dll
+ 0001:00001daa       _GetCurrentThreadId@0      10002daa f   kernel32:KERNEL32.dll
+ 0001:00001db0       _HeapReAlloc@16            10002db0 f   kernel32:KERNEL32.dll
+ 0001:00001db6       _HeapSize@12               10002db6 f   kernel32:KERNEL32.dll
+ 0001:00001dbc       _SetLastError@4            10002dbc f   kernel32:KERNEL32.dll
+ 0001:00001dc2       _ResumeThread@4            10002dc2 f   kernel32:KERNEL32.dll
+ 0001:00001dc8       _CreateThread@24           10002dc8 f   kernel32:KERNEL32.dll
+ 0001:00001dce       _TerminateThread@8         10002dce f   kernel32:KERNEL32.dll
+ 0001:00001dd4       _FillRect@12               10002dd4 f   user32:USER32.dll
+ 0001:00001dda       _wsprintfW                 10002dda f   user32:USER32.dll
+ 0001:00001de0       _CharLowerBuffW@8          10002de0 f   user32:USER32.dll
+ 0001:00001de6       _wsprintfA                 10002de6 f   user32:USER32.dll
+ 0001:00001dec       _DeleteDC@4                10002dec f   gdi32:GDI32.dll
+ 0001:00001df2       _DeleteObject@4            10002df2 f   gdi32:GDI32.dll
+ 0001:00001df8       _SelectObject@8            10002df8 f   gdi32:GDI32.dll
+ 0001:00001dfe       _CreateSolidBrush@4        10002dfe f   gdi32:GDI32.dll
+ 0001:00001e04       _CreateDIBSection@24       10002e04 f   gdi32:GDI32.dll
+ 0001:00001e0a       _CreateCompatibleDC@4      10002e0a f   gdi32:GDI32.dll
+ 0001:00001e10       _CoInitialize@4            10002e10 f   ole32:ole32.dll
+ 0001:00001e16       _CoUninitialize@0          10002e16 f   ole32:ole32.dll
+ 0001:00001e1c       __IMPORT_DESCRIPTOR_KERNEL32 10002e1c     kernel32:KERNEL32.dll
+ 0001:00001e30       __IMPORT_DESCRIPTOR_USER32 10002e30     user32:USER32.dll
+ 0001:00001e44       __IMPORT_DESCRIPTOR_GDI32  10002e44     gdi32:GDI32.dll
+ 0001:00001e58       __IMPORT_DESCRIPTOR_ole32  10002e58     ole32:ole32.dll
+ 0001:00001e6c       __NULL_IMPORT_DESCRIPTOR   10002e6c     kernel32:KERNEL32.dll
  0002:00000000       ?g_TerminatedThreadIdx@@3JA 10004000     WThreads.obj
  0002:00000010       ?ghModule@@3PAUHINSTANCE__@@A 10004010     gdip.obj
  0002:00000048       ?gnLastWin32Error@@3KA     10004048     gdip.obj
  0002:0000004c       ?AssertMsgBox@@3P6IHPB_WI0PAUHWND__@@_N@ZA 1000404c     MAssert.obj
  0002:00000050       ?gfnHooksUnlockerProc@@3P6I_N_N@ZA 10004050     MAssert.obj
  0002:00000054       ?ghHeap@@3PAXA             10004054     Memory.obj
- 0002:00007858       ?g_ThreadsIdx@@3JA         1000b858     WThreads.obj
+ 0002:00000058       ?g_LastDeletePtr@@3PAXA    10004058     Memory.obj
+ 0002:00007860       ?g_ThreadsIdx@@3JA         1000b860     WThreads.obj
 
  entry point at        0000:00000000
 
  Static symbols
 
+ 0001:00001550       ?_PointToName@@YIPBDPBD@Z  10002550 f   Memory.obj

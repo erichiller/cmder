@@ -61,15 +61,15 @@ if has("autocmd")
       autocmd Syntax gitcommit setlocal textwidth=74
 endif " has("autocmd")
 
+if $TERM ==# "cygwin"
+" if $TERM ==# "xterm-256color"
+	set term=xterm
+else
+	set term=pcansi
+endif
 
 " ConEmu
 if !empty($CONEMUBUILD)
-	if $TERM ==# "xterm-256color"
-		set term=xterm
-	else
-		set term=pcansi
-	endif
-
 	"set term=xterm-256color
 	set t_Co=256
 	let &t_AB="\e[48;5;%dm"

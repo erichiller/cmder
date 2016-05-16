@@ -1,7 +1,7 @@
 ﻿# Init Script for powershell
 # Sets some nice defaults
 # Eric D Hiller
-# 17 April 2016
+# 22 April 2016
 
 # these variables are only used internally within this script to set external items
 # then discarded to avoid confusion
@@ -61,6 +61,7 @@ try {
 	# set status as true
 	$gitStatus = $true
 	# setup git-bash/msysgit aliases
+	Set-Alias pushprofilesettings.sh bashcall
 	set-alias gunzip bashcall
 	set-alias irssi bashcall
 	Remove-Item alias:curl
@@ -89,6 +90,8 @@ function ls { ls.exe -l --color $args }
 
 Set-Alias vi vim
 function vim { & ( (Join-Path $env:ConEmuDir '\vendor\vim\vim74\vim.exe') ) -u (Join-Path $env:ConEmuDir '/config/.vimrc' ) $args  }
+
+function pathprint { echo ($env:Path).Replace(';',"`n") }
 
 # set-alias -passthru bashcall # debug
 function bashcall {
@@ -133,7 +136,6 @@ function global:prompt {
 	return " "
 }
 # load local psmodules
-#$global:UserModuleBasePath = Join-Path -Path $ENV:ConEmuDir -ChildPath 'vendor\psmodules'
 $global:UserModuleBasePath = $PSScriptRoot
 # load GitStatusCachePoshClient
 # see: https://github.com/cmarcusreid/git-status-cache-posh-client

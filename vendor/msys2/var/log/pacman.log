@@ -929,3 +929,7 @@
 [2016-04-18 10:28] [PACMAN] synchronizing package lists
 [2016-04-18 10:28] [PACMAN] starting core system upgrade
 [2016-04-18 10:28] [PACMAN] starting full system upgrade
+[2016-05-05 16:47] [PACMAN] Running 'pacman -S netcat'
+[2016-05-05 16:48] [ALPM] transaction started
+[2016-05-05 16:48] [ALPM] installed gnu-netcat (0.7.1-1)
+[2016-05-05 16:48] [ALPM] transaction completed

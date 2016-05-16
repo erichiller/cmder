@@ -11,3 +11,4 @@ l=ls -lA --color $*
 vim=vim.cmd $*
 vi=vim.cmd $*
 cd=cd $*$T title %=c:%
+pathprint=echo %path:;=&echo.%

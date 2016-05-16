@@ -316,6 +316,9 @@ Localization
 * idn: (libidn)Invoking idn.    Internationalized Domain Name (IDN) string 
                                   conversion.
 
+Net Utilities
+* Netcat: (netcat).             The GNU famous networking tool.
+
 Network applications
 * Gawkinet: (gawkinet).         TCP/IP Internetworking With `gawk'.
 * Wget: (wget).                 Non-interactive network downloader.

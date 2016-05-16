@@ -27,8 +27,8 @@ Shift	Up		Make Window FullScreen
 Shift	Down		Make Window FullScreen
 Shift	Left		Move Window to the left side of screen
 Shift	Right		Move Window to the right side of screen
-Shift	+		Make Screen Opaque
-Shift	-		Return Screen Transparency
+Shift	NumBar*		Make Screen Opaque
+Shift	NumBar/		Return Screen Transparency
 
 Ctrl	[0-9]		Go to Console#
 Ctrl	F1		New {PowerShell}
@@ -52,8 +52,8 @@ Shift	HOME		Scroll to top of buffer
 Shift	End		Scroll to bottom of buffer
 Shift	PgUp		Scroll up one page
 Shift	PgDown		Scroll down one page
-Shift	+		Scroll buffer up one line
-Shift	-		Scroll buffer down one line
+Shift	KeyPad+		Scroll buffer up one line
+Shift	KeyPad-		Scroll buffer down one line
 
 === GNU SCREEN ===
 Ctrl	A	C	Open a new window
@@ -62,6 +62,7 @@ Ctrl	A	P	Switch to previous window ID - 1
 Ctrl	A	D	Detach from screen & return to shell (prgm continues)
 `screen -ls`		view current screen sessions
 `screen -r xxxnamexxx`	connect to existing session
+`screen -S <name>`	open and name a new session
 
 === KEY ===
 Apps=Windows Key
@@ -74,6 +75,6 @@ Shift	F4		In FarNet this will create a new Host Config for SCP / SFTP
 2. `git commit -m "Notate changes here"`
 3. `git push origin master` (master can be a different branch)
 ===========
-This file is located @ %ConEmuDir%\scripts\helpfile.txt
+This file is located @ %ConEmuDir%\docs\helpfile.txt
 
 ~el fin

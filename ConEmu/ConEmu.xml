@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2015-09-25 12:45:51" build="150913">
+		<key name=".Vanilla" modified="2016-04-25 18:00:07" build="160416">
 			<value name="StartType" type="hex" data="00"/>
 			<value name="CmdLine" type="string" data="&quot;../farmanager/far.exe&quot; &quot;C:\Users\Eric Hiller&quot; -cur_console:d"/>
 			<value name="StartTasksFile" type="string" data=""/>
@@ -68,10 +68,11 @@
 			<value name="ConWnd Height" type="dword" data="0000003f"/>
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
-			<value name="ConWnd X" type="dword" data="0000072c"/>
-			<value name="ConWnd Y" type="dword" data="fffffff9"/>
-			<value name="16bit Height" type="dword" data="00000000"/>
+			<value name="ConWnd X" type="long" data="-1044"/>
+			<value name="ConWnd Y" type="long" data="-7"/>
+			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
+			<value name="LastMonitor" type="string" data="-1440,0,0,2520"/>
 		</key>
 	</key>
 </key>
