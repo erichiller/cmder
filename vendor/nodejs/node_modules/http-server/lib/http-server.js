@@ -22,7 +22,7 @@ exports.createServer = function (options) {
 
 /**
  * Constructor function for the HttpServer object
- * with is responsible for serving static files along
+ * which is responsible for serving static files along
  * with other HTTP-related features.
  */
 function HttpServer(options) {
@@ -67,8 +67,13 @@ function HttpServer(options) {
   if (options.cors) {
     this.headers['Access-Control-Allow-Origin'] = '*';
     this.headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Range';
-
-    before.push(corser.create());
+    if (options.corsHeaders) {
+      options.corsHeaders.split(/\s*,\s*/)
+          .forEach(function (h) { this.headers['Access-Control-Allow-Headers'] += ', ' + h; }, this);
+    }
+    before.push(corser.create(options.corsHeaders ? {
+      requestHeaders: this.headers['Access-Control-Allow-Headers'].split(/\s*,\s*/)
+    } : null));
   }
 
   if (options.robots) {

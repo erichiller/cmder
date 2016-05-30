@@ -13,7 +13,9 @@ module.exports = function (opts, stat) {
       baseDir = opts.baseDir,
       humanReadable = opts.humanReadable,
       handleError = opts.handleError,
-      si = opts.si;
+      showDotfiles = opts.showDotfiles,
+      si = opts.si,
+      weakEtags = opts.weakEtags;
 
   return function middleware (req, res, next) {
 
@@ -39,8 +41,16 @@ module.exports = function (opts, stat) {
         if (err) {
           return handleError ? status[500](res, next, { error: err }) : next();
         }
+
+        // Optionally exclude dotfiles from directory listing.
+        if (!showDotfiles) {
+          files = files.filter(function(filename){
+            return filename.slice(0,1) !== '.';
+          });
+        }
+
         res.setHeader('content-type', 'text/html');
-        res.setHeader('etag', etag(stat));
+        res.setHeader('etag', etag(stat, weakEtags));
         res.setHeader('last-modified', (new Date(stat.mtime)).toUTCString());
         res.setHeader('cache-control', cache);
 
@@ -108,10 +118,10 @@ module.exports = function (opts, stat) {
             '  <head>',
             '    <meta charset="utf-8">',
             '    <meta name="viewport" content="width=device-width">',
-            '    <title>Index of ' + pathname +'</title>',
+            '    <title>Index of ' + he.encode(pathname) +'</title>',
             '  </head>',
             '  <body>',
-            '<h1>Index of ' + pathname + '</h1>'
+            '<h1>Index of ' + he.encode(pathname) + '</h1>'
           ].join('\n') + '\n';
 
           html += '<table>';
@@ -120,11 +130,11 @@ module.exports = function (opts, stat) {
           var writeRow = function (file, i) {
             // render a row given a [name, stat] tuple
             var isDir = file[1].isDirectory && file[1].isDirectory();
-            var href = parsed.pathname.replace(/\/$/, '') + '/' + encodeURI(file[0]);
+            var href = parsed.pathname.replace(/\/$/, '') + '/' + encodeURIComponent(file[0]);
 
             // append trailing slash and query for dir entry
             if (isDir) {
-              href += '/' + ((parsed.search)? parsed.search:'');
+              href += '/' + he.encode((parsed.search)? parsed.search:'');
             }
 
             var displayName = he.encode(file[0]) + ((isDir)? '/':'');
@@ -144,7 +154,7 @@ module.exports = function (opts, stat) {
           html += '</table>\n';
           html += '<br><address>Node.js ' +
             process.version +
-            '/ <a href="https://github.com/jesusabdullah/node-ecstatic">ecstatic</a> ' +
+            '/ <a href="https://github.com/jfhbrook/node-ecstatic">ecstatic</a> ' +
             'server running @ ' +
             he.encode(req.headers.host || '') + '</address>\n' +
             '</body></html>'

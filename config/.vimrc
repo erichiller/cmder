@@ -64,8 +64,8 @@ endif " has("autocmd")
 if $TERM ==# "cygwin"
 " if $TERM ==# "xterm-256color"
 	set term=xterm
-else
-	set term=pcansi
+"else
+"	set term=pcansi
 endif
 
 " ConEmu
