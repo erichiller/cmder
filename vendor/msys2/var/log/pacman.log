@@ -940,3 +940,53 @@
 [2016-05-15 20:15] [ALPM] transaction started
 [2016-05-15 20:15] [ALPM] upgraded repman-git (r23.87bf865-1 -> r25.92edb44-1)
 [2016-05-15 20:15] [ALPM] transaction completed
+[2016-05-30 18:08] [PACMAN] Running 'pacman -Syuu'
+[2016-05-30 18:08] [PACMAN] synchronizing package lists
+[2016-05-30 18:08] [PACMAN] Running 'pacman -Syuu'
+[2016-05-30 18:08] [PACMAN] synchronizing package lists
+[2016-05-30 18:08] [PACMAN] starting core system upgrade
+[2016-05-30 18:08] [ALPM] transaction started
+[2016-05-30 18:08] [ALPM] warning: /etc/profile installed as /etc/profile.pacnew
+[2016-05-30 18:08] [ALPM] upgraded filesystem (2016.04-3 -> 2016.05-2)
+[2016-05-30 18:08] [ALPM-SCRIPTLET] 
+[2016-05-30 18:08] [ALPM-SCRIPTLET]       WARNING: the shell starting scripts have been unified. Please update your
+[2016-05-30 18:08] [ALPM-SCRIPTLET]       shortcuts to the following targets, otherwise they will STOP WORKING:
+[2016-05-30 18:08] [ALPM-SCRIPTLET] 
+[2016-05-30 18:08] [ALPM-SCRIPTLET]           * MSYS2_ROOT\msys2_shell.cmd -mingw32
+[2016-05-30 18:08] [ALPM-SCRIPTLET]           * MSYS2_ROOT\msys2_shell.cmd -mingw64
+[2016-05-30 18:08] [ALPM-SCRIPTLET]           * MSYS2_ROOT\msys2_shell.cmd -msys
+[2016-05-30 18:08] [ALPM-SCRIPTLET] 
+[2016-05-30 18:08] [ALPM] upgraded msys2-runtime (2.5.0.17080.65c939c-1 -> 2.5.1-1)
+[2016-05-30 18:08] [ALPM] upgraded msys2-runtime-devel (2.5.0.17080.65c939c-1 -> 2.5.1-1)
+[2016-05-30 18:08] [ALPM] transaction completed
+[2016-05-30 18:09] [PACMAN] Running 'pacman -Syuu'
+[2016-05-30 18:09] [PACMAN] synchronizing package lists
+[2016-05-30 18:09] [PACMAN] starting core system upgrade
+[2016-05-30 18:09] [PACMAN] starting full system upgrade
+[2016-05-30 18:09] [ALPM] transaction started
+[2016-05-30 18:09] [ALPM] removed repman-git (r25.92edb44-1)
+[2016-05-30 18:09] [ALPM] upgraded libnettle (3.1.1-1 -> 3.2-1)
+[2016-05-30 18:09] [ALPM] upgraded bsdcpio (3.1.2-5 -> 3.2.0-1)
+[2016-05-30 18:09] [ALPM] upgraded bsdtar (3.1.2-5 -> 3.2.0-1)
+[2016-05-30 18:09] [ALPM] upgraded libopenssl (1.0.2.g-1 -> 1.0.2.h-1)
+[2016-05-30 18:09] [ALPM] upgraded openssl (1.0.2.g-1 -> 1.0.2.h-1)
+[2016-05-30 18:09] [ALPM] upgraded libssh2 (1.6.0-1 -> 1.7.0-1)
+[2016-05-30 18:09] [ALPM] upgraded libcurl (7.48.0-1 -> 7.49.0-1)
+[2016-05-30 18:09] [ALPM] upgraded curl (7.48.0-1 -> 7.49.0-1)
+[2016-05-30 18:09] [ALPM] upgraded dos2unix (7.3.3-1 -> 7.3.4-1)
+[2016-05-30 18:09] [ALPM] upgraded gdb (7.9-1 -> 7.9-2)
+[2016-05-30 18:09] [ALPM] upgraded git (2.8.1-1 -> 2.8.2-1)
+[2016-05-30 18:09] [ALPM] upgraded libarchive (3.1.2-5 -> 3.2.0-1)
+[2016-05-30 18:09] [ALPM] upgraded make (4.1-4 -> 4.2-1)
+[2016-05-30 18:09] [ALPM] upgraded mingw-w64-x86_64-headers-git (5.0.0.4636.c0ad18a-1 -> 5.0.0.4671.1b12b90-1)
+[2016-05-30 18:10] [ALPM] upgraded mingw-w64-x86_64-crt-git (5.0.0.4636.2595836-1 -> 5.0.0.4671.1b12b90-1)
+[2016-05-30 18:10] [ALPM] upgraded mingw-w64-x86_64-libwinpthread-git (5.0.0.4634.697f757-1 -> 5.0.0.4670.00cda6f-1)
+[2016-05-30 18:10] [ALPM] upgraded mingw-w64-x86_64-winpthreads-git (5.0.0.4634.697f757-1 -> 5.0.0.4670.00cda6f-1)
+[2016-05-30 18:10] [ALPM] installed pactoys-git (r1.e58a7ac-1)
+[2016-05-30 18:10] [ALPM] upgraded scons (2.4.1-2 -> 2.5.0-1)
+[2016-05-30 18:10] [ALPM] upgraded xmlto (0.0.26-2 -> 0.0.28-1)
+[2016-05-30 18:10] [ALPM] transaction completed
+[2016-05-30 18:10] [PACMAN] Running 'pacman -Syuu'
+[2016-05-30 18:10] [PACMAN] synchronizing package lists
+[2016-05-30 18:10] [PACMAN] starting core system upgrade
+[2016-05-30 18:10] [PACMAN] starting full system upgrade

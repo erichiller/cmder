@@ -26,7 +26,7 @@ GREP=/usr/bin/grep     # GNU grep, for searching patterns
 SED=/usr/bin/sed       # GNU sed, for modification of patterns
 
 version () {
-  echo "xmlto version 0.0.26"
+  echo "xmlto version 0.0.28"
 }
 
 usage () {
@@ -44,6 +44,7 @@ OPTIONs are:
   --noclean       temp files are not deleted automatically
                   (good for diagnostics)
   --noextensions  do not use passivetex/fop extensions
+  --profile       use profiling stylesheet
   --searchpath    colon-separated list of fallback directories
   --skip-validation
                   do not attempt to validate the input before processing
@@ -83,8 +84,7 @@ make_temp () {
 
   if eval $2='$(${MKTEMP} $dirflag "${TMPDIR:-/tmp}/${prefix}.XXXXXX")'
   then
-    eval 'CLEANFILES[$CLEANFILE_COUNT]="${'$2'}"'
-    CLEANFILE_COUNT=$(($CLEANFILE_COUNT + 1))
+    CLEANFILES="$CLEANFILES ${!2}"
     return 0
   elif [ -z "$3" ]
   then
@@ -131,13 +131,11 @@ fi
 OUTPUT_DIR="$WD"
 
 # This is an array of XSL fragments specified by the user.
-declare -a XSL_MODS
-XSL_MOD_COUNT=0
+XSL_MODS=
 
 # List of files to remove after exit
-declare -a CLEANFILES
-CLEANFILE_COUNT=0
-trap -- 'cd /; [ -z "${CLEANFILES[*]}" ] || rm -rf "${CLEANFILES[@]}"' EXIT
+CLEANFILES=
+trap -- 'cd /; [ -z "$CLEANFILES" ] || rm -rf $CLEANFILES' EXIT
 
 XSLTOPTS=
 SEARCHPATH=
@@ -147,7 +145,7 @@ XMLLINT_PATH=/usr/bin/xmllint
 XSLTPROC_PATH=/usr/bin/xsltproc
 
 # Try to setup papersize using libpaper first ...
-if [ -n "`type -t $PAPERCONF_PATH`" ]
+if type "$PAPERCONF_PATH" >/dev/null 2>&1
 then
   papername=`"$PAPERCONF_PATH" -n`
   paperheight=`"$PAPERCONF_PATH" -mh | sed 's/ //g'`
@@ -178,7 +176,7 @@ EOF
   fi
 
 # ... or use magic paper size, based on LC_PAPER
-elif [ -n "`type -t $LOCALE_PATH`" ]
+elif type "$LOCALE_PATH" >/dev/null 2>&1
 then
   # For paper sizes we know about, specify them.
   h=$("$LOCALE_PATH" LC_PAPER 2>/dev/null | head -n 1)
@@ -201,7 +199,7 @@ EOF
 fi
 
 # Magic encoding, based on locale
-if [ -n "`type -t $LOCALE_PATH`" ]
+if type "$LOCALE_PATH" >/dev/null 2>&1
 then
   charmap=$("$LOCALE_PATH" charmap 2>/dev/null)
 
@@ -217,8 +215,7 @@ then
 <xsl:param name="man.charmap.use.subset" select="'0'"/>
 </xsl:stylesheet>
 EOF
-      XSL_MODS[$XSL_MOD_COUNT]="$encodingmod"
-      XSL_MOD_COUNT=$(($XSL_MOD_COUNT + 1))
+      XSL_MODS="$XSL_MODS $encodingmod"
     fi
   fi
 fi
@@ -239,6 +236,7 @@ XSLTOPTS="$XSLTOPTS --xinclude"
 SKIP_VALIDATION=0
 BACKEND_EXTENSIONS=1
 NO_AUTOSIZE=0
+PROFILE=0
 
 #actual possibilities DEFAULT(XSL-FO/passivetex), FOP and DBLATEX
 USE_BACKEND=DEFAULT
@@ -251,12 +249,13 @@ XMLTEX_PATH=xmltex
 PDFXMLTEX_PATH=pdfxmltex
 
 #check if we could use fop/dblatex backend as default(if not, use passivetex)
-if [ x"$USE_BACKEND" = xFOP ] && [ -z "`type -t $FOP_PATH`" ]
+if [ x"$USE_BACKEND" = xFOP ] && ! type "$FOP_PATH" >/dev/null 2>&1
 then
   echo >&2 "xmlto: Warning: fop not found or not executable."
   echo >&2 "xmlto: Using default backend..."
   USE_BACKEND=DEFAULT
-else
+elif type "$FOP_PATH" >/dev/null 2>&1
+then
   # we should enable fop.extensions for fop 0_17,0_18 and 0_20*,
   # fop1.extensions for the rest
   if [ x`$FOP_PATH -v 2>/dev/null | $GREP 0_[12]` = x ]; then
@@ -266,15 +265,15 @@ else
   fi
 fi
 if [ x"$USE_BACKEND" = xDBLATEX ] && \
-   [ -z "`type -t $DBLATEX_PATH`" ]
+   ! type "$DBLATEX_PATH" >/dev/null 2>&1
 then
   echo >&2 "xmlto: Warning: dblatex not found or not executable."
   echo >&2 "xmlto: Using default backend..."
   USE_BACKEND=DEFAULT
 fi
 
-LINKS_PATH=links
-W3M_PATH=w3m
+LINKS_PATH=/usr/bin/elinks
+W3M_PATH=/usr/local/bin/w3m
 LYNX_PATH=lynx
 GCP_PATH=/usr/bin/cp
 SED_PATH=/usr/bin/sed
@@ -283,7 +282,7 @@ ZIP_PATH=/usr/bin/zip
 
 # Process any options
 ARGS=$(${GETOPT} \
-	--longoptions=help,version,extensions,searchpath:,skip-validation,stringparam:,noclean,noautosize,noextensions,with-fop,with-dblatex \
+	--longoptions=help,version,extensions,searchpath:,skip-validation,stringparam:,noclean,noautosize,noextensions,profile,with-fop,with-dblatex \
 	-n xmlto -- x:m:o:p:v "$@")
 [ $? != 0 ] && { usage; exit 1; }
 eval set -- "$ARGS"
@@ -309,10 +308,9 @@ while [ "$#" -gt "0" ]; do
 	;;
   -m)
 	case "$2" in
-	/* | *:/*) XSL_MODS[$XSL_MOD_COUNT]="$2" ;;
-	        *) XSL_MODS[$XSL_MOD_COUNT]="$PWD/$2" ;;
+	/* | *:/*) XSL_MODS="$XSL_MODS $2" ;;
+	        *) XSL_MODS="$XSL_MODS $PWD/$2" ;;
 	esac
-	XSL_MOD_COUNT=$(($XSL_MOD_COUNT + 1))
 	shift 2
 	;;
   -o)
@@ -360,7 +358,7 @@ while [ "$#" -gt "0" ]; do
 	shift 2
 	;;
   --noclean)
-	trap -- 'cd /; [ -z "${CLEANFILES[*]}" ] || echo "${CLEANFILES[@]}"' EXIT
+	trap -- 'cd /; [ -z "$CLEANFILES" ] || echo "$CLEANFILES"' EXIT
 	shift
 	;;
   --noautosize)
@@ -369,7 +367,7 @@ while [ "$#" -gt "0" ]; do
   ;;
   --with-fop)
 	##use fop instead of passivetex where possible
-	if [ -z "`type -t $FOP_PATH`" ]
+	if ! type "$FOP_PATH" >/dev/null 2>&1
 	then
 		echo >&2 Warning: fop not found or not executable.
 		echo >&2 Using default backend...
@@ -380,13 +378,17 @@ while [ "$#" -gt "0" ]; do
 	;;
   --with-dblatex)
 	##use dblatex instead of passivetex where possible
-	if [ -z "`type -t $DBLATEX_PATH`" ]
+	if ! type "$DBLATEX_PATH" >/dev/null 2>&1
 	then
 		echo >&2 Warning: dblatex not found or not executable.
 		echo >&2 Using default backend...
 	else
 		USE_BACKEND="DBLATEX"
 	fi
+	shift
+	;;
+  --profile)
+	PROFILE=1
 	shift
 	;;
   --)
@@ -434,25 +436,25 @@ case "$DEST_FORMAT" in
   fo | pdf | ps | dvi)
     if [ "$NO_AUTOSIZE" -eq 0 ] && [ -n "$papersizemod" ]
     then
-      XSL_MODS[$XSL_MOD_COUNT]="$papersizemod"
-      XSL_MOD_COUNT=$(($XSL_MOD_COUNT + 1))
+      XSL_MODS="$XSL_MODS $papersizemod"
     fi
     ;;
 esac
 
 
 # Decide what source format this is.  Default to DocBook.
-#rootel=$(head -n 4 "$INPUT_FILE" | tr -d '\n' | \
-#     sed -e 's/^<?[^?>]*?>//g' -e 's/^<![^>]*>//g' -e 's/^<\([^ ]*\).*$/\1/')
+#This was failing on Ubuntu 14.04, so changing detection a bit
+#rootel=$(echo "xpath *" | "$XMLLINT_PATH" --shell "$INPUT_FILE" 2> /dev/null | head -n 3 |$TAIL -n 1 | cut -f 4 -d " " )
 
-# Seems reasonable fix the file command and teach it to identify the DTD/Schema but this is faster to write:
-rootel=$(echo "xpath *" | "$XMLLINT_PATH" --shell "$INPUT_FILE" 2> /dev/null | head -n 3 |$TAIL -n 1 | cut -f 4 -d " " )
+rootel_xpath='concat("{", namespace-uri(/*), "}", local-name(/*))'
+rootel="$("$XMLLINT_PATH" --xpath "$rootel_xpath" "$INPUT_FILE" 2>/dev/null)"
+
 
 case $(echo $rootel) in
-  fo:root)
+  "{http://www.w3.org/1999/XSL/Format}root")
 	SOURCE_FORMAT="fo"
 	;;
-  html)
+  "{http://www.w3.org/1999/xhtml}html")
 	SOURCE_FORMAT="xhtml1"
 	;;
 esac
@@ -493,11 +495,12 @@ export USE_BACKEND
 if [ -z "$STYLESHEET" ]
 then
   STYLESHEET="$(${BASH} "$FORMAT" stylesheet)" || exit 1
+  [ "$VERBOSE" -ge 1 ] && echo >&2 "Stylesheet: ${STYLESHEET}"
 fi
 
 # We might need to create a temporary stylesheet if there are
 # XSL fragments that need adding.
-if [ "$XSL_MOD_COUNT" -gt "0" -a -n "$STYLESHEET" ]
+if [ -n "$XSL_MODS" -a -n "$STYLESHEET" ]
 then
   REAL_STYLESHEET="$STYLESHEET"
   [ "$VERBOSE" -ge 1 ] && echo >&2 "Real stylesheet: ${REAL_STYLESHEET}"
@@ -510,12 +513,11 @@ then
 EOF
 
   i=0
-  while [ "$i" -lt "$XSL_MOD_COUNT" ]
+  for i in $XSL_MODS
   do
     cat << EOF >> "$STYLESHEET"
-<xsl:include href="${XSL_MODS[$i]}"/>
+<xsl:include href="$i"/>
 EOF
-    i=$(($i + 1))
   done
 
   cat << EOF >> "$STYLESHEET"
@@ -530,7 +532,7 @@ cd "$XSLT_PROCESSED_DIR"
 if [ "$SKIP_VALIDATION" -eq 0 ] && [ "$SOURCE_FORMAT" != "fo" ]
 then
   #do we have xmllint validation tool?
-  if [ -z "`type -t $XMLLINT_PATH`" ]
+  if ! type "$XMLLINT_PATH" >/dev/null 2>&1
   then
     echo >&2 "xmlto: xmllint validation tool not found or not executable."
     echo >&2 "xmlto: Skipping validation... " \
@@ -557,47 +559,77 @@ then
   fi
 fi
 
-if [ -z "${STYLESHEET}" ]
+if [ "$VERBOSE" -gt 2 ]
 then
-  # No stylesheet: no XSL-T processing to do.
-  XSLT_PROCESSED="$INPUT_FILE"
-else
+  XSLTOPTS="$XSLTOPTS -v"
+fi
+XSLTOPTS="${XSLTPARAMS} ${XSLTOPTS}"
 
+if [ "$PROFILE" -eq 1 ] || [ -n "${STYLESHEET}" ]
+then
   #do we have xsltproc tool?
-  if [ -z "`type -t $XSLTPROC_PATH`" ]
+  if ! type "$XSLTPROC_PATH" >/dev/null 2>&1
   then
     echo >&2 "xmlto: Can't continue, xsltproc tool not found or not executable."
     exit 3
   fi
+fi
 
-  [ "$VERBOSE" -ge 1 ] && echo >&2 "Stylesheet: ${STYLESHEET}"
-  XSLT_PROCESSED="$XSLT_PROCESSED_DIR/$(basename "${INPUT_FILE%.*}").proc"
+if [ "$PROFILE" -eq 1 ]
+then
+  PROF_PROCESSED="$XSLT_PROCESSED_DIR/$(basename "${INPUT_FILE%.*}").prof"
+  PROFILE_STYLESHEET="http://docbook.sourceforge.net/release/xsl/current/profiling/profile.xsl"
+  [ "$VERBOSE" -ge 1 ] && echo >&2 "Profiling stylesheet: ${PROFILE_STYLESHEET}"
 
-  if [ "$VERBOSE" -gt 2 ]
-  then
-    XSLTOPTS="$XSLTOPTS -v"
-  fi
-
-  XSLTOPTS="${XSLTPARAMS} ${XSLTOPTS}"
   [ "${VERBOSE}" -ge 1 ] && \
-   echo -e >&2 "${XSLTPROC_PATH} ${XSLTOPTS} ${SEARCHPATH_FORMATTED} \\\\\n -o \"${XSLT_PROCESSED}\" \\\\\n \"${STYLESHEET}\" \\\\\n \"${INPUT_FILE}\""
+    printf >&2 "${XSLTPROC_PATH} ${XSLTOPTS} ${SEARCHPATH_FORMATTED} \\\\\n -o \"${PROF_PROCESSED}\" \\\\\n \"${PROFILE_STYLESHEET}\" \"${INPUT_FILE}\"\n"
   # eval is for SEARCHPATH_FORMATTED's proper expansion
-  eval "\"${XSLTPROC_PATH}\" ${XSLTOPTS} ${SEARCHPATH_FORMATTED} -o \"${XSLT_PROCESSED}\" \"${STYLESHEET}\" \"${INPUT_FILE}\""
+  eval "\"${XSLTPROC_PATH}\" ${XSLTOPTS} ${SEARCHPATH_FORMATTED} -o \"${PROF_PROCESSED}\" \"${PROFILE_STYLESHEET}\" \"${INPUT_FILE}\""
+
+  # remember the xsltproc exit code for later checks
+  xsltproc_status=$?
+
+  #xsltproc may return no file on empty input, touch it to have it for sure
+  touch "$PROF_PROCESSED"
+
+  # xsltproc returned an exit code - exit the script
+  [ ${xsltproc_status} -gt 0 ] && exit ${xsltproc_status}
+else
+  # No profile processing to do.
+  PROF_PROCESSED="$INPUT_FILE"
+fi
+
+if [ -z "${STYLESHEET}" ]
+then
+  # No stylesheet: no XSL-T processing to do.
+  XSLT_PROCESSED="$PROF_PROCESSED"
+else
+  [ "$VERBOSE" -ge 1 ] && echo >&2 "Stylesheet: ${STYLESHEET}"
+  XSLT_PROCESSED="$XSLT_PROCESSED_DIR/$(basename "${PROF_PROCESSED%.*}").proc"
+
+  [ "${VERBOSE}" -ge 1 ] && \
+   printf >&2 "${XSLTPROC_PATH} ${XSLTOPTS} ${SEARCHPATH_FORMATTED} \\\\\n -o \"${XSLT_PROCESSED}\" \\\\\n \"${STYLESHEET}\" \\\\\n \"${PROF_PROCESSED}\"\n"
+  # eval is for SEARCHPATH_FORMATTED's proper expansion
+  eval "\"${XSLTPROC_PATH}\" ${XSLTOPTS} ${SEARCHPATH_FORMATTED} -o \"${XSLT_PROCESSED}\" \"${STYLESHEET}\" \"${PROF_PROCESSED}\""
+
+  # remember the xsltproc exit code for later checks
+  xsltproc_status=$?
 
   #xsltproc may return no file on empty input, touch it to have it for sure
   touch "$XSLT_PROCESSED"
 
-  if [ $? == 4 ]
+  if [ $xsltproc_status = 4 ]
   then
     XSLTOPTS="${XSLTOPTS} --catalogs"
     if [ "$VERBOSE" -ge 1 ]; then
 	echo >&2 "No XML Catalogs?  Trying again with --catalogs:"
-	echo -e >&2 "${XSLTPROC_PATH} ${XSLTOPTS} ${SEARCHPATH_FORMATTED}\\\\\n -o \"${XSLT_PROCESSED}\" \\\\\n \"${STYLESHEET}\" \\\\\n \"${INPUT_FILE}\""
+	printf >&2 "${XSLTPROC_PATH} ${XSLTOPTS} ${SEARCHPATH_FORMATTED}\\\\\n -o \"${XSLT_PROCESSED}\" \\\\\n \"${STYLESHEET}\" \\\\\n \"${PROF_PROCESSED}\"\n"
     fi
-    eval "\"${XSLTPROC_PATH}\"" ${XSLTOPTS} ${SEARCHPATH_FORMATTED} -o "\"${XSLT_PROCESSED}\"" "\"${STYLESHEET}\"" "\"${INPUT_FILE}\""
+    eval "\"${XSLTPROC_PATH}\"" ${XSLTOPTS} ${SEARCHPATH_FORMATTED} -o "\"${XSLT_PROCESSED}\"" "\"${STYLESHEET}\"" "\"${PROF_PROCESSED}\""
+    xsltproc_status=$?
   fi
 
-  xsltproc_status=$?
+  # xsltproc returned an exit code - exit the script
   [ ${xsltproc_status} -gt 0 ] && exit ${xsltproc_status}
 fi
 

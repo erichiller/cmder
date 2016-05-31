@@ -13,6 +13,7 @@ IFS=$'\n'
 # for ANSI formatting codes: see http://misc.flogisoft.com/bash/tip_colors_and_formatting
 # for ANSI in heredoc see: http://unix.stackexchange.com/questions/266921/is-it-possible-to-use-ansi-color-escape-codes-in-bash-here-documents
 textformat_yellow=$(printf '\033[33m')
+textformat_blue=$(printf '\033[96m')
 textformat_red=$(printf '\033[4;91m')
 textformat_normal=$(tput sgr0)
 
@@ -48,19 +49,26 @@ function dispHelp {
 	local me=`basename $0`
 	local y=${textformat_yellow}
 	local n=${textformat_normal}
+	local b=${textformat_blue}
 # HEREDOC
 cat <<EOM
 *******************************************************************************
 ************                 PASSWORD MANAGER - help               ************
 *******************************************************************************
+
+    $me
+
     A quick password management script for my old text file passwords,
     So that at least I am making use of secure passwords.
     Items which appear in ${y}yellow${n} are optional 
+    Descriptions appear in ${b}blue${n}
 
-    *** FLAG ************************** DESCRIPTION ***************************
-    $me newaccount     ${y}accountname         username${n}
-    $me newpass        create new password for prompted account
-    $me getaccount     ${y}accountname${n}
+
+    *** COMMAND ************************** DESCRIPTION ************************
+    newaccount              ${b}prompted for accountname,username, and password${n}
+    newpass                 ${b}prompted for accountname and new password created${n}
+    getaccount ${y}<account>${n}    ${b}account information printed to console${n}
+    edit <account>          ${b}this will open notepad.exe for editing the file${n}
 ************************ Eric D Hiller **** 28 May 2016 ***********************
 EOM
 exit
@@ -99,9 +107,6 @@ if [ $# -ge 1 ]; then
 		if [ ${accountfound} ] ; then 
 			read -n 1 -p "The file \"$accountfound\" already exists, append? ( [y]es , [n]o , [r]ename ): " append
 			echo -e "\n"
-			#echo "0-95:|${ENTRY:0:92}|"
-			#echo "90-100:|${ENTRY:90:10}|"
-			#echo "95+:${ENTRY:95}|"
 			if [ "$append" == "y" ]; then
 				sed -b -i "1s/^/${ENTRY}\r\n/" $accountfound
 			elif [ "${append}" == "r" ]; then
@@ -115,12 +120,10 @@ if [ $# -ge 1 ]; then
 			accountname=${accountname}.txt
 			echo -e "${ENTRY}" >> $ACCOUNT_PATH/$accountname
 		fi
+#### EDIT EXISTING RECORD
 	elif [ "$1" == "edit" ]; then
 		accountname=$2
-		find ${ACCOUNT_PATH} -iname "*${accountname}*" -type f | while read line; do
-			echo editing $line
-			notepad.exe $line
-		done
+		find ${ACCOUNT_PATH} -iname "*${accountname}*" -type f -ok notepad.exe {} \;
 	elif [ "$1" == "getaccount" ]; then
 		if [ $# -eq 1 ]; then
 			read -p "Please enter account to search for: " accountname

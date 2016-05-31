@@ -1,0 +1,635 @@
+#!/bin/bash
+
+usage() { tee <<done-usage
+
+    Update Package Version 2016.5.26
+    Copyright (C) 2016 Renato Silva
+    Licensed under BSD
+
+    Usage: ${name} [options] [DIRECTORY...]
+
+    --bump=SPEC       Search count for each version level instead of ${default_bump}
+    --commit          Commit updates to git repository
+    --maintainer      Filter recipes by maintainer detected from git
+    --makepkg=TYPE    Force building with mingw or unix makepkg
+    --no-build        Skip building and integrating updates
+    --recipe=NAME     Recipe name instead of PKGBUILD
+    --report          Report analysis and integration results
+    --reset           Remove pending updates
+    --status          List pending updates
+    --versioned       Include versioned names in update
+
+    --color           Force enabling colors
+    --no-color        Force disabling colors
+    --no-terminal     Force disabling terminal handling
+    --verbose         Enable verbose output
+
+done-usage
+exit 1; }
+
+read_arguments() {
+    arguments=("${@}")
+    name="$(basename "${0}")"
+    indent="$(printf %3s)"
+    default_bump='5.10'
+    for argument in "${arguments[@]}"; do
+        case "${argument}" in
+            --bump=*)      option_bump="${argument#*=}"     ;;
+            --makepkg=*)   option_makepkg="${argument#*=}"  ;;
+            --recipe=*)    option_recipe="${argument#*=}"   ;;
+            --commit)      option_commit='true'             ;;
+            --maintainer)  option_maintainer='true'         ;;
+            --no-build)    option_no_build='true'           ;;
+            --no-color)    option_no_color='true'           ;;
+               --color)    option_color='true'              ;;
+            --no-terminal) option_no_terminal='true'        ;;
+            --report)      option_report='true'             ;;
+            --reset)       option_reset='true'              ;;
+            --status)      option_status='true'             ;;
+            --versioned)   option_versioned='true'          ;;
+            --verbose)     option_verbose='true'            ;;
+            -*)            usage                            ;;
+             *)            directories+=("${argument//\\/\/}")
+        esac
+    done
+    configure_colors
+    recipe_paths
+    option_bump
+    option_commit
+    option_makepkg
+}
+
+option_bump() {
+    local specification="${option_bump:-${default_bump}}"
+    [[ "${specification}" =~ ^[1-9][0-9]*(\.[1-9][0-9]*)*$ ]] || error "unrecognized bump format ${option_bump}"
+    for count in ${specification//./ }; do
+        max_bump+=($((count)))
+    done
+}
+
+option_commit() {
+    test -n "${option_commit}" || return 0
+    silent which git || error 'git required for committing updates'
+    test -d .git     || error 'current directory is not a git repository'
+    for directory in "${directories[@]}"; do
+        silent git ls-files --error-unmatch "${directory}" || error "untracked directory ${directory}"
+    done
+}
+
+option_makepkg() {
+    case "${option_makepkg}" in
+        unix)  static_makepkg='makepkg' ;;
+        mingw) static_makepkg='makepkg-mingw' ;;
+        *?)    error "unrecognized makepkg type ${option_makepkg}"
+    esac
+}
+
+configure_colors() {
+    test -z "${option_no_color}" || return 0
+    test -t 1 || test -n "${option_color}" || return 0
+    color_red='\e[1;31m'
+    color_blue='\e[1;34m'
+    color_white='\e[1;37m'
+    color_normal='\e[0m'
+}
+
+recipe_paths() {
+    local recipe_name="${option_recipe:-PKGBUILD}"
+    progress 'Searching for recipes'
+    test -z "${directories}" && directories=(.)
+    for directory in "${directories[@]}"; do
+        test -d "${directory}" || error "missing directory ${directory}"
+    done
+    if test -n "${option_maintainer}"
+        then local email="$(git config user.email 2>/dev/null)"
+             test -n "${email}" || error 'failed detecting maintainer from git'
+             local pattern="^#.*Maintainer.*:.*[<(]?${email}[)>]?"
+             local parameters=(--recursive --files-with-match --extended-regexp --ignore-case --include="${recipe_name}")
+             as_list recipes "$(grep "${parameters[@]}" "${pattern}" "${directories[@]}" 2>/dev/null | sort --ignore-case)" '#./'
+        else as_list recipes "$(find "${directories[@]}" -type f -name "${recipe_name}"  2>/dev/null | sort --ignore-case)" '#./'
+    fi
+    as_list excludes "$(cat "./.${name}.ignore" 2>/dev/null)"
+    progress_complete
+    test -n "${recipes}" || error 'no recipes found'
+}
+
+silent() {
+    local command=("${@}")
+    "${command[@]}" >/dev/null 2>&1
+}
+
+filter() {
+    local pattern="${1}"
+    sed --unbuffered --regexp-extended -e 's/\.+$//' -e "s/^${pattern}/${indent}::/" | grep --color=never "^${indent}::"
+}
+
+terminal_enabled() {
+    test -t 1 || return 1
+    test -z "${option_no_terminal}" || return 1
+    return 0
+}
+
+clearline() {
+    terminal_enabled || return 0
+    printf '\r%-80s\r'
+}
+
+message() {
+    local arguments=("${@}")
+    clearline
+    printf "${indent}"
+    printf "${arguments[@]}"
+}
+
+header(){
+    local title="${1}"
+    printf "${color_blue}::"
+    printf "${color_white} ${title}"
+    printf "${color_normal}\n\n"
+}
+
+error() {
+    local message="${1}"
+    clearline
+    printf "${color_red}error:"
+    printf "${color_normal} ${message}\n"
+    exit 1
+}
+
+progress() {
+    local message="${1}"
+    local total="${2}"
+    terminal_enabled || return 0
+    if test -n "${total}"
+        then progress=$((progress + 1))
+             printf '\r%s: %s%% (%s/%s) ' "${message}" $(((progress * 100) / ${total})) ${progress} ${total}
+        else printf '\r%s... ' "${message}"
+    fi
+}
+
+progress_complete() {
+    unset -v progress
+    clearline
+}
+
+status() {
+    local status="${1}"
+    local package="${2}"
+    local current_version="${3}"
+    local updated_version="${4}"
+    case "${status}" in
+        checking) terminal_enabled || return 0
+                  message '%-45s%-15s%s '  "${package}" "${current_version}" "${updated_version}" ;;
+        success)  message '%-45s%-15s%s\n' "${package}" "${current_version}" "${updated_version}" ;;
+        building) message '%-45s%-15s'     "${package}" "${current_version}" ;;
+        failure)  clearline
+    esac
+}
+
+report() {
+    local title="${1}"
+    local items=("${@:2}")
+    local -A package
+    test -n "${items}" || return 0
+    header "${title}"
+    for item in "${items[@]}"; do
+        restore package "${item}"
+        message "%-45s${package[new_version]:+%-15s}%s\n" "${package[name]}" "${package[version]}" ${package[new_version]}
+    done
+    echo
+}
+
+as_list() {
+    local -n nameref_list="${1}"
+    local lines="${2}"
+    local strip="${3}"
+    nameref_list=()
+    while IFS= read -r line; do
+        test -z "${line}" && continue
+        nameref_list+=("${line/${strip}/}")
+    done <<< "${lines}"
+}
+
+separate() {
+    local items="${1}"
+    local columns=("${@:2}")
+    for column in "${columns[@]}"; do
+        local -n nameref_column="${column}"
+        nameref_column="${items%%::*}"
+        [[ "${items}" != *::* ]] && return 0
+        items="${items#*::}"
+    done
+}
+
+collect() {
+    local -n nameref_list="${1}"
+    local total="${2}"
+    local recipe="${3}"
+    local package="${4}"
+    local current_version="${5}"
+    local updated_version="${6}"
+    nameref_list+=("${recipe}"::"${package}"::"${current_version}"::"${updated_version}")
+    [[ "${total}" = none ]] && return 0
+    progress 'Analyzing recipes' "${total}"
+}
+
+restore() {
+    local -n nameref_package="${1}"
+    local item="${2}"
+    local recipe name version new_version
+    separate "${item}" recipe name version new_version
+    nameref_package['name']="${name}"
+    nameref_package['recipe']="${recipe}"
+    nameref_package['version']="${version}"
+    nameref_package['new_version']="${new_version}"
+}
+
+temporary_recipe() {
+    local name="${1}"
+    local location="${2}"
+    cp "${name}" "${name}.TMP"
+    trap "rm -f '${name}.TMP' '${location}/${name}.TMP'" EXIT
+}
+
+recipe_filename() {
+    local recipe="${1}"
+    local -n nameref_filename="${2}"
+    nameref_filename="${recipe##*/}"
+}
+
+recipe_location() {
+    local recipe="${1}"
+    local -n nameref_location="${2}"
+    if [[ "${recipe}" = */* ]]
+        then nameref_location="${recipe%/*}"
+        else nameref_location="${PWD}"
+    fi
+}
+
+recipe_info() {
+    local recipe="${1}"
+    local properties=("${@:2}")
+    for pair in "${properties[@]}"; do
+        local property="${pair%:*}"
+        local -n nameref_property="${pair#*:}"
+        as_list nameref_property "$(
+            MINGW_PACKAGE_PREFIX='mingw-w64' PATH=".:${PATH}" source "${recipe}"
+            declare -n nameref_property="${property}"
+            printf '%s\n' "${nameref_property[@]}")"
+    done
+}
+
+package_name() {
+    local recipe="${1}"
+    local -n nameref_package="${2}"
+    local recipe_directory
+    recipe_location "${recipe}" recipe_directory
+    while [[ "${recipe_directory}" = */ ]]; do
+        recipe_directory="${recipe_directory%/}"
+    done
+    nameref_package="${recipe_directory##*/}"
+}
+
+bump_version() {
+    local -n nameref_version="${1}"
+    local component_level="${2}"
+    local result current zero
+    for component in ${nameref_version//./ }; do
+        current=$((current + 1))
+        component="${zero:-${component}}"
+        if test ${current} -eq ${component_level}; then
+            component=$((component + 1))
+            zero=0
+        fi
+        result="${result}${result:+.}${component}"
+    done
+    nameref_version="${result}"
+}
+
+replace_version() {
+    local recipe="${1}"
+    local version="${2}"
+    sed --in-place --regexp-extended "s/^pkgver=.*/pkgver=${version}/" "${recipe}"
+    sed --in-place --regexp-extended 's/^pkgrel=.*/pkgrel=1/' "${recipe}"
+}
+
+download_available() {
+    local location="${1}"
+    local version="${2}"
+    local response="$(wget --quiet --spider --server-response --no-hsts "${location}" 2>&1)"
+    local divergent_redirect application_content text_content inline_content content_length  request_success
+    while IFS= read -r line; do
+        case "${line}" in
+            *location:*"${version}"*)      continue                   ;;
+            *location:*)                   divergent_redirect='true'  ;;
+            *content-length:*)             content_length='true'      ;;
+            *content-disposition:*inline*) inline_content='true'      ;;
+            *content-type:*application*)   application_content='true' ;;
+            *content-type:*text*)          text_content='true'        ;;
+            *http/*200*ok*)                request_success='true'     ;;
+        esac
+    done <<< "${response,,}"
+    test -n "${request_success}"     || return 1
+    test -z "${divergent_redirect}"  || return 1
+    test -n "${application_content}" && return 0
+    test -n "${content_length}"      && return 0
+    test -n "${inline_content}"      && return 0
+    test -z "${text_content}"
+}
+
+downloadable_url() {
+    local location="${1}"
+    [[ "${location}" =~ ^https:// ]] && return 0
+    [[ "${location}" =~ ^http://  ]] && return 0
+    [[ "${location}" =~ ^ftp://   ]] && return 0
+    return 1
+}
+
+downloadable_urls() {
+    local recipe="${1}"
+    local -n nameref_list="${2}"
+    local source location
+    silent recipe_info "${recipe}" source
+    for item in "${source[@]}"; do
+        location="${item#*::}"
+        downloadable_url "${location}" && nameref_list+=("${location}")
+    done
+}
+
+unreferenced_version() {
+    local current_recipe="${1}"
+    local updated_recipe="${2}"
+    local current_urls updated_urls
+    local index=0
+    downloadable_urls "${current_recipe}" current_urls
+    downloadable_urls "${updated_recipe}" updated_urls
+    while [[ ${index} -lt ${#current_urls[@]} ]]; do
+        [[ "${current_urls[index]}" != "${updated_urls[index]}" ]] && return 1
+        index=$((index + 1))
+    done
+    return 0
+}
+
+check_version() {
+    local recipe="${1}"
+    local locations pkgver
+    silent recipe_info "${recipe}" pkgver
+    downloadable_urls "${recipe}" locations
+    for location in "${locations[@]}"; do
+        download_available "${location}" "${pkgver}" || return 1
+    done
+    return 0
+}
+
+reset_recipes() {
+    for recipe in "${recipes[@]}"; do
+        test -f "${recipe}.NEW" || continue
+        rm -v "${recipe}.NEW"
+    done
+}
+
+pending_updates() {
+    local package current_version updated_version
+    progress 'Checking status'
+    for recipe in "${recipes[@]}"; do
+        test -f "${recipe}.NEW" || continue
+        package_name "${recipe}" package
+        silent recipe_info "${recipe}"     pkgver:current_version
+        silent recipe_info "${recipe}.NEW" pkgver:updated_version
+        collect pending none "${recipe}" "${package}" "${current_version}" "${updated_version}"
+    done
+    progress_complete
+    test -n "${pending}" && echo
+    report 'Pending updates' "${pending[@]}"
+}
+
+detect_version() {
+    local package="${1}"
+    local version="${2}"
+    local realname="${package#mingw-w64-}"
+    [[ "${package}"  =~ .*-(git|hg|bzr|svn|cvs)$                      ]] && { echo name:development; return; }
+    [[ "${realname}" =~ .*[0-9].* && -z "${option_versioned}"         ]] && { echo name:versioned;   return; }
+    [[ "${version}"  =~ ^([0-9]|[1-9][0-9]+)(\.([0-9]|[1-9][0-9]+))*$ ]] || { echo version:strange;  return; }
+    [[ "${version}"  =~ ^[0-9]{1,2}(\.[0-9]{1,2})*$                   ]] || { echo version:large;    return; }
+    for exclude in "${excludes[@]}"; do
+        [[ "${package}" =~ ^${exclude}$ ]] || continue
+        echo name:excluded
+        return
+    done
+    echo updatable
+}
+
+detect_versions() {
+    local package pkgver
+    for recipe in "${recipes[@]}"; do
+        package_name "${recipe}" package
+        silent recipe_info "${recipe}" pkgver
+        case $(detect_version "${package}" "${pkgver}") in
+            name:excluded)    collect ignored_excluded    ${#recipes[@]} "${recipe}" "${package}" "${pkgver}" ;;
+            name:development) collect ignored_development ${#recipes[@]} "${recipe}" "${package}" "${pkgver}" ;;
+            name:versioned)   collect ignored_versioned   ${#recipes[@]} "${recipe}" "${package}" "${pkgver}" ;;
+            version:strange)  collect ignored_strange     ${#recipes[@]} "${recipe}" "${package}" "${pkgver}" ;;
+            version:large)    collect ignored_large       ${#recipes[@]} "${recipe}" "${package}" "${pkgver}" ;;
+            *)                collect updatable           ${#recipes[@]} "${recipe}" "${package}" "${pkgver}" ;;
+        esac
+    done
+    progress_complete
+    test -n "${updatable}" || test -n "${option_report}" && echo
+}
+
+report_versions() {
+    report 'Updatable versions'  "${updatable[@]}"
+    report 'Large versions'      "${ignored_large[@]}"
+    report 'Strange versions'    "${ignored_strange[@]}"
+    report 'Versioned names'     "${ignored_versioned[@]}"
+    report 'Development names'   "${ignored_development[@]}"
+    report 'Excluded names'      "${ignored_excluded[@]}"
+}
+
+check_update() {
+    local package="${1}"
+    local version="${2}"
+    local recipe="${3}"
+    local current_version="${version}"
+    local recipe_name recipe_directory component_level unreferenced_version
+    recipe_filename "${recipe}" recipe_name
+    recipe_location "${recipe}" recipe_directory
+    cd "${recipe_directory}"
+    if test -f "${recipe_name}.NEW"; then
+        silent recipe_info "${recipe_name}.NEW" pkgver:version
+        status success "${package}" "${current_version}" "${version}"
+        current_version="${version}"
+    fi
+    for component in ${current_version//./ }; do
+        component_level=$((component_level + 1))
+        local bump_count=0
+        while true; do
+            bump_count=$((bump_count + 1))
+            test ${bump_count} -gt ${max_bump[component_level - 1]:-${max_bump[-1]}} && break
+            bump_version version ${component_level}
+            status checking "${package}" "${current_version}" "${version}"
+            temporary_recipe "${recipe_name}" "${recipe_directory}"
+            replace_version "${recipe_name}.TMP" "${version}"
+            if unreferenced_version "${recipe_name}" "${recipe_name}.TMP"; then
+                collect unreferenced none "${recipe}" "${package}" "${current_version}" "${version}"
+                unreferenced_version='true'
+                status failure
+                break
+            fi
+            if check_version "${recipe_name}.TMP"; then
+                status success "${package}" "${current_version}" "${version}"
+                current_version="${version}"
+                cp "${recipe_name}.TMP" "${recipe_name}.NEW"
+            else
+                status failure
+            fi
+        done
+        test -z "${unreferenced_version}" || break
+        version="${current_version}"
+    done
+    rm "${recipe_name}.TMP"
+    if test -f "${recipe_name}.NEW"; then
+        silent recipe_info "${recipe_name}"     pkgver:version
+        silent recipe_info "${recipe_name}.NEW" pkgver:current_version
+        collect updates none "${recipe}" "${package}" "${version}" "${current_version}"
+    fi
+    silent cd -
+}
+
+check_updates() {
+    local -A package
+    test -n "${updatable}" || return 0
+    header 'Checking updates'
+    for item in "${updatable[@]}"; do
+        restore package "${item}"
+        check_update "${package[name]}" "${package[version]}" "${package[recipe]}"
+    done
+    test -z "${updates}" && message 'no updates detected\n'
+    echo
+    test -n "${option_report}" && report 'Unreferenced versions' "${unreferenced[@]}"
+}
+
+makepkg_command() {
+    local recipe_name="${1}"
+    local pkgname arch
+    if test -n "${static_makepkg}"; then
+        echo "${static_makepkg}"
+        return
+    fi
+    silent recipe_info "${recipe_name}" pkgname arch
+    for name in "${pkgname[@]}"; do
+        if [[ "${name}" != mingw-w64-* ]]; then
+            echo 'makepkg'
+            return
+        fi
+    done
+    case "${arch[@]}" in
+        any) echo 'makepkg-mingw' ;;
+        *)   echo 'makepkg'
+    esac
+}
+
+make_package() {
+    local makepkg="${1}"
+    local recipe_name="${2}"
+    local options='--noconfirm --skippgpcheck --nocheck --syncdeps --rmdeps --clean --cleanbuild --force --log'
+    ${makepkg} -p "${recipe_name}" ${options}
+}
+
+build_status() {
+    local status="${1}"
+    local package="${2}"
+    local version="${3}"
+    local makepkg="${4}"
+    if test -z "${option_verbose}"; then
+        case "${status}" in
+            started) status building "${package}" "${version}" ;;
+            success) echo 'success' ;;
+            failure) echo 'failed' ;;
+        esac
+    else
+        case "${status}" in
+            started) echo "==> Building ${package} ${version} with ${makepkg}" ;;
+            success) echo '==> SUCCESS'
+        esac
+    fi
+}
+
+build_update() {
+    local -n nameref_package="${1}"
+    local recipe_name recipe_directory makepkg silent
+    recipe_filename "${nameref_package[recipe]}" recipe_name
+    recipe_location "${nameref_package[recipe]}" recipe_directory
+    cd "${recipe_directory}"
+    makepkg=$(makepkg_command "${recipe_name}")
+    build_status started "${nameref_package[name]}" "${nameref_package[new_version]}" "${makepkg}"
+    test -z "${option_verbose}" && silent='silent'
+    if (${silent} updpkgsums "${recipe_name}.NEW" &&
+        ${silent} make_package "${makepkg}" "${recipe_name}.NEW" &&
+        mv "${recipe_name}.NEW" "${recipe_name}")
+        then build_status success
+        else build_status failure
+    fi
+    silent cd -
+}
+
+build_updates() {
+    local -A package
+    test -n "${updates}" || return 0
+    header 'Building packages'
+    for update in "${updates[@]}"; do
+        restore package "${update}"
+        if test -z "${option_verbose}"
+            then build_update package
+            else build_update package 2>&1 | filter '==>'
+        fi
+        if test -f "${package[recipe]}.NEW"
+            then failed+=("${update}")
+            else updated+=("${update}")
+        fi
+        test -n "${option_verbose}" && echo
+    done
+    test -z "${option_verbose}" && echo
+}
+
+commit_updates() {
+    local message="Automatic package updates by ${name}.\n"
+    local files recipe_name recipe_directory
+    local -A package
+    if test -n "${option_no_build}"; then
+        for update in "${updates[@]}"; do
+            restore package "${update}"
+            recipe_filename "${package[recipe]}" recipe_name
+            recipe_location "${package[recipe]}" recipe_directory
+            cd "${recipe_directory}"
+            if (silent updpkgsums "${recipe_name}.NEW" &&
+                mv "${recipe_name}.NEW" "${recipe_name}")
+                then updated+=("${update}")
+                else failed+=("${update}")
+            fi
+            silent cd -
+        done
+    fi
+    test -n "${updated}" || return 0
+    for item in "${updated[@]}"; do
+        restore package "${item}"
+        files+=("${package[recipe]}")
+        message+="\n* Update ${package[name]} to ${package[new_version]}."
+    done
+    silent git commit --file <(printf "${message}") "${files[@]}" || error 'failed committing updates'
+}
+
+if [[ "${BASH_SOURCE}" = "${0}" ]]; then
+    read_arguments "${@}"
+    test -n "${option_reset}"     && { reset_recipes;   exit; }
+    test -n "${option_status}"    && { pending_updates; exit; }
+
+    detect_versions
+    test -n "${option_report}"    && report_versions
+
+    check_updates
+    test -z "${option_no_build}"  && build_updates
+    test -n "${option_commit}"    && commit_updates
+    test -n "${option_report}"    && report 'Failed packages'  "${failed[@]}"
+    test -n "${option_report}"    && report 'Updated packages' "${updated[@]}"
+fi

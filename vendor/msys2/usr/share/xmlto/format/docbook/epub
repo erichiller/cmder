@@ -26,7 +26,7 @@ case "$1" in
   do
     ${GCP_PATH:-cp} -R -P -p -- $INPUT_DIR/$CSS_SOURCE $CSS_DEST_DIR/
   done
-  echo "application/epub+zip" > mimetype
+  echo -n "application/epub+zip" > mimetype
   EPUB_NAME=$(basename "${XSLT_PROCESSED%.*}").epub
   [ -e "$XSLT_PROCESSED" ] && rm "$XSLT_PROCESSED"
   ${ZIP_PATH} -0Xq $EPUB_NAME mimetype

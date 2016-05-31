@@ -1,0 +1,401 @@
+#!/bin/bash
+
+usage() { tee <<done-usage
+
+    Saneman 2016.5.26
+    Copyright (C) 2016 Renato Silva
+    Licensed under BSD
+
+    Usage: ${name} [options] [DIRECTORY...]
+
+    --list=RECOGNIZED    List recognized licenses or problems
+    --strict             Report warnings as failures
+
+    --ignore-case        Disable case sensitivity
+    --maintainer         Filter recipes by maintainer detected from git
+    --recipe=NAME        Recipe name instead of PKGBUILD
+
+    --color              Force enabling colors
+    --no-color           Force disabling colors
+    --no-terminal        Force disabling terminal handling
+
+done-usage
+exit 1; }
+
+read_arguments() {
+    arguments=("${@}")
+    name="$(basename "${0}")"
+    for argument in "${arguments[@]}"; do
+        case "${argument}" in
+            --list=*)      option_list="${argument#*=}"     ;;
+            --recipe=*)    option_recipe="${argument#*=}"   ;;
+            --ignore-case) option_ignore_case='true'        ;;
+            --maintainer)  option_maintainer='true'         ;;
+            --no-color)    option_no_color='true'           ;;
+               --color)    option_color='true'              ;;
+            --no-terminal) option_no_terminal='true'        ;;
+            --strict)      option_strict='true'             ;;
+            -*)            usage                            ;;
+             *)            directories+=("${argument//\\/\/}")
+        esac
+    done
+    configure_colors
+    option_list
+}
+
+option_list() {
+    case "${option_list}" in
+        architectures) return ;;
+        licenses)      return ;;
+        problems)      return ;;
+        *?)            error "unrecognized list ${option_list}"
+    esac
+}
+
+configure_colors() {
+    test -z "${option_no_color}" || return 0
+    test -t 1 || test -n "${option_color}" || return 0
+    color_red='\e[1;31m'
+    color_blue='\e[1;34m'
+    color_white='\e[1;37m'
+    color_yellow='\e[1;33m'
+    color_normal='\e[0m'
+}
+
+recipe_paths() {
+    local recipe_name="${option_recipe:-PKGBUILD}"
+    progress 'Searching for recipes'
+    test -z "${directories}" && directories=(.)
+    for directory in "${directories[@]}"; do
+        test -d "${directory}" || error "missing directory ${directory}"
+    done
+    if test -n "${option_maintainer}"
+        then local email="$(git config user.email 2>/dev/null)"
+             test -n "${email}" || error 'failed detecting maintainer from git'
+             local pattern="^#.*Maintainer.*:.*[<(]?${email}[)>]?"
+             local parameters=(--recursive --files-with-match --extended-regexp --ignore-case --include="${recipe_name}")
+             as_list recipes "$(grep "${parameters[@]}" "${pattern}" "${directories[@]}" 2>/dev/null | sort --ignore-case)" '#./'
+        else as_list recipes "$(find "${directories[@]}" -type f -name "${recipe_name}"  2>/dev/null | sort --ignore-case)" '#./'
+    fi
+    as_list excludes "$(cat "./.${name}.ignore" 2>/dev/null)"
+    progress_complete
+    test -n "${recipes}" || error 'no recipes found'
+}
+
+silent() {
+    local command=("${@}")
+    "${command[@]}" >/dev/null 2>&1
+}
+
+terminal_enabled() {
+    test -t 1 || return 1
+    test -z "${option_no_terminal}" || return 1
+    return 0
+}
+
+clearline() {
+    terminal_enabled || return 0
+    printf '\r%-80s\r'
+}
+
+error() {
+    local message="${1}"
+    clearline
+    printf "${color_red}error:"
+    printf "${color_normal} ${message}\n"
+    exit 1
+}
+
+progress() {
+    local message="${1}"
+    local total="${2}"
+    terminal_enabled || return 0
+    if test -n "${total}"
+        then progress=$((progress + 1))
+             printf '\r%s: %s%% (%s/%s) ' "${message}" $(((progress * 100) / ${total})) ${progress} ${total}
+        else printf '\r%s... ' "${message}"
+    fi
+}
+
+progress_complete() {
+    unset -v progress
+    clearline
+}
+
+as_list() {
+    local -n nameref_list="${1}"
+    local lines="${2}"
+    local strip="${3}"
+    nameref_list=()
+    while IFS= read -r line; do
+        test -z "${line}" && continue
+        nameref_list+=("${line/${strip}/}")
+    done <<< "${lines}"
+}
+
+separate() {
+    local items="${1}"
+    local columns=("${@:2}")
+    for column in "${columns[@]}"; do
+        local -n nameref_column="${column}"
+        nameref_column="${items%%::*}"
+        [[ "${items}" != *::* ]] && return 0
+        items="${items#*::}"
+    done
+}
+
+restore() {
+    local -n nameref_problem="${1}"
+    local item="${2}"
+    local level type data
+    separate "${item}" level type data
+    nameref_problem['level']="${level}"
+    nameref_problem['type']="${type}"
+    nameref_problem['data']="${data}"
+}
+
+mingw_recipe() {
+    local recipe="${1}"
+    local pkgname arch
+    silent recipe_info "${recipe}" pkgname arch
+    for name in "${pkgname[@]}"; do
+        [[ "${name}" = mingw-w64-* ]] || return 1
+    done
+    [[ "${arch[@]}" = any ]]
+}
+
+recipe_location() {
+    local recipe="${1}"
+    local -n nameref_location="${2}"
+    if [[ "${recipe}" = */* ]]
+        then nameref_location="${recipe%/*}"
+        else nameref_location="${PWD}"
+    fi
+}
+
+recipe_info() {
+    local recipe="${1}"
+    local properties=("${@:2}")
+    for pair in "${properties[@]}"; do
+        local property="${pair%:*}"
+        local -n nameref_property="${pair#*:}"
+        as_list nameref_property "$(
+            MINGW_PACKAGE_PREFIX='mingw-w64' PATH=".:${PATH}" source "${recipe}"
+            declare -n nameref_property="${property}"
+            printf '%s\n' "${nameref_property[@]}")"
+    done
+}
+
+package_name() {
+    local recipe="${1}"
+    local -n nameref_package="${2}"
+    local recipe_directory
+    recipe_location "${recipe}" recipe_directory
+    while [[ "${recipe_directory}" = */ ]]; do
+        recipe_directory="${recipe_directory%/}"
+    done
+    nameref_package="${recipe_directory##*/}"
+}
+
+report_package(){
+    clearline
+    printf "${color_white}%-45s${color_normal}" "${package}"
+}
+
+report_failure() {
+    local message="${1}"
+    local arguments=("${@:2}")
+    result=1
+    report_package
+    printf "${color_red}failure:"
+    printf "${color_normal} ${message}\n" "${arguments[@]}"
+}
+
+report_warning() {
+    local message="${1}"
+    local arguments=("${@:2}")
+    if test -n "${option_strict}"; then
+        report_failure "${@}"
+        return
+    fi
+    report_package
+    printf "${color_yellow}warning:"
+    printf "${color_normal} ${message}\n" "${arguments[@]}"
+}
+
+list_architectures() {
+    printf '%s\n' "${recognized_arch[@]}"
+}
+
+list_licenses() {
+    local license description
+    for recognized in "${recognized_license[@]}"; do
+        separate "${recognized}" license description
+        printf '%-20s%s\n' "${license}" "${description}"
+    done
+}
+
+list_problems() {
+    local -A problem
+    for recognized in "${recognized_problems[@]}"; do
+        restore problem "${recognized}"
+        printf '%-20s%-20s%s\n' "${problem[level]}" "${problem[type]}" "${problem[data]}"
+    done
+}
+
+check_value() {
+    local handler="${1}"
+    local checked="${2}"
+    local recognized="${3}"
+    if [[ $(type -t "${handler}") = function ]]; then
+        ${handler} "${checked}" "${recognized}"
+        return ${?}
+    fi
+    [[ -n "${recognized}" && "${checked}" =~ ^"${recognized}"$ ]]
+}
+
+check_missing() {
+    local level="${1}"
+    local field="${2}"
+    test -n "${!field}" && return 0
+    report_${level} "missing ${field}"
+    return 1
+}
+
+check_deprecated() {
+    local level="${1}"
+    local field="${2}"
+    test -z "${!field}" && return 0
+    report_${level} "deprecated ${field}"
+    return 1
+}
+
+check_unrecognized() {
+    local level="${1}"
+    local field="${2}"
+    local -n nameref_checked="${field}"
+    local -n nameref_recognized="recognized_${field}"
+    local handler="${FUNCNAME}_${field}"
+    local result=0
+    local found
+    for checked in "${nameref_checked[@]}"; do
+        local original_checked="${checked}"
+        test -n "${option_ignore_case}" && checked="${checked,,}"
+        if test -z "${nameref_recognized}"
+            then check_value "${handler}" "${checked}" && found='true'
+            else for recognized in "${nameref_recognized[@]}"; do
+                     recognized="${recognized%%::*}"
+                     test -n "${option_ignore_case}" && recognized="${recognized,,}"
+                     if check_value "${handler}" "${checked}" "${recognized}"; then
+                         found='true'
+                         break
+                     fi
+                 done
+        fi
+        if test -z "${found}"; then
+            report_${level} "unrecognized ${field} ‘${original_checked}’"
+            result=1
+        fi
+        unset found
+    done
+    return ${result}
+}
+
+check_unrecognized_license() {
+    local checked="${1}"
+    local recognized="${2}"
+    checked="${checked#partial:}"
+    checked="${checked#documentation:}"
+    [[ "${checked}" =~ ^"${recognized}"([0-9]+|[0-9]+\.[0-9]+)?\+?$ ]] ||
+    [[ "${checked}" =~ ^custom(:.+)?$ ]]
+}
+
+check_unformatted() {
+    local level="${1}"
+    local field="${2}"
+    local checked="${!field}"
+    local handler="${FUNCNAME}_${field}"
+    local original_checked="${checked}"
+    local message
+    test -n "${option_ignore_case}" && checked="${checked,,}"
+    message="$(check_value "${handler}" "${checked}" '.*')" && return 0
+    report_${level} "${message:-unformatted ${field} ‘${original_checked}’}"
+    return 1
+}
+
+check_unformatted_pkgdesc() {
+    local checked="${1}"
+    local suffix='(mingw-w64)'
+    mingw_recipe "${recipe}" || return 0
+    [[ "${checked}" =~ ^.*" ${suffix}"$ ]] && return 0
+    echo "missing description suffix ‘${suffix}’"
+    return 1
+}
+
+check_recipe() {
+    local recipe="${1}"
+    local package checksums ${recognized_fields[@]}
+    local -A problem
+    package_name "${recipe}" package
+    terminal_enabled && printf "${color_white}%s${color_normal} " "${package}"
+    silent recipe_info "${recipe}" ${recognized_fields[@]}
+    for recognized in ${recognized_sums[@]}; do
+        if test -n "${!recognized}"; then
+            checksums="${!recognized}"
+            break
+        fi
+    done
+    for recognized in "${recognized_problems[@]}"; do
+        restore problem "${recognized}"
+        check_${problem[type]} ${problem[level]} "${problem[data]}"
+    done
+    clearline
+}
+
+recognized_sums=({md5,sha{1,224,256,384,512},whirlpool}sums)
+recognized_fields=(pkgname pkgver pkgrel pkgdesc url license arch source ${recognized_sums[@]})
+recognized_arch=(any i686 x86_64)
+recognized_license=(Apache::'Apache Software License'
+                    Artistic::'Artistic License'
+                    BSD::'BSD-like licenses'
+                    GCCRLE::'GCC Runtime Library Exception'
+                    GFDL::'GNU Free Documentation License'
+                    GPL::'GNU General Public License'
+                    ISC::'Internet Systems Consortium License'
+                    LGPL::'GNU Lesser General Public License'
+                    MIT::'MIT-like licenses'
+                    MPL::'Mozilla Public License'
+                    PSFL::'Python Software Foundation License'
+                    PublicDomain::'Public domain'
+                    UIUC::'University of Illinois/NCSA Open Source License'
+                    ZLIB::'zlib, zlib/libpng and similar licenses')
+
+recognized_problems=(failure::missing::arch
+                     failure::missing::checksums
+                     failure::missing::pkgname
+                     failure::missing::pkgrel
+                     failure::missing::pkgver
+                     failure::missing::source
+                     warning::deprecated::md5sums
+                     warning::deprecated::sha1sums
+                     warning::deprecated::sha224sums
+                     warning::missing::license
+                     warning::missing::pkgdesc
+                     warning::missing::url
+                     warning::unformatted::pkgdesc
+                     warning::unrecognized::arch
+                     warning::unrecognized::license)
+
+if [[ "${BASH_SOURCE}" = "${0}" ]]; then
+    result=0
+    read_arguments "${@}"
+    if test -n "${option_list}"; then
+        list_${option_list}
+        exit
+    fi
+    recipe_paths
+    for recipe in "${recipes[@]}"; do
+        check_recipe "${recipe}"
+    done
+    exit ${result}
+fi

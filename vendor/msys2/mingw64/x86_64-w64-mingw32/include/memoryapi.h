@@ -37,6 +37,10 @@ extern "C" {
 #endif
 #endif
 
+#if (WINAPI_FAMILY_PARTITION (WINAPI_PARTITION_APP) && _WIN32_WINNT >= 0x0A00) || WINAPI_FAMILY_PARTITION (WINAPI_PARTITION_DESKTOP)
+    WINBASEAPI WINBOOL WINAPI VirtualFree (LPVOID lpAddress, SIZE_T dwSize, DWORD dwFreeType);
+#endif
+
 #if WINAPI_FAMILY_PARTITION (WINAPI_PARTITION_APP)
 #define FILE_MAP_WRITE SECTION_MAP_WRITE
 #define FILE_MAP_READ SECTION_MAP_READ
@@ -49,8 +53,14 @@ extern "C" {
   WINBASEAPI WINBOOL WINAPI UnmapViewOfFile (LPCVOID lpBaseAddress);
   WINBASEAPI HANDLE WINAPI CreateFileMappingFromApp (HANDLE hFile, PSECURITY_ATTRIBUTES SecurityAttributes, ULONG PageProtection, ULONG64 MaximumSize, PCWSTR Name);
   WINBASEAPI PVOID WINAPI MapViewOfFileFromApp (HANDLE hFileMappingObject, ULONG DesiredAccess, ULONG64 FileOffset, SIZE_T NumberOfBytesToMap);
+#if _WIN32_WINNT >= 0x0A00
+  WINBASEAPI PVOID WINAPI VirtualAllocFromApp(PVOID BaseAddress, SIZE_T Size, ULONG AllocationType, ULONG  Protection);
+#endif
 #endif
 
+#if WINAPI_FAMILY_PARTITION (WINAPI_PARTITION_DESKTOP) || defined(WINSTORECOMPAT)
+  WINBASEAPI WINBOOL WINAPI VirtualProtect (LPVOID lpAddress, SIZE_T dwSize, DWORD flNewProtect, PDWORD lpflOldProtect);
+#endif
 #if WINAPI_FAMILY_PARTITION (WINAPI_PARTITION_DESKTOP)
 #define FILE_MAP_EXECUTE SECTION_MAP_EXECUTE_EXPLICIT
 
@@ -61,8 +71,6 @@ extern "C" {
 #define FILE_CACHE_MIN_HARD_DISABLE 0x00000008
 
   WINBASEAPI LPVOID WINAPI VirtualAlloc (LPVOID lpAddress, SIZE_T dwSize, DWORD flAllocationType, DWORD flProtect);
-  WINBASEAPI WINBOOL WINAPI VirtualFree (LPVOID lpAddress, SIZE_T dwSize, DWORD dwFreeType);
-  WINBASEAPI WINBOOL WINAPI VirtualProtect (LPVOID lpAddress, SIZE_T dwSize, DWORD flNewProtect, PDWORD lpflOldProtect);
   WINBASEAPI LPVOID WINAPI VirtualAllocEx (HANDLE hProcess, LPVOID lpAddress, SIZE_T dwSize, DWORD flAllocationType, DWORD flProtect);
   WINBASEAPI WINBOOL WINAPI VirtualFreeEx (HANDLE hProcess, LPVOID lpAddress, SIZE_T dwSize, DWORD dwFreeType);
   WINBASEAPI WINBOOL WINAPI VirtualProtectEx (HANDLE hProcess, LPVOID lpAddress, SIZE_T dwSize, DWORD flNewProtect, PDWORD lpflOldProtect);

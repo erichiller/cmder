@@ -1040,11 +1040,11 @@ MIDL_INTERFACE("4ae63092-6327-4c1b-80ae-bfe12ea32b86")
 IDXGISurface1 : public IDXGISurface
 {
     virtual HRESULT STDMETHODCALLTYPE GetDC(
-        WINBOOL Discard,
-        HDC *dc) = 0;
+        WINBOOL discard,
+        HDC *hdc) = 0;
 
     virtual HRESULT STDMETHODCALLTYPE ReleaseDC(
-        RECT *rect) = 0;
+        RECT *dirty_rect) = 0;
 
 };
 #ifdef __CRT_UUID_DECL
@@ -1111,12 +1111,12 @@ typedef struct IDXGISurface1Vtbl {
     /*** IDXGISurface1 methods ***/
     HRESULT (STDMETHODCALLTYPE *GetDC)(
         IDXGISurface1* This,
-        WINBOOL Discard,
-        HDC *dc);
+        WINBOOL discard,
+        HDC *hdc);
 
     HRESULT (STDMETHODCALLTYPE *ReleaseDC)(
         IDXGISurface1* This,
-        RECT *rect);
+        RECT *dirty_rect);
 
     END_INTERFACE
 } IDXGISurface1Vtbl;
@@ -1142,8 +1142,8 @@ interface IDXGISurface1 {
 #define IDXGISurface1_Map(This,mapped_rect,flags) (This)->lpVtbl->Map(This,mapped_rect,flags)
 #define IDXGISurface1_Unmap(This) (This)->lpVtbl->Unmap(This)
 /*** IDXGISurface1 methods ***/
-#define IDXGISurface1_GetDC(This,Discard,dc) (This)->lpVtbl->GetDC(This,Discard,dc)
-#define IDXGISurface1_ReleaseDC(This,rect) (This)->lpVtbl->ReleaseDC(This,rect)
+#define IDXGISurface1_GetDC(This,discard,hdc) (This)->lpVtbl->GetDC(This,discard,hdc)
+#define IDXGISurface1_ReleaseDC(This,dirty_rect) (This)->lpVtbl->ReleaseDC(This,dirty_rect)
 #else
 /*** IUnknown methods ***/
 static FORCEINLINE HRESULT IDXGISurface1_QueryInterface(IDXGISurface1* This,REFIID riid,void **ppvObject) {
@@ -1183,11 +1183,11 @@ static FORCEINLINE HRESULT IDXGISurface1_Unmap(IDXGISurface1* This) {
     return This->lpVtbl->Unmap(This);
 }
 /*** IDXGISurface1 methods ***/
-static FORCEINLINE HRESULT IDXGISurface1_GetDC(IDXGISurface1* This,WINBOOL Discard,HDC *dc) {
-    return This->lpVtbl->GetDC(This,Discard,dc);
+static FORCEINLINE HRESULT IDXGISurface1_GetDC(IDXGISurface1* This,WINBOOL discard,HDC *hdc) {
+    return This->lpVtbl->GetDC(This,discard,hdc);
 }
-static FORCEINLINE HRESULT IDXGISurface1_ReleaseDC(IDXGISurface1* This,RECT *rect) {
-    return This->lpVtbl->ReleaseDC(This,rect);
+static FORCEINLINE HRESULT IDXGISurface1_ReleaseDC(IDXGISurface1* This,RECT *dirty_rect) {
+    return This->lpVtbl->ReleaseDC(This,dirty_rect);
 }
 #endif
 #endif
@@ -1196,8 +1196,8 @@ static FORCEINLINE HRESULT IDXGISurface1_ReleaseDC(IDXGISurface1* This,RECT *rec
 
 HRESULT STDMETHODCALLTYPE IDXGISurface1_GetDC_Proxy(
     IDXGISurface1* This,
-    WINBOOL Discard,
-    HDC *dc);
+    WINBOOL discard,
+    HDC *hdc);
 void __RPC_STUB IDXGISurface1_GetDC_Stub(
     IRpcStubBuffer* This,
     IRpcChannelBuffer* pRpcChannelBuffer,
@@ -1205,7 +1205,7 @@ void __RPC_STUB IDXGISurface1_GetDC_Stub(
     DWORD* pdwStubPhase);
 HRESULT STDMETHODCALLTYPE IDXGISurface1_ReleaseDC_Proxy(
     IDXGISurface1* This,
-    RECT *rect);
+    RECT *dirty_rect);
 void __RPC_STUB IDXGISurface1_ReleaseDC_Stub(
     IRpcStubBuffer* This,
     IRpcChannelBuffer* pRpcChannelBuffer,
