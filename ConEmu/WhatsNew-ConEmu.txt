@@ -20,6 +20,108 @@ https://conemu.github.io/en/Whats_New.html
 -------------------------------------------
 
 
+2016.7.24
+* gh-780: Fix crash on drawing certain text data.
+
+
+2016.7.10
+* gh-766: ConEmuSetup improvements and error handling.
+  * Don't show MessageBox in auto mode (chocolatey, autoupdate);
+  * Log error messages to log-file in the exe's folder;
+  * In case TEMP directory is inaccessible, just use exe's folder.
+* gh-740: Try to convert paths to cygwin style if clipboard doesn't contain `\n` while pasting to cygwin/msys shells.
+* In some cases ‘Alternative font’ was not used for first cell in a row (1536b94 regression).
+
+
+2016.7.7
+* gh-752: Fn keys were not processed by Keys GuiMacro.
+* gh-742: Improve installer error reporting, don't show error code twice.
+* gh-739: New option ‘Compress long strings to fit space’ is turned on by default.
+  By unchecking that option you'll get ‘old’ behavior, when ConEmu just trims text,
+  which overruns dedicated space. Read comments in the issue for details:
+  https://github.com/Maximus5/ConEmu/issues/739
+* In some cases old text was not cleared properly with a consequent garbage on the screen.
+* gh-741: Text compression/expansion logic changed, using ‘elasticity’ now.
+* In some cases Font changes were not applied properly.
+* gh-741, gh-722: Glyphs widths evaluation and alignment were changed.
+  So, symbols are expected to be painted properly, uncropped.
+  Examples: U+276F (❯), U+2794 (➔), U+27F6 (⟶).
+* gh-761: Support ‘Terminate all but shell’ for git-cmd.exe.
+
+
+2016.6.19
+* Command ‘ConEmuC -ConInfo’ prints current console tech info.
+* Let intercept GetWindowLong(GWL_STYLE) for console window handle (ref gh-727, gh-719).
+  Far 3.0 since build 4698 tries to query GWL_STYLE for console window?
+* l10n. New language resources.
+* gh-735: Add all marked tasks to Jump List, use TaskBar history limit value only for History items.
+* gh-740: Conversion to linux path on paste was not working for ‘Single line’ mode.
+* Option ‘Autoupdate’ on Settings/TaskBar/Windows 7 Taskbar.
+  If checked, Jump Lists will be updated automatically when user check
+  the ‘Taskbar jump lists’ checkbox in Task properties.
+* Do not add new Tasks to Jump List by default, let user explicitly check ‘Taskbar jump lists’.
+* Installer (MSI): Don't suggest Far Manager's folder by default.
+
+
+2016.6.12
+* Terminal modes were not displayed on Settings/Info page.
+* gh-716: Cygwin/msys connector output was broken after starting nano.
+* gh-722: Treat Unicode range U+2700..U+27BF as double width glyphs.
+* gh-718: Minimal cursor size option was ignored for invalid console cursor size (zero size).
+* gh-719: Write cursor information and console window rect to log file.
+* Print more console information in `ConEmuC -checkunicode`.
+* gh-723: Let ‘Minimize/Restore’ hotkey act in spite of ‘Always on top’ mode.
+* Don't process (append) environment variable twice (ref gh-724).
+  Example: `PATH=%ConEmuBaseDir%\Scripts;%PATH%;C:\Tools\Arc`
+  So, do not add `%ConEmuBaseDir%\Scripts;` and `;C:\Tools\Arc`
+  if they already exist in PATH. Only explicit comparison is done,
+  so, if `C:\Tools\Arc` is in the middle of current `%PATH%`,
+  it would be processed (appended).
+* Fix: Console progress `0%` was detected during tab startup (regression 69439a3).
+* Default task {Far}: don't double plugin folders to avoid doubled lines in F11 (Far 1.x and Far 2.x `/p` switch problem).
+* gh-700: Show tab icon for Far editors and viewers if ‘Far windows’ option is off.
+
+
+
+2016.6.9
+* gh-712: Total consoles count was not displayed in the title properly (regression 7ed745b).
+* gh-678: Selection vanished from screen after multiple page selection.
+* System menu item ‘Debug’ -> ‘Dump screen’ saved empty png file.
+* Fix Shift-Home selection in cmd.exe prompt after Tab-completion.
+  First Shift-Home is expected to select the typed command without prompt.
+  Sequential Shift-Home keypresses select and unselect prompt part.
+* Let Shift-Home select multiline commands in cmd.exe prompt.
+* gh-687: Settings page ‘Integration’ -> ‘ANSI execution’ to control allowed code and macro.
+  This allows [ConEmu specific OSC](https://conemu.github.io/en/AnsiEscapeCodes.html#ConEmu_specific_OSC)
+  to be executed: `^]]9;6;"*macro*"^]\` and `^]]9;7;"*cmd*"^]\`.
+  Since now, they allowed by default in `cmd.exe` only (were implemented for `GitShowBranch.cmd`).
+  User may also disable or enable they for any process.
+  Also, there is a list of allowed commands. Commands are case-sensitive, one line - one command.
+  User may use `*` to allow bunch of commands by ‘mask’.
+
+
+
+2016.6.7
+* Settings simplification: radio buttons were removed from ‘Settings/Mouse/Mouse button actions’.
+  In Far Manager RBtn and MBtn clicks are bypassed to console if `<No-Mod>` is selected.
+* Non-unique hotkey modifier check was improved.
+* Warning fixes (from Michael Lukashov).
+
+
+2016.6.5
+* User was enable to enter list of executables on AppDistinct settings page (regression).
+* Option ‘New window’ in the create new console dialog started ConEmu with wrong arguments (no xml, etc.)
+* DefTerm. Option ‘Register on OS startup’ did not use specified xml file.
+* gh-698: Fix crash on copy selected text in HTML format if raster font is used.
+* Fix conditon for `<BS>` key posting (ref: gh-641).
+* gh-667: Alt+GrayPlus+HexNumbers changes.
+  * Alt+GrayPlus is bypassed to Far Manager by default. User still may
+    set up explicit hotkey for ‘Start Alt+Number mode’ action.
+  * Option ‘Alt+NumpadAdd - unicode hex codebase’ on the ‘Keyboard’ page
+    (has no effect in Far Manager).
+* gh-629: Try to enable xterm keyboard emulation automatically (BashOnWindows).
+
+
 2016.5.29
 * gh-457: Support DefTerm feature for Idle (Pythonw.exe) and VisualStudio Code (code.exe).
 * DefTerm: ConEmu crashed if it's closed during DefTerm initialization.
